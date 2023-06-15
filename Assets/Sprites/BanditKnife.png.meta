@@ -1,0 +1,1487 @@
+fileFormatVersion: 2
+guid: 893642e45b8298d44bd773829c7dcfbf
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 66
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BanditKnife 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b077f1a787dcae20800000000000000
+      internalID: 3363299999276822706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 1
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 165beae7566518f10800000000000000
+      internalID: 2270190681088505185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 2
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f39b2645bcb0ff30800000000000000
+      internalID: 4607389905552380918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 3
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b618c848e9e334e00800000000000000
+      internalID: 1027733990520160619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 4
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3acecdbc7fc281150800000000000000
+      internalID: 5843469959302016163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 5
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2104b7ff6f7539ae0800000000000000
+      internalID: -1543793528898109422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 6
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d522a44fb43e8b90800000000000000
+      internalID: -7237789555042933287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 7
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fccf32fd05e609b60800000000000000
+      internalID: 7750816252324740303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 8
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09b8ce989abb5f820800000000000000
+      internalID: 2951471467649076112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 9
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3d6db33f0fedfb40800000000000000
+      internalID: 5475795570523991359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c16f2843875ead80800000000000000
+      internalID: -8237550447050661437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 11
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf05525453a785c60800000000000000
+      internalID: 7807124323258683644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 12
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e0a904abe6b6af00800000000000000
+      internalID: 1127789879888552166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 13
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff267668e7a2359c0800000000000000
+      internalID: -3939758526109883649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 14
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07d52cbb443d8a900800000000000000
+      internalID: 696038434590055792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 15
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7b2afa4f69967090800000000000000
+      internalID: -8037067781717742723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 16
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f78be5551862e3c0800000000000000
+      internalID: -4331785450731894793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 17
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9b8824aa8bb9e3e0800000000000000
+      internalID: -2023880353392325734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 18
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8268c043038234a10800000000000000
+      internalID: 1892400455922517544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 19
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d81741276add66090800000000000000
+      internalID: -8041496377675189875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b29d8c6f2d960a40800000000000000
+      internalID: 5334123635677172405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 21
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a5fcc1120770030800000000000000
+      internalID: 3460858126177098296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 22
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 128c4e472ed257650800000000000000
+      internalID: 6229936110183958561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 23
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7d4f2ff037826c80800000000000000
+      internalID: -8330947716172526213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 24
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7cf749d84c79c8b0800000000000000
+      internalID: -5131433648087106438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 25
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f876b36f9533ef00800000000000000
+      internalID: 1144817688971213045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 26
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 049a05fad9bb94ab0800000000000000
+      internalID: -5023277623429519040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 27
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc459a423c2f4c1c0800000000000000
+      internalID: -4484192409006549811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 28
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15312c9e99b9120c0800000000000000
+      internalID: -4602226258841824431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 29
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d942af2058215f970800000000000000
+      internalID: 8787950610373289117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f47c7371161dcc1f0800000000000000
+      internalID: -1023212800388380849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 31
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b89febf19ef3d3fc0800000000000000
+      internalID: -3513581863786579573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 32
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 027af57615959cfe0800000000000000
+      internalID: -1168304422164388064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 33
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7c6b03031e627cc0800000000000000
+      internalID: -3714785714692723589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 34
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b510a38520683bd0800000000000000
+      internalID: -2650262666469173840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 35
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 279483f89e7a01fc0800000000000000
+      internalID: -3526133886659049102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 36
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3e67ac265b2c180800000000000000
+      internalID: -9096508861426768980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 37
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85dfe21653d0b98a0800000000000000
+      internalID: -6297425131032609448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 38
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1f19b1c75364eb10800000000000000
+      internalID: 2009840562277523226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 39
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6b554b070594e930800000000000000
+      internalID: 4171623012338326381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62017fabd14769460800000000000000
+      internalID: 7248108321339019302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 41
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8118146b841fce170800000000000000
+      internalID: 8209201515387257112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 42
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e83976317becbcb0800000000000000
+      internalID: -4846740227479750429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 43
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c6713e5b0f76c710800000000000000
+      internalID: 1713196395062720196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 44
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01469bdf9dd661420800000000000000
+      internalID: 2600386617885156368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 45
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a243394f386b0340800000000000000
+      internalID: 4831069646305313445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 46
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 869baf5a079e87c70800000000000000
+      internalID: 8969175327938623848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 47
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53d6c37ec7beab4f0800000000000000
+      internalID: -812077861098984139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 48
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 271f10d634d68c420800000000000000
+      internalID: 2650488517066617202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 49
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79bb0e65db31479e0800000000000000
+      internalID: -1624651861646591081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c17e2062767042a80800000000000000
+      internalID: -8492654857713162468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 51
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c9bc7e7eb59564f0800000000000000
+      internalID: -836097510408930873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 52
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc50b57e3901024f0800000000000000
+      internalID: -855665701772655156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 53
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac95fa2b7f8a13080800000000000000
+      internalID: -9209393981187728950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 54
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6a6a74334e2638e0800000000000000
+      internalID: -1714131741989770641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 55
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 211764357c2d76520800000000000000
+      internalID: 2695354655541981458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 56
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4545ed9c4cc92390800000000000000
+      internalID: -7842512646650378931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 57
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ad14f307518d4640800000000000000
+      internalID: 5065847366590143907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 58
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1e3259e178d8d080800000000000000
+      internalID: -9162335458127888865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 59
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fac79bc69ea7d3620800000000000000
+      internalID: 2755493689990675631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 916e3a1389211df70800000000000000
+      internalID: 9210163157826528793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditKnife 61
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c59fcf14c4fc2890800000000000000
+      internalID: -7481335757784771130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BanditKnife 28: -4602226258841824431
+      BanditKnife 16: -4331785450731894793
+      BanditKnife 14: 696038434590055792
+      BanditKnife 39: 4171623012338326381
+      BanditKnife 23: -8330947716172526213
+      BanditKnife 25: 1144817688971213045
+      BanditKnife 44: 2600386617885156368
+      BanditKnife 59: 2755493689990675631
+      BanditKnife 8: 2951471467649076112
+      BanditKnife 17: -2023880353392325734
+      BanditKnife 21: 3460858126177098296
+      BanditKnife 7: 7750816252324740303
+      BanditKnife 6: -7237789555042933287
+      BanditKnife 9: 5475795570523991359
+      BanditKnife 22: 6229936110183958561
+      BanditKnife 18: 1892400455922517544
+      BanditKnife 20: 5334123635677172405
+      BanditKnife 52: -855665701772655156
+      BanditKnife 42: -4846740227479750429
+      BanditKnife 27: -4484192409006549811
+      BanditKnife 55: 2695354655541981458
+      BanditKnife 54: -1714131741989770641
+      BanditKnife 56: -7842512646650378931
+      BanditKnife 50: -8492654857713162468
+      BanditKnife 10: -8237550447050661437
+      BanditKnife 53: -9209393981187728950
+      BanditKnife 61: -7481335757784771130
+      BanditKnife 3: 1027733990520160619
+      BanditKnife 58: -9162335458127888865
+      BanditKnife 1: 2270190681088505185
+      BanditKnife 38: 2009840562277523226
+      BanditKnife 19: -8041496377675189875
+      BanditKnife 32: -1168304422164388064
+      BanditKnife 31: -3513581863786579573
+      BanditKnife 29: 8787950610373289117
+      BanditKnife 13: -3939758526109883649
+      BanditKnife 11: 7807124323258683644
+      BanditKnife 26: -5023277623429519040
+      BanditKnife 45: 4831069646305313445
+      BanditKnife 33: -3714785714692723589
+      BanditKnife 43: 1713196395062720196
+      BanditKnife 37: -6297425131032609448
+      BanditKnife 30: -1023212800388380849
+      BanditKnife 41: 8209201515387257112
+      BanditKnife 40: 7248108321339019302
+      BanditKnife 0: 3363299999276822706
+      BanditKnife 2: 4607389905552380918
+      BanditKnife 36: -9096508861426768980
+      BanditKnife 57: 5065847366590143907
+      BanditKnife 34: -2650262666469173840
+      BanditKnife 15: -8037067781717742723
+      BanditKnife 51: -836097510408930873
+      BanditKnife 5: -1543793528898109422
+      BanditKnife 24: -5131433648087106438
+      BanditKnife 46: 8969175327938623848
+      BanditKnife 48: 2650488517066617202
+      BanditKnife 49: -1624651861646591081
+      BanditKnife 4: 5843469959302016163
+      BanditKnife 12: 1127789879888552166
+      BanditKnife 35: -3526133886659049102
+      BanditKnife 60: 9210163157826528793
+      BanditKnife 47: -812077861098984139
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

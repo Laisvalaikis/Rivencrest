@@ -1,0 +1,647 @@
+fileFormatVersion: 2
+guid: b067f420253935a4d845f3a26dbb96ef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8933209448131935901
+    second: PortraitBoxUI 0
+  - first:
+      213: 4138228108153096124
+    second: PortraitBoxUI 1
+  - first:
+      213: 436774660018479319
+    second: PortraitBoxUI 2
+  - first:
+      213: -2681010095285161730
+    second: PortraitBoxUI 3
+  - first:
+      213: 1451118084049566978
+    second: PortraitBoxUI 4
+  - first:
+      213: 4228067160164634685
+    second: PortraitBoxUI 5
+  - first:
+      213: 759421074060410704
+    second: PortraitBoxUI 6
+  - first:
+      213: 264120144625125067
+    second: PortraitBoxUI 7
+  - first:
+      213: -1711493846910972775
+    second: PortraitBoxUI 8
+  - first:
+      213: -3579365232876383478
+    second: PortraitBoxUI 9
+  - first:
+      213: -2310097172201073458
+    second: PortraitBoxUI 10
+  - first:
+      213: 5339155031423012440
+    second: PortraitBoxUI 11
+  - first:
+      213: 8106595302879037209
+    second: PortraitBoxUI 12
+  - first:
+      213: -3713552687407972526
+    second: PortraitBoxUI 13
+  - first:
+      213: 1325750597199578631
+    second: PortraitBoxUI 14
+  - first:
+      213: -6365722489516383422
+    second: PortraitBoxUI 15
+  - first:
+      213: -5722193865455922150
+    second: PortraitBoxUI 16
+  - first:
+      213: 5687170879790890291
+    second: PortraitBoxUI 17
+  - first:
+      213: -3754657335454455172
+    second: PortraitBoxUI 18
+  - first:
+      213: 5033303852984077097
+    second: PortraitBoxUI 19
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 66
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PortraitBoxUI 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 214
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e3114b9a229fb70800000000000000
+      internalID: 8933209448131935901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitBoxUI 1
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 214
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb780020a80fd6930800000000000000
+      internalID: 4138228108153096124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitBoxUI 2
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 214
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d02b493d3cbf0600800000000000000
+      internalID: 436774660018479319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitBoxUI 3
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 214
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef0ba4fd5832bcad0800000000000000
+      internalID: -2681010095285161730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitBoxUI 4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 172
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d7be68538632410800000000000000
+      internalID: 1451118084049566978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitBoxUI 5
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 172
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d309b105eac1daa30800000000000000
+      internalID: 4228067160164634685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitBoxUI 6
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 172
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05ff05a71710a8a00800000000000000
+      internalID: 759421074060410704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitBoxUI 7
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 172
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc6c7664fd75aa300800000000000000
+      internalID: 264120144625125067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitBoxUI 8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 130
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99cca930a6d8f38e0800000000000000
+      internalID: -1711493846910972775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitBoxUI 9
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 130
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a031505f84a835ec0800000000000000
+      internalID: -3579365232876383478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitBoxUI 10
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 130
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec4125e7cd2e0ffd0800000000000000
+      internalID: -2310097172201073458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitBoxUI 11
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 130
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85e45b8863d781a40800000000000000
+      internalID: 5339155031423012440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitBoxUI 12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 88
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91784f53a79608070800000000000000
+      internalID: 8106595302879037209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitBoxUI 13
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 88
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25fb95c818fc67cc0800000000000000
+      internalID: -3713552687407972526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitBoxUI 14
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 88
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 706c7ded423066210800000000000000
+      internalID: 1325750597199578631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitBoxUI 15
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 88
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24329a17f1968a7a0800000000000000
+      internalID: -6365722489516383422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitBoxUI 16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 46
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1494913ffea690b0800000000000000
+      internalID: -5722193865455922150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitBoxUI 17
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 46
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33db1e288c3ecee40800000000000000
+      internalID: 5687170879790890291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitBoxUI 18
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 46
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7a2ce2eb07c4ebc0800000000000000
+      internalID: -3754657335454455172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitBoxUI 19
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 46
+        width: 106
+        height: 42
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92b88bbcf23e9d540800000000000000
+      internalID: 5033303852984077097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PortraitBoxUI 12: 8106595302879037209
+      PortraitBoxUI 18: -3754657335454455172
+      PortraitBoxUI 10: -2310097172201073458
+      PortraitBoxUI 3: -2681010095285161730
+      PortraitBoxUI 9: -3579365232876383478
+      PortraitBoxUI 1: 4138228108153096124
+      PortraitBoxUI 4: 1451118084049566978
+      PortraitBoxUI 14: 1325750597199578631
+      PortraitBoxUI 2: 436774660018479319
+      PortraitBoxUI 11: 5339155031423012440
+      PortraitBoxUI 15: -6365722489516383422
+      PortraitBoxUI 8: -1711493846910972775
+      PortraitBoxUI 6: 759421074060410704
+      PortraitBoxUI 5: 4228067160164634685
+      PortraitBoxUI 7: 264120144625125067
+      PortraitBoxUI 19: 5033303852984077097
+      PortraitBoxUI 13: -3713552687407972526
+      PortraitBoxUI 16: -5722193865455922150
+      PortraitBoxUI 0: 8933209448131935901
+      PortraitBoxUI 17: 5687170879790890291
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

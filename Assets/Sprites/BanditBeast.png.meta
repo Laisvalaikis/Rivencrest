@@ -1,0 +1,981 @@
+fileFormatVersion: 2
+guid: b4cf9a85cbe437c4eb75fb753fed6502
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 66
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BanditBeast 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a14180e23edc7fed0800000000000000
+      internalID: -2380207502428466150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 1
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a6a1e0f1daab5a30800000000000000
+      internalID: 4205142495746696871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 2
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d59bbf5edcdb20760800000000000000
+      internalID: 7422703827884423517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 3
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 201df8a1d74e56ac0800000000000000
+      internalID: -3862429879432654590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 4
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e9f3cbd7426815a0800000000000000
+      internalID: -6550377597241132570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 5
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 745fa1fb2c2388c70800000000000000
+      internalID: 8973478069546972487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 6
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 820f6f7504f12cb30800000000000000
+      internalID: 4306038554933784616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 7
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f59e97ad8276bae70800000000000000
+      internalID: 9127502494958217567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 8
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b08b9d1d02219950800000000000000
+      internalID: 6453977180725280945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 9
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38051caf3ced5a3b0800000000000000
+      internalID: -5501746436456230781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 575cba2924e48ce90800000000000000
+      internalID: -7005263172539267723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 11
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5f98713acf2e2e10800000000000000
+      internalID: 2174728215526416219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 12
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 075e9b3de98641d10800000000000000
+      internalID: 2095414758000420208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 13
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6344232390bfc1420800000000000000
+      internalID: 2602230701628736566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 14
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36da1336e2f89db20800000000000000
+      internalID: 3159714042972581219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 15
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2de66a4d52586fb20800000000000000
+      internalID: 3167865785429683922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 16
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c4aa83561b6365d0800000000000000
+      internalID: -3070492777301498681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 17
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 484a8e53b4b061f50800000000000000
+      internalID: 6851676300745680004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 18
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff016cef9df23b360800000000000000
+      internalID: 7184138443914875135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 19
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4289885bbb04c2970800000000000000
+      internalID: 8731424952513239076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 430
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa8a343de86b9e9c0800000000000000
+      internalID: -3897383277966415697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 21
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 430
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78653efc4b2f425d0800000000000000
+      internalID: -3088076586073500025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 22
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 430
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb0bd01aeeaaa92f0800000000000000
+      internalID: -965271228236582725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 23
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 430
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09ad63fd623ad40a0800000000000000
+      internalID: -6895676067085362544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 24
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 430
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d14a9838522e9050800000000000000
+      internalID: 5809118331656618451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 25
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 430
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb869133d7da41130800000000000000
+      internalID: 3536642360632502460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 26
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 430
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9744c61b245125760800000000000000
+      internalID: 7445036510185538681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 27
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 430
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2d5962891e2bf8e0800000000000000
+      internalID: -1658681350658892497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 28
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 430
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d41b37ebb51577ff0800000000000000
+      internalID: -38472617330233011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 29
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 430
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85a808d7b37e0c6f0800000000000000
+      internalID: -666278502156170664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 232
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 562fecca2d247f390800000000000000
+      internalID: -7784679958276803995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 31
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 232
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f9ffe37a16be5de0800000000000000
+      internalID: -1342435414179317257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 32
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 232
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3131dc091671a480800000000000000
+      internalID: -8889694339491352260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 33
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 232
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44eb678032e5f14c0800000000000000
+      internalID: -4314626413438779836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 34
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 232
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b45443dad176b82e0800000000000000
+      internalID: -2122489422217460405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 35
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 232
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecf238fe99b6c8b90800000000000000
+      internalID: -7238292192198709298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 36
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 232
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef4e75d1316913d0800000000000000
+      internalID: -3235447990625873945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 37
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 232
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9632b59c44fd8600800000000000000
+      internalID: 472302145709946522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BanditBeast 38
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 232
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b2251c16d9300520800000000000000
+      internalID: 2666194571160265393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BanditBeast 20: -3897383277966415697
+      BanditBeast 29: -666278502156170664
+      BanditBeast 24: 5809118331656618451
+      BanditBeast 31: -1342435414179317257
+      BanditBeast 7: 9127502494958217567
+      BanditBeast 32: -8889694339491352260
+      BanditBeast 30: -7784679958276803995
+      BanditBeast 9: -5501746436456230781
+      BanditBeast 2: 7422703827884423517
+      BanditBeast 38: 2666194571160265393
+      BanditBeast 10: -7005263172539267723
+      BanditBeast 6: 4306038554933784616
+      BanditBeast 28: -38472617330233011
+      BanditBeast 23: -6895676067085362544
+      BanditBeast 15: 3167865785429683922
+      BanditBeast 36: -3235447990625873945
+      BanditBeast 18: 7184138443914875135
+      BanditBeast 21: -3088076586073500025
+      BanditBeast 25: 3536642360632502460
+      BanditBeast 17: 6851676300745680004
+      BanditBeast 11: 2174728215526416219
+      BanditBeast 22: -965271228236582725
+      BanditBeast 37: 472302145709946522
+      BanditBeast 5: 8973478069546972487
+      BanditBeast 13: 2602230701628736566
+      BanditBeast 1: 4205142495746696871
+      BanditBeast 16: -3070492777301498681
+      BanditBeast 14: 3159714042972581219
+      BanditBeast 19: 8731424952513239076
+      BanditBeast 34: -2122489422217460405
+      BanditBeast 35: -7238292192198709298
+      BanditBeast 33: -4314626413438779836
+      BanditBeast 4: -6550377597241132570
+      BanditBeast 26: 7445036510185538681
+      BanditBeast 12: 2095414758000420208
+      BanditBeast 27: -1658681350658892497
+      BanditBeast 0: -2380207502428466150
+      BanditBeast 3: -3862429879432654590
+      BanditBeast 8: 6453977180725280945
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

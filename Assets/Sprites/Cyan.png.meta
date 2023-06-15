@@ -1,0 +1,2028 @@
+fileFormatVersion: 2
+guid: cfd1a509a49b4dc4d95b88e831d68deb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4170574582160388732
+    second: Cyan 0
+  - first:
+      213: -2074838731731150256
+    second: Cyan 1
+  - first:
+      213: 2331718327384268159
+    second: Cyan 2
+  - first:
+      213: -4971490599008131612
+    second: Cyan 3
+  - first:
+      213: 2379037890940114969
+    second: Cyan 4
+  - first:
+      213: -4338501190559086829
+    second: Cyan 5
+  - first:
+      213: -8021690626933431793
+    second: Cyan 6
+  - first:
+      213: 142656381794598563
+    second: Cyan 7
+  - first:
+      213: 2320602598572069706
+    second: Cyan 8
+  - first:
+      213: -1228926033787973224
+    second: Cyan 9
+  - first:
+      213: 6084294934027689443
+    second: Cyan 10
+  - first:
+      213: -6732346196990720464
+    second: Cyan 11
+  - first:
+      213: 1904316759505430001
+    second: Cyan 12
+  - first:
+      213: 6511511866400633271
+    second: Cyan 13
+  - first:
+      213: -4609784502639815412
+    second: Cyan 14
+  - first:
+      213: -6775400336293148946
+    second: Cyan 15
+  - first:
+      213: -5016005712960608663
+    second: Cyan 16
+  - first:
+      213: 3258125794504331457
+    second: Cyan 17
+  - first:
+      213: -1494408447081917648
+    second: Cyan 18
+  - first:
+      213: -3586697385131225652
+    second: Cyan 19
+  - first:
+      213: 7126622458649171207
+    second: Cyan 20
+  - first:
+      213: 3183191808963257024
+    second: Cyan 21
+  - first:
+      213: 1901890176461872443
+    second: Cyan 22
+  - first:
+      213: 2267829333152870788
+    second: Cyan 23
+  - first:
+      213: 1234088520678223449
+    second: Cyan 24
+  - first:
+      213: -6236028951097258958
+    second: Cyan 25
+  - first:
+      213: -4483931605168252861
+    second: Cyan 26
+  - first:
+      213: -7979508439122239919
+    second: Cyan 27
+  - first:
+      213: 8963968184615314600
+    second: Cyan 28
+  - first:
+      213: -8234169319805608809
+    second: Cyan 29
+  - first:
+      213: 8063941086191461253
+    second: Cyan 30
+  - first:
+      213: -2983528547284345085
+    second: Cyan 31
+  - first:
+      213: 8046534487152463599
+    second: Cyan 32
+  - first:
+      213: -1301009114057317146
+    second: Cyan 33
+  - first:
+      213: 565984285584570238
+    second: Cyan 34
+  - first:
+      213: -844791559159664821
+    second: Cyan 35
+  - first:
+      213: 5987589219404574400
+    second: Cyan 36
+  - first:
+      213: 5276032480348091404
+    second: Cyan 37
+  - first:
+      213: 711405001484410917
+    second: Cyan 38
+  - first:
+      213: 8379687301608711762
+    second: Cyan 39
+  - first:
+      213: -8251479769426140955
+    second: Cyan 40
+  - first:
+      213: -7272026949917977819
+    second: Cyan 41
+  - first:
+      213: 6248235383711379610
+    second: Cyan 42
+  - first:
+      213: -4377100350114835104
+    second: Cyan 43
+  - first:
+      213: 100560823212093314
+    second: Cyan 44
+  - first:
+      213: 4572565158114834175
+    second: Cyan 45
+  - first:
+      213: -7095583475301172356
+    second: Cyan 46
+  - first:
+      213: 6903949057490208558
+    second: Cyan 47
+  - first:
+      213: 3486001575450092811
+    second: Cyan 48
+  - first:
+      213: -3513269339150477886
+    second: Cyan 49
+  - first:
+      213: 3429742089977927637
+    second: Cyan 50
+  - first:
+      213: -7952423175100517683
+    second: Cyan 51
+  - first:
+      213: 6059139258053938290
+    second: Cyan 52
+  - first:
+      213: -4451139311217319813
+    second: Cyan 53
+  - first:
+      213: -7464953980810077476
+    second: Cyan 54
+  - first:
+      213: -947077257943947439
+    second: Cyan 55
+  - first:
+      213: 7217933340851720814
+    second: Cyan 56
+  - first:
+      213: 4244582044265342613
+    second: Cyan 57
+  - first:
+      213: -8179774217421667132
+    second: Cyan 58
+  - first:
+      213: 2193198055226464141
+    second: Cyan 59
+  - first:
+      213: 3884516040417542560
+    second: Cyan 60
+  - first:
+      213: -4372265671686108535
+    second: Cyan 61
+  - first:
+      213: -6771483427965665415
+    second: Cyan 62
+  - first:
+      213: 7294623119742163426
+    second: Cyan 63
+  - first:
+      213: -7796673953945443712
+    second: Cyan 64
+  - first:
+      213: 1126860137817479962
+    second: Cyan 65
+  - first:
+      213: 5985955654147869431
+    second: Cyan 66
+  - first:
+      213: 311951349091930011
+    second: Cyan 67
+  - first:
+      213: 402148705590442790
+    second: Cyan 68
+  - first:
+      213: -4191061614428260960
+    second: Cyan 69
+  - first:
+      213: -6738085040364232557
+    second: Cyan 70
+  - first:
+      213: -5576266089698983764
+    second: Cyan 71
+  - first:
+      213: -2355694725812952533
+    second: Cyan 72
+  - first:
+      213: -1063244784482929782
+    second: Cyan 73
+  - first:
+      213: 8041697867958169854
+    second: Cyan 74
+  - first:
+      213: 5514084212319877473
+    second: Cyan 75
+  - first:
+      213: -4199632590436415724
+    second: Cyan 76
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 66
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cyan 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d8e01a3842f16c0800000000000000
+      internalID: -4170574582160388732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 1
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05a51fc9a21b433e0800000000000000
+      internalID: -2074838731731150256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 2
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7dd10cf67deb5020800000000000000
+      internalID: 2331718327384268159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 3
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e52de9e3a7b10bb0800000000000000
+      internalID: -4971490599008131612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 4
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9181eac6b5a040120800000000000000
+      internalID: 2379037890940114969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 5
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 317cd1f472c8ac3c0800000000000000
+      internalID: -4338501190559086829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 6
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f026d8320ea3da090800000000000000
+      internalID: -8021690626933431793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 7
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ae3fc13931daf100800000000000000
+      internalID: 142656381794598563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 8
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a439cb0b4cf643020800000000000000
+      internalID: 2320602598572069706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 9
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89196dc884af1fee0800000000000000
+      internalID: -1228926033787973224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eddd6ba102cf6450800000000000000
+      internalID: 6084294934027689443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 11
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0368a67adc6e192a0800000000000000
+      internalID: -6732346196990720464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 12
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f5e426d00e7d6a10800000000000000
+      internalID: 1904316759505430001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 13
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b1fc830b898d5a50800000000000000
+      internalID: 6511511866400633271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 14
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c059d052b61c600c0800000000000000
+      internalID: -4609784502639815412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 15
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee64f20ba41f8f1a0800000000000000
+      internalID: -6775400336293148946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 16
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96627a74161936ab0800000000000000
+      internalID: -5016005712960608663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 17
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c0d7f6d520373d20800000000000000
+      internalID: 3258125794504331457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 18
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033d6526f6bc24be0800000000000000
+      internalID: -1494408447081917648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 19
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccd4e6a3bbd793ec0800000000000000
+      internalID: -3586697385131225652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 705da102e59d6e260800000000000000
+      internalID: 7126622458649171207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 21
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c22031c518fc2c20800000000000000
+      internalID: 3183191808963257024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 22
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3d90d1f90fd46a10800000000000000
+      internalID: 1901890176461872443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 23
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 481b9c553c2f87f10800000000000000
+      internalID: 2267829333152870788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 24
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ea96898fc502110800000000000000
+      internalID: 1234088520678223449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 25
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23ccbc875bc2579a0800000000000000
+      internalID: -6236028951097258958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 26
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3489cc446ffd5c1c0800000000000000
+      internalID: -4483931605168252861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 27
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e13e31a57134190800000000000000
+      internalID: -7979508439122239919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 28
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a426ed1299666c70800000000000000
+      internalID: 8963968184615314600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 29
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79c119051aa5abd80800000000000000
+      internalID: -8234169319805608809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 583ae1c71bfd8ef60800000000000000
+      internalID: 8063941086191461253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 31
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30f11e9f7906896d0800000000000000
+      internalID: -2983528547284345085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 32
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fee07a3db780baf60800000000000000
+      internalID: 8046534487152463599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 33
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e461139a13e1fde0800000000000000
+      internalID: -1301009114057317146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 34
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e77b8b285b7cad700800000000000000
+      internalID: 565984285584570238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 35
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4f2a078d82b644f0800000000000000
+      internalID: -844791559159664821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 36
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ce6193eba0381350800000000000000
+      internalID: 5987589219404574400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 37
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c043296569b383940800000000000000
+      internalID: 5276032480348091404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 38
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5202ae4641b6fd900800000000000000
+      internalID: 711405001484410917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 39
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2562d3d0431aa4470800000000000000
+      internalID: 8379687301608711762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e068003edadc7d80800000000000000
+      internalID: -8251479769426140955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 41
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52352159402941b90800000000000000
+      internalID: -7272026949917977819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 42
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a90b4271af036b650800000000000000
+      internalID: 6248235383711379610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 43
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 065da252c6a6143c0800000000000000
+      internalID: -4377100350114835104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 44
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28fa0e13983456100800000000000000
+      internalID: 100560823212093314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 45
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff633c9e8c3057f30800000000000000
+      internalID: 4572565158114834175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 46
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7bba885c6c678d90800000000000000
+      internalID: -7095583475301172356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 47
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e27c81fc611cfcf50800000000000000
+      internalID: 6903949057490208558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 48
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b05a72796f3c06030800000000000000
+      internalID: 3486001575450092811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 49
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c51aaf662c5e3fc0800000000000000
+      internalID: -3513269339150477886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d717506244e89f20800000000000000
+      internalID: 3429742089977927637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 51
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc2bc88814153a190800000000000000
+      internalID: -7952423175100517683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 52
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27ccde07d03661450800000000000000
+      internalID: 6059139258053938290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 53
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b706d1d21606a32c0800000000000000
+      internalID: -4451139311217319813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 54
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cda5d2dc7e7276890800000000000000
+      internalID: -7464953980810077476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 55
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1576661704e4bd2f0800000000000000
+      internalID: -947077257943947439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 56
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e625ae991204b2460800000000000000
+      internalID: 7217933340851720814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 57
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 596ef6861e8c7ea30800000000000000
+      internalID: 4244582044265342613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 58
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c4cea300ba9b7e80800000000000000
+      internalID: -8179774217421667132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 59
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d87d9dbd20ecf6e10800000000000000
+      internalID: 2193198055226464141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a10569f1c298e530800000000000000
+      internalID: 3884516040417542560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 61
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98ac38f69879253c0800000000000000
+      internalID: -4372265671686108535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 62
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f79a9f2bbd602a0800000000000000
+      internalID: -6771483427965665415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 63
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e9559e2415bb3560800000000000000
+      internalID: 7294623119742163426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 64
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 082aa81f856acc390800000000000000
+      internalID: -7796673953945443712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 65
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1b9822335963af00800000000000000
+      internalID: 1126860137817479962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 66
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fa89b6d3f2621350800000000000000
+      internalID: 5985955654147869431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 67
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9f04d56916445400800000000000000
+      internalID: 311951349091930011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 68
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62bf997fd18b49500800000000000000
+      internalID: 402148705590442790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 69
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a57a38baab56d5c0800000000000000
+      internalID: -4191061614428260960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39067be0b538d72a0800000000000000
+      internalID: -6738085040364232557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 71
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca08f66298f1d92b0800000000000000
+      internalID: -5576266089698983764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 72
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2268acb024ee4fd0800000000000000
+      internalID: -2355694725812952533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 73
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a83bb9770889e31f0800000000000000
+      internalID: -1063244784482929782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cyan 74
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef0b9aaaa99d99f60800000000000000
+      internalID: 8041697867958169854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Cyan 47: 6903949057490208558
+      Cyan 44: 100560823212093314
+      Cyan 48: 3486001575450092811
+      Cyan 74: 8041697867958169854
+      Cyan 39: 8379687301608711762
+      Cyan 23: 2267829333152870788
+      Cyan 25: -6236028951097258958
+      Cyan 14: -4609784502639815412
+      Cyan 37: 5276032480348091404
+      Cyan 30: 8063941086191461253
+      Cyan 7: 142656381794598563
+      Cyan 28: 8963968184615314600
+      Cyan 49: -3513269339150477886
+      Cyan 45: 4572565158114834175
+      Cyan 13: 6511511866400633271
+      Cyan 68: 402148705590442790
+      Cyan 36: 5987589219404574400
+      Cyan 31: -2983528547284345085
+      Cyan 70: -6738085040364232557
+      Cyan 61: -4372265671686108535
+      Cyan 32: 8046534487152463599
+      Cyan 19: -3586697385131225652
+      Cyan 33: -1301009114057317146
+      Cyan 3: -4971490599008131612
+      Cyan 50: 3429742089977927637
+      Cyan 12: 1904316759505430001
+      Cyan 1: -2074838731731150256
+      Cyan 10: 6084294934027689443
+      Cyan 41: -7272026949917977819
+      Cyan 2: 2331718327384268159
+      Cyan 53: -4451139311217319813
+      Cyan 73: -1063244784482929782
+      Cyan 16: -5016005712960608663
+      Cyan 59: 2193198055226464141
+      Cyan 55: -947077257943947439
+      Cyan 21: 3183191808963257024
+      Cyan 56: 7217933340851720814
+      Cyan 60: 3884516040417542560
+      Cyan 72: -2355694725812952533
+      Cyan 66: 5985955654147869431
+      Cyan 9: -1228926033787973224
+      Cyan 67: 311951349091930011
+      Cyan 4: 2379037890940114969
+      Cyan 8: 2320602598572069706
+      Cyan 26: -4483931605168252861
+      Cyan 34: 565984285584570238
+      Cyan 43: -4377100350114835104
+      Cyan 22: 1901890176461872443
+      Cyan 27: -7979508439122239919
+      Cyan 63: 7294623119742163426
+      Cyan 46: -7095583475301172356
+      Cyan 69: -4191061614428260960
+      Cyan 71: -5576266089698983764
+      Cyan 18: -1494408447081917648
+      Cyan 15: -6775400336293148946
+      Cyan 11: -6732346196990720464
+      Cyan 0: -4170574582160388732
+      Cyan 57: 4244582044265342613
+      Cyan 54: -7464953980810077476
+      Cyan 62: -6771483427965665415
+      Cyan 20: 7126622458649171207
+      Cyan 38: 711405001484410917
+      Cyan 42: 6248235383711379610
+      Cyan 6: -8021690626933431793
+      Cyan 64: -7796673953945443712
+      Cyan 65: 1126860137817479962
+      Cyan 58: -8179774217421667132
+      Cyan 40: -8251479769426140955
+      Cyan 35: -844791559159664821
+      Cyan 17: 3258125794504331457
+      Cyan 29: -8234169319805608809
+      Cyan 52: 6059139258053938290
+      Cyan 51: -7952423175100517683
+      Cyan 5: -4338501190559086829
+      Cyan 24: 1234088520678223449
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

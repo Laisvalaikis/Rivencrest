@@ -1,0 +1,1672 @@
+fileFormatVersion: 2
+guid: e6f8684547aae1d42873ec5f927de0d6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6925661806893257627
+    second: Lime 0
+  - first:
+      213: 816640945803046988
+    second: Lime 1
+  - first:
+      213: -5489903974667741078
+    second: Lime 2
+  - first:
+      213: -3289583689314225240
+    second: Lime 3
+  - first:
+      213: -8252122509289942054
+    second: Lime 4
+  - first:
+      213: 7040061532323582334
+    second: Lime 5
+  - first:
+      213: 3252348494866828700
+    second: Lime 6
+  - first:
+      213: 5598304738968853251
+    second: Lime 7
+  - first:
+      213: 7091309423686399234
+    second: Lime 8
+  - first:
+      213: -1325076521930649551
+    second: Lime 9
+  - first:
+      213: 5372819981833530113
+    second: Lime 10
+  - first:
+      213: 7045301109494256279
+    second: Lime 11
+  - first:
+      213: 3460411766762292359
+    second: Lime 12
+  - first:
+      213: 7501533677521723695
+    second: Lime 13
+  - first:
+      213: -6230785645131073142
+    second: Lime 14
+  - first:
+      213: 5614582852780095460
+    second: Lime 15
+  - first:
+      213: -1795275531636661500
+    second: Lime 16
+  - first:
+      213: 2381053270573372298
+    second: Lime 17
+  - first:
+      213: 6178745270849558964
+    second: Lime 18
+  - first:
+      213: 3541564653237819957
+    second: Lime 19
+  - first:
+      213: 5930537563516553749
+    second: Lime 20
+  - first:
+      213: 2480818825523231089
+    second: Lime 21
+  - first:
+      213: -3127777451320363875
+    second: Lime 22
+  - first:
+      213: 2689923769621465711
+    second: Lime 23
+  - first:
+      213: -5727143970344495479
+    second: Lime 24
+  - first:
+      213: -1821791327446951868
+    second: Lime 25
+  - first:
+      213: -2929633944831102981
+    second: Lime 26
+  - first:
+      213: -5535090328272209757
+    second: Lime 27
+  - first:
+      213: -5822000788109562048
+    second: Lime 28
+  - first:
+      213: -2070279418976369710
+    second: Lime 29
+  - first:
+      213: -6249650232175817729
+    second: Lime 30
+  - first:
+      213: -3928307532127863359
+    second: Lime 31
+  - first:
+      213: -3865180519514397492
+    second: Lime 32
+  - first:
+      213: -6430204612883566241
+    second: Lime 33
+  - first:
+      213: -7325957228960617822
+    second: Lime 34
+  - first:
+      213: -4728205702824860819
+    second: Lime 35
+  - first:
+      213: 4125561726554290615
+    second: Lime 36
+  - first:
+      213: -261623786230005041
+    second: Lime 37
+  - first:
+      213: 1350691202618687685
+    second: Lime 38
+  - first:
+      213: -4504406943104477036
+    second: Lime 39
+  - first:
+      213: 3333787328256544136
+    second: Lime 40
+  - first:
+      213: -5306899879821908199
+    second: Lime 41
+  - first:
+      213: -8084830647039173600
+    second: Lime 42
+  - first:
+      213: -3228141626929529713
+    second: Lime 43
+  - first:
+      213: 9203449384365042942
+    second: Lime 44
+  - first:
+      213: 3875234494812092730
+    second: Lime 45
+  - first:
+      213: -7284285618255786124
+    second: Lime 46
+  - first:
+      213: -819726201367283722
+    second: Lime 47
+  - first:
+      213: -2679706844329252989
+    second: Lime 48
+  - first:
+      213: -834094415201678204
+    second: Lime 49
+  - first:
+      213: -7521483340424934054
+    second: Lime 50
+  - first:
+      213: 2724902639413769157
+    second: Lime 51
+  - first:
+      213: 1954812542830497793
+    second: Lime 52
+  - first:
+      213: 6008089123468712817
+    second: Lime 53
+  - first:
+      213: 6628136742009425929
+    second: Lime 54
+  - first:
+      213: 385362223746137482
+    second: Lime 55
+  - first:
+      213: -5186775231685821320
+    second: Lime 56
+  - first:
+      213: -3245226133399849422
+    second: Lime 57
+  - first:
+      213: 2085675363231846170
+    second: Lime 58
+  - first:
+      213: 3278996881452238718
+    second: Lime 59
+  - first:
+      213: -3051853990785883482
+    second: Lime 60
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 66
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lime 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b93dc5a38b4ec1060800000000000000
+      internalID: 6925661806893257627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 1
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4031ab0d9a455b00800000000000000
+      internalID: 816640945803046988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 2
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a689ceafb61ffc3b0800000000000000
+      internalID: -5489903974667741078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 3
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a3b183401d0952d0800000000000000
+      internalID: -3289583689314225240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 4
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad394c6ac429a7d80800000000000000
+      internalID: -8252122509289942054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 5
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e711a0fe9a253b160800000000000000
+      internalID: 7040061532323582334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 6
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d405279b9a22d20800000000000000
+      internalID: 3252348494866828700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 7
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30bdf9ebf7c21bd40800000000000000
+      internalID: 5598304738968853251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 8
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20535377954696260800000000000000
+      internalID: 7091309423686399234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 9
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1301d128ce16c9de0800000000000000
+      internalID: -1325076521930649551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10bee4b9e47109a40800000000000000
+      internalID: 5372819981833530113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 11
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 792121f0800f5c160800000000000000
+      internalID: 7045301109494256279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 12
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784c276fa2ad50030800000000000000
+      internalID: 3460411766762292359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 13
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f21ef47822dca1860800000000000000
+      internalID: 7501533677521723695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 14
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a89fb56c77dc789a0800000000000000
+      internalID: -6230785645131073142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 15
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e7f4f57b510bed40800000000000000
+      internalID: 5614582852780095460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 16
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 403a8de6a66e517e0800000000000000
+      internalID: -1795275531636661500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 17
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a83decf85533b0120800000000000000
+      internalID: 2381053270573372298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 18
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b9dc9266105fb550800000000000000
+      internalID: 6178745270849558964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 19
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53ad151c94a262130800000000000000
+      internalID: 3541564653237819957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51ac3802e708d4250800000000000000
+      internalID: 5930537563516553749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 21
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 179f96fe393ad6220800000000000000
+      internalID: 2480818825523231089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 22
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d94b29dcaf6e794d0800000000000000
+      internalID: -3127777451320363875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 23
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6aca29aa67845520800000000000000
+      internalID: 2689923769621465711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 24
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 986981617e81580b0800000000000000
+      internalID: -5727143970344495479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 25
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44813a0a072b7b6e0800000000000000
+      internalID: -1821791327446951868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 26
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bff6a64f279d757d0800000000000000
+      internalID: -2929633944831102981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 27
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a872af2ca86f23b0800000000000000
+      internalID: -5535090328272209757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 28
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04f6fa62129143fa0800000000000000
+      internalID: -5822000788109562048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 29
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d38c1656d3e443e0800000000000000
+      internalID: -2070279418976369710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffb09b4d938c449a0800000000000000
+      internalID: -6249650232175817729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 31
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cdf603dc19db79c0800000000000000
+      internalID: -3928307532127863359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 32
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc4a59dcbce1c5ac0800000000000000
+      internalID: -3865180519514397492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 33
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f513ff729f253c6a0800000000000000
+      internalID: -6430204612883566241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 34
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aae81007b8f45a90800000000000000
+      internalID: -7325957228960617822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 35
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d63e522e6f9026eb0800000000000000
+      internalID: -4728205702824860819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 36
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b9373a3880f04930800000000000000
+      internalID: 4125561726554290615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 37
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc2c7f47d868e5cf0800000000000000
+      internalID: -261623786230005041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 38
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c005551e7e9eb210800000000000000
+      internalID: 1350691202618687685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 39
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 498547820c12d71c0800000000000000
+      internalID: -4504406943104477036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88d0e6179edf34e20800000000000000
+      internalID: 3333787328256544136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 41
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 917e6ac2daa1a56b0800000000000000
+      internalID: -5306899879821908199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 42
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02cd90e9c59eccf80800000000000000
+      internalID: -8084830647039173600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 43
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8cb6323b465333d0800000000000000
+      internalID: -3228141626929529713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 44
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efcad5ff37839bf70800000000000000
+      internalID: 9203449384365042942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 45
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a397d9cbd3997c530800000000000000
+      internalID: 3875234494812092730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 46
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47f8061f2d409ea90800000000000000
+      internalID: -7284285618255786124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 47
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f73c6aec5fbf94f0800000000000000
+      internalID: -819726201367283722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 48
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3876291a2d4cfcad0800000000000000
+      internalID: -2679706844329252989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 49
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48c44c07c83bc64f0800000000000000
+      internalID: -834094415201678204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5d04fd90c25e9790800000000000000
+      internalID: -7521483340424934054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 51
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c338cd638cc0d520800000000000000
+      internalID: 2724902639413769157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 52
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 100d3e196a3e02b10800000000000000
+      internalID: 1954812542830497793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 53
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17b9d3fb935016350800000000000000
+      internalID: 6008089123468712817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 54
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 900df2edf3fdbfb50800000000000000
+      internalID: 6628136742009425929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 55
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8d3e3896e4195500800000000000000
+      internalID: 385362223746137482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 56
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87c7291586fd408b0800000000000000
+      internalID: -5186775231685821320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 57
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23633ee8604a6f2d0800000000000000
+      internalID: -3245226133399849422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 58
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1fc73641bec1fc10800000000000000
+      internalID: 2085675363231846170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 59
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7703927a46518d20800000000000000
+      internalID: 3278996881452238718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lime 60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a269dcf6f2a5a5d0800000000000000
+      internalID: -3051853990785883482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Lime 22: -3127777451320363875
+      Lime 57: -3245226133399849422
+      Lime 18: 6178745270849558964
+      Lime 33: -6430204612883566241
+      Lime 23: 2689923769621465711
+      Lime 32: -3865180519514397492
+      Lime 52: 1954812542830497793
+      Lime 29: -2070279418976369710
+      Lime 9: -1325076521930649551
+      Lime 24: -5727143970344495479
+      Lime 55: 385362223746137482
+      Lime 35: -4728205702824860819
+      Lime 26: -2929633944831102981
+      Lime 41: -5306899879821908199
+      Lime 3: -3289583689314225240
+      Lime 0: 6925661806893257627
+      Lime 40: 3333787328256544136
+      Lime 13: 7501533677521723695
+      Lime 20: 5930537563516553749
+      Lime 28: -5822000788109562048
+      Lime 8: 7091309423686399234
+      Lime 43: -3228141626929529713
+      Lime 31: -3928307532127863359
+      Lime 42: -8084830647039173600
+      Lime 36: 4125561726554290615
+      Lime 53: 6008089123468712817
+      Lime 44: 9203449384365042942
+      Lime 2: -5489903974667741078
+      Lime 25: -1821791327446951868
+      Lime 47: -819726201367283722
+      Lime 5: 7040061532323582334
+      Lime 15: 5614582852780095460
+      Lime 14: -6230785645131073142
+      Lime 10: 5372819981833530113
+      Lime 58: 2085675363231846170
+      Lime 17: 2381053270573372298
+      Lime 12: 3460411766762292359
+      Lime 30: -6249650232175817729
+      Lime 59: 3278996881452238718
+      Lime 19: 3541564653237819957
+      Lime 39: -4504406943104477036
+      Lime 6: 3252348494866828700
+      Lime 54: 6628136742009425929
+      Lime 50: -7521483340424934054
+      Lime 46: -7284285618255786124
+      Lime 27: -5535090328272209757
+      Lime 45: 3875234494812092730
+      Lime 51: 2724902639413769157
+      Lime 48: -2679706844329252989
+      Lime 1: 816640945803046988
+      Lime 34: -7325957228960617822
+      Lime 21: 2480818825523231089
+      Lime 38: 1350691202618687685
+      Lime 4: -8252122509289942054
+      Lime 7: 5598304738968853251
+      Lime 16: -1795275531636661500
+      Lime 11: 7045301109494256279
+      Lime 37: -261623786230005041
+      Lime 60: -3051853990785883482
+      Lime 49: -834094415201678204
+      Lime 56: -5186775231685821320
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1113 @@
+fileFormatVersion: 2
+guid: 88a9dc2923d4fa842a8fce4120dbf698
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 66
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 256
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PortraitUI_IMG 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 222
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3090531f8d551dc70800000000000000
+      internalID: 8994064321083672835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 222
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c42f9a8c0cd1e530800000000000000
+      internalID: 3882626300193481920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 222
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6c0c19723140aee0800000000000000
+      internalID: -1251929011372946324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 222
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e83065ec21aaa40b0800000000000000
+      internalID: -5743591377009769586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 4
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 222
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 404a6a80b47a3df30800000000000000
+      internalID: 4599203585184932868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 5
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 222
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c4ccc6992625e1c0800000000000000
+      internalID: -4475128694657203000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 6
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 222
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbbdacf7c27a8f460800000000000000
+      internalID: 7275749007581436860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 188
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5beb3c744be1688e0800000000000000
+      internalID: -1691630850384085323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 8
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 188
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfb5ab7f05bb020b0800000000000000
+      internalID: -5755394367351530500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 9
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 188
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0216c5f7b9e97a410800000000000000
+      internalID: 1488332592563118368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 10
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 188
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d0860426cbf27e80800000000000000
+      internalID: -8182200744552267562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 11
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 188
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed2f359d6f820230800000000000000
+      internalID: 3603600352667971043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 12
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 188
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5df05ccebe291b3e0800000000000000
+      internalID: -2039687614234816555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 13
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 188
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4359519d024cd2dd0800000000000000
+      internalID: -2509133772015430348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 154
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5096dbe4e1b3c48f0800000000000000
+      internalID: -555003652717319931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 15
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 154
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb2d191d8c1304e0800000000000000
+      internalID: -2016736815794541627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 16
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 154
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da3b844a819641c80800000000000000
+      internalID: -8352935854309067859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 17
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 154
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a063387ee861f5520800000000000000
+      internalID: 2692895905216149002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 18
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 154
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7f157d6613cb49f0800000000000000
+      internalID: -483078033919107203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 19
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 154
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47bfa555b46e0d760800000000000000
+      internalID: 7480732192291355508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 20
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 154
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a71a625a1abcadd0800000000000000
+      internalID: -2473397473118644318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7006717eb2bdb530800000000000000
+      internalID: 3872447785625583739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 22
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 120
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81e94137530c2e260800000000000000
+      internalID: 7125468896250076696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 23
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 120
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5013d3c9fee6de60800000000000000
+      internalID: 7986833745687810140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 24
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 120
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bc2aa00a14a4be50800000000000000
+      internalID: 6824259766960401585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 25
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 120
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 804df51f4dc3fc5a0800000000000000
+      internalID: -6498908851992013816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 26
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 120
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c81917dde4b44b40800000000000000
+      internalID: 5423658784869914817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 27
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 120
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a43747cb57b6e5a0800000000000000
+      internalID: -6492300207994751834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 86
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2579d0337fc953cd0800000000000000
+      internalID: -2578982626072357038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 29
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 86
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b64d1997699d1610800000000000000
+      internalID: 1593598513388537524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 30
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 86
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e401a7c888e2fa6f0800000000000000
+      internalID: -671266655447674802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 31
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 86
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2e8aeeb2864fb5a0800000000000000
+      internalID: -6503401809536971221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 32
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 86
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bb0043134cf205d0800000000000000
+      internalID: -3097636228661507150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 33
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 86
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07a767f8cbb2c6e20800000000000000
+      internalID: 3345096712090188400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 34
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 86
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab123cd879aa16840800000000000000
+      internalID: 5215637411366904250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 52
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ec43805741665b30800000000000000
+      internalID: 4275711855156219111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 36
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 52
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aab50929141df8900800000000000000
+      internalID: 688999347572988842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 37
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 52
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 369ef700acd1e48d0800000000000000
+      internalID: -2860315959904704157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 38
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 52
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e7e989d0df21ab50800000000000000
+      internalID: 6602611102751254501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 39
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 52
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a83e8ae560daa650800000000000000
+      internalID: 6245032969448077479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 40
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 52
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92081ec1e299a4180800000000000000
+      internalID: -9130316871208173527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 41
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 52
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f4a39ee10d735e0800000000000000
+      internalID: -1929845084124459120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3c3383ebe18d54e0800000000000000
+      internalID: -1991292610093564866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 43
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 18
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 458a4f21fe96a76f0800000000000000
+      internalID: -686119517684455340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortraitUI_IMG 44
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 18
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a57510a2c31e380f0800000000000000
+      internalID: -1115800634138732710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PortraitUI_IMG 9: 1488332592563118368
+      PortraitUI_IMG 43: -686119517684455340
+      PortraitUI_IMG 20: -2473397473118644318
+      PortraitUI_IMG 38: 6602611102751254501
+      PortraitUI_IMG 41: -1929845084124459120
+      PortraitUI_IMG 0: 8994064321083672835
+      PortraitUI_IMG 5: -4475128694657203000
+      PortraitUI_IMG 12: -2039687614234816555
+      PortraitUI_IMG 40: -9130316871208173527
+      PortraitUI_IMG 16: -8352935854309067859
+      PortraitUI_IMG 30: -671266655447674802
+      PortraitUI_IMG 36: 688999347572988842
+      PortraitUI_IMG 22: 7125468896250076696
+      PortraitUI_IMG 3: -5743591377009769586
+      PortraitUI_IMG 2: -1251929011372946324
+      PortraitUI_IMG 4: 4599203585184932868
+      PortraitUI_IMG 31: -6503401809536971221
+      PortraitUI_IMG 25: -6498908851992013816
+      PortraitUI_IMG 34: 5215637411366904250
+      PortraitUI_IMG 26: 5423658784869914817
+      PortraitUI_IMG 44: -1115800634138732710
+      PortraitUI_IMG 13: -2509133772015430348
+      PortraitUI_IMG 32: -3097636228661507150
+      PortraitUI_IMG 33: 3345096712090188400
+      PortraitUI_IMG 10: -8182200744552267562
+      PortraitUI_IMG 15: -2016736815794541627
+      PortraitUI_IMG 42: -1991292610093564866
+      PortraitUI_IMG 28: -2578982626072357038
+      PortraitUI_IMG 27: -6492300207994751834
+      PortraitUI_IMG 17: 2692895905216149002
+      PortraitUI_IMG 11: 3603600352667971043
+      PortraitUI_IMG 39: 6245032969448077479
+      PortraitUI_IMG 18: -483078033919107203
+      PortraitUI_IMG 8: -5755394367351530500
+      PortraitUI_IMG 1: 3882626300193481920
+      PortraitUI_IMG 24: 6824259766960401585
+      PortraitUI_IMG 23: 7986833745687810140
+      PortraitUI_IMG 37: -2860315959904704157
+      PortraitUI_IMG 14: -555003652717319931
+      PortraitUI_IMG 19: 7480732192291355508
+      PortraitUI_IMG 7: -1691630850384085323
+      PortraitUI_IMG 35: 4275711855156219111
+      PortraitUI_IMG 21: 3872447785625583739
+      PortraitUI_IMG 6: 7275749007581436860
+      PortraitUI_IMG 29: 1593598513388537524
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

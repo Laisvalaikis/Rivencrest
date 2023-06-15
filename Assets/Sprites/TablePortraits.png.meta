@@ -1,0 +1,697 @@
+fileFormatVersion: 2
+guid: 9c6ad0d1b545e344a8dc5c80f421d3cb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8149371001780123296
+    second: TablePortraits 0
+  - first:
+      213: -2678113349381393087
+    second: TablePortraits 1
+  - first:
+      213: 4202156337760801369
+    second: TablePortraits 2
+  - first:
+      213: 2520241002396213999
+    second: TablePortraits 3
+  - first:
+      213: -7266305657354422227
+    second: TablePortraits 4
+  - first:
+      213: -8451723300697837608
+    second: TablePortraits 5
+  - first:
+      213: 1699126739720152299
+    second: TablePortraits 6
+  - first:
+      213: 4052336615543003372
+    second: TablePortraits 7
+  - first:
+      213: -2336938632261355874
+    second: TablePortraits 8
+  - first:
+      213: -3983539873522827567
+    second: TablePortraits 9
+  - first:
+      213: 2900230620100509044
+    second: TablePortraits 10
+  - first:
+      213: 598610014604914465
+    second: TablePortraits 11
+  - first:
+      213: -2651821824365294045
+    second: TablePortraits 12
+  - first:
+      213: -1109921872580190186
+    second: TablePortraits 13
+  - first:
+      213: 9061640590526611639
+    second: TablePortraits 14
+  - first:
+      213: 218854580434428391
+    second: TablePortraits 15
+  - first:
+      213: -4252032880994029074
+    second: TablePortraits 16
+  - first:
+      213: -8913815223202546545
+    second: TablePortraits 17
+  - first:
+      213: 5700831132782319231
+    second: TablePortraits 18
+  - first:
+      213: 4672966334877237986
+    second: TablePortraits 19
+  - first:
+      213: 7947849650263423474
+    second: TablePortraits 20
+  - first:
+      213: -5125940699952450712
+    second: TablePortraits 21
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 66
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TablePortraits 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 860
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 069c608404e97ee80800000000000000
+      internalID: -8149371001780123296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 860
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 145f3e5191e65dad0800000000000000
+      internalID: -2678113349381393087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 860
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95293eadcee015a30800000000000000
+      internalID: 4202156337760801369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 860
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe26330c6d1b9f220800000000000000
+      internalID: 2520241002396213999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 696
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d287affc085e82b90800000000000000
+      internalID: -7266305657354422227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 696
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8df630aef6275ba80800000000000000
+      internalID: -8451723300697837608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 696
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be4236574c2849710800000000000000
+      internalID: 1699126739720152299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 7
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 696
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce8dfbf7eaacc3830800000000000000
+      internalID: 4052336615543003372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 532
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e96bc2212b6819fd0800000000000000
+      internalID: -2336938632261355874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 532
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1de311a379f97b8c0800000000000000
+      internalID: -3983539873522827567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 532
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47d3dc50260bf3820800000000000000
+      internalID: 2900230620100509044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 532
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f648ff2a0be4800800000000000000
+      internalID: 598610014604914465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32e0417c916d23bd0800000000000000
+      internalID: -2651821824365294045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 13
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 368
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 610eb6000f3c890f0800000000000000
+      internalID: -1109921872580190186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 14
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 368
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b089904b1a61cd70800000000000000
+      internalID: 9061640590526611639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 15
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 368
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e1e244d417890300800000000000000
+      internalID: 218854580434428391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 204
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee1f11b7f9ebdf4c0800000000000000
+      internalID: -4252032880994029074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 204
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8cfa8b2844cb4480800000000000000
+      internalID: -8913815223202546545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 204
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f765af106bb6d1f40800000000000000
+      internalID: 5700831132782319231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 204
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e287b58f16b9d040800000000000000
+      internalID: 4672966334877237986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f9f92cb52f6c4e60800000000000000
+      internalID: 7947849650263423474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TablePortraits 21
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 40
+        width: 256
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 863fd9f77100dd8b0800000000000000
+      internalID: -5125940699952450712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TablePortraits 8: -2336938632261355874
+      TablePortraits 12: -2651821824365294045
+      TablePortraits 15: 218854580434428391
+      TablePortraits 9: -3983539873522827567
+      TablePortraits 19: 4672966334877237986
+      TablePortraits 7: 4052336615543003372
+      TablePortraits 16: -4252032880994029074
+      TablePortraits 6: 1699126739720152299
+      TablePortraits 21: -5125940699952450712
+      TablePortraits 11: 598610014604914465
+      TablePortraits 18: 5700831132782319231
+      TablePortraits 0: -8149371001780123296
+      TablePortraits 1: -2678113349381393087
+      TablePortraits 20: 7947849650263423474
+      TablePortraits 10: 2900230620100509044
+      TablePortraits 4: -7266305657354422227
+      TablePortraits 5: -8451723300697837608
+      TablePortraits 3: 2520241002396213999
+      TablePortraits 13: -1109921872580190186
+      TablePortraits 14: 9061640590526611639
+      TablePortraits 17: -8913815223202546545
+      TablePortraits 2: 4202156337760801369
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

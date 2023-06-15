@@ -1,0 +1,847 @@
+fileFormatVersion: 2
+guid: 88644df9a680363469881e9a32720e13
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8454856594114886866
+    second: PickupOrbs 0
+  - first:
+      213: 5236000622150243768
+    second: PickupOrbs 1
+  - first:
+      213: 6842765552715157168
+    second: PickupOrbs 2
+  - first:
+      213: -7558837795547459363
+    second: PickupOrbs 3
+  - first:
+      213: -3527542243558240433
+    second: PickupOrbs 4
+  - first:
+      213: 6722843948532917774
+    second: PickupOrbs 5
+  - first:
+      213: 7037449203850643266
+    second: PickupOrbs 6
+  - first:
+      213: 6081272170226236904
+    second: PickupOrbs 7
+  - first:
+      213: 4100818756834978058
+    second: PickupOrbs 8
+  - first:
+      213: -7470146184170621230
+    second: PickupOrbs 9
+  - first:
+      213: 6262679659111056444
+    second: PickupOrbs 10
+  - first:
+      213: 7406160935339790878
+    second: PickupOrbs 11
+  - first:
+      213: 3383342906938742940
+    second: PickupOrbs 12
+  - first:
+      213: 4011801414339962822
+    second: PickupOrbs 13
+  - first:
+      213: -6822932632033328220
+    second: PickupOrbs 14
+  - first:
+      213: 6036609207822555235
+    second: PickupOrbs 15
+  - first:
+      213: 3017339091096685041
+    second: PickupOrbs 16
+  - first:
+      213: -1284826895776336640
+    second: PickupOrbs 17
+  - first:
+      213: -5944649334004821612
+    second: PickupOrbs 18
+  - first:
+      213: 7330261153550706207
+    second: PickupOrbs 19
+  - first:
+      213: 4121064311733475093
+    second: PickupOrbs 20
+  - first:
+      213: -2809375366999403573
+    second: PickupOrbs 21
+  - first:
+      213: 7060978716946704981
+    second: PickupOrbs 22
+  - first:
+      213: -229049642363730308
+    second: PickupOrbs 23
+  - first:
+      213: 3621331552390361221
+    second: PickupOrbs 24
+  - first:
+      213: -68833121664373890
+    second: PickupOrbs 25
+  - first:
+      213: -6147607871811271836
+    second: PickupOrbs 26
+  - first:
+      213: 8142407504434544680
+    second: PickupOrbs 27
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 66
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PickupOrbs 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e23c9e039b05aaa80800000000000000
+      internalID: -8454856594114886866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 1
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b55df603d20aa840800000000000000
+      internalID: 5236000622150243768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 2
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0becdd2040366fe50800000000000000
+      internalID: 6842765552715157168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 3
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd0d899c21d991790800000000000000
+      internalID: -7558837795547459363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 4
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4fc68ae407ab0fc0800000000000000
+      internalID: -3527542243558240433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 5
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0660b8b3f65c4d50800000000000000
+      internalID: 6722843948532917774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 6
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2478f50d3ca0aa160800000000000000
+      internalID: 7037449203850643266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 7
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8edbdc0a1d4056450800000000000000
+      internalID: 6081272170226236904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 8
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a096869aee809e830800000000000000
+      internalID: 4100818756834978058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 9
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 826
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d63540cf95b45890800000000000000
+      internalID: -7470146184170621230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c34016708f189e650800000000000000
+      internalID: 6262679659111056444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 11
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e129d449128f7c660800000000000000
+      internalID: 7406160935339790878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 12
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c98db69b27c04fe20800000000000000
+      internalID: 3383342906938742940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 13
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c7a4238128cca730800000000000000
+      internalID: 4011801414339962822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 14
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a38b3dabe21051a0800000000000000
+      internalID: -6822932632033328220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 15
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3689d18571856c350800000000000000
+      internalID: 6036609207822555235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 16
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f9c7b3baedbfd920800000000000000
+      internalID: 3017339091096685041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 17
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 005326fdeb06b2ee0800000000000000
+      internalID: -1284826895776336640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 18
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49151644dec508da0800000000000000
+      internalID: -5944649334004821612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 19
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 628
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f162c388ea15ab560800000000000000
+      internalID: 7330261153550706207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 430
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 517d96d3826f03930800000000000000
+      internalID: 4121064311733475093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 21
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 430
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc394490df71309d0800000000000000
+      internalID: -2809375366999403573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 22
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 430
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55aa33e7bb2adf160800000000000000
+      internalID: 7060978716946704981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 23
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 430
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c76caf6509042dcf0800000000000000
+      internalID: -229049642363730308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 24
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 430
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 580342a3cdd814230800000000000000
+      internalID: 3621331552390361221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 25
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 430
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7be96af3a47b0ff0800000000000000
+      internalID: -68833121664373890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 26
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 430
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4634b46463f4faaa0800000000000000
+      internalID: -6147607871811271836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupOrbs 27
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 430
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 820cb462c74aff070800000000000000
+      internalID: 8142407504434544680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PickupOrbs 11: 7406160935339790878
+      PickupOrbs 20: 4121064311733475093
+      PickupOrbs 26: -6147607871811271836
+      PickupOrbs 27: 8142407504434544680
+      PickupOrbs 23: -229049642363730308
+      PickupOrbs 1: 5236000622150243768
+      PickupOrbs 0: -8454856594114886866
+      PickupOrbs 5: 6722843948532917774
+      PickupOrbs 13: 4011801414339962822
+      PickupOrbs 7: 6081272170226236904
+      PickupOrbs 19: 7330261153550706207
+      PickupOrbs 18: -5944649334004821612
+      PickupOrbs 9: -7470146184170621230
+      PickupOrbs 12: 3383342906938742940
+      PickupOrbs 16: 3017339091096685041
+      PickupOrbs 4: -3527542243558240433
+      PickupOrbs 15: 6036609207822555235
+      PickupOrbs 17: -1284826895776336640
+      PickupOrbs 22: 7060978716946704981
+      PickupOrbs 3: -7558837795547459363
+      PickupOrbs 10: 6262679659111056444
+      PickupOrbs 25: -68833121664373890
+      PickupOrbs 14: -6822932632033328220
+      PickupOrbs 6: 7037449203850643266
+      PickupOrbs 24: 3621331552390361221
+      PickupOrbs 21: -2809375366999403573
+      PickupOrbs 2: 6842765552715157168
+      PickupOrbs 8: 4100818756834978058
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

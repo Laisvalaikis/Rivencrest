@@ -1,0 +1,1022 @@
+fileFormatVersion: 2
+guid: 60e0f21112c772046aa11ef52103163a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1288115833185820344
+    second: HealthBarBottomCorner 0
+  - first:
+      213: -6202196736334774739
+    second: HealthBarBottomCorner 1
+  - first:
+      213: -8546920325915454919
+    second: HealthBarBottomCorner 2
+  - first:
+      213: -3328528865844376093
+    second: HealthBarBottomCorner 3
+  - first:
+      213: 7850236766548762791
+    second: HealthBarBottomCorner 4
+  - first:
+      213: -8810347538962535935
+    second: HealthBarBottomCorner 5
+  - first:
+      213: 4355971427657549099
+    second: HealthBarBottomCorner 6
+  - first:
+      213: 4891316448553020051
+    second: HealthBarBottomCorner 7
+  - first:
+      213: -5382492353120159179
+    second: HealthBarBottomCorner 8
+  - first:
+      213: 7189255595512024960
+    second: HealthBarBottomCorner 9
+  - first:
+      213: 6545329005814532399
+    second: HealthBarBottomCorner 10
+  - first:
+      213: -4918222944299869794
+    second: HealthBarBottomCorner 11
+  - first:
+      213: 8382707892054224869
+    second: HealthBarBottomCorner 12
+  - first:
+      213: -4226238438582005355
+    second: HealthBarBottomCorner 13
+  - first:
+      213: 2453650540113287989
+    second: HealthBarBottomCorner 14
+  - first:
+      213: 2165980650108004960
+    second: HealthBarBottomCorner 15
+  - first:
+      213: 2381297949101917805
+    second: HealthBarBottomCorner 16
+  - first:
+      213: -8178569026721157330
+    second: HealthBarBottomCorner 17
+  - first:
+      213: 8609508561612041483
+    second: HealthBarBottomCorner 18
+  - first:
+      213: 82112657668981708
+    second: HealthBarBottomCorner 19
+  - first:
+      213: 1152911932833788334
+    second: HealthBarBottomCorner 20
+  - first:
+      213: -5293153969431843051
+    second: HealthBarBottomCorner 21
+  - first:
+      213: -8439537206803902873
+    second: HealthBarBottomCorner 22
+  - first:
+      213: 5751193400423769560
+    second: HealthBarBottomCorner 23
+  - first:
+      213: 8085672841408596530
+    second: HealthBarBottomCorner 24
+  - first:
+      213: 3776540565847571567
+    second: HealthBarBottomCorner 25
+  - first:
+      213: -833277352024818315
+    second: HealthBarBottomCorner 26
+  - first:
+      213: -995535824811219028
+    second: HealthBarBottomCorner 27
+  - first:
+      213: 8871199969460841869
+    second: HealthBarBottomCorner 28
+  - first:
+      213: 4385071277194398772
+    second: HealthBarBottomCorner 29
+  - first:
+      213: 1482422550344722678
+    second: HealthBarBottomCorner 30
+  - first:
+      213: -2066206629417060979
+    second: HealthBarBottomCorner 31
+  - first:
+      213: -4197449814783765426
+    second: HealthBarBottomCorner 32
+  - first:
+      213: 7014864355953745196
+    second: HealthBarBottomCorner 33
+  - first:
+      213: -6999788445129394752
+    second: HealthBarBottomCorner 34
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 66
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 256
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 256
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 256
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 256
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 256
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 116
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84127657971bf1ee0800000000000000
+      internalID: -1288115833185820344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 116
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2ebdafcdee5de9a0800000000000000
+      internalID: -6202196736334774739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 116
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9325e324f3d336980800000000000000
+      internalID: -8546920325915454919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 116
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed46beb1a0bec1d0800000000000000
+      internalID: -3328528865844376093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 116
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a0a9d03fb4a1fc60800000000000000
+      internalID: 7850236766548762791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 116
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10aa660b79b5bb580800000000000000
+      internalID: -8810347538962535935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 104
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b25874d3fe4837c30800000000000000
+      internalID: 4355971427657549099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 7
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 104
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39a2708056271e340800000000000000
+      internalID: 4891316448553020051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 8
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 104
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53a3406f8bb8d45b0800000000000000
+      internalID: -5382492353120159179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 9
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 104
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08fcbf1bfdd55c360800000000000000
+      internalID: 7189255595512024960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 104
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f29c2a95d0ea5da50800000000000000
+      internalID: 6545329005814532399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 104
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9994de3a46febbb0800000000000000
+      internalID: -4918222944299869794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 92
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ef61c11a6c555470800000000000000
+      internalID: 8382707892054224869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 13
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 92
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 591d73c18826955c0800000000000000
+      internalID: -4226238438582005355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 14
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 92
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53bd56e8a2e1d0220800000000000000
+      internalID: 2453650540113287989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 15
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 92
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06aae08eceb1f0e10800000000000000
+      internalID: 2165980650108004960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 16
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 92
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6606983ed11c0120800000000000000
+      internalID: 2381297949101917805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 17
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 92
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2fe5475dc2ef7e80800000000000000
+      internalID: -8178569026721157330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0de191fb6e1b7770800000000000000
+      internalID: 8609508561612041483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 19
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 80
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc34cefe609b32100800000000000000
+      internalID: 82112657668981708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 20
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea1fdd56b47ffff00800000000000000
+      internalID: 1152911932833788334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 21
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 80
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51fe0965280fa86b0800000000000000
+      internalID: -5293153969431843051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 22
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 80
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76ec2cfff9db0ea80800000000000000
+      internalID: -8439537206803902873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 23
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 80
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d564d23de750df40800000000000000
+      internalID: 5751193400423769560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23ace2a0c94163070800000000000000
+      internalID: 8085672841408596530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 25
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 68
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6c723bb2a7f86430800000000000000
+      internalID: 3776540565847571567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 26
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 68
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57dbe29c9aa9f64f0800000000000000
+      internalID: -833277352024818315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 27
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 68
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca7a3f021752f22f0800000000000000
+      internalID: -995535824811219028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 28
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 68
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8d6b2fde55dc1b70800000000000000
+      internalID: 8871199969460841869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 29
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 68
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43cc0ffe717eadc30800000000000000
+      internalID: 4385071277194398772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 56
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f86350947f929410800000000000000
+      internalID: 1482422550344722678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 31
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 56
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d85f90d840c5353e0800000000000000
+      internalID: -2066206629417060979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 32
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 56
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e44d84be1a9afb5c0800000000000000
+      internalID: -4197449814783765426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 33
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 56
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2d1c2427fdc95160800000000000000
+      internalID: 7014864355953745196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarBottomCorner 34
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 56
+        width: 40
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c5bd21ee71cbde90800000000000000
+      internalID: -6999788445129394752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      HealthBarBottomCorner 34: -6999788445129394752
+      HealthBarBottomCorner 23: 5751193400423769560
+      HealthBarBottomCorner 18: 8609508561612041483
+      HealthBarBottomCorner 3: -3328528865844376093
+      HealthBarBottomCorner 7: 4891316448553020051
+      HealthBarBottomCorner 10: 6545329005814532399
+      HealthBarBottomCorner 9: 7189255595512024960
+      HealthBarBottomCorner 14: 2453650540113287989
+      HealthBarBottomCorner 20: 1152911932833788334
+      HealthBarBottomCorner 2: -8546920325915454919
+      HealthBarBottomCorner 25: 3776540565847571567
+      HealthBarBottomCorner 24: 8085672841408596530
+      HealthBarBottomCorner 13: -4226238438582005355
+      HealthBarBottomCorner 16: 2381297949101917805
+      HealthBarBottomCorner 27: -995535824811219028
+      HealthBarBottomCorner 0: -1288115833185820344
+      HealthBarBottomCorner 31: -2066206629417060979
+      HealthBarBottomCorner 4: 7850236766548762791
+      HealthBarBottomCorner 19: 82112657668981708
+      HealthBarBottomCorner 29: 4385071277194398772
+      HealthBarBottomCorner 33: 7014864355953745196
+      HealthBarBottomCorner 28: 8871199969460841869
+      HealthBarBottomCorner 1: -6202196736334774739
+      HealthBarBottomCorner 5: -8810347538962535935
+      HealthBarBottomCorner 11: -4918222944299869794
+      HealthBarBottomCorner 22: -8439537206803902873
+      HealthBarBottomCorner 26: -833277352024818315
+      HealthBarBottomCorner 30: 1482422550344722678
+      HealthBarBottomCorner 8: -5382492353120159179
+      HealthBarBottomCorner 15: 2165980650108004960
+      HealthBarBottomCorner 21: -5293153969431843051
+      HealthBarBottomCorner 12: 8382707892054224869
+      HealthBarBottomCorner 17: -8178569026721157330
+      HealthBarBottomCorner 6: 4355971427657549099
+      HealthBarBottomCorner 32: -4197449814783765426
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

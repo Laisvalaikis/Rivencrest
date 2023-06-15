@@ -1,0 +1,872 @@
+fileFormatVersion: 2
+guid: 8bde71b2b474e8a4085b51ef89b3c0da
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6849551220644216184
+    second: MapTiles 0
+  - first:
+      213: 6003106345437051370
+    second: MapTiles 1
+  - first:
+      213: 3352058206652438122
+    second: MapTiles 2
+  - first:
+      213: 7070416973845374378
+    second: MapTiles 3
+  - first:
+      213: -7067726814051180537
+    second: MapTiles 4
+  - first:
+      213: -28278025126840586
+    second: MapTiles 5
+  - first:
+      213: -2320418269503201001
+    second: MapTiles 6
+  - first:
+      213: -3896952075911243057
+    second: MapTiles 7
+  - first:
+      213: -411820306795110339
+    second: MapTiles 8
+  - first:
+      213: 5783396820114727113
+    second: MapTiles 9
+  - first:
+      213: 6029497428706199645
+    second: MapTiles 10
+  - first:
+      213: -5693340898089729023
+    second: MapTiles 11
+  - first:
+      213: 7733497526688371701
+    second: MapTiles 12
+  - first:
+      213: 4285949196643987580
+    second: MapTiles 13
+  - first:
+      213: -7681547192002638931
+    second: MapTiles 14
+  - first:
+      213: 7488933634034436629
+    second: MapTiles 15
+  - first:
+      213: -3353351942932793716
+    second: MapTiles 16
+  - first:
+      213: -9208563298566397074
+    second: MapTiles 17
+  - first:
+      213: -3444160841597464456
+    second: MapTiles 18
+  - first:
+      213: -3091101393782389825
+    second: MapTiles 19
+  - first:
+      213: -9088173985839234902
+    second: MapTiles 20
+  - first:
+      213: 7047840894930677844
+    second: MapTiles 21
+  - first:
+      213: -8111300158659958262
+    second: MapTiles 22
+  - first:
+      213: -3255764209736623549
+    second: MapTiles 23
+  - first:
+      213: -3456053558603267604
+    second: MapTiles 24
+  - first:
+      213: -8462661713430376455
+    second: MapTiles 25
+  - first:
+      213: -7214061882592296508
+    second: MapTiles 26
+  - first:
+      213: -7138615132928248147
+    second: MapTiles 27
+  - first:
+      213: 527792531290649211
+    second: MapTiles 28
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 66
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MapTiles 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 446
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88288ae847181f0a0800000000000000
+      internalID: -6849551220644216184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 446
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae93ba45a615f4350800000000000000
+      internalID: 6003106345437051370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 446
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6693f1dd27e48e20800000000000000
+      internalID: 3352058206652438122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 3
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 446
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa522fbe6ca2f1260800000000000000
+      internalID: 7070416973845374378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 4
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 446
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 700e9f6b8e36aed90800000000000000
+      internalID: -7067726814051180537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 5
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 446
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f67d5539498b9ff0800000000000000
+      internalID: -28278025126840586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 6
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 446
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7116fe3c0e73ccfd0800000000000000
+      internalID: -2320418269503201001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 380
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcad690ebbe3be9c0800000000000000
+      internalID: -3896952075911243057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 8
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 380
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d306f26ec9be84af0800000000000000
+      internalID: -411820306795110339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 9
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 380
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c0ef0224c0c24050800000000000000
+      internalID: 5783396820114727113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 10
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 380
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d580a2c37f31da350800000000000000
+      internalID: 6029497428706199645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 11
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 380
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10488282e903df0b0800000000000000
+      internalID: -5693340898089729023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 12
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 380
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f35f95d607e25b60800000000000000
+      internalID: 7733497526688371701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 13
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 380
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c70f55f1610ca7b30800000000000000
+      internalID: 4285949196643987580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 314
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dab88470789a56590800000000000000
+      internalID: -7681547192002638931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 15
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 314
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51a091b46790ee760800000000000000
+      internalID: 7488933634034436629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 16
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 314
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c86ff9abc208671d0800000000000000
+      internalID: -3353351942932793716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 17
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 314
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e632041187c943080800000000000000
+      internalID: -9208563298566397074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 18
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 314
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 870d54766f1e330d0800000000000000
+      internalID: -3444160841597464456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 19
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 314
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb3c2e2e8a33a15d0800000000000000
+      internalID: -3091101393782389825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 20
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 314
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa04b1d39e150e180800000000000000
+      internalID: -9088173985839234902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 248
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45070dfe3f5fec160800000000000000
+      internalID: 7047840894930677844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 22
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 248
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0ae0803b7fde6f80800000000000000
+      internalID: -8111300158659958262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 23
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 248
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34ad73673b331d2d0800000000000000
+      internalID: -3255764209736623549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 24
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 248
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce14ab27991a900d0800000000000000
+      internalID: -3456053558603267604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 25
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 248
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ff0fac32069e8a80800000000000000
+      internalID: -8462661713430376455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 26
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 248
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c1866480f082eb90800000000000000
+      internalID: -7214061882592296508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 27
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 248
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da6759dcb5b8eec90800000000000000
+      internalID: -7138615132928248147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapTiles 28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 182
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b72fea6c288135700800000000000000
+      internalID: 527792531290649211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      MapTiles 23: -3255764209736623549
+      MapTiles 20: -9088173985839234902
+      MapTiles 25: -8462661713430376455
+      MapTiles 4: -7067726814051180537
+      MapTiles 16: -3353351942932793716
+      MapTiles 8: -411820306795110339
+      MapTiles 13: 4285949196643987580
+      MapTiles 14: -7681547192002638931
+      MapTiles 6: -2320418269503201001
+      MapTiles 26: -7214061882592296508
+      MapTiles 7: -3896952075911243057
+      MapTiles 9: 5783396820114727113
+      MapTiles 11: -5693340898089729023
+      MapTiles 12: 7733497526688371701
+      MapTiles 15: 7488933634034436629
+      MapTiles 19: -3091101393782389825
+      MapTiles 2: 3352058206652438122
+      MapTiles 1: 6003106345437051370
+      MapTiles 5: -28278025126840586
+      MapTiles 18: -3444160841597464456
+      MapTiles 10: 6029497428706199645
+      MapTiles 0: -6849551220644216184
+      MapTiles 24: -3456053558603267604
+      MapTiles 22: -8111300158659958262
+      MapTiles 27: -7138615132928248147
+      MapTiles 21: 7047840894930677844
+      MapTiles 28: 527792531290649211
+      MapTiles 3: 7070416973845374378
+      MapTiles 17: -9208563298566397074
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

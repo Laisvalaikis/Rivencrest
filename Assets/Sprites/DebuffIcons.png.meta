@@ -1,0 +1,797 @@
+fileFormatVersion: 2
+guid: 16991b7c01b8f0c46aeef57ee52fd0f2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5545242468316104063
+    second: DebuffIcons 0
+  - first:
+      213: -6452437985070370837
+    second: DebuffIcons 1
+  - first:
+      213: -6492974985809416818
+    second: DebuffIcons 2
+  - first:
+      213: 8455126762192224550
+    second: DebuffIcons 3
+  - first:
+      213: -7578925327123886702
+    second: DebuffIcons 4
+  - first:
+      213: 2372059732288232655
+    second: DebuffIcons 5
+  - first:
+      213: -5399410114125119647
+    second: DebuffIcons 6
+  - first:
+      213: -6478123755068766871
+    second: DebuffIcons 7
+  - first:
+      213: -8140326782072265718
+    second: DebuffIcons 8
+  - first:
+      213: 1306860938158083723
+    second: DebuffIcons 9
+  - first:
+      213: -3880596864151935706
+    second: DebuffIcons 10
+  - first:
+      213: 6166451142064416702
+    second: DebuffIcons 11
+  - first:
+      213: -7080647072816408947
+    second: DebuffIcons 12
+  - first:
+      213: -8002464427210571207
+    second: DebuffIcons 13
+  - first:
+      213: -8481588575274878091
+    second: DebuffIcons 14
+  - first:
+      213: 2641924092958856150
+    second: DebuffIcons 15
+  - first:
+      213: 9106471994827449803
+    second: DebuffIcons 16
+  - first:
+      213: 691190498722782623
+    second: DebuffIcons 17
+  - first:
+      213: -4915089631389750340
+    second: DebuffIcons 18
+  - first:
+      213: 510885224176949289
+    second: DebuffIcons 19
+  - first:
+      213: 3893580706374342610
+    second: DebuffIcons 20
+  - first:
+      213: 591071759873196520
+    second: DebuffIcons 21
+  - first:
+      213: -7317493785832518200
+    second: DebuffIcons 22
+  - first:
+      213: -5945565519150128510
+    second: DebuffIcons 23
+  - first:
+      213: 2807587077481178674
+    second: DebuffIcons 24
+  - first:
+      213: 4429402380985268593
+    second: DebuffIcons 25
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 66
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DebuffIcons 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f75446d15a8a4fc40800000000000000
+      internalID: 5545242468316104063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 1
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 50
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: befa4acc6d55476a0800000000000000
+      internalID: -6452437985070370837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 2
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 50
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8d2553d6a154e5a0800000000000000
+      internalID: -6492974985809416818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 3
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 50
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 621cd573ef4a65570800000000000000
+      internalID: 8455126762192224550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 4
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 50
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29dc191e19f32d690800000000000000
+      internalID: -7578925327123886702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 5
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 50
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcc5c0142cf3be020800000000000000
+      internalID: 2372059732288232655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 6
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 50
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16fbbe6cb117115b0800000000000000
+      internalID: -5399410114125119647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 7
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 50
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9654b1074c41916a0800000000000000
+      internalID: -6478123755068766871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 8
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 50
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a04ebf6cbefb70f80800000000000000
+      internalID: -8140326782072265718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e0fb56917e22210800000000000000
+      internalID: 1306860938158083723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 10
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 36
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 625aabb56b9552ac0800000000000000
+      internalID: -3880596864151935706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 11
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 36
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb72d8774a2a39550800000000000000
+      internalID: 6166451142064416702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 12
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 36
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d865edc800d7cbd90800000000000000
+      internalID: -7080647072816408947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 13
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 36
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9320a68900981f090800000000000000
+      internalID: -8002464427210571207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 14
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 36
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57bbabfc0285b4a80800000000000000
+      internalID: -8481588575274878091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 15
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 36
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d3db5c07fff9a420800000000000000
+      internalID: 2641924092958856150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 16
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 36
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc5abb8f700b06e70800000000000000
+      internalID: 9106471994827449803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 17
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 36
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9d1f74b81a979900800000000000000
+      internalID: 691190498722782623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 22
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbbeec185081acbb0800000000000000
+      internalID: -4915089631389750340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 19
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 22
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92810149767071700800000000000000
+      internalID: 510885224176949289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 20
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 22
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d7d1cbf507c80630800000000000000
+      internalID: 3893580706374342610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 21
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 22
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e1c10c42a8e33800800000000000000
+      internalID: 591071759873196520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 22
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 22
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cd0359eb2a037a90800000000000000
+      internalID: -7317493785832518200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 23
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 22
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282ee3a49ab1d7da0800000000000000
+      internalID: -5945565519150128510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 24
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 22
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2362e3d529d86f620800000000000000
+      internalID: 2807587077481178674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebuffIcons 25
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 22
+        width: 14
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17975ed5ff5687d30800000000000000
+      internalID: 4429402380985268593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      DebuffIcons 14: -8481588575274878091
+      DebuffIcons 21: 591071759873196520
+      DebuffIcons 15: 2641924092958856150
+      DebuffIcons 3: 8455126762192224550
+      DebuffIcons 16: 9106471994827449803
+      DebuffIcons 10: -3880596864151935706
+      DebuffIcons 7: -6478123755068766871
+      DebuffIcons 13: -8002464427210571207
+      DebuffIcons 23: -5945565519150128510
+      DebuffIcons 25: 4429402380985268593
+      DebuffIcons 6: -5399410114125119647
+      DebuffIcons 11: 6166451142064416702
+      DebuffIcons 1: -6452437985070370837
+      DebuffIcons 4: -7578925327123886702
+      DebuffIcons 19: 510885224176949289
+      DebuffIcons 20: 3893580706374342610
+      DebuffIcons 24: 2807587077481178674
+      DebuffIcons 2: -6492974985809416818
+      DebuffIcons 9: 1306860938158083723
+      DebuffIcons 17: 691190498722782623
+      DebuffIcons 18: -4915089631389750340
+      DebuffIcons 5: 2372059732288232655
+      DebuffIcons 22: -7317493785832518200
+      DebuffIcons 0: 5545242468316104063
+      DebuffIcons 12: -7080647072816408947
+      DebuffIcons 8: -8140326782072265718
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

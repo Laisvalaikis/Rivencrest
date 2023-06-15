@@ -1,0 +1,1947 @@
+fileFormatVersion: 2
+guid: c3ccd530fb543464fb109233fe5cde16
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4275804072959266982
+    second: WhiteV2 0
+  - first:
+      213: -842062894024849632
+    second: WhiteV2 1
+  - first:
+      213: 6209802145999028872
+    second: WhiteV2 2
+  - first:
+      213: -4051895132295602547
+    second: WhiteV2 3
+  - first:
+      213: -8978098309946575616
+    second: WhiteV2 4
+  - first:
+      213: -3615600743799838337
+    second: WhiteV2 5
+  - first:
+      213: 3037630781059123660
+    second: WhiteV2 6
+  - first:
+      213: -2779149099522573713
+    second: WhiteV2 7
+  - first:
+      213: 708248537363783575
+    second: WhiteV2 8
+  - first:
+      213: 4070842750997411403
+    second: WhiteV2 9
+  - first:
+      213: -6420868947568010059
+    second: WhiteV2 10
+  - first:
+      213: 1771272199402173998
+    second: WhiteV2 11
+  - first:
+      213: -246960433918108235
+    second: WhiteV2 12
+  - first:
+      213: 5982448668130491846
+    second: WhiteV2 13
+  - first:
+      213: 5745497680250792194
+    second: WhiteV2 14
+  - first:
+      213: -3693818851926034218
+    second: WhiteV2 15
+  - first:
+      213: -7029102134634171890
+    second: WhiteV2 16
+  - first:
+      213: 2550320584254019690
+    second: WhiteV2 17
+  - first:
+      213: -2823250695977496698
+    second: WhiteV2 18
+  - first:
+      213: 5936014998748765331
+    second: WhiteV2 19
+  - first:
+      213: 19539178601532729
+    second: WhiteV2 20
+  - first:
+      213: 2191644863301236141
+    second: WhiteV2 21
+  - first:
+      213: 8729825215220702665
+    second: WhiteV2 22
+  - first:
+      213: 6520833320480893186
+    second: WhiteV2 23
+  - first:
+      213: -6856284294582696759
+    second: WhiteV2 24
+  - first:
+      213: -6902836167757797781
+    second: WhiteV2 25
+  - first:
+      213: 5628217025766014986
+    second: WhiteV2 26
+  - first:
+      213: 1858593802937926954
+    second: WhiteV2 27
+  - first:
+      213: 2966948826889602226
+    second: WhiteV2 28
+  - first:
+      213: 7532584176847728072
+    second: WhiteV2 29
+  - first:
+      213: 7300356771493372725
+    second: WhiteV2 30
+  - first:
+      213: -7151563005586097411
+    second: WhiteV2 31
+  - first:
+      213: 1399128746171217435
+    second: WhiteV2 32
+  - first:
+      213: 6220174009574798587
+    second: WhiteV2 33
+  - first:
+      213: 819633872540610105
+    second: WhiteV2 34
+  - first:
+      213: 8738984014385061466
+    second: WhiteV2 35
+  - first:
+      213: -8243097207735829896
+    second: WhiteV2 36
+  - first:
+      213: 5951448156850610156
+    second: WhiteV2 37
+  - first:
+      213: 8707391862882896800
+    second: WhiteV2 38
+  - first:
+      213: -4952811368077351034
+    second: WhiteV2 39
+  - first:
+      213: -5782089413264445505
+    second: WhiteV2 40
+  - first:
+      213: 1406694912416536062
+    second: WhiteV2 41
+  - first:
+      213: 8539213756647753894
+    second: WhiteV2 42
+  - first:
+      213: 7032119935605831681
+    second: WhiteV2 43
+  - first:
+      213: 1098674280899056694
+    second: WhiteV2 44
+  - first:
+      213: -1765564888271385656
+    second: WhiteV2 45
+  - first:
+      213: 2756308105731358451
+    second: WhiteV2 46
+  - first:
+      213: -6959308976681635778
+    second: WhiteV2 47
+  - first:
+      213: 9150427022690249368
+    second: WhiteV2 48
+  - first:
+      213: -3955256298181092935
+    second: WhiteV2 49
+  - first:
+      213: 35187211368913401
+    second: WhiteV2 50
+  - first:
+      213: 4703918211111375487
+    second: WhiteV2 51
+  - first:
+      213: -6773646111571820972
+    second: WhiteV2 52
+  - first:
+      213: 2004736764881434474
+    second: WhiteV2 53
+  - first:
+      213: 6683045059407753629
+    second: WhiteV2 54
+  - first:
+      213: 6156962232623056636
+    second: WhiteV2 55
+  - first:
+      213: 6753394434220045290
+    second: WhiteV2 56
+  - first:
+      213: -4370183880511755241
+    second: WhiteV2 57
+  - first:
+      213: 2384356467569882553
+    second: WhiteV2 58
+  - first:
+      213: -2640648181644080539
+    second: WhiteV2 59
+  - first:
+      213: -4302461562880474478
+    second: WhiteV2 60
+  - first:
+      213: 2621269870614044486
+    second: WhiteV2 61
+  - first:
+      213: 3010281117855646599
+    second: WhiteV2 62
+  - first:
+      213: -5193164501883469502
+    second: WhiteV2 63
+  - first:
+      213: -7700734610978342434
+    second: WhiteV2 64
+  - first:
+      213: 441524240899554
+    second: WhiteV2 65
+  - first:
+      213: -4342099847601511186
+    second: WhiteV2 66
+  - first:
+      213: -1530960545448013779
+    second: WhiteV2 67
+  - first:
+      213: 7242659965640773042
+    second: WhiteV2 68
+  - first:
+      213: 5372229798811904960
+    second: WhiteV2 69
+  - first:
+      213: 8002169035145237003
+    second: WhiteV2 70
+  - first:
+      213: 1632450771382205603
+    second: WhiteV2 71
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 66
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WhiteV2 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a0d7e17625b65b30800000000000000
+      internalID: 4275804072959266982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 1
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0278c1362446054f0800000000000000
+      internalID: -842062894024849632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 2
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8820bbd9626ad2650800000000000000
+      internalID: 6209802145999028872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 3
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8ed26458d6c4c7c0800000000000000
+      internalID: -4051895132295602547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 4
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0057915b723676380800000000000000
+      internalID: -8978098309946575616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 5
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f792c20a74ec2ddc0800000000000000
+      internalID: -3615600743799838337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 6
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc942dfe915d72a20800000000000000
+      internalID: 3037630781059123660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 7
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6a3c195e9a7e69d0800000000000000
+      internalID: -2779149099522573713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 8
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79f1242da4434d900800000000000000
+      internalID: 708248537363783575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 9
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b46bcade9e98e7830800000000000000
+      internalID: 4070842750997411403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc5fde16bd74e6a0800000000000000
+      internalID: -6420868947568010059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 11
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2634e54ea2d49810800000000000000
+      internalID: 1771272199402173998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 12
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd1cb63bce929cf0800000000000000
+      internalID: -246960433918108235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 13
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd3de60e5de50350800000000000000
+      internalID: 5982448668130491846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 14
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 209ed2103bb1cbf40800000000000000
+      internalID: 5745497680250792194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 15
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d8be4a235becbcc0800000000000000
+      internalID: -3693818851926034218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 16
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e02b03fa9dc937e90800000000000000
+      internalID: -7029102134634171890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 17
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a68d3d72f0f846320800000000000000
+      internalID: 2550320584254019690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 18
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68f0362437cc1d8d0800000000000000
+      internalID: -2823250695977496698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 19
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39c9fc5e036f06250800000000000000
+      internalID: 5936014998748765331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93d4fb787ca654000800000000000000
+      internalID: 19539178601532729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 21
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da531ee24694a6e10800000000000000
+      internalID: 2191644863301236141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 22
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cd5a78d7c1962970800000000000000
+      internalID: 8729825215220702665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 23
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2096bca2b57ae7a50800000000000000
+      internalID: 6520833320480893186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 24
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c40f4e92c599d0a0800000000000000
+      internalID: -6856284294582696759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 25
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b66e31604133430a0800000000000000
+      internalID: -6902836167757797781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 26
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a00c69bb0917b1e40800000000000000
+      internalID: 5628217025766014986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 27
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a258bdd673d0bc910800000000000000
+      internalID: 1858593802937926954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 28
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b4448d0d38bc2920800000000000000
+      internalID: 2966948826889602226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 29
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cdacb5466d198860800000000000000
+      internalID: 7532584176847728072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 533ea720ec3105560800000000000000
+      internalID: 7300356771493372725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 31
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfa3737465b80cc90800000000000000
+      internalID: -7151563005586097411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 32
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b16b2968e24ba6310800000000000000
+      internalID: 1399128746171217435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 33
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf4b2d94e4f725650800000000000000
+      internalID: 6220174009574798587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 34
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e29aa1aacef5b00800000000000000
+      internalID: 819633872540610105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 35
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5e1d33f8ab174970800000000000000
+      internalID: 8738984014385061466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 36
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a34eb63c2aa9d80800000000000000
+      internalID: -8243097207735829896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 37
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cefdb38019ac79250800000000000000
+      internalID: 5951448156850610156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 38
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ab034bf3ced6d870800000000000000
+      internalID: 8707391862882896800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 39
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 687ab364d44144bb0800000000000000
+      internalID: -4952811368077351034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf63de3054e1cfa0800000000000000
+      internalID: -5782089413264445505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 41
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef5dfe1e195958310800000000000000
+      internalID: 1406694912416536062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 42
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a84e124ba1618670800000000000000
+      internalID: 8539213756647753894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 43
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1087abbd2db179160800000000000000
+      internalID: 7032119935605831681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 44
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63498dcff664f3f00800000000000000
+      internalID: 1098674280899056694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 45
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cb8ea6a6147f77e0800000000000000
+      internalID: -1765564888271385656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 46
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3feb5ad5e9f504620800000000000000
+      internalID: 2756308105731358451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 47
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3034b29b519b6f90800000000000000
+      internalID: -6959308976681635778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 48
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89a669665e8dcfe70800000000000000
+      internalID: 9150427022690249368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 49
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b91a474a5b1c19c0800000000000000
+      internalID: -3955256298181092935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f9d74215920d7000800000000000000
+      internalID: 35187211368913401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 51
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f72d8c9c0bca74140800000000000000
+      internalID: 4703918211111375487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 52
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e3e85ffbc2ff1a0800000000000000
+      internalID: -6773646111571820972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 53
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a677ce2577142db10800000000000000
+      internalID: 2004736764881434474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 54
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d91bdefb212febc50800000000000000
+      internalID: 6683045059407753629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 55
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf64ef2978ce17550800000000000000
+      internalID: 6156962232623056636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 56
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae339c7f470e8bd50800000000000000
+      internalID: 6753394434220045290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 57
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71c65f63aecf953c0800000000000000
+      internalID: -4370183880511755241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 58
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b5786b039fe61120800000000000000
+      internalID: 2384356467569882553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 59
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56ac25438788a5bd0800000000000000
+      internalID: -2640648181644080539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 292ccb401069a44c0800000000000000
+      internalID: -4302461562880474478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 61
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64f526a2f0f906420800000000000000
+      internalID: 2621269870614044486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 62
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7830adf3abaa6c920800000000000000
+      internalID: 3010281117855646599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 63
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 241411d666c2ee7b0800000000000000
+      internalID: -5193164501883469502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 64
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed9741bebae712590800000000000000
+      internalID: -7700734610978342434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 65
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2edd98f5091910000800000000000000
+      internalID: 441524240899554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 66
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee42f6ca133cdb3c0800000000000000
+      internalID: -4342099847601511186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 67
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d20de6bce7fe0cae0800000000000000
+      internalID: -1530960545448013779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 68
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bd06f09dd8138460800000000000000
+      internalID: 7242659965640773042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 69
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cba3f9e98efd8a40800000000000000
+      internalID: 5372229798811904960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b025674175a6d0f60800000000000000
+      internalID: 8002169035145237003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteV2 71
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac7c85d351a7a610800000000000000
+      internalID: 1632450771382205603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      WhiteV2 19: 5936014998748765331
+      WhiteV2 22: 8729825215220702665
+      WhiteV2 39: -4952811368077351034
+      WhiteV2 11: 1771272199402173998
+      WhiteV2 7: -2779149099522573713
+      WhiteV2 13: 5982448668130491846
+      WhiteV2 47: -6959308976681635778
+      WhiteV2 8: 708248537363783575
+      WhiteV2 30: 7300356771493372725
+      WhiteV2 10: -6420868947568010059
+      WhiteV2 70: 8002169035145237003
+      WhiteV2 67: -1530960545448013779
+      WhiteV2 38: 8707391862882896800
+      WhiteV2 51: 4703918211111375487
+      WhiteV2 57: -4370183880511755241
+      WhiteV2 3: -4051895132295602547
+      WhiteV2 17: 2550320584254019690
+      WhiteV2 23: 6520833320480893186
+      WhiteV2 40: -5782089413264445505
+      WhiteV2 64: -7700734610978342434
+      WhiteV2 0: 4275804072959266982
+      WhiteV2 9: 4070842750997411403
+      WhiteV2 12: -246960433918108235
+      WhiteV2 21: 2191644863301236141
+      WhiteV2 49: -3955256298181092935
+      WhiteV2 25: -6902836167757797781
+      WhiteV2 58: 2384356467569882553
+      WhiteV2 2: 6209802145999028872
+      WhiteV2 16: -7029102134634171890
+      WhiteV2 26: 5628217025766014986
+      WhiteV2 5: -3615600743799838337
+      WhiteV2 32: 1399128746171217435
+      WhiteV2 36: -8243097207735829896
+      WhiteV2 54: 6683045059407753629
+      WhiteV2 31: -7151563005586097411
+      WhiteV2 52: -6773646111571820972
+      WhiteV2 59: -2640648181644080539
+      WhiteV2 34: 819633872540610105
+      WhiteV2 20: 19539178601532729
+      WhiteV2 66: -4342099847601511186
+      WhiteV2 60: -4302461562880474478
+      WhiteV2 69: 5372229798811904960
+      WhiteV2 50: 35187211368913401
+      WhiteV2 33: 6220174009574798587
+      WhiteV2 48: 9150427022690249368
+      WhiteV2 43: 7032119935605831681
+      WhiteV2 15: -3693818851926034218
+      WhiteV2 44: 1098674280899056694
+      WhiteV2 71: 1632450771382205603
+      WhiteV2 62: 3010281117855646599
+      WhiteV2 61: 2621269870614044486
+      WhiteV2 53: 2004736764881434474
+      WhiteV2 42: 8539213756647753894
+      WhiteV2 24: -6856284294582696759
+      WhiteV2 35: 8738984014385061466
+      WhiteV2 56: 6753394434220045290
+      WhiteV2 28: 2966948826889602226
+      WhiteV2 6: 3037630781059123660
+      WhiteV2 27: 1858593802937926954
+      WhiteV2 29: 7532584176847728072
+      WhiteV2 45: -1765564888271385656
+      WhiteV2 4: -8978098309946575616
+      WhiteV2 55: 6156962232623056636
+      WhiteV2 1: -842062894024849632
+      WhiteV2 14: 5745497680250792194
+      WhiteV2 63: -5193164501883469502
+      WhiteV2 65: 441524240899554
+      WhiteV2 46: 2756308105731358451
+      WhiteV2 68: 7242659965640773042
+      WhiteV2 37: 5951448156850610156
+      WhiteV2 41: 1406694912416536062
+      WhiteV2 18: -2823250695977496698
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

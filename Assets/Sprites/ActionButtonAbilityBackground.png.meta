@@ -1,0 +1,497 @@
+fileFormatVersion: 2
+guid: f12fdd45e276893438b8ce4098f754cb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 137914692109764441
+    second: ActionButtonAbilityBackground 0
+  - first:
+      213: -1849797500336171758
+    second: ActionButtonAbilityBackground 1
+  - first:
+      213: -7459160405522337366
+    second: ActionButtonAbilityBackground 2
+  - first:
+      213: 4895766350142059002
+    second: ActionButtonAbilityBackground 3
+  - first:
+      213: 937255998556263114
+    second: ActionButtonAbilityBackground 4
+  - first:
+      213: -5530371819613864454
+    second: ActionButtonAbilityBackground 5
+  - first:
+      213: 5127896376211543102
+    second: ActionButtonAbilityBackground 6
+  - first:
+      213: -6356012267995909163
+    second: ActionButtonAbilityBackground 7
+  - first:
+      213: 3155498603668081134
+    second: ActionButtonAbilityBackground 8
+  - first:
+      213: 5117135129999800319
+    second: ActionButtonAbilityBackground 9
+  - first:
+      213: -1275655965021902156
+    second: ActionButtonAbilityBackground 10
+  - first:
+      213: 3662352932837186737
+    second: ActionButtonAbilityBackground 11
+  - first:
+      213: -349291530499477862
+    second: ActionButtonAbilityBackground 12
+  - first:
+      213: -8237375101347807692
+    second: ActionButtonAbilityBackground 13
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 66
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ActionButtonAbilityBackground 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95782888ea8f9e100800000000000000
+      internalID: 137914692109764441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ActionButtonAbilityBackground 1
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 100
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2159e0e59f23456e0800000000000000
+      internalID: -1849797500336171758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ActionButtonAbilityBackground 2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 100
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa1be2aa12dbb7890800000000000000
+      internalID: -7459160405522337366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ActionButtonAbilityBackground 3
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 100
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af1378b7e8141f340800000000000000
+      internalID: 4895766350142059002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ActionButtonAbilityBackground 4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac2dc896d5dc10d00800000000000000
+      internalID: 937255998556263114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ActionButtonAbilityBackground 5
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 72
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afdb518912c2043b0800000000000000
+      internalID: -5530371819613864454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ActionButtonAbilityBackground 6
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 72
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e341a1dd592f92740800000000000000
+      internalID: 5127896376211543102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ActionButtonAbilityBackground 7
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 72
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d334129488eac7a0800000000000000
+      internalID: -6356012267995909163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ActionButtonAbilityBackground 8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 44
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee980e0f2459acb20800000000000000
+      internalID: 3155498603668081134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ActionButtonAbilityBackground 9
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 44
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff77f4bf947b30740800000000000000
+      internalID: 5117135129999800319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ActionButtonAbilityBackground 10
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 44
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bae24598a5fb4ee0800000000000000
+      internalID: -1275655965021902156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ActionButtonAbilityBackground 11
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 44
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bcded3a69a43d230800000000000000
+      internalID: 3662352932837186737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ActionButtonAbilityBackground 12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9ea6812431172bf0800000000000000
+      internalID: -349291530499477862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ActionButtonAbilityBackground 13
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 16
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e34822df6fead80800000000000000
+      internalID: -8237375101347807692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ActionButtonAbilityBackground 5: -5530371819613864454
+      ActionButtonAbilityBackground 6: 5127896376211543102
+      ActionButtonAbilityBackground 7: -6356012267995909163
+      ActionButtonAbilityBackground 3: 4895766350142059002
+      ActionButtonAbilityBackground 4: 937255998556263114
+      ActionButtonAbilityBackground 9: 5117135129999800319
+      ActionButtonAbilityBackground 0: 137914692109764441
+      ActionButtonAbilityBackground 12: -349291530499477862
+      ActionButtonAbilityBackground 11: 3662352932837186737
+      ActionButtonAbilityBackground 1: -1849797500336171758
+      ActionButtonAbilityBackground 10: -1275655965021902156
+      ActionButtonAbilityBackground 13: -8237375101347807692
+      ActionButtonAbilityBackground 8: 3155498603668081134
+      ActionButtonAbilityBackground 2: -7459160405522337366
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

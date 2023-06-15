@@ -1,0 +1,3572 @@
+fileFormatVersion: 2
+guid: 3d03fd4701d35fc4182d3c621611d411
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5789519697332126095
+    second: VFX1x1 0
+  - first:
+      213: -9088788318620112443
+    second: VFX1x1 1
+  - first:
+      213: 8211747795801371026
+    second: VFX1x1 2
+  - first:
+      213: -4791441615478050281
+    second: VFX1x1 3
+  - first:
+      213: -8783062600600069290
+    second: VFX1x1 4
+  - first:
+      213: 2390310427522212532
+    second: VFX1x1 5
+  - first:
+      213: -5744506025470438876
+    second: VFX1x1 6
+  - first:
+      213: -1166856197025315438
+    second: VFX1x1 7
+  - first:
+      213: -6761371585057450879
+    second: VFX1x1 8
+  - first:
+      213: 4170581206659244341
+    second: VFX1x1 9
+  - first:
+      213: -6859703146002228960
+    second: VFX1x1 10
+  - first:
+      213: -438921169695369378
+    second: VFX1x1 11
+  - first:
+      213: 4041228085057688118
+    second: VFX1x1 12
+  - first:
+      213: 8859833417438596226
+    second: VFX1x1 13
+  - first:
+      213: 1891812298066265537
+    second: VFX1x1 14
+  - first:
+      213: -7300094908966267756
+    second: VFX1x1 15
+  - first:
+      213: 7719199476516422218
+    second: VFX1x1 16
+  - first:
+      213: -2313582183771314230
+    second: VFX1x1 17
+  - first:
+      213: -2445078274654803175
+    second: VFX1x1 18
+  - first:
+      213: 2114516457134380545
+    second: VFX1x1 19
+  - first:
+      213: -3733164296641648841
+    second: VFX1x1 20
+  - first:
+      213: -2546431722440564491
+    second: VFX1x1 21
+  - first:
+      213: -7529949766560606439
+    second: VFX1x1 22
+  - first:
+      213: 6121126247383636099
+    second: VFX1x1 23
+  - first:
+      213: -787279088656566038
+    second: VFX1x1 24
+  - first:
+      213: 7667148319169244505
+    second: VFX1x1 25
+  - first:
+      213: -6721148948596250395
+    second: VFX1x1 26
+  - first:
+      213: -7619099277999426329
+    second: VFX1x1 27
+  - first:
+      213: -8690872200861728059
+    second: VFX1x1 28
+  - first:
+      213: 8972296025469633362
+    second: VFX1x1 29
+  - first:
+      213: -6093162628606688301
+    second: VFX1x1 30
+  - first:
+      213: -6168027460100087605
+    second: VFX1x1 31
+  - first:
+      213: -7471175498873733420
+    second: VFX1x1 32
+  - first:
+      213: 645762027178883965
+    second: VFX1x1 33
+  - first:
+      213: 4857950576276062059
+    second: VFX1x1 34
+  - first:
+      213: -5343924478751497936
+    second: VFX1x1 35
+  - first:
+      213: -2409220163232467593
+    second: VFX1x1 36
+  - first:
+      213: -8765932663981951996
+    second: VFX1x1 37
+  - first:
+      213: -509417256788382167
+    second: VFX1x1 38
+  - first:
+      213: 5533749457599479143
+    second: VFX1x1 39
+  - first:
+      213: -7250759473451421560
+    second: VFX1x1 40
+  - first:
+      213: 843150022538400867
+    second: VFX1x1 41
+  - first:
+      213: -2261536861435010421
+    second: VFX1x1 42
+  - first:
+      213: -3955052333566377965
+    second: VFX1x1 43
+  - first:
+      213: -6532806482285264344
+    second: VFX1x1 44
+  - first:
+      213: -2082713824967375407
+    second: VFX1x1 45
+  - first:
+      213: 8831687568079714160
+    second: VFX1x1 46
+  - first:
+      213: 6755989032466230065
+    second: VFX1x1 47
+  - first:
+      213: -8302008610480884860
+    second: VFX1x1 48
+  - first:
+      213: -841474706752309947
+    second: VFX1x1 49
+  - first:
+      213: -8959971638934428946
+    second: VFX1x1 50
+  - first:
+      213: 6429909560538673970
+    second: VFX1x1 51
+  - first:
+      213: 699744143863183194
+    second: VFX1x1 52
+  - first:
+      213: -8702540437108013625
+    second: VFX1x1 53
+  - first:
+      213: 8273795935723961038
+    second: VFX1x1 54
+  - first:
+      213: -9100622853573483471
+    second: VFX1x1 55
+  - first:
+      213: 6390055208353214820
+    second: VFX1x1 56
+  - first:
+      213: -4376005347706427739
+    second: VFX1x1 57
+  - first:
+      213: -5265363760740312702
+    second: VFX1x1 58
+  - first:
+      213: -538615998032604541
+    second: VFX1x1 59
+  - first:
+      213: 6853069989385814153
+    second: VFX1x1 60
+  - first:
+      213: 2214775348619629210
+    second: VFX1x1 61
+  - first:
+      213: -2386101289091424894
+    second: VFX1x1 62
+  - first:
+      213: -1802224116093032380
+    second: VFX1x1 63
+  - first:
+      213: -3003639312942030931
+    second: VFX1x1 64
+  - first:
+      213: 524154455178103667
+    second: VFX1x1 65
+  - first:
+      213: -4259839554411441441
+    second: VFX1x1 66
+  - first:
+      213: -2384214436445808920
+    second: VFX1x1 67
+  - first:
+      213: -8296737703612944730
+    second: VFX1x1 68
+  - first:
+      213: 2393872759184481694
+    second: VFX1x1 69
+  - first:
+      213: -6154782112286317002
+    second: VFX1x1 70
+  - first:
+      213: 2005808606024198524
+    second: VFX1x1 71
+  - first:
+      213: -6141210369493577329
+    second: VFX1x1 72
+  - first:
+      213: -8167450553163895932
+    second: VFX1x1 73
+  - first:
+      213: 942603986879987167
+    second: VFX1x1 74
+  - first:
+      213: -2263086893960026948
+    second: VFX1x1 75
+  - first:
+      213: 8480947862196956832
+    second: VFX1x1 76
+  - first:
+      213: 528937930842044220
+    second: VFX1x1 77
+  - first:
+      213: -4760675914809465919
+    second: VFX1x1 78
+  - first:
+      213: -7225703234207128892
+    second: VFX1x1 79
+  - first:
+      213: -7535511014989132322
+    second: VFX1x1 80
+  - first:
+      213: 927718882780174390
+    second: VFX1x1 81
+  - first:
+      213: 1782308250588213418
+    second: VFX1x1 82
+  - first:
+      213: 329827247890824075
+    second: VFX1x1 83
+  - first:
+      213: -5718200699131019637
+    second: VFX1x1 84
+  - first:
+      213: 3605323189038301905
+    second: VFX1x1 85
+  - first:
+      213: -6122898997066695300
+    second: VFX1x1 86
+  - first:
+      213: -7180512497867642271
+    second: VFX1x1 87
+  - first:
+      213: 75418960532806331
+    second: VFX1x1 88
+  - first:
+      213: -2628701086692026190
+    second: VFX1x1 89
+  - first:
+      213: 5189343049042580768
+    second: VFX1x1 90
+  - first:
+      213: 2177349031358440270
+    second: VFX1x1 91
+  - first:
+      213: 6058236384469657829
+    second: VFX1x1 92
+  - first:
+      213: -7958646860926442574
+    second: VFX1x1 93
+  - first:
+      213: 3277933108043974616
+    second: VFX1x1 94
+  - first:
+      213: 2302728706563916221
+    second: VFX1x1 95
+  - first:
+      213: -402245236283669684
+    second: VFX1x1 96
+  - first:
+      213: -5978941904656322963
+    second: VFX1x1 97
+  - first:
+      213: -5833970942935225672
+    second: VFX1x1 98
+  - first:
+      213: -1251986889390554439
+    second: VFX1x1 99
+  - first:
+      213: -4417829817431570323
+    second: VFX1x1 100
+  - first:
+      213: 4396364543724227925
+    second: VFX1x1 101
+  - first:
+      213: 8431867022037578371
+    second: VFX1x1 102
+  - first:
+      213: 6274345749838005233
+    second: VFX1x1 103
+  - first:
+      213: -5929168905000036502
+    second: VFX1x1 104
+  - first:
+      213: 625968163439429477
+    second: VFX1x1 105
+  - first:
+      213: -483867011160784791
+    second: VFX1x1 106
+  - first:
+      213: -4144061165008011817
+    second: VFX1x1 107
+  - first:
+      213: -6482471869681055990
+    second: VFX1x1 108
+  - first:
+      213: -8990442460648531232
+    second: VFX1x1 109
+  - first:
+      213: -4743594986789393999
+    second: VFX1x1 110
+  - first:
+      213: -7529741325102331165
+    second: VFX1x1 111
+  - first:
+      213: 8050895686478459661
+    second: VFX1x1 112
+  - first:
+      213: 7350650913196591100
+    second: VFX1x1 113
+  - first:
+      213: 5703399774470310400
+    second: VFX1x1 114
+  - first:
+      213: -3185137777307139569
+    second: VFX1x1 115
+  - first:
+      213: -7018385680430465199
+    second: VFX1x1 116
+  - first:
+      213: 1671616550717263427
+    second: VFX1x1 117
+  - first:
+      213: 2110603345074694778
+    second: VFX1x1 118
+  - first:
+      213: 6769650126663324796
+    second: VFX1x1 119
+  - first:
+      213: 2164833526625234353
+    second: VFX1x1 120
+  - first:
+      213: 2883459732584071847
+    second: VFX1x1 121
+  - first:
+      213: -8568271408568160756
+    second: VFX1x1 122
+  - first:
+      213: -5722416383818150651
+    second: VFX1x1 123
+  - first:
+      213: -7584524636505706125
+    second: VFX1x1 124
+  - first:
+      213: -6832560675948355337
+    second: VFX1x1 125
+  - first:
+      213: -5975468154861225093
+    second: VFX1x1 126
+  - first:
+      213: 8900643265109787674
+    second: VFX1x1 127
+  - first:
+      213: -6594819179623693750
+    second: VFX1x1 128
+  - first:
+      213: 7116305105945617516
+    second: VFX1x1 129
+  - first:
+      213: 657600194323517074
+    second: VFX1x1 130
+  - first:
+      213: 7913976572883343810
+    second: VFX1x1 131
+  - first:
+      213: -1840874880145883687
+    second: VFX1x1 132
+  - first:
+      213: -848757985972013148
+    second: VFX1x1 133
+  - first:
+      213: 1177475381345698717
+    second: VFX1x1 134
+  - first:
+      213: -6339597966963907323
+    second: VFX1x1 135
+  - first:
+      213: 2092582467108013320
+    second: VFX1x1 136
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 66
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: VFX1x1 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 958
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f81cb939d71885050800000000000000
+      internalID: 5789519697332126095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 958
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9adedbd232ed180800000000000000
+      internalID: -9088788318620112443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 958
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29176d1dc1df5f170800000000000000
+      internalID: 8211747795801371026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 3
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 958
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7123863ac31618db0800000000000000
+      internalID: -4791441615478050281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 4
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 958
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65bd633791b4c1680800000000000000
+      internalID: -8783062600600069290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 5
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 958
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2af5f5ba61c2120800000000000000
+      internalID: 2390310427522212532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 6
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 958
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4225ebd943a6740b0800000000000000
+      internalID: -5744506025470438876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 7
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 958
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 295c758987e7ecfe0800000000000000
+      internalID: -1166856197025315438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 8
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 958
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1841b3edd58ca22a0800000000000000
+      internalID: -6761371585057450879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 9
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 958
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53128d1c281e0e930800000000000000
+      internalID: 4170581206659244341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 10
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 958
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02958ed35507dc0a0800000000000000
+      internalID: -6859703146002228960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 11
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 958
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5798eb8583a8e9f0800000000000000
+      internalID: -438921169695369378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 12
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 958
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63212323883551830800000000000000
+      internalID: 4041228085057688118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 13
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 958
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c009f3d8374fa70800000000000000
+      internalID: 8859833417438596226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 14
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 958
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c584f70341114a10800000000000000
+      internalID: 1891812298066265537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 892
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4949d6c9b5ad0ba90800000000000000
+      internalID: -7300094908966267756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 16
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 892
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a42842c960b102b60800000000000000
+      internalID: 7719199476516422218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 17
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 892
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac763a1034184efd0800000000000000
+      internalID: -2313582183771314230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 18
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 892
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91bec278346511ed0800000000000000
+      internalID: -2445078274654803175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 19
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 892
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 106563bb385485d10800000000000000
+      internalID: 2114516457134380545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 20
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 892
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 737e082f9d2213cc0800000000000000
+      internalID: -3733164296641648841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 21
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 892
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f0e42b07d149acd0800000000000000
+      internalID: -2546431722440564491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 22
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 892
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9179e9b259e308790800000000000000
+      internalID: -7529949766560606439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 23
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 892
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3881f9014eb92f450800000000000000
+      internalID: 6121126247383636099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 24
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 892
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae8388d07d50315f0800000000000000
+      internalID: -787279088656566038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 25
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 892
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95de05426ce276a60800000000000000
+      internalID: 7667148319169244505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 26
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 892
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e82e6434aea9b2a0800000000000000
+      internalID: -6721148948596250395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 27
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 892
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e4b86a0395834690800000000000000
+      internalID: -7619099277999426329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 28
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 892
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c2c15f87c1d36780800000000000000
+      internalID: -8690872200861728059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 29
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 892
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25344c9a2bff38c70800000000000000
+      internalID: 8972296025469633362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 826
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d3863b4fdcb07ba0800000000000000
+      internalID: -6093162628606688301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 31
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 826
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc021e364b3c66aa0800000000000000
+      internalID: -6168027460100087605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 32
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 826
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4de770fb77d015890800000000000000
+      internalID: -7471175498873733420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 33
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 826
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7bfe6f642536f800800000000000000
+      internalID: 645762027178883965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 34
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 826
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6fb6538f48ea6340800000000000000
+      internalID: 4857950576276062059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 35
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 826
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 031a089fff096d5b0800000000000000
+      internalID: -5343924478751497936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 36
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 826
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 775f1d0b60bb09ed0800000000000000
+      internalID: -2409220163232467593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 37
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 826
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 404bc5e9fa6295680800000000000000
+      internalID: -8765932663981951996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 38
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 826
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92eaca634bf2ee8f0800000000000000
+      internalID: -509417256788382167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 39
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 826
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d3a3800d3dbcc40800000000000000
+      internalID: 5533749457599479143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 40
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 826
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8803121dca0206b90800000000000000
+      internalID: -7250759473451421560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 41
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 826
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36493c17a7873bb00800000000000000
+      internalID: 843150022538400867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 42
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 826
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b82e6b7e4386d90e0800000000000000
+      internalID: -2261536861435010421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 43
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 826
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31042bd7bd4dc19c0800000000000000
+      internalID: -3955052333566377965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 44
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 826
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 822840ddd1fc655a0800000000000000
+      internalID: -6532806482285264344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 760
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d546069fc6b813e0800000000000000
+      internalID: -2082713824967375407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 46
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 760
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 077ff960d05709a70800000000000000
+      internalID: 8831687568079714160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 47
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 760
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13ba592fa3812cd50800000000000000
+      internalID: 6755989032466230065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 48
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 760
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4837d0a972759cc80800000000000000
+      internalID: -8302008610480884860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 49
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 760
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5457d88663b7254f0800000000000000
+      internalID: -841474706752309947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 50
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 760
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee22dbf2449c7a380800000000000000
+      internalID: -8959971638934428946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 51
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 760
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 233bbcd9da0ab3950800000000000000
+      internalID: 6429909560538673970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 52
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 760
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a57ff98679df5b900800000000000000
+      internalID: 699744143863183194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 53
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 760
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c544ba949d5a3780800000000000000
+      internalID: -8702540437108013625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 54
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 760
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecab5ec219d62d270800000000000000
+      internalID: 8273795935723961038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 55
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 760
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13463f95bb714b180800000000000000
+      internalID: -9100622853573483471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 56
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 760
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46137052b590ea850800000000000000
+      internalID: 6390055208353214820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 57
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 760
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a6afb2425e4543c0800000000000000
+      internalID: -4376005347706427739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 58
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 760
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 289dbd38e8bade6b0800000000000000
+      internalID: -5265363760740312702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 59
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 760
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3829cee7a937688f0800000000000000
+      internalID: -538615998032604541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 694
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9804b32a8defa1f50800000000000000
+      internalID: 6853069989385814153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 61
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 694
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a92d3c7f1767cbe10800000000000000
+      internalID: 2214775348619629210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 62
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 694
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d9a99058dd2eed0800000000000000
+      internalID: -2386101289091424894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 63
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 694
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 448e1aa07b63df6e0800000000000000
+      internalID: -1802224116093032380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 64
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 694
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daf11b675fde056d0800000000000000
+      internalID: -3003639312942030931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 65
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 694
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37b445c23bb264700800000000000000
+      internalID: 524154455178103667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 66
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 694
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd2d52fae7202e4c0800000000000000
+      internalID: -4259839554411441441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 67
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 694
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e61a472a9199eed0800000000000000
+      internalID: -2384214436445808920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 68
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 694
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ae6f8d34011cdc80800000000000000
+      internalID: -8296737703612944730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 69
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 694
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9ddca8579eb83120800000000000000
+      internalID: 2393872759184481694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 70
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 694
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 636ee3f3742d59aa0800000000000000
+      internalID: -6154782112286317002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 71
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 694
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c796e79cc4016db10800000000000000
+      internalID: 2005808606024198524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 72
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 694
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f81d36bd4b906caa0800000000000000
+      internalID: -6141210369493577329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 73
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 694
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48b2912bef267ae80800000000000000
+      internalID: -8167450553163895932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 74
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 694
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdd39d9f45dc41d00800000000000000
+      internalID: 942603986879987167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 628
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4aba5d576e790e0800000000000000
+      internalID: -2263086893960026948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 76
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 628
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aeabdc852162b570800000000000000
+      internalID: 8480947862196956832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 77
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 628
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c37f114ee3a275700800000000000000
+      internalID: 528937930842044220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 78
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 628
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c326078a7eaeedb0800000000000000
+      internalID: -4760675914809465919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 79
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 628
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c261b0213529bb90800000000000000
+      internalID: -7225703234207128892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 80
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 628
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edd878e18ac7c6790800000000000000
+      internalID: -7535511014989132322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 81
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 628
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 638d88b986befdc00800000000000000
+      internalID: 927718882780174390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 82
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 628
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa0fe8c29e70cb810800000000000000
+      internalID: 1782308250588213418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 83
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 628
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8bf6cb6228c39400800000000000000
+      internalID: 329827247890824075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 84
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 628
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8eb7eda2ced4a0b0800000000000000
+      internalID: -5718200699131019637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 85
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 628
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d24b1fa65ea80230800000000000000
+      internalID: 3605323189038301905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 86
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 628
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7d7e3c7dc7170ba0800000000000000
+      internalID: -6122898997066695300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 87
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 628
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16aa85b5de1b95c90800000000000000
+      internalID: -7180512497867642271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 88
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 628
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bba13ef1521fb0100800000000000000
+      internalID: 75418960532806331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 89
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 628
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b8d9030a4af48bd0800000000000000
+      internalID: -2628701086692026190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 562
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02553df3200440840800000000000000
+      internalID: 5189343049042580768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 91
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 562
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e43292e686f773e10800000000000000
+      internalID: 2177349031358440270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 92
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 562
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e829adc4ed231450800000000000000
+      internalID: 6058236384469657829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 93
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 562
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b3a3b1c8d43d8190800000000000000
+      internalID: -7958646860926442574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 94
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 562
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d704766bce8d7d20800000000000000
+      internalID: 3277933108043974616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 95
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 562
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db146d8ee8fe4ff10800000000000000
+      internalID: 2302728706563916221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 96
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 562
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4308bab610fa6af0800000000000000
+      internalID: -402245236283669684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 97
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 562
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6e2348f308860da0800000000000000
+      internalID: -5978941904656322963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 98
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 562
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ba256c4652990fa0800000000000000
+      internalID: -5833970942935225672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 99
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 562
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b20e62be8c00aee0800000000000000
+      internalID: -1251986889390554439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 100
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 562
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d68ccdd0037b0b2c0800000000000000
+      internalID: -4417829817431570323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 101
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 562
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55d0ec37246030d30800000000000000
+      internalID: 4396364543724227925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 102
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 562
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38271e1f162040570800000000000000
+      internalID: 8431867022037578371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 103
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 562
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f383117734f21750800000000000000
+      internalID: 6274345749838005233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 104
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 562
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a675e248b4c57bda0800000000000000
+      internalID: -5929168905000036502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 496
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 567c2866ab2efa800800000000000000
+      internalID: 625968163439429477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 106
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 496
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9604b395485f849f0800000000000000
+      internalID: -483867011160784791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 107
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 496
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ddb43c93565d76c0800000000000000
+      internalID: -4144061165008011817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 108
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 496
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07c23d1e22a906a0800000000000000
+      internalID: -6482471869681055990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 109
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 496
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea947727388b3380800000000000000
+      internalID: -8990442460648531232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 110
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 496
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b9281efd7d5b2eb0800000000000000
+      internalID: -4743594986789393999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 111
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 496
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ea42bab82cf08790800000000000000
+      internalID: -7529741325102331165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 112
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 496
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d03f54ca8f68abf60800000000000000
+      internalID: 8050895686478459661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 113
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 496
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf7cbf46f02c20660800000000000000
+      internalID: 7350650913196591100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 114
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 496
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00a885180eb862f40800000000000000
+      internalID: 5703399774470310400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 115
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 496
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f024eee211e1cc3d0800000000000000
+      internalID: -3185137777307139569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 116
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 496
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15ff04d986fa99e90800000000000000
+      internalID: -7018385680430465199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 117
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 496
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34e8a227566c23710800000000000000
+      internalID: 1671616550717263427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 118
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 496
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7aade45f8e5a4d10800000000000000
+      internalID: 2110603345074694778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 119
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 496
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c74127d4ce0a2fd50800000000000000
+      internalID: 6769650126663324796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 430
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bd6a586f980b0e10800000000000000
+      internalID: 2164833526625234353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 121
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 430
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a201dc795b140820800000000000000
+      internalID: 2883459732584071847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 122
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 430
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0ea821fc82671980800000000000000
+      internalID: -8568271408568160756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 123
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 430
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50dc4a91e94e590b0800000000000000
+      internalID: -5722416383818150651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 124
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 430
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 371f0e2170b5eb690800000000000000
+      internalID: -7584524636505706125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 125
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 430
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f0abc3044edd21a0800000000000000
+      internalID: -6832560675948355337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 126
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 430
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7b76de5f5fd21da0800000000000000
+      internalID: -5975468154861225093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 127
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 430
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a14875954ef658b70800000000000000
+      internalID: 8900643265109787674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 128
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 430
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a42c890a5ee7a74a0800000000000000
+      internalID: -6594819179623693750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 129
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 430
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c64ef214ac132c260800000000000000
+      internalID: 7116305105945617516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 130
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 430
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29e81e284e3402900800000000000000
+      internalID: 657600194323517074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 131
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 430
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c9997353c714dd60800000000000000
+      internalID: 7913976572883343810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 132
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 430
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ddf6f4cc06e376e0800000000000000
+      internalID: -1840874880145883687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 133
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 430
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a7bcd1db1b9834f0800000000000000
+      internalID: -848757985972013148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 134
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 430
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d93c0ecee9b375010800000000000000
+      internalID: 1177475381345698717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 135
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 364
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 505e358dc393508a0800000000000000
+      internalID: -6339597966963907323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX1x1 136
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 364
+        width: 66
+        height: 66
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8050f27baa85a0d10800000000000000
+      internalID: 2092582467108013320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      VFX1x1 114: 5703399774470310400
+      VFX1x1 51: 6429909560538673970
+      VFX1x1 135: -6339597966963907323
+      VFX1x1 90: 5189343049042580768
+      VFX1x1 30: -6093162628606688301
+      VFX1x1 29: 8972296025469633362
+      VFX1x1 118: 2110603345074694778
+      VFX1x1 94: 3277933108043974616
+      VFX1x1 131: 7913976572883343810
+      VFX1x1 17: -2313582183771314230
+      VFX1x1 74: 942603986879987167
+      VFX1x1 60: 6853069989385814153
+      VFX1x1 63: -1802224116093032380
+      VFX1x1 77: 528937930842044220
+      VFX1x1 44: -6532806482285264344
+      VFX1x1 136: 2092582467108013320
+      VFX1x1 27: -7619099277999426329
+      VFX1x1 4: -8783062600600069290
+      VFX1x1 100: -4417829817431570323
+      VFX1x1 18: -2445078274654803175
+      VFX1x1 56: 6390055208353214820
+      VFX1x1 33: 645762027178883965
+      VFX1x1 107: -4144061165008011817
+      VFX1x1 102: 8431867022037578371
+      VFX1x1 64: -3003639312942030931
+      VFX1x1 59: -538615998032604541
+      VFX1x1 82: 1782308250588213418
+      VFX1x1 70: -6154782112286317002
+      VFX1x1 23: 6121126247383636099
+      VFX1x1 43: -3955052333566377965
+      VFX1x1 52: 699744143863183194
+      VFX1x1 83: 329827247890824075
+      VFX1x1 14: 1891812298066265537
+      VFX1x1 10: -6859703146002228960
+      VFX1x1 53: -8702540437108013625
+      VFX1x1 106: -483867011160784791
+      VFX1x1 48: -8302008610480884860
+      VFX1x1 95: 2302728706563916221
+      VFX1x1 101: 4396364543724227925
+      VFX1x1 9: 4170581206659244341
+      VFX1x1 65: 524154455178103667
+      VFX1x1 54: 8273795935723961038
+      VFX1x1 11: -438921169695369378
+      VFX1x1 134: 1177475381345698717
+      VFX1x1 132: -1840874880145883687
+      VFX1x1 123: -5722416383818150651
+      VFX1x1 89: -2628701086692026190
+      VFX1x1 116: -7018385680430465199
+      VFX1x1 119: 6769650126663324796
+      VFX1x1 69: 2393872759184481694
+      VFX1x1 133: -848757985972013148
+      VFX1x1 113: 7350650913196591100
+      VFX1x1 105: 625968163439429477
+      VFX1x1 117: 1671616550717263427
+      VFX1x1 72: -6141210369493577329
+      VFX1x1 122: -8568271408568160756
+      VFX1x1 127: 8900643265109787674
+      VFX1x1 98: -5833970942935225672
+      VFX1x1 16: 7719199476516422218
+      VFX1x1 121: 2883459732584071847
+      VFX1x1 128: -6594819179623693750
+      VFX1x1 88: 75418960532806331
+      VFX1x1 71: 2005808606024198524
+      VFX1x1 45: -2082713824967375407
+      VFX1x1 7: -1166856197025315438
+      VFX1x1 115: -3185137777307139569
+      VFX1x1 62: -2386101289091424894
+      VFX1x1 92: 6058236384469657829
+      VFX1x1 22: -7529949766560606439
+      VFX1x1 41: 843150022538400867
+      VFX1x1 85: 3605323189038301905
+      VFX1x1 40: -7250759473451421560
+      VFX1x1 120: 2164833526625234353
+      VFX1x1 39: 5533749457599479143
+      VFX1x1 108: -6482471869681055990
+      VFX1x1 24: -787279088656566038
+      VFX1x1 32: -7471175498873733420
+      VFX1x1 25: 7667148319169244505
+      VFX1x1 12: 4041228085057688118
+      VFX1x1 15: -7300094908966267756
+      VFX1x1 46: 8831687568079714160
+      VFX1x1 99: -1251986889390554439
+      VFX1x1 91: 2177349031358440270
+      VFX1x1 76: 8480947862196956832
+      VFX1x1 126: -5975468154861225093
+      VFX1x1 20: -3733164296641648841
+      VFX1x1 36: -2409220163232467593
+      VFX1x1 84: -5718200699131019637
+      VFX1x1 73: -8167450553163895932
+      VFX1x1 86: -6122898997066695300
+      VFX1x1 112: 8050895686478459661
+      VFX1x1 26: -6721148948596250395
+      VFX1x1 55: -9100622853573483471
+      VFX1x1 66: -4259839554411441441
+      VFX1x1 5: 2390310427522212532
+      VFX1x1 67: -2384214436445808920
+      VFX1x1 57: -4376005347706427739
+      VFX1x1 103: 6274345749838005233
+      VFX1x1 68: -8296737703612944730
+      VFX1x1 31: -6168027460100087605
+      VFX1x1 111: -7529741325102331165
+      VFX1x1 96: -402245236283669684
+      VFX1x1 34: 4857950576276062059
+      VFX1x1 125: -6832560675948355337
+      VFX1x1 8: -6761371585057450879
+      VFX1x1 58: -5265363760740312702
+      VFX1x1 37: -8765932663981951996
+      VFX1x1 87: -7180512497867642271
+      VFX1x1 1: -9088788318620112443
+      VFX1x1 129: 7116305105945617516
+      VFX1x1 109: -8990442460648531232
+      VFX1x1 47: 6755989032466230065
+      VFX1x1 81: 927718882780174390
+      VFX1x1 28: -8690872200861728059
+      VFX1x1 0: 5789519697332126095
+      VFX1x1 3: -4791441615478050281
+      VFX1x1 6: -5744506025470438876
+      VFX1x1 97: -5978941904656322963
+      VFX1x1 79: -7225703234207128892
+      VFX1x1 93: -7958646860926442574
+      VFX1x1 75: -2263086893960026948
+      VFX1x1 21: -2546431722440564491
+      VFX1x1 42: -2261536861435010421
+      VFX1x1 78: -4760675914809465919
+      VFX1x1 13: 8859833417438596226
+      VFX1x1 35: -5343924478751497936
+      VFX1x1 104: -5929168905000036502
+      VFX1x1 49: -841474706752309947
+      VFX1x1 2: 8211747795801371026
+      VFX1x1 110: -4743594986789393999
+      VFX1x1 61: 2214775348619629210
+      VFX1x1 130: 657600194323517074
+      VFX1x1 124: -7584524636505706125
+      VFX1x1 19: 2114516457134380545
+      VFX1x1 50: -8959971638934428946
+      VFX1x1 80: -7535511014989132322
+      VFX1x1 38: -509417256788382167
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

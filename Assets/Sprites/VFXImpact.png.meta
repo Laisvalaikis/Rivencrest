@@ -1,0 +1,4739 @@
+fileFormatVersion: 2
+guid: c71fc8cd761e4224e9672d6b75c5eeb3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4232196230600289989
+    second: VFXImpact 0
+  - first:
+      213: 2426123717843694764
+    second: VFXImpact 1
+  - first:
+      213: -1354548651326103372
+    second: VFXImpact 2
+  - first:
+      213: -5793876656490774432
+    second: VFXImpact 3
+  - first:
+      213: 314084733250196771
+    second: VFXImpact 4
+  - first:
+      213: 5952912671142064249
+    second: VFXImpact 5
+  - first:
+      213: 8968868163076492172
+    second: VFXImpact 6
+  - first:
+      213: 7905128893393569326
+    second: VFXImpact 7
+  - first:
+      213: -9158054799702255200
+    second: VFXImpact 8
+  - first:
+      213: -3413941665087765037
+    second: VFXImpact 9
+  - first:
+      213: 2176724245079381110
+    second: VFXImpact 10
+  - first:
+      213: -5754011957539189728
+    second: VFXImpact 11
+  - first:
+      213: -5045404907025386646
+    second: VFXImpact 12
+  - first:
+      213: 1155722666276461689
+    second: VFXImpact 13
+  - first:
+      213: 7899471610290863757
+    second: VFXImpact 14
+  - first:
+      213: 4737326961805162691
+    second: VFXImpact 15
+  - first:
+      213: -9203014155413544423
+    second: VFXImpact 16
+  - first:
+      213: 5851726944748462432
+    second: VFXImpact 17
+  - first:
+      213: -2393460311653223794
+    second: VFXImpact 18
+  - first:
+      213: -766338907571947045
+    second: VFXImpact 19
+  - first:
+      213: 1791023853072048825
+    second: VFXImpact 20
+  - first:
+      213: -4222892975207249377
+    second: VFXImpact 21
+  - first:
+      213: -2187362975273895629
+    second: VFXImpact 22
+  - first:
+      213: -2370793921927992102
+    second: VFXImpact 23
+  - first:
+      213: -7879355671300348383
+    second: VFXImpact 24
+  - first:
+      213: -7284107545430105474
+    second: VFXImpact 25
+  - first:
+      213: 7402586330245862552
+    second: VFXImpact 26
+  - first:
+      213: -8096048384557648185
+    second: VFXImpact 27
+  - first:
+      213: 3551392048572276223
+    second: VFXImpact 28
+  - first:
+      213: -1533693506323962347
+    second: VFXImpact 29
+  - first:
+      213: 2881351740189432267
+    second: VFXImpact 30
+  - first:
+      213: -1413372089909910587
+    second: VFXImpact 31
+  - first:
+      213: -6075806392811163969
+    second: VFXImpact 32
+  - first:
+      213: 6174165218623510978
+    second: VFXImpact 33
+  - first:
+      213: 5660872427083685648
+    second: VFXImpact 34
+  - first:
+      213: -7671840224908417553
+    second: VFXImpact 35
+  - first:
+      213: 4704138288699562484
+    second: VFXImpact 36
+  - first:
+      213: -1876963569634411904
+    second: VFXImpact 37
+  - first:
+      213: -6722847271265418979
+    second: VFXImpact 38
+  - first:
+      213: 8788838218961077309
+    second: VFXImpact 39
+  - first:
+      213: 612486750543691251
+    second: VFXImpact 40
+  - first:
+      213: -6614347204572979751
+    second: VFXImpact 41
+  - first:
+      213: 315712330679884179
+    second: VFXImpact 42
+  - first:
+      213: -4775468899985161351
+    second: VFXImpact 43
+  - first:
+      213: 4334393151062940030
+    second: VFXImpact 44
+  - first:
+      213: 9136522699210469405
+    second: VFXImpact 45
+  - first:
+      213: -4432856390357222505
+    second: VFXImpact 46
+  - first:
+      213: -9126972377214101073
+    second: VFXImpact 47
+  - first:
+      213: -4274970588412556642
+    second: VFXImpact 48
+  - first:
+      213: 8205895177277697491
+    second: VFXImpact 49
+  - first:
+      213: -7135533992724984342
+    second: VFXImpact 50
+  - first:
+      213: -462775630253084333
+    second: VFXImpact 51
+  - first:
+      213: -4556748422473921364
+    second: VFXImpact 52
+  - first:
+      213: -6099477715246061678
+    second: VFXImpact 53
+  - first:
+      213: -4858978759050181867
+    second: VFXImpact 54
+  - first:
+      213: -8141439530098876011
+    second: VFXImpact 55
+  - first:
+      213: 7037516631201185753
+    second: VFXImpact 56
+  - first:
+      213: 4560753483214875639
+    second: VFXImpact 57
+  - first:
+      213: -5072395572331434000
+    second: VFXImpact 58
+  - first:
+      213: 3486648460976006757
+    second: VFXImpact 59
+  - first:
+      213: 2738608824648079821
+    second: VFXImpact 60
+  - first:
+      213: -6452245539493964004
+    second: VFXImpact 61
+  - first:
+      213: 1496671316394949932
+    second: VFXImpact 62
+  - first:
+      213: -2279653714996071999
+    second: VFXImpact 63
+  - first:
+      213: 4530320725305845353
+    second: VFXImpact 64
+  - first:
+      213: 6294992199865127695
+    second: VFXImpact 65
+  - first:
+      213: -2665678658292021791
+    second: VFXImpact 66
+  - first:
+      213: 3790124939099654984
+    second: VFXImpact 67
+  - first:
+      213: 2764881474449188992
+    second: VFXImpact 68
+  - first:
+      213: -4597149477260962009
+    second: VFXImpact 69
+  - first:
+      213: 8170000872574857955
+    second: VFXImpact 70
+  - first:
+      213: -1694481121273753732
+    second: VFXImpact 71
+  - first:
+      213: 3171585150029528862
+    second: VFXImpact 72
+  - first:
+      213: -8909749801144889098
+    second: VFXImpact 73
+  - first:
+      213: -1796551490076378957
+    second: VFXImpact 74
+  - first:
+      213: 6402878948951929040
+    second: VFXImpact 75
+  - first:
+      213: -7647910568809111842
+    second: VFXImpact 76
+  - first:
+      213: -3952919536773756918
+    second: VFXImpact 77
+  - first:
+      213: -1197193648528158149
+    second: VFXImpact 78
+  - first:
+      213: -1580613401546827518
+    second: VFXImpact 79
+  - first:
+      213: -6794384016303704069
+    second: VFXImpact 80
+  - first:
+      213: -5775204930621337074
+    second: VFXImpact 81
+  - first:
+      213: 7714649265362999669
+    second: VFXImpact 82
+  - first:
+      213: 7557230459829308292
+    second: VFXImpact 83
+  - first:
+      213: 8425937703905328911
+    second: VFXImpact 84
+  - first:
+      213: -7291215332921482252
+    second: VFXImpact 85
+  - first:
+      213: -2724457169815798275
+    second: VFXImpact 86
+  - first:
+      213: -6767035216116236472
+    second: VFXImpact 87
+  - first:
+      213: -4724953965762822903
+    second: VFXImpact 88
+  - first:
+      213: 1495933354463687516
+    second: VFXImpact 89
+  - first:
+      213: 222401913099021327
+    second: VFXImpact 90
+  - first:
+      213: 921620320502864202
+    second: VFXImpact 91
+  - first:
+      213: 2320855586325547596
+    second: VFXImpact 92
+  - first:
+      213: 3882883682572190971
+    second: VFXImpact 93
+  - first:
+      213: 3051655787759582680
+    second: VFXImpact 94
+  - first:
+      213: -193274382059485178
+    second: VFXImpact 95
+  - first:
+      213: 340583751797123299
+    second: VFXImpact 96
+  - first:
+      213: -1848521708462850495
+    second: VFXImpact 97
+  - first:
+      213: -7641436542864802940
+    second: VFXImpact 98
+  - first:
+      213: -3125293787568462513
+    second: VFXImpact 99
+  - first:
+      213: 7978303297581091472
+    second: VFXImpact 100
+  - first:
+      213: 861876738134945178
+    second: VFXImpact 101
+  - first:
+      213: 3863724288764692621
+    second: VFXImpact 102
+  - first:
+      213: -4091552354347075048
+    second: VFXImpact 103
+  - first:
+      213: -7877919023621535730
+    second: VFXImpact 104
+  - first:
+      213: 3893915442779080302
+    second: VFXImpact 105
+  - first:
+      213: -2467741672958925539
+    second: VFXImpact 106
+  - first:
+      213: -3309508962441360131
+    second: VFXImpact 107
+  - first:
+      213: 2650018472129966527
+    second: VFXImpact 108
+  - first:
+      213: -7711286312878833001
+    second: VFXImpact 109
+  - first:
+      213: -2525713400197517296
+    second: VFXImpact 110
+  - first:
+      213: 7240749211607577190
+    second: VFXImpact 111
+  - first:
+      213: -4278857475519012131
+    second: VFXImpact 112
+  - first:
+      213: 2033882739685516540
+    second: VFXImpact 113
+  - first:
+      213: 3158503488907551191
+    second: VFXImpact 114
+  - first:
+      213: 3981942386333721059
+    second: VFXImpact 115
+  - first:
+      213: 2467421785201773949
+    second: VFXImpact 116
+  - first:
+      213: 5669300416170806560
+    second: VFXImpact 117
+  - first:
+      213: -6084067068666699532
+    second: VFXImpact 118
+  - first:
+      213: 1415299753665296345
+    second: VFXImpact 119
+  - first:
+      213: 3044392628188124851
+    second: VFXImpact 120
+  - first:
+      213: -8382528024699105444
+    second: VFXImpact 121
+  - first:
+      213: 7328661786550718050
+    second: VFXImpact 122
+  - first:
+      213: -4605914145822297723
+    second: VFXImpact 123
+  - first:
+      213: -2634958563044778123
+    second: VFXImpact 124
+  - first:
+      213: -3921261376553520292
+    second: VFXImpact 125
+  - first:
+      213: -7679202496496484886
+    second: VFXImpact 126
+  - first:
+      213: 2917628514037608460
+    second: VFXImpact 127
+  - first:
+      213: -2805237232335667868
+    second: VFXImpact 128
+  - first:
+      213: -7679272994426574387
+    second: VFXImpact 129
+  - first:
+      213: 4176463594510976797
+    second: VFXImpact 130
+  - first:
+      213: 1354023557759056875
+    second: VFXImpact 131
+  - first:
+      213: -6319345813682289287
+    second: VFXImpact 132
+  - first:
+      213: 4823976142472802396
+    second: VFXImpact 133
+  - first:
+      213: 8792311328398198762
+    second: VFXImpact 134
+  - first:
+      213: 3823155205800157242
+    second: VFXImpact 135
+  - first:
+      213: -6629607925568012013
+    second: VFXImpact 136
+  - first:
+      213: -2603651830306789640
+    second: VFXImpact 137
+  - first:
+      213: -5066701209681866115
+    second: VFXImpact 138
+  - first:
+      213: 7924967550762330815
+    second: VFXImpact 139
+  - first:
+      213: -1767101135114242910
+    second: VFXImpact 140
+  - first:
+      213: 953791827073221485
+    second: VFXImpact 141
+  - first:
+      213: 6051750846579073658
+    second: VFXImpact 142
+  - first:
+      213: 2408482877203212855
+    second: VFXImpact 143
+  - first:
+      213: -2332541137734571129
+    second: VFXImpact 144
+  - first:
+      213: -991114836331875462
+    second: VFXImpact 145
+  - first:
+      213: -5833442150409885079
+    second: VFXImpact 146
+  - first:
+      213: -4853903750695861605
+    second: VFXImpact 147
+  - first:
+      213: -3612597186143738736
+    second: VFXImpact 148
+  - first:
+      213: -2755768985102743341
+    second: VFXImpact 149
+  - first:
+      213: -6519783785855214288
+    second: VFXImpact 150
+  - first:
+      213: 1546102574114538957
+    second: VFXImpact 151
+  - first:
+      213: 4504135796674136937
+    second: VFXImpact 152
+  - first:
+      213: 5977839458700107439
+    second: VFXImpact 153
+  - first:
+      213: -7139225798969424898
+    second: VFXImpact 154
+  - first:
+      213: 1880347269449352677
+    second: VFXImpact 155
+  - first:
+      213: -7111535842354117028
+    second: VFXImpact 156
+  - first:
+      213: 7534029864224993474
+    second: VFXImpact 157
+  - first:
+      213: -8859367871776201594
+    second: VFXImpact 158
+  - first:
+      213: 5032935309067784259
+    second: VFXImpact 159
+  - first:
+      213: -2925024878139405751
+    second: VFXImpact 160
+  - first:
+      213: 2663270081652706718
+    second: VFXImpact 161
+  - first:
+      213: 8291755865176685144
+    second: VFXImpact 162
+  - first:
+      213: 7577502060608828927
+    second: VFXImpact 163
+  - first:
+      213: -6236574266583707830
+    second: VFXImpact 164
+  - first:
+      213: 7041184557216433719
+    second: VFXImpact 165
+  - first:
+      213: -4717051560339549701
+    second: VFXImpact 166
+  - first:
+      213: -7548093459749058078
+    second: VFXImpact 167
+  - first:
+      213: -2447304775652771235
+    second: VFXImpact 168
+  - first:
+      213: 425803589096548140
+    second: VFXImpact 169
+  - first:
+      213: -2521034066854491175
+    second: VFXImpact 170
+  - first:
+      213: -7694871805982796918
+    second: VFXImpact 171
+  - first:
+      213: 8841956048166258288
+    second: VFXImpact 172
+  - first:
+      213: -8072772175075545721
+    second: VFXImpact 173
+  - first:
+      213: -8826191895426104092
+    second: VFXImpact 174
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 66
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: VFXImpact 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b31925f83f73445c0800000000000000
+      internalID: -4232196230600289989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 1
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca4393fcaa25ba120800000000000000
+      internalID: 2426123717843694764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 2
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b029b6ad2da33de0800000000000000
+      internalID: -1354548651326103372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 3
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0608071d0e3089fa0800000000000000
+      internalID: -5793876656490774432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 4
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32550ca966adb5400800000000000000
+      internalID: 314084733250196771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 5
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9703856d88efc9250800000000000000
+      internalID: 5952912671142064249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 6
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8b0c714312d77c70800000000000000
+      internalID: 8968868163076492172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 7
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e26866a68d8a4bd60800000000000000
+      internalID: 7905128893393569326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 8
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a99f2e5ead08e080800000000000000
+      internalID: -9158054799702255200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 9
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d5c988b42e3f90d0800000000000000
+      internalID: -3413941665087765037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 10
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 674dfe90b27453e10800000000000000
+      internalID: 2176724245079381110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 11
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02cc6855c94a520b0800000000000000
+      internalID: -5754011957539189728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 12
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a633db008fe1bf9b0800000000000000
+      internalID: -5045404907025386646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 13
+      rect:
+        serializedVersion: 2
+        x: 2574
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c964644a3f90010800000000000000
+      internalID: 1155722666276461689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 14
+      rect:
+        serializedVersion: 2
+        x: 2772
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8e7bac839f80ad60800000000000000
+      internalID: 7899471610290863757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 15
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c8f647b5cd5eb140800000000000000
+      internalID: 4737326961805162691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 16
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9122fa3a263584080800000000000000
+      internalID: -9203014155413544423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 17
+      rect:
+        serializedVersion: 2
+        x: 3366
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 061605807a2853150800000000000000
+      internalID: 5851726944748462432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 18
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e82f9e31788b8ced0800000000000000
+      internalID: -2393460311653223794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 19
+      rect:
+        serializedVersion: 2
+        x: 3762
+        y: 1850
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd9fc94e2da6d55f0800000000000000
+      internalID: -766338907571947045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b26c9284befad810800000000000000
+      internalID: 1791023853072048825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 21
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1a874086354565c0800000000000000
+      internalID: -4222892975207249377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 22
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33935ff86fce4a1e0800000000000000
+      internalID: -2187362975273895629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 23
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adca3df2d7f391fd0800000000000000
+      internalID: -2370793921927992102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 24
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 126ee2973c7e6a290800000000000000
+      internalID: -7879355671300348383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 25
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7265e0c7c6a9ea90800000000000000
+      internalID: -7284107545430105474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 26
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8949779fb054bb660800000000000000
+      internalID: 7402586330245862552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 27
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c6f01293ee05af80800000000000000
+      internalID: -8096048384557648185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 28
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffd1c498044194130800000000000000
+      internalID: 3551392048572276223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 29
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 516ac31c1e937bae0800000000000000
+      internalID: -1533693506323962347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 30
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc9d1f2442e9cf720800000000000000
+      internalID: 2881351740189432267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 31
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c3e7759291b26ce0800000000000000
+      internalID: -1413372089909910587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 32
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbe6178d6466eaba0800000000000000
+      internalID: -6075806392811163969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 33
+      rect:
+        serializedVersion: 2
+        x: 2574
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c950a0ed8a0fa550800000000000000
+      internalID: 6174165218623510978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 34
+      rect:
+        serializedVersion: 2
+        x: 2772
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f5027da757f8e40800000000000000
+      internalID: 5660872427083685648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 35
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe5e7cc66f5288590800000000000000
+      internalID: -7671840224908417553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 36
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f9504899d4784140800000000000000
+      internalID: 4704138288699562484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 37
+      rect:
+        serializedVersion: 2
+        x: 3366
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08a7797f39fa3f5e0800000000000000
+      internalID: -1876963569634411904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 38
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d114505a606a3b2a0800000000000000
+      internalID: -6722847271265418979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 39
+      rect:
+        serializedVersion: 2
+        x: 3762
+        y: 1652
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d344d8d7bc938f970800000000000000
+      internalID: 8788838218961077309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fd3acb547dff7800800000000000000
+      internalID: 612486750543691251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 41
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dd5452034e1534a0800000000000000
+      internalID: -6614347204572979751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 42
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 399926921b2a16400800000000000000
+      internalID: 315712330679884179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 43
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 973857446502abdb0800000000000000
+      internalID: -4775468899985161351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 44
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e791ef53b9bd62c30800000000000000
+      internalID: 4334393151062940030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 45
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d10bbb0dcf27bce70800000000000000
+      internalID: 9136522699210469405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 46
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79bff6869945b72c0800000000000000
+      internalID: -4432856390357222505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 47
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa9d95dcafa765180800000000000000
+      internalID: -9126972377214101073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 48
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9a4d6c46e04ca4c0800000000000000
+      internalID: -4274970588412556642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 49
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dd6ab1ef2231e170800000000000000
+      internalID: 8205895177277697491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 50
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aed07e8a3ad79fc90800000000000000
+      internalID: -7135533992724984342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 51
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 351be042404e399f0800000000000000
+      internalID: -462775630253084333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 52
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cacce93d37d23c0c0800000000000000
+      internalID: -4556748422473921364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 53
+      rect:
+        serializedVersion: 2
+        x: 2574
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 297e85b955d4a5ba0800000000000000
+      internalID: -6099477715246061678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 54
+      rect:
+        serializedVersion: 2
+        x: 2772
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51345a70090719cb0800000000000000
+      internalID: -4858978759050181867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 55
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5912220f1ebc30f80800000000000000
+      internalID: -8141439530098876011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 56
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9df76a7f6184aa160800000000000000
+      internalID: 7037516631201185753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 57
+      rect:
+        serializedVersion: 2
+        x: 3366
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fbe52b012d0b4f30800000000000000
+      internalID: 4560753483214875639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 58
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ffabe60a1b3b99b0800000000000000
+      internalID: -5072395572331434000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 59
+      rect:
+        serializedVersion: 2
+        x: 3762
+        y: 1454
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 566232d5d40136030800000000000000
+      internalID: 3486648460976006757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc916eb573e710620800000000000000
+      internalID: 2738608824648079821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 61
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c171dd60ed40576a0800000000000000
+      internalID: -6452245539493964004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 62
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2dbc3fe1ae35c410800000000000000
+      internalID: 1496671316394949932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 63
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c172ca360b0d50e0800000000000000
+      internalID: -2279653714996071999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 64
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 966e17e62beeede30800000000000000
+      internalID: 4530320725305845353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 65
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f03d0d0bd0e4c5750800000000000000
+      internalID: 6294992199865127695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 66
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e50a27326b910bd0800000000000000
+      internalID: -2665678658292021791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 67
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b42691d8a399430800000000000000
+      internalID: 3790124939099654984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 68
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0882a925d05de5620800000000000000
+      internalID: 2764881474449188992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 69
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 727dc7c38e4a330c0800000000000000
+      internalID: -4597149477260962009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 70
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e2b470d18ca16170800000000000000
+      internalID: 8170000872574857955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 71
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7f4fdfd56efb78e0800000000000000
+      internalID: -1694481121273753732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 72
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1ff962e3ebb30c20800000000000000
+      internalID: 3171585150029528862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 73
+      rect:
+        serializedVersion: 2
+        x: 2574
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f0d62103c53a5480800000000000000
+      internalID: -8909749801144889098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 74
+      rect:
+        serializedVersion: 2
+        x: 2772
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b87c4530fd5117e0800000000000000
+      internalID: -1796551490076378957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 75
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d03b1cea789bd850800000000000000
+      internalID: 6402878948951929040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 76
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ede5d28abd92dd590800000000000000
+      internalID: -7647910568809111842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 77
+      rect:
+        serializedVersion: 2
+        x: 3366
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0806e0ff986429c0800000000000000
+      internalID: -3952919536773756918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 78
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b32102c38b6b26fe0800000000000000
+      internalID: -1197193648528158149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 79
+      rect:
+        serializedVersion: 2
+        x: 3762
+        y: 1256
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20954995c78801ae0800000000000000
+      internalID: -1580613401546827518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf730a04cbf75b1a0800000000000000
+      internalID: -6794384016303704069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 81
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e021b35c6b95adfa0800000000000000
+      internalID: -5775204930621337074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 82
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57990b402a0ff0b60800000000000000
+      internalID: 7714649265362999669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 83
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48b43e3301da0e860800000000000000
+      internalID: 7557230459829308292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 84
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0ff8dcf2b1fee470800000000000000
+      internalID: 8425937703905328911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 85
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f36554094660da90800000000000000
+      internalID: -7291215332921482252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 86
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfdfc5b83a8c03ad0800000000000000
+      internalID: -2724457169815798275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 87
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84f35d00359a612a0800000000000000
+      internalID: -6767035216116236472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 88
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90d32aae6679d6eb0800000000000000
+      internalID: -4724953965762822903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 89
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c537778c57f92c410800000000000000
+      internalID: 1495933354463687516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 90
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0c62a39c51261300800000000000000
+      internalID: 222401913099021327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 91
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a49da5d6cc04acc00800000000000000
+      internalID: 921620320502864202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 92
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4a4aedfbd5553020800000000000000
+      internalID: 2320855586325547596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 93
+      rect:
+        serializedVersion: 2
+        x: 2574
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf440eb0326c2e530800000000000000
+      internalID: 3882883682572190971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 94
+      rect:
+        serializedVersion: 2
+        x: 2772
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ddbc2645c8a95a20800000000000000
+      internalID: 3051655787759582680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 95
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 608492939f9515df0800000000000000
+      internalID: -193274382059485178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 96
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e823262e1ff9b400800000000000000
+      internalID: 340583751797123299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 97
+      rect:
+        serializedVersion: 2
+        x: 3366
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14e397fcc4bb856e0800000000000000
+      internalID: -1848521708462850495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 98
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48bbad843f924f590800000000000000
+      internalID: -7641436542864802940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 99
+      rect:
+        serializedVersion: 2
+        x: 3762
+        y: 1058
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f452f35dbd9b0a4d0800000000000000
+      internalID: -3125293787568462513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09a06aa0490a8be60800000000000000
+      internalID: 7978303297581091472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 101
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9da4b0b35006fb00800000000000000
+      internalID: 861876738134945178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 102
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d884edd05c4be9530800000000000000
+      internalID: 3863724288764692621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 103
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81aba3bcfc2e737c0800000000000000
+      internalID: -4091552354347075048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 104
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e080fb313620ca290800000000000000
+      internalID: -7877919023621535730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 105
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e664140e677f90630800000000000000
+      internalID: 3893915442779080302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 106
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d15ead9e502d0cdd0800000000000000
+      internalID: -2467741672958925539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 107
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfc06b812234212d0800000000000000
+      internalID: -3309508962441360131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 108
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb1b78f82c1c6c420800000000000000
+      internalID: 2650018472129966527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 109
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 792868f54f10cf490800000000000000
+      internalID: -7711286312878833001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 110
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01078c85b0dd2fcd0800000000000000
+      internalID: -2525713400197517296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 111
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6623f897b0f4c7460800000000000000
+      internalID: 7240749211607577190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 112
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd22a2fdbc17e94c0800000000000000
+      internalID: -4278857475519012131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 113
+      rect:
+        serializedVersion: 2
+        x: 2574
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf4e0c5639dc93c10800000000000000
+      internalID: 2033882739685516540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 114
+      rect:
+        serializedVersion: 2
+        x: 2772
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d1aa2e403245db20800000000000000
+      internalID: 3158503488907551191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 115
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e12e7dc083b24730800000000000000
+      internalID: 3981942386333721059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 116
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7d030a6a0b0e3220800000000000000
+      internalID: 2467421785201773949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 117
+      rect:
+        serializedVersion: 2
+        x: 3366
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02dc5d6f0b66dae40800000000000000
+      internalID: 5669300416170806560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 118
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f0287e5c3d019ba0800000000000000
+      internalID: -6084067068666699532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 119
+      rect:
+        serializedVersion: 2
+        x: 3762
+        y: 860
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d7faeb90a724a310800000000000000
+      internalID: 1415299753665296345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b698f727fadf3a20800000000000000
+      internalID: 3044392628188124851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 121
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5f8d009c274bab80800000000000000
+      internalID: -8382528024699105444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 122
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26ec552e013a4b560800000000000000
+      internalID: 7328661786550718050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 123
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 581b050dc718410c0800000000000000
+      internalID: -4605914145822297723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 124
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57f97d3c52fbe6bd0800000000000000
+      internalID: -2634958563044778123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 125
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c537113cd81e499c0800000000000000
+      internalID: -3921261376553520292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 126
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aedb80ef30efd6590800000000000000
+      internalID: -7679202496496484886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 127
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0033cddcaf7d7820800000000000000
+      internalID: 2917628514037608460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 128
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46dbee7999bc119d0800000000000000
+      internalID: -2805237232335667868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 129
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc924f9e5edbd6590800000000000000
+      internalID: -7679272994426574387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 130
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d178d28e287c5f930800000000000000
+      internalID: 4176463594510976797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 131
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beb3db970457ac210800000000000000
+      internalID: 1354023557759056875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 132
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9758d9ab67c2d48a0800000000000000
+      internalID: -6319345813682289287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 133
+      rect:
+        serializedVersion: 2
+        x: 2574
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c50fc093eb432f240800000000000000
+      internalID: 4823976142472802396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 134
+      rect:
+        serializedVersion: 2
+        x: 2772
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae741dbc190940a70800000000000000
+      internalID: 8792311328398198762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 135
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3067ea57639e0530800000000000000
+      internalID: 3823155205800157242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 136
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 311876487b6eef3a0800000000000000
+      internalID: -6629607925568012013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 137
+      rect:
+        serializedVersion: 2
+        x: 3366
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f6a4cf7478fddbd0800000000000000
+      internalID: -2603651830306789640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 138
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72ded528167fa9b0800000000000000
+      internalID: -5066701209681866115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 139
+      rect:
+        serializedVersion: 2
+        x: 3762
+        y: 662
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbaafa7cff32bfd60800000000000000
+      internalID: 7924967550762330815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a4735f41eef977e0800000000000000
+      internalID: -1767101135114242910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 141
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d63ce520d9c8c3d00800000000000000
+      internalID: 953791827073221485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 142
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a72e387d4532cf350800000000000000
+      internalID: 6051750846579073658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 143
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73aee478a66ac6120800000000000000
+      internalID: 2408482877203212855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 144
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78b685d813621afd0800000000000000
+      internalID: -2332541137734571129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 145
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a73b1d8be4ade32f0800000000000000
+      internalID: -991114836331875462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 146
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96a270765437b0fa0800000000000000
+      internalID: -5833442150409885079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 147
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9246dd714873acb0800000000000000
+      internalID: -4853903750695861605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 148
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 094a353eff97dddc0800000000000000
+      internalID: -3612597186143738736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 149
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d889ef65ba81c9d0800000000000000
+      internalID: -2755768985102743341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 150
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d9fb7a0331585a0800000000000000
+      internalID: -6519783785855214288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 151
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc50a6c791cd47510800000000000000
+      internalID: 1546102574114538957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 152
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96b02e4a4a7e18e30800000000000000
+      internalID: 4504135796674136937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 153
+      rect:
+        serializedVersion: 2
+        x: 2574
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fae1224d05d85f250800000000000000
+      internalID: 5977839458700107439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 154
+      rect:
+        serializedVersion: 2
+        x: 2772
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef38f1906ff5cec90800000000000000
+      internalID: -7139225798969424898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 155
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e587e901e5581a10800000000000000
+      internalID: 1880347269449352677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 156
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c56460574dfbe4d90800000000000000
+      internalID: -7111535842354117028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 157
+      rect:
+        serializedVersion: 2
+        x: 3366
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c0b0589e304e8860800000000000000
+      internalID: 7534029864224993474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 158
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 684654c0cd33d0580800000000000000
+      internalID: -8859367871776201594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 159
+      rect:
+        serializedVersion: 2
+        x: 3762
+        y: 464
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 340918a7ff398d540800000000000000
+      internalID: 5032935309067784259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 160
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a025bee593867d0800000000000000
+      internalID: -2925024878139405751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 161
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9dc5d55706d5f420800000000000000
+      internalID: 2663270081652706718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 162
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85a3e1c170c321370800000000000000
+      internalID: 8291755865176685144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 163
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff5316f0af1b82960800000000000000
+      internalID: 7577502060608828927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 164
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4f8fe05fbc3379a0800000000000000
+      internalID: -6236574266583707830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 165
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7360ada8c0057b160800000000000000
+      internalID: 7041184557216433719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 166
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf152ce099aa98eb0800000000000000
+      internalID: -4717051560339549701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 167
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e945386df8cf3790800000000000000
+      internalID: -7548093459749058078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 168
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5a791ed54d690ed0800000000000000
+      internalID: -2447304775652771235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 169
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c27af28bb12c8e500800000000000000
+      internalID: 425803589096548140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 170
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dbca7a8fdc730dd0800000000000000
+      internalID: -2521034066854491175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 171
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a831a349cd2563590800000000000000
+      internalID: -7694871805982796918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 172
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 076019add20f4ba70800000000000000
+      internalID: 8841956048166258288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 173
+      rect:
+        serializedVersion: 2
+        x: 2574
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78de6f76a70c7ff80800000000000000
+      internalID: -8072772175075545721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 174
+      rect:
+        serializedVersion: 2
+        x: 2772
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e402b9fb31138580800000000000000
+      internalID: -8826191895426104092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 175
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000800000000000000
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 176
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000800000000000000
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 177
+      rect:
+        serializedVersion: 2
+        x: 3366
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000800000000000000
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 178
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000800000000000000
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 179
+      rect:
+        serializedVersion: 2
+        x: 3762
+        y: 266
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000800000000000000
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 180
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000800000000000000
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 181
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 68
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000800000000000000
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 182
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 68
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000800000000000000
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFXImpact 183
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 68
+        width: 198
+        height: 198
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000800000000000000
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      VFXImpact 0: -4232196230600289989
+      VFXImpact 1: 2426123717843694764
+      VFXImpact 10: 2176724245079381110
+      VFXImpact 100: 7978303297581091472
+      VFXImpact 101: 861876738134945178
+      VFXImpact 102: 3863724288764692621
+      VFXImpact 103: -4091552354347075048
+      VFXImpact 104: -7877919023621535730
+      VFXImpact 105: 3893915442779080302
+      VFXImpact 106: -2467741672958925539
+      VFXImpact 107: -3309508962441360131
+      VFXImpact 108: 2650018472129966527
+      VFXImpact 109: -7711286312878833001
+      VFXImpact 11: -5754011957539189728
+      VFXImpact 110: -2525713400197517296
+      VFXImpact 111: 7240749211607577190
+      VFXImpact 112: -4278857475519012131
+      VFXImpact 113: 2033882739685516540
+      VFXImpact 114: 3158503488907551191
+      VFXImpact 115: 3981942386333721059
+      VFXImpact 116: 2467421785201773949
+      VFXImpact 117: 5669300416170806560
+      VFXImpact 118: -6084067068666699532
+      VFXImpact 119: 1415299753665296345
+      VFXImpact 12: -5045404907025386646
+      VFXImpact 120: 3044392628188124851
+      VFXImpact 121: -8382528024699105444
+      VFXImpact 122: 7328661786550718050
+      VFXImpact 123: -4605914145822297723
+      VFXImpact 124: -2634958563044778123
+      VFXImpact 125: -3921261376553520292
+      VFXImpact 126: -7679202496496484886
+      VFXImpact 127: 2917628514037608460
+      VFXImpact 128: -2805237232335667868
+      VFXImpact 129: -7679272994426574387
+      VFXImpact 13: 1155722666276461689
+      VFXImpact 130: 4176463594510976797
+      VFXImpact 131: 1354023557759056875
+      VFXImpact 132: -6319345813682289287
+      VFXImpact 133: 4823976142472802396
+      VFXImpact 134: 8792311328398198762
+      VFXImpact 135: 3823155205800157242
+      VFXImpact 136: -6629607925568012013
+      VFXImpact 137: -2603651830306789640
+      VFXImpact 138: -5066701209681866115
+      VFXImpact 139: 7924967550762330815
+      VFXImpact 14: 7899471610290863757
+      VFXImpact 140: -1767101135114242910
+      VFXImpact 141: 953791827073221485
+      VFXImpact 142: 6051750846579073658
+      VFXImpact 143: 2408482877203212855
+      VFXImpact 144: -2332541137734571129
+      VFXImpact 145: -991114836331875462
+      VFXImpact 146: -5833442150409885079
+      VFXImpact 147: -4853903750695861605
+      VFXImpact 148: -3612597186143738736
+      VFXImpact 149: -2755768985102743341
+      VFXImpact 15: 4737326961805162691
+      VFXImpact 150: -6519783785855214288
+      VFXImpact 151: 1546102574114538957
+      VFXImpact 152: 4504135796674136937
+      VFXImpact 153: 5977839458700107439
+      VFXImpact 154: -7139225798969424898
+      VFXImpact 155: 1880347269449352677
+      VFXImpact 156: -7111535842354117028
+      VFXImpact 157: 7534029864224993474
+      VFXImpact 158: -8859367871776201594
+      VFXImpact 159: 5032935309067784259
+      VFXImpact 16: -9203014155413544423
+      VFXImpact 160: -2925024878139405751
+      VFXImpact 161: 2663270081652706718
+      VFXImpact 162: 8291755865176685144
+      VFXImpact 163: 7577502060608828927
+      VFXImpact 164: -6236574266583707830
+      VFXImpact 165: 7041184557216433719
+      VFXImpact 166: -4717051560339549701
+      VFXImpact 167: -7548093459749058078
+      VFXImpact 168: -2447304775652771235
+      VFXImpact 169: 425803589096548140
+      VFXImpact 17: 5851726944748462432
+      VFXImpact 170: -2521034066854491175
+      VFXImpact 171: -7694871805982796918
+      VFXImpact 172: 8841956048166258288
+      VFXImpact 173: -8072772175075545721
+      VFXImpact 174: -8826191895426104092
+      VFXImpact 175: 0
+      VFXImpact 176: 0
+      VFXImpact 177: 0
+      VFXImpact 178: 0
+      VFXImpact 179: 0
+      VFXImpact 18: -2393460311653223794
+      VFXImpact 180: 0
+      VFXImpact 181: 0
+      VFXImpact 182: 0
+      VFXImpact 183: 0
+      VFXImpact 19: -766338907571947045
+      VFXImpact 2: -1354548651326103372
+      VFXImpact 20: 1791023853072048825
+      VFXImpact 21: -4222892975207249377
+      VFXImpact 22: -2187362975273895629
+      VFXImpact 23: -2370793921927992102
+      VFXImpact 24: -7879355671300348383
+      VFXImpact 25: -7284107545430105474
+      VFXImpact 26: 7402586330245862552
+      VFXImpact 27: -8096048384557648185
+      VFXImpact 28: 3551392048572276223
+      VFXImpact 29: -1533693506323962347
+      VFXImpact 3: -5793876656490774432
+      VFXImpact 30: 2881351740189432267
+      VFXImpact 31: -1413372089909910587
+      VFXImpact 32: -6075806392811163969
+      VFXImpact 33: 6174165218623510978
+      VFXImpact 34: 5660872427083685648
+      VFXImpact 35: -7671840224908417553
+      VFXImpact 36: 4704138288699562484
+      VFXImpact 37: -1876963569634411904
+      VFXImpact 38: -6722847271265418979
+      VFXImpact 39: 8788838218961077309
+      VFXImpact 4: 314084733250196771
+      VFXImpact 40: 612486750543691251
+      VFXImpact 41: -6614347204572979751
+      VFXImpact 42: 315712330679884179
+      VFXImpact 43: -4775468899985161351
+      VFXImpact 44: 4334393151062940030
+      VFXImpact 45: 9136522699210469405
+      VFXImpact 46: -4432856390357222505
+      VFXImpact 47: -9126972377214101073
+      VFXImpact 48: -4274970588412556642
+      VFXImpact 49: 8205895177277697491
+      VFXImpact 5: 5952912671142064249
+      VFXImpact 50: -7135533992724984342
+      VFXImpact 51: -462775630253084333
+      VFXImpact 52: -4556748422473921364
+      VFXImpact 53: -6099477715246061678
+      VFXImpact 54: -4858978759050181867
+      VFXImpact 55: -8141439530098876011
+      VFXImpact 56: 7037516631201185753
+      VFXImpact 57: 4560753483214875639
+      VFXImpact 58: -5072395572331434000
+      VFXImpact 59: 3486648460976006757
+      VFXImpact 6: 8968868163076492172
+      VFXImpact 60: 2738608824648079821
+      VFXImpact 61: -6452245539493964004
+      VFXImpact 62: 1496671316394949932
+      VFXImpact 63: -2279653714996071999
+      VFXImpact 64: 4530320725305845353
+      VFXImpact 65: 6294992199865127695
+      VFXImpact 66: -2665678658292021791
+      VFXImpact 67: 3790124939099654984
+      VFXImpact 68: 2764881474449188992
+      VFXImpact 69: -4597149477260962009
+      VFXImpact 7: 7905128893393569326
+      VFXImpact 70: 8170000872574857955
+      VFXImpact 71: -1694481121273753732
+      VFXImpact 72: 3171585150029528862
+      VFXImpact 73: -8909749801144889098
+      VFXImpact 74: -1796551490076378957
+      VFXImpact 75: 6402878948951929040
+      VFXImpact 76: -7647910568809111842
+      VFXImpact 77: -3952919536773756918
+      VFXImpact 78: -1197193648528158149
+      VFXImpact 79: -1580613401546827518
+      VFXImpact 8: -9158054799702255200
+      VFXImpact 80: -6794384016303704069
+      VFXImpact 81: -5775204930621337074
+      VFXImpact 82: 7714649265362999669
+      VFXImpact 83: 7557230459829308292
+      VFXImpact 84: 8425937703905328911
+      VFXImpact 85: -7291215332921482252
+      VFXImpact 86: -2724457169815798275
+      VFXImpact 87: -6767035216116236472
+      VFXImpact 88: -4724953965762822903
+      VFXImpact 89: 1495933354463687516
+      VFXImpact 9: -3413941665087765037
+      VFXImpact 90: 222401913099021327
+      VFXImpact 91: 921620320502864202
+      VFXImpact 92: 2320855586325547596
+      VFXImpact 93: 3882883682572190971
+      VFXImpact 94: 3051655787759582680
+      VFXImpact 95: -193274382059485178
+      VFXImpact 96: 340583751797123299
+      VFXImpact 97: -1848521708462850495
+      VFXImpact 98: -7641436542864802940
+      VFXImpact 99: -3125293787568462513
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
