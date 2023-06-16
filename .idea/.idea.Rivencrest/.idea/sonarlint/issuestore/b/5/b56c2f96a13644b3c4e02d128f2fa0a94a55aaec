@@ -1,0 +1,12 @@
+
+Jcsharpsquid:S3903"(Move 'Encounter' into a named namespace.(êÉÔåùÿÿÿÿ
+Hcsharpsquid:S3875"&Remove this overload of 'operator =='.(œÖÀãøÿÿÿÿ
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(öÛù”
+acsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(ÂÄ× 
+fcsharpsquid:S1104
+"DMake this field 'private' and encapsulate it in a 'public' property.(ùğÀ·ıÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(›ºó®ÿÿÿÿÿ
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¾å‡
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(”»‹¸şÿÿÿÿ
+~csharpsquid:S3249."aRemove this 'base' call to 'object.GetHashCode', which is directly based on the object reference.(ÀïåÖ
+;csharpsquid:S125"Remove this commented out code.(ÒÛÛì

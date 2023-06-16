@@ -1,0 +1,20 @@
+
+Ocsharpsquid:S3903"-Move 'CharacterTable' into a named namespace.(ÇÆÁşÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ï¬³Óıÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ü¡Ûšşÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(‘ö¡Óøÿÿÿÿ
+mcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(•Î ÿÿÿÿÿ8ÏøŒŸŒ1
+mcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.( åˆüÿÿÿÿ8ÏøŒŸŒ1
+mcsharpsquid:S1104 "DMake this field 'private' and encapsulate it in a 'public' property.(ùÃÓŠüÿÿÿÿ8ĞøŒŸŒ1
+hcsharpsquid:S1104!"DMake this field 'private' and encapsulate it in a 'public' property.(ÏÅĞÔ8ĞøŒŸŒ1
+fcsharpsquid:S1104""DMake this field 'private' and encapsulate it in a 'public' property.(Â¹úÀùÿÿÿÿ
+hcsharpsquid:S1104#"DMake this field 'private' and encapsulate it in a 'public' property.(·Ÿ‘8ĞøŒŸŒ1
+Fcsharpsquid:S1643¡"Use a StringBuilder instead.(ªú—‡ÿÿÿÿÿ8è£˜¢Œ1
+Acsharpsquid:S1643¥"Use a StringBuilder instead.(êÈ…Ô8è£˜¢Œ1
+Fcsharpsquid:S1643¶"Use a StringBuilder instead.(ªú—‡ÿÿÿÿÿ8è£˜¢Œ1
+Acsharpsquid:S1643º"Use a StringBuilder instead.(ó¯â²8è£˜¢Œ1
+bcsharpsquid:S1117"8Rename 'maxHP' which hides the field with the same name.(åÁ  şÿÿÿÿ8è£˜¢Œ1
+Ccsharpsquid:S125Ì"Remove this commented out code.(ó‹Ô„8è£˜¢Œ1
+Hcsharpsquid:S125Ç"Remove this commented out code.(¾ıˆĞÿÿÿÿÿ8è£˜¢Œ1
+Ccsharpsquid:S125Ó"Remove this commented out code.(¶¢Ÿë8è£˜¢Œ1
+=csharpsquid:S4663Ô"Remove this empty comment(è»»_8è£˜¢Œ1

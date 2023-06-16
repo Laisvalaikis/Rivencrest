@@ -5,20 +5,9 @@ using UnityEngine.Events;
 
 public class ToggleWasPressed : MonoBehaviour
 {
-    public UnityEvent onToggle;
-    public UnityEvent offToggle;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private UnityEvent onToggle;
+    [SerializeField] private UnityEvent offToggle;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
     public void InvokeOnClick(bool clicked)
     {
         if (clicked)

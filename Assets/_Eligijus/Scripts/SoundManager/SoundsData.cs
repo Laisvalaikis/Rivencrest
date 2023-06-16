@@ -40,7 +40,7 @@ public class SoundsData : ScriptableObject
             
         }
         
-        return null;
+        return Array.Empty<string>();
     }
     
     public int SongCount()
@@ -108,7 +108,7 @@ public class SoundsData : ScriptableObject
             return tempArray;
             
         }
-        return null;
+        return Array.Empty<int>();
     }
 
     
@@ -125,7 +125,7 @@ public class SoundsData : ScriptableObject
             
         }
 
-        return null;
+        return Array.Empty<string>();
     }
     
     public int EffectTypeCount()
@@ -142,7 +142,7 @@ public class SoundsData : ScriptableObject
             
         }
 
-        return null;
+        return new List<Sound>();
     }
     
     public Sound GetSound(int typeIndex, int soundIndex)

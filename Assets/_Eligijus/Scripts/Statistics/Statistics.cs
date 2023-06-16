@@ -6,20 +6,14 @@ using System;
 [Serializable]
 public class Statistics
 {
-    public static string[] classes = { "KNIGHT", "SHAMAN", "SORCERESS", "PORTALIST", "CRUSADER", "HUNTRESS", "FIRE MAGE", "ENCHANTRESS", "ASSASSIN", "GUARDIAN", "STONEWEAVER" };//nu ir taip toliau
-    //public string[] achievements;
+    public static readonly string[] classes = { "KNIGHT", "SHAMAN", "SORCERESS", "PORTALIST", "CRUSADER", "HUNTRESS", "FIRE MAGE", "ENCHANTRESS", "ASSASSIN", "GUARDIAN", "STONEWEAVER" };
     public float playTime;
     public float battleTime;
-    //public int dayCount;
     public int[] charactersBoughtCountByClass;
     public int[] characterDeathsCountByClass;
     public int[] killCountByClass;
     public int[] charactersSelectedCountByClass;
-    //public int[] enemiesSelectedCountByClass;
-    //public int[] mapSelectedCount;
-    //public int[] spellBoughtCount;
-    //public int[] spellUsedCount;
-    //public int[] townHallUpdatesBoughtCount;
+
 
     public Statistics()
     {
@@ -44,7 +38,7 @@ public class Statistics
     //    return result;
     //}
 
-    public static int getClassIndex(string className)
+    public static int GetClassIndex(string className)
     {
         return Array.IndexOf(classes, className);
     }

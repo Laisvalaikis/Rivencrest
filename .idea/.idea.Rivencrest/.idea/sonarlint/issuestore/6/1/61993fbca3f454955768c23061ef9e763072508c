@@ -1,0 +1,6 @@
+
+Mcsharpsquid:S1125ð"*Remove the unnecessary Boolean literal(s).(óáªÞýÿÿÿÿ
+ucsharpsquid:S3776"SRefactor this method to reduce its Cognitive Complexity from 183 to the 15 allowed.(Æ¡Ü™úÿÿÿÿ
+Ncsharpsquid:S3903"1Move 'SoundManagerEditor' into a named namespace.(ÔÒÀ‡
+ecsharpsquid:S2696)"HRemove this set, which updates a 'static' field from an instance method.(èžíÂ
+Acsharpsquid:S125¹"Remove this commented out code.(”øÄ»þÿÿÿÿ

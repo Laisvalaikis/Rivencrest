@@ -1,10 +1,21 @@
 
-Ucsharpsquid:S3903ë"+Move 'GameSettings' into a named namespace.(¬¨íıÿÿÿÿ8»ˆÚƒŒ1
+Ucsharpsquid:S3903˜"+Move 'GameSettings' into a named namespace.(¬¨íıÿÿÿÿ8»ˆÚƒŒ1
+Xcsharpsquid:S3903g"/Move 'SavableCharacter' into a named namespace.(¡ÂÚ£ûÿÿÿÿ8½ˆÚƒŒ1
 Pcsharpsquid:S3903"'Move 'TownData' into a named namespace.(õãÙªüÿÿÿÿ8¼ˆÚƒŒ1
-Ycsharpsquid:S3903½"/Move 'SavableCharacter' into a named namespace.(¡ÂÚ£ûÿÿÿÿ8½ˆÚƒŒ1
-bcsharpsquid:S1104í"DMake this field 'private' and encapsulate it in a 'public' property.(°÷úù
-bcsharpsquid:S1104î"DMake this field 'private' and encapsulate it in a 'public' property.(ø¶Ú
-gcsharpsquid:S1104ï"DMake this field 'private' and encapsulate it in a 'public' property.(¯íåïøÿÿÿÿ
+bcsharpsquid:S1104š"DMake this field 'private' and encapsulate it in a 'public' property.(°÷úù
+bcsharpsquid:S1104›"DMake this field 'private' and encapsulate it in a 'public' property.(ø¶Ú
+gcsharpsquid:S1104œ"DMake this field 'private' and encapsulate it in a 'public' property.(¯íåïøÿÿÿÿ
+acsharpsquid:S1104i"DMake this field 'private' and encapsulate it in a 'public' property.(Ì–íï
+acsharpsquid:S1104j"DMake this field 'private' and encapsulate it in a 'public' property.(ÛÑÂÕ
+acsharpsquid:S1104k"DMake this field 'private' and encapsulate it in a 'public' property.(¶¼’˜
+fcsharpsquid:S1104l"DMake this field 'private' and encapsulate it in a 'public' property.(şÆàíûÿÿÿÿ
+fcsharpsquid:S1104m"DMake this field 'private' and encapsulate it in a 'public' property.(›Â÷«úÿÿÿÿ
+acsharpsquid:S1104n"DMake this field 'private' and encapsulate it in a 'public' property.(¿Òç×
+fcsharpsquid:S1104o"DMake this field 'private' and encapsulate it in a 'public' property.(Ã‘û şÿÿÿÿ
+acsharpsquid:S1104p"DMake this field 'private' and encapsulate it in a 'public' property.(üŸî•
+fcsharpsquid:S1104q"DMake this field 'private' and encapsulate it in a 'public' property.(Ş £ûÿÿÿÿ
+fcsharpsquid:S1104r"DMake this field 'private' and encapsulate it in a 'public' property.(´£š„ÿÿÿÿÿ
+mcsharpsquid:S1104s"DMake this field 'private' and encapsulate it in a 'public' property.(ÚçÊşÿÿÿÿ8·ê¶£Œ1
 fcsharpsquid:S1104
 "DMake this field 'private' and encapsulate it in a 'public' property.(æ¾„”øÿÿÿÿ
 fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ú¥Ğúûÿÿÿÿ
@@ -29,22 +40,5 @@ fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'publi
 acsharpsquid:S1104 "DMake this field 'private' and encapsulate it in a 'public' property.(¼ï¯Ë
 acsharpsquid:S1104!"DMake this field 'private' and encapsulate it in a 'public' property.(Ê„Èö
 fcsharpsquid:S1104""DMake this field 'private' and encapsulate it in a 'public' property.(©©§¹ûÿÿÿÿ
-bcsharpsquid:S1104¿"DMake this field 'private' and encapsulate it in a 'public' property.(Ì–íï
-bcsharpsquid:S1104À"DMake this field 'private' and encapsulate it in a 'public' property.(ÛÑÂÕ
-bcsharpsquid:S1104Á"DMake this field 'private' and encapsulate it in a 'public' property.(¶¼’˜
-gcsharpsquid:S1104Â"DMake this field 'private' and encapsulate it in a 'public' property.(şÆàíûÿÿÿÿ
-gcsharpsquid:S1104Ã"DMake this field 'private' and encapsulate it in a 'public' property.(›Â÷«úÿÿÿÿ
-bcsharpsquid:S1104Ä"DMake this field 'private' and encapsulate it in a 'public' property.(¿Òç×
-gcsharpsquid:S1104Å"DMake this field 'private' and encapsulate it in a 'public' property.(Ã‘û şÿÿÿÿ
-bcsharpsquid:S1104Æ"DMake this field 'private' and encapsulate it in a 'public' property.(üŸî•
-gcsharpsquid:S1104Ç"DMake this field 'private' and encapsulate it in a 'public' property.(Ş £ûÿÿÿÿ
-gcsharpsquid:S1104È"DMake this field 'private' and encapsulate it in a 'public' property.(´£š„ÿÿÿÿÿ
-acsharpsquid:S107Ì"EConstructor has 9 parameters, which is greater than the 7 authorized.(¥¤ˆ@
-bcsharpsquid:S1073"FConstructor has 21 parameters, which is greater than the 7 authorized.(–ıØ
-;csharpsquid:S125$"Remove this commented out code.(¬‹ŸÒ
-;csharpsquid:S125<"Remove this commented out code.(ë…Õİ
-@csharpsquid:S125>"Remove this commented out code.(óÿ‹úÿÿÿÿ
-@csharpsquid:S125@"Remove this commented out code.(´¸¦ƒúÿÿÿÿ
-@csharpsquid:S125]"Remove this commented out code.(½Üáıÿÿÿÿ
-;csharpsquid:S125b"Remove this commented out code.(ßøÇ£
-;csharpsquid:S125o"Remove this commented out code.(èõ›Ç
+acsharpsquid:S107w"FConstructor has 10 parameters, which is greater than the 7 authorized.(¥¤ˆ@
+bcsharpsquid:S107&"FConstructor has 21 parameters, which is greater than the 7 authorized.(–ıØ

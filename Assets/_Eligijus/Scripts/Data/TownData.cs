@@ -32,19 +32,6 @@ using System;
         public bool generateNewEncounters;
         public List<Encounter> generatedEncounters;
         public GameSettings gameSettings;
-        //Legacy
-        //public int[] characters;
-        //public int[] characterLevels;
-        //public int[] characterXP;
-        //public int[] characterXPToGain;
-        //public bool[] isCharacterDead;
-        //public string[] characterNames;
-        //public int[] abilityPointCounts;
-        //public string[] unlockedAbilities;
-        //public string[] characterBlessingStrings;
-        //public List<int> RCcharacters;
-        //public List<int> RCcharacterLevels;
-        //public string[] RCcharacterNames;
 
         public TownData() { }
 
@@ -57,77 +44,15 @@ using System;
             this.difficultyLevel = difficultyLevel;
             this.townGold = townGold;
             this.day = day;
-            //int characterCount = characters.Count;
             this.characters = new List<SavableCharacter>();
-            //this.charactersOnLastMission = new int[charactersOnLastMission.Count];
             this.wasLastMissionSuccessful = wasLastMissionSuccessful;
-            //this.characterLevels = new int[characterCount];
-            //this.characterXP = new int[characterCount];
-            //this.characterXPToGain = new int[characterCount];
-            //this.isCharacterDead = new bool[characterCount];
-            //this.characterNames = new string[characterCount];
-            //this.abilityPointCounts = new int[characterCount];
-            //this.unlockedAbilities = new string[characterCount];
-            //this.characterBlessingStrings = new string[characterCount];
-            //for (int i = 0; i < characters.Count; i++)
-            //{
-            //    List<SavedCharacter> allCharacters = GameObject.Find("GameProgress").gameObject.GetComponent<GameProgress>().AllAvailableCharacters;
-            //    for (int j = 0; j < allCharacters.Count; j++)
-            //    {
-            //        if (characters[i].prefab == allCharacters[j].prefab)
-            //        {
-            //            this.characters[i] = j; //nustato skaiciuka, kurioj listo vietoj yra prefabas
-            //        }
-            //    }
-            //    characterLevels[i] = characters[i].level;
-            //    characterXP[i] = characters[i].XP;
-            //    characterXPToGain[i] = characters[i].XPToGain;
-            //    isCharacterDead[i] = characters[i].Dead;
-            //    characterNames[i] = characters[i].characterName;
-            //    abilityPointCounts[i] = characters[i].abilityPointCount;
-            //    unlockedAbilities[i] = characters[i].unlockedAbilities;
-            //    characterBlessingStrings[i] = characters[i].blessingString();
-            //}
             this.characters = new List<SavableCharacter>(characters);
             this.charactersOnLastMission = new List<int>(charactersOnLastMission);
-            //for (int i = 0; i < this.charactersOnLastMission.Length; i++)
-            //{
-            //    this.charactersOnLastMission[i] = charactersOnLastMission[i];
-            //}
             this.wereCharactersOnAMission = charactersOnLastMission.Count > 0;
-            //if (charactersOnLastMission.Count > 0)
-            //{
-            //    this.wereCharactersOnAMission = true;
-            //}
-            //else
-            //{
-            //    wereCharactersOnAMission = false;
-            //}
             this.newGame = newGame;
             this.singlePlayer = singlePlayer;
             this.selectedMission = selectedMission;
             this.townHall = townHall;
-            //RC
-            //if (RCcharacters != null)
-            //{
-            //    int RCcharacterCount = RCcharacters.Count;
-            //    this.RCcharacters = new int[RCcharacterCount];
-            //    this.RCcharacterNames = new string[RCcharacterCount];
-            //    this.RCcharacterLevels = new int[RCcharacterCount];
-            //    for (int i = 0; i < RCcharacters.Count; i++)
-            //    {
-            //        List<SavedCharacter> allCharacters = GameObject.Find("GameProgress").gameObject.GetComponent<GameProgress>().AllAvailableCharacters;
-            //        for (int j = 0; j < allCharacters.Count; j++)
-            //        {
-            //            if (RCcharacters[i].prefab == allCharacters[j].prefab)
-            //            {
-            //                this.RCcharacters[i] = j; //nustato skaiciuka, kurioj listo vietoj yra prefabas
-            //            }
-            //        }
-            //        RCcharacterLevels[i] = RCcharacters[i].level;
-            //        RCcharacterNames[i] = RCcharacters[i].characterName;
-            //    }
-            //}
             if(rcCharacters != null)
                 this.rcCharacters = new List<SavableCharacter>(rcCharacters);
             createNewRCcharacters = rcCharacters == null;
@@ -154,22 +79,11 @@ using System;
                 charactersOnLastMission = { },
                 wasLastMissionSuccessful = false,
                 wereCharactersOnAMission = false,
-                //characterLevels = { },
-                //characterXP = { },
-                //characterXPToGain = { },
-                //isCharacterDead = { },
-                //characterNames = { },
-                //abilityPointCounts = { },
-                //unlockedAbilities = { },
-                //characterBlessingStrings = { },
                 newGame = true,
                 singlePlayer = false,
                 selectedMission = "",
-                townHall = "000000",
+                townHall = "000000", // Sita reikes perdaryti
                 rcCharacters = { },
-                //RCcharacters = { },
-                //RCcharacterLevels = { },
-                //RCcharacterNames = { },
                 createNewRCcharacters = false,
                 enemies = { },
                 allowEnemySelection = false,
@@ -198,11 +112,12 @@ using System;
         public List<Blessing> blessings;
         public int cost;
         public int prefabIndex;
+        public CharacterUiData characterUIData;
 
         public SavableCharacter() { }
 
         public SavableCharacter(int level, int xP, int xPToGain, bool dead, string characterName,
-            int abilityPointCount, string unlockedAbilities, List<Blessing> blessings, int prefabIndex)
+            int abilityPointCount, string unlockedAbilities, List<Blessing> blessings, int prefabIndex, CharacterUiData characterUIData)
         {
             this.level = level;
             this.xP = xP;
@@ -214,6 +129,7 @@ using System;
             this.blessings = new List<Blessing>(blessings);
             this.cost = 1000;
             this.prefabIndex = prefabIndex;
+            this.characterUIData = characterUIData;
         }
 
         public SavableCharacter(SavableCharacter x)
@@ -228,6 +144,7 @@ using System;
             this.blessings = this.blessings = new List<Blessing>(x.blessings);
             this.cost = x.cost;
             this.prefabIndex = x.prefabIndex;
+            this.characterUIData = x.characterUIData;
         }
     }
 

@@ -48,10 +48,10 @@ public class SoundManager : MonoBehaviour
 	public void CreateSound(int effectsIndex, int songIndex, Transform location)
 	{
 		Sound sound = SoundsData.GetSound(effectsIndex, songIndex);
-		SoundType soundType = SoundsData.GetSoundType(effectsIndex);
+		SoundType localSoundType = SoundsData.GetSoundType(effectsIndex);
 		if (sound != null)
 		{
-			GameObject _go = new GameObject("Sound_" + "_" + soundType.name + "_" + sound.name);
+			GameObject _go = new GameObject("Sound_" + "_" + localSoundType.name + "_" + sound.name);
 			sound.SetSource(_go.AddComponent<AudioSource>());
 			_go.transform.position = location.transform.position;
 			AudioSource source = _go.GetComponent<AudioSource>();

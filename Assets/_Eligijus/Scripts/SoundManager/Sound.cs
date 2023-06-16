@@ -11,7 +11,6 @@ public class Sound : ScriptableObject
     public string name;
     public AudioClip clip;
     public AudioMixerGroup mixer;
-    public SText[] SubText;
 
     public SoundParameters soundParameters;
     
