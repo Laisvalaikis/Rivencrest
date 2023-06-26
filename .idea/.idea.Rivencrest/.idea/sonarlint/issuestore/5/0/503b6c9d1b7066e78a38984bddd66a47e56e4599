@@ -1,0 +1,16 @@
+
+Ocsharpsquid:S3903	"2Move 'HelpTableController' into a named namespace.(Æˆ¹–
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ÎÂÌ´
+`csharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¤ğ£
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ùÃÓŠüÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(•Î ÿÿÿÿÿ
+tcsharpsquid:S4144”"VUpdate this method so that its implementation is not identical to 'EnableTableForPVP'.(Ó—„Ö
+9csharpsquid:S1643S"Use a StringBuilder instead.(İú
+[csharpsquid:S1117"">Rename 'abilityText' which hides the field with the same name.(ÿ–÷
+[csharpsquid:S1117_">Rename 'abilityText' which hides the field with the same name.(ÿ–÷
+[csharpsquid:S1117v">Rename 'abilityText' which hides the field with the same name.(ÿ–÷
+\csharpsquid:S1117‡">Rename 'abilityText' which hides the field with the same name.(ÿ–÷
+\csharpsquid:S1117˜">Rename 'abilityText' which hides the field with the same name.(ÿ–÷
+;csharpsquid:S125"Remove this commented out code.(±êŒ
+;csharpsquid:S125A"Remove this commented out code.(øÈ½ø
+;csharpsquid:S125J"Remove this commented out code.(¡Ê‚Š

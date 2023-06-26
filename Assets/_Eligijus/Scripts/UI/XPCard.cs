@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Assets.Scripts.Classes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +14,7 @@ public class XPCard : MonoBehaviour
     public TextMeshProUGUI xPToGain;
     public SavedCharacter character;
     private int XPToLevelUp;
-    public Data _data;
+    public Data _data; // Keisti prieiga prie data
     // Start is called before the first frame update
     void Start()
     {
@@ -37,19 +36,16 @@ public class XPCard : MonoBehaviour
         else
         {
             characterTable.SetActive(true);
-            var charInformation = character.prefab.GetComponent<PlayerInformation>();
+            var charInformation = character.prefab.GetComponent<PlayerInformation>(); // Sita sutvarkyti reikia
             className.text = character.characterName; //charInformation.ClassName;
             className.color = charInformation.ClassColor;
             portrait.sprite = charInformation.CharacterPortraitSprite;
             XPToLevelUp = _data.XPToLevelUp[character.level - 1];
-            // transform.Find("CharacterTable").Find("XP").GetComponent<Text>().text = character.xP + "/" + XPToLevelUp + " XP";
             xP.text = character.xP + "/" + XPToLevelUp + " XP";
             if (character.level  >= GameProgress.currentMaxLevel())
                 xP.text = "MAX LEVEL";
-            // transform.Find("CharacterTable").Find("LevelText").GetComponent<Text>().text = character.level.ToString();
-                levelText.text = character.level.ToString();
-                // transform.Find("CharacterTable").Find("XPToGain").GetComponent<Text>().text = "+" + character.xPToGain.ToString() + " XP";
-                xPToGain.text = "+" + character.xPToGain.ToString() + " XP";
+            levelText.text = character.level.ToString();
+            xPToGain.text = "+" + character.xPToGain.ToString() + " XP";
 
             if (character.dead)
             {
@@ -66,7 +62,7 @@ public class XPCard : MonoBehaviour
     {
         if(character != null && character.xPToGain > 0)
         {
-            if (character.level >= GameProgress.currentMaxLevel())
+            if (character.level >= GameProgress.currentMaxLevel()) // Sutvarkyti Prieiga prie max lygio
             {
                 character.xPToGain = 0;
             }

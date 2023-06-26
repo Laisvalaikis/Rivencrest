@@ -1,0 +1,15 @@
+
+tcsharpsquid:S3776="RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ÉØµôûÿÿÿÿ
+Bcsharpsquid:S3903"%Move 'XPCard' into a named namespace.(Ò½†ä
+›csharpsquid:S1186"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(ûàîºûÿÿÿÿ
+›csharpsquid:S1186"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(®±®“üÿÿÿÿ
+fcsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(²ðÔûþÿÿÿÿ
+acsharpsquid:S1104
+"DMake this field 'private' and encapsulate it in a 'public' property.(ÔÏ”Ò
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(‡¡×Ó
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¿Û…Áýÿÿÿÿ
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ÉÜ£€
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¢Óìü
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(“ËÌù
+`csharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(éùÿ
+@csharpsquid:S125("Remove this commented out code.(Žô­ñüÿÿÿÿ

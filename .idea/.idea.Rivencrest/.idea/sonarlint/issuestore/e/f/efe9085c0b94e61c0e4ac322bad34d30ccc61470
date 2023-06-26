@@ -1,0 +1,71 @@
+
+ecsharpsquid:S1764¥"GCorrect one of the identical expressions on both sides of operator '/'.(ºíÑ•
+tcsharpsquid:S3776X"RRefactor this method to reduce its Cognitive Complexity from 34 to the 15 allowed.(®±®“üÿÿÿÿ
+pcsharpsquid:S3776Ä"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(Ø«ÌÒ
+ucsharpsquid:S3776¡"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(Ò‹ï¨şÿÿÿÿ
+ucsharpsquid:S3776¦"RRefactor this method to reduce its Cognitive Complexity from 55 to the 15 allowed.(…ÂÎéüÿÿÿÿ
+ccsharpsquid:S1854»"@Remove this useless assignment to local variable 'victoryColor'.(«Ê·ÿÿÿÿÿ
+Pcsharpsquid:S3903".Move 'GameInformation' into a named namespace.(—ºËüÿÿÿÿ
+gcsharpsquid:S3358ó"DExtract this nested ternary operation into an independent statement.(Àíü¦şÿÿÿÿ
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(İë¦
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(—ôøúÿÿÿÿ
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(­¤µ§
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¥ïß¦
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ÄŸÆ±
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¼öšîüÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¦ô¿Şùÿÿÿÿ
+`csharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Ï™¯G
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ã‹ôùÿÿÿÿ
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(êëÏ°
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(•Î ÿÿÿÿÿ
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ÏÅĞÔ
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(°¬ßÆ
+fcsharpsquid:S1104 "DMake this field 'private' and encapsulate it in a 'public' property.(µÕ÷Õûÿÿÿÿ
+fcsharpsquid:S1104!"DMake this field 'private' and encapsulate it in a 'public' property.(×¥åëıÿÿÿÿ
+acsharpsquid:S1104'"DMake this field 'private' and encapsulate it in a 'public' property.(Ëê‹ä
+fcsharpsquid:S1104("DMake this field 'private' and encapsulate it in a 'public' property.(¤ò¯ùÿÿÿÿ
+acsharpsquid:S1104)"DMake this field 'private' and encapsulate it in a 'public' property.(§ ÆÁ
+acsharpsquid:S1104*"DMake this field 'private' and encapsulate it in a 'public' property.(Áşµ™
+fcsharpsquid:S1104+"DMake this field 'private' and encapsulate it in a 'public' property.(ÏùÃÅşÿÿÿÿ
+acsharpsquid:S1104-"DMake this field 'private' and encapsulate it in a 'public' property.(£è€Ú
+acsharpsquid:S11040"DMake this field 'private' and encapsulate it in a 'public' property.(„æ¿Ñ
+fcsharpsquid:S11046"DMake this field 'private' and encapsulate it in a 'public' property.(Æ™öâûÿÿÿÿ
+fcsharpsquid:S11047"DMake this field 'private' and encapsulate it in a 'public' property.(¢´¨–ùÿÿÿÿ
+fcsharpsquid:S1104:"DMake this field 'private' and encapsulate it in a 'public' property.(á¢µ¨ûÿÿÿÿ
+fcsharpsquid:S1104="DMake this field 'private' and encapsulate it in a 'public' property.(àÄ¦ùÿÿÿÿ
+fcsharpsquid:S2292#"DMake this an auto-implemented property and remove its backing field.(æî±¨ıÿÿÿÿ
+gcsharpsquid:S2223="EChange the visibility of 'instance' or make it 'const' or 'readonly'.(àÄ¦ùÿÿÿÿ
+wcsharpsquid:S2696G"UMake the enclosing instance method 'static' or remove this set on the 'static' field.(ñõîÙşÿÿÿÿ
+?csharpsquid:S1643ó"Use a StringBuilder instead.(Àíü¦şÿÿÿÿ
+?csharpsquid:S1643‰"Use a StringBuilder instead.(”®°Âùÿÿÿÿ
+Rcsharpsquid:S1481·"/Remove the unused local variable 'playerTeams'.(£‡­Şøÿÿÿÿ
+;csharpsquid:S125A"Remove this commented out code.(ëÿÎ
+@csharpsquid:S125H"Remove this commented out code.(éØ»Úûÿÿÿÿ
+@csharpsquid:S125K"Remove this commented out code.(®ğŒıÿÿÿÿ
+@csharpsquid:S125N"Remove this commented out code.(ŞšÔÉşÿÿÿÿ
+;csharpsquid:S125k"Remove this commented out code.(Ú°à¬
+;csharpsquid:S125r"Remove this commented out code.(Ñ‡ÛŠ
+Acsharpsquid:S125"Remove this commented out code.(Å™‰®üÿÿÿÿ
+Acsharpsquid:S125©"Remove this commented out code.(ŒÀ«›ûÿÿÿÿ
+<csharpsquid:S125Ä"Remove this commented out code.(»ÀÎÏ
+<csharpsquid:S125É"Remove this commented out code.(»ÀÎÏ
+<csharpsquid:S125é"Remove this commented out code.(öî®ú
+Acsharpsquid:S125“"Remove this commented out code.(Ùë»Îşÿÿÿÿ
+<csharpsquid:S125–"Remove this commented out code.(¨¿¸›
+Acsharpsquid:S125œ"Remove this commented out code.(éØ»Úûÿÿÿÿ
+Acsharpsquid:S125¡"Remove this commented out code.(âÚˆ”ıÿÿÿÿ
+<csharpsquid:S125Í"Remove this commented out code.(ì´
+Acsharpsquid:S125ß"Remove this commented out code.(°½ÎÁşÿÿÿÿ
+Acsharpsquid:S125ó"Remove this commented out code.(»áËÓùÿÿÿÿ
+<csharpsquid:S125ü"Remove this commented out code.(Ú”ë‚
+Acsharpsquid:S125‚"Remove this commented out code.(İÙàĞüÿÿÿÿ
+Acsharpsquid:S125³"Remove this commented out code.(úşíıÿÿÿÿ
+<csharpsquid:S125Ê"Remove this commented out code.(¸ÿ¤
+<csharpsquid:S125—"Remove this commented out code.(Ô¿ï¡
+Acsharpsquid:S125­"Remove this commented out code.(¦€Æ³üÿÿÿÿ
+6csharpsquid:S4663™"Remove this empty comment(è»»_
+6csharpsquid:S4663Ú"Remove this empty comment(è»»_
+6csharpsquid:S4663Ô"Remove this empty comment(è»»_
+7csharpsquid:S4663£"Remove this empty comment(ÈœÜ÷
+6csharpsquid:S4663’"Remove this empty comment(è»»_
+7csharpsquid:S4663š"Remove this empty comment(ÈœÜ÷

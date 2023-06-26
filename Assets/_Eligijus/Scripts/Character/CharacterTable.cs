@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using Assets.Scripts.Classes;
 
 public class CharacterTable : MonoBehaviour
 {

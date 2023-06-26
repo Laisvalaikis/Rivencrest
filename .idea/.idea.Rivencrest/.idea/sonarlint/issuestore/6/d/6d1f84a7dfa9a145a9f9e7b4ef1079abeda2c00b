@@ -1,0 +1,29 @@
+
+pcsharpsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(‡”„©
+pcsharpsquid:S3776È"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(´ˆŠø
+ucsharpsquid:S3776„"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ÈÓÜÜúÿÿÿÿ
+Hcsharpsquid:S3903"+Move 'GridMovement' into a named namespace.(¢˜Ö©
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(À¸ê¸
+acsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(Õ•­­
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(‹şóö
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ëØ˜ùÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Š–«ÿÿÿÿÿ
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(‰µ‡
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(˜ıÓÏûÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ã«ˆÛıÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ÍŸîºşÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ÍĞœ¼ûÿÿÿÿ
+Ycsharpsquid:S1199œ"6Extract this nested code block into a separate method.(ÒÌâ–øÿÿÿÿ
+;csharpsquid:S125"Remove this commented out code.(ü¾ÇÒ
+@csharpsquid:S125!"Remove this commented out code.(ÒÌâ–øÿÿÿÿ
+@csharpsquid:S125,"Remove this commented out code.(ÒÌâ–øÿÿÿÿ
+@csharpsquid:S125o"Remove this commented out code.(†ğŞúÿÿÿÿ
+Acsharpsquid:S125€"Remove this commented out code.(Ê‰½÷úÿÿÿÿ
+<csharpsquid:S125Î"Remove this commented out code.(»õ¿Á
+Acsharpsquid:S125Ñ"Remove this commented out code.(µÙÂÇıÿÿÿÿ
+Acsharpsquid:S125ø"Remove this commented out code.(‚…€Èøÿÿÿÿ
+<csharpsquid:S125ü"Remove this commented out code.(‡Ü”ô
+<csharpsquid:S125—"Remove this commented out code.(ŒèÁ½
+Acsharpsquid:S125›"Remove this commented out code.(ºä·Æøÿÿÿÿ
+6csharpsquid:S4663ñ"Remove this empty comment(è»»_
+6csharpsquid:S4663ó"Remove this empty comment(è»»_
