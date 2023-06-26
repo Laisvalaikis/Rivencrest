@@ -1,12 +1,0 @@
-
-ucsharpsquid:S3776Š"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(…¢åÚıÿÿÿÿ
-Gcsharpsquid:S3903"*Move 'PortraitBar' into a named namespace.(öúèË
-›csharpsquid:S1186""yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(®±®“üÿÿÿÿ
-—csharpsquid:S1186È"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(ŠÚí¡
-Jcsharpsquid:S108*")Either remove or fill this block of code.(ÒÌâ–øÿÿÿÿ
-Jcsharpsquid:S108.")Either remove or fill this block of code.(ÒÌâ–øÿÿÿÿ
-acsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(¤àºŞ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ÆìĞÿÿÿÿÿ
-`csharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ŒÈØk
-`csharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ÿ·¬
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(•Î ÿÿÿÿÿ

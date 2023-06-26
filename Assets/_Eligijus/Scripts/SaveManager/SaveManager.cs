@@ -4,30 +4,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
+using System.Text;
 using UnityEngine.UI;
 
 public class SaveManager: MonoBehaviour
 {
-    [SerializeField] private InputField slotNameInput;
     [SerializeField] private Button buttonForCreation;
     private int _difficulty;
     private string _color;
-
-
+    private string _teamName;
     void Start()
     {
         _difficulty = -1;
         _color = "";
-        buttonForCreation.interactable = false;
-    }
-    public void OnInputValueChanged()
-    {
-        if(slotNameInput.text == " ")
+        if (buttonForCreation != null) 
         {
-            slotNameInput.text = "";
+            buttonForCreation.interactable = false;
         }
-        slotNameInput.text = slotNameInput.text.ToUpper();
-        if (slotNameInput.text != "" && _difficulty != -1 && _color != "")
+    }
+
+    public void TextInput(string text)
+    {
+        if(text.Length > 0 && text[0] == ' ')
+        {
+            text = "";
+            _teamName = "";
+        }
+        text = text.ToUpper();
+        _teamName = text;
+        if (text != "" && _difficulty != -1 && _color != "")
         {
             buttonForCreation.interactable = true;
         }
@@ -39,8 +44,7 @@ public class SaveManager: MonoBehaviour
 
     public void StartNewGame()
     {
-        string slotName = slotNameInput.text;
-        SaveSystem.SaveTownData(TownData.NewGameData(_color, _difficulty, slotName));
+        SaveSystem.SaveTownData(TownData.NewGameData(_color, _difficulty, _teamName));
     }
 
     public void SaveData(int slotIndex)
@@ -69,7 +73,7 @@ public class SaveManager: MonoBehaviour
     public void SetDifficulty(int difficulty)
     {
         _difficulty = difficulty;
-        if (slotNameInput.text != "" && difficulty != -1 && _color != "")
+        if (_teamName != "" && difficulty != -1 && _color != "")
         {
             buttonForCreation.interactable = true;
         }
@@ -82,7 +86,7 @@ public class SaveManager: MonoBehaviour
     public void SetColor(string color)
     {
         _color = color;
-        if (slotNameInput.text != "" && _difficulty != -1 && color != "")
+        if (_teamName != "" && _difficulty != -1 && color != "")
         {
             buttonForCreation.interactable = true;
         }

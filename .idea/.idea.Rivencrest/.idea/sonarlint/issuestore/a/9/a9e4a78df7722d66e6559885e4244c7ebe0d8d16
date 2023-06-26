@@ -1,6 +1,0 @@
-
-Ocsharpsquid:S3903"2Move 'ImageFadeController' into a named namespace.(Ï´ÝÐ
-›csharpsquid:S1186"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(…“þÌþÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(”ç¦°þÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ž’ÚÛøÿÿÿÿ
-}csharpsquid:S1450"[Remove the field 'currentAlpha' and declare it as a local variable in the relevant methods.(ÅåŠ°úÿÿÿÿ

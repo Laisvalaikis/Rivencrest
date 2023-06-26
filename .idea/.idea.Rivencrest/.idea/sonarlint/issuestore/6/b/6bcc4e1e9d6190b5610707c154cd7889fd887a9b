@@ -1,13 +1,10 @@
 
-Gcsharpsquid:S3903"%Move 'GameUi' into a named namespace.(¦ŞÈîùÿÿÿÿ
-›csharpsquid:S1186"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(ûàîºûÿÿÿÿ
-›csharpsquid:S1186"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(®±®“üÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(©‹×Ôıÿÿÿÿ
-acsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(„›ÜÉ
-fcsharpsquid:S1104
-"DMake this field 'private' and encapsulate it in a 'public' property.(‰µãÆüÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(“Ø¬»ùÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(•Î ÿÿÿÿÿ
-`csharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(À—Şj
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(½ ’¢şÿÿÿÿ
-acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Õ‚›ê
+Gcsharpsquid:S3903"%Move 'GameUi' into a named namespace.(¦ŞÈîùÿÿÿÿ
+fcsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(©‹×Ôıÿÿÿÿ
+acsharpsquid:S1104
+"DMake this field 'private' and encapsulate it in a 'public' property.(„›ÜÉ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(‰µãÆüÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(“Ø¬»ùÿÿÿÿ
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Õ‚›ê
+Bcsharpsquid:S125"Remove this commented out code.(õƒì¾8Àˆ›¿1
+Bcsharpsquid:S125R"Remove this commented out code.(´”æº8…äÖÀ1
