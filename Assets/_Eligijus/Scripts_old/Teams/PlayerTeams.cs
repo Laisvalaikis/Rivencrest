@@ -16,7 +16,7 @@ public class PlayerTeams : MonoBehaviour
     public List<GameObject> otherCharacters = new List<GameObject>();
     public bool isGameOver;
     public Data _data;
-    public HelpTableController helpTableController;
+    public HelpTable helpTable;
     public ButtonManager characterUiButtonManager;
     void Start()
     {
@@ -30,10 +30,10 @@ public class PlayerTeams : MonoBehaviour
         }
 
         //
-        if (GameObject.Find("PVPManager") != null)
-        {
-            GameObject.Find("PVPManager").GetComponent<PVPManager>().ApplyAbilitySelections();
-        }
+        // if (GameObject.Find("PVPManager") != null)
+        // {
+        //     GameObject.Find("PVPManager").GetComponent<PVPManager>().ApplyAbilitySelections();
+        // }
         //
 
         if (GameObject.Find("GameProgress") != null)
@@ -80,7 +80,7 @@ public class PlayerTeams : MonoBehaviour
                 {
                     characterUiButtonManager.gameObject.SetActive(true);
                 }
-                characterUiButtonManager.AddDataToActionButtons(helpTableController);
+                characterUiButtonManager.AddDataToActionButtons(helpTable);
                 characterUiButtonManager.CharacterOnBoard = allCharacterList.teams[teamIndex].characters[i];//Assigning character to its UI button manager
                 characterUiButtonManager.GetComponent<BottomCornerUI>().characterUiData = spawnedCharacter.GetComponent<PlayerInformation>().characterUiData;
                 

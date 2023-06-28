@@ -1,0 +1,17 @@
+
+Ncsharpsquid:S3903",Move 'ButtonManager' into a named namespace.(ò“Ì³üÿÿÿÿ
+Rcsharpsquid:S2933"0Make 'AbilityChangingButtonSequence' 'readonly'.(Í²©™ÿÿÿÿÿ
+acsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(”Éò„
+fcsharpsquid:S1104
+"DMake this field 'private' and encapsulate it in a 'public' property.(äöîüÿÿÿÿ
+Rcsharpsquid:S1066á"/Merge this if statement with the enclosing one.(‰…æÚúÿÿÿÿ
+csharpsquid:S1450"]Remove the field 'ButtonIconList' and declare it as a local variable in the relevant methods.(ø¨Ê˜üÿÿÿÿ
+acsharpsquid:S2292"DMake this an auto-implemented property and remove its backing field.(¬Òİâ
+@csharpsquid:S125("Remove this commented out code.(íÑÿ£şÿÿÿÿ
+;csharpsquid:S125U"Remove this commented out code.(ğ„ûŒ
+@csharpsquid:S125o"Remove this commented out code.(ÒÌâ–øÿÿÿÿ
+@csharpsquid:S125~"Remove this commented out code.(ş¯§Óúÿÿÿÿ
+<csharpsquid:S125ê"Remove this commented out code.(É¾Şš
+5csharpsquid:S4663{"Remove this empty comment(è»»_
+6csharpsquid:S4663’"Remove this empty comment(è»»_
+6csharpsquid:S4663š"Remove this empty comment(è»»_

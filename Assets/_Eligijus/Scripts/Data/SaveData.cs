@@ -15,6 +15,7 @@ public class SaveData : MonoBehaviour
     private void Start()
     {
         _data = Data.Instance;
+        LoadData();
     }
 
     //SAVESYSTEM
@@ -101,6 +102,17 @@ public class SaveData : MonoBehaviour
         _data.townData.characters.ForEach(savableCharacter => _data.Characters.Add(new SavedCharacter(savableCharacter, _data.AllAvailableCharacters[savableCharacter.prefabIndex].prefab)));
         _data.CharactersOnLastMission = new List<int>(_data.townData.charactersOnLastMission);
         LoadRecruitmentCenter();
+        _data.globalStatistics = SaveSystem.LoadStatistics(true);
+        _data.statistics = SaveSystem.LoadStatistics();
+    }
+    
+    public void LoadData()
+    {
+        _data.townData = SaveSystem.LoadTownData();
+        _data.Characters.Clear();
+        _data.CharactersOnLastMission.Clear();
+        _data.townData.characters.ForEach(savableCharacter => _data.Characters.Add(new SavedCharacter(savableCharacter, _data.AllAvailableCharacters[savableCharacter.prefabIndex].prefab)));
+        _data.CharactersOnLastMission = new List<int>(_data.townData.charactersOnLastMission);
         _data.globalStatistics = SaveSystem.LoadStatistics(true);
         _data.statistics = SaveSystem.LoadStatistics();
     }

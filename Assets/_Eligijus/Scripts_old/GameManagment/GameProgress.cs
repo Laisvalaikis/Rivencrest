@@ -163,7 +163,7 @@ public class GameProgress : MonoBehaviour
 
     private void UpdateMaxCharacterCount()
     {
-        if (_data.townData.townHall[0] == '1')
+        if (_data.townData.townHall.maxCharacterCount == 1)
         {
             _data.maxCharacterCount = 12;
         }
@@ -172,65 +172,7 @@ public class GameProgress : MonoBehaviour
             _data.maxCharacterCount = 6;
         }
     }
-    
-    //sita vps istrint turbut reiks
-    public void UpdateCharacterButtons(int direction)//up - 1, down - -1, none - 0
-    {
-        Transform CharacterButtons = GameObject.Find("CanvasCamera").transform.Find("CharacterButtons");
-        gameUi.UpdateUnspentPointWarnings();
-        for (int i = 0; i < 6; i++)
-        {
-            CharacterButtons.GetChild(i).gameObject.SetActive(false);
-        }
-        int start = 0;
-        int finish = 6;
-        if (direction == 0)
-        {
-            start = 0;
-            finish = _data.Characters.Count;
-            if (finish > 6)
-            {
-                finish = 6;
-                CharacterButtons.Find("Down").GetComponent<Button>().interactable = true;
-            }
-        }
-        else if (direction == -1)
-        {
-            CharacterButtons.Find("Down").GetComponent<Button>().interactable = false;
-            CharacterButtons.Find("Up").GetComponent<Button>().interactable = true;
-            start = 6;
-            finish = _data.Characters.Count;
-        }
-        else if (direction == 1)
-        {
-            CharacterButtons.Find("Down").GetComponent<Button>().interactable = true;
-            CharacterButtons.Find("Up").GetComponent<Button>().interactable = false;
-        }
-        for (int i = start; i < finish; i++)
-        {
-            if (i != _data.Characters.Count - 1 || i % 2 == 1)
-            {
-                CharacterButtons.GetChild(i % 6).localPosition = new Vector3(-17 + (i % 2) * 34, CharacterButtons.GetChild(i % 6).localPosition.y, 0);
 
-            }
-            else
-            {
-                CharacterButtons.GetChild(i % 6).localPosition = new Vector3(0, CharacterButtons.GetChild(i % 6).localPosition.y, 0);
-            }
-            CharacterButtons.GetChild(i % 6).GetComponent<CharacterPortrait>().characterIndex = i;
-            CharacterButtons.GetChild(i % 6).Find("Character").Find("Portrait").gameObject.SetActive(true);
-            CharacterButtons.GetChild(i % 6).Find("Character").Find("Portrait").GetComponent<Image>().sprite =
-                _data.Characters[i].prefab.GetComponent<PlayerInformation>().CharacterPortraitSprite;
-            CharacterButtons.GetChild(i % 6).Find("Character").Find("LevelText").GetComponent<Text>().text = _data.Characters[i].level.ToString();
-
-            CharacterButtons.GetChild(i % 6).gameObject.SetActive(true);
-            if (CharacterButtons.GetChild(i % 6).GetComponent<CharacterPortrait>().characterIndex == _data.currentCharacterIndex)
-            {
-                CharacterButtons.GetChild(i % 6).transform.Find("Hover").GetComponent<Animator>().SetBool("select", true);
-            }
-        }
-    }
-    
     //RECRUITMENT
     public void BuyCharacter(SavedCharacter character)
     {
@@ -252,7 +194,7 @@ public class GameProgress : MonoBehaviour
     {
         _data.townData.townGold -= cost;
         gameUi.EnableGoldChange("-" + cost + "g");
-        FakeUpdate();
+        gameUi.UpdateTownCost();
     }
     public void RemoveCharacter(int index)
     {
@@ -471,16 +413,16 @@ public class GameProgress : MonoBehaviour
     public static int currentMaxLevel()
     {
         int MaxLevel = 2;
-        char townHallChar = instance._data.townData.townHall[2];
-        if (townHallChar == '0')
+        int townHallChar = instance._data.townData.townHall.maxCharacterLevel;
+        if (townHallChar == 0)
         {
             MaxLevel = 2;
         }
-        if (townHallChar == '1')
+        if (townHallChar == 1)
         {
             MaxLevel = 3;
         }
-        if (townHallChar == '2')
+        if (townHallChar == 2)
         {
             MaxLevel = 4;
         }

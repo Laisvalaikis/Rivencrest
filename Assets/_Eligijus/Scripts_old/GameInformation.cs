@@ -27,7 +27,7 @@ public class GameInformation : MonoBehaviour
     public bool isFogOfWarEnabled = true;
     public SaveData _saveData;
     public Data _data;
-    public HelpTableController helpTableController;
+    public HelpTable helpTable;
     public ButtonManager cornerButtonManager;
     public BottomCornerUI bottomCornerUI;
     public List<String> Events; // Merchant death
@@ -107,7 +107,7 @@ public class GameInformation : MonoBehaviour
         //{
         //    Application.Quit();
         //}
-        if (Input.GetMouseButtonDown(1) && (SelectedCharacter != null || InspectedCharacter != null) && !helpTableController.hasActionButtonBeenEntered)
+        if (Input.GetMouseButtonDown(1) && (SelectedCharacter != null || InspectedCharacter != null) && !helpTable.hasActionButtonBeenEntered)
         {
             EnableMovementAction();
         }
@@ -748,13 +748,8 @@ public class GameInformation : MonoBehaviour
                 _data.townData.generateNewEncounters = true;
                 if(_data.townData.selectedEncounter.mapName == "Merchant Ambush") 
                 {
-                    string townHall = _data.townData.townHall;
-                    string newTownHall = "";
-                    for (int i = 0; i < townHall.Length; i++)
-                    {
-                        newTownHall += (i != 5) ? townHall[i] : (Events.Contains("MerchantDied") ? 1 : 2).ToString();
-                    }
-                    _data.townData.townHall = newTownHall;
+                    TownHallData townHall = _data.townData.townHall;
+                    townHall.SetByType((TownHallUpgrade)5, Events.Contains("MerchantDied") ? 1 : 2);
                 }
             }
             //DEFEAT
@@ -770,13 +765,8 @@ public class GameInformation : MonoBehaviour
                 _data.townData.wasLastMissionSuccessful = false;
                 if (_data.townData.selectedEncounter.mapName == "Merchant Ambush")
                 {
-                    string townHall = _data.townData.townHall;
-                    string newTownHall = "";
-                    for (int i = 0; i < townHall.Length; i++)
-                    {
-                        newTownHall += (i != 5) ? townHall[i] : 1.ToString();
-                    }
-                    _data.townData.townHall = newTownHall;
+                    TownHallData townHall = _data.townData.townHall;
+                    townHall.SetByType((TownHallUpgrade)5, 1);
                 }
             }
             _saveData.SaveTownData();

@@ -1,17 +1,15 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class GameUi : MonoBehaviour
 {
-    public TextMeshProUGUI townGold;
-    public List<TextMeshProUGUI> townGoldChanges;
-    public TextMeshProUGUI dayNumber;
-    public TextMeshProUGUI difficulty;
-    // public GameObject CharacterButtons;
-    public GameObject BuyRecruitsWarning;
+    [SerializeField] private TextMeshProUGUI townGold;
+    [SerializeField] private List<TextMeshProUGUI> townGoldChanges;
+    [SerializeField] private TextMeshProUGUI dayNumber;
+    [SerializeField] private TextMeshProUGUI difficulty;
+    [SerializeField] private GameObject abilityPointWarning;
+    [SerializeField] private GameObject buyRecruitsWarning;
     private Data _gameData;
 
     private void Start()
@@ -46,7 +44,7 @@ public class GameUi : MonoBehaviour
         }
     }
     
-    public void UpdateDifficultyText()
+    private void UpdateDifficultyText()
     {
         if (_gameData.townData.difficultyLevel == 0)
         {
@@ -73,31 +71,39 @@ public class GameUi : MonoBehaviour
     }
     public void UpdateBuyRecruitsWarning()
     {
-        BuyRecruitsWarning.SetActive(Data.Instance.Characters.Count < 3);
-    }
+        if (Data.Instance.Characters.Count < 3)
+        {
+            buyRecruitsWarning.SetActive(true);
+        }
+        else
+        {
+            buyRecruitsWarning.SetActive(false);
+        }
 
-    // PERDARYTI VISA SITA KITAIP
-        public void UpdateUnspentPointWarnings()
+        
+    }
+    
+    public void UpdateUnspentPointWarnings()
     {
-        // bool playerHasUnspentPoints = false;
-        // List<SavedCharacter> charactersToUpdate;
-        // if (Data.Instance.Characters != null)
-        //     charactersToUpdate = Data.Instance.Characters;
-        // else
-        //     charactersToUpdate = Data.Instance.AllAvailableCharacters;
-        // foreach(SavedCharacter character in charactersToUpdate)
-        // {
-        //     if(character.abilityPointCount>0)
-        //     {
-        //         playerHasUnspentPoints = true;
-        //         abilityPointWarning.SetActive(true);
-        //         break;
-        //     }
-        // }
-        // if(!playerHasUnspentPoints)
-        // {
-        //     abilityPointWarning.SetActive(false);
-        // }
+        bool playerHasUnspentPoints = false;
+        if (Data.Instance.Characters != null)
+        {
+            List<SavedCharacter> charactersToUpdate = Data.Instance.Characters;
+            for (int i = 0; i < charactersToUpdate.Count; i++)
+            {
+                if (charactersToUpdate[i].abilityPointCount > 0)
+                {
+                    playerHasUnspentPoints = true;
+                    abilityPointWarning.SetActive(true);
+                    break;
+                }
+            }
+
+            if (!playerHasUnspentPoints)
+            {
+                abilityPointWarning.SetActive(false);
+            }
+        }
     }
 
 }

@@ -60,11 +60,11 @@ public class ButtonManager : MonoBehaviour
         }
     }
 
-    public void AddDataToActionButtons(HelpTableController helpTableController)
+    public void AddDataToActionButtons(HelpTable helpTable)
     {
         for (int i = 0; i < _actionButtons.Count; i++)
         {
-            _actionButtons[i]._helpTableController = helpTableController;
+            _actionButtons[i]._helpTable = helpTable;
         }
     }
 

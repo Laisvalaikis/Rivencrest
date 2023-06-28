@@ -13,7 +13,7 @@ public class MusicManager : MonoBehaviour
     private int _level = 0;
     private AudioSource _audioSource;
 
-    private void OnEnable()
+    private void Awake()
     {
         if (Instance == null)
         {

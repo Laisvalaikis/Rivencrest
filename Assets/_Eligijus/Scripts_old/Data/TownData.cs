@@ -16,7 +16,8 @@ using System;
         public int day;
         public bool newGame;
         public List<SavableCharacter> characters;
-        public string townHall;
+        // public string townHall;
+        public TownHallData townHall;
         public List<SavableCharacter> rcCharacters;
         public bool createNewRCcharacters;
         //Mission/Encounter info
@@ -36,7 +37,7 @@ using System;
         public TownData() { }
 
         public TownData(int difficultyLevel, int townGold, int day, List<SavedCharacter> characters, List<int> charactersOnLastMission,
-            bool wasLastMissionSuccessful, bool newGame, bool singlePlayer, string selectedMission, string townHall,
+            bool wasLastMissionSuccessful, bool newGame, bool singlePlayer, string selectedMission, TownHallData townHall,
             List<SavedCharacter> rcCharacters, List<int> enemies, bool allowEnemySelection, bool allowDuplicates, string teamColor,
             string slotName, Encounter selectedEncounter, List<Encounter> pastEncounters, bool generateNewEncounters, List<Encounter> generatedEncounters,
             GameSettings gameSettings)
@@ -82,7 +83,7 @@ using System;
                 newGame = true,
                 singlePlayer = false,
                 selectedMission = "",
-                townHall = "000000", // Sita reikes perdaryti
+                townHall = new TownHallData(), // Sita reikes perdaryti
                 rcCharacters = { },
                 createNewRCcharacters = false,
                 enemies = { },

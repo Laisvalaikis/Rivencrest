@@ -1,0 +1,7 @@
+
+tcsharpsquid:S3776r"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(…¢åÚıÿÿÿÿ
+Gcsharpsquid:S3903"*Move 'PortraitBar' into a named namespace.(öúèË
+acsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(¤àºŞ
+`csharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ŒÈØk
+`csharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ÿ·¬
+xcsharpsquid:S1450"TRemove the field '_data' and declare it as a local variable in the relevant methods.(Ê°”¨8·’“â1

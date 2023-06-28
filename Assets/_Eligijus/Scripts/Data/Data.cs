@@ -31,7 +31,7 @@ public class Data : MonoBehaviour
 
     public UnityEvent characterRecruitmentEvent;
     // Start is called before the first frame update
-    private void Start()
+    private void Awake()
     {
         if (Instance == null)
         {

@@ -1,0 +1,19 @@
+
+tcsharpsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 36 to the 15 allowed.(¥ÖÉûÿÿÿÿ
+wcsharpsquid:S3776÷"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(õ”î÷8¾ ©â1
+Hcsharpsquid:S3903
+"+Move 'GameProgress' into a named namespace.(Àèıë
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¼õ›è
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ÒÁ»èşÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¨®İıûÿÿÿÿ
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(êëÏ°
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(°¬ßÆ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(•Î ÿÿÿÿÿ
+Qcsharpsquid:S10660"/Merge this if statement with the enclosing one.(ŞÅĞúÿÿÿÿ
+Jcsharpsquid:S1905"-Remove this unnecessary cast to 'GameObject'.(Õ¿»’
+bcsharpsquid:S2223"EChange the visibility of 'instance' or make it 'const' or 'readonly'.(¼õ›è
+wcsharpsquid:S2696"UMake the enclosing instance method 'static' or remove this set on the 'static' field.(ñõîÙşÿÿÿÿ
+@csharpsquid:S125m"Remove this commented out code.(¼î¯Îøÿÿÿÿ
+Bcsharpsquid:S125Ğ"Remove this commented out code.(Ô¤I8¿ ©â1
+Ccsharpsquid:S125ñ"Remove this commented out code.(­æıì8¿ ©â1
+Hcsharpsquid:S125­"Remove this commented out code.(ÁÄìÏüÿÿÿÿ8¿ ©â1

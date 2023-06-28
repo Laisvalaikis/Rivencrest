@@ -12,56 +12,43 @@ public class CharacterPortrait : PortraitButton
     public Image characterImage;
     public TextMeshProUGUI levelText;
     public GameObject abilityPointCorner;
-    [SerializeField] private PortraitBar _portraitBar;
-    
+    public CharacterTable characterTable;
     private Data _data;
 
     private void Start()
     {
-        _data = _portraitBar._data;
+        _data = Data.Instance;
     }
 
     public override void OnPortraitClick()
     {
-        if (SceneManager.GetActiveScene().name == "CharacterSelect3")
-        {
-            var gameProgress = GameObject.Find("GameProgress").GetComponent<GameProgress>();
-            gameProgress.GetComponent<CharacterSelect>().OnCharacterButtonClick(characterIndex);
-        }
-        else if (SceneManager.GetActiveScene().name == "PVPCharacterSelect" || SceneManager.GetActiveScene().name == "PVPMapSelect")
-        {
-            GameObject.Find("PVPEventHandler").GetComponent<PVPEventHandler>().OnCharacterButtonClick(characterIndex);
-        }
-        else
-        {
-            var gameProgress = GameObject.Find("GameProgress").GetComponent<GameProgress>();
             if (_data.switchPortraits)
             {
-                gameProgress.AddCharacterForSwitching(characterIndex);
+                AddCharacterForSwitching(characterIndex);
             }
             else
             {
-                if (GameObject.Find("Canvas").transform.Find("CharacterTable").gameObject.activeInHierarchy && GameObject.Find("Canvas").transform.Find("CharacterTable").GetComponent<CharacterTable>().characterIndex == characterIndex)
+                if (characterTable.gameObject.activeInHierarchy && characterTable.characterIndex == characterIndex)
                 {
-                    //uzdaryti lentele
-                    GameObject.Find("Canvas").transform.Find("CharacterTable").GetComponent<CharacterTable>().ExitTable();
+                    characterTable.ExitTable();
                 }
                 else
                 {
-                    GameObject.Find("Canvas").transform.Find("CharacterTable").GetComponent<CharacterTable>().DisplayCharacterTable(characterIndex);
-                    GameObject.Find("Canvas").transform.Find("CharacterTable").GetComponent<CharacterTable>().UpdateTable();
-                    Debug.Log("Pakeisti sita vieta");
-                    //atidaryti lentele
+                    characterTable.DisplayCharacterTable(characterIndex);
+                    characterTable.UpdateTable();
                 }
             }
+        
+    }
+    
+    private void AddCharacterForSwitching(int index)
+    {
+        _data.SwitchedCharacters.Add(index);
+        if (_data.SwitchedCharacters.Count == 2)
+        {
+            _data.switchPortraits = false;
+            (_data.Characters[_data.SwitchedCharacters[0]], _data.Characters[_data.SwitchedCharacters[1]]) = (_data.Characters[_data.SwitchedCharacters[1]], _data.Characters[_data.SwitchedCharacters[0]]);
         }
     }
 
-    public void DisplayCharacterInfo()
-    {
-        GameObject.Find("Canvas").transform.Find("CharacterTable").GetComponent<CharacterTable>().DisplayCharacterTable(characterIndex);
-        // GameObject.Find("GameProgress").GetComponent<GameProgress>().DisplayCharacterTable(characterIndex);
-        Debug.Log("Pakeisti sita vieta");
-    }
-    
 }
