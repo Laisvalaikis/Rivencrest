@@ -1286,6 +1286,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1150332058}
     m_Modifications:
+    - target: {fileID: 4037621416185959022, guid: aacfcd6e889607b468962171e3915017, type: 3}
+      propertyPath: CharactersInShop.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7319358462382695296, guid: aacfcd6e889607b468962171e3915017, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1296,7 +1300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7319358462382695296, guid: aacfcd6e889607b468962171e3915017, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7319358462382695296, guid: aacfcd6e889607b468962171e3915017, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1340,15 +1344,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7319358462382695296, guid: aacfcd6e889607b468962171e3915017, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7319358462382695296, guid: aacfcd6e889607b468962171e3915017, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7319358462382695296, guid: aacfcd6e889607b468962171e3915017, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7319358462382695296, guid: aacfcd6e889607b468962171e3915017, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1386,6 +1390,22 @@ PrefabInstance:
 --- !u!224 &476057238 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7319358462382695296, guid: aacfcd6e889607b468962171e3915017, type: 3}
+  m_PrefabInstance: {fileID: 476057237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &476057239 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4037621416185959022, guid: aacfcd6e889607b468962171e3915017, type: 3}
+  m_PrefabInstance: {fileID: 476057237}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476057240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a99f737a77b91b34ab6588e1512fee7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &476057240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7319358462382695297, guid: aacfcd6e889607b468962171e3915017, type: 3}
   m_PrefabInstance: {fileID: 476057237}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &504607740
@@ -1607,7 +1627,6 @@ RectTransform:
   - {fileID: 1961494602}
   - {fileID: 626180641}
   - {fileID: 146949005}
-  - {fileID: 3042285399582044648}
   - {fileID: 1150332058}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -2922,6 +2941,7 @@ RectTransform:
   - {fileID: 504607741}
   - {fileID: 476057238}
   - {fileID: 1626469899}
+  - {fileID: 3042285399582044648}
   m_Father: {fileID: 617532650}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3073,7 +3093,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1392565690}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 476057240}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 476057239}
+        m_TargetAssemblyTypeName: Recruitment, Assembly-CSharp
+        m_MethodName: RecruitmentStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1392565690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4292,7 +4336,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 617532650}
+    m_TransformParent: {fileID: 1150332058}
     m_Modifications:
     - target: {fileID: 2834043716999880989, guid: 1f889bc4d90f4184e98442eafaf46910, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

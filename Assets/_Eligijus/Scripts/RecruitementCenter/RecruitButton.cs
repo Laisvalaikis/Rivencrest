@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class RecruitButton : MonoBehaviour
 {
-    public GameObject characterTable;
     public Image portrait;
     public Button buyButton;
     public TextMeshProUGUI className;
@@ -25,11 +24,11 @@ public class RecruitButton : MonoBehaviour
     {
         if (character == null)
         {
-            characterTable.gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
         else
         {
-            characterTable.SetActive(true);
+            gameObject.SetActive(true);
             var charInformation = character.prefab.GetComponent<PlayerInformation>();
             className.text = charInformation.ClassName;
             className.color = charInformation.ClassColor;

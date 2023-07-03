@@ -581,7 +581,7 @@ RectTransform:
   - {fileID: 7319358462648058240}
   - {fileID: 4790478333705865004}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -645,6 +645,7 @@ MonoBehaviour:
   - {fileID: 2055501307056197687}
   - {fileID: 1894414317282133511}
   CharactersInShop: []
+  AttractedCharactersCount: 4
   reRollButton: {fileID: 7319358462648058243}
   NamesMFile: {fileID: 4900000, guid: 625bdf8ff6d92594788fa7318f73a6e8, type: 3}
   NamesWFile: {fileID: 4900000, guid: 98da93bd7e4143440ab013f327c9c4f4, type: 3}

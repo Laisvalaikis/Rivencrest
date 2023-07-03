@@ -140,9 +140,283 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Characters: []
-  AllAvailableCharacters: []
-  AllEnemyCharacterPrefabs: []
-  AllEnemySavedCharacters: []
+  AllAvailableCharacters:
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 800
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings:
+    - blessingName: Freezing touch
+      rarity: 0
+      className: 
+      spellName: Attack
+      condition: 
+      description: 
+    cost: 900
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 900
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 900
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 900
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 800
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 1000
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 1000
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 1000
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  AllEnemyCharacterPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  AllEnemySavedCharacters:
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 800
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 1000
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 1000
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 1000
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 900
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 1000
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 900
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 900
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 900
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 900
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 900
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: 
+    blessings: []
+    cost: 900
+    prefabIndex: 0
+    characterUIData: {fileID: 0}
+    prefab: {fileID: 0}
   CharactersOnLastMission: 
   newGameData:
     teamColor: 

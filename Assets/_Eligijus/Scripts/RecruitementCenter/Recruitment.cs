@@ -11,18 +11,21 @@ public class Recruitment : MonoBehaviour
 {
     public List<RecruitButton> recruitTableCharacters;
     public List<SavedCharacter> CharactersInShop = null;
+    public int AttractedCharactersCount;
     public Button reRollButton;
     public TextAsset NamesMFile;
     public TextAsset NamesWFile;
     private Data _data;
-    private int AttractedCharactersCount;
     private int CharacterLevelChar = 0;
     private List<string> NamesM = new List<string>();
     private List<string> NamesW = new List<string>();
 
-    private void Start()
+    private void OnEnable()
     {
-        _data = Data.Instance;
+        if (_data == null)
+        {
+            _data = Data.Instance;
+        }
     }
 
     public void RecruitmentStart()
@@ -47,7 +50,7 @@ public class Recruitment : MonoBehaviour
                 AttractedCharactersCount = 5;
             }
         }
-        if(CharactersInShop == null)
+        if(CharactersInShop == null || CharactersInShop.Count == 0)
         {
             CharactersInShop = new List<SavedCharacter>();
             CreateCharactersInShop();
@@ -71,6 +74,7 @@ public class Recruitment : MonoBehaviour
     {
         List<SavedCharacter> AllCharactersCopy = new List<SavedCharacter>(_data.AllAvailableCharacters);
         CharactersInShop.Clear();
+        Debug.LogError("LOL");
         if(NamesW.Count <= 8)
         {
             ReadString(NamesW, NamesWFile);

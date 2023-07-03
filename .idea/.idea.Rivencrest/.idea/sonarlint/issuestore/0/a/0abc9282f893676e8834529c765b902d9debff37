@@ -1,10 +1,7 @@
 
-Ncsharpsquid:S3903™"+Move 'GameSettings' into a named namespace.(¬¨íıÿÿÿÿ
 Icsharpsquid:S3903"'Move 'TownData' into a named namespace.(õãÙªüÿÿÿÿ
 Qcsharpsquid:S3903h"/Move 'SavableCharacter' into a named namespace.(¡ÂÚ£ûÿÿÿÿ
-bcsharpsquid:S1104›"DMake this field 'private' and encapsulate it in a 'public' property.(°÷úù
-bcsharpsquid:S1104œ"DMake this field 'private' and encapsulate it in a 'public' property.(ø¶Ú
-gcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¯íåïøÿÿÿÿ
+Ncsharpsquid:S3903™"+Move 'GameSettings' into a named namespace.(¬¨íıÿÿÿÿ
 fcsharpsquid:S1104
 "DMake this field 'private' and encapsulate it in a 'public' property.(æ¾„”øÿÿÿÿ
 fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ú¥Ğúûÿÿÿÿ
@@ -40,6 +37,9 @@ acsharpsquid:S1104q"DMake this field 'private' and encapsulate it in a 'publi
 fcsharpsquid:S1104r"DMake this field 'private' and encapsulate it in a 'public' property.(Ş £ûÿÿÿÿ
 fcsharpsquid:S1104s"DMake this field 'private' and encapsulate it in a 'public' property.(´£š„ÿÿÿÿÿ
 fcsharpsquid:S1104t"DMake this field 'private' and encapsulate it in a 'public' property.(ÚçÊşÿÿÿÿ
+bcsharpsquid:S1104›"DMake this field 'private' and encapsulate it in a 'public' property.(°÷úù
+bcsharpsquid:S1104œ"DMake this field 'private' and encapsulate it in a 'public' property.(ø¶Ú
+gcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¯íåïøÿÿÿÿ
 acsharpsquid:S107x"FConstructor has 10 parameters, which is greater than the 7 authorized.(¥¤ˆ@
 bcsharpsquid:S107'"FConstructor has 21 parameters, which is greater than the 7 authorized.(–ıØ
 Gcsharpsquid:S125"Remove this commented out code.(¼ÓÉùÿÿÿÿ8èşÆ1
