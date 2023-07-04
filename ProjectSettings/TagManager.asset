@@ -11,13 +11,13 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - BlockingLayer
+  - Ground
+  - NonClickableCollider
+  - Consumables
+  - Portal
+  - Fog
+  - WhiteField
   - 
   - 
   - 

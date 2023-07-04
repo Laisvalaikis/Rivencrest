@@ -82,7 +82,7 @@ public class PlayerTeams : MonoBehaviour
                 }
                 characterUiButtonManager.AddDataToActionButtons(helpTable);
                 characterUiButtonManager.CharacterOnBoard = allCharacterList.teams[teamIndex].characters[i];//Assigning character to its UI button manager
-                characterUiButtonManager.GetComponent<BottomCornerUI>().characterUiData = spawnedCharacter.GetComponent<PlayerInformation>().characterUiData;
+                // characterUiButtonManager.GetComponent<BottomCornerUI>().characterUiData = spawnedCharacter.GetComponent<PlayerInformation>().characterUiData;
                 
                 characterUiButtonManager.GetComponent<BottomCornerUI>().EnableAbilities(spawnedCharacter.GetComponent<PlayerInformation>().savedCharacter);
                 spawnedCharacter.GetComponent<PlayerInformation>().cornerPortraitBoxInGame = characterUiButtonManager.gameObject;//Assigning UI button manager character to its character

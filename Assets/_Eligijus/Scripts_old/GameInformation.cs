@@ -284,7 +284,7 @@ public class GameInformation : MonoBehaviour
           //  }
           
             character.GetComponent<GridMovement>().EnableGrid();
-            bottomCornerUI.characterUiData = _selectedCharacter.GetComponent<PlayerInformation>().characterUiData;
+            // bottomCornerUI.characterUiData = _selectedCharacter.GetComponent<PlayerInformation>().characterUiData;
             bottomCornerUI.EnableAbilities(SelectedCharacter.GetComponent<PlayerInformation>().savedCharacter);
             //character.GetComponent<PlayerInformation>().CornerUIManager.transform.GetChild(0).gameObject.SetActive(true);
             //Camera.GetComponent<CinemachineVirtualCamera>().Follow = character.transform;
@@ -314,7 +314,7 @@ public class GameInformation : MonoBehaviour
             Debug.Log("cia kazkas daroma su corner ui manager");
             SelectedCharacter = null;
             cornerButtonManager.CharacterOnBoard = CharacterToInspect;
-            bottomCornerUI.characterUiData = InspectedCharacter.GetComponent<PlayerInformation>().characterUiData;
+            // bottomCornerUI.characterUiData = InspectedCharacter.GetComponent<PlayerInformation>().characterUiData;
             bottomCornerUI.EnableAbilities();
             if (CharacterToInspect.GetComponent<PlayerInformation>().CharactersTeam == "Default")
             {

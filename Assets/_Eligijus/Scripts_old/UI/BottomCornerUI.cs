@@ -25,9 +25,9 @@ public class BottomCornerUI : MonoBehaviour
     public TextMeshProUGUI staminaPoints;
     public TextMeshProUGUI healthPoints;
     public Animator healthAnimator;
-    public CharacterUiData characterUiData;
     public GameObject cornerUi;
     private ButtonManager _buttonManager;
+    private PlayerInformationData _currentPlayerInformationData;
     void Awake()
     {
         // GameInformation = GameObject.Find("GameInformation").gameObject;
@@ -92,10 +92,10 @@ public class BottomCornerUI : MonoBehaviour
         {
             cornerUi.SetActive(false);
         }
-        buttonText[buttonIndex].color = characterUiData.textColor;
-        buttonImages[buttonIndex].sprite = characterUiData.abilities[index].sprite;
-        buttonAction[buttonIndex].buttonState = characterUiData.abilities[index].abilityAction.ToString();
-        buttonBackgroundImages[buttonIndex].color = characterUiData.backgroundColor;
+        buttonText[buttonIndex].color = _currentPlayerInformationData.textColor;
+        buttonImages[buttonIndex].sprite = _currentPlayerInformationData.abilities[index].sprite;
+        buttonAction[buttonIndex].buttonState = _currentPlayerInformationData.abilities[index].abilityAction.ToString();
+        buttonBackgroundImages[buttonIndex].color = _currentPlayerInformationData.backgroundColor;
         UpdateCommonData();
     }
 
@@ -109,13 +109,13 @@ public class BottomCornerUI : MonoBehaviour
         {
             cornerUi.SetActive(false);
         }
-        portrait.sprite = characterUiData.characterSprite;
-        Color half = characterUiData.backgroundColor;
+        portrait.sprite = _currentPlayerInformationData.characterSprite;
+        Color half = _currentPlayerInformationData.backgroundColor;
         half.a = 0.5f;
         staminaBackground.color = half;
         for (int i = 0; i < backgroundImages.Count; i++)
         {
-            backgroundImages[i].color = characterUiData.backgroundColor;
+            backgroundImages[i].color = _currentPlayerInformationData.backgroundColor;
         }
         currentCharacter = _buttonManager.CharacterOnBoard;
         staminaPoints.text = currentCharacter.GetComponent<GridMovement>().AvailableMovementPoints.ToString(); //Sets movement text
@@ -207,7 +207,7 @@ public class BottomCornerUI : MonoBehaviour
                     if (buttonActionScript.AbilityPoints < buttonActionScript.AbilityCooldown || buttonActionScript.AvailableAttacks == 0)
                     {
                         // _buttonManager.ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>().color = Color.gray;
-                        _buttonManager.ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>().color = characterUiData.backgroundColor - new Color(0.2f, 0.2f, 0.2f, 0f);
+                        _buttonManager.ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>().color = _currentPlayerInformationData.backgroundColor - new Color(0.2f, 0.2f, 0.2f, 0f);
                         for(int j = 0; j < _buttonManager.ButtonList[i].transform.childCount; j++)
                         {
                             if(_buttonManager.ButtonList[i].transform.GetChild(j).name == "Text" && buttonActionScript.AbilityPoints < buttonActionScript.AbilityCooldown)
@@ -219,7 +219,7 @@ public class BottomCornerUI : MonoBehaviour
                     }
                     else
                     {
-                        _buttonManager.ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>().color = characterUiData.backgroundColor;
+                        _buttonManager.ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>().color = _currentPlayerInformationData.backgroundColor;
                         if (_buttonManager.ButtonList[i].transform.Find("Text") != null)
                         {
                             var image = _buttonManager.ButtonList[i].transform.Find("ActionButtonImage").GetComponent<Image>();
@@ -234,7 +234,7 @@ public class BottomCornerUI : MonoBehaviour
                     var characterMovementScript = _buttonManager.CharacterOnBoard.GetComponent<GridMovement>();
                     if (characterMovementScript.AvailableMovementPoints == 0)
                     {
-                        _buttonManager.ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>().color = characterUiData.backgroundColor - new Color(0.2f, 0.2f, 0.2f, 0f);
+                        _buttonManager.ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>().color = _currentPlayerInformationData.backgroundColor - new Color(0.2f, 0.2f, 0.2f, 0f);
                         // if (ButtonList[i].transform.Find("Text") != null
                         //     && (ButtonList[i].transform.Find("Text").GetComponent<CooldownText>().action.AbilityCooldown - ButtonList[i].transform.Find("Text").GetComponent<CooldownText>().action.AbilityPoints) > 0)
                         // {
@@ -244,7 +244,7 @@ public class BottomCornerUI : MonoBehaviour
                     }
                     else
                     {
-                        _buttonManager.ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>().color = characterUiData.backgroundColor;
+                        _buttonManager.ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>().color = _currentPlayerInformationData.backgroundColor;
                         // if (ButtonList[i].transform.Find("Text") != null)
                         // {
                         var image = _buttonManager.ButtonList[i].transform.Find("ActionButtonImage").GetComponent<Image>();

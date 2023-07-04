@@ -113,12 +113,12 @@ using System;
         public List<Blessing> blessings;
         public int cost;
         public int prefabIndex;
-        public CharacterUiData characterUIData;
+        public PlayerInformationData playerInformation;
 
         public SavableCharacter() { }
 
         public SavableCharacter(int level, int xP, int xPToGain, bool dead, string characterName,
-            int abilityPointCount, string unlockedAbilities, List<Blessing> blessings, int prefabIndex, CharacterUiData characterUIData)
+            int abilityPointCount, string unlockedAbilities, List<Blessing> blessings, int prefabIndex, PlayerInformationData playerInformation)
         {
             this.level = level;
             this.xP = xP;
@@ -130,7 +130,7 @@ using System;
             this.blessings = new List<Blessing>(blessings);
             this.cost = 1000;
             this.prefabIndex = prefabIndex;
-            this.characterUIData = characterUIData;
+            this.playerInformation = playerInformation;
         }
 
         public SavableCharacter(SavableCharacter x)
@@ -145,7 +145,7 @@ using System;
             this.blessings = this.blessings = new List<Blessing>(x.blessings);
             this.cost = x.cost;
             this.prefabIndex = x.prefabIndex;
-            this.characterUIData = x.characterUIData;
+            this.playerInformation = x.playerInformation;
         }
     }
 

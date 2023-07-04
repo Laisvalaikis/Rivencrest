@@ -91,10 +91,10 @@ public class Recruitment : MonoBehaviour
             characterToAdd.xP = 0;
             AllCharactersCopy.RemoveAll(x => x.prefab == characterToAdd.prefab);
             List<string> NameList;
-            if (characterToAdd.prefab.GetComponent<PlayerInformation>().ClassName == "ASSASSIN" ||
-                characterToAdd.prefab.GetComponent<PlayerInformation>().ClassName == "ENCHANTRESS" ||
-                characterToAdd.prefab.GetComponent<PlayerInformation>().ClassName == "SORCERESS" ||
-                characterToAdd.prefab.GetComponent<PlayerInformation>().ClassName == "HUNTRESS")
+            if (characterToAdd.playerInformation.ClassName == "ASSASSIN" ||
+                characterToAdd.playerInformation.ClassName == "ENCHANTRESS" ||
+                characterToAdd.playerInformation.ClassName == "SORCERESS" ||
+                characterToAdd.playerInformation.ClassName == "HUNTRESS")
             {
                 NameList = NamesW;
             }

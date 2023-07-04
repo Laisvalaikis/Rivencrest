@@ -9,8 +9,6 @@ c
 3Assets/_Eligijus/Scripts/SoundManager/SoundsData.cs,e\7\e798275bc932a1b0894b567e0babc508e2d3bd1e
 l
 <Assets/_Eligijus/Scripts/SoundManager/SoundCreateEditData.cs,a\3\a30798d3493d961c3fdbcfcdc92940aaf0d70fa4
-^
-.Assets/_Eligijus/Scripts/SoundManager/Sound.cs,c\6\c630106028937c509382a64d0ebefbe919fe3b0a
 j
 :Assets/_Eligijus/Scripts/SoundManager/AssignSoundEditor.cs,0\2\021e4f30d151502c77a868250cb5990b657bab17
 e
@@ -33,8 +31,6 @@ b
 2Assets/_Eligijus/Scripts/SaveManager/SaveSystem.cs,d\6\d6cb34f1c0584a24a389e48d421df943e12bf7d1
 m
 =Assets/_Eligijus/Scripts_old/PortraitBar/CharacterPortrait.cs,2\4\240e531c4bb7339d07a8902be21e649009a9ca46
-f
-6Assets/_Eligijus/Scripts/SaveManager/SavedCharacter.cs,9\c\9c842d5b8ddb180b625d605eedb9e45979ca17d8
 t
 DAssets/_Eligijus/Scripts_old/SceneManager/LoadingScreenController.cs,d\d\dde487be1baefb532888a5f1e7d6b296466567fb
 i
@@ -59,8 +55,6 @@ m
 =Assets/_Eligijus/Scripts_old/HelpTable/HelpTableController.cs,5\4\541777a32dbb1bcc763336166fcd1c3897ef3db8
 _
 /Assets/_Eligijus/Scripts_old/TeamInformation.cs,0\c\0c5a2f8489671386abf57ed6231e40466632e940
-a
-1Assets/_Eligijus/Scripts_old/Teams/PlayerTeams.cs,7\7\77fd0c71dc6d715b52718057ec3b34a0173ec3d7
 b
 2Assets/_Eligijus/Scripts_old/PvPCharacterSelect.cs,b\a\baec9f3db26ae1a98111d2bc64f234f3b1913ef2
 c
@@ -71,8 +65,6 @@ U
 %Assets/_Eligijus/Scripts/Data/Data.cs,8\f\8f5b258bf2116f35ad8cb8bb4172f7c38d5c90ff
 a
 1Assets/_Eligijus/Scripts/TownHall/TownHallData.cs,9\3\93551e833452da24b9d925cc10db58313f85c0d2
-_
-/Assets/_Eligijus/Scripts_old/GameInformation.cs,e\0\e0a075e84b51447005df55e5882cc6b46380a048
 j
 :Assets/_Eligijus/Scripts_old/GameManagment/GameProgress.cs,2\3\23ff33bb37cb09f69589beb4a6a58000181ab715
 f
@@ -91,9 +83,5 @@ W
 'Assets/_Eligijus/Scripts/GameManager.cs,1\9\19f7612fc02e540b013f05ee7b9ab279a3dc8e0d
 u
 EAssets/_Eligijus/Scripts/RecruitementCenter/CharacterInspectInShop.cs,9\0\902c30d9d41770b0039da66906e81ad349bd6451
-]
--Assets/_Eligijus/Scripts_old/Data/TownData.cs,0\a\0abc9282f893676e8834529c765b902d9debff37
 l
 <Assets/_Eligijus/Scripts/RecruitementCenter/RecruitButton.cs,3\f\3f71211a9ea847332b764d3257b68fbb2434f946
-j
-:Assets/_Eligijus/Scripts/RecruitementCenter/Recruitment.cs,6\7\67fed8a40f9e697901c697462e6bb29b9bcf17a3
