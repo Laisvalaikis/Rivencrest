@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ec538c0be150c4b902da324ee7c8de, type: 3}
+  m_Name: ForestHuntress
+  m_EditorClassIdentifier: 
+  ClassName: HUNTRESS
+  MaxHealth: 20
+  critChance: 3
+  accuracy: 100
+  dodgeChance: 5
+  role: DAMAGE
+  classColor: {r: 0.9254902, g: 0.96862745, b: 0.54901963, a: 1}
+  secondClassColor: {r: 0, g: 0, b: 0, a: 0}
+  textColor: {r: 0.9411765, g: 1, b: 0.4392157, a: 1}
+  backgroundColor: {r: 0.2784314, g: 0.50980395, b: 0.16470589, a: 1}
+  CharacterPortraitSprite: {fileID: -2578982626072357038, guid: 88a9dc2923d4fa842a8fce4120dbf698, type: 3}
+  CharacterSplashArt: {fileID: 0}
+  characterSprite: {fileID: -2578982626072357038, guid: 88a9dc2923d4fa842a8fce4120dbf698, type: 3}
+  CroppedSplashArt: {fileID: 0}
+  abilitySprites:
+  - {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+  - {fileID: 5321582045164929636, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+  - {fileID: -5244227264245802611, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+  - {fileID: -4933178696744715701, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+  - {fileID: 4693665290838367390, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+  abilities:
+  - sprite: {fileID: -660037021321600360, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 41
+  - sprite: {fileID: -6000465129233884172, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 38
+  - sprite: {fileID: 2770929758457341302, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 57
+  - sprite: {fileID: -9139038222646363919, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 31
+  BlessingsAndCurses: []

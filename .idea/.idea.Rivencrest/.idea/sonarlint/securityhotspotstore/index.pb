@@ -85,3 +85,5 @@ u
 EAssets/_Eligijus/Scripts/RecruitementCenter/CharacterInspectInShop.cs,9\0\902c30d9d41770b0039da66906e81ad349bd6451
 l
 <Assets/_Eligijus/Scripts/RecruitementCenter/RecruitButton.cs,3\f\3f71211a9ea847332b764d3257b68fbb2434f946
+d
+4Assets/_Eligijus/Scripts/Character/CharacterModel.cs,6\e\6e2f86afd023390394ff8abba26fe396061c5c29
