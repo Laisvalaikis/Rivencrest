@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ec538c0be150c4b902da324ee7c8de, type: 3}
+  m_Name: PlayerPink
+  m_EditorClassIdentifier: 
+  ClassName: ENCHANTRESS
+  MaxHealth: 19
+  critChance: 3
+  accuracy: 100
+  dodgeChance: 5
+  role: SUPPORT
+  classColor: {r: 1, g: 0.5686275, b: 0.7490196, a: 1}
+  secondClassColor: {r: 1, g: 0.38039216, b: 0.6392157, a: 1}
+  textColor: {r: 0.9764706, g: 0.7294118, b: 1, a: 1}
+  backgroundColor: {r: 0.84313726, g: 0.19607843, b: 0.5137255, a: 1}
+  CharacterPortraitSprite: {fileID: 3603600352667971043, guid: 88a9dc2923d4fa842a8fce4120dbf698, type: 3}
+  CharacterSplashArt: {fileID: -2336938632261355874, guid: 9c6ad0d1b545e344a8dc5c80f421d3cb, type: 3}
+  characterSprite: {fileID: -8133992337140100563, guid: d6b8b2f7cd944594597f86ddbfdfcb9b, type: 3}
+  CroppedSplashArt: {fileID: 4672966334877237986, guid: 9c6ad0d1b545e344a8dc5c80f421d3cb, type: 3}
+  abilitySprites:
+  - {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+  abilities:
+  - sprite: {fileID: -2885244205613315195, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 36
+  - sprite: {fileID: -4147313178977208927, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 39
+  - sprite: {fileID: 850385056709354357, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 55
+  - sprite: {fileID: -6000465129233884172, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 44
+  - sprite: {fileID: 1064230382522644472, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 24
+  BlessingsAndCurses: []
