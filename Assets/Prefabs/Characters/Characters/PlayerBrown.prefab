@@ -229,23 +229,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AbilityBackground: {fileID: -5530371819613864454, guid: f12fdd45e276893438b8ce4098f754cb, type: 3}
   ActionScripts:
-  - action: {fileID: 0}
+  - action: {fileID: 6890059959884175614}
     actionName: Attack
     AbilityIcon: {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: -1
-  - action: {fileID: 0}
+  - action: {fileID: 5519255558249706828}
     actionName: RaiseRock
     AbilityIcon: {fileID: -1071641158705808608, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: 0
-  - action: {fileID: 0}
+  - action: {fileID: 3529071659470723383}
     actionName: WallSmash
     AbilityIcon: {fileID: 4693665290838367390, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: 1
-  - action: {fileID: 0}
+  - action: {fileID: 5482007512251186893}
     actionName: LeapAndSlam
     AbilityIcon: {fileID: -4900127969809747176, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: 2
-  - action: {fileID: 0}
+  - action: {fileID: 8787925346843778955}
     actionName: WallEntrap
     AbilityIcon: {fileID: -3297504094695843550, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: 3
