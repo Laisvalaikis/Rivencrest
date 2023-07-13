@@ -230,19 +230,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AbilityBackground: {fileID: 937255998556263114, guid: f12fdd45e276893438b8ce4098f754cb, type: 3}
   ActionScripts:
-  - action: {fileID: 0}
+  - action: {fileID: 6890059959884175614}
     actionName: Attack
     AbilityIcon: {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: -1
-  - action: {fileID: 0}
+  - action: {fileID: 4908603482273265229}
     actionName: RainOfArrows
     AbilityIcon: {fileID: -660037021321600360, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: 0
-  - action: {fileID: 0}
+  - action: {fileID: -5155193162768331451}
     actionName: PowerShot
     AbilityIcon: {fileID: -6000465129233884172, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: 1
-  - action: {fileID: 0}
+  - action: {fileID: -5260913665860499629}
     actionName: Volley
     AbilityIcon: {fileID: 2770929758457341302, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: 2
