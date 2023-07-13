@@ -361,7 +361,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a7e0597635b554b83cedf5d8a926fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  specialAbilities: []
+  specialAbilities:
+  - abilityName: WallEntrap
+    castOrder: 3
+    difficultyLevel: 3
   specialBlessings: []
   groundLayer:
     serializedVersion: 2

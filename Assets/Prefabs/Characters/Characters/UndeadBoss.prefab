@@ -360,7 +360,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a7e0597635b554b83cedf5d8a926fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  specialAbilities: []
+  specialAbilities:
+  - abilityName: FrontSlash
+    castOrder: 3
+    difficultyLevel: 3
+  - abilityName: SideSlash
+    castOrder: 3
+    difficultyLevel: 4
   specialBlessings: []
   groundLayer:
     serializedVersion: 2
@@ -452,7 +458,7 @@ MonoBehaviour:
   AbilityPoints: 0
   isDisabled: 0
   spawnedCharacter: {fileID: 0}
-  BearPrefab: {fileID: 9051992674609326526, guid: 530dc82c6ecb14dc5b2a083c8e3e96ca, type: 3}
+  BearPrefab: {fileID: 659955980883675694, guid: 591a6ac4314a9244dbebe6197c5b957a, type: 3}
 --- !u!114 &6344501628500783007
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ec538c0be150c4b902da324ee7c8de, type: 3}
+  m_Name: UndeadMindController
+  m_EditorClassIdentifier: 
+  ClassName: MIND CONTROLLER
+  MaxHealth: 19
+  critChance: 3
+  accuracy: 100
+  dodgeChance: 1
+  role: DAMAGE
+  classColor: {r: 0.24705882, g: 0.98039216, b: 0.81960785, a: 1}
+  secondClassColor: {r: 0, g: 0, b: 0, a: 0}
+  textColor: {r: 0.24705882, g: 0.98039216, b: 0.81960785, a: 1}
+  backgroundColor: {r: 0.0627451, g: 0.49019608, b: 0.4509804, a: 1}
+  CharacterPortraitSprite: {fileID: 3345096712090188400, guid: 88a9dc2923d4fa842a8fce4120dbf698, type: 3}
+  CharacterSplashArt: {fileID: 0}
+  characterSprite: {fileID: 5144392223751456779, guid: f0bcd4c392c30b8498b1b65a568692fb, type: 3}
+  CroppedSplashArt: {fileID: 0}
+  abilitySprites:
+  - {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+  abilities:
+  - sprite: {fileID: -6000465129233884172, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 9
+  - sprite: {fileID: 5321582045164929636, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 33
+  - sprite: {fileID: 4905056183124483771, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 4
+  BlessingsAndCurses: []
