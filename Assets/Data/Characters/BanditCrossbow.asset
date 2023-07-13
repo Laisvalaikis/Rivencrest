@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ec538c0be150c4b902da324ee7c8de, type: 3}
+  m_Name: BanditCrossbow
+  m_EditorClassIdentifier: 
+  ClassName: BANDIT
+  MaxHealth: 100
+  critChance: 3
+  accuracy: 100
+  dodgeChance: 1
+  role: DAMAGE
+  classColor: {r: 0.84313726, g: 0.8039216, b: 0.79607844, a: 1}
+  secondClassColor: {r: 0, g: 0, b: 0, a: 0}
+  textColor: {r: 0.84313726, g: 0.8039216, b: 0.79607844, a: 1}
+  backgroundColor: {r: 0.38431373, g: 0.34901962, b: 0.3254902, a: 1}
+  CharacterPortraitSprite: {fileID: -1991292610093564866, guid: 88a9dc2923d4fa842a8fce4120dbf698, type: 3}
+  CharacterSplashArt: {fileID: 0}
+  characterSprite: {fileID: -500426422841964106, guid: e3479c82dfc9a9746a8bdf68b5722a13, type: 3}
+  CroppedSplashArt: {fileID: 0}
+  abilitySprites:
+  - {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+  abilities:
+  - sprite: {fileID: 2770929758457341302, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 61
+  BlessingsAndCurses: []

@@ -156,7 +156,7 @@ MonoBehaviour:
     blessings: []
     cost: 0
     prefabIndex: 0
-    playerInformation: {fileID: 0}
+    playerInformation: {fileID: 11400000, guid: 0f8987e38bb71054eb3930a7a27c02c9, type: 2}
     prefab: {fileID: 0}
   MaxHealth: 17
   health: 100
