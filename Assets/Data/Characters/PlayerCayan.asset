@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ec538c0be150c4b902da324ee7c8de, type: 3}
+  m_Name: PlayerCayan
+  m_EditorClassIdentifier: 
+  ClassName: SORCERESS
+  MaxHealth: 100
+  critChance: 5
+  accuracy: 100
+  dodgeChance: 20
+  role: DAMAGE
+  classColor: {r: 0.7294118, g: 0.92941177, b: 0.9647059, a: 1}
+  secondClassColor: {r: 0.34509805, g: 0.9019608, b: 1, a: 1}
+  textColor: {r: 0.84313726, g: 0.9764706, b: 1, a: 1}
+  backgroundColor: {r: 0.39215687, g: 0.75686276, b: 0.93333334, a: 1}
+  CharacterPortraitSprite: {fileID: -8352935854309067859, guid: 88a9dc2923d4fa842a8fce4120dbf698, type: 3}
+  CharacterSplashArt: {fileID: -7266305657354422227, guid: 9c6ad0d1b545e344a8dc5c80f421d3cb, type: 3}
+  characterSprite: {fileID: -4170574582160388732, guid: cfd1a509a49b4dc4d95b88e831d68deb, type: 3}
+  CroppedSplashArt: {fileID: 218854580434428391, guid: 9c6ad0d1b545e344a8dc5c80f421d3cb, type: 3}
+  abilitySprites:
+  - {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+  - {fileID: 5139444604892243456, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+  - {fileID: 854833402398890380, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+  - {fileID: -9139038222646363919, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+  - {fileID: -1700655540090428342, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+  abilities:
+  - sprite: {fileID: 5139444604892243456, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 26
+  - sprite: {fileID: -9139038222646363919, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 3
+  - sprite: {fileID: 854833402398890380, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 27
+  - sprite: {fileID: -1700655540090428342, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 14
+  BlessingsAndCurses:
+  - blessingName: 
+    rarity: 0
+    className: 
+    spellName: 
+    condition: 
+    description: 

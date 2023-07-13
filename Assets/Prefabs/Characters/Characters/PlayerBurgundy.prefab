@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a5e8ea6dfe66da4fb5b6999ba9f19bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AbilityBackground: {fileID: 3662352932837186737, guid: f12fdd45e276893438b8ce4098f754cb, type: 3}
+  AbilityBackground: {fileID: -349291530499477862, guid: f12fdd45e276893438b8ce4098f754cb, type: 3}
   ActionScripts:
   - action: {fileID: 6890059959884175614}
     actionName: Attack

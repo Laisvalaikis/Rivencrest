@@ -10,23 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6ec538c0be150c4b902da324ee7c8de, type: 3}
-  m_Name: ForestBear
+  m_Name: PlayerEnemyWW
   m_EditorClassIdentifier: 
-  ClassName: BEAR
+  ClassName: 
   MaxHealth: 17
-  critChance: 3
+  critChance: 4
   accuracy: 100
   dodgeChance: 1
   role: DAMAGE
-  classColor: {r: 0.3647059, g: 1, b: 0.13333334, a: 1}
-  secondClassColor: {r: 0, g: 0, b: 0, a: 0}
-  textColor: {r: 0.3647059, g: 1, b: 0.13333334, a: 1}
-  backgroundColor: {r: 0.2784314, g: 0.50980395, b: 0.16470589, a: 1}
-  CharacterPortraitSprite: {fileID: -6498908851992013816, guid: 88a9dc2923d4fa842a8fce4120dbf698, type: 3}
+  classColor: {r: 0.7882353, g: 0.8392157, b: 1, a: 1}
+  secondClassColor: {r: 0.3882353, g: 0.4117647, b: 0.54509807, a: 1}
+  textColor: {r: 0.7882353, g: 0.8392157, b: 1, a: 1}
+  backgroundColor: {r: 0.3882353, g: 0.4117647, b: 0.54509807, a: 1}
+  CharacterPortraitSprite: {fileID: -2016736815794541627, guid: 88a9dc2923d4fa842a8fce4120dbf698, type: 3}
   CharacterSplashArt: {fileID: 0}
-  characterSprite: {fileID: 651803784764277127, guid: 7b22a332fbd924d479936f3bd967a79e, type: 3}
+  characterSprite: {fileID: -5177022590925472271, guid: d11b501b36490324e8abe35439924e36, type: 3}
   CroppedSplashArt: {fileID: 0}
   abilitySprites:
   - {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-  abilities: []
+  abilities:
+  - sprite: {fileID: 5139444604892243456, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 26
   BlessingsAndCurses: []
