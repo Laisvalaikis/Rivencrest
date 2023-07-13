@@ -126,12 +126,15 @@ public class Recruitment : MonoBehaviour
             if (i < CharactersInShop.Count)
             {
                 recruitTableCharacters[i].character = CharactersInShop[i];
+                recruitTableCharacters[i].gameObject.SetActive(true);
+                recruitTableCharacters[i].UpdateRecruitButton();
             }
             else
             {
                 recruitTableCharacters[i].character = null;
+                recruitTableCharacters[i].gameObject.SetActive(false);
             }
-            recruitTableCharacters[i].UpdateRecruitButton();
+            
         }
     }
     private void UpdateRerollButton()

@@ -15,23 +15,20 @@ public class RecruitButton : MonoBehaviour
     private int XPToLevelUp;
     public Data _data;
 
-    private void Start()
+    private void OnEnable()
     {
-        _data = Data.Instance;
+        if (_data == null && Data.Instance != null)
+        {
+            _data = Data.Instance;
+        }
     }
 
     public void UpdateRecruitButton()
     {
-        if (character == null)
-        {
-            gameObject.SetActive(false);
-        }
-        else
-        {
-            gameObject.SetActive(true);
-            var charInformation = character.prefab.GetComponent<PlayerInformation>();
+        
+            var charInformation = character.playerInformation;
             className.text = charInformation.ClassName;
-            className.color = charInformation.ClassColor;
+            className.color = charInformation.classColor;
             portrait.sprite = charInformation.CharacterPortraitSprite;
             cost.text = character.cost.ToString() + "g";
             if (_data.townData.townGold >= character.cost && _data.Characters.Count < _data.maxCharacterCount)
@@ -42,7 +39,6 @@ public class RecruitButton : MonoBehaviour
             {
                 buyButton.interactable = false;
             }
-        }
     }
 
     public void BuyCharacter()

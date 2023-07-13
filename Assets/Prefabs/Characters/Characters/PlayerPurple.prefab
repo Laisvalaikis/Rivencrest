@@ -398,7 +398,7 @@ MonoBehaviour:
   AbilityPoints: 0
   isDisabled: 0
   spawnedCharacter: {fileID: 0}
-  PortalPrefab: {fileID: 0}
+  PortalPrefab: {fileID: 7341821577761846539, guid: b5a7ea2af65eb47a58c4a51ef9aa761e, type: 3}
 --- !u!114 &4715086791741578435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,7 +425,7 @@ MonoBehaviour:
   AbilityPoints: 0
   isDisabled: 0
   spawnedCharacter: {fileID: 0}
-  SpearPrefab: {fileID: 0}
+  SpearPrefab: {fileID: 8132253506860624366, guid: 4696a10556cb148bd8a62952ac8440fe, type: 3}
 --- !u!114 &4966171617031932745
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -177,9 +177,9 @@ MonoBehaviour:
   isCurrentStateAvailable: 0
   StateAnimations: 0
   role: TANK
-  CharacterPortraitSprite: {fileID: -6498908851992013816, guid: 88a9dc2923d4fa842a8fce4120dbf698, type: 3}
-  CharacterSplashArt: {fileID: 0}
-  CroppedSplashArt: {fileID: 0}
+  CharacterPortraitSprite: {fileID: -1929845084124459120, guid: 88a9dc2923d4fa842a8fce4120dbf698, type: 3}
+  CharacterSplashArt: {fileID: 2900230620100509044, guid: 9c6ad0d1b545e344a8dc5c80f421d3cb, type: 3}
+  CroppedSplashArt: {fileID: -5125940699952450712, guid: 9c6ad0d1b545e344a8dc5c80f421d3cb, type: 3}
   _data: {fileID: 0}
   Blocker: 0
   BlockingAlly: {fileID: 0}

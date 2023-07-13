@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ec538c0be150c4b902da324ee7c8de, type: 3}
+  m_Name: PlayerYellow
+  m_EditorClassIdentifier: 
+  ClassName: KNIGHT
+  MaxHealth: 28
+  critChance: 3
+  accuracy: 100
+  dodgeChance: 5
+  role: TANK
+  classColor: {r: 0.92941177, g: 1, b: 0.3019608, a: 1}
+  secondClassColor: {r: 0.85490197, g: 0.93333334, b: 0.16470589, a: 1}
+  textColor: {r: 0.92941177, g: 1, b: 0.3019608, a: 1}
+  backgroundColor: {r: 0.6627451, g: 0.6431373, b: 0.16470589, a: 1}
+  CharacterPortraitSprite: {fileID: -4475128694657203000, guid: 88a9dc2923d4fa842a8fce4120dbf698, type: 3}
+  CharacterSplashArt: {fileID: 2520241002396213999, guid: 9c6ad0d1b545e344a8dc5c80f421d3cb, type: 3}
+  characterSprite: {fileID: 8120027843680581119, guid: 155cd8786dc12eb429fe9dcfc846cc2c, type: 3}
+  CroppedSplashArt: {fileID: 9061640590526611639, guid: 9c6ad0d1b545e344a8dc5c80f421d3cb, type: 3}
+  abilitySprites:
+  - {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+  - {fileID: -1071641158705808608, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+  - {fileID: -4900127969809747176, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+  - {fileID: -3297504094695843550, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+  - {fileID: 4693665290838367390, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+  abilities:
+  - sprite: {fileID: -5985996694945948397, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 6
+  - sprite: {fileID: -5980061746933909041, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 51
+  - sprite: {fileID: 4905056183124483771, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 25
+  - sprite: {fileID: 4693665290838367390, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 16
+  BlessingsAndCurses: []

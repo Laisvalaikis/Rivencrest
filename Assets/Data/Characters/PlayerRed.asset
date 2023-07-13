@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ec538c0be150c4b902da324ee7c8de, type: 3}
+  m_Name: PlayerRed
+  m_EditorClassIdentifier: 
+  ClassName: ASSASSIN
+  MaxHealth: 23
+  critChance: 3
+  accuracy: 100
+  dodgeChance: 5
+  role: DAMAGE
+  classColor: {r: 0.93333334, g: 0.23137255, b: 0.23137255, a: 1}
+  secondClassColor: {r: 0.93333334, g: 0.23137255, b: 0.23137255, a: 1}
+  textColor: {r: 0, g: 0, b: 0, a: 0}
+  backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+  CharacterPortraitSprite: {fileID: -2860315959904704157, guid: 88a9dc2923d4fa842a8fce4120dbf698, type: 3}
+  CharacterSplashArt: {fileID: 1699126739720152299, guid: 9c6ad0d1b545e344a8dc5c80f421d3cb, type: 3}
+  characterSprite: {fileID: -8932053187066553027, guid: 809f085ffbe723d40af9a52ab74d2fe3, type: 3}
+  CroppedSplashArt: {fileID: -8913815223202546545, guid: 9c6ad0d1b545e344a8dc5c80f421d3cb, type: 3}
+  abilitySprites:
+  - {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+  abilities:
+  - sprite: {fileID: -4900127969809747176, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 42
+  - sprite: {fileID: -1473824630161842880, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 17
+  - sprite: {fileID: -431620073777160903, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 19
+  - sprite: {fileID: 285764324283905352, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 45
+  - sprite: {fileID: 285764324283905352, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 45
+  - sprite: {fileID: 285764324283905352, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 45
+  - sprite: {fileID: 2653253005981326686, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 58
+  - sprite: {fileID: 285764324283905352, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    abilityAction: 59
+  BlessingsAndCurses: []
