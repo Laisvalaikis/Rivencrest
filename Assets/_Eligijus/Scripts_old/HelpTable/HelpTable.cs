@@ -24,6 +24,7 @@ public class HelpTable : MonoBehaviour
     [HideInInspector] public bool hasActionButtonBeenEntered = false;
     private Vector3 isAbilitySlowOriginalPosition;
     private bool wasSetuped = false;
+    private bool wasSelected = false;
     private Data _data;
     
     public void closeHelpTable()
@@ -65,19 +66,20 @@ public class HelpTable : MonoBehaviour
         AbilityText abilityText = _abilities[ability.actionStateName];
         if (abilityText != null)
         {
-            if (GameObject.Find("Canvas").transform.Find("CharacterTable").transform.Find("Abilities").transform.GetChild(abilityIndex).transform.Find("ActionButtonFrame").GetComponent<Animator>().GetBool("select"))
+            if (wasSelected)
             {
                 gameObject.SetActive(false);
                 CloseHelpTable();
+                wasSelected = false;
             }
             else
             {
-            
                 gameObject.SetActive(false);
                 CloseHelpTable();
                 var character = _data.Characters[characterIndex];
                 gameObject.SetActive(true);
                 FillTableWithInfo(ability, abilityText, character, actionManager);
+                wasSelected = true;
             }
         }
     }

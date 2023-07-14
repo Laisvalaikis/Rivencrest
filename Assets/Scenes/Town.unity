@@ -4467,6 +4467,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 617532650}
     m_Modifications:
+    - target: {fileID: 4228833993127167424, guid: 1f889bc4d90f4184e98442eafaf46910, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6349424901634652575, guid: 1f889bc4d90f4184e98442eafaf46910, type: 3}
       propertyPath: m_Name
       value: HelpTable
@@ -4541,7 +4545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7852995960667153853, guid: 1f889bc4d90f4184e98442eafaf46910, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -60
       objectReference: {fileID: 0}
     - target: {fileID: 7852995960667153853, guid: 1f889bc4d90f4184e98442eafaf46910, type: 3}
       propertyPath: m_AnchoredPosition.y
