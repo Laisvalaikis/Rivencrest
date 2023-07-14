@@ -23,31 +23,45 @@ public class HelpTable : MonoBehaviour
     private Dictionary<string, AbilityText> _abilities;
     [HideInInspector] public bool hasActionButtonBeenEntered = false;
     private Vector3 isAbilitySlowOriginalPosition;
+    private bool wasSetuped = false;
     private Data _data;
     
     public void closeHelpTable()
     {
         gameObject.SetActive(false);
     }
-    
-    
-    
+
     private void Start()
     {
-        _data = Data.Instance;
-        _abilities = new Dictionary<string, AbilityText>();
-        for (int i = 0; i < abilityText.Count; i++)
-        {
-            _abilities.Add(abilityText[i].name, abilityText[i]);
-        }
-
-        isAbilitySlowOriginalPosition = isAbilitySlow.transform.localPosition;
+        SetupHelpTable();
     }
 
-    public void EnableTableForTown(int abilityIndex)
+    private void SetupHelpTable()
     {
-        var ability = _data.Characters[GameObject.Find("Canvas").transform.Find("CharacterTable").GetComponent<CharacterTable>().characterIndex].prefab.
-            GetComponent<ActionManager>().FindActionByIndex(abilityIndex).action.GetBuffedAbility(_data.Characters[GameObject.Find("Canvas").transform.Find("CharacterTable").GetComponent<CharacterTable>().characterIndex].blessings);
+        if (!wasSetuped)
+        {
+
+            if (_data == null && Data.Instance != null)
+            {
+                _data = Data.Instance;
+            }
+
+            _abilities = new Dictionary<string, AbilityText>();
+            for (int i = 0; i < abilityText.Count; i++)
+            {
+                _abilities.Add(abilityText[i].name, abilityText[i]);
+            }
+
+            isAbilitySlowOriginalPosition = isAbilitySlow.transform.localPosition;
+            wasSetuped = true;
+        }
+    }
+
+    public void EnableTableForTown(int abilityIndex, int characterIndex)
+    {
+        SetupHelpTable();
+        var actionManager = _data.Characters[characterIndex].prefab.GetComponent<ActionManager>();
+        var ability = actionManager.FindActionByIndex(abilityIndex).action;
         AbilityText abilityText = _abilities[ability.actionStateName];
         if (abilityText != null)
         {
@@ -58,13 +72,12 @@ public class HelpTable : MonoBehaviour
             }
             else
             {
-
+            
                 gameObject.SetActive(false);
                 CloseHelpTable();
-                var character = _data.Characters[GameObject.Find("Canvas").transform.Find("CharacterTable").GetComponent<CharacterTable>().characterIndex];
+                var character = _data.Characters[characterIndex];
                 gameObject.SetActive(true);
-                FillTableWithInfo(ability, abilityText, character, character.prefab.GetComponent<ActionManager>());
-                GameObject.Find("Canvas").transform.Find("CharacterTable").transform.Find("Abilities").transform.GetChild(abilityIndex).transform.Find("ActionButtonFrame").GetComponent<Animator>().SetBool("select", true);
+                FillTableWithInfo(ability, abilityText, character, actionManager);
             }
         }
     }
@@ -143,23 +156,6 @@ public class HelpTable : MonoBehaviour
                         character.GetComponent<ActionManager>());
                 }
             }
-        }
-    }
-
-    public void EnableTableForPVP(string abilityName, SavedCharacter character)
-    {
-        CloseAllHelpTables();
-        var ability = character.prefab.GetComponent<ActionManager>().FindActionByName(abilityName).GetBuffedAbility(character.blessings);
-        AbilityText abilityText = _abilities[ability.actionStateName];
-        if (abilityText == null)
-        {
-            print("Ner tokios help table lol");
-        }
-        else
-        {
-            
-            gameObject.SetActive(true);
-            FillTableWithInfo(ability, abilityText, character, character.prefab.GetComponent<ActionManager>());
         }
     }
 

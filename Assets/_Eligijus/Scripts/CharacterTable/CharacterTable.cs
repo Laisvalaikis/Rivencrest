@@ -256,7 +256,12 @@ public class CharacterTable : MonoBehaviour
         
         table.SetActive(true);
     }
-    
+
+    public void EnableDisableHelpTable(int index)
+    {
+        helpTable.EnableTableForTown(index, characterIndex);
+    }
+
     private int CalculateMaxHP(SavedCharacter character)
     {
         int maxHP = character.prefab.GetComponent<PlayerInformation>().MaxHealth; // fix this

@@ -1676,7 +1676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7852995960667153853
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1739,7 +1739,6 @@ MonoBehaviour:
   fastAbility: {fileID: 8388939811026630944}
   abilityText:
   - {fileID: 11400000, guid: a9766b3f05b23fb4d9e3e509afa2f2a1, type: 2}
-  - {fileID: 11400000, guid: cb48856d6ce0fca4aab10a71fbff3967, type: 2}
   - {fileID: 11400000, guid: 53e575d1f5acf4a44b2a3a4dc2c85643, type: 2}
   - {fileID: 11400000, guid: 6d53e782f84cbed4490971f09e090dec, type: 2}
   - {fileID: 11400000, guid: 390ac1f287a10eb4b9168f29a5e1399d, type: 2}

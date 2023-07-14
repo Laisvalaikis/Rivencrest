@@ -6,8 +6,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/AbilityText", order = 1)]
 public class AbilityText : ScriptableObject
 {
-    [TextAreaAttribute]
+    [TextArea]
     public string abilityTitle;
-    [TextAreaAttribute]
+    [TextArea]
     public string abilityDescription;
 }

@@ -811,9 +811,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: HelpTableController, Assembly-CSharp
-          m_MethodName: EnableTableForTown
+        - m_Target: {fileID: 1100696210055897965}
+          m_TargetAssemblyTypeName: CharacterTable, Assembly-CSharp
+          m_MethodName: EnableDisableHelpTable
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -827,9 +827,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: HelpTableController, Assembly-CSharp
-          m_MethodName: EnableTableForTown
+        - m_Target: {fileID: 1100696210055897965}
+          m_TargetAssemblyTypeName: CharacterTable, Assembly-CSharp
+          m_MethodName: EnableDisableHelpTable
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3883,9 +3883,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: HelpTableController, Assembly-CSharp
-          m_MethodName: EnableTableForTown
+        - m_Target: {fileID: 1100696210055897965}
+          m_TargetAssemblyTypeName: CharacterTable, Assembly-CSharp
+          m_MethodName: EnableDisableHelpTable
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3899,9 +3899,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: HelpTableController, Assembly-CSharp
-          m_MethodName: EnableTableForTown
+        - m_Target: {fileID: 1100696210055897965}
+          m_TargetAssemblyTypeName: CharacterTable, Assembly-CSharp
+          m_MethodName: EnableDisableHelpTable
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -6124,9 +6124,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: HelpTableController, Assembly-CSharp
-          m_MethodName: EnableTableForTown
+        - m_Target: {fileID: 1100696210055897965}
+          m_TargetAssemblyTypeName: CharacterTable, Assembly-CSharp
+          m_MethodName: EnableDisableHelpTable
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -6140,9 +6140,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: HelpTableController, Assembly-CSharp
-          m_MethodName: EnableTableForTown
+        - m_Target: {fileID: 1100696210055897965}
+          m_TargetAssemblyTypeName: CharacterTable, Assembly-CSharp
+          m_MethodName: EnableDisableHelpTable
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -7102,9 +7102,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: HelpTableController, Assembly-CSharp
-          m_MethodName: EnableTableForTown
+        - m_Target: {fileID: 1100696210055897965}
+          m_TargetAssemblyTypeName: CharacterTable, Assembly-CSharp
+          m_MethodName: EnableDisableHelpTable
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -7118,9 +7118,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: HelpTableController, Assembly-CSharp
-          m_MethodName: EnableTableForTown
+        - m_Target: {fileID: 1100696210055897965}
+          m_TargetAssemblyTypeName: CharacterTable, Assembly-CSharp
+          m_MethodName: EnableDisableHelpTable
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

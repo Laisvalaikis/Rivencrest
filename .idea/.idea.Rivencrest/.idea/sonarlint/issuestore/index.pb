@@ -41,8 +41,6 @@ t
 DAssets/_Eligijus/Scripts_old/SceneManager/LoadingScreenController.cs,d\d\dde487be1baefb532888a5f1e7d6b296466567fb
 f
 6Assets/_Eligijus/Scripts_old/Abilities/ActionButton.cs,3\7\37917569e0dabfff583d99de6621a0db1078fbe5
-c
-3Assets/_Eligijus/Scripts_old/HelpTable/HelpTable.cs,9\e\9e4a82a71991feef11976c63f5af47ba8f2261c0
 m
 =Assets/_Eligijus/Scripts_old/HelpTable/HelpTableController.cs,5\4\541777a32dbb1bcc763336166fcd1c3897ef3db8
 _
@@ -53,8 +51,6 @@ b
 -Assets/_Eligijus/Scripts_old/ButtonManager.cs,b\2\b2c5d35d3be06df972bef41cb03878a23980d8b9
 c
 3Assets/_Eligijus/Scripts/SoundManager/MusicLevel.cs,b\c\bcf2cea0aed0f00408090171ab2d1b569ddd6624
-U
-%Assets/_Eligijus/Scripts/Data/Data.cs,8\f\8f5b258bf2116f35ad8cb8bb4172f7c38d5c90ff
 a
 1Assets/_Eligijus/Scripts/TownHall/TownHallData.cs,9\3\93551e833452da24b9d925cc10db58313f85c0d2
 Y

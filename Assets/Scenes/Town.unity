@@ -1731,6 +1731,7 @@ RectTransform:
   - {fileID: 146949005}
   - {fileID: 1150332058}
   - {fileID: 1961494602}
+  - {fileID: 3042285399582044648}
   - {fileID: 626180641}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -3045,7 +3046,6 @@ RectTransform:
   - {fileID: 504607741}
   - {fileID: 476057238}
   - {fileID: 1626469899}
-  - {fileID: 3042285399582044648}
   m_Father: {fileID: 617532650}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4229,6 +4229,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 617532650}
     m_Modifications:
     - target: {fileID: 1100696210055897965, guid: 97febcde77133784eb6b55f95210f429, type: 3}
+      propertyPath: gameUI
+      value: 
+      objectReference: {fileID: 1150332061}
+    - target: {fileID: 1100696210055897965, guid: 97febcde77133784eb6b55f95210f429, type: 3}
       propertyPath: helpTable
       value: 
       objectReference: {fileID: 3042285399582044649}
@@ -4444,12 +4448,8 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1150332058}
+    m_TransformParent: {fileID: 617532650}
     m_Modifications:
-    - target: {fileID: 2834043716999880989, guid: 1f889bc4d90f4184e98442eafaf46910, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6349424901634652575, guid: 1f889bc4d90f4184e98442eafaf46910, type: 3}
       propertyPath: m_Name
       value: HelpTable
@@ -4542,16 +4542,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3044549133694201525, guid: 1f889bc4d90f4184e98442eafaf46910, type: 3}
-    - {fileID: 8265584401493678875, guid: 1f889bc4d90f4184e98442eafaf46910, type: 3}
-    - {fileID: 4935031027156376315, guid: 1f889bc4d90f4184e98442eafaf46910, type: 3}
-    - {fileID: 6470537315347054022, guid: 1f889bc4d90f4184e98442eafaf46910, type: 3}
-    - {fileID: 5328189787418819494, guid: 1f889bc4d90f4184e98442eafaf46910, type: 3}
-    - {fileID: 7422575991468146316, guid: 1f889bc4d90f4184e98442eafaf46910, type: 3}
-    - {fileID: 7943324583119380106, guid: 1f889bc4d90f4184e98442eafaf46910, type: 3}
-    - {fileID: 502883574863425951, guid: 1f889bc4d90f4184e98442eafaf46910, type: 3}
-    - {fileID: 3458996306871295131, guid: 1f889bc4d90f4184e98442eafaf46910, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
