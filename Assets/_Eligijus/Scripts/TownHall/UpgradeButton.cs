@@ -23,6 +23,7 @@ public class UpgradeButton : MonoBehaviour
             _button = GetComponent<Button>();
             _data = Data.Instance;
         }
+
         UpdateUpgradeButton();
     }
 
@@ -48,5 +49,6 @@ public class UpgradeButton : MonoBehaviour
         else {
             _button.interactable = true;
         }//galimas pirkti
+        
     }
 }

@@ -57,8 +57,6 @@ a
 1Assets/_Eligijus/Scripts/TownHall/TownHallData.cs,9\3\93551e833452da24b9d925cc10db58313f85c0d2
 f
 6Assets/_Eligijus/Scripts_old/UI/ImageFadeController.cs,c\e\ce0205c224202acf667d7bdf435b938c4918c933
-b
-2Assets/_Eligijus/Scripts/TownHall/UpgradeButton.cs,1\c\1c7a58d5fd3d8684072e4e928cefe43332c62e0d
 ]
 -Assets/_Eligijus/Scripts/TownHall/TownHall.cs,7\b\7b789676b4d8d0a6060b5417714e6abfbd7623d9
 d

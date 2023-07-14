@@ -1646,6 +1646,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504607740}
   m_CullTransparentMesh: 1
+--- !u!114 &572186090 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2001383468113065521, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+  m_PrefabInstance: {fileID: 1626469898}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e2a361b4b5496458be7de5a28c265a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &617532646
 GameObject:
   m_ObjectHideFlags: 0
@@ -2294,6 +2305,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743292498}
   m_CullTransparentMesh: 1
+--- !u!114 &815350172 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1059257343112761797, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+  m_PrefabInstance: {fileID: 1626469898}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e2a361b4b5496458be7de5a28c265a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &842667948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2604,6 +2626,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865394267}
   m_CullTransparentMesh: 1
+--- !u!114 &892880334 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2275340050726690468, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+  m_PrefabInstance: {fileID: 1626469898}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e2a361b4b5496458be7de5a28c265a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &896962815
 GameObject:
   m_ObjectHideFlags: 0
@@ -2919,6 +2952,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033425930}
   m_CullTransparentMesh: 1
+--- !u!114 &1119202435 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9002407042281166250, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+  m_PrefabInstance: {fileID: 1626469898}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e2a361b4b5496458be7de5a28c265a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1136824437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3272,6 +3316,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1392565687}
   m_CullTransparentMesh: 1
+--- !u!114 &1422027605 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2675828316655956283, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+  m_PrefabInstance: {fileID: 1626469898}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e2a361b4b5496458be7de5a28c265a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1435895466
 GameObject:
   m_ObjectHideFlags: 0
@@ -3769,10 +3824,442 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1150332058}
     m_Modifications:
+    - target: {fileID: 1046095467221064004, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046095467221064004, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046095467221064004, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046095467221064004, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1626469900}
+    - target: {fileID: 1046095467221064004, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 815350172}
+    - target: {fileID: 1046095467221064004, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046095467221064004, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046095467221064004, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyUpgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046095467221064004, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdateUpgradeButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046095467221064004, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TownHall, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046095467221064004, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UpgradeButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046095467221064004, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046095467221064004, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1287791557544689688, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
       propertyPath: gameUi
       value: 
       objectReference: {fileID: 1150332061}
+    - target: {fileID: 1589571088856176134, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589571088856176134, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589571088856176134, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589571088856176134, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589571088856176134, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589571088856176134, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1626469900}
+    - target: {fileID: 1589571088856176134, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2145220621}
+    - target: {fileID: 1589571088856176134, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589571088856176134, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589571088856176134, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589571088856176134, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589571088856176134, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyUpgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589571088856176134, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdateUpgradeButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589571088856176134, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TownHall, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589571088856176134, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UpgradeButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589571088856176134, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589571088856176134, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013409273611665072, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013409273611665072, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013409273611665072, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013409273611665072, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1626469900}
+    - target: {fileID: 2013409273611665072, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 572186090}
+    - target: {fileID: 2013409273611665072, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013409273611665072, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013409273611665072, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyUpgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013409273611665072, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdateUpgradeButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013409273611665072, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TownHall, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013409273611665072, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UpgradeButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013409273611665072, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013409273611665072, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280201300755273253, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280201300755273253, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280201300755273253, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280201300755273253, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1626469900}
+    - target: {fileID: 2280201300755273253, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 892880334}
+    - target: {fileID: 2280201300755273253, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280201300755273253, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280201300755273253, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyUpgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280201300755273253, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdateUpgradeButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280201300755273253, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TownHall, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280201300755273253, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UpgradeButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280201300755273253, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280201300755273253, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672100319552076218, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672100319552076218, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672100319552076218, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672100319552076218, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1626469900}
+    - target: {fileID: 2672100319552076218, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1422027605}
+    - target: {fileID: 2672100319552076218, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672100319552076218, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672100319552076218, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyUpgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672100319552076218, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdateUpgradeButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672100319552076218, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TownHall, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672100319552076218, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UpgradeButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672100319552076218, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672100319552076218, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906403301325335356, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906403301325335356, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906403301325335356, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906403301325335356, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1626469900}
+    - target: {fileID: 2906403301325335356, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1654206189}
+    - target: {fileID: 2906403301325335356, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906403301325335356, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906403301325335356, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyUpgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906403301325335356, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdateUpgradeButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906403301325335356, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TownHall, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906403301325335356, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UpgradeButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906403301325335356, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906403301325335356, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030475727943835786, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030475727943835786, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030475727943835786, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030475727943835786, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1626469900}
+    - target: {fileID: 4030475727943835786, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1994168553}
+    - target: {fileID: 4030475727943835786, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030475727943835786, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030475727943835786, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyUpgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030475727943835786, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdateUpgradeButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030475727943835786, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TownHall, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030475727943835786, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UpgradeButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030475727943835786, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030475727943835786, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998932144890662880, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998932144890662880, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998932144890662880, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998932144890662880, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1626469900}
+    - target: {fileID: 4998932144890662880, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2145403505}
+    - target: {fileID: 4998932144890662880, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998932144890662880, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998932144890662880, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyUpgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998932144890662880, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdateUpgradeButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998932144890662880, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TownHall, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998932144890662880, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UpgradeButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998932144890662880, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998932144890662880, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5804852211961076904, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
       propertyPath: m_Name
       value: TownHallTable
@@ -3869,6 +4356,62 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8996431987007462699, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996431987007462699, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996431987007462699, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996431987007462699, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1626469900}
+    - target: {fileID: 8996431987007462699, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1119202435}
+    - target: {fileID: 8996431987007462699, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996431987007462699, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996431987007462699, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyUpgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996431987007462699, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdateUpgradeButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996431987007462699, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TownHall, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996431987007462699, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UpgradeButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996431987007462699, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996431987007462699, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996431987007462699, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3879,6 +4422,28 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5804852211961076905, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
   m_PrefabInstance: {fileID: 1626469898}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1626469900 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1287791557544689688, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+  m_PrefabInstance: {fileID: 1626469898}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580315491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd10e9da961c464cb6a783212529e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1654206189 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2910126762944537533, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+  m_PrefabInstance: {fileID: 1626469898}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e2a361b4b5496458be7de5a28c265a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1739425672
 GameObject:
   m_ObjectHideFlags: 0
@@ -4371,6 +4936,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 387607c2051839440902176821925f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1994168553 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4024079422243170315, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+  m_PrefabInstance: {fileID: 1626469898}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e2a361b4b5496458be7de5a28c265a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2130628737
 GameObject:
   m_ObjectHideFlags: 3
@@ -4457,6 +5033,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2145220621 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1601043702572031623, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+  m_PrefabInstance: {fileID: 1626469898}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e2a361b4b5496458be7de5a28c265a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2145403505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5001389175569844065, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+  m_PrefabInstance: {fileID: 1626469898}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e2a361b4b5496458be7de5a28c265a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &3042285399582044647
