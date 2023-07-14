@@ -3824,6 +3824,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1150332058}
     m_Modifications:
+    - target: {fileID: 699295272054003902, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_text
+      value: REROLL
+      objectReference: {fileID: 0}
     - target: {fileID: 1046095467221064004, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -4156,6 +4160,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3472869249571375733, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_text
+      value: 'MAX
+
+        RECRUITS'
+      objectReference: {fileID: 0}
     - target: {fileID: 4030475727943835786, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -4207,6 +4217,10 @@ PrefabInstance:
     - target: {fileID: 4030475727943835786, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787283919676722714, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_text
+      value: "MAX \nLEVEL 3"
       objectReference: {fileID: 0}
     - target: {fileID: 4998932144890662880, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -4355,6 +4369,52 @@ PrefabInstance:
     - target: {fileID: 5804852212559288816, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6003091681677148539, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_text
+      value: 'MAX
+
+        LEVEL 4'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276524768301115886, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_text
+      value: MAX LEVEL
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549616422851314008, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_text
+      value: NEWCOMERS 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549616422851314008, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549616422851314008, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259307217627266146, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_text
+      value: NEWCOMERS 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259307217627266146, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259307217627266146, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8864354300499064788, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_text
+      value: NEWCOMERS 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8864354300499064788, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8864354300499064788, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 8996431987007462699, guid: 1c573d9b54b1e2c44af413023b4e3fd9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
