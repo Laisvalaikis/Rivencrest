@@ -37,10 +37,10 @@ public class TownHall : MonoBehaviour
     }
     public void UpdateButtons()
     {
-        foreach (UpgradeButton button in upgradeButtons)
-        {
-            button.UpdateUpgradeButton();
-        }
+        // foreach (UpgradeButton button in upgradeButtons)
+        // {
+        //     button.UpdateUpgradeButton();
+        // }
 
         if (SelectedUpgrade != null)
         {
@@ -103,7 +103,7 @@ public class TownHall : MonoBehaviour
             SelectedUpgrade = null;
             imageFadeController.FadeOut();
         }
-
+        upgradeButton.UpdateUpgradeButton();
         UpdateButtons();
     }
 }

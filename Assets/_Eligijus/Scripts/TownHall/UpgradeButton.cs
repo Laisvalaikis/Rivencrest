@@ -16,15 +16,24 @@ public class UpgradeButton : MonoBehaviour
     private Button _button;
     private Data _data;
 
+    private void OnEnable()
+    {
+        if (_data == null && Data.Instance != null)
+        {
+            _button = GetComponent<Button>();
+            _data = Data.Instance;
+        }
+        UpdateUpgradeButton();
+    }
+
     private void Start()
     {
-        _button = GetComponent<Button>();
-        _data = Data.Instance;
         imageFadeController.gameObject.SetActive(true);
     }
 
     public void UpdateUpgradeButton()
     {
+        
         TownHallData townHall = _data.townData.townHall;
         if (townHall.GetByType((TownHallUpgrade)upgradeData.upgradeIndex) + 1 < upgradeData.upgradeValue)//negalimi pirkti nes per auksti
         {

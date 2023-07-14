@@ -164,8 +164,8 @@ public class GameProgress : MonoBehaviour
             gameUi.UpdateDayNumber();
             gameUi.UpdateDifficultyButton();
             gameUi.UpdateUnspentPointWarnings();
-            GameObject.Find("CanvasCamera").transform.Find("RecruitmentCenterTable").GetComponent<Recruitment>().UpdateButtons();
-            GameObject.Find("CanvasCamera").transform.Find("TownHallTable").GetComponent<TownHall>().UpdateButtons();
+          //  GameObject.Find("CanvasCamera").transform.Find("RecruitmentCenterTable").GetComponent<Recruitment>().UpdateButtons();
+          //  GameObject.Find("CanvasCamera").transform.Find("TownHallTable").GetComponent<TownHall>().UpdateButtons();
         }
     }
 

@@ -279,9 +279,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: SelectUpgrade
+      - m_Target: {fileID: 820101814970954513}
+        m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
+        m_MethodName: UpdateUpgradeButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -305,10 +305,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DefaultSprite: {fileID: 4506935430025329301, guid: 3112b8e60e239a94889288b2f8421caf, type: 3}
   UpgradedSprite: {fileID: 6811628510033348232, guid: 3112b8e60e239a94889288b2f8421caf, type: 3}
-  upgradeData: {fileID: 0}
+  upgradeData: {fileID: 11400000, guid: 8b1b6740bb5ff0e42addbf53a5bf2caa, type: 2}
   frame: {fileID: 5698355857053634420}
   text: {fileID: 5169415412564077774}
-  gameUi: {fileID: 0}
   imageFadeController: {fileID: 0}
 --- !u!114 &2977691858047317215
 MonoBehaviour:
@@ -327,13 +326,13 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 820101814970954513}
-          m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: TownHall, Assembly-CSharp
           m_MethodName: SelectUpgrade
-          m_Mode: 1
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 820101814970954513}
+            m_ObjectArgumentAssemblyTypeName: UpgradeButton, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -343,13 +342,13 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 820101814970954513}
-          m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: TownHall, Assembly-CSharp
           m_MethodName: SelectUpgrade
-          m_Mode: 1
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 820101814970954513}
+            m_ObjectArgumentAssemblyTypeName: UpgradeButton, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
