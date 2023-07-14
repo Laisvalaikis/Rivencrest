@@ -35,6 +35,7 @@ public class CharacterPortrait : PortraitButton
                 else
                 {
                     characterTable.DisplayCharacterTable(characterIndex);
+                    characterTable.UpdateAllAbilities();
                     characterTable.UpdateTable();
                 }
             }

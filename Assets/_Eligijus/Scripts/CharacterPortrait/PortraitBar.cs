@@ -175,6 +175,7 @@ public class PortraitBar : MonoBehaviour
 
     public void DisableAbilityCorner(int index)
     {
+        Debug.Log(index);
         townPortraits[index].abilityPointCorner.SetActive(false);
     }
 

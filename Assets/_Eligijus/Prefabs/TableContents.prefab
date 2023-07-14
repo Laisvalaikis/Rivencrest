@@ -1656,7 +1656,7 @@ MonoBehaviour:
   rangeText: {fileID: 2935462312316352891}
   damageText: {fileID: 6814705219803876866}
   blessingsText: {fileID: 6626823707474513250}
-  damageIcon: {fileID: 6699088638895265412}
+  damageIcon: {fileID: 3558874856962069095}
   isAbilitySlow: {fileID: 4456392737222719875}
   slowAbility: {fileID: 6282398631032726033}
   fastAbility: {fileID: 8388939811026630944}

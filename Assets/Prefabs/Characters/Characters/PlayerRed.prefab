@@ -233,27 +233,27 @@ MonoBehaviour:
     actionName: Attack
     AbilityIcon: {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: -1
-  - action: {fileID: 0}
+  - action: {fileID: 5507679452803949232}
     actionName: ShadowBlink
     AbilityIcon: {fileID: -4900127969809747176, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: 0
-  - action: {fileID: 0}
+  - action: {fileID: 7582991410137084866}
     actionName: Enrage
     AbilityIcon: {fileID: -1473824630161842880, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: 1
-  - action: {fileID: 0}
+  - action: {fileID: 5212303337500464521}
     actionName: Execute
     AbilityIcon: {fileID: -431620073777160903, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: 2
-  - action: {fileID: 0}
+  - action: {fileID: 5927842715618377546}
     actionName: Scream
     AbilityIcon: {fileID: 285764324283905352, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: 3
-  - action: {fileID: 0}
+  - action: {fileID: 8776918440695677339}
     actionName: IsolatedStrike
     AbilityIcon: {fileID: 2653253005981326686, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: -1
-  - action: {fileID: 0}
+  - action: {fileID: 5370577380780669887}
     actionName: FromTheShadows
     AbilityIcon: {fileID: 285764324283905352, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: -1

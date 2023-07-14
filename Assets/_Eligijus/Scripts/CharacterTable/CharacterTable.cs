@@ -18,12 +18,16 @@ public class CharacterTable : MonoBehaviour
     [SerializeField] private TextMeshProUGUI blessingList;
     [SerializeField] private PortraitBar portraitBar;
     [SerializeField] private GameObject confirmationTable;
+    [SerializeField] private TextMeshProUGUI confirmationTableText;
+    [SerializeField] private Image confirmationTableSprite;
     [SerializeField] private GameObject undo;
     [SerializeField] private Button leftArrow;
     [SerializeField] private Button rightArrow;
     [HideInInspector] public int characterIndex;
     [HideInInspector] public string originalName;
     [SerializeField] private Button sellButton;
+    [SerializeField] private List<Button> abilityButtons;
+    [SerializeField] private List<Image> abilityButtonImages;
     public TMP_InputField nameInput;
     [SerializeField] private GameUi gameUI;
     public HelpTable helpTable;
@@ -54,8 +58,8 @@ public class CharacterTable : MonoBehaviour
 
     private void UpdateCharacterPointCorner()
     {
-        List<SavedCharacter> charactersToUpdate = _data.AllAvailableCharacters;
-        if (charactersToUpdate[characterIndex].abilityPointCount < 0)
+        List<SavedCharacter> charactersToUpdate = _data.Characters;
+        if (charactersToUpdate[characterIndex].abilityPointCount <= 0)
         {
             portraitBar.DisableAbilityCorner(characterIndex);
         }
@@ -90,16 +94,27 @@ public class CharacterTable : MonoBehaviour
             nameInput.text = originalName;
         }
     }
+    
+    public void UpdateConfirmationTable()
+    {
+        var character = _data.Characters[characterIndex];
+        Color color = character.playerInformation.classColor; // fix this shit
+        confirmationTableText.text = $"Are you sure you want to sell <color=#{ColorUtility.ToHtmlStringRGBA(color)}>{character.characterName}</color> for <color=yellow>{character.cost / 2}</color> gold?";
+        confirmationTableSprite.sprite = character.playerInformation.CharacterPortraitSprite;
+    }
 
+    // until this everything is fixed
+    
     public void SellCharacter()
     {
-        int cost = _data.AllAvailableCharacters.Find(x => x.prefab == _data.Characters[characterIndex].prefab).cost;
+        int cost = _data.Characters[characterIndex].cost;
         _data.townData.townGold += cost / 2;
         gameUI.EnableGoldChange("+" + cost / 2 + "g");
         gameUI.UpdateTownCost();
         _data.Characters.RemoveAt(characterIndex);
         portraitBar.RemoveCharacter(characterIndex);
         gameObject.SetActive(false);
+        UpdateAllAbilities();
         UpdateTable();
     }
 
@@ -108,7 +123,6 @@ public class CharacterTable : MonoBehaviour
     {
         if (_data.Characters.Count > 0 && characterIndex < _data.Characters.Count && characterIndex >= 0)
         {
-            UpdateAbilities();
             UpdateTableInformation();
             UpdateConfirmationTable();
         }
@@ -133,14 +147,7 @@ public class CharacterTable : MonoBehaviour
             sellButton.interactable = false;
         }
     }
-
-    public void UpdateConfirmationTable()
-    {
-        var character = _data.Characters[characterIndex];
-        Color color = character.prefab.GetComponent<PlayerInformation>().ClassColor;; // fix this shit
-        transform.Find("ConfirmationTable").Find("Text").GetComponent<Text>().text = $"Are you sure you want to sell <color=#{ColorUtility.ToHtmlStringRGBA(color)}>{character.characterName}</color> for <color=yellow>{character.cost / 2}</color> gold?";
-        transform.Find("ConfirmationTable").Find("Portrait").GetComponent<Image>().sprite = character.prefab.GetComponent<PlayerInformation>().CharacterPortraitSprite;
-    }
+    
 
     private void RemoveHighlightsFromPortraitBar()
     {
@@ -172,26 +179,37 @@ public class CharacterTable : MonoBehaviour
         // }
     }
 
-    public void UpdateAbilities()
+    public void UpdateAllAbilities()
     {
         var character = _data.Characters[characterIndex];
-        for (int i = 0; i < transform.Find("Abilities").childCount; i++)
+        for (int i = 0; i < abilityButtons.Count; i++)
         {
-            transform.Find("Abilities").GetChild(i).Find("Add").GetComponent<Button>().interactable = character.abilityPointCount > 0;
-            transform.Find("Abilities").GetChild(i).Find("Add").gameObject.SetActive
-            (character.unlockedAbilities[i] == '0'
-                && character.abilityPointCount > 0);
+            abilityButtons[i].interactable = character.abilityPointCount > 0;
             if (character.unlockedAbilities[i] == '0')
             {
-                transform.Find("Abilities").GetChild(i).Find("Color").GetComponent<Image>().color = Color.gray;
+                abilityButtonImages[i].color = Color.gray;
             }
             else
             {
-                transform.Find("Abilities").GetChild(i).Find("Color").GetComponent<Image>().color = Color.white;
+                abilityButtonImages[i].color = Color.white;
             }
         }
-
     }
+
+    public void UpdateAbility(int index)
+    {
+        var character = _data.Characters[characterIndex];
+        abilityButtons[index].interactable = character.abilityPointCount > 0;
+        if (character.unlockedAbilities[index] == '0')
+        {
+            abilityButtonImages[index].color = Color.gray;
+        }
+        else
+        {
+            abilityButtonImages[index].color = Color.white;
+        }
+    }
+
     public void UpdateTableInformation()
     {
         SavedCharacter character = _data.Characters[characterIndex];
@@ -239,6 +257,7 @@ public class CharacterTable : MonoBehaviour
         if (index != characterIndex)
         {
             helpTable.gameObject.SetActive(false);
+            UpdateAllAbilities();
             UpdateTable();
         }
         characterIndex = index;
@@ -307,8 +326,8 @@ public class CharacterTable : MonoBehaviour
         _data.Characters[characterIndex].abilityPointCount--;
         UpdateCharacterPointCorner();
         tempUnlockedAbilities.Add(abilityIndex);
+        UpdateAllAbilities();
         UpdateTable();
-
     }
     private void RemoveAbility(int abilityIndex)
     {
@@ -327,6 +346,7 @@ public class CharacterTable : MonoBehaviour
         }
         _data.Characters[characterIndex].unlockedAbilities = newUnlockedAbilities;
         _data.Characters[characterIndex].abilityPointCount++;
+        UpdateCharacterPointCorner();
     }
 
     public void OnLeftArrowClick()
@@ -338,6 +358,7 @@ public class CharacterTable : MonoBehaviour
             // gameProgress.UpdateCharacterBar(1);
         }
         DisplayCharacterTable(newCharacterIndex);
+        UpdateAllAbilities();
         UpdateTable();
     }
 
@@ -350,6 +371,7 @@ public class CharacterTable : MonoBehaviour
             // gameProgress.UpdateCharacterBar(-1);
         }
         DisplayCharacterTable(newCharacterIndex);
+        UpdateAllAbilities();
         UpdateTable();
     }
 
@@ -358,6 +380,7 @@ public class CharacterTable : MonoBehaviour
         foreach (int abilityIndex in tempUnlockedAbilities)
         {
             RemoveAbility(abilityIndex);
+            UpdateAbility(abilityIndex);
         }
         tempUnlockedAbilities.Clear();
         UpdateTable();

@@ -61,7 +61,6 @@ public class HelpTable : MonoBehaviour
     public void EnableTableForTown(int abilityIndex, int characterIndex)
     {
         SetupHelpTable();
-        Debug.Log(abilityIndex + " " + characterIndex);
         var actionManager = _data.Characters[characterIndex].prefab.GetComponent<ActionManager>();
         var ability = actionManager.FindActionByIndex(abilityIndex).action;
         AbilityText abilityText = _abilities[ability.actionStateName];

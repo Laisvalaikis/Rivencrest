@@ -57,7 +57,5 @@ a
 1Assets/_Eligijus/Scripts/TownHall/TownHallData.cs,9\3\93551e833452da24b9d925cc10db58313f85c0d2
 f
 6Assets/_Eligijus/Scripts_old/UI/ImageFadeController.cs,c\e\ce0205c224202acf667d7bdf435b938c4918c933
-]
--Assets/_Eligijus/Scripts/TownHall/TownHall.cs,7\b\7b789676b4d8d0a6060b5417714e6abfbd7623d9
 d
 4Assets/_Eligijus/Scripts/Character/CharacterModel.cs,6\e\6e2f86afd023390394ff8abba26fe396061c5c29
