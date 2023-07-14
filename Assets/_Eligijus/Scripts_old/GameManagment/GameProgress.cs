@@ -97,7 +97,15 @@ public class GameProgress : MonoBehaviour
             }
         }
     }
-    
+
+    private void OnEnable()
+    {
+        if (_data == null && Data.Instance != null)
+        {
+            _data = Data.Instance;
+        }
+    }
+
     void Start()
     {
         for (int i = 0; i < _data.AllAvailableCharacters.Count; i++)
@@ -413,7 +421,7 @@ public class GameProgress : MonoBehaviour
     public static int currentMaxLevel()
     {
         int MaxLevel = 2;
-        int townHallChar = instance._data.townData.townHall.maxCharacterLevel;
+        int townHallChar = Data.Instance.townData.townHall.maxCharacterLevel;
         if (townHallChar == 0)
         {
             MaxLevel = 2;

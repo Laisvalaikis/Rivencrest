@@ -38,14 +38,13 @@ public class CharacterTable : MonoBehaviour
         ResetTempUnlockedAbilities();
     }
 
-    private void Start()
-    {
-        _data = Data.Instance;
-    }
-
     private void OnEnable()
     {
         ResetTempUnlockedAbilities();
+        if (_data == null && Data.Instance != null)
+        {
+            _data = Data.Instance;
+        }
     }
 
     private void OnDisable()
@@ -362,7 +361,6 @@ public class CharacterTable : MonoBehaviour
     public void ExitTable()
     {
         gameObject.SetActive(false);
-        helpTable.gameObject.SetActive(false);
     }
     
     

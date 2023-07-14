@@ -25,7 +25,6 @@ public class RecruitButton : MonoBehaviour
 
     public void UpdateRecruitButton()
     {
-        
             var charInformation = character.playerInformation;
             className.text = charInformation.ClassName;
             className.color = charInformation.classColor;
@@ -40,16 +39,6 @@ public class RecruitButton : MonoBehaviour
                 buyButton.interactable = false;
             }
     }
-
-    public void BuyCharacter()
-    {
-        if (_data.Characters.Count < _data.maxCharacterCount)
-        {
-            GameObject.Find("GameProgress").GetComponent<GameProgress>().BuyCharacter(character);
-            transform.parent.parent.gameObject.GetComponent<Recruitment>().CharactersInShop.Remove(character);
-            transform.parent.parent.gameObject.GetComponent<Recruitment>().UpdateButtons();
-        }
-        else Debug.Log("Ziurek ka darai, kvaily!");
-    }
+    
 
 }

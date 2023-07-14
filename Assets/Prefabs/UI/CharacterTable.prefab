@@ -2122,9 +2122,8 @@ MonoBehaviour:
   abilityPointCount: {fileID: 2987314506136498532}
   blessingList: {fileID: 6633909957833512659}
   portraitBar: {fileID: 0}
-  characterController: {fileID: 0}
-  confirmationTable: {fileID: 0}
-  undo: {fileID: 0}
+  confirmationTable: {fileID: 452309875233768196}
+  undo: {fileID: 8516241479126753895}
   leftArrow: {fileID: 3510762091516565375}
   rightArrow: {fileID: 1100916571253720714}
   characterIndex: 0
@@ -2133,7 +2132,6 @@ MonoBehaviour:
   nameInput: {fileID: 3854930570619354576}
   gameUI: {fileID: 0}
   helpTable: {fileID: 0}
-  helpTableController: {fileID: 0}
   recruitmentCenterTable: {fileID: 0}
   townHall: {fileID: 0}
 --- !u!1 &2198414035412818402

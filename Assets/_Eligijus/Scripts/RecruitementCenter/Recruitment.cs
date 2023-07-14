@@ -15,6 +15,8 @@ public class Recruitment : MonoBehaviour
     public Button reRollButton;
     public TextAsset NamesMFile;
     public TextAsset NamesWFile;
+    [SerializeField] private PortraitBar portraitBar;
+    [SerializeField] private GameUi gameUI;
     private Data _data;
     private int CharacterLevelChar = 0;
     private List<string> NamesM = new List<string>();
@@ -144,6 +146,31 @@ public class Recruitment : MonoBehaviour
             int townHallChar = _data.townData.townHall.characterReRoll;
             reRollButton.interactable = (townHallChar == 1);
         }
+    }
+    
+    public void BuyCharacter(int index)
+    {
+        if (_data.Characters.Count < _data.maxCharacterCount)
+        {
+            SavedCharacter savedCharacter = recruitTableCharacters[index].character;
+            if (_data.canButtonsBeClicked)
+            {
+                
+                _data.InsertCharacter(savedCharacter);
+                _data.townData.townGold -= savedCharacter.cost;
+                gameUI.EnableGoldChange("-" + savedCharacter.cost + "g");
+                gameUI.UpdateTownCost();
+                portraitBar.InsertCharacter();
+                gameUI.UpdateUnspentPointWarnings();
+                gameUI.UpdateBuyRecruitsWarning();
+                _data.statistics.charactersBoughtCountByClass[Statistics.GetClassIndex(savedCharacter.playerInformation.ClassName)]++;
+                _data.globalStatistics.charactersBoughtCountByClass[Statistics.GetClassIndex(savedCharacter.playerInformation.ClassName)]++;
+            
+            }
+            CharactersInShop.Remove(savedCharacter);
+            UpdateButtons();
+        }
+        else Debug.Log("Ziurek ka darai, kvaily!");
     }
     
     public void Reroll()
