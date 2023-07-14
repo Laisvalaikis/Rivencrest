@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974309a8d2baa9043afe01c852ee0d6a, type: 3}
   m_Name: SummonBear
   m_EditorClassIdentifier: 
-  abilityTitle: 
-  abilityDescription: 
+  abilityTitle: SUMMON BEAR
+  abilityDescription: 'Summon a BEAR and
+
+    add it to your team.'

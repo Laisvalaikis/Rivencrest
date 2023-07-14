@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974309a8d2baa9043afe01c852ee0d6a, type: 3}
   m_Name: GroundSlam
   m_EditorClassIdentifier: 
-  abilityTitle: 
-  abilityDescription: 
+  abilityTitle: GROUND SLAM
+  abilityDescription: "Deal damage to all\nadjacent enemies now\nand at the start
+    \nof your next turn."

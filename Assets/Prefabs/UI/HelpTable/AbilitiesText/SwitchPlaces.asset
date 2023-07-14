@@ -12,5 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974309a8d2baa9043afe01c852ee0d6a, type: 3}
   m_Name: SwitchPlaces
   m_EditorClassIdentifier: 
-  abilityTitle: 
-  abilityDescription: 
+  abilityTitle: SWITCH PLACES
+  abilityDescription: 'Switch places with
+
+    a character.
+
+    If the character
+    is on the enemy
+
+    team, slow them by 1.'

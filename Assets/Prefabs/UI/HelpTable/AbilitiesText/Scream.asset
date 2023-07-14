@@ -12,5 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974309a8d2baa9043afe01c852ee0d6a, type: 3}
   m_Name: Scream
   m_EditorClassIdentifier: 
-  abilityTitle: 
-  abilityDescription: 
+  abilityTitle: SCREAM
+  abilityDescription: 'Deal damage to an enemy
+
+    and teleport to a tile behind
+    you.
+
+    If the enemy does not have allies on
+
+    adjacent tiles, they get
+    silenced
+
+    and cannot use abilities for 1 turn.'

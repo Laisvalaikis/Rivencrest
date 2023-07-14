@@ -12,5 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974309a8d2baa9043afe01c852ee0d6a, type: 3}
   m_Name: IceQuake
   m_EditorClassIdentifier: 
-  abilityTitle: 
-  abilityDescription: 
+  abilityTitle: ICE QUAKE
+  abilityDescription: 'Deal damage to an enemy
+
+    and SLOW them by 1MP.
+
+    Ability
+    ROOTS and deals bonus damage
+
+    if the enemy is already affected by
+
+    negative
+    movement debuffs.'

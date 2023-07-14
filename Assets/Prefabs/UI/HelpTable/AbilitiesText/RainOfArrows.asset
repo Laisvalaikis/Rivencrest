@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974309a8d2baa9043afe01c852ee0d6a, type: 3}
   m_Name: RainOfArrows
   m_EditorClassIdentifier: 
-  abilityTitle: 
-  abilityDescription: 
+  abilityTitle: RAIN OF ARROWS
+  abilityDescription: 'Create 5-Tile DANGER zone.
+
+    Deal damage to characters
+    standing
+
+    in the zone next turn.'

@@ -1630,7 +1630,7 @@ RectTransform:
   - {fileID: 4374354788810176774}
   - {fileID: 6159304950857822259}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1662,6 +1662,7 @@ MonoBehaviour:
   fastAbility: {fileID: 8388939811026630944}
   abilityText:
   - {fileID: 11400000, guid: a9766b3f05b23fb4d9e3e509afa2f2a1, type: 2}
+  - {fileID: 11400000, guid: cb48856d6ce0fca4aab10a71fbff3967, type: 2}
   - {fileID: 11400000, guid: 53e575d1f5acf4a44b2a3a4dc2c85643, type: 2}
   - {fileID: 11400000, guid: 6d53e782f84cbed4490971f09e090dec, type: 2}
   - {fileID: 11400000, guid: 390ac1f287a10eb4b9168f29a5e1399d, type: 2}

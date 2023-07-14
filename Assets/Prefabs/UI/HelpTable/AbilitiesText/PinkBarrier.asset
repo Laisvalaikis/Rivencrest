@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974309a8d2baa9043afe01c852ee0d6a, type: 3}
   m_Name: PinkBarrier
   m_EditorClassIdentifier: 
-  abilityTitle: 
-  abilityDescription: 
+  abilityTitle: BARRIER
+  abilityDescription: 'Give BARRIER and 1 MP
+
+    to an ally.
+
+    Next damage they
+    take is negated.'

@@ -12,5 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974309a8d2baa9043afe01c852ee0d6a, type: 3}
   m_Name: WallEntrap
   m_EditorClassIdentifier: 
-  abilityTitle: 
-  abilityDescription: 
+  abilityTitle: ENTRAP
+  abilityDescription: 'Choose a character and
+
+    create destroyable rocks around
+    them.
+
+    Rocks are destroyed at the start
+
+    of your next turn.'

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974309a8d2baa9043afe01c852ee0d6a, type: 3}
   m_Name: WeakSpot
   m_EditorClassIdentifier: 
-  abilityTitle: 
-  abilityDescription: 
+  abilityTitle: WEAK SPOT
+  abilityDescription: "Create a WEAK SPOT on the enemy.\nEnemy with weak spot takes
+    \n1 more damage from all sources."
