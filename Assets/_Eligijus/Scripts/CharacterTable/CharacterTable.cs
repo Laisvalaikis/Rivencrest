@@ -23,7 +23,6 @@ public class CharacterTable : MonoBehaviour
     [SerializeField] private GameObject undo;
     [SerializeField] private Button leftArrow;
     [SerializeField] private Button rightArrow;
-    [HideInInspector] public int characterIndex;
     [HideInInspector] public string originalName;
     [SerializeField] private Button sellButton;
     [SerializeField] private List<Button> abilityButtons;
@@ -34,6 +33,7 @@ public class CharacterTable : MonoBehaviour
     public GameObject recruitmentCenterTable;
     public TownHall townHall;
     
+    private int characterIndex;
     private List<int> tempUnlockedAbilities = new List<int>();
     private Data _data;
     
@@ -49,6 +49,11 @@ public class CharacterTable : MonoBehaviour
         {
             _data = Data.Instance;
         }
+    }
+
+    public int GetCurrentCharacterIndex()
+    {
+        return characterIndex;
     }
 
     private void OnDisable()
@@ -101,6 +106,86 @@ public class CharacterTable : MonoBehaviour
         Color color = character.playerInformation.classColor; // fix this shit
         confirmationTableText.text = $"Are you sure you want to sell <color=#{ColorUtility.ToHtmlStringRGBA(color)}>{character.characterName}</color> for <color=yellow>{character.cost / 2}</color> gold?";
         confirmationTableSprite.sprite = character.playerInformation.CharacterPortraitSprite;
+    }
+    
+    public void UpdateAllAbilities()
+    {
+        var character = _data.Characters[characterIndex];
+        for (int i = 0; i < abilityButtons.Count; i++)
+        {
+            abilityButtons[i].interactable = character.abilityPointCount > 0;
+            if (character.unlockedAbilities[i] == '0')
+            {
+                abilityButtonImages[i].color = Color.gray;
+            }
+            else
+            {
+                abilityButtonImages[i].color = Color.white;
+            }
+        }
+    }
+
+
+    public void DisplayCharacterTable(int index)
+    {
+        gameObject.SetActive(true);
+        if (index != characterIndex)
+        {
+            helpTable.gameObject.SetActive(false);
+            UpdateAllAbilities();
+            UpdateTable();
+        }
+        characterIndex = index;
+        ResetTempUnlockedAbilities();
+
+        if (recruitmentCenterTable != null && townHall != null)
+        {
+            recruitmentCenterTable.SetActive(false);
+            townHall.CloseTownHall();
+        }
+        else
+        {
+            Debug.Log("TownHall is null");
+        }
+        
+        
+    }
+
+    public void EnableDisableHelpTable(int index)
+    {
+        helpTable.EnableTableForTown(index, characterIndex);
+    }
+    
+    public void UndoAbilitySelection()
+    {
+        foreach (int abilityIndex in tempUnlockedAbilities)
+        {
+            RemoveAbility(abilityIndex);
+        }
+        UpdateAllAbilities();
+        tempUnlockedAbilities.Clear();
+        UpdateTable();
+    }
+    
+    public void ExitTable()
+    {
+        gameObject.SetActive(false);
+    }
+    
+    public void OnLeftArrowClick()
+    {
+        int newCharacterIndex = Mathf.Clamp(characterIndex - 1, 0, _data.Characters.Count - 1);
+        DisplayCharacterTable(newCharacterIndex);
+        UpdateAllAbilities();
+        UpdateTable();
+    }
+
+    public void OnRightArrowClick()
+    {
+        int newCharacterIndex = Mathf.Clamp(characterIndex + 1, 0, _data.Characters.Count - 1);
+        DisplayCharacterTable(newCharacterIndex);
+        UpdateAllAbilities();
+        UpdateTable();
     }
 
     // until this everything is fixed
@@ -178,37 +263,7 @@ public class CharacterTable : MonoBehaviour
         //     }
         // }
     }
-
-    public void UpdateAllAbilities()
-    {
-        var character = _data.Characters[characterIndex];
-        for (int i = 0; i < abilityButtons.Count; i++)
-        {
-            abilityButtons[i].interactable = character.abilityPointCount > 0;
-            if (character.unlockedAbilities[i] == '0')
-            {
-                abilityButtonImages[i].color = Color.gray;
-            }
-            else
-            {
-                abilityButtonImages[i].color = Color.white;
-            }
-        }
-    }
-
-    public void UpdateAbility(int index)
-    {
-        var character = _data.Characters[characterIndex];
-        abilityButtons[index].interactable = character.abilityPointCount > 0;
-        if (character.unlockedAbilities[index] == '0')
-        {
-            abilityButtonImages[index].color = Color.gray;
-        }
-        else
-        {
-            abilityButtonImages[index].color = Color.white;
-        }
-    }
+    
 
     public void UpdateTableInformation()
     {
@@ -249,37 +304,7 @@ public class CharacterTable : MonoBehaviour
             }
         }
     }
-    
-    public void DisplayCharacterTable(int index)
-    {
-        Debug.Log("Character Select scene can be broken");
-        GameObject table = GameObject.Find("Canvas").transform.Find("CharacterTable").gameObject;
-        if (index != characterIndex)
-        {
-            helpTable.gameObject.SetActive(false);
-            UpdateAllAbilities();
-            UpdateTable();
-        }
-        characterIndex = index;
-        ResetTempUnlockedAbilities();
 
-        if (recruitmentCenterTable != null && townHall != null)
-        {
-            recruitmentCenterTable.SetActive(false);
-            townHall.CloseTownHall();
-        }
-        else
-        {
-            Debug.Log("TownHall is null");
-        }
-        
-        table.SetActive(true);
-    }
-
-    public void EnableDisableHelpTable(int index)
-    {
-        helpTable.EnableTableForTown(index, characterIndex);
-    }
 
     private int CalculateMaxHP(SavedCharacter character)
     {
@@ -348,48 +373,5 @@ public class CharacterTable : MonoBehaviour
         _data.Characters[characterIndex].abilityPointCount++;
         UpdateCharacterPointCorner();
     }
-
-    public void OnLeftArrowClick()
-    {
-        int newCharacterIndex = Mathf.Clamp(characterIndex - 1, 0, _data.Characters.Count - 1);
-        if (newCharacterIndex == 5)//newCharacterIndex / 6 < characterIndex / 6)
-        {
-            Debug.Log("Need To change Function");
-            // gameProgress.UpdateCharacterBar(1);
-        }
-        DisplayCharacterTable(newCharacterIndex);
-        UpdateAllAbilities();
-        UpdateTable();
-    }
-
-    public void OnRightArrowClick()
-    {
-        int newCharacterIndex = Mathf.Clamp(characterIndex + 1, 0, _data.Characters.Count - 1);
-        if (newCharacterIndex == 6)//newCharacterIndex / 6 > characterIndex / 6)
-        {
-            Debug.Log("Need To change Function");
-            // gameProgress.UpdateCharacterBar(-1);
-        }
-        DisplayCharacterTable(newCharacterIndex);
-        UpdateAllAbilities();
-        UpdateTable();
-    }
-
-    public void UndoAbilitySelection()
-    {
-        foreach (int abilityIndex in tempUnlockedAbilities)
-        {
-            RemoveAbility(abilityIndex);
-            UpdateAbility(abilityIndex);
-        }
-        tempUnlockedAbilities.Clear();
-        UpdateTable();
-    }
-
-    public void ExitTable()
-    {
-        gameObject.SetActive(false);
-    }
-    
     
 }

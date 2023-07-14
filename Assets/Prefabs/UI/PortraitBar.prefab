@@ -235,7 +235,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1115209802646633124}
         m_TargetAssemblyTypeName: PortraitBar, Assembly-CSharp
         m_MethodName: Scroll
         m_Mode: 3
@@ -431,7 +431,7 @@ RectTransform:
   - {fileID: 5101813387772477879}
   - {fileID: 5101813386197731621}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -701,7 +701,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1115209802646633124}
         m_TargetAssemblyTypeName: PortraitBar, Assembly-CSharp
         m_MethodName: Scroll
         m_Mode: 3

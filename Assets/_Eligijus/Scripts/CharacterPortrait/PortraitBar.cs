@@ -175,13 +175,14 @@ public class PortraitBar : MonoBehaviour
 
     public void DisableAbilityCorner(int index)
     {
-        Debug.Log(index);
-        townPortraits[index].abilityPointCorner.SetActive(false);
+        int calculatedIndex = index-_scrollCharacterSelectIndex;
+        townPortraits[calculatedIndex].abilityPointCorner.SetActive(false);
     }
 
     public void EnableAbilityCorner(int index)
     {
-        townPortraits[index].abilityPointCorner.SetActive(true);
+        int calculatedIndex = index-_scrollCharacterSelectIndex;
+        townPortraits[calculatedIndex].abilityPointCorner.SetActive(true);
     }
 
 }

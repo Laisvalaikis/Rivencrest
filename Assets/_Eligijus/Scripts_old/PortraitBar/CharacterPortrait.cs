@@ -28,7 +28,7 @@ public class CharacterPortrait : PortraitButton
             }
             else
             {
-                if (characterTable.gameObject.activeInHierarchy && characterTable.characterIndex == characterIndex)
+                if (characterTable.gameObject.activeInHierarchy && characterTable.GetCurrentCharacterIndex() == characterIndex)
                 {
                     characterTable.ExitTable();
                 }
