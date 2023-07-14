@@ -19,10 +19,12 @@ GameObject:
   - component: {fileID: 711100996200367084}
   - component: {fileID: 4438398929298113651}
   - component: {fileID: 2884985102919791894}
-  - component: {fileID: 5593291741174351722}
-  - component: {fileID: 3590646411290934379}
-  - component: {fileID: 2650216382075314087}
-  - component: {fileID: 1912644619087791803}
+  - component: {fileID: 2194709832605407882}
+  - component: {fileID: 4607367836606502562}
+  - component: {fileID: 4996750964346945644}
+  - component: {fileID: 1077077096156943379}
+  - component: {fileID: 1535046524347324555}
+  - component: {fileID: 6331215606971252136}
   m_Layer: 8
   m_Name: PlayerGreen
   m_TagString: Player
@@ -233,27 +235,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AbilityBackground: {fileID: 937255998556263114, guid: f12fdd45e276893438b8ce4098f754cb, type: 3}
   ActionScripts:
-  - action: {fileID: 0}
+  - action: {fileID: 6890059959884175614}
     actionName: Attack
     AbilityIcon: {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: -1
-  - action: {fileID: 0}
+  - action: {fileID: 4607367836606502562}
     actionName: RainOfArrows
     AbilityIcon: {fileID: -660037021321600360, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: 0
-  - action: {fileID: 0}
+  - action: {fileID: 1077077096156943379}
     actionName: PowerShot
     AbilityIcon: {fileID: -6000465129233884172, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: 1
-  - action: {fileID: 0}
+  - action: {fileID: 4996750964346945644}
     actionName: Volley
     AbilityIcon: {fileID: 2770929758457341302, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: 2
-  - action: {fileID: 0}
+  - action: {fileID: 6331215606971252136}
     actionName: LongShot
     AbilityIcon: {fileID: -9139038222646363919, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: 3
-  - action: {fileID: 0}
+  - action: {fileID: 1535046524347324555}
     actionName: CreateBearTrap
     AbilityIcon: {fileID: -5250772273186044626, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     AbilityIndex: -1
@@ -388,7 +390,59 @@ MonoBehaviour:
     m_Bits: 2048
   DestinationObject: {fileID: 0}
   _data: {fileID: 0}
---- !u!114 &5593291741174351722
+--- !u!114 &2194709832605407882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659955980883675694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be4151c260c775b42a3a812a1c5c2b98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedEffectIndex: 0
+  selectedSongIndex: 0
+  actionStateName: AttackTwice
+  AttackRange: 1
+  AbilityCooldown: 5
+  minAttackDamage: 0
+  maxAttackDamage: 0
+  isAbilitySlow: 1
+  friendlyFire: 0
+  AttackAbility: 0
+  AvailableAttacks: 1
+  AbilityPoints: 0
+  isDisabled: 0
+  spawnedCharacter: {fileID: 0}
+--- !u!114 &4607367836606502562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659955980883675694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 956e5dbe8c6fda94fa56e02dba7d4595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedEffectIndex: 0
+  selectedSongIndex: 0
+  actionStateName: RainOfArrows
+  AttackRange: 3
+  AbilityCooldown: 3
+  minAttackDamage: 10
+  maxAttackDamage: 15
+  isAbilitySlow: 1
+  friendlyFire: 1
+  AttackAbility: 0
+  AvailableAttacks: 1
+  AbilityPoints: 0
+  isDisabled: 0
+  spawnedCharacter: {fileID: 0}
+--- !u!114 &4996750964346945644
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -415,7 +469,7 @@ MonoBehaviour:
   isDisabled: 0
   spawnedCharacter: {fileID: 0}
   spellDamage: 6
---- !u!114 &3590646411290934379
+--- !u!114 &1077077096156943379
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -441,7 +495,7 @@ MonoBehaviour:
   AbilityPoints: 0
   isDisabled: 0
   spawnedCharacter: {fileID: 0}
---- !u!114 &2650216382075314087
+--- !u!114 &1535046524347324555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -468,7 +522,7 @@ MonoBehaviour:
   isDisabled: 0
   spawnedCharacter: {fileID: 0}
   BearTrapPrefab: {fileID: 2474793349534955981, guid: d1b034f397084084f9299b903af8950b, type: 3}
---- !u!114 &1912644619087791803
+--- !u!114 &6331215606971252136
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
