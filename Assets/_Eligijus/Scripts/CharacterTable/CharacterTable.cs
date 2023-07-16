@@ -199,8 +199,11 @@ public class CharacterTable : MonoBehaviour
         _data.Characters.RemoveAt(characterIndex);
         portraitBar.RemoveCharacter(characterIndex);
         gameObject.SetActive(false);
-        UpdateAllAbilities();
         UpdateTable();
+        if (characterIndex > _data.Characters.Count - 1)
+        {
+            characterIndex = _data.Characters.Count - 1;
+        }
     }
 
 

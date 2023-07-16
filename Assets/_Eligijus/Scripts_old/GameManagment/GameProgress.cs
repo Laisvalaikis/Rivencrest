@@ -180,24 +180,7 @@ public class GameProgress : MonoBehaviour
             _data.maxCharacterCount = 6;
         }
     }
-
-    //RECRUITMENT
-    public void BuyCharacter(SavedCharacter character)
-    {
-        if (_data.canButtonsBeClicked)
-        {
-            _data.InsertCharacter(character);
-            _data.townData.townGold -= character.cost;
-            gameUi.EnableGoldChange("-" + character.cost + "g");
-            gameUi.UpdateTownCost();
-            portraitBarControl.InsertCharacter();
-            gameUi.UpdateUnspentPointWarnings();
-            gameUi.UpdateBuyRecruitsWarning();
-            _data.statistics.charactersBoughtCountByClass[Statistics.GetClassIndex(character.prefab.GetComponent<PlayerInformation>().ClassName)]++;
-            _data.globalStatistics.charactersBoughtCountByClass[Statistics.GetClassIndex(character.prefab.GetComponent<PlayerInformation>().ClassName)]++;
-            
-        }
-    }
+    
     public void SpendGold(int cost)
     {
         _data.townData.townGold -= cost;

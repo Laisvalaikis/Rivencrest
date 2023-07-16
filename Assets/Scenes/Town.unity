@@ -1156,7 +1156,7 @@ PrefabInstance:
       objectReference: {fileID: 146949006}
     - target: {fileID: 4037621416185959022, guid: aacfcd6e889607b468962171e3915017, type: 3}
       propertyPath: AttractedCharactersCount
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4037621416185959022, guid: aacfcd6e889607b468962171e3915017, type: 3}
       propertyPath: CharactersInShop.Array.size
