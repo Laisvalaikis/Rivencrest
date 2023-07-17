@@ -25,8 +25,6 @@ d
 -Assets/_Eligijus/Scripts/Data/StateManager.cs,4\c\4cd4ef24dc08189ad41cb29e1f08611c79deab3b
 c
 3Assets/_Eligijus/Scripts/SaveManager/SaveManager.cs,8\5\851682e5072894eb9180a4349a106616fdae33a1
-i
-9Assets/_Eligijus/Scripts_old/Character/CharacterSelect.cs,b\0\b0bffe7a4307ef05b7730e0b0e6071242dc79851
 b
 2Assets/_Eligijus/Scripts/SaveManager/SaveSystem.cs,d\6\d6cb34f1c0584a24a389e48d421df943e12bf7d1
 t

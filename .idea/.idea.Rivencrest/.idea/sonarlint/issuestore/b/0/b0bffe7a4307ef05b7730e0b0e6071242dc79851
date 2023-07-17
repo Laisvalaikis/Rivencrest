@@ -1,15 +1,0 @@
-
-Kcsharpsquid:S3903	".Move 'CharacterSelect' into a named namespace.(¯¿ç†
-acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¾å‡
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Áß†©ùÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(•Î ÿÿÿÿÿ
-hcsharpsquid:S3267‰"JLoop should be simplified by calling Select(character => character.Item1))(‘ÛÅ®
-xcsharpsquid:S1450"[Remove the field 'gameProgress' and declare it as a local variable in the relevant methods.(öø¼
-Pcsharpsquid:S112n"5'System.Exception' should not be thrown by user code.(Æßör
-;csharpsquid:S125"Remove this commented out code.(Ò÷°Ç
-@csharpsquid:S125"Remove this commented out code.(Ù¦¢½ûÿÿÿÿ
-;csharpsquid:S125A"Remove this commented out code.(”¹Õğ
-@csharpsquid:S125x"Remove this commented out code.(ÄÁŒßúÿÿÿÿ
-<csharpsquid:S125Î"Remove this commented out code.(Ú°à¬
-Acsharpsquid:S125›"Remove this commented out code.(èµÍ›ûÿÿÿÿ
-Acsharpsquid:S125³"Remove this commented out code.(èµÍ›ûÿÿÿÿ
