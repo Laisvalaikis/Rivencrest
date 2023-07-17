@@ -51,8 +51,6 @@ b
 2Assets/_Eligijus/Scripts_old/PvPCharacterSelect.cs,b\a\baec9f3db26ae1a98111d2bc64f234f3b1913ef2
 c
 3Assets/_Eligijus/Scripts/SoundManager/MusicLevel.cs,b\c\bcf2cea0aed0f00408090171ab2d1b569ddd6624
-Y
-)Assets/_Eligijus/Scripts/Data/SaveData.cs,c\3\c3583f4382115a7e05b48a80d44a0698fbc60ba1
 a
 1Assets/_Eligijus/Scripts/TownHall/TownHallData.cs,9\3\93551e833452da24b9d925cc10db58313f85c0d2
 f

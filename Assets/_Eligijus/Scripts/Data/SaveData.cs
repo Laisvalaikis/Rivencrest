@@ -19,7 +19,7 @@ public class SaveData : MonoBehaviour
     }
 
     //SAVESYSTEM
-    private void SaveGameData()
+    public void SaveGameData()
     {
         TownData townData = _data.townData;
         _data.selectedEnemies = new List<int>();
@@ -67,7 +67,6 @@ public class SaveData : MonoBehaviour
     {
         _allowEnemySelection = false;
         _allowDuplicates = false;
-        SetupRecruitmentCharacters();
         SaveGameData();
     }
 
