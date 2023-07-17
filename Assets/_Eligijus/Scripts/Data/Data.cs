@@ -22,6 +22,7 @@ public class Data : MonoBehaviour
     [HideInInspector] public List<int> SwitchedCharacters;
     [HideInInspector] public int currentCharacterIndex = -1;
     public int maxCharacterCount;
+    public int minCharacterCount;
     [HideInInspector] public bool createNewRCcharacters = false;
     public List<int> selectedEnemies;
     [HideInInspector] public Statistics statistics;

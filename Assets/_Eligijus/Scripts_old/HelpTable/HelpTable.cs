@@ -161,11 +161,11 @@ public class HelpTable : MonoBehaviour
         }
     }
 
-    public void EnableTableByName(string abilityName, SavedCharacter character)
+    public void EnableTableByName(ActionList ability, SavedCharacter character)
     {
+        SetupHelpTable();
         CloseAllHelpTables();
-        var ability = character.prefab.GetComponent<ActionManager>().FindActionByName(abilityName).GetBuffedAbility(character.blessings);
-        AbilityText abilityText = _abilities[ability.actionStateName];
+        AbilityText abilityText = _abilities[ability.action.actionStateName];
         if (abilityText == null)
         {
             print("Ner tokios help table lol");
@@ -173,7 +173,7 @@ public class HelpTable : MonoBehaviour
         else
         {
             gameObject.SetActive(true);
-            FillTableWithInfo(ability, abilityText, character, character.prefab.GetComponent<ActionManager>());
+            FillTableWithInfo(ability.action, abilityText, character, character.prefab.GetComponent<ActionManager>());
         }
     }
 

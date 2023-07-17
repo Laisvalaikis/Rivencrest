@@ -178,6 +178,7 @@ public class CharacterTable : MonoBehaviour
         DisplayCharacterTable(newCharacterIndex);
         UpdateAllAbilities();
         UpdateTable();
+        portraitBar.ScrollDownByCharacterIndex(newCharacterIndex);
     }
 
     public void OnRightArrowClick()
@@ -186,6 +187,7 @@ public class CharacterTable : MonoBehaviour
         DisplayCharacterTable(newCharacterIndex);
         UpdateAllAbilities();
         UpdateTable();
+        portraitBar.ScrollUpByCharacterIndex(newCharacterIndex);
     }
 
     // until this everything is fixed

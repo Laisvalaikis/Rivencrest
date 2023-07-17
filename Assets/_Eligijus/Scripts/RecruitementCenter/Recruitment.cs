@@ -17,6 +17,7 @@ public class Recruitment : MonoBehaviour
     public TextAsset NamesWFile;
     [SerializeField] private PortraitBar portraitBar;
     [SerializeField] private GameUi gameUI;
+    [SerializeField] private Button embark;
     private Data _data;
     private int CharacterLevelChar = 0;
     private List<string> NamesM = new List<string>();
@@ -167,6 +168,12 @@ public class Recruitment : MonoBehaviour
                 _data.globalStatistics.charactersBoughtCountByClass[Statistics.GetClassIndex(savedCharacter.playerInformation.ClassName)]++;
             
             }
+
+            if (_data.Characters.Count >= _data.minCharacterCount)
+            {
+                embark.interactable = true;
+            }
+
             CharactersInShop.Remove(savedCharacter);
             UpdateButtons();
         }

@@ -43,10 +43,4 @@ MonoBehaviour:
     abilityAction: 31
   - sprite: {fileID: -5250772273186044626, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     abilityAction: 10
-  BlessingsAndCurses:
-  - blessingName: 
-    rarity: 0
-    className: 
-    spellName: 
-    condition: 
-    description: 
+  BlessingsAndCurses: []

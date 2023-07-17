@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEditor.Localization.Plugins.XLIFF.V20;
 using UnityEngine;
 using UnityEngine.Events;
@@ -78,17 +80,21 @@ public class PortraitBar : MonoBehaviour
             townPortraits.Add(characterPortrait);
         }
         
-        // fixed part
-        
-        for (int i = index, count = characterIndex; i < _data.Characters.Count - characterIndex; i++, count++)
+        float countOfCharacters = _data.Characters.Count - (_page - 1) * townPortraits.Count ;
+        float countToUpdate = countOfCharacters > townPortraits.Count ? townPortraits.Count : countOfCharacters;
+        for (int i = index, count = characterIndex; i < countToUpdate; i++, count++)
         {
             UpdatePortrait(i, count);
         }
+
+        UpdateArrows(_scrollCharacterSelectIndex * -1);
         
-        if ( townPortraits.Count >= _data.Characters.Count)
+        if ( (_page - 1) * townPortraits.Count >= _data.Characters.Count)
         {
-            UpdateArrows(_scrollCharacterSelectIndex + townPortraits.Count);
+            Scroll(-1);
         }
+        
+        
 
         _lastElement--;
         
@@ -121,6 +127,24 @@ public class PortraitBar : MonoBehaviour
         UpdateArrows(scrollCalculation);
     }
 
+    public void ScrollUpByCharacterIndex(int characterIndex)
+    {
+        
+        if (characterIndex >= _page * townPortraits.Count)
+        {
+            Scroll(1);
+        }
+        
+    }
+
+    public void ScrollDownByCharacterIndex(int characterIndex)
+    {
+        if (characterIndex < (_page-1) * townPortraits.Count)
+        {
+            Scroll(-1);
+        }
+    }
+
     public void UpdatePortrait(int portraitIndex, int index)
     {
         townPortraits[portraitIndex].gameObject.SetActive(true);
@@ -140,17 +164,18 @@ public class PortraitBar : MonoBehaviour
 
     public void UpdateArrows(int scrollCalculation)
     {
-        if(scrollCalculation <= 0)
-        {
-            up.gameObject.SetActive(false);
-            
-        }
-        else if (_data.Characters.Count > townPortraits.Count)
+        if (_data.Characters.Count > townPortraits.Count * (_page - 1) && _page - 1 > 0)
         {
             up.gameObject.SetActive(true);
         }
+        else
+        {
+            up.gameObject.SetActive(false);
+        }
+        
 
-        if (_data.Characters.Count > townPortraits.Count && Mathf.Abs(scrollCalculation) + townPortraits.Count < _data.Characters.Count)
+        Debug.Log(Mathf.Abs(scrollCalculation) + townPortraits.Count);
+        if (_data.Characters.Count > townPortraits.Count * _page && townPortraits.Count * _page <= _data.Characters.Count)
         {
             down.gameObject.SetActive(true);
         }
