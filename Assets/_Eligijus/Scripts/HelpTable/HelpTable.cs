@@ -75,13 +75,10 @@ public class HelpTable : MonoBehaviour
             if (wasSelected)
             {
                 gameObject.SetActive(false);
-                CloseHelpTable();
                 wasSelected = false;
             }
             else
             {
-                gameObject.SetActive(false);
-                CloseHelpTable();
                 gameObject.SetActive(true);
                 FillTableWithInfo(ability, abilityText, character, actionManager);
                 wasSelected = true;
@@ -131,89 +128,5 @@ public class HelpTable : MonoBehaviour
         blessingsText.text = blessingTextBuilder.ToString();
     }
 
-    public void EnableTableForInGameButton()
-    {
-        var gameInformation = GameObject.Find("GameInformation").GetComponent<GameInformation>();
-        if (gameInformation.SelectedCharacter != null || gameInformation.InspectedCharacter != null)
-        {
-            var character = gameInformation.SelectedCharacter == null ? gameInformation.InspectedCharacter : gameInformation.SelectedCharacter;
-            var ability = character.GetComponent<ActionManager>().FindActionByName(character.GetComponent<PlayerInformation>().currentState).GetBuffedAbility(character.GetComponent<PlayerInformation>().savedCharacter.blessings);
-            AbilityText abilityText = _abilities[ability.actionStateName];
-            if (abilityText != null)
-            {
-                
-                gameInformation.helpTableOpen = true;
-                gameInformation.isBoardDisabled = true;
-                gameObject.SetActive(true);
-                FillTableWithInfo(ability, abilityText, character.GetComponent<PlayerInformation>().savedCharacter, character.GetComponent<ActionManager>());
-               
-            }
-        }
-    }
 
-    public void EnableTableForInGameRightClick(string abilityName)
-    {
-        var gameInformation = GameObject.Find("GameInformation").GetComponent<GameInformation>();
-        if (gameInformation.SelectedCharacter != null || gameInformation.InspectedCharacter != null)
-        {
-            var character = gameInformation.SelectedCharacter == null ? gameInformation.InspectedCharacter : gameInformation.SelectedCharacter;
-            BaseAction action = character.GetComponent<ActionManager>().FindActionByName(abilityName);
-            if (action != null) 
-            {
-                var ability = action.GetBuffedAbility(character.GetComponent<PlayerInformation>().savedCharacter.blessings);
-                AbilityText abilityText = _abilities[ability.actionStateName];
-                if (abilityText != null)
-                {
-                    gameInformation.helpTableOpen = true;
-                    gameInformation.isBoardDisabled = true;
-                    gameObject.SetActive(true);
-                    FillTableWithInfo(ability, abilityText, character.GetComponent<PlayerInformation>().savedCharacter,
-                        character.GetComponent<ActionManager>());
-                }
-            }
-        }
-    }
-
-    public void EnableTableByName(ActionList ability, SavedCharacter character)
-    {
-        SetupHelpTable();
-        CloseAllHelpTables();
-        AbilityText abilityText = _abilities[ability.action.actionStateName];
-        if (abilityText == null)
-        {
-            print("Ner tokios help table lol");
-        }
-        else
-        {
-            gameObject.SetActive(true);
-            FillTableWithInfo(ability.action, abilityText, character, character.prefab.GetComponent<ActionManager>());
-        }
-    }
-
-    public void CloseHelpTable()
-    {
-        for (int i = 0; i < GameObject.Find("Canvas").transform.Find("CharacterTable").transform.Find("Abilities").transform.childCount; i++)
-        {
-            GameObject.Find("Canvas").transform.Find("CharacterTable").transform.Find("Abilities").transform.GetChild(i).transform.Find("ActionButtonFrame").GetComponent<Animator>().SetBool("select", false);
-        }
-    }
-
-    public void CloseAllHelpTables()
-    {
-        if (GameObject.Find("Canvas") != null && GameObject.Find("Canvas").transform.Find("HelpTables") != null)
-        {
-            foreach (Transform x in GameObject.Find("Canvas").transform.Find("HelpTables"))
-            {
-                gameObject.SetActive(false);
-            }
-        }
-        if (GameObject.Find("CanvasCamera") != null && GameObject.Find("CanvasCamera").transform.Find("HelpTables") != null)
-        {
-            foreach (Transform x in GameObject.Find("CanvasCamera").transform.Find("HelpTables"))
-            {
-                gameObject.SetActive(false);
-            }
-        }
-    }
-    
 }

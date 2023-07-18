@@ -54,7 +54,7 @@ public class ActionButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
     {
         if(eventData.button == PointerEventData.InputButton.Right)
         {
-            _helpTable.EnableTableForInGameRightClick(buttonState);
+            // _helpTable.EnableTableForInGameRightClick(buttonState);
         }
     }
 
@@ -62,7 +62,7 @@ public class ActionButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
     {
         _helpTable.hasActionButtonBeenEntered = true;
         transform.Find("ActionButtonFrame").GetComponent<Animator>().SetBool("hover", true);
-        _helpTable.EnableTableForInGameRightClick(buttonState);
+        // _helpTable.EnableTableForInGameRightClick(buttonState);
         gameInformation.isBoardDisabled = true;
         EnableGridPreview(buttonState);
     }

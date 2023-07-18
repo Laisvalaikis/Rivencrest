@@ -561,7 +561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7319358462382695296
 RectTransform:
   m_ObjectHideFlags: 0
@@ -652,7 +652,6 @@ MonoBehaviour:
   NamesWFile: {fileID: 4900000, guid: 98da93bd7e4143440ab013f327c9c4f4, type: 3}
   portraitBar: {fileID: 0}
   gameUI: {fileID: 0}
-  embark: {fileID: 0}
 --- !u!1 &7319358462403588318
 GameObject:
   m_ObjectHideFlags: 0

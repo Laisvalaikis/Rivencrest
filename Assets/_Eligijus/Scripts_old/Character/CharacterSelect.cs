@@ -217,7 +217,7 @@ public class CharacterSelect : MonoBehaviour
             if (characterButton.gameObject.activeSelf)
             {
                 characterButton.transform.Find("Character").Find("Portrait").GetComponent<Image>().color = Color.white;
-                characterButton.GetComponent<CharacterPortrait>().available = true;
+                // characterButton.GetComponent<CharacterPortrait>().available = true;
             }
         }
     }
@@ -229,7 +229,7 @@ public class CharacterSelect : MonoBehaviour
             if (characterButton.gameObject.activeSelf && !AlreadySelected(characterButton.GetComponent<CharacterPortrait>().characterIndex))
             {
                 characterButton.transform.Find("Character").Find("Portrait").GetComponent<Image>().color = Color.grey;
-                characterButton.GetComponent<CharacterPortrait>().available = false;
+                // characterButton.GetComponent<CharacterPortrait>().available = false;
             }
         }
     }

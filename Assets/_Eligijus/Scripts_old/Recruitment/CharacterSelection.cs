@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterSelection : PortraitButton
+public class CharacterSelection : MonoBehaviour
 {
     public int characterIndex = 0;
     public CharacterSelect chharacterSelect;
 
-    public override void OnPortraitClick()
+    public void OnPortraitClick()
     {
         chharacterSelect.OnCharacterButtonClick(characterIndex);
     }

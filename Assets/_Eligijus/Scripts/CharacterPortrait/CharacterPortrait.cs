@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
-public class CharacterPortrait : PortraitButton
+public class CharacterPortrait : MonoBehaviour
 {
     public int characterIndex = 0;
     public Image characterImage;
@@ -20,7 +20,7 @@ public class CharacterPortrait : PortraitButton
         _data = Data.Instance;
     }
 
-    public override void OnPortraitClick()
+    public void OnPortraitClick()
     {
             if (_data.switchPortraits)
             {
