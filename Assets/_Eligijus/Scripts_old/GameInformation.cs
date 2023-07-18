@@ -769,7 +769,7 @@ public class GameInformation : MonoBehaviour
                     townHall.SetByType((TownHallUpgrade)5, 1);
                 }
             }
-            _saveData.SaveTownData();
+            // _saveData.SaveTownData();
         }
 
     }

@@ -264,10 +264,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotCreation
       objectReference: {fileID: 0}
-    - target: {fileID: 5426764180081387319, guid: 73bfec3b7e0b34c4c80f24429a027e87, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5426764180284357674, guid: 73bfec3b7e0b34c4c80f24429a027e87, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -952,7 +948,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &537318210
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1465,10 +1461,6 @@ PrefabInstance:
     - target: {fileID: 1837700787347467678, guid: 2e920c4d5bf19eb469f99726d8f18dc7, type: 3}
       propertyPath: m_Name
       value: NewGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 1837700787347467678, guid: 2e920c4d5bf19eb469f99726d8f18dc7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1837700787426070987, guid: 2e920c4d5bf19eb469f99726d8f18dc7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

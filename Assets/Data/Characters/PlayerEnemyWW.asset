@@ -24,8 +24,9 @@ MonoBehaviour:
   backgroundColor: {r: 0.3882353, g: 0.4117647, b: 0.54509807, a: 1}
   CharacterPortraitSprite: {fileID: -2016736815794541627, guid: 88a9dc2923d4fa842a8fce4120dbf698, type: 3}
   CharacterSplashArt: {fileID: 0}
-  characterSprite: {fileID: -5177022590925472271, guid: d11b501b36490324e8abe35439924e36, type: 3}
   CroppedSplashArt: {fileID: 0}
+  characterSprite: {fileID: -5177022590925472271, guid: d11b501b36490324e8abe35439924e36, type: 3}
+  roleSprite: {fileID: 3247885178541253379, guid: f8b3b122796f9894ebade0b0d30ac780, type: 3}
   abilitySprites:
   - {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
   abilities:

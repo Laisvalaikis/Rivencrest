@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameUi : MonoBehaviour
 {
@@ -10,14 +11,24 @@ public class GameUi : MonoBehaviour
     [SerializeField] private TextMeshProUGUI difficulty;
     [SerializeField] private GameObject abilityPointWarning;
     [SerializeField] private GameObject buyRecruitsWarning;
-    private Data _gameData;
+    [SerializeField] private Button embark;
+    private Data _data;
 
     private void Start()
     {
-        _gameData = Data.Instance;
+        _data = Data.Instance;
         UpdateDifficultyText();
         UpdateDayNumber();
         UpdateTownCost();
+        UpdateEmbarkButton();
+    }
+
+    public void UpdateEmbarkButton()
+    {
+        if (_data.Characters.Count >= _data.minCharacterCount)
+        {
+            embark.interactable = true;
+        }
     }
 
     public void UpdateTownCost()
@@ -32,21 +43,21 @@ public class GameUi : MonoBehaviour
     
     public void UpdateDifficultyButton()
     {
-        if (_gameData.townData.difficultyLevel == 0)
+        if (_data.townData.difficultyLevel == 0)
         {
-            _gameData.townData.difficultyLevel = 1;
+            _data.townData.difficultyLevel = 1;
             difficulty.text = "HARD";
         }
         else
         {
-            _gameData.townData.difficultyLevel = 0;
+            _data.townData.difficultyLevel = 0;
             difficulty.text = "EASY";
         }
     }
     
     private void UpdateDifficultyText()
     {
-        if (_gameData.townData.difficultyLevel == 0)
+        if (_data.townData.difficultyLevel == 0)
         {
             difficulty.text = "EASY";
         }

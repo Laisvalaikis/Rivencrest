@@ -17,15 +17,16 @@ MonoBehaviour:
   critChance: 5
   accuracy: 100
   dodgeChance: 20
-  role: 
+  role: DAMAGE
   classColor: {r: 0.84313726, g: 0.8039216, b: 0.79607844, a: 1}
   secondClassColor: {r: 0, g: 0, b: 0, a: 0}
   textColor: {r: 0.84313726, g: 0.8039216, b: 0.79607844, a: 1}
   backgroundColor: {r: 0.38431373, g: 0.34901962, b: 0.3254902, a: 1}
   CharacterPortraitSprite: {fileID: -686119517684455340, guid: 88a9dc2923d4fa842a8fce4120dbf698, type: 3}
   CharacterSplashArt: {fileID: 0}
-  characterSprite: {fileID: 3363299999276822706, guid: 893642e45b8298d44bd773829c7dcfbf, type: 3}
   CroppedSplashArt: {fileID: 0}
+  characterSprite: {fileID: 3363299999276822706, guid: 893642e45b8298d44bd773829c7dcfbf, type: 3}
+  roleSprite: {fileID: 3247885178541253379, guid: f8b3b122796f9894ebade0b0d30ac780, type: 3}
   abilitySprites:
   - {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
   abilities:

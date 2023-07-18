@@ -28,6 +28,7 @@ public class CharacterTable : MonoBehaviour
     [SerializeField] private List<Button> abilityButtons;
     [SerializeField] private List<Image> abilityButtonImages;
     [SerializeField] private List<Image> abilityButtonIconImages;
+    [SerializeField] private Image roleIcon;
     public TMP_InputField nameInput;
     [SerializeField] private GameUi gameUI;
     public HelpTable helpTable;
@@ -130,13 +131,14 @@ public class CharacterTable : MonoBehaviour
     public void DisplayCharacterTable(int index)
     {
         gameObject.SetActive(true);
-        if (index != characterIndex)
+        int tempIndex = characterIndex;
+        characterIndex = index;
+        if (index != tempIndex)
         {
             helpTable.gameObject.SetActive(false);
             UpdateTable();
             UpdateAllAbilities();
         }
-        characterIndex = index;
         ResetTempUnlockedAbilities();
 
         if (recruitmentCenterTable != null && townHall != null)
@@ -232,8 +234,8 @@ public class CharacterTable : MonoBehaviour
         }
         confirmationTable.SetActive(false);
         undo.SetActive(tempUnlockedAbilities.Count > 0);
-        leftArrow.interactable = characterIndex > 0;
-        rightArrow.interactable = characterIndex < _data.Characters.Count - 1;
+        leftArrow.gameObject.SetActive(characterIndex > 0);
+        rightArrow.gameObject.SetActive(characterIndex < _data.Characters.Count - 1);
         if (_data.Characters.Count > 3)
         {
             sellButton.interactable = true;
@@ -280,15 +282,15 @@ public class CharacterTable : MonoBehaviour
     {
         SavedCharacter character = _data.Characters[characterIndex];
         originalName = character.characterName;
-        PlayerInformation characterInfo = character.prefab.GetComponent<PlayerInformation>();
-        Color color = characterInfo.ClassColor;
-        tableBoarder.color = characterInfo.ClassColor2;
+        PlayerInformationData data = character.playerInformation;
+        Color color = data.classColor;
+        tableBoarder.color = data.secondClassColor;
         nameInput.text = character.characterName;
-        className.text = character.prefab.GetComponent<PlayerInformation>().ClassName;
+        className.text = data.ClassName;
         className.color = color;
-        role.text = characterInfo.role;
+        role.text = data.role;
         role.color = color;
-        UpdateRoleIcon(character);
+        roleIcon.sprite = data.roleSprite;
         level.text = "LEVEL: " + character.level;
         level.color = color;
         maxHP.text = "MAX HP: " + CalculateMaxHP(character);
@@ -297,7 +299,7 @@ public class CharacterTable : MonoBehaviour
         xpProgress.color = color;
         abilityPointCount.text = character.abilityPointCount.ToString();
         abilityPointCount.color = color;
-        characterArt.sprite = characterInfo.CharacterSplashArt;
+        characterArt.sprite = data.CharacterSplashArt;
         blessingList.text = character.CharacterTableBlessingString();
         //
         for (int i = 0; i < abilityButtonImages.Count; i++)
@@ -313,29 +315,13 @@ public class CharacterTable : MonoBehaviour
 
     private int CalculateMaxHP(SavedCharacter character)
     {
-        int maxHP = character.prefab.GetComponent<PlayerInformation>().MaxHealth; // fix this
+        int maxHP = character.playerInformation.MaxHealth; // fix this
         maxHP += (character.level - 1) * 2;
         if (character.blessings.Find(x => x.blessingName == "Healthy") != null)
         {
             maxHP += 3;
         }
         return maxHP;
-    }
-    private void UpdateRoleIcon(SavedCharacter character)
-    {
-        for (int i = 0; i < transform.Find("Info").transform.Find("Role").childCount; i++)
-        {
-            if (character.prefab.GetComponent<PlayerInformation>().role == transform.Find("Info").transform.Find("Role").GetChild(i).name)
-            {
-                transform.Find("Info").transform.Find("Role").GetChild(i).gameObject.SetActive(true);
-            }
-            else
-            {
-                transform.Find("Info").transform.Find("Role").GetChild(i).gameObject.SetActive(false);
-            }
-
-        }
-
     }
     public void UpgradeAbility(int abilityIndex)
     {

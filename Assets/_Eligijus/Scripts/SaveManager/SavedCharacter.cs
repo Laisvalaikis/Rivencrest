@@ -9,7 +9,6 @@ using System;
     public class SavedCharacter : SavableCharacter
     {
         public GameObject prefab;
-        public int characterIndex;
         public SavedCharacter() { }
 
         public SavedCharacter(GameObject prefab, int level, int xP, int xPToGain, bool dead, string characterName,

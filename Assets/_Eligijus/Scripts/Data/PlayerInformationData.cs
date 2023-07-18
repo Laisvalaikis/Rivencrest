@@ -22,8 +22,9 @@ public class PlayerInformationData : ScriptableObject
     [Header("Images")] 
     public Sprite CharacterPortraitSprite;
     public Sprite CharacterSplashArt;//For character table
-    public Sprite characterSprite;
     public Sprite CroppedSplashArt;
+    public Sprite characterSprite;
+    public Sprite roleSprite;
     public List<Sprite> abilitySprites;
     public List<AbilityData> abilities;
   

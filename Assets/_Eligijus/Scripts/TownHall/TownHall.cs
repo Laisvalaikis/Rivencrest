@@ -17,10 +17,13 @@ public class TownHall : MonoBehaviour
     private Image imageComponent;
     private UpgradeButton SelectedUpgrade;
     private Data _data;
-    private void Start()
+    private void OnEnable()
     {
-        imageComponent = GetComponent<Image>();
-        _data = Data.Instance;
+        if (_data == null)
+        {
+            imageComponent = GetComponent<Image>();
+            _data = Data.Instance;
+        }
         // _data.townData.hasClickedTH = true;
     }
     public void SetupMerchantSprite()
@@ -37,10 +40,13 @@ public class TownHall : MonoBehaviour
     }
     public void UpdateButtons()
     {
-        // foreach (UpgradeButton button in upgradeButtons)
-        // {
-        //     button.UpdateUpgradeButton();
-        // }
+        foreach (UpgradeButton button in upgradeButtons)
+        {
+            if (button.gameObject.activeInHierarchy)
+            {
+                button.UpdateUpgradeButton();
+            }
+        }
 
         if (SelectedUpgrade != null)
         {
@@ -103,7 +109,7 @@ public class TownHall : MonoBehaviour
             SelectedUpgrade = null;
             imageFadeController.FadeOut();
         }
-        upgradeButton.UpdateUpgradeButton();
+        // upgradeButton.UpdateUpgradeButton();
         UpdateButtons();
     }
 }

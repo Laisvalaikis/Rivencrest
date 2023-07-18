@@ -60,7 +60,7 @@ public class GameProgress : MonoBehaviour
                     }
                 }
             }
-            _saveData.SaveTownData();
+            // _saveData.SaveTownData();
         }
         if (_data.isCurrentScenePlayableMap && _data.townData.singlePlayer)
         {
@@ -108,10 +108,6 @@ public class GameProgress : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i < _data.AllAvailableCharacters.Count; i++)
-        {
-            _data.AllAvailableCharacters[i].prefabIndex = i;
-        }
         if (SceneManager.GetActiveScene().name == "CharacterSelect")
         {
             // LoadTownData();

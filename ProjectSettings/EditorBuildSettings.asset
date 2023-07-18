@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Town.unity
     guid: 1de9ac244cf719f41b997049bbd733f0
+  - enabled: 1
+    path: Assets/Scenes/MissionSelect.unity
+    guid: b2436bca14b6a544db81309c65c5ad3a
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 48811a7024e3fe94eabf8151b33a2c0b, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: a9ea6cf0aee8e214b966ec5167581dde, type: 2}

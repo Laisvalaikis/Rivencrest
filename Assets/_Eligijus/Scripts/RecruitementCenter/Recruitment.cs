@@ -17,7 +17,6 @@ public class Recruitment : MonoBehaviour
     public TextAsset NamesWFile;
     [SerializeField] private PortraitBar portraitBar;
     [SerializeField] private GameUi gameUI;
-    [SerializeField] private Button embark;
     private Data _data;
     private int CharacterLevelChar = 0;
     private List<string> NamesM = new List<string>();
@@ -172,10 +171,7 @@ public class Recruitment : MonoBehaviour
             
             }
 
-            if (_data.Characters.Count >= _data.minCharacterCount)
-            {
-                embark.interactable = true;
-            }
+            gameUI.UpdateEmbarkButton();
 
             CharactersInShop.Remove(savedCharacter);
             characterIndexList.Remove(index);

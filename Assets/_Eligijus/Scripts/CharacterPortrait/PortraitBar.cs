@@ -36,6 +36,7 @@ public class PortraitBar : MonoBehaviour
         {
             down.gameObject.SetActive(true);
         }
+        Debug.Log(_data.Characters.Count);
         for (int i = 0; i < _data.Characters.Count; i++)
         {
             if (i < townPortraits.Count)
@@ -149,8 +150,7 @@ public class PortraitBar : MonoBehaviour
     {
         townPortraits[portraitIndex].gameObject.SetActive(true);
         townPortraits[portraitIndex].characterIndex = index;
-        townPortraits[portraitIndex].characterImage.sprite = _data.Characters[index].prefab
-            .GetComponent<PlayerInformation>().CharacterPortraitSprite;
+        townPortraits[portraitIndex].characterImage.sprite = _data.Characters[index].playerInformation.CharacterPortraitSprite;
         townPortraits[portraitIndex].levelText.text = _data.Characters[index].level.ToString();
         if (_data.Characters[index].abilityPointCount > 0)
         {

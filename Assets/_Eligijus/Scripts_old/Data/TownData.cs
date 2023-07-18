@@ -45,7 +45,6 @@ using System;
             this.difficultyLevel = difficultyLevel;
             this.townGold = townGold;
             this.day = day;
-            this.characters = new List<SavableCharacter>();
             this.wasLastMissionSuccessful = wasLastMissionSuccessful;
             this.characters = new List<SavableCharacter>(characters);
             this.charactersOnLastMission = new List<int>(charactersOnLastMission);
@@ -112,13 +111,13 @@ using System;
         public string unlockedAbilities;
         public List<Blessing> blessings;
         public int cost;
-        public int prefabIndex;
+        public int characterIndex;
         public PlayerInformationData playerInformation;
 
         public SavableCharacter() { }
 
         public SavableCharacter(int level, int xP, int xPToGain, bool dead, string characterName,
-            int abilityPointCount, string unlockedAbilities, List<Blessing> blessings, int prefabIndex, PlayerInformationData playerInformation)
+            int abilityPointCount, string unlockedAbilities, List<Blessing> blessings, int characterIndex, PlayerInformationData playerInformation)
         {
             this.level = level;
             this.xP = xP;
@@ -129,7 +128,7 @@ using System;
             this.unlockedAbilities = unlockedAbilities;
             this.blessings = new List<Blessing>(blessings);
             this.cost = 1000;
-            this.prefabIndex = prefabIndex;
+            this.characterIndex = characterIndex;
             this.playerInformation = playerInformation;
         }
 
@@ -144,7 +143,7 @@ using System;
             this.unlockedAbilities = x.unlockedAbilities;
             this.blessings = this.blessings = new List<Blessing>(x.blessings);
             this.cost = x.cost;
-            this.prefabIndex = x.prefabIndex;
+            this.characterIndex = x.characterIndex;
             this.playerInformation = x.playerInformation;
         }
     }
