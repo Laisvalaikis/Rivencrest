@@ -58,10 +58,16 @@ public class HelpTable : MonoBehaviour
         }
     }
 
-    public void EnableTableForTown(int abilityIndex, int characterIndex)
+    public void EnableTableForBoughtCharacters(int abilityIndex, int characterIndex)
     {
         SetupHelpTable();
-        var actionManager = _data.Characters[characterIndex].prefab.GetComponent<ActionManager>();
+        ActionManager actionManager = _data.Characters[characterIndex].prefab.GetComponent<ActionManager>();
+        SavedCharacter character = _data.Characters[characterIndex];
+        UpdateHelpTable(abilityIndex, character, actionManager);
+    }
+
+    private void UpdateHelpTable(int abilityIndex, SavedCharacter character, ActionManager actionManager)
+    {
         var ability = actionManager.FindActionByIndex(abilityIndex).action;
         AbilityText abilityText = _abilities[ability.actionStateName];
         if (abilityText != null)
@@ -76,12 +82,19 @@ public class HelpTable : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 CloseHelpTable();
-                var character = _data.Characters[characterIndex];
                 gameObject.SetActive(true);
                 FillTableWithInfo(ability, abilityText, character, actionManager);
                 wasSelected = true;
             }
         }
+    }
+
+    public void EnableTableForCharacters(int abilityIndex, int characterIndex)
+    {
+        SetupHelpTable();
+        ActionManager actionManager = _data.AllAvailableCharacters[characterIndex].prefab.GetComponent<ActionManager>();
+        SavedCharacter character = _data.AllAvailableCharacters[characterIndex];
+        UpdateHelpTable(abilityIndex, character, actionManager);
     }
     
 

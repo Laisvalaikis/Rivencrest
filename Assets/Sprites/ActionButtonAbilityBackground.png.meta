@@ -62,11 +62,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -105,6 +106,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
@@ -117,6 +119,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -129,6 +132,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -141,6 +145,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -153,6 +158,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -165,6 +171,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -179,7 +199,7 @@ TextureImporter:
         width: 28
         height: 28
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -200,7 +220,7 @@ TextureImporter:
         width: 28
         height: 28
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -221,7 +241,7 @@ TextureImporter:
         width: 28
         height: 28
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -242,7 +262,7 @@ TextureImporter:
         width: 28
         height: 28
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -263,7 +283,7 @@ TextureImporter:
         width: 28
         height: 28
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -284,7 +304,7 @@ TextureImporter:
         width: 28
         height: 28
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -305,7 +325,7 @@ TextureImporter:
         width: 28
         height: 28
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -326,7 +346,7 @@ TextureImporter:
         width: 28
         height: 28
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -347,7 +367,7 @@ TextureImporter:
         width: 28
         height: 28
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -368,7 +388,7 @@ TextureImporter:
         width: 28
         height: 28
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -389,7 +409,7 @@ TextureImporter:
         width: 28
         height: 28
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -410,7 +430,7 @@ TextureImporter:
         width: 28
         height: 28
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -431,7 +451,7 @@ TextureImporter:
         width: 28
         height: 28
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -452,7 +472,7 @@ TextureImporter:
         width: 28
         height: 28
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -460,6 +480,27 @@ TextureImporter:
       bones: []
       spriteID: 43e34822df6fead80800000000000000
       internalID: -8237375101347807692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ActionButtonAbilityBackground_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 16
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d32e534f3a38ba45b096f7ec5a1ebd5
+      internalID: -1109227551
       vertices: []
       indices: 
       edges: []
@@ -475,23 +516,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ActionButtonAbilityBackground 5: -5530371819613864454
-      ActionButtonAbilityBackground 6: 5127896376211543102
-      ActionButtonAbilityBackground 7: -6356012267995909163
-      ActionButtonAbilityBackground 3: 4895766350142059002
-      ActionButtonAbilityBackground 4: 937255998556263114
-      ActionButtonAbilityBackground 9: 5117135129999800319
-      ActionButtonAbilityBackground 0: 137914692109764441
-      ActionButtonAbilityBackground 12: -349291530499477862
-      ActionButtonAbilityBackground 11: 3662352932837186737
-      ActionButtonAbilityBackground 1: -1849797500336171758
-      ActionButtonAbilityBackground 10: -1275655965021902156
-      ActionButtonAbilityBackground 13: -8237375101347807692
-      ActionButtonAbilityBackground 8: 3155498603668081134
-      ActionButtonAbilityBackground 2: -7459160405522337366
-  spritePackingTag: 
+      ActionButtonAbilityBackground 0: 112193120
+      ActionButtonAbilityBackground 1: -1712973173
+      ActionButtonAbilityBackground 10: 507200288
+      ActionButtonAbilityBackground 11: -2091740669
+      ActionButtonAbilityBackground 12: -920745557
+      ActionButtonAbilityBackground 13: -671391787
+      ActionButtonAbilityBackground 2: 876008109
+      ActionButtonAbilityBackground 3: 1091307756
+      ActionButtonAbilityBackground 4: -313965821
+      ActionButtonAbilityBackground 5: 1166679894
+      ActionButtonAbilityBackground 6: 1739127008
+      ActionButtonAbilityBackground 7: -101696825
+      ActionButtonAbilityBackground 8: 981174546
+      ActionButtonAbilityBackground 9: 1630626150
+      ActionButtonAbilityBackground_0: 1108038033
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

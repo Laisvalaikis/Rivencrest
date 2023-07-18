@@ -93,14 +93,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb84e7b8e53f7a94f97c9301c080d692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterTable: {fileID: 0}
   portrait: {fileID: 451720932296697225}
   buyButton: {fileID: 6118782446132890597}
   className: {fileID: 576853416522454519}
   cost: {fileID: 2662418207515413534}
-  xP: {fileID: 0}
-  levelText: {fileID: 0}
-  xPToGain: {fileID: 0}
   character:
     level: 0
     xP: 0
@@ -112,7 +108,7 @@ MonoBehaviour:
     blessings: []
     cost: 0
     prefabIndex: 0
-    characterUIData: {fileID: 0}
+    playerInformation: {fileID: 0}
     prefab: {fileID: 0}
   _data: {fileID: 0}
 --- !u!1 &451720930639106444
@@ -763,10 +759,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7686912216018600784}
-        m_TargetAssemblyTypeName: RecruitButton, Assembly-CSharp
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Recruitment, Assembly-CSharp
         m_MethodName: BuyCharacter
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

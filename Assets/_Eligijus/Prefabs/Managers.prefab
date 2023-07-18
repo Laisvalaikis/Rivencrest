@@ -153,6 +153,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 11400000, guid: 1ea2d92d43ab44875a1a05ec42599bd5, type: 2}
     prefab: {fileID: 659955980883675694, guid: 75928b99c4efd458b83815f8403e69f3, type: 3}
+    characterIndex: 0
   - level: 0
     xP: 0
     xPToGain: 0
@@ -171,6 +172,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 11400000, guid: 87aa70ce874effb4eb882689b03d7488, type: 2}
     prefab: {fileID: 659955980883675694, guid: 2d5128fc605f5d94f98e6d8bcfb13a68, type: 3}
+    characterIndex: 1
   - level: 0
     xP: 0
     xPToGain: 0
@@ -183,6 +185,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 11400000, guid: 102a4304093e606428d515d227b86eec, type: 2}
     prefab: {fileID: 659955980883675694, guid: 7b5aee9c140d71940be4c1c19273ed34, type: 3}
+    characterIndex: 2
   - level: 0
     xP: 0
     xPToGain: 0
@@ -195,6 +198,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 11400000, guid: 6356fde798ebc415184d6994f822281c, type: 2}
     prefab: {fileID: 659955980883675694, guid: 1325b0e91889b42d8af5931e51f00f5f, type: 3}
+    characterIndex: 3
   - level: 0
     xP: 0
     xPToGain: 0
@@ -207,6 +211,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 11400000, guid: f81123de229f5584d8df824e4e976dd3, type: 2}
     prefab: {fileID: 659955980883675694, guid: 34415a5a4a2716446a11aa5f9f903389, type: 3}
+    characterIndex: 4
   - level: 0
     xP: 0
     xPToGain: 0
@@ -219,6 +224,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 11400000, guid: e424b5186eb833a4d8e71a63ec2c7298, type: 2}
     prefab: {fileID: 659955980883675694, guid: 2fed0c255a6c85a43bb650b3dc9c0bac, type: 3}
+    characterIndex: 5
   - level: 0
     xP: 0
     xPToGain: 0
@@ -231,6 +237,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 11400000, guid: d4997c546c5c54fa8b6c04cb53182532, type: 2}
     prefab: {fileID: 659955980883675694, guid: 88440aaf25dfe446cabc06c43e2f165a, type: 3}
+    characterIndex: 6
   - level: 0
     xP: 0
     xPToGain: 0
@@ -243,6 +250,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 11400000, guid: e33a2489bc7691d4693933b654d95899, type: 2}
     prefab: {fileID: 659955980883675694, guid: 88cf08f648724f346b37c9d5ca8144ad, type: 3}
+    characterIndex: 7
   - level: 0
     xP: 0
     xPToGain: 0
@@ -255,6 +263,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 11400000, guid: 57971419408277446978c60312590ec8, type: 2}
     prefab: {fileID: 659955980883675694, guid: e13d3da28fc5f744ba3a8add55be4b66, type: 3}
+    characterIndex: 8
   AllEnemyCharacterPrefabs:
   - {fileID: 0}
   - {fileID: 0}
@@ -285,6 +294,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 0}
     prefab: {fileID: 0}
+    characterIndex: 0
   - level: 0
     xP: 0
     xPToGain: 0
@@ -297,6 +307,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 0}
     prefab: {fileID: 0}
+    characterIndex: 0
   - level: 0
     xP: 0
     xPToGain: 0
@@ -309,6 +320,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 0}
     prefab: {fileID: 0}
+    characterIndex: 0
   - level: 0
     xP: 0
     xPToGain: 0
@@ -321,6 +333,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 0}
     prefab: {fileID: 0}
+    characterIndex: 0
   - level: 0
     xP: 0
     xPToGain: 0
@@ -333,6 +346,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 0}
     prefab: {fileID: 0}
+    characterIndex: 0
   - level: 0
     xP: 0
     xPToGain: 0
@@ -345,6 +359,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 0}
     prefab: {fileID: 0}
+    characterIndex: 0
   - level: 0
     xP: 0
     xPToGain: 0
@@ -357,6 +372,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 0}
     prefab: {fileID: 0}
+    characterIndex: 0
   - level: 0
     xP: 0
     xPToGain: 0
@@ -369,6 +385,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 0}
     prefab: {fileID: 0}
+    characterIndex: 0
   - level: 0
     xP: 0
     xPToGain: 0
@@ -381,6 +398,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 0}
     prefab: {fileID: 0}
+    characterIndex: 0
   - level: 0
     xP: 0
     xPToGain: 0
@@ -393,6 +411,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 0}
     prefab: {fileID: 0}
+    characterIndex: 0
   - level: 0
     xP: 0
     xPToGain: 0
@@ -405,6 +424,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 0}
     prefab: {fileID: 0}
+    characterIndex: 0
   - level: 0
     xP: 0
     xPToGain: 0
@@ -417,6 +437,7 @@ MonoBehaviour:
     prefabIndex: 0
     playerInformation: {fileID: 0}
     prefab: {fileID: 0}
+    characterIndex: 0
   CharactersOnLastMission: 
   newGameData:
     teamColor: 

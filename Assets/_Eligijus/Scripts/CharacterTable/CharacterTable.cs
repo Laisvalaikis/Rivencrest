@@ -27,12 +27,12 @@ public class CharacterTable : MonoBehaviour
     [SerializeField] private Button sellButton;
     [SerializeField] private List<Button> abilityButtons;
     [SerializeField] private List<Image> abilityButtonImages;
+    [SerializeField] private List<Image> abilityButtonIconImages;
     public TMP_InputField nameInput;
     [SerializeField] private GameUi gameUI;
     public HelpTable helpTable;
     public GameObject recruitmentCenterTable;
     public TownHall townHall;
-    
     private int characterIndex;
     private List<int> tempUnlockedAbilities = new List<int>();
     private Data _data;
@@ -116,11 +116,12 @@ public class CharacterTable : MonoBehaviour
             abilityButtons[i].interactable = character.abilityPointCount > 0;
             if (character.unlockedAbilities[i] == '0')
             {
-                abilityButtonImages[i].color = Color.gray;
+                Color color = abilityButtonImages[i].color - new Color(0.2f, 0.2f, 0.2f, 0f);
+                abilityButtonImages[i].color = color;
             }
             else
             {
-                abilityButtonImages[i].color = Color.white;
+                abilityButtonImages[i].color = character.playerInformation.backgroundColor;
             }
         }
     }
@@ -132,8 +133,8 @@ public class CharacterTable : MonoBehaviour
         if (index != characterIndex)
         {
             helpTable.gameObject.SetActive(false);
-            UpdateAllAbilities();
             UpdateTable();
+            UpdateAllAbilities();
         }
         characterIndex = index;
         ResetTempUnlockedAbilities();
@@ -153,7 +154,12 @@ public class CharacterTable : MonoBehaviour
 
     public void EnableDisableHelpTable(int index)
     {
-        helpTable.EnableTableForTown(index, characterIndex);
+        Transform helpTableTransform = helpTable.transform;
+        Vector3 currentPosition = helpTableTransform.position;
+        Vector3 position = new Vector3(currentPosition.x, abilityButtons[index].transform.position.y,
+            currentPosition.z);
+        helpTableTransform.SetPositionAndRotation(position, helpTableTransform.rotation);
+        helpTable.EnableTableForBoughtCharacters(index, characterIndex);
     }
     
     public void UndoAbilitySelection()
@@ -162,9 +168,9 @@ public class CharacterTable : MonoBehaviour
         {
             RemoveAbility(abilityIndex);
         }
-        UpdateAllAbilities();
         tempUnlockedAbilities.Clear();
         UpdateTable();
+        UpdateAllAbilities();
     }
     
     public void ExitTable()
@@ -176,8 +182,8 @@ public class CharacterTable : MonoBehaviour
     {
         int newCharacterIndex = Mathf.Clamp(characterIndex - 1, 0, _data.Characters.Count - 1);
         DisplayCharacterTable(newCharacterIndex);
-        UpdateAllAbilities();
         UpdateTable();
+        UpdateAllAbilities();
         portraitBar.ScrollDownByCharacterIndex(newCharacterIndex);
     }
 
@@ -185,8 +191,8 @@ public class CharacterTable : MonoBehaviour
     {
         int newCharacterIndex = Mathf.Clamp(characterIndex + 1, 0, _data.Characters.Count - 1);
         DisplayCharacterTable(newCharacterIndex);
-        UpdateAllAbilities();
         UpdateTable();
+        UpdateAllAbilities();
         portraitBar.ScrollUpByCharacterIndex(newCharacterIndex);
     }
 
@@ -283,9 +289,9 @@ public class CharacterTable : MonoBehaviour
         role.text = characterInfo.role;
         role.color = color;
         UpdateRoleIcon(character);
-        level.text = "LEVEL: " + character.level.ToString();
+        level.text = "LEVEL: " + character.level;
         level.color = color;
-        maxHP.text = "MAX HP: " + CalculateMaxHP(character);//character.prefab.GetComponent<PlayerInformation>().MaxHealth.ToString();
+        maxHP.text = "MAX HP: " + CalculateMaxHP(character);
         maxHP.color = color;
         xpProgress.text = (character.level >= GameProgress.currentMaxLevel()) ? "MAX LEVEL" : character.xP + "/" + _data.XPToLevelUp[character.level - 1] + " XP";
         xpProgress.color = color;
@@ -294,19 +300,13 @@ public class CharacterTable : MonoBehaviour
         characterArt.sprite = characterInfo.CharacterSplashArt;
         blessingList.text = character.CharacterTableBlessingString();
         //
-        for (int i = 0; i < transform.Find("Abilities").transform.childCount; i++)
+        for (int i = 0; i < abilityButtonImages.Count; i++)
         {
-            transform.Find("Abilities").GetChild(i).gameObject.SetActive(true);
-            transform.Find("Abilities").GetChild(i).Find("Color").GetComponent<Image>().sprite = character.prefab.GetComponent<ActionManager>().AbilityBackground;
-            transform.Find("Abilities").GetChild(i).Find("AbilityIcon").GetComponent<Image>().color = characterInfo.ClassColor;
-            if (character.prefab.GetComponent<ActionManager>().FindActionByIndex(i) != null)
-            {
-                transform.Find("Abilities").GetChild(i).Find("AbilityIcon").GetComponent<Image>().sprite = character.prefab.GetComponent<ActionManager>().FindActionByIndex(i).AbilityIcon;
-            }
-            else
-            {
-                transform.Find("Abilities").GetChild(i).gameObject.SetActive(false);
-            }
+            abilityButtons[i].gameObject.SetActive(true);
+            abilityButtonIconImages[i].color = character.playerInformation.classColor;
+            abilityButtonIconImages[i].sprite = character.playerInformation.abilities[i].sprite;
+            abilityButtonImages[i].color = character.playerInformation.backgroundColor;
+            
         }
     }
 
@@ -356,8 +356,8 @@ public class CharacterTable : MonoBehaviour
         _data.Characters[characterIndex].abilityPointCount--;
         UpdateCharacterPointCorner();
         tempUnlockedAbilities.Add(abilityIndex);
-        UpdateAllAbilities();
         UpdateTable();
+        UpdateAllAbilities();
     }
     private void RemoveAbility(int abilityIndex)
     {

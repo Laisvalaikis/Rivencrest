@@ -22,12 +22,14 @@ public class Recruitment : MonoBehaviour
     private int CharacterLevelChar = 0;
     private List<string> NamesM = new List<string>();
     private List<string> NamesW = new List<string>();
+    private List<int> characterIndexList;
 
     private void OnEnable()
     {
         if (_data == null)
         {
             _data = Data.Instance;
+            characterIndexList = new List<int>();
         }
     }
 
@@ -77,7 +79,7 @@ public class Recruitment : MonoBehaviour
     {
         List<SavedCharacter> AllCharactersCopy = new List<SavedCharacter>(_data.AllAvailableCharacters);
         CharactersInShop.Clear();
-        Debug.LogError("LOL");
+        characterIndexList.Clear();
         if(NamesW.Count <= 8)
         {
             ReadString(NamesW, NamesWFile);
@@ -117,6 +119,7 @@ public class Recruitment : MonoBehaviour
                 characterToAdd.level = 2;
                 characterToAdd.abilityPointCount = 2;
             }
+            characterIndexList.Add(randomIndex);
             //
             CharactersInShop.Add(characterToAdd);
         }
@@ -145,7 +148,7 @@ public class Recruitment : MonoBehaviour
         if (_data.townData.townHall != null)
         {
             int townHallChar = _data.townData.townHall.characterReRoll;
-            reRollButton.interactable = (townHallChar == 1);
+            reRollButton.gameObject.SetActive(townHallChar == 1);
         }
     }
     
@@ -175,11 +178,17 @@ public class Recruitment : MonoBehaviour
             }
 
             CharactersInShop.Remove(savedCharacter);
+            characterIndexList.Remove(index);
             UpdateButtons();
         }
         else Debug.Log("Ziurek ka darai, kvaily!");
     }
-    
+
+    public int GetRealCharacterIndex(int index)
+    {
+        return characterIndexList[index];
+    }
+
     public void Reroll()
     {
         AttractedCharactersCount = CharactersInShop.Count;

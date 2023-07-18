@@ -1,16 +1,0 @@
-
-Ocsharpsquid:S3903"-Move 'CharacterTable' into a named namespace.(ÇÆÁşÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ü¡Ûšşÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(‘ö¡Óøÿÿÿÿ
-mcsharpsquid:S1104 "DMake this field 'private' and encapsulate it in a 'public' property.(ùÃÓŠüÿÿÿÿ8¥Îùé1
-mcsharpsquid:S1104!"DMake this field 'private' and encapsulate it in a 'public' property.(Â¹úÀùÿÿÿÿ8İŞ„ê1
-hcsharpsquid:S1104""DMake this field 'private' and encapsulate it in a 'public' property.(·Ÿ‘8İŞ„ê1
-Fcsharpsquid:S1643×"Use a StringBuilder instead.(ªú—‡ÿÿÿÿÿ8¶¾Ù¦•1
-Acsharpsquid:S1643Û"Use a StringBuilder instead.(êÈ…Ô8¶¾Ù¦•1
-Fcsharpsquid:S1643í"Use a StringBuilder instead.(ªú—‡ÿÿÿÿÿ8¶¾Ù¦•1
-Acsharpsquid:S1643ñ"Use a StringBuilder instead.(ó¯â²8·¾Ù¦•1
-bcsharpsquid:S1117·"8Rename 'maxHP' which hides the field with the same name.(åÁ  şÿÿÿÿ8·¾Ù¦•1
-Ccsharpsquid:S125ï"Remove this commented out code.(¡Çİ§8„ÆÓš•1
-Ccsharpsquid:S125û"Remove this commented out code.(¡Çİ§8„ÆÓš•1
-Ccsharpsquid:S125›"Remove this commented out code.(ó‹Ô„8İû¹¥•1
-=csharpsquid:S4663£"Remove this empty comment(è»»_8Şû¹¥•1

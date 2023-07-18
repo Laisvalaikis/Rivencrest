@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 9071443319805436009}
   - component: {fileID: 2937026584307193608}
   m_Layer: 5
-  m_Name: Color
+  m_Name: ColorBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -388,14 +388,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6627451, g: 0.6431373, b: 0.16470589, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 137914692109764441, guid: f12fdd45e276893438b8ce4098f754cb, type: 3}
+  m_Sprite: {fileID: -1109227551, guid: f12fdd45e276893438b8ce4098f754cb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 2083543149982232690}
   - component: {fileID: 2673616205202607511}
   m_Layer: 5
-  m_Name: Color
+  m_Name: ColorBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -889,14 +889,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6627451, g: 0.6431373, b: 0.16470589, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 137914692109764441, guid: f12fdd45e276893438b8ce4098f754cb, type: 3}
+  m_Sprite: {fileID: -1109227551, guid: f12fdd45e276893438b8ce4098f754cb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1607,6 +1607,7 @@ GameObject:
   - component: {fileID: 2687883928136558280}
   - component: {fileID: 1508640379726276219}
   - component: {fileID: 8320326335457375323}
+  - component: {fileID: 3685547977002994005}
   m_Layer: 5
   m_Name: Ability3
   m_TagString: Untagged
@@ -1733,9 +1734,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5123f91ebbc75ca46853b9bc28976105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {fileID: 1466474650862237239}
+  backgroundImage: {fileID: 1466474650862237239}
   abilityIcon: {fileID: 2319391081638515497}
-  abilityButton: {fileID: 1508640379726276219}
+--- !u!114 &3685547977002994005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4058504010737792350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7400956098093630935}
+          m_TargetAssemblyTypeName: CharacterInspectInShop, Assembly-CSharp
+          m_MethodName: EnableDisableHelpTable
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7400956098093630935}
+          m_TargetAssemblyTypeName: CharacterInspectInShop, Assembly-CSharp
+          m_MethodName: EnableDisableHelpTable
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &4232469779950823471
 GameObject:
   m_ObjectHideFlags: 0
@@ -3198,6 +3243,7 @@ GameObject:
   - component: {fileID: 9122908727412231009}
   - component: {fileID: 4209469970968940398}
   - component: {fileID: 5197191060540885091}
+  - component: {fileID: 2562215554955220427}
   m_Layer: 5
   m_Name: Ability2
   m_TagString: Untagged
@@ -3324,9 +3370,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5123f91ebbc75ca46853b9bc28976105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {fileID: 2937026584307193608}
+  backgroundImage: {fileID: 2937026584307193608}
   abilityIcon: {fileID: 6000020621375438768}
-  abilityButton: {fileID: 4209469970968940398}
+--- !u!114 &2562215554955220427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6809102980453600317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7400956098093630935}
+          m_TargetAssemblyTypeName: CharacterInspectInShop, Assembly-CSharp
+          m_MethodName: EnableDisableHelpTable
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7400956098093630935}
+          m_TargetAssemblyTypeName: CharacterInspectInShop, Assembly-CSharp
+          m_MethodName: EnableDisableHelpTable
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &6838447010682229487
 GameObject:
   m_ObjectHideFlags: 0
@@ -3495,7 +3585,7 @@ GameObject:
   - component: {fileID: 6181594483580966788}
   - component: {fileID: 1466474650862237239}
   m_Layer: 5
-  m_Name: Color
+  m_Name: ColorBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3542,14 +3632,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6627451, g: 0.6431373, b: 0.16470589, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 137914692109764441, guid: f12fdd45e276893438b8ce4098f754cb, type: 3}
+  m_Sprite: {fileID: -1109227551, guid: f12fdd45e276893438b8ce4098f754cb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3571,7 +3661,7 @@ GameObject:
   - component: {fileID: 5386575645694063979}
   - component: {fileID: 8301713458389032833}
   m_Layer: 5
-  m_Name: Color
+  m_Name: ColorBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3618,14 +3708,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6627451, g: 0.6431373, b: 0.16470589, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 137914692109764441, guid: f12fdd45e276893438b8ce4098f754cb, type: 3}
+  m_Sprite: {fileID: -1109227551, guid: f12fdd45e276893438b8ce4098f754cb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3648,6 +3738,7 @@ GameObject:
   - component: {fileID: 2636319791007870774}
   - component: {fileID: 9050980989290230457}
   - component: {fileID: 5883780362854025814}
+  - component: {fileID: 7402874632206000656}
   m_Layer: 5
   m_Name: Ability4
   m_TagString: Untagged
@@ -3774,9 +3865,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5123f91ebbc75ca46853b9bc28976105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {fileID: 2673616205202607511}
+  backgroundImage: {fileID: 2673616205202607511}
   abilityIcon: {fileID: 1561803743901391444}
-  abilityButton: {fileID: 9050980989290230457}
+--- !u!114 &7402874632206000656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7817525814686297399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7400956098093630935}
+          m_TargetAssemblyTypeName: CharacterInspectInShop, Assembly-CSharp
+          m_MethodName: EnableDisableHelpTable
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7400956098093630935}
+          m_TargetAssemblyTypeName: CharacterInspectInShop, Assembly-CSharp
+          m_MethodName: EnableDisableHelpTable
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &7918429356017712331
 GameObject:
   m_ObjectHideFlags: 0
@@ -4018,6 +4153,7 @@ GameObject:
   - component: {fileID: 8261091962996727154}
   - component: {fileID: 6665033415712929412}
   - component: {fileID: 8172480731194456532}
+  - component: {fileID: 9008090513511502926}
   m_Layer: 5
   m_Name: Ability1
   m_TagString: Untagged
@@ -4144,9 +4280,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5123f91ebbc75ca46853b9bc28976105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {fileID: 8301713458389032833}
+  backgroundImage: {fileID: 8301713458389032833}
   abilityIcon: {fileID: 1611337866856251787}
-  abilityButton: {fileID: 6665033415712929412}
+--- !u!114 &9008090513511502926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8268091544242687443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7400956098093630935}
+          m_TargetAssemblyTypeName: CharacterInspectInShop, Assembly-CSharp
+          m_MethodName: EnableDisableHelpTable
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7400956098093630935}
+          m_TargetAssemblyTypeName: CharacterInspectInShop, Assembly-CSharp
+          m_MethodName: EnableDisableHelpTable
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &8372436403433368182
 GameObject:
   m_ObjectHideFlags: 0
@@ -5171,6 +5351,8 @@ MonoBehaviour:
   - {fileID: 5197191060540885091}
   - {fileID: 8320326335457375323}
   - {fileID: 5883780362854025814}
+  recruitment: {fileID: 0}
+  helpTable: {fileID: 0}
 --- !u!1 &9187542913345206332
 GameObject:
   m_ObjectHideFlags: 0
