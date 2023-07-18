@@ -93,7 +93,7 @@ public class GameUi : MonoBehaviour
 
         
     }
-    
+
     public void UpdateUnspentPointWarnings()
     {
         bool playerHasUnspentPoints = false;

@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class PortraitBar : MonoBehaviour
 {
     public List<CharacterPortrait> townPortraits;
+    [SerializeField] private List<Button> portraitButtons;
 
     public Button up;
 
@@ -28,6 +29,22 @@ public class PortraitBar : MonoBehaviour
         _data = Data.Instance;
         _scrollCharacterSelectIndex = 0;
         SetupCharacters();
+    }
+
+    public void DisableAllButtons()
+    {
+        for (int i = 0; i < portraitButtons.Count; i++)
+        {
+            portraitButtons[i].interactable = false;
+        }
+    }
+    
+    public void EnableAllButtons()
+    {
+        for (int i = 0; i < portraitButtons.Count; i++)
+        {
+            portraitButtons[i].interactable = true;
+        }
     }
 
     public void SetupCharacters()

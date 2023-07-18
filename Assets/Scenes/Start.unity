@@ -2245,6 +2245,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 3778607277644703412, guid: 6b7a2da188bc210429f17660c77dc49f, type: 3}
+      propertyPath: Characters.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5651964935951015705, guid: 6b7a2da188bc210429f17660c77dc49f, type: 3}
       propertyPath: m_RootOrder
       value: 7
