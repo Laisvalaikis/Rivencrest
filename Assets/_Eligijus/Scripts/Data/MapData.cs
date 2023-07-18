@@ -6,16 +6,17 @@ using UnityEngine;
 public class MapData : ScriptableObject
 {
     [Header("Suitable Enemies")] 
-    public List<string> SuitableEnemies;
+    public List<string> suitableEnemies;
     [Header("Npc Team")]
-    public List<GameObject> NpcTeam;
+    public List<GameObject> npcTeam;
     [Header("Suitable Levels")] 
-    public List<int> SuitableLevels;
+    public List<int> suitableLevels;
 
-    public int NumberOfEnemies = 3;
-    public string MapCategory;
-    public bool AllowDuplicates;
-    public Sprite MapImage;
+    public int numberOfEnemies = 3;
+    public string mapCategory;
+    public bool allowDuplicates;
+    public Sprite mapImage;
+    public string informationText;
 
 
 

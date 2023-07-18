@@ -20,7 +20,9 @@ public class EncounterController : MonoBehaviour
     public Button embark;
     public Data _data;
     public GameProgress gameProgress;
-    [SerializeField] public Map Map;
+    public MapSetup mapSetup;
+    public List<Button> encounterButton;
+    
 
     private void Start()
     {
@@ -40,40 +42,39 @@ public class EncounterController : MonoBehaviour
         return generatedEncounters;
     }
 
-    private void AddAttributesToEncounter(Encounter encounter, GameObject map, string category, int level)
+    private void AddAttributesToEncounter(Encounter encounter, MapData map, string category, int level)
     {
         encounter.missionCategory = category;
         encounter.encounterLevel = level;
         encounter.mapName = map.name;
-        encounter.enemyPool = map.GetComponent<Map>().suitableEnemies;
-        encounter.allowDuplicates = map.GetComponent<Map>().allowDuplicates;
-        encounter.numOfEnemies = map.GetComponent<Map>().numberOfEnemies;
+        encounter.enemyPool = map.suitableEnemies;
+        encounter.allowDuplicates = map.allowDuplicates;
+        encounter.numOfEnemies = map.numberOfEnemies;
         
         
     }
     
     private void GenerateEncounters(out List<Encounter> encounterListToPopulate, List<Encounter> pastEncounters)
     {
-        encounterListToPopulate = new List<Encounter>();
-       // var gameProgress = GameObject.Find("GameProgress").GetComponent<GameProgress>();
-
-        GameObject tutorialMap = gameProgress.GetComponent<MapSetup>().MapPrefabs.Find(x => x.GetComponent<Map>().name == "Tutorial");
-        Encounter tutorialEncounter = new Encounter();
-        AddAttributesToEncounter(tutorialEncounter, tutorialMap, "Forest", 1);
-        encounterListToPopulate.Add(tutorialEncounter);
-        if (pastEncounters.Find(x => x.missionCategory == "Forest" && x.encounterLevel == 1) != null)
-        {
-            GameObject merchantMap = gameProgress.GetComponent<MapSetup>().MapPrefabs.Find(x => x.GetComponent<Map>().name == "Merchant Ambush");
-            Encounter merchantEncounter = new Encounter();
-            AddAttributesToEncounter(merchantEncounter, merchantMap, "Forest", 2);
-            encounterListToPopulate.Add(merchantEncounter);
-        }
+       encounterListToPopulate = new List<Encounter>();
+       // // var gameProgress = GameObject.Find("GameProgress").GetComponent<GameProgress>();
+       //  MapData tutorialMap = mapSetup.mapDatas["Tutorial"];
+       //  Encounter tutorialEncounter = new Encounter();
+       //  AddAttributesToEncounter(tutorialEncounter, tutorialMap, "Forest", 1);
+       //  encounterListToPopulate.Add(tutorialEncounter);
+       //  if (pastEncounters.Find(x => x.missionCategory == "Forest" && x.encounterLevel == 1) != null)
+       //  {
+       //      MapData merchantMap = mapSetup.mapDatas["MerchantAmbush"];
+       //      Encounter merchantEncounter = new Encounter();
+       //      AddAttributesToEncounter(merchantEncounter, merchantMap, "Forest", 2);
+       //      encounterListToPopulate.Add(merchantEncounter);
+       //  }
 
 
         //This part generates random levels and adds them to encounter list
         //It is commented out for now because we only want 2 levels for the demo
         //They are added manually in the code above (this will probably change for non-demo release)
-/*        for (int i = 2; i <= 5; i++)
+        for (int i = 2; i <= 5; i++)
         {
             foreach (string category in encounterCategories)
             {
@@ -82,30 +83,39 @@ public class EncounterController : MonoBehaviour
                     Encounter newEncounter = new Encounter();
                     newEncounter.missionCategory = category;
                     newEncounter.encounterLevel = i;
-                    List<GameObject> suitableMaps = gameProgress.GetComponent<MapSetup>().MapPrefabs.FindAll(x => x.GetComponent<Map>().mapCategory == category && x.GetComponent<Map>().suitableLevels.Contains(i));
-                    GameObject suitableMap = suitableMaps[Random.Range(0, suitableMaps.Count)];
+                    List<MapData> suitableMaps = new List<MapData>();
+                    foreach (string key in mapSetup.mapDatas.Keys)
+                    {
+                        if (mapSetup.mapDatas[key].mapCategory == category && mapSetup.mapDatas[key].suitableLevels.Contains(i))
+                        {
+                            suitableMaps.Add(mapSetup.mapDatas[key]);
+                        }
+                    }
+                    MapData suitableMap = suitableMaps[Random.Range(0, suitableMaps.Count)];
                     newEncounter.mapName = suitableMap.name;
-                    newEncounter.enemyPool = suitableMap.GetComponent<Map>().suitableEnemies;
-                    newEncounter.allowDuplicates = suitableMap.GetComponent<Map>().allowDuplicates;
-                    newEncounter.numOfEnemies = suitableMap.GetComponent<Map>().numberOfEnemies;
+                    newEncounter.enemyPool = suitableMap.suitableEnemies;
+                    newEncounter.allowDuplicates = suitableMap.allowDuplicates;
+                    newEncounter.numOfEnemies = suitableMap.numberOfEnemies;
+                    newEncounter.missionText = suitableMap.informationText;
                     encounterListToPopulate.Add(newEncounter);
                 }
             }
-        }*/
+        }
 
     }
-
+    
     private void ToggleEncounterButtons(List<Encounter> generatedEncounters)
     {
+        int i = 0;
         foreach(Encounter encounter in generatedEncounters)
         {
-            var button = transform.Find(encounter.missionCategory + "EncounterButtons").transform.Find("Level" + encounter.encounterLevel + "Encounter").gameObject;
-            button.SetActive(true);
-            button.GetComponent<Button>().onClick.AddListener(() =>
+            Button button = encounterButton[i];
+            button.gameObject.SetActive(true);
+            button.onClick.AddListener(() =>
             {
                 ChangeSelectedEncounter(encounter);
             });
-            
+            i++;
         }
     }
     
@@ -122,16 +132,7 @@ public class EncounterController : MonoBehaviour
             level.text = _data.townData.selectedEncounter.encounterLevel.ToString();
             category.text = _data.townData.selectedEncounter.missionCategory;
             numOfEnemies.text = _data.townData.selectedEncounter.numOfEnemies.ToString();
-            string missionText = "";
-            if(_data.townData.selectedEncounter.mapName == "Merchant Ambush") 
-            {
-                missionText = "Merchant was ambushed by enemies. Defeat the enemies while keeping the merchant alive. The merchant will help you fight.";
-            }
-            else 
-            {
-                missionText = "Defeat the enemies to complete the mission.";
-            }
-            missionInfo.text = missionText;
+            missionInfo.text = _data.townData.selectedEncounter.missionText;
         }
         else
         {

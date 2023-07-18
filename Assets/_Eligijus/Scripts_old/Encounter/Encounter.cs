@@ -11,6 +11,7 @@ public class Encounter
     public List<string> enemyPool;
     public bool allowDuplicates;
     public int numOfEnemies;
+    public string missionText;
     //int blessing chance
     //List<GameObject> EnemyPool;
     //int XPReward;
