@@ -22,15 +22,21 @@ public class UIStack : MonoBehaviour
 
     public void QuitLastView()
     {
-        _views.RemoveAt(_views.Count-1);
+        if (_views.Count > 0)
+        {
+            _views[Instance._views.Count - 1].ExitView();
+        }
     }
     
     public void QuitView(int index)
     {
-        _views.RemoveAt(index);
-        for (int i = index; i < _views.Count; i++)
+        if (index >= 0)
         {
-            _views[i].UpdateIndex(i);
+            _views.RemoveAt(index);
+            for (int i = index; i < _views.Count; i++)
+            {
+                _views[i].UpdateIndex(i);
+            }
         }
     }
     public static void Quit(int index)
@@ -45,7 +51,10 @@ public class UIStack : MonoBehaviour
     
     public static void QuitLast()
     {
-        Instance._views.RemoveAt(Instance._views.Count-1);
+        if (Instance._views.Count > 0)
+        {
+            Instance._views[Instance._views.Count - 1].ExitView();
+        }
     }
 
 }

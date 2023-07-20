@@ -53,6 +53,15 @@ public partial class @SimpleControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""exit"",
+                    ""type"": ""Button"",
+                    ""id"": ""08cbf9ef-6f85-44d0-b39b-de7d230191df"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -154,6 +163,17 @@ public partial class @SimpleControls: IInputActionCollection2, IDisposable
                     ""action"": ""look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""156e9e9b-7a29-469d-ba33-b853f0ae634c"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""exit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -165,6 +185,7 @@ public partial class @SimpleControls: IInputActionCollection2, IDisposable
         m_gameplay_fire = m_gameplay.FindAction("fire", throwIfNotFound: true);
         m_gameplay_move = m_gameplay.FindAction("move", throwIfNotFound: true);
         m_gameplay_look = m_gameplay.FindAction("look", throwIfNotFound: true);
+        m_gameplay_exit = m_gameplay.FindAction("exit", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -229,6 +250,7 @@ public partial class @SimpleControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_gameplay_fire;
     private readonly InputAction m_gameplay_move;
     private readonly InputAction m_gameplay_look;
+    private readonly InputAction m_gameplay_exit;
     public struct GameplayActions
     {
         private @SimpleControls m_Wrapper;
@@ -236,6 +258,7 @@ public partial class @SimpleControls: IInputActionCollection2, IDisposable
         public InputAction @fire => m_Wrapper.m_gameplay_fire;
         public InputAction @move => m_Wrapper.m_gameplay_move;
         public InputAction @look => m_Wrapper.m_gameplay_look;
+        public InputAction @exit => m_Wrapper.m_gameplay_exit;
         public InputActionMap Get() { return m_Wrapper.m_gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -254,6 +277,9 @@ public partial class @SimpleControls: IInputActionCollection2, IDisposable
             @look.started += instance.OnLook;
             @look.performed += instance.OnLook;
             @look.canceled += instance.OnLook;
+            @exit.started += instance.OnExit;
+            @exit.performed += instance.OnExit;
+            @exit.canceled += instance.OnExit;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -267,6 +293,9 @@ public partial class @SimpleControls: IInputActionCollection2, IDisposable
             @look.started -= instance.OnLook;
             @look.performed -= instance.OnLook;
             @look.canceled -= instance.OnLook;
+            @exit.started -= instance.OnExit;
+            @exit.performed -= instance.OnExit;
+            @exit.canceled -= instance.OnExit;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -289,5 +318,6 @@ public partial class @SimpleControls: IInputActionCollection2, IDisposable
         void OnFire(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnExit(InputAction.CallbackContext context);
     }
 }
