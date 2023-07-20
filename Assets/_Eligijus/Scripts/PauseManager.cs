@@ -10,12 +10,15 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject pauseMenuInGame;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private Button embark;
+    [SerializeField] private View view;
     [Header("Town Buttons")]
     [SerializeField] private Button recruitmentButton;
     [SerializeField] private Button townHallButton;
     [SerializeField] private PortraitBar portraitBar;
+    [SerializeField] private CharacterTable characterTable;
     private bool embarStatek;
     private Data _data;
+    private bool pauseMenuEnabled = false;
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -33,7 +36,7 @@ public class PauseManager : MonoBehaviour
     
     public void PauseInGame()
     {
-        gameObject.SetActive(true);
+        view.OpenView();
         _data.canButtonsBeClickedState = _data.canButtonsBeClicked;
         _data.canButtonsBeClicked = false;
         pauseMenuInGame.gameObject.SetActive(true);
@@ -43,7 +46,7 @@ public class PauseManager : MonoBehaviour
     
     public void UnPauseInGame()
     {
-        gameObject.SetActive(false);
+        view.ExitView();
         _data.canButtonsBeClickedState = _data.canButtonsBeClicked;
         _data.canButtonsBeClicked = true;
         pauseMenu.gameObject.SetActive(false);
@@ -51,29 +54,51 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 1;
     }
     
-    public void PauseGame()
+    public void PauseTown()
     {
-        gameObject.SetActive(true);
-        _data.canButtonsBeClickedState = _data.canButtonsBeClicked;
-        _data.canButtonsBeClicked = false;
-        embarStatek = embark.interactable;
-        embark.interactable = false;
-        DisableTownButtons();
-        pauseMenu.gameObject.SetActive(true);
-        confirmMenu.SetActive(false);
-        Time.timeScale = 0;
+        if (!pauseMenuEnabled)
+        {
+            view.OpenView();
+            _data.canButtonsBeClickedState = _data.canButtonsBeClicked;
+            _data.canButtonsBeClicked = false;
+            embarStatek = embark.interactable;
+            embark.interactable = false;
+            DisableTownButtons();
+            pauseMenu.gameObject.SetActive(true);
+            confirmMenu.SetActive(false);
+            Time.timeScale = 0;
+            pauseMenuEnabled = true;
+        }
+
     }
     
-    public void UnPauseGame()
+    public void UnPauseTown()
     {
-        gameObject.SetActive(false);
-        _data.canButtonsBeClickedState = _data.canButtonsBeClicked;
-        _data.canButtonsBeClicked = true;
-        embark.interactable = embarStatek;
-        EnableTownButton();
-        pauseMenu.gameObject.SetActive(false);
-        confirmMenu.SetActive(false);
-        Time.timeScale = 1;
+        if (pauseMenuEnabled)
+        {
+
+            view.ExitView();
+            _data.canButtonsBeClickedState = _data.canButtonsBeClicked;
+            _data.canButtonsBeClicked = true;
+            embark.interactable = embarStatek;
+            EnableTownButton();
+            pauseMenu.gameObject.SetActive(false);
+            confirmMenu.SetActive(false);
+            Time.timeScale = 1;
+            pauseMenuEnabled = false;
+        }
+    }
+
+    public void EnableDisablePauseGame()
+    {
+        if (pauseMenuEnabled)
+        {
+            UnPauseTown();
+        }
+        else
+        {
+            PauseTown();
+        }
     }
 
     public void DisableTownButtons()
@@ -82,6 +107,12 @@ public class PauseManager : MonoBehaviour
         {
             portraitBar.DisableAllButtons();
         }
+
+        if (characterTable != null)
+        {
+            characterTable.DisableAllButtons();
+        }
+
         if (recruitmentButton != null)
         {
             recruitmentButton.interactable = false;
@@ -95,6 +126,12 @@ public class PauseManager : MonoBehaviour
         {
             portraitBar.EnableAllButtons();
         }
+        
+        if (characterTable != null)
+        {
+            characterTable.EnableAllButtons();
+        }
+        
         if (recruitmentButton != null)
         {
             recruitmentButton.interactable = true;

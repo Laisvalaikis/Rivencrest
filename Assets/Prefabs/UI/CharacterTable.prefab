@@ -437,7 +437,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1100696210055897965}
         m_TargetAssemblyTypeName: CharacterTable, Assembly-CSharp
-        m_MethodName: UpgradeAbility
+        m_MethodName: AddRemoveAbility
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -620,7 +620,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1100696210055897965}
         m_TargetAssemblyTypeName: CharacterTable, Assembly-CSharp
-        m_MethodName: UpgradeAbility
+        m_MethodName: AddRemoveAbility
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1520,6 +1520,7 @@ GameObject:
   - component: {fileID: 8966182836190441522}
   - component: {fileID: 8164340060715000607}
   - component: {fileID: 1100696210055897965}
+  - component: {fileID: 1151565417087205234}
   m_Layer: 5
   m_Name: CharacterTable
   m_TagString: Untagged
@@ -1596,7 +1597,7 @@ MonoBehaviour:
   confirmationTable: {fileID: 452309875233768196}
   confirmationTableText: {fileID: 1050570333421408202}
   confirmationTableSprite: {fileID: 625701154286343551}
-  undo: {fileID: 8516241479126753895}
+  confirm: {fileID: 8516241479126753895}
   leftArrow: {fileID: 3510762091516565375}
   rightArrow: {fileID: 1100916571253720714}
   originalName: 
@@ -1617,11 +1618,30 @@ MonoBehaviour:
   - {fileID: 4864883544199597967}
   - {fileID: 8511535094315534066}
   roleIcon: {fileID: 7032993514799823470}
+  view: {fileID: 1151565417087205234}
   nameInput: {fileID: 3854930570619354576}
   gameUI: {fileID: 0}
   helpTable: {fileID: 2309866807194960712}
   recruitmentCenterTable: {fileID: 0}
   townHall: {fileID: 0}
+--- !u!114 &1151565417087205234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095955254750490880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f410f151fc8b74a83a355c1df54d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openView:
+    m_PersistentCalls:
+      m_Calls: []
+  closeView:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2198414035412818402
 GameObject:
   m_ObjectHideFlags: 0
@@ -3740,7 +3760,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1100696210055897965}
         m_TargetAssemblyTypeName: CharacterTable, Assembly-CSharp
-        m_MethodName: UpgradeAbility
+        m_MethodName: AddRemoveAbility
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4995,7 +5015,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: UNDO
+  m_text: CONFIRM
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 976a677d0677ef641931ecb5d5aec3d7, type: 2}
   m_sharedMaterial: {fileID: -5198555027823409852, guid: 976a677d0677ef641931ecb5d5aec3d7, type: 2}
@@ -5022,8 +5042,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 62
-  m_fontSizeBase: 62
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5192,7 +5212,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1100696210055897965}
         m_TargetAssemblyTypeName: CharacterTable, Assembly-CSharp
-        m_MethodName: UpgradeAbility
+        m_MethodName: AddRemoveAbility
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6202,7 +6222,7 @@ GameObject:
   - component: {fileID: 5071218645545359174}
   - component: {fileID: 5772720690847870629}
   m_Layer: 5
-  m_Name: Undo
+  m_Name: Confirm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6314,7 +6334,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1100696210055897965}
         m_TargetAssemblyTypeName: CharacterTable, Assembly-CSharp
-        m_MethodName: UndoAbilitySelection
+        m_MethodName: ConfirmSelectedAbilities
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

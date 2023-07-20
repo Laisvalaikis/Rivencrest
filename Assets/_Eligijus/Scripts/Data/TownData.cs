@@ -108,7 +108,8 @@ using System;
         public string characterName;
         public bool dead;
         public int abilityPointCount;
-        public string unlockedAbilities;
+        public List<UnlockedAbilities> unlockedAbilities;
+        public int toConfirmAbilities = 0;
         public List<Blessing> blessings;
         public int cost;
         public int characterIndex;
@@ -117,7 +118,7 @@ using System;
         public SavableCharacter() { }
 
         public SavableCharacter(int level, int xP, int xPToGain, bool dead, string characterName,
-            int abilityPointCount, string unlockedAbilities, List<Blessing> blessings, int characterIndex, PlayerInformationData playerInformation)
+            int abilityPointCount, List<UnlockedAbilities> unlockedAbilities, int toConfirmAbilities, List<Blessing> blessings, int characterIndex, PlayerInformationData playerInformation)
         {
             this.level = level;
             this.xP = xP;
@@ -126,6 +127,7 @@ using System;
             this.characterName = characterName;
             this.abilityPointCount = abilityPointCount;
             this.unlockedAbilities = unlockedAbilities;
+            this.toConfirmAbilities = toConfirmAbilities;
             this.blessings = new List<Blessing>(blessings);
             this.cost = 1000;
             this.characterIndex = characterIndex;
@@ -141,6 +143,7 @@ using System;
             this.characterName = x.characterName;
             this.abilityPointCount = x.abilityPointCount;
             this.unlockedAbilities = x.unlockedAbilities;
+            this.toConfirmAbilities = x.toConfirmAbilities;
             this.blessings = this.blessings = new List<Blessing>(x.blessings);
             this.cost = x.cost;
             this.characterIndex = x.characterIndex;

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5027817364179479253}
   - component: {fileID: 3778607277644703412}
   - component: {fileID: 4320647118807370085}
+  - component: {fileID: 5378845942611980465}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -147,7 +148,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 800
     characterIndex: 0
@@ -159,7 +161,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings:
     - blessingName: Freezing touch
       rarity: 0
@@ -177,7 +180,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 900
     characterIndex: 2
@@ -189,7 +193,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 900
     characterIndex: 3
@@ -201,7 +206,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 900
     characterIndex: 4
@@ -213,7 +219,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 800
     characterIndex: 5
@@ -225,7 +232,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 1000
     characterIndex: 6
@@ -237,7 +245,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 1000
     characterIndex: 7
@@ -249,7 +258,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 1000
     characterIndex: 8
@@ -279,7 +289,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 800
     characterIndex: 0
@@ -291,7 +302,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 1000
     characterIndex: 0
@@ -303,7 +315,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 1000
     characterIndex: 0
@@ -315,7 +328,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 1000
     characterIndex: 0
@@ -327,7 +341,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 900
     characterIndex: 0
@@ -339,7 +354,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 1000
     characterIndex: 0
@@ -351,7 +367,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 900
     characterIndex: 0
@@ -363,7 +380,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 900
     characterIndex: 0
@@ -375,7 +393,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 900
     characterIndex: 0
@@ -387,7 +406,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 900
     characterIndex: 0
@@ -399,7 +419,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 900
     characterIndex: 0
@@ -411,7 +432,8 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 900
     characterIndex: 0
@@ -536,6 +558,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6615371b57d84eb4986323bab6a01ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5378845942611980465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3534628785993863784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e1fe67396065ca4688e62a6150023ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &6975200048341173690

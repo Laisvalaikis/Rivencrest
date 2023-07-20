@@ -125,7 +125,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1206573153819314821}
         m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
-        m_MethodName: UnPauseGame
+        m_MethodName: UnPauseTown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -373,6 +373,7 @@ GameObject:
   - component: {fileID: 1586184943526101889}
   - component: {fileID: 7578038406560141943}
   - component: {fileID: 4811351690381612179}
+  - component: {fileID: 8854363844880366973}
   m_Layer: 5
   m_Name: ConfirmMenu
   m_TagString: Untagged
@@ -464,6 +465,24 @@ MonoBehaviour:
   m_Spacing: {x: 30, y: 30}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &8854363844880366973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548423671906577970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f410f151fc8b74a83a355c1df54d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openView:
+    m_PersistentCalls:
+      m_Calls: []
+  closeView:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1669164724296012498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1279,10 +1298,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1548423671906577970}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 8854363844880366973}
+        m_TargetAssemblyTypeName: View, Assembly-CSharp
+        m_MethodName: OpenView
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1909,9 +1928,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: UnpauseGame
+      - m_Target: {fileID: 1206573153819314821}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
+        m_MethodName: UnPauseInGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2178,10 +2197,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1548423671906577970}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 8854363844880366973}
+        m_TargetAssemblyTypeName: View, Assembly-CSharp
+        m_MethodName: OpenView
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2325,10 +2344,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1548423671906577970}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 8854363844880366973}
+        m_TargetAssemblyTypeName: View, Assembly-CSharp
+        m_MethodName: ExitView
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2712,7 +2731,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1206573153819314821}
         m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
-        m_MethodName: UnPauseGame
+        m_MethodName: UnPauseTown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3190,6 +3209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8927405665071973573}
   - component: {fileID: 1206573153819314821}
+  - component: {fileID: 1602231359475316111}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -3214,7 +3234,7 @@ RectTransform:
   - {fileID: 6435332526276615391}
   - {fileID: 5061670647921041565}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3237,9 +3257,29 @@ MonoBehaviour:
   pauseMenuInGame: {fileID: 8927405664864250066}
   pauseMenu: {fileID: 5263157829077216610}
   embark: {fileID: 0}
+  view: {fileID: 1602231359475316111}
   recruitmentButton: {fileID: 0}
   townHallButton: {fileID: 0}
   portraitBar: {fileID: 0}
+  characterTable: {fileID: 0}
+--- !u!114 &1602231359475316111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8927405665071973572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f410f151fc8b74a83a355c1df54d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openView:
+    m_PersistentCalls:
+      m_Calls: []
+  closeView:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &9159048696302195267
 GameObject:
   m_ObjectHideFlags: 0

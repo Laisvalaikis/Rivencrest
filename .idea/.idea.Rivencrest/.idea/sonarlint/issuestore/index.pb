@@ -19,8 +19,6 @@ h
 8Assets/_Eligijus/Scripts/SoundManager/SoundParameters.cs,b\2\b21548a21343d4460d160df0f57fb8a528fa7286
 Y
 )Assets/_Eligijus/Scripts/UI/GoldChange.cs,a\8\a848171e770b3dea9f276f7d594b62f9c8310ce9
-d
-4Assets/_Eligijus/Scripts/SceneManager/ChangeScene.cs,9\d\9dd995116f2a76bcd41d093e9a168794a82f3b74
 ]
 -Assets/_Eligijus/Scripts/Data/StateManager.cs,4\c\4cd4ef24dc08189ad41cb29e1f08611c79deab3b
 c
@@ -39,14 +37,10 @@ t
 DAssets/_Eligijus/Scripts_old/SceneManager/LoadingScreenController.cs,d\d\dde487be1baefb532888a5f1e7d6b296466567fb
 f
 6Assets/_Eligijus/Scripts_old/Abilities/ActionButton.cs,3\7\37917569e0dabfff583d99de6621a0db1078fbe5
-m
-=Assets/_Eligijus/Scripts_old/HelpTable/HelpTableController.cs,5\4\541777a32dbb1bcc763336166fcd1c3897ef3db8
 _
 /Assets/_Eligijus/Scripts_old/TeamInformation.cs,0\c\0c5a2f8489671386abf57ed6231e40466632e940
 b
 2Assets/_Eligijus/Scripts_old/PvPCharacterSelect.cs,b\a\baec9f3db26ae1a98111d2bc64f234f3b1913ef2
-]
--Assets/_Eligijus/Scripts_old/ButtonManager.cs,b\2\b2c5d35d3be06df972bef41cb03878a23980d8b9
 c
 3Assets/_Eligijus/Scripts/SoundManager/MusicLevel.cs,b\c\bcf2cea0aed0f00408090171ab2d1b569ddd6624
 d
@@ -61,7 +55,9 @@ f
 6Assets/_Eligijus/Scripts_old/Abilities/BlockAbility.cs,4\c\4ccdf36e0b6635c64a965b2a871dcb17443bb289
 \
 ,Assets/_Eligijus/Scripts/Data/AbilityText.cs,4\3\438dfdb6ecc607940ecc7437c06c68beb6fa1133
-j
-:Assets/_Eligijus/Scripts_old/GameManagment/GameProgress.cs,2\3\23ff33bb37cb09f69589beb4a6a58000181ab715
 ]
 -Assets/_Eligijus/Scripts/TownHall/TownHall.cs,7\b\7b789676b4d8d0a6060b5417714e6abfbd7623d9
+b
+2Assets/_Eligijus/Scripts/TownHall/UpgradeButton.cs,1\c\1c7a58d5fd3d8684072e4e928cefe43332c62e0d
+l
+<Assets/_Eligijus/Scripts/RecruitementCenter/RecruitButton.cs,3\f\3f71211a9ea847332b764d3257b68fbb2434f946

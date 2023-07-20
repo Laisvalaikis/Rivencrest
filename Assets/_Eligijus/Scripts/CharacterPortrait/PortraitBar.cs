@@ -169,7 +169,7 @@ public class PortraitBar : MonoBehaviour
         townPortraits[portraitIndex].characterIndex = index;
         townPortraits[portraitIndex].characterImage.sprite = _data.Characters[index].playerInformation.CharacterPortraitSprite;
         townPortraits[portraitIndex].levelText.text = _data.Characters[index].level.ToString();
-        if (_data.Characters[index].abilityPointCount > 0)
+        if (_data.Characters[index].toConfirmAbilities > 0 || _data.Characters[index].abilityPointCount > 0)
         {
             townPortraits[portraitIndex].abilityPointCorner.SetActive(true);
         }

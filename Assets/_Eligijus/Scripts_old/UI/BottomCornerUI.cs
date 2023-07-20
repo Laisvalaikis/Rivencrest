@@ -126,37 +126,37 @@ public class BottomCornerUI : MonoBehaviour
 
     public void EnableAbilities(SavedCharacter savedCharacter)
     {
-        int currentButtonIndex = 2;
-        int buttonIndex = 0;
-        if (savedCharacter != null)
-        {
-            for (int i = 0; i < savedCharacter.unlockedAbilities.Length; i++)
-            {
-                if (_buttonManager.ButtonList.Count > currentButtonIndex)
-                {
-                    if (savedCharacter.prefab.GetComponent<ActionManager>().FindActionByIndex(i) != null && savedCharacter.unlockedAbilities[i] == '1')
-                    {
-                        _buttonManager.ButtonList[currentButtonIndex].transform.parent.gameObject.SetActive(true);
-                        UpdateData(buttonIndex, i);
-                        // ButtonList[currentButtonIndex].transform.Find("ActionButtonImage").GetComponent<Image>().sprite = savedCharacter.prefab.GetComponent<ActionManager>().FindActionByIndex(i).AbilityIcon;
-                        // ButtonList[currentButtonIndex].GetComponent<ActionButton>().buttonState = savedCharacter.prefab.GetComponent<ActionManager>().FindActionByIndex(i).actionName;
-                        currentButtonIndex++;
-                        buttonIndex++;
-                    }
-                }
-            }
-            for (int i = currentButtonIndex; i < _buttonManager.ButtonList.Count; i++)
-            {
-                _buttonManager.ButtonList[i].transform.parent.gameObject.SetActive(false);
-                // string extensionName = "Extension" + (i + 1).ToString();
-                // transform.Find("CornerUI").Find(extensionName).gameObject.SetActive(false);
-            }
-
-            if (savedCharacter.unlockedAbilities == "0000")
-            {
-                UpdateCommonData();
-            }
-        }
+        // int currentButtonIndex = 2;
+        // int buttonIndex = 0;
+        // if (savedCharacter != null)
+        // {
+        //     for (int i = 0; i < savedCharacter.unlockedAbilities.Length; i++)
+        //     {
+        //         if (_buttonManager.ButtonList.Count > currentButtonIndex)
+        //         {
+        //             if (savedCharacter.prefab.GetComponent<ActionManager>().FindActionByIndex(i) != null && savedCharacter.unlockedAbilities[i] == '1')
+        //             {
+        //                 _buttonManager.ButtonList[currentButtonIndex].transform.parent.gameObject.SetActive(true);
+        //                 UpdateData(buttonIndex, i);
+        //                 // ButtonList[currentButtonIndex].transform.Find("ActionButtonImage").GetComponent<Image>().sprite = savedCharacter.prefab.GetComponent<ActionManager>().FindActionByIndex(i).AbilityIcon;
+        //                 // ButtonList[currentButtonIndex].GetComponent<ActionButton>().buttonState = savedCharacter.prefab.GetComponent<ActionManager>().FindActionByIndex(i).actionName;
+        //                 currentButtonIndex++;
+        //                 buttonIndex++;
+        //             }
+        //         }
+        //     }
+        //     for (int i = currentButtonIndex; i < _buttonManager.ButtonList.Count; i++)
+        //     {
+        //         _buttonManager.ButtonList[i].transform.parent.gameObject.SetActive(false);
+        //         // string extensionName = "Extension" + (i + 1).ToString();
+        //         // transform.Find("CornerUI").Find(extensionName).gameObject.SetActive(false);
+        //     }
+        //
+        //     if (savedCharacter.unlockedAbilities == "0000")
+        //     {
+        //         UpdateCommonData();
+        //     }
+        // }
     }
     
     public void EnableAbilities()

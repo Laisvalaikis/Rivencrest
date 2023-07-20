@@ -20,7 +20,7 @@ public class CharacterTable : MonoBehaviour
     [SerializeField] private GameObject confirmationTable;
     [SerializeField] private TextMeshProUGUI confirmationTableText;
     [SerializeField] private Image confirmationTableSprite;
-    [SerializeField] private GameObject undo;
+    [SerializeField] private GameObject confirm;
     [SerializeField] private Button leftArrow;
     [SerializeField] private Button rightArrow;
     [HideInInspector] public string originalName;
@@ -29,26 +29,35 @@ public class CharacterTable : MonoBehaviour
     [SerializeField] private List<Image> abilityButtonImages;
     [SerializeField] private List<Image> abilityButtonIconImages;
     [SerializeField] private Image roleIcon;
+    public View view;
     public TMP_InputField nameInput;
     [SerializeField] private GameUi gameUI;
     public HelpTable helpTable;
     public GameObject recruitmentCenterTable;
     public TownHall townHall;
+    private List<bool> abilityButtonState;
     private int characterIndex;
-    private List<int> tempUnlockedAbilities = new List<int>();
     private Data _data;
+    private bool pauseEnabled = false;
     
     private void Awake()
     {
-        ResetTempUnlockedAbilities();
     }
 
     private void OnEnable()
     {
-        ResetTempUnlockedAbilities();
+        // ResetTempUnlockedAbilities();
         if (_data == null && Data.Instance != null)
         {
             _data = Data.Instance;
+            if (abilityButtonState == null || abilityButtonState.Count == 0)
+            {
+                abilityButtonState = new List<bool>();
+                for (int i = 0; i < abilityButtons.Count; i++)
+                {
+                    abilityButtonState.Add(false);
+                }
+            }
         }
     }
 
@@ -59,7 +68,40 @@ public class CharacterTable : MonoBehaviour
 
     private void OnDisable()
     {
-        ResetTempUnlockedAbilities();
+    }
+
+    public void DisableAllButtons()
+    {
+        pauseEnabled = true;
+        if (abilityButtonState == null)
+        {
+            abilityButtonState = new List<bool>();
+        }
+        else if (abilityButtonState.Count > 0)
+        {
+            for (int i = 0; i < abilityButtons.Count; i++)
+            {
+                abilityButtonState[i] = abilityButtons[i].interactable;
+                abilityButtons[i].interactable = false;
+            }
+        }
+        
+    }
+
+    public void EnableAllButtons()
+    {
+        pauseEnabled = false;
+        if (abilityButtonState == null)
+        {
+            abilityButtonState = new List<bool>();
+        }
+        else if (abilityButtonState.Count > 0)
+        {
+            for (int i = 0; i < abilityButtons.Count; i++)
+            {
+                abilityButtons[i].interactable = abilityButtonState[i];
+            }
+        }
     }
 
     private void UpdateCharacterPointCorner()
@@ -76,9 +118,19 @@ public class CharacterTable : MonoBehaviour
         gameUI.UpdateUnspentPointWarnings();
     }
 
-    public void ResetTempUnlockedAbilities()
+    public void ConfirmSelectedAbilities()
     {
-        tempUnlockedAbilities = new List<int>();
+        _data.Characters[characterIndex].toConfirmAbilities = 0;
+        List<UnlockedAbilities> unlockedAbilityList = _data.Characters[characterIndex].unlockedAbilities;
+        for (int i = 0; i < unlockedAbilityList.Count; i++)
+        {
+            if (!unlockedAbilityList[i].abilityConfirmed && unlockedAbilityList[i].abilityUnlocked)
+            {
+                _data.Characters[characterIndex].unlockedAbilities[i].abilityConfirmed = true;
+            }
+        }
+        confirm.SetActive(false);
+        UpdateCharacterPointCorner();
     }
 
     public void ChangeCharacterName()
@@ -114,8 +166,16 @@ public class CharacterTable : MonoBehaviour
         var character = _data.Characters[characterIndex];
         for (int i = 0; i < abilityButtons.Count; i++)
         {
-            abilityButtons[i].interactable = character.abilityPointCount > 0;
-            if (character.unlockedAbilities[i] == '0')
+            if (character.abilityPointCount > 0 || !_data.Characters[characterIndex].unlockedAbilities[i].abilityConfirmed && _data.Characters[characterIndex].unlockedAbilities[i].abilityUnlocked)
+            {
+                abilityButtons[i].interactable = true;
+            }
+            else
+            {
+                abilityButtons[i].interactable = false;
+            }
+
+            if (!character.unlockedAbilities[i].abilityUnlocked)
             {
                 Color color = abilityButtonImages[i].color - new Color(0.2f, 0.2f, 0.2f, 0f);
                 abilityButtonImages[i].color = color;
@@ -130,16 +190,17 @@ public class CharacterTable : MonoBehaviour
 
     public void DisplayCharacterTable(int index)
     {
-        gameObject.SetActive(true);
+        // gameObject.SetActive(true);
+        view.OpenView();
         int tempIndex = characterIndex;
         characterIndex = index;
         if (index != tempIndex)
         {
             helpTable.gameObject.SetActive(false);
+            UndoAbilitySelection(tempIndex);
             UpdateTable();
             UpdateAllAbilities();
         }
-        ResetTempUnlockedAbilities();
 
         if (recruitmentCenterTable != null && townHall != null)
         {
@@ -156,32 +217,40 @@ public class CharacterTable : MonoBehaviour
 
     public void EnableDisableHelpTable(int index)
     {
-        Transform helpTableTransform = helpTable.transform;
-        Vector3 currentPosition = helpTableTransform.position;
-        Vector3 position = new Vector3(currentPosition.x, abilityButtons[index].transform.position.y,
-            currentPosition.z);
-        helpTableTransform.SetPositionAndRotation(position, helpTableTransform.rotation);
-        helpTable.EnableTableForBoughtCharacters(index, characterIndex);
+        if (!pauseEnabled)
+        {
+            Transform helpTableTransform = helpTable.transform;
+            Vector3 currentPosition = helpTableTransform.position;
+            Vector3 position = new Vector3(currentPosition.x, abilityButtons[index].transform.position.y,
+                currentPosition.z);
+            helpTableTransform.SetPositionAndRotation(position, helpTableTransform.rotation);
+            helpTable.EnableTableForBoughtCharacters(index, characterIndex);
+        }
     }
     
-    public void UndoAbilitySelection()
+    public void UndoAbilitySelection(int selectedCharacterIndex)
     {
-        foreach (int abilityIndex in tempUnlockedAbilities)
+        List<UnlockedAbilities> unlockedAbilityList = _data.Characters[selectedCharacterIndex].unlockedAbilities;
+        for (int i = 0; i < unlockedAbilityList.Count; i++)
         {
-            RemoveAbility(abilityIndex);
+            if (!unlockedAbilityList[i].abilityConfirmed && unlockedAbilityList[i].abilityUnlocked)
+            {
+                RemoveAbility(i, selectedCharacterIndex);
+            }
         }
-        tempUnlockedAbilities.Clear();
         UpdateTable();
         UpdateAllAbilities();
     }
     
     public void ExitTable()
     {
-        gameObject.SetActive(false);
+        UndoAbilitySelection(characterIndex);
+        view.ExitView();
     }
     
     public void OnLeftArrowClick()
     {
+        UndoAbilitySelection(characterIndex);
         int newCharacterIndex = Mathf.Clamp(characterIndex - 1, 0, _data.Characters.Count - 1);
         DisplayCharacterTable(newCharacterIndex);
         UpdateTable();
@@ -191,6 +260,7 @@ public class CharacterTable : MonoBehaviour
 
     public void OnRightArrowClick()
     {
+        UndoAbilitySelection(characterIndex);
         int newCharacterIndex = Mathf.Clamp(characterIndex + 1, 0, _data.Characters.Count - 1);
         DisplayCharacterTable(newCharacterIndex);
         UpdateTable();
@@ -208,7 +278,7 @@ public class CharacterTable : MonoBehaviour
         gameUI.UpdateTownCost();
         _data.Characters.RemoveAt(characterIndex);
         portraitBar.RemoveCharacter(characterIndex);
-        gameObject.SetActive(false);
+        view.ExitView();
         UpdateTable();
         if (characterIndex > _data.Characters.Count - 1)
         {
@@ -233,7 +303,7 @@ public class CharacterTable : MonoBehaviour
             RemoveHighlightsFromPortraitBar();
         }
         confirmationTable.SetActive(false);
-        undo.SetActive(tempUnlockedAbilities.Count > 0);
+        confirm.SetActive(_data.Characters[characterIndex].toConfirmAbilities > 0);
         leftArrow.gameObject.SetActive(characterIndex > 0);
         rightArrow.gameObject.SetActive(characterIndex < _data.Characters.Count - 1);
         if (_data.Characters.Count > 3)
@@ -323,46 +393,35 @@ public class CharacterTable : MonoBehaviour
         }
         return maxHP;
     }
-    public void UpgradeAbility(int abilityIndex)
+    private void UpgradeAbility(int abilityIndex)
     {
-        var unlockedAbilities = _data.Characters[characterIndex].unlockedAbilities;
-        string newUnlockedAbilities = "";
-        for (int i = 0; i < unlockedAbilities.Length; i++)
-        {
-            if (i != abilityIndex)
-            {
-                newUnlockedAbilities += unlockedAbilities[i];
-            }
-            else
-            {
-                newUnlockedAbilities += 1.ToString();
-            }
-        }
-        _data.Characters[characterIndex].unlockedAbilities = newUnlockedAbilities;
+        _data.Characters[characterIndex].unlockedAbilities[abilityIndex].abilityUnlocked = true;
         _data.Characters[characterIndex].abilityPointCount--;
-        UpdateCharacterPointCorner();
-        tempUnlockedAbilities.Add(abilityIndex);
+        _data.Characters[characterIndex].toConfirmAbilities++;
         UpdateTable();
         UpdateAllAbilities();
     }
-    private void RemoveAbility(int abilityIndex)
+    private void RemoveAbility(int abilityIndex, int selectedCharacterIndex)
     {
-        var unlockedAbilities = _data.Characters[characterIndex].unlockedAbilities;
-        string newUnlockedAbilities = "";
-        for (int i = 0; i < unlockedAbilities.Length; i++)
-        {
-            if (i != abilityIndex)
-            {
-                newUnlockedAbilities += unlockedAbilities[i];
-            }
-            else
-            {
-                newUnlockedAbilities += 0.ToString();
-            }
-        }
-        _data.Characters[characterIndex].unlockedAbilities = newUnlockedAbilities;
-        _data.Characters[characterIndex].abilityPointCount++;
-        UpdateCharacterPointCorner();
+        _data.Characters[selectedCharacterIndex].unlockedAbilities[abilityIndex].abilityUnlocked = false;
+        _data.Characters[selectedCharacterIndex].toConfirmAbilities--;
+        _data.Characters[selectedCharacterIndex].abilityPointCount++;
     }
-    
+
+    public void AddRemoveAbility(int index)
+    {
+        if (!_data.Characters[characterIndex].unlockedAbilities[index].abilityUnlocked)
+        {
+            UpgradeAbility(index);
+        }
+        else
+        {
+            RemoveAbility(index, characterIndex);
+            UpdateTable();
+            UpdateAllAbilities();
+        }
+    }
+
+
+
 }

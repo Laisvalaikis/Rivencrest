@@ -110,7 +110,11 @@ public class Recruitment : MonoBehaviour
             NameList.RemoveAt(randomIndex2);
             //
             characterToAdd.abilityPointCount = 1;
-            characterToAdd.unlockedAbilities = "0000";
+            characterToAdd.unlockedAbilities = new List<UnlockedAbilities>();
+            for (int j = 0; j < 4; j++)
+            {
+                characterToAdd.unlockedAbilities.Add(new UnlockedAbilities());
+            }
             Debug.LogError("Need to redo Unlocked Abilities");
             //
             if (CharacterLevelChar == 1)

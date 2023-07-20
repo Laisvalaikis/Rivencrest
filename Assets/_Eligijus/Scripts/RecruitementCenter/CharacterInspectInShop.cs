@@ -21,6 +21,7 @@ public class CharacterInspectInShop : MonoBehaviour
     [SerializeField] private List<CharacterAbilityRecruit> _characterAbilityRecruits;
     [SerializeField] private Recruitment recruitment;
     [SerializeField] private HelpTable helpTable;
+    [SerializeField] private View view;
     private int _currentCharacterIndex = 0;
     private int _currentCharacterInShop;
 
@@ -28,8 +29,7 @@ public class CharacterInspectInShop : MonoBehaviour
     {
         if (index == _currentCharacterInShop)
         {
-            gameObject.SetActive(false);
-            helpTable.gameObject.SetActive(false);
+            view.ExitView();
         }
     }
 
@@ -37,8 +37,7 @@ public class CharacterInspectInShop : MonoBehaviour
     {
         if (gameObject.activeInHierarchy && index == _currentCharacterInShop)
         {
-            gameObject.SetActive(false);
-            helpTable.gameObject.SetActive(false);
+            view.ExitView();
         }
         else
         {
@@ -52,8 +51,7 @@ public class CharacterInspectInShop : MonoBehaviour
         _currentCharacterInShop = index;
         _currentCharacterIndex = recruitment.GetRealCharacterIndex(index);
         PlayerInformationData character = savedCharacter.playerInformation;
-
-        gameObject.SetActive(true);
+        view.OpenView();
         characterArt.sprite = character.CroppedSplashArt;
         tableBorder.color = character.secondClassColor;
         className.text = character.ClassName;

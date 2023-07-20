@@ -285,15 +285,15 @@ public class GameProgress : MonoBehaviour
             CharInfo.Find("Abilities").GetChild(i).Find("AbilityIcon").GetComponent<Image>().color = Char.prefab.GetComponent<PlayerInformation>().ClassColor;
         }
         int currentIndex = 2;
-        for (int j = 0; j < Char.unlockedAbilities.Length; j++)
-        {
-            if (Char.unlockedAbilities[j] == '1' && currentIndex < CharInfo.Find("Abilities").childCount)
-            {
-                CharInfo.Find("Abilities").GetChild(currentIndex).Find("AbilityIcon").GetComponent<Image>().sprite
-                = Char.prefab.GetComponent<ActionManager>().FindActionByIndex(j).AbilityIcon;
-                currentIndex++;
-            }
-        }
+        // for (int j = 0; j < Char.unlockedAbilities.Length; j++)
+        // {
+        //     if (Char.unlockedAbilities[j] == '1' && currentIndex < CharInfo.Find("Abilities").childCount)
+        //     {
+        //         CharInfo.Find("Abilities").GetChild(currentIndex).Find("AbilityIcon").GetComponent<Image>().sprite
+        //         = Char.prefab.GetComponent<ActionManager>().FindActionByIndex(j).AbilityIcon;
+        //         currentIndex++;
+        //     }
+        // }
         if (currentIndex == 3)
         {
             CharInfo.Find("Abilities").GetChild(2).localPosition = new Vector3(0, CharInfo.Find("Abilities").GetChild(2).localPosition.y, CharInfo.Find("Abilities").GetChild(2).localPosition.z);

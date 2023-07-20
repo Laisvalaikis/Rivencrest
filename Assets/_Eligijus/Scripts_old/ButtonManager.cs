@@ -214,31 +214,24 @@ public class ButtonManager : MonoBehaviour
     }
     public void GenerateAbilities()
     {
-        int currentButtonIndex = 2;
-        SavedCharacter character = CharacterOnBoard.GetComponent<PlayerInformation>().savedCharacter;
-        if (character != null)
-        {
-            for (int i = 0; i < character.unlockedAbilities.Length; i++)
-            {
-                if (ButtonList.Count > currentButtonIndex)
-                {
-                    if (character.prefab.GetComponent<ActionManager>().FindActionByIndex(i) != null && character.unlockedAbilities[i] == '1')
-                    {
-                        ButtonList[currentButtonIndex].transform.parent.gameObject.SetActive(true);
-                        ButtonList[currentButtonIndex].transform.Find("ActionButtonImage").GetComponent<Image>().sprite = character.prefab.GetComponent<ActionManager>().FindActionByIndex(i).AbilityIcon;
-                        ButtonList[currentButtonIndex].GetComponent<ActionButton>().buttonState = character.prefab.GetComponent<ActionManager>().FindActionByIndex(i).actionName;
-                        currentButtonIndex++;
-                    }
-                }
-            }
-            // for (int i = currentButtonIndex; i < ButtonList.Count; i++)
-            // {
-            //         ButtonList[i].gameObject.SetActive(false);
-            //         string extensionName = "Extension" + (i + 1).ToString();
-            //         transform.Find("CornerUI").Find(extensionName).gameObject.SetActive(false);
-            // }
-           // Debug.LogError("Commented disable ability button");
-        }
+        // int currentButtonIndex = 2;
+        // SavedCharacter character = CharacterOnBoard.GetComponent<PlayerInformation>().savedCharacter;
+        // if (character != null)
+        // {
+        //     for (int i = 0; i < character.unlockedAbilities.Length; i++)
+        //     {
+        //         if (ButtonList.Count > currentButtonIndex)
+        //         {
+        //             if (character.prefab.GetComponent<ActionManager>().FindActionByIndex(i) != null && character.unlockedAbilities[i] == '1')
+        //             {
+        //                 ButtonList[currentButtonIndex].transform.parent.gameObject.SetActive(true);
+        //                 ButtonList[currentButtonIndex].transform.Find("ActionButtonImage").GetComponent<Image>().sprite = character.prefab.GetComponent<ActionManager>().FindActionByIndex(i).AbilityIcon;
+        //                 ButtonList[currentButtonIndex].GetComponent<ActionButton>().buttonState = character.prefab.GetComponent<ActionManager>().FindActionByIndex(i).actionName;
+        //                 currentButtonIndex++;
+        //             }
+        //         }
+        //     }
+        // }
     }
 
     public void GenerateAbilitiesForEnemy(List<string> abilitiesToEnable)
