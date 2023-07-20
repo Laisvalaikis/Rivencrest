@@ -85,17 +85,12 @@ public class CharacterTable : MonoBehaviour
                 abilityButtons[i].interactable = false;
             }
         }
-        
     }
 
     public void EnableAllButtons()
     {
         pauseEnabled = false;
-        if (abilityButtonState == null)
-        {
-            abilityButtonState = new List<bool>();
-        }
-        else if (abilityButtonState.Count > 0)
+        if (abilityButtonState.Count > 0)
         {
             for (int i = 0; i < abilityButtons.Count; i++)
             {
@@ -115,7 +110,11 @@ public class CharacterTable : MonoBehaviour
         {
             portraitBar.EnableAbilityCorner(characterIndex);
         }
-        gameUI.UpdateUnspentPointWarnings();
+
+        if (gameUI != null)
+        {
+            gameUI.UpdateUnspentPointWarnings();
+        }
     }
 
     public void ConfirmSelectedAbilities()

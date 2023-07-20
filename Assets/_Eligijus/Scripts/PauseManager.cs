@@ -10,12 +10,12 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject pauseMenuInGame;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private Button embark;
-    [SerializeField] private View view;
     [Header("Town Buttons")]
     [SerializeField] private Button recruitmentButton;
     [SerializeField] private Button townHallButton;
     [SerializeField] private PortraitBar portraitBar;
     [SerializeField] private CharacterTable characterTable;
+    [SerializeField] private TownHall townHall;
     private bool embarStatek;
     private Data _data;
     private bool pauseMenuEnabled = false;
@@ -36,7 +36,6 @@ public class PauseManager : MonoBehaviour
     
     public void PauseInGame()
     {
-        view.OpenView();
         _data.canButtonsBeClickedState = _data.canButtonsBeClicked;
         _data.canButtonsBeClicked = false;
         pauseMenuInGame.gameObject.SetActive(true);
@@ -46,7 +45,6 @@ public class PauseManager : MonoBehaviour
     
     public void UnPauseInGame()
     {
-        view.ExitView();
         _data.canButtonsBeClickedState = _data.canButtonsBeClicked;
         _data.canButtonsBeClicked = true;
         pauseMenu.gameObject.SetActive(false);
@@ -58,7 +56,6 @@ public class PauseManager : MonoBehaviour
     {
         if (!pauseMenuEnabled)
         {
-            view.OpenView();
             _data.canButtonsBeClickedState = _data.canButtonsBeClicked;
             _data.canButtonsBeClicked = false;
             embarStatek = embark.interactable;
@@ -76,8 +73,6 @@ public class PauseManager : MonoBehaviour
     {
         if (pauseMenuEnabled)
         {
-
-            view.ExitView();
             _data.canButtonsBeClickedState = _data.canButtonsBeClicked;
             _data.canButtonsBeClicked = true;
             embark.interactable = embarStatek;
@@ -113,6 +108,11 @@ public class PauseManager : MonoBehaviour
             characterTable.DisableAllButtons();
         }
 
+        if (townHall != null)
+        {
+            townHall.DisableAllButtons();
+        }
+
         if (recruitmentButton != null)
         {
             recruitmentButton.interactable = false;
@@ -130,6 +130,11 @@ public class PauseManager : MonoBehaviour
         if (characterTable != null)
         {
             characterTable.EnableAllButtons();
+        }
+        
+        if (townHall != null)
+        {
+            townHall.EnableAllButtons();
         }
         
         if (recruitmentButton != null)

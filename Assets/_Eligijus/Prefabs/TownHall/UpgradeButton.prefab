@@ -309,6 +309,7 @@ MonoBehaviour:
   frame: {fileID: 5698355857053634420}
   text: {fileID: 5169415412564077774}
   imageFadeController: {fileID: 0}
+  button: {fileID: 817070152323529616}
 --- !u!114 &2977691858047317215
 MonoBehaviour:
   m_ObjectHideFlags: 0

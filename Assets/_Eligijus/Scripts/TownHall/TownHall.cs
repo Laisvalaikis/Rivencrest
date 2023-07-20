@@ -16,16 +16,56 @@ public class TownHall : MonoBehaviour
     public Sprite[] sprites;
     private Image imageComponent;
     private UpgradeButton SelectedUpgrade;
+    private bool pause = false;
     private Data _data;
+    private List<bool> buttonState;
     private void OnEnable()
     {
         if (_data == null)
         {
             imageComponent = GetComponent<Image>();
             _data = Data.Instance;
+            buttonState = new List<bool>();
+            for (int i = 0; i < upgradeButtons.Count; i++)
+            {
+                buttonState.Add(false);
+            }
         }
         // _data.townData.hasClickedTH = true;
     }
+
+    public void DisableAllButtons()
+    {
+        if (buttonState == null)
+        {
+            buttonState = new List<bool>();
+        }
+        else if (buttonState.Count > 0)
+        {
+            for (int i = 0; i < buttonState.Count; i++)
+            {
+                buttonState[i] = upgradeButtons[i].button.interactable;
+                upgradeButtons[i].button.interactable = false;
+                upgradeButtons[i].Pause(true);
+            }
+            pause = true;
+        }
+    }
+
+    public void EnableAllButtons()
+    {
+        if (buttonState != null && buttonState.Count > 0)
+        {
+            for (int i = 0; i < upgradeButtons.Count; i++)
+            {
+                upgradeButtons[i].Pause(false);
+                upgradeButtons[i].button.interactable = buttonState[i];
+                
+            }
+            pause = false;
+        }
+    }
+
     public void SetupMerchantSprite()
     {
         if (_data.townData.townHall.damagedMerchant == 1)
@@ -40,40 +80,43 @@ public class TownHall : MonoBehaviour
     }
     public void UpdateButtons()
     {
-        foreach (UpgradeButton button in upgradeButtons)
-        {
-            if (button.gameObject.activeInHierarchy)
+        
+
+            foreach (UpgradeButton button in upgradeButtons)
             {
-                button.UpdateUpgradeButton();
+                if (button.gameObject.activeInHierarchy)
+                {
+                    button.UpdateUpgradeButton();
+                }
             }
-        }
 
-        if (SelectedUpgrade != null)
-        {
-            upgradeNameText.gameObject.SetActive(true);
-            upgradeDescriptionText.gameObject.SetActive(true);
-            upgradeCostText.gameObject.SetActive(true);
-            backgroundForText.gameObject.SetActive(true);
+            if (SelectedUpgrade != null)
+            {
+                upgradeNameText.gameObject.SetActive(true);
+                upgradeDescriptionText.gameObject.SetActive(true);
+                upgradeCostText.gameObject.SetActive(true);
+                backgroundForText.gameObject.SetActive(true);
 
-            upgradeNameText.text = SelectedUpgrade.upgradeData.upgradeName;
-            upgradeDescriptionText.text = SelectedUpgrade.upgradeData.upgradeDescription;
-            upgradeCostText.text = "-" + SelectedUpgrade.upgradeData.upgradeCost.ToString() + "g";
-            buyButton.interactable = _data.townData.townGold >= SelectedUpgrade.upgradeData.upgradeCost;
-        }
-        else
-        {
-            upgradeNameText.gameObject.SetActive(false);
-            upgradeDescriptionText.gameObject.SetActive(false);
-            upgradeCostText.gameObject.SetActive(false);
-            buyButton.gameObject.SetActive(false);
-        }
+                upgradeNameText.text = SelectedUpgrade.upgradeData.upgradeName;
+                upgradeDescriptionText.text = SelectedUpgrade.upgradeData.upgradeDescription;
+                upgradeCostText.text = "-" + SelectedUpgrade.upgradeData.upgradeCost.ToString() + "g";
+                buyButton.interactable = _data.townData.townGold >= SelectedUpgrade.upgradeData.upgradeCost;
+            }
+            else
+            {
+                upgradeNameText.gameObject.SetActive(false);
+                upgradeDescriptionText.gameObject.SetActive(false);
+                upgradeCostText.gameObject.SetActive(false);
+                buyButton.gameObject.SetActive(false);
+            }
+        
     }
 
     public void CloseTownHall()
     {
         SelectedUpgrade = null;
+        pause = false;
         UpdateButtons();
-        gameObject.SetActive(false);
     }
     
     public void BuyUpgrade()
@@ -90,26 +133,30 @@ public class TownHall : MonoBehaviour
     }
     public void SelectUpgrade(UpgradeButton upgradeButton)
     {
-        if (upgradeButton != null)
+        if (!pause)
         {
-            if (SelectedUpgrade == upgradeButton)
+            if (upgradeButton != null)
             {
-                SelectedUpgrade = null;
-                imageFadeController.FadeOut();
+                if (SelectedUpgrade == upgradeButton)
+                {
+                    SelectedUpgrade = null;
+                    imageFadeController.FadeOut();
+                }
+                else
+                {
+                    SelectedUpgrade = upgradeButton;
+                    imageFadeController.FadeIn();
+                }
             }
             else
             {
-                SelectedUpgrade = upgradeButton;
-                imageFadeController.FadeIn();
+                Debug.LogError("Select upgrade null value");
+                SelectedUpgrade = null;
+                imageFadeController.FadeOut();
             }
+
+            // upgradeButton.UpdateUpgradeButton();
+            UpdateButtons();
         }
-        else
-        {
-            Debug.LogError("Select upgrade null value");
-            SelectedUpgrade = null;
-            imageFadeController.FadeOut();
-        }
-        // upgradeButton.UpdateUpgradeButton();
-        UpdateButtons();
     }
 }

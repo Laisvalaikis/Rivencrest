@@ -60,7 +60,7 @@ public partial class @SimpleControls: IInputActionCollection2, IDisposable
                     ""id"": ""08cbf9ef-6f85-44d0-b39b-de7d230191df"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press(behavior=2)"",
+                    ""interactions"": ""Press(behavior=1)"",
                     ""initialStateCheck"": false
                 }
             ],

@@ -13,14 +13,14 @@ public class UpgradeButton : MonoBehaviour
     public Image frame;
     public TextMeshProUGUI text;
     public ImageFadeController imageFadeController;
-    private Button _button;
+    public Button button;
+    private bool enabled = true;
     private Data _data;
 
     private void OnEnable()
     {
         if (_data == null && Data.Instance != null)
         {
-            _button = GetComponent<Button>();
             _data = Data.Instance;
         }
 
@@ -34,21 +34,31 @@ public class UpgradeButton : MonoBehaviour
 
     public void UpdateUpgradeButton()
     {
-        
-        TownHallData townHall = _data.townData.townHall;
-        if (townHall.GetByType((TownHallUpgrade)upgradeData.upgradeIndex) + 1 < upgradeData.upgradeValue)//negalimi pirkti nes per auksti
+        if (enabled)
         {
-            _button.interactable = false;
+
+            TownHallData townHall = _data.townData.townHall;
+            if (townHall.GetByType((TownHallUpgrade)upgradeData.upgradeIndex) + 1 <
+                upgradeData.upgradeValue) //negalimi pirkti nes per auksti
+            {
+                button.interactable = false;
+            }
+            else if (townHall.GetByType((TownHallUpgrade)upgradeData.upgradeIndex) + 1 >
+                     upgradeData.upgradeValue) //nupirkti
+            {
+                button.interactable = false;
+                frame.sprite = UpgradedSprite;
+                text.color = Color.white;
+            }
+            else
+            {
+                button.interactable = true;
+            } //galimas pirkti
         }
-        else if (townHall.GetByType((TownHallUpgrade)upgradeData.upgradeIndex) + 1 > upgradeData.upgradeValue) //nupirkti
-        {
-            _button.interactable = false;
-            frame.sprite = UpgradedSprite;
-            text.color = Color.white;
-        }
-        else {
-            _button.interactable = true;
-        }//galimas pirkti
-        
+    }
+
+    public void Pause(bool pause)
+    {
+        enabled = !pause;
     }
 }

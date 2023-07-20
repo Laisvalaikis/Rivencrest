@@ -35,8 +35,6 @@ e
 5Assets/_Eligijus/Scripts/SoundManager/MusicManager.cs,d\9\d988cba870b328ddccf79f2e6bbb1697ec5c6662
 t
 DAssets/_Eligijus/Scripts_old/SceneManager/LoadingScreenController.cs,d\d\dde487be1baefb532888a5f1e7d6b296466567fb
-f
-6Assets/_Eligijus/Scripts_old/Abilities/ActionButton.cs,3\7\37917569e0dabfff583d99de6621a0db1078fbe5
 _
 /Assets/_Eligijus/Scripts_old/TeamInformation.cs,0\c\0c5a2f8489671386abf57ed6231e40466632e940
 b
@@ -55,9 +53,5 @@ f
 6Assets/_Eligijus/Scripts_old/Abilities/BlockAbility.cs,4\c\4ccdf36e0b6635c64a965b2a871dcb17443bb289
 \
 ,Assets/_Eligijus/Scripts/Data/AbilityText.cs,4\3\438dfdb6ecc607940ecc7437c06c68beb6fa1133
-]
--Assets/_Eligijus/Scripts/TownHall/TownHall.cs,7\b\7b789676b4d8d0a6060b5417714e6abfbd7623d9
-b
-2Assets/_Eligijus/Scripts/TownHall/UpgradeButton.cs,1\c\1c7a58d5fd3d8684072e4e928cefe43332c62e0d
 l
 <Assets/_Eligijus/Scripts/RecruitementCenter/RecruitButton.cs,3\f\3f71211a9ea847332b764d3257b68fbb2434f946

@@ -1660,7 +1660,19 @@ MonoBehaviour:
       m_Calls: []
   closeView:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2309866807194960712}
+        m_TargetAssemblyTypeName: HelpTable, Assembly-CSharp
+        m_MethodName: DisableHelpTable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2198414035412818402
 GameObject:
   m_ObjectHideFlags: 0

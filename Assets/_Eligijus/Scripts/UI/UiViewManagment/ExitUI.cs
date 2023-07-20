@@ -7,9 +7,13 @@ using UnityEngine.InputSystem.Interactions;
 public class ExitUI : MonoBehaviour
 {
    
+    public void OnEscape(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            Escape();
+    }
    
-   
-   public void Escape()
+   private void Escape()
    {
       UIStack.QuitLast();
    }

@@ -66,6 +66,15 @@ public class HelpTable : MonoBehaviour
         UpdateHelpTable(abilityIndex, character, actionManager);
     }
 
+    public void DisableHelpTable()
+    {
+        if (wasSelected)
+        {
+            gameObject.SetActive(false);
+            wasSelected = false;
+        }
+    }
+
     private void UpdateHelpTable(int abilityIndex, SavedCharacter character, ActionManager actionManager)
     {
         var ability = actionManager.FindActionByIndex(abilityIndex).action;
@@ -85,6 +94,8 @@ public class HelpTable : MonoBehaviour
             }
         }
     }
+    
+    
 
     public void EnableTableForCharacters(int abilityIndex, int characterIndex)
     {

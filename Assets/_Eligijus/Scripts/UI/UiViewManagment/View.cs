@@ -30,6 +30,18 @@ public class View : MonoBehaviour
         openView.Invoke();
     }
 
+    public void OpenCloseView()
+    {
+        if (disabled)
+        {
+            OpenView();
+        }
+        else
+        {
+            ExitView();
+        }
+    }
+
     public void ExitViewWithoutRemoveFromStack()
     {
         gameObject.SetActive(false);
