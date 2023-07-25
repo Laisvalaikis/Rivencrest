@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &990407109840061811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2253886822752815430}
+  - component: {fileID: 8207484023722888744}
+  m_Layer: 0
+  m_Name: MapSetup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2253886822752815430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990407109840061811}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 926.2613, y: 326.46542, z: 5.438168}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8207484023722888744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990407109840061811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b680d9c47f69ba4695a463a706c4745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MapName: 
+  MapPrefabs: []
+  _mapDatas:
+  - {fileID: 11400000, guid: 9b6d9c7a23fb0ce4d9dba98f6bf62aed, type: 2}
+  - {fileID: 11400000, guid: de615798692bc4e4db68b4f10a111e3f, type: 2}
+  - {fileID: 11400000, guid: 6978da0c999655149b69a44bda4115d1, type: 2}
+  - {fileID: 11400000, guid: b28a8118a6a646245a0d3755ba6d6a98, type: 2}
+  - {fileID: 11400000, guid: 48d70be8df62ba04e992e2bc52bdc759, type: 2}
+  - {fileID: 11400000, guid: c002bb3c955c4f440974f83dc055e425, type: 2}
+  - {fileID: 11400000, guid: 9489418fb42d7734da5796f1bea6b116, type: 2}
+  - {fileID: 11400000, guid: 76449bbbc1379ec47a80ef7032d07387, type: 2}
+  - {fileID: 11400000, guid: 4e92d2e5934078e4d96fed8bd7ab8df5, type: 2}
+  - {fileID: 11400000, guid: b0cf29e5f7bb4af4e85ec5d2077d9bbf, type: 2}
+  - {fileID: 11400000, guid: a1ac1e22f4d7a1149bac0e90ffadbb5a, type: 2}
+  - {fileID: 11400000, guid: 5420c434a78f8bb42b31b004ca0c46f5, type: 2}
+  - {fileID: 11400000, guid: 47b2becb2a2718d47a38651ff6d70931, type: 2}
+  - {fileID: 11400000, guid: e2989b9369e7a114797cc7835438354a, type: 2}
+  - {fileID: 11400000, guid: d978176b25f164c44a17b1e64d521bfd, type: 2}
+  - {fileID: 11400000, guid: 4d91114d96ef32147bed473eeb86c5f1, type: 2}
+  gameInformation: {fileID: 0}
+  coordinatesGameObject: {fileID: 0}
+  mapInformation: {fileID: 0}
+  map: {fileID: 0}

@@ -12,16 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea330ad9c74946e408d6adb741e3f1f3, type: 3}
   m_Name: Fields
   m_EditorClassIdentifier: 
-  SuitableEnemies:
+  suitableEnemies:
   - UndeadBoss
   - UndeadSpider
   - UndeadCultist
   - UndeadKnight
   - UndeadMindController
   - UndeadSpiderMaiden
-  NpcTeam: []
-  SuitableLevels: 0100000002000000030000000400000005000000
-  NumberOfEnemies: 3
-  MapCategory: Undead
-  AllowDuplicates: 0
-  MapImage: {fileID: 0}
+  npcTeam: []
+  suitableLevels: 0100000002000000030000000400000005000000
+  numberOfEnemies: 3
+  mapCategory: Undead
+  allowDuplicates: 0
+  mapImage: {fileID: 21300000, guid: ca97480f40a3a40c28ab4c2590cf631a, type: 3}
+  informationText: 

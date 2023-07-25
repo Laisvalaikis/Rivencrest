@@ -12,7 +12,6 @@ public class Data : MonoBehaviour
     public List<GameObject> AllEnemyCharacterPrefabs;
     public List<SavedCharacter> AllEnemySavedCharacters;
     [HideInInspector] public List<int> CharactersOnLastMission;
-    //[HideInInspector] public bool wasLastMissionSuccessful;
     public TownData newGameData;
     [HideInInspector] public bool canButtonsBeClicked = true;
     public bool canButtonsBeClickedState = true;
@@ -38,11 +37,20 @@ public class Data : MonoBehaviour
         {
             Instance = this;
         }
+      
     }
 
     public void InsertCharacter(SavedCharacter character)
     {
         Characters.Add(character);
         characterRecruitmentEvent.Invoke();
+    }
+
+    private void OnDestroy()
+    {
+        if (this == Instance)
+        {
+            Instance = null;
+        }
     }
 }

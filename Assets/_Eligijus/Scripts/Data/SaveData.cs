@@ -43,11 +43,8 @@ public class SaveData : MonoBehaviour
         SaveGameData();
     }
 
-    public void SaveCharacterSelectData()
+    public void SaveSelectedCharacterData()
     {
-        GetComponent<CharacterSelect>().SaveData();
-        _allowEnemySelection = true;
-        _allowDuplicates = GetComponent<CharacterSelect>().allowDuplicates;
         SetupRecruitmentCharacters();
         SaveGameData();
     }
@@ -58,7 +55,7 @@ public class SaveData : MonoBehaviour
         if (SaveSystem.DoesSaveFileExist() && !_data.createNewRCcharacters)
         {
             TownData townData = _data.townData;
-            townData.rcCharacters.ForEach(savableCharacter => _recruitCharacters.Add(new SavedCharacter(savableCharacter, _data.AllAvailableCharacters[savableCharacter.characterIndex].prefab)));
+            townData.rcCharacters.ForEach(savableCharacter => _recruitCharacters.Add(new SavedCharacter(savableCharacter, _data.AllAvailableCharacters[savableCharacter.characterIndex].prefab, _data.AllAvailableCharacters[savableCharacter.characterIndex].playerInformation)));
         }
         if (_data.createNewRCcharacters)
         {
@@ -79,13 +76,13 @@ public class SaveData : MonoBehaviour
         _data.Characters.Clear();
         _data.CharactersOnLastMission.Clear();
   
-        _data.townData.characters.ForEach(savableCharacter => _data.Characters.Add(new SavedCharacter(savableCharacter, _data.AllAvailableCharacters[savableCharacter.characterIndex].prefab)));
+        _data.townData.characters.ForEach(savableCharacter => _data.Characters.Add(new SavedCharacter(savableCharacter, _data.AllAvailableCharacters[savableCharacter.characterIndex].prefab, _data.AllAvailableCharacters[savableCharacter.characterIndex].playerInformation)));
         _data.CharactersOnLastMission = new List<int>(_data.townData.charactersOnLastMission);
         //RC
         if (SceneManager.GetActiveScene().name == "Town" && !_data.townData.createNewRCcharacters && !_data.townData.newGame)
         {
             List<SavedCharacter> RCcharacters = new List<SavedCharacter>();
-            _data.townData.rcCharacters.ForEach(savableCharacter => RCcharacters.Add(new SavedCharacter(savableCharacter, _data.AllAvailableCharacters[savableCharacter.characterIndex].prefab)));
+            _data.townData.rcCharacters.ForEach(savableCharacter => RCcharacters.Add(new SavedCharacter(savableCharacter, _data.AllAvailableCharacters[savableCharacter.characterIndex].prefab, _data.AllAvailableCharacters[savableCharacter.characterIndex].playerInformation)));
             GameObject.Find("CanvasCamera").transform.Find("RecruitmentCenterTable").GetComponent<Recruitment>().CharactersInShop = RCcharacters;
         }
         else if (SceneManager.GetActiveScene().name == "Town" && (_data.townData.createNewRCcharacters || _data.townData.newGame))
@@ -101,7 +98,7 @@ public class SaveData : MonoBehaviour
         _data.townData = SaveSystem.LoadTownData();
         _data.Characters.Clear();
         _data.CharactersOnLastMission.Clear();
-        _data.townData.characters.ForEach(savableCharacter => _data.Characters.Add(new SavedCharacter(savableCharacter, _data.AllAvailableCharacters[savableCharacter.characterIndex].prefab)));
+        _data.townData.characters.ForEach(savableCharacter => _data.Characters.Add(new SavedCharacter(savableCharacter, _data.AllAvailableCharacters[savableCharacter.characterIndex].prefab, _data.AllAvailableCharacters[savableCharacter.characterIndex].playerInformation)));
         _data.CharactersOnLastMission = new List<int>(_data.townData.charactersOnLastMission);
         LoadRecruitmentCenter();
         _data.globalStatistics = SaveSystem.LoadStatistics(true);
@@ -113,7 +110,7 @@ public class SaveData : MonoBehaviour
         _data.townData = SaveSystem.LoadTownData();
         _data.Characters.Clear();
         _data.CharactersOnLastMission.Clear();
-        _data.townData.characters.ForEach(savableCharacter => _data.Characters.Add(new SavedCharacter(savableCharacter, _data.AllAvailableCharacters[savableCharacter.characterIndex].prefab)));
+        _data.townData.characters.ForEach(savableCharacter => _data.Characters.Add(new SavedCharacter(savableCharacter, _data.AllAvailableCharacters[savableCharacter.characterIndex].prefab, _data.AllAvailableCharacters[savableCharacter.characterIndex].playerInformation)));
         _data.CharactersOnLastMission = new List<int>(_data.townData.charactersOnLastMission);
         _data.globalStatistics = SaveSystem.LoadStatistics(true);
         _data.statistics = SaveSystem.LoadStatistics();
@@ -124,7 +121,7 @@ public class SaveData : MonoBehaviour
         if (!_data.townData.createNewRCcharacters && !_data.townData.newGame)
         {
             List<SavedCharacter> RCcharacters = new List<SavedCharacter>();
-            _data.townData.rcCharacters.ForEach(savableCharacter => RCcharacters.Add(new SavedCharacter(savableCharacter, _data.AllAvailableCharacters[savableCharacter.characterIndex].prefab)));
+            _data.townData.rcCharacters.ForEach(savableCharacter => RCcharacters.Add(new SavedCharacter(savableCharacter, _data.AllAvailableCharacters[savableCharacter.characterIndex].prefab, _data.AllAvailableCharacters[savableCharacter.characterIndex].playerInformation)));
             GameObject.Find("CanvasCamera").transform.Find("RecruitmentCenterTable").GetComponent<Recruitment>().CharactersInShop = RCcharacters;
         }
         else if (_data.townData.createNewRCcharacters || _data.townData.newGame)

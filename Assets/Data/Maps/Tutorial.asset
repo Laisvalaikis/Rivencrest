@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea330ad9c74946e408d6adb741e3f1f3, type: 3}
   m_Name: Tutorial
   m_EditorClassIdentifier: 
-  SuitableEnemies:
+  suitableEnemies:
   - BanditKnife
   - BanditCrossbow
-  NpcTeam: []
-  SuitableLevels: 01000000
-  NumberOfEnemies: 2
-  MapCategory: Forest
-  AllowDuplicates: 0
-  MapImage: {fileID: 0}
+  npcTeam: []
+  suitableLevels: 01000000
+  numberOfEnemies: 3
+  mapCategory: Forest
+  allowDuplicates: 0
+  mapImage: {fileID: 21300000, guid: 30dbd020e733044d7806bcfb27cd32e3, type: 3}
+  informationText: 

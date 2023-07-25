@@ -6,7 +6,7 @@ using UnityEngine.InputSystem.Interactions;
 
 public class ExitUI : MonoBehaviour
 {
-   
+    [SerializeField] private View pauseMenuView;
     public void OnEscape(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -15,6 +15,16 @@ public class ExitUI : MonoBehaviour
    
    private void Escape()
    {
-      UIStack.QuitLast();
+       if (UIStack.HasAnyViewToQuit())
+       {
+           UIStack.QuitLast();
+       }
+       else
+       {
+           if (pauseMenuView != null)
+           {
+               pauseMenuView.OpenView();
+           }
+       }
    }
 }

@@ -431,7 +431,7 @@ RectTransform:
   - {fileID: 5101813387772477879}
   - {fileID: 5101813386197731621}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1112,24 +1112,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterPortait_1
       objectReference: {fileID: 0}
-    - target: {fileID: 1681913518409854993, guid: bd7435e4e455771449ce4a04bb55150c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1681913518409854995, guid: bd7435e4e455771449ce4a04bb55150c, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1681913518409854995, guid: bd7435e4e455771449ce4a04bb55150c, type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1681913518409854995, guid: bd7435e4e455771449ce4a04bb55150c, type: 3}
-      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4601813924291432284, guid: bd7435e4e455771449ce4a04bb55150c, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

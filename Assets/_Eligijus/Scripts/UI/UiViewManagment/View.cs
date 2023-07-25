@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 public class View : MonoBehaviour
 {
+    [SerializeField] private bool viewCanBeDisabled = true;
+    [SerializeField] private bool addViewToStack = true;
     public UnityEvent openView;
     public UnityEvent closeView;
     private int viewIndex = -1;
@@ -22,7 +24,7 @@ public class View : MonoBehaviour
         {
             gameObject.SetActive(true);
         }
-        if (viewIndex == -1)
+        if (viewIndex == -1 && addViewToStack)
         {
             viewIndex = UIStack.Instance.AddView(this);
         }
@@ -44,14 +46,26 @@ public class View : MonoBehaviour
 
     public void ExitViewWithoutRemoveFromStack()
     {
-        gameObject.SetActive(false);
+        if (viewCanBeDisabled)
+        {
+            gameObject.SetActive(false);
+        }
+
         disabled = true;
     }
 
     public void ExitView()
     {
-        gameObject.SetActive(false);
-        UIStack.Quit(viewIndex);
+        if (viewCanBeDisabled)
+        {
+            gameObject.SetActive(false);
+        }
+
+        if (addViewToStack)
+        {
+            UIStack.Quit(viewIndex);
+        }
+
         disabled = true;
         closeView.Invoke();
         viewIndex = -1;

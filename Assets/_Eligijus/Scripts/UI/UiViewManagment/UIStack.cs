@@ -10,8 +10,11 @@ public class UIStack : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        Instance = this;
-        _views = new List<View>();
+        if (Instance == null)
+        {
+            Instance = this;
+            _views = new List<View>();
+        }
     }
 
     public int AddView(View view)
@@ -54,6 +57,19 @@ public class UIStack : MonoBehaviour
         if (Instance._views.Count > 0)
         {
             Instance._views[Instance._views.Count - 1].ExitView();
+        }
+    }
+
+    public static bool HasAnyViewToQuit()
+    {
+        return Instance._views.Count > 0;
+    }
+    
+    private void OnDestroy()
+    {
+        if (this == Instance)
+        {
+            Instance = null;
         }
     }
 

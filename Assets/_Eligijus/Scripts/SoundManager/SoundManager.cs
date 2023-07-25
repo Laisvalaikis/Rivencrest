@@ -110,4 +110,12 @@ public class SoundManager : MonoBehaviour
 	    Sound sound = SoundsData.GetSound(effectsIndex, songIndex);
 		return sound.playedOnce;
     }
+	
+	private void OnDestroy()
+	{
+		if (this == Instance)
+		{
+			Instance = null;
+		}
+	}
 }

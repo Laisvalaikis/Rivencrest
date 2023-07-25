@@ -26,6 +26,12 @@ using System;
         {
             this.prefab = prefab;
         }
+        
+        public SavedCharacter(SavableCharacter x, GameObject prefab, PlayerInformationData playerInformation) : base(x)
+        {
+            this.prefab = prefab;
+            this.playerInformation = playerInformation;
+        }
 
         public string CharacterTableBlessingString()
         {

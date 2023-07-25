@@ -109,4 +109,12 @@ public class MusicManager : MonoBehaviour
         originalAudioSource.volume = volume;
         Destroy(fadeOutSource);
     }
+    
+    private void OnDestroy()
+    {
+        if (this == Instance)
+        {
+            Instance = null;
+        }
+    }
 }

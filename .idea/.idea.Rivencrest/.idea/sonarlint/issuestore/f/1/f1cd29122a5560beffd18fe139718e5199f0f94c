@@ -1,0 +1,5 @@
+
+Kcsharpsquid:S3903	".Move 'EncounterButton' into a named namespace.(Ú¾¸ñ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Íëœûÿÿÿÿ
+mcsharpsquid:S2589-"DChange this condition so that it does not always evaluate to 'true'.(ñÿÒşÿÿÿÿ8ğñß˜1
+Gcsharpsquid:S125/"Remove this commented out code.(ÊÁæïÿÿÿÿÿ8öˆ£í˜1

@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea330ad9c74946e408d6adb741e3f1f3, type: 3}
   m_Name: Swamp1
   m_EditorClassIdentifier: 
-  SuitableEnemies:
+  suitableEnemies:
   - ForestWitch
   - ForestHuntress
   - ForestDruid
   - ForestWatcher
-  NpcTeam: []
-  SuitableLevels: 0300000004000000
-  NumberOfEnemies: 3
-  MapCategory: Forest
-  AllowDuplicates: 0
-  MapImage: {fileID: 0}
+  npcTeam: []
+  suitableLevels: 0300000004000000
+  numberOfEnemies: 3
+  mapCategory: Forest
+  allowDuplicates: 0
+  mapImage: {fileID: 0}
+  informationText: 

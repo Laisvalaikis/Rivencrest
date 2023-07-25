@@ -25,4 +25,12 @@ public class GameManager : MonoBehaviour
     {
         _data.townData.townGold -= cost;
     }
+    
+    private void OnDestroy()
+    {
+        if (this == Instance)
+        {
+            Instance = null;
+        }
+    }
 }

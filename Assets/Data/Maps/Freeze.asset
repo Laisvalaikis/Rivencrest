@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea330ad9c74946e408d6adb741e3f1f3, type: 3}
   m_Name: Freeze
   m_EditorClassIdentifier: 
-  SuitableEnemies:
+  suitableEnemies:
   - UndeadMindController
   - UndeadBoss
   - UndeadKnight
   - UndeadCultist
   - UndeadSpiderMaiden
-  NpcTeam: []
-  SuitableLevels: 0100000002000000030000000400000005000000
-  NumberOfEnemies: 3
-  MapCategory: Undead
-  AllowDuplicates: 0
-  MapImage: {fileID: 0}
+  npcTeam: []
+  suitableLevels: 0100000002000000030000000400000005000000
+  numberOfEnemies: 3
+  mapCategory: Undead
+  allowDuplicates: 0
+  mapImage: {fileID: 21300000, guid: 253ecde5f1c034ad98632513c3742be8, type: 3}
+  informationText: 

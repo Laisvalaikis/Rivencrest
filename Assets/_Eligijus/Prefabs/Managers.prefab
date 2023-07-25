@@ -266,22 +266,21 @@ MonoBehaviour:
     playerInformation: {fileID: 11400000, guid: 57971419408277446978c60312590ec8, type: 2}
     prefab: {fileID: 659955980883675694, guid: e13d3da28fc5f744ba3a8add55be4b66, type: 3}
   AllEnemyCharacterPrefabs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 659955980883675694, guid: a17daa48096d45d4e90908312ab8cf6a, type: 3}
+  - {fileID: 659955980883675694, guid: bea51fe0971e3384d80356febfcf9564, type: 3}
+  - {fileID: 659955980883675694, guid: 9a59304bf2eb94b4abd6bb0302237d1b, type: 3}
+  - {fileID: 659955980883675694, guid: b2a19bb72c908574bb5af220dd4c4e0e, type: 3}
+  - {fileID: 659955980883675694, guid: fb1889e40bd099a4ca9065d94e1239b8, type: 3}
+  - {fileID: 659955980883675694, guid: c133c4609f0318c4b9708c5f66f01361, type: 3}
+  - {fileID: 659955980883675694, guid: 9071fc4f05fa3d847b5a21aedabfe77b, type: 3}
+  - {fileID: 659955980883675694, guid: 5cb7ee3fc3d28ff42a9f5b08c1e5bd6a, type: 3}
+  - {fileID: 659955980883675694, guid: 2ffcc0ff93e9fd54e92e9601485c8a2a, type: 3}
+  - {fileID: 659955980883675694, guid: 8fc533a238a7283488533252632a2786, type: 3}
+  - {fileID: 659955980883675694, guid: 591a6ac4314a9244dbebe6197c5b957a, type: 3}
+  - {fileID: 659955980883675694, guid: ec6bdf152cc2b8a469e377943b4a5d28, type: 3}
+  - {fileID: 659955980883675694, guid: b237decf83b75c3428205f3677e3e41f, type: 3}
+  - {fileID: 659955980883675694, guid: 648a6141880e31b469d60f07a450e3d8, type: 3}
+  - {fileID: 659955980883675694, guid: 9d55e04bf50a04b4882a6ce2a5b4bdf7, type: 3}
   AllEnemySavedCharacters:
   - level: 0
     xP: 0
@@ -294,8 +293,8 @@ MonoBehaviour:
     blessings: []
     cost: 800
     characterIndex: 0
-    playerInformation: {fileID: 0}
-    prefab: {fileID: 0}
+    playerInformation: {fileID: 11400000, guid: f99ff426fe045df4397cd3e6d5611f88, type: 2}
+    prefab: {fileID: 659955980883675694, guid: a17daa48096d45d4e90908312ab8cf6a, type: 3}
   - level: 0
     xP: 0
     xPToGain: 0
@@ -307,8 +306,8 @@ MonoBehaviour:
     blessings: []
     cost: 1000
     characterIndex: 0
-    playerInformation: {fileID: 0}
-    prefab: {fileID: 0}
+    playerInformation: {fileID: 11400000, guid: 1ce2e094d89e63d4b937911b28c75a51, type: 2}
+    prefab: {fileID: 659955980883675694, guid: bea51fe0971e3384d80356febfcf9564, type: 3}
   - level: 0
     xP: 0
     xPToGain: 0
@@ -320,8 +319,8 @@ MonoBehaviour:
     blessings: []
     cost: 1000
     characterIndex: 0
-    playerInformation: {fileID: 0}
-    prefab: {fileID: 0}
+    playerInformation: {fileID: 11400000, guid: fff1be11f39820a40a6be57dd10aeb5c, type: 2}
+    prefab: {fileID: 659955980883675694, guid: 9a59304bf2eb94b4abd6bb0302237d1b, type: 3}
   - level: 0
     xP: 0
     xPToGain: 0
@@ -333,8 +332,8 @@ MonoBehaviour:
     blessings: []
     cost: 1000
     characterIndex: 0
-    playerInformation: {fileID: 0}
-    prefab: {fileID: 0}
+    playerInformation: {fileID: 11400000, guid: 608c83f4beece934fb9c94216e51c4c3, type: 2}
+    prefab: {fileID: 659955980883675694, guid: b2a19bb72c908574bb5af220dd4c4e0e, type: 3}
   - level: 0
     xP: 0
     xPToGain: 0
@@ -346,8 +345,8 @@ MonoBehaviour:
     blessings: []
     cost: 900
     characterIndex: 0
-    playerInformation: {fileID: 0}
-    prefab: {fileID: 0}
+    playerInformation: {fileID: 11400000, guid: 741287115971d2a4c9f4f6cbe673ccc8, type: 2}
+    prefab: {fileID: 659955980883675694, guid: fb1889e40bd099a4ca9065d94e1239b8, type: 3}
   - level: 0
     xP: 0
     xPToGain: 0
@@ -359,8 +358,8 @@ MonoBehaviour:
     blessings: []
     cost: 1000
     characterIndex: 0
-    playerInformation: {fileID: 0}
-    prefab: {fileID: 0}
+    playerInformation: {fileID: 11400000, guid: 568cbda1dfd30644aa12ad95958877c0, type: 2}
+    prefab: {fileID: 659955980883675694, guid: c133c4609f0318c4b9708c5f66f01361, type: 3}
   - level: 0
     xP: 0
     xPToGain: 0
@@ -372,8 +371,8 @@ MonoBehaviour:
     blessings: []
     cost: 900
     characterIndex: 0
-    playerInformation: {fileID: 0}
-    prefab: {fileID: 0}
+    playerInformation: {fileID: 11400000, guid: ac3e486e4bb1f9d409e0cb1472ce3f94, type: 2}
+    prefab: {fileID: 659955980883675694, guid: 9071fc4f05fa3d847b5a21aedabfe77b, type: 3}
   - level: 0
     xP: 0
     xPToGain: 0
@@ -385,8 +384,8 @@ MonoBehaviour:
     blessings: []
     cost: 900
     characterIndex: 0
-    playerInformation: {fileID: 0}
-    prefab: {fileID: 0}
+    playerInformation: {fileID: 11400000, guid: d9cfbf5c2f484444ba5e81169224a816, type: 2}
+    prefab: {fileID: 659955980883675694, guid: 5cb7ee3fc3d28ff42a9f5b08c1e5bd6a, type: 3}
   - level: 0
     xP: 0
     xPToGain: 0
@@ -398,8 +397,8 @@ MonoBehaviour:
     blessings: []
     cost: 900
     characterIndex: 0
-    playerInformation: {fileID: 0}
-    prefab: {fileID: 0}
+    playerInformation: {fileID: 11400000, guid: b51f0318ce73c264d9649d8a678cfdd5, type: 2}
+    prefab: {fileID: 659955980883675694, guid: 2ffcc0ff93e9fd54e92e9601485c8a2a, type: 3}
   - level: 0
     xP: 0
     xPToGain: 0
@@ -411,8 +410,8 @@ MonoBehaviour:
     blessings: []
     cost: 900
     characterIndex: 0
-    playerInformation: {fileID: 0}
-    prefab: {fileID: 0}
+    playerInformation: {fileID: 11400000, guid: 05ecd1122784d364993fbbb329fdca99, type: 2}
+    prefab: {fileID: 659955980883675694, guid: 8fc533a238a7283488533252632a2786, type: 3}
   - level: 0
     xP: 0
     xPToGain: 0
@@ -424,8 +423,8 @@ MonoBehaviour:
     blessings: []
     cost: 900
     characterIndex: 0
-    playerInformation: {fileID: 0}
-    prefab: {fileID: 0}
+    playerInformation: {fileID: 11400000, guid: c807e94183a46c74fa2a59de33ca62a1, type: 2}
+    prefab: {fileID: 659955980883675694, guid: 591a6ac4314a9244dbebe6197c5b957a, type: 3}
   - level: 0
     xP: 0
     xPToGain: 0
@@ -437,8 +436,47 @@ MonoBehaviour:
     blessings: []
     cost: 900
     characterIndex: 0
-    playerInformation: {fileID: 0}
-    prefab: {fileID: 0}
+    playerInformation: {fileID: 11400000, guid: 3a529a4e2c77e074ca47617545f10725, type: 2}
+    prefab: {fileID: 659955980883675694, guid: ec6bdf152cc2b8a469e377943b4a5d28, type: 3}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: []
+    toConfirmAbilities: 0
+    blessings: []
+    cost: 900
+    characterIndex: 0
+    playerInformation: {fileID: 11400000, guid: 40b6a6fc1aafe4c40b3eca1e50802849, type: 2}
+    prefab: {fileID: 659955980883675694, guid: b237decf83b75c3428205f3677e3e41f, type: 3}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: []
+    toConfirmAbilities: 0
+    blessings: []
+    cost: 900
+    characterIndex: 0
+    playerInformation: {fileID: 11400000, guid: f84c1aed22d2ba64caf3f81efada60f6, type: 2}
+    prefab: {fileID: 659955980883675694, guid: 648a6141880e31b469d60f07a450e3d8, type: 3}
+  - level: 0
+    xP: 0
+    xPToGain: 0
+    characterName: 
+    dead: 0
+    abilityPointCount: 0
+    unlockedAbilities: []
+    toConfirmAbilities: 0
+    blessings: []
+    cost: 900
+    characterIndex: 0
+    playerInformation: {fileID: 11400000, guid: 0f8987e38bb71054eb3930a7a27c02c9, type: 2}
+    prefab: {fileID: 659955980883675694, guid: 9d55e04bf50a04b4882a6ce2a5b4bdf7, type: 3}
   CharactersOnLastMission: 
   newGameData:
     teamColor: 
@@ -539,7 +577,7 @@ MonoBehaviour:
       numOfEnemies: 0
       missionText: 
     pastEncounters: []
-    generateNewEncounters: 0
+    generateNewEncounters: 1
     generatedEncounters: []
     gameSettings:
       attackHelper: 0

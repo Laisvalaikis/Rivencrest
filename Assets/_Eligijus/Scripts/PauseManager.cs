@@ -28,12 +28,6 @@ public class PauseManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
     public void PauseInGame()
     {
         _data.canButtonsBeClickedState = _data.canButtonsBeClicked;
@@ -52,7 +46,7 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 1;
     }
     
-    public void PauseTown()
+    public void Pause()
     {
         if (!pauseMenuEnabled)
         {
@@ -69,7 +63,7 @@ public class PauseManager : MonoBehaviour
 
     }
     
-    public void UnPauseTown()
+    public void UnPause()
     {
         if (pauseMenuEnabled)
         {
@@ -83,16 +77,28 @@ public class PauseManager : MonoBehaviour
             pauseMenuEnabled = false;
         }
     }
-
-    public void EnableDisablePauseGame()
+    
+    public void EnableDisablePauseInGame()
     {
         if (pauseMenuEnabled)
         {
-            UnPauseTown();
+            UnPauseInGame();
         }
         else
         {
-            PauseTown();
+            PauseInGame();
+        }
+    }
+
+    public void EnableDisablePause()
+    {
+        if (pauseMenuEnabled)
+        {
+            UnPause();
+        }
+        else
+        {
+            Pause();
         }
     }
 

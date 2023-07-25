@@ -53,18 +53,29 @@ public class PortraitBar : MonoBehaviour
         {
             down.gameObject.SetActive(true);
         }
-        Debug.Log(_data.Characters.Count);
-        for (int i = 0; i < _data.Characters.Count; i++)
+
+        if (_data.Characters.Count > 0)
         {
-            if (i < townPortraits.Count)
+            for (int i = 0; i < _data.Characters.Count; i++)
             {
-                UpdatePortrait(i, i);
-                _lastElement = i;
-                // townPortraits[i] = _currentCharacters[i].
+                if (i < townPortraits.Count)
+                {
+                    UpdatePortrait(i, i);
+                    _lastElement = i;
+                    // townPortraits[i] = _currentCharacters[i].
+                }
+                else
+                {
+                    break;
+                }
             }
-            else
+        }
+        else
+        {
+            for (int i = 0; i < townPortraits.Count; i++)
             {
-                break;
+                UpdatePortrait(i, -1);
+                _lastElement = -1;
             }
         }
     }
@@ -74,6 +85,7 @@ public class PortraitBar : MonoBehaviour
         int index = _lastElement + 1;
         if (index < _data.Characters.Count && index < townPortraits.Count)
         {
+            Debug.Log(index);
             UpdatePortrait(index, index);
             _lastElement = index;
             
@@ -165,17 +177,25 @@ public class PortraitBar : MonoBehaviour
 
     public void UpdatePortrait(int portraitIndex, int index)
     {
-        townPortraits[portraitIndex].gameObject.SetActive(true);
-        townPortraits[portraitIndex].characterIndex = index;
-        townPortraits[portraitIndex].characterImage.sprite = _data.Characters[index].playerInformation.CharacterPortraitSprite;
-        townPortraits[portraitIndex].levelText.text = _data.Characters[index].level.ToString();
-        if (_data.Characters[index].toConfirmAbilities > 0 || _data.Characters[index].abilityPointCount > 0)
+        if (index >= 0)
         {
-            townPortraits[portraitIndex].abilityPointCorner.SetActive(true);
+            townPortraits[portraitIndex].gameObject.SetActive(true);
+            townPortraits[portraitIndex].characterIndex = index;
+            townPortraits[portraitIndex].characterImage.sprite =
+                _data.Characters[index].playerInformation.CharacterPortraitSprite;
+            townPortraits[portraitIndex].levelText.text = _data.Characters[index].level.ToString();
+            if (_data.Characters[index].toConfirmAbilities > 0 || _data.Characters[index].abilityPointCount > 0)
+            {
+                townPortraits[portraitIndex].abilityPointCorner.SetActive(true);
+            }
+            else
+            {
+                townPortraits[portraitIndex].abilityPointCorner.SetActive(false);
+            }
         }
         else
         {
-            townPortraits[portraitIndex].abilityPointCorner.SetActive(false);
+            townPortraits[portraitIndex].gameObject.SetActive(false);
         }
     }
 

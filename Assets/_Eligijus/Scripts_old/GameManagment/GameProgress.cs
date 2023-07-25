@@ -23,8 +23,8 @@ public class GameProgress : MonoBehaviour
         bool allowDuplicates = SaveSystem.LoadTownData().allowDuplicates;
         if (_data.isCurrentScenePlayableMap && SaveSystem.DoesSaveFileExist())
         {
-            _saveData.LoadTownData();
-            GetComponent<MapSetup>().MapName = SaveSystem.LoadTownData().selectedMission;
+            // _saveData.LoadTownData();
+            // GetComponent<MapSetup>().MapName = SaveSystem.LoadTownData().selectedMission;
             if (GetComponent<MapSetup>().GetSelectedMap() != null)
             {
                 GameObject map = Instantiate(GetComponent<MapSetup>().GetSelectedMap(), GameObject.Find("Map").transform) as GameObject;

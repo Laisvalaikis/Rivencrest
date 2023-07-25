@@ -1,0 +1,18 @@
+
+Wcsharpsquid:S3903"5Move 'CharacterSelectManager' into a named namespace.(°§Ñ°øÿÿÿÿ
+acsharpsquid:S1104
+"DMake this field 'private' and encapsulate it in a 'public' property.(€ˆîÇ
+hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ºĞ¼ƒ8ìŒåç˜1
+hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¾å‡8ØŒéç˜1
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(õ—ûØ
+ocsharpsquid:S3267š"JLoop should be simplified by calling Select(character => character.Item1))(‘ÛÅ®8‰†ìç˜1
+Gcsharpsquid:S125%"Remove this commented out code.(ÂÑÊşÿÿÿÿ8›–âç˜1
+Gcsharpsquid:S125'"Remove this commented out code.(úñİßşÿÿÿÿ8ÑÇæ˜1
+Bcsharpsquid:S125G"Remove this commented out code.(Ú°à¬8ıÁç˜1
+Bcsharpsquid:S125e"Remove this commented out code.(ĞùÄÃ8ıÁç˜1
+Hcsharpsquid:S125…"Remove this commented out code.(ßÀ·ııÿÿÿÿ8ºêç˜1
+Hcsharpsquid:S125¸"Remove this commented out code.(«ÔÎÉüÿÿÿÿ8ºêç˜1
+Ccsharpsquid:S125Á"Remove this commented out code.(æéÍ8ºêç˜1
+Bcsharpsquid:S125Ñ"Remove this commented out code.(ø·W8ºêç˜1
+Hcsharpsquid:S125Ş"Remove this commented out code.(‘‰“õıÿÿÿÿ8ºêç˜1
+Ccsharpsquid:S125ñ"Remove this commented out code.(Ú°à¬8¿°àé˜1
