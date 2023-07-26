@@ -5,6 +5,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    
+    public bool isDragAvailable = true;
+    public bool isBoardDisabled;
+    public bool canButtonsBeClicked = true;
+    
     private Data _data;
 
     // Start is called before the first frame update

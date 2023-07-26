@@ -1,0 +1,5 @@
+
+Kcsharpsquid:S3903	".Move 'EncounterButton' into a named namespace.(Ú¾¸ñ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Íëœûÿÿÿÿ
+ccsharpsquid:S11857"?Remove this method 'OnDeselect' to simply inherit its behavior.(Í’ÊÌ8ïÊÂˆ™1
+mcsharpsquid:S2589/"DChange this condition so that it does not always evaluate to 'true'.(ñÿÒşÿÿÿÿ8£Äˆ™1

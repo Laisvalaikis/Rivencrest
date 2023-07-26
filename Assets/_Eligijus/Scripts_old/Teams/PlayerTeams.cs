@@ -15,33 +15,26 @@ public class PlayerTeams : MonoBehaviour
     public int undoCount = 2;
     public List<GameObject> otherCharacters = new List<GameObject>();
     public bool isGameOver;
-    public Data _data;
     public HelpTable helpTable;
     public ButtonManager characterUiButtonManager;
+    public MapSetup mapSetup;
+    private Data _data;
     void Start()
     {
-        if(GameObject.Find("GameProgress") != null)
-        {
-            GameObject.Find("GameProgress").GetComponent<MapSetup>().SetupAMap();
-        }
+        _data = Data.Instance;
+        mapSetup.SetupAMap();
         for (int i = 0; i < allCharacterList.teams.Count; i++)
         {
             SpawnCharacters(i, TransformToFloats(allCharacterList.teams[i].coordinates));
         }
+        
 
-        //
-        // if (GameObject.Find("PVPManager") != null)
+        // if (GameObject.Find("GameProgress") != null)
         // {
-        //     GameObject.Find("PVPManager").GetComponent<PVPManager>().ApplyAbilitySelections();
+        //     GameObject.Find("GameProgress").GetComponent<GameProgress>().SetSavedCharactersOnPrefabs();
         // }
-        //
-
-        if (GameObject.Find("GameProgress") != null)
-        {
-            GameObject.Find("GameProgress").GetComponent<GameProgress>().SetSavedCharactersOnPrefabs();
-        }
-        GetComponent<GameInformation>().ChangeActiveTeam(allCharacterList.teams[0].teamName);
-        GetComponent<GameInformation>().ChangeVisionTiles();
+        // GetComponent<GameInformation>().ChangeActiveTeam(allCharacterList.teams[0].teamName);
+        // GetComponent<GameInformation>().ChangeVisionTiles();
         isGameOver = false;
     }
     private void SpawnCharacters(int teamIndex, List<(float, float)> coordinates)
