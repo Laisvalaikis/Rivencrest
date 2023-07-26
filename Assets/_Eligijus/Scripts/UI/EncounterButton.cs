@@ -24,10 +24,12 @@ public class EncounterButton : Button
         Debug.Log("nanana");
         if(!isSelectedEncounter)
         {
+            
             SwapSpritesSelect();
             SelectEncounter();
             encounterButtonController.Select();
             isSelectedEncounter = true;
+            encounterButtonController.SetDeselectData(eventData, this);
             base.OnSelect(eventData);
             // encounterButtonController.
         }
@@ -44,12 +46,7 @@ public class EncounterButton : Button
         }
         else if (isSelectedEncounter && wasSelected)
         {
-            // encounterButtonController.DeselectButton();
-            SwapSpritesDeselect();
-            SelectEncounter();
-            isSelectedEncounter = false;
-            wasSelected = false;
-            EventSystem.current.SetSelectedGameObject(null);
+            encounterButtonController.EncounterViewDisable();
         }
 
         base.OnPointerClick(eventData);
@@ -57,8 +54,17 @@ public class EncounterButton : Button
 
     public override void OnDeselect(BaseEventData eventData)
     {
-        encounterButtonController.SetDeselectData(eventData, this);
         base.OnDeselect(eventData);
+    }
+
+    public void DeselectAndClose()
+    {
+        encounterButtonController.DeselectButton();
+        SwapSpritesDeselect();
+        SelectEncounter();
+        isSelectedEncounter = false;
+        wasSelected = false;
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     public void Deselect()

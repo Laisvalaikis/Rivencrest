@@ -808,7 +808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &360303778
 RectTransform:
   m_ObjectHideFlags: 0
@@ -900,7 +900,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 304911436}
         m_TargetAssemblyTypeName: EncounterButtonController, Assembly-CSharp
-        m_MethodName: DeselectEncounter
+        m_MethodName: DeselectAndClose
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

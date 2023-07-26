@@ -14,7 +14,7 @@ public class EncounterButtonController : MonoBehaviour
 
     public void Select()
     {
-        // missionInformationView.OpenView();
+        missionInformationView.OpenView();
         DeselectButton();
     }
 
@@ -32,5 +32,15 @@ public class EncounterButtonController : MonoBehaviour
             _encounterButton = null;
             deselectEventData = null;
         }
+    }
+
+    public void EncounterViewDisable()
+    {
+        missionInformationView.ExitView();
+    }
+
+    public void DeselectAndClose()
+    {
+        _encounterButton.DeselectAndClose();
     }
 }

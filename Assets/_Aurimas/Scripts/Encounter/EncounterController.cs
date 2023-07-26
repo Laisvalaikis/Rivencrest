@@ -136,7 +136,6 @@ public class EncounterController : MonoBehaviour
         _data.townData.selectedMission = activate ? encounter.mapName : "";
         if (activate)
         {
-
             missionName.text = _data.townData.selectedEncounter.mapName;
             level.text = _data.townData.selectedEncounter.encounterLevel.ToString();
             category.text = _data.townData.selectedEncounter.missionCategory;
