@@ -6,7 +6,6 @@ using UnityEngine;
 public class MapSetup : MonoBehaviour
 {
     [HideInInspector] public string MapName;
-    public List<GameObject> MapPrefabs;
     [SerializeField] private List<MapData> _mapDatas;
     public Dictionary<string, MapData> mapDatas;
     public PlayerTeams playerTeams;
@@ -31,9 +30,8 @@ public class MapSetup : MonoBehaviour
 
     public void SetupAMap() 
     {
-        GameObject MapPrefab = GetSelectedMap();
-        
-        if (MapPrefab != null)
+
+        if (mapDatas[MapName] != null)
         {
             MapData mapInfo = new MapData();
             mapInfo.CopyData(mapDatas[MapName]);
@@ -63,7 +61,7 @@ public class MapSetup : MonoBehaviour
         GameObject selectedMap = null;
         if (MapName != null)
         {
-            selectedMap = MapPrefabs.Find(x => x.name == MapName);
+            selectedMap = mapDatas[MapName].mapPrefab;
         }
         return selectedMap;
     }
