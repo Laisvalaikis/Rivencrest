@@ -8,8 +8,12 @@ public class MapSetup : MonoBehaviour
     [HideInInspector] public string MapName;
     [SerializeField] private List<MapData> _mapDatas;
     public Dictionary<string, MapData> mapDatas;
-    public PlayerTeams playerTeams;
-    public AIManager aiManager;
+    [SerializeField] private GameObject mapHolder;
+    [SerializeField] private GameObject toFollow;
+    [SerializeField] private CameraController cameraController;
+    [SerializeField] private PlayerTeams playerTeams;
+    [SerializeField] private AIManager aiManager;
+    private MapData currentMapData;
     private Data _data;
 
     private void OnEnable()
@@ -35,6 +39,7 @@ public class MapSetup : MonoBehaviour
         {
             MapData mapInfo = new MapData();
             mapInfo.CopyData(mapDatas[MapName]);
+            currentMapData = mapInfo;
             //coordinates
             playerTeams.allCharacterList.teams[1].coordinates.Clear();
             for (int i = 0; i < playerTeams.allCharacterList.teams.Count; i++)
@@ -52,9 +57,19 @@ public class MapSetup : MonoBehaviour
 
             //AI destinations
             aiManager.AIDestinations = mapInfo.aiMapCoordinates.coordinates;
+            CreateMap();
         }
     }
-    
+
+    private void CreateMap()
+    {
+        Instantiate(GetSelectedMap(), mapHolder.transform);
+        toFollow.transform.position = currentMapData.toFollowStartPosition;
+        cameraController.panLimitX = currentMapData.panLimitX;
+        cameraController.panLimitY = currentMapData.panLimitY;
+        cameraController.cinemachineVirtualCamera.Follow = toFollow.transform;
+    }
+
 
     public GameObject GetSelectedMap()
     {
