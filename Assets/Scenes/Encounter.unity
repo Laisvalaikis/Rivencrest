@@ -945,6 +945,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1649360793}
   - component: {fileID: 1649360792}
+  - component: {fileID: 1649360794}
   m_Layer: 0
   m_Name: Encounter
   m_TagString: Untagged
@@ -974,9 +975,9 @@ MonoBehaviour:
       - {fileID: 659955980883675694, guid: 2fed0c255a6c85a43bb650b3dc9c0bac, type: 3}
       - {fileID: 659955980883675694, guid: 2d5128fc605f5d94f98e6d8bcfb13a68, type: 3}
       coordinates:
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 0}
+      - {x: 5.1487e-41, y: 5.82e-43, z: 0}
+      - {x: 0, y: 0, z: 0}
+      - {x: 5.149e-41, y: 0, z: 0}
       teamName: Yellow
       teamAllegiance: 1
       teamFlag: {fileID: 0}
@@ -991,9 +992,9 @@ MonoBehaviour:
       - {fileID: 659955980883675694, guid: 2fed0c255a6c85a43bb650b3dc9c0bac, type: 3}
       - {fileID: 659955980883675694, guid: 9a59304bf2eb94b4abd6bb0302237d1b, type: 3}
       coordinates:
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 0}
+      - {x: 5.1487e-41, y: 5.82e-43, z: 0}
+      - {x: 0, y: 0, z: 0}
+      - {x: 5.149e-41, y: 0, z: 0}
       teamName: Red
       teamAllegiance: 2
       teamFlag: {fileID: 0}
@@ -1019,9 +1020,9 @@ MonoBehaviour:
   undoCount: 2
   otherCharacters: []
   isGameOver: 0
-  _data: {fileID: 0}
   helpTable: {fileID: 0}
   characterUiButtonManager: {fileID: 0}
+  mapSetup: {fileID: 0}
 --- !u!4 &1649360793
 Transform:
   m_ObjectHideFlags: 0
@@ -1037,6 +1038,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1649360794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649360791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa16f591d36fcb4ab1d9cb270b102ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RespawnEnemyWaves: 0
+  RespawnCount: 0
+  AIStartingDestinationList: []
+  AIDestinations: []
+  EnemySpawnPoints: []
+  EnemyPrefabs: []
+  blockingLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  cornerUIManager: {fileID: 0}
+  _data: {fileID: 0}
 --- !u!1 &1689895465
 GameObject:
   m_ObjectHideFlags: 0

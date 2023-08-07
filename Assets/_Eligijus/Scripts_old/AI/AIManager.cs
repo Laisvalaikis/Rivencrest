@@ -9,8 +9,8 @@ public class AIManager : MonoBehaviour
 {
     public bool RespawnEnemyWaves;
     public int RespawnCount;
-    public List<GameObject> AIStartingDestinationList;
-    public List<GameObject> AIDestinations;
+    public List<Vector3> AIStartingDestinationList;
+    public List<Vector3> AIDestinations;
     public List<GameObject> EnemySpawnPoints;
     public List<GameObject> EnemyPrefabs;
     private RaycastHit2D raycast;
@@ -23,7 +23,7 @@ public class AIManager : MonoBehaviour
     {
         if (AIStartingDestinationList.Count > 0)
         {
-            GameObject StartingDestination = AIStartingDestinationList[Random.Range(0, AIStartingDestinationList.Count - 1)];
+            Vector3 StartingDestination = AIStartingDestinationList[Random.Range(0, AIStartingDestinationList.Count - 1)];
             AIDestinations.Insert(0, StartingDestination);
         }
     }

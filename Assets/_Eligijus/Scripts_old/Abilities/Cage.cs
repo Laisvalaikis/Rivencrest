@@ -18,7 +18,7 @@ public class Cage : MonoBehaviour
         var destinations = GameObject.Find("GameInformation").gameObject.GetComponent<AIManager>().AIDestinations;
         if (destinations.Count == 1 && destinations[0] == null)
         {
-            destinations[0] = cagedCharacter;
+            destinations[0] = cagedCharacter.transform.position;
         }
     }
 }

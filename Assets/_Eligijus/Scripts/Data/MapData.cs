@@ -11,6 +11,8 @@ public class MapData : ScriptableObject
     public List<GameObject> npcTeam;
     [Header("Suitable Levels")] 
     public List<int> suitableLevels;
+    public List<MapCoordinates> mapCoordinates;
+    public MapCoordinates aiMapCoordinates;
 
     public int numberOfEnemies = 3;
     public string mapCategory;
@@ -18,6 +20,20 @@ public class MapData : ScriptableObject
     public Sprite mapImage;
     public string informationText;
 
-
+    public void CopyData(MapData mapData)
+    {
+        
+        suitableEnemies = mapData.suitableEnemies;
+        npcTeam = mapData.npcTeam;
+        suitableLevels = mapData.suitableLevels;
+        mapCoordinates = mapData.mapCoordinates;
+        aiMapCoordinates = mapData.aiMapCoordinates;
+        
+        numberOfEnemies = mapData.numberOfEnemies;
+        mapCategory = mapData.mapCategory;
+        allowDuplicates = mapData.allowDuplicates;
+        mapImage = mapData.mapImage;
+        informationText = mapData.informationText;
+    }
 
 }

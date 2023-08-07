@@ -9,10 +9,9 @@ public class MapSetup : MonoBehaviour
     public List<GameObject> MapPrefabs;
     [SerializeField] private List<MapData> _mapDatas;
     public Dictionary<string, MapData> mapDatas;
-    public GameObject gameInformation;
-    public GameObject coordinatesGameObject;
-    public Map mapInformation;
-    public MapData map;
+    public PlayerTeams playerTeams;
+    public AIManager aiManager;
+    private Data _data;
 
     private void OnEnable()
     {
@@ -21,7 +20,13 @@ public class MapSetup : MonoBehaviour
         {
             mapDatas.Add(_mapDatas[i].name, _mapDatas[i]);
         }
-        
+
+        if (_data == null)
+        {
+            _data = Data.Instance;
+            MapName = _data.townData.selectedMission;
+        }
+
     }
 
     public void SetupAMap() 
@@ -30,42 +35,25 @@ public class MapSetup : MonoBehaviour
         
         if (MapPrefab != null)
         {
-            Map MapInformation = MapPrefab.GetComponent<Map>();
-            List<GameObject> NpcTeam = MapInformation.NpcTeam;
+            MapData mapInfo = new MapData();
+            mapInfo.CopyData(mapDatas[MapName]);
             //coordinates
-            var coordinatesGameObject = MapPrefab.transform.Find("Coordinates");
-            var teamSettings = gameInformation.GetComponent<PlayerTeams>();
-            teamSettings.allCharacterList.teams[1].coordinates.Clear();
-            for (int i = 0; i < 3; i++) 
+            playerTeams.allCharacterList.teams[1].coordinates.Clear();
+            for (int i = 0; i < playerTeams.allCharacterList.teams.Count; i++)
             {
-                teamSettings.allCharacterList.teams[0].coordinates[i] = coordinatesGameObject.GetChild(0).GetChild(i);
-            }
-            for(int i = 0; i < coordinatesGameObject.GetChild(1).childCount; i++)
-            {
-                teamSettings.allCharacterList.teams[1].coordinates.Add(coordinatesGameObject.GetChild(1).GetChild(i));
-            }
-            //NPC team spawning
-            if (MapInformation.NpcTeam.Count == 0)
-            {
-                teamSettings.allCharacterList.teams.RemoveAt(2);
-            }
-            else
-            {
-                for (int i = 0; i < NpcTeam.Count; i++)
+                for (int j = 0; j < mapInfo.mapCoordinates[i].coordinates.Count; j++)
                 {
-                    teamSettings.allCharacterList.teams[2].coordinates.Add(coordinatesGameObject.GetChild(2).GetChild(i));
-                    teamSettings.allCharacterList.teams[2].characters.Add (NpcTeam[i]);
+                    playerTeams.allCharacterList.teams[i].coordinates[j] = mapInfo.mapCoordinates[i].coordinates[j];
                 }
             }
-            //AI destinations
-            var destinationsGameObject = MapPrefab.transform.Find("AIDestinations");
-            var AIsettings = gameInformation.GetComponent<AIManager>();
-            List<GameObject> destinations = new List<GameObject>();
-            for (int i = 0; i < destinationsGameObject.childCount; i++) 
+            //NPC team spawning
+            if (mapInfo.npcTeam.Count == 0)
             {
-                destinations.Add(destinationsGameObject.GetChild(i).gameObject);
+                playerTeams.allCharacterList.teams.RemoveAt(2);
             }
-            AIsettings.AIDestinations = destinations;
+
+            //AI destinations
+            aiManager.AIDestinations = mapInfo.aiMapCoordinates.coordinates;
         }
     }
     

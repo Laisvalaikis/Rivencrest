@@ -25,7 +25,7 @@ public class PlayerTeams : MonoBehaviour
         mapSetup.SetupAMap();
         for (int i = 0; i < allCharacterList.teams.Count; i++)
         {
-            SpawnCharacters(i, TransformToFloats(allCharacterList.teams[i].coordinates));
+            SpawnCharacters(i, allCharacterList.teams[i].coordinates);
         }
         
 
@@ -37,7 +37,7 @@ public class PlayerTeams : MonoBehaviour
         // GetComponent<GameInformation>().ChangeVisionTiles();
         isGameOver = false;
     }
-    private void SpawnCharacters(int teamIndex, List<(float, float)> coordinates)
+    private void SpawnCharacters(int teamIndex, List<Vector3> coordinates)
     {
         var spawnCoordinates = coordinates;
         int i = 0;
@@ -57,7 +57,7 @@ public class PlayerTeams : MonoBehaviour
         {
             if (i < allCharacterList.teams[teamIndex].characters.Count)
             {
-                GameObject spawnedCharacter = Instantiate(allCharacterList.teams[teamIndex].characters[i], new Vector3(x.Item1, x.Item2, 0f), Quaternion.identity); //Spawning the prefab into the scene.
+                GameObject spawnedCharacter = Instantiate(allCharacterList.teams[teamIndex].characters[i], new Vector3(x.x, x.y, 0f), Quaternion.identity); //Spawning the prefab into the scene.
                 if(allCharacterList.teams[teamIndex].isTeamAI)
                 {
                     int points = 2 * (_data.townData.selectedEncounter.encounterLevel - 1);
@@ -226,15 +226,7 @@ public class PlayerTeams : MonoBehaviour
             allCharacterList.teams.Find(x => x.teamName == teamName).characters.Remove(character);
         }
     }
-    public List<(float,float)> TransformToFloats(List<Transform> tList)
-    {
-        List<(float, float)> fList = new List<(float, float)>();
-        foreach(Transform x in tList)
-        {
-            fList.Add((x.position.x, x.position.y));
-        }
-        return fList;
-    }
+
     public List<GameObject> GetAllCharacters() 
     {
         List<GameObject> characters = new List<GameObject>();
@@ -257,7 +249,7 @@ public class PlayerTeams : MonoBehaviour
 public class CharacterList
 {
     public List<GameObject> characters;
-    public List<Transform> coordinates;
+    public List<Vector3> coordinates;
     public string teamName;
     public string teamAllegiance;
     public GameObject teamFlag;
