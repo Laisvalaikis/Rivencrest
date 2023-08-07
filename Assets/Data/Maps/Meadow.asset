@@ -39,3 +39,4 @@ MonoBehaviour:
   allowDuplicates: 0
   mapImage: {fileID: 21300000, guid: 30dbd020e733044d7806bcfb27cd32e3, type: 3}
   informationText: 
+  mapPrefab: {fileID: 1401161897824018671, guid: fc31bd44f9a2e4438977409d83517074, type: 3}
