@@ -6,8 +6,13 @@ using UnityEngine;
 public class PvPCharacterSelect : MonoBehaviour
 {
     [HideInInspector] public GameObject characterOnBoard;
-    [HideInInspector] public GameObject characterPortraitFrame;
+    [SerializeField] private GameObject characterPortraitFrame;
+    public Image extension;
+    public Image frame;
+    [SerializeField] private Image characterPortraitSprite;
+    private PlayerInformation _playerInformation;
     private bool isButtonAvailable = true;
+    
     void Start()
     {
         //CreateCharatersPortrait();
@@ -17,12 +22,10 @@ public class PvPCharacterSelect : MonoBehaviour
     {
         if (characterOnBoard != null)
         {
-            characterPortraitFrame = transform.Find("Character").gameObject;
-            transform.parent.gameObject.GetComponent<TeamInformation>().AddPortraitToList(characterPortraitFrame);
-            characterOnBoard.GetComponent<PlayerInformation>().characterPortrait = characterPortraitFrame;
-            characterOnBoard.GetComponent<PlayerInformation>().TeamManager = transform.parent.gameObject;
-            transform.Find("Character").GetChild(0).gameObject.GetComponent<Image>().sprite =
-                    characterOnBoard.GetComponent<PlayerInformation>().CharacterPortraitSprite;
+            _playerInformation = characterOnBoard.GetComponent<PlayerInformation>();
+            _playerInformation.characterPortrait = characterPortraitFrame;
+            _playerInformation.TeamManager = transform.parent.gameObject;
+            characterPortraitSprite.sprite = _playerInformation.CharacterPortraitSprite;
             gameObject.SetActive(true);
             isButtonAvailable = true;
         }
@@ -32,45 +35,51 @@ public class PvPCharacterSelect : MonoBehaviour
             isButtonAvailable = false;
         }
     }
+
+    public GameObject GetCharacterPortraitFrame()
+    {
+        return characterPortraitFrame;
+    }
+
     public void SelectPortrait()
     {
-        if (isButtonAvailable && GameObject.Find("GameInformation").GetComponent<GameInformation>().canButtonsBeClicked)
+        if (isButtonAvailable) // GameObject.Find("GameInformation").GetComponent<GameInformation>().canButtonsBeClicked fix this bs
         {
             if (characterOnBoard.GetComponent<PlayerInformation>().health > 0)
             {
-                if (characterPortraitFrame.GetComponent<Animator>().GetBool("select"))
-                {
-                    GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().DeselectTeam(characterOnBoard);
-                }
-                else
-                {
-                    GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().SelectACharacter(characterOnBoard);
-                }
+                // if (characterPortraitFrame.GetComponent<Animator>().GetBool("select"))
+                // {
+                //     GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().DeselectTeam(characterOnBoard);
+                // }
+                // else
+                // {
+                //     GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().SelectACharacter(characterOnBoard);
+                // }
             }
         }
     }
     public void OnHover()
     {
-        if (isButtonAvailable && GameObject.Find("GameInformation").GetComponent<GameInformation>().canButtonsBeClicked)
-        {
-            if (characterOnBoard.GetComponent<PlayerInformation>().health > 0)
-            {
-                characterPortraitFrame.GetComponent<Animator>().SetBool("hover", true);
-                GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().isBoardDisabled = true;
-            }
-            else
-            {
-                isButtonAvailable = false;
-            }
-        }
+        // if (isButtonAvailable && GameObject.Find("GameInformation").GetComponent<GameInformation>().canButtonsBeClicked)
+        // {
+        //     if (characterOnBoard.GetComponent<PlayerInformation>().health > 0)
+        //     {
+        //         characterPortraitFrame.GetComponent<Animator>().SetBool("hover", true);
+        //         GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().isBoardDisabled = true;
+        //     }
+        //     else
+        //     {
+        //         isButtonAvailable = false;
+        //     }
+        // }
     }
     public void OffHover()
     {
-        if (isButtonAvailable && GameObject.Find("GameInformation").GetComponent<GameInformation>().canButtonsBeClicked)
-        {
-            characterPortraitFrame.GetComponent<Animator>().SetBool("hover", false);
-            GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().isBoardDisabled = false;
-        }
+        // if (isButtonAvailable && GameObject.Find("GameInformation").GetComponent<GameInformation>().canButtonsBeClicked)
+        // {
+        //     characterPortraitFrame.GetComponent<Animator>().SetBool("hover", false);
+        //     GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().isBoardDisabled = false;
+        // }
     }
     /*private void Update()
     {

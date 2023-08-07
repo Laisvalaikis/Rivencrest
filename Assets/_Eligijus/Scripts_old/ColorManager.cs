@@ -11,6 +11,7 @@ public class ColorManager : MonoBehaviour
     public Color OtherHighlight = new Color(146, 212, 255);
     public Color InspectionHighlight = new Color(113, 113, 113);
     public List<TeamSprites> teamSprites;
+    [SerializeField] private TeamInformation teamInformation;
 
     public void SetPortraitBoxSprites(GameObject portraitBox, string teamName)
     {
@@ -18,7 +19,7 @@ public class ColorManager : MonoBehaviour
         {
             if(x.teamName == teamName)
             {
-                portraitBox.GetComponent<TeamInformation>().ChangeBoxSprites(x.portraitBoxMain, x.portraitBoxExtension, x.CharacterButton);
+                teamInformation.ChangeBoxSprites(x.portraitBoxMain, x.portraitBoxExtension, x.CharacterButton);
             }
         }
     }

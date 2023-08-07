@@ -1,0 +1,16 @@
+
+Mcsharpsquid:S1125Å"*Remove the unnecessary Boolean literal(s).(µÙ¹âùÿÿÿÿ
+Mcsharpsquid:S1125Ñ"*Remove the unnecessary Boolean literal(s).(õ¬äÿÿÿÿÿ
+tcsharpsquid:S3776B"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(§ñº©ûÿÿÿÿ
+Jcsharpsquid:S3903"-Move 'PlayerMovement' into a named namespace.(É»á
+Bcsharpsquid:S2933" Make 'ArrowMovement' 'readonly'.(…¤œ·ùÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Ãä°„üÿÿÿÿ
+Rcsharpsquid:S1066œ"/Merge this if statement with the enclosing one.(ç…‚‹üÿÿÿÿ
+Fcsharpsquid:S1172˜"(Remove this unused method parameter 'x'.(Ãš æ
+Fcsharpsquid:S1172˜"(Remove this unused method parameter 'y'.(Ãš æ
+{csharpsquid:S1450	"YRemove the field 'horizontal' and declare it as a local variable in the relevant methods.(¿Èüèûÿÿÿÿ
+tcsharpsquid:S1450
+"WRemove the field 'vertical' and declare it as a local variable in the relevant methods.(‚Ø˜Õ
+;csharpsquid:S125"Remove this commented out code.(ôÕü†
+@csharpsquid:S125H"Remove this commented out code.(…æÖÛÿÿÿÿÿ
+5csharpsquid:S4663,"Remove this empty comment(è»»_

@@ -6,9 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerTeams : MonoBehaviour
 {
-    public GameObject portraitBoxPrefab;
-    public Transform portraitBoxContainer;
-    public Transform CornerUIManagerContainer;
+    public TeamInformation portraitTeamBox;
     public TeamsList allCharacterList;
     public string ChampionTeam;
     public string ChampionAllegiance;
@@ -18,6 +16,7 @@ public class PlayerTeams : MonoBehaviour
     public HelpTable helpTable;
     public ButtonManager characterUiButtonManager;
     public MapSetup mapSetup;
+    [SerializeField] private ColorManager colorManager;
     private Data _data;
     void Start()
     {
@@ -28,68 +27,66 @@ public class PlayerTeams : MonoBehaviour
             SpawnCharacters(i, allCharacterList.teams[i].coordinates);
         }
         
-
-        // if (GameObject.Find("GameProgress") != null)
-        // {
-        //     GameObject.Find("GameProgress").GetComponent<GameProgress>().SetSavedCharactersOnPrefabs();
-        // }
-        // GetComponent<GameInformation>().ChangeActiveTeam(allCharacterList.teams[0].teamName);
-        // GetComponent<GameInformation>().ChangeVisionTiles();
+        if (GameObject.Find("GameProgress") != null)
+        {
+            GameObject.Find("GameProgress").GetComponent<GameProgress>().SetSavedCharactersOnPrefabs();
+        }
+        
         isGameOver = false;
     }
     private void SpawnCharacters(int teamIndex, List<Vector3> coordinates)
     {
         var spawnCoordinates = coordinates;
-        int i = 0;
-        GameObject portraitBox = Instantiate(portraitBoxPrefab, portraitBoxContainer);
-        portraitBox.GetComponent<TeamInformation>().teamIndex = teamIndex;
-        GetComponent<ColorManager>().SetPortraitBoxSprites(portraitBox, allCharacterList.teams[teamIndex].teamName);// priskiria spalvas mygtukams ir paciam portraitboxui
+        portraitTeamBox.teamIndex = teamIndex;
+        colorManager.SetPortraitBoxSprites(portraitTeamBox.gameObject, allCharacterList.teams[teamIndex].teamName);// priskiria spalvas mygtukams ir paciam portraitboxui
         //Portrait box color
         //portraitBox.GetComponent<Image>().sprite = allCharacterList.teams[teamIndex].teamPortraitBoxSprite;
-        if (allCharacterList.teams[teamIndex].teamFlag != null)
-        {
-            allCharacterList.teams[teamIndex].teamFlag.GetComponent<SpriteRenderer>().sprite = allCharacterList.teams[teamIndex].teamFlagSprite;
-            allCharacterList.teams[teamIndex].teamFlag.transform.Find("FlagCollider").GetComponent<Flag>().FlagsTeam = allCharacterList.teams[teamIndex].teamName;
-            allCharacterList.teams[teamIndex].teamFlagPoint.transform.Find("FlagPoint").GetComponent<FlagPoint>().team = allCharacterList.teams[teamIndex].teamName;
-        }
-        allCharacterList.teams[teamIndex].teamPortraitBoxGameObject = portraitBox;
-        foreach (var x in spawnCoordinates)
-        {
-            if (i < allCharacterList.teams[teamIndex].characters.Count)
-            {
-                GameObject spawnedCharacter = Instantiate(allCharacterList.teams[teamIndex].characters[i], new Vector3(x.x, x.y, 0f), Quaternion.identity); //Spawning the prefab into the scene.
-                if(allCharacterList.teams[teamIndex].isTeamAI)
-                {
-                    int points = 2 * (_data.townData.selectedEncounter.encounterLevel - 1);
-                    spawnedCharacter.GetComponent<PlayerInformation>().MaxHealth += points;
-                    Debug.Log("Player " + spawnedCharacter.name + " received additional " + points + " points.");
-                }
-                
-                spawnedCharacter.GetComponent<PlayerInformation>()._data = _data;
-                spawnedCharacter.GetComponent<AIBehaviour>()._data = _data;
-                spawnedCharacter.GetComponent<PlayerInformation>().CharactersTeam = allCharacterList.teams[teamIndex].teamName; //Assigning the characters their team.
-                allCharacterList.teams[teamIndex].characters[i] = spawnedCharacter; //Turning prefabs into gameObjects on board.
-                if (!characterUiButtonManager.gameObject.activeInHierarchy)
-                {
-                    characterUiButtonManager.gameObject.SetActive(true);
-                }
-                characterUiButtonManager.AddDataToActionButtons(helpTable);
-                characterUiButtonManager.CharacterOnBoard = allCharacterList.teams[teamIndex].characters[i];//Assigning character to its UI button manager
-                // characterUiButtonManager.GetComponent<BottomCornerUI>().characterUiData = spawnedCharacter.GetComponent<PlayerInformation>().characterUiData;
-                
-                characterUiButtonManager.GetComponent<BottomCornerUI>().EnableAbilities(spawnedCharacter.GetComponent<PlayerInformation>().savedCharacter);
-                spawnedCharacter.GetComponent<PlayerInformation>().cornerPortraitBoxInGame = characterUiButtonManager.gameObject;//Assigning UI button manager character to its character
-                if (allCharacterList.teams[teamIndex].isTeamAI)
-                {
-                    spawnedCharacter.GetComponent<PlayerInformation>().Respawn = true;
-                }
+        // if (allCharacterList.teams[teamIndex].teamFlag != null)
+        // {
+        //     allCharacterList.teams[teamIndex].teamFlag.GetComponent<SpriteRenderer>().sprite = allCharacterList.teams[teamIndex].teamFlagSprite;
+        //     allCharacterList.teams[teamIndex].teamFlag.transform.Find("FlagCollider").GetComponent<Flag>().FlagsTeam = allCharacterList.teams[teamIndex].teamName;
+        //     allCharacterList.teams[teamIndex].teamFlagPoint.transform.Find("FlagPoint").GetComponent<FlagPoint>().team = allCharacterList.teams[teamIndex].teamName;
+        // }
+        // allCharacterList.teams[teamIndex].teamPortraitBoxGameObject = portraitTeamBox.gameObject;
+        //
+        // int i = 0;
+        // foreach (var x in spawnCoordinates)
+        // {
+        //     if (i < allCharacterList.teams[teamIndex].characters.Count)
+        //     {
+        //         GameObject spawnedCharacter = Instantiate(allCharacterList.teams[teamIndex].characters[i], new Vector3(x.x, x.y, 0f), Quaternion.identity); //Spawning the prefab into the scene.
+        //         if(allCharacterList.teams[teamIndex].isTeamAI)
+        //         {
+        //             int points = 2 * (_data.townData.selectedEncounter.encounterLevel - 1);
+        //             spawnedCharacter.GetComponent<PlayerInformation>().MaxHealth += points;
+        //             Debug.Log("Player " + spawnedCharacter.name + " received additional " + points + " points.");
+        //         }
+        //         
+        //         spawnedCharacter.GetComponent<PlayerInformation>()._data = _data;
+        //         spawnedCharacter.GetComponent<AIBehaviour>()._data = _data;
+        //         spawnedCharacter.GetComponent<PlayerInformation>().CharactersTeam = allCharacterList.teams[teamIndex].teamName; //Assigning the characters their team.
+        //         allCharacterList.teams[teamIndex].characters[i] = spawnedCharacter; //Turning prefabs into gameObjects on board.
+        //         if (!characterUiButtonManager.gameObject.activeInHierarchy)
+        //         {
+        //             characterUiButtonManager.gameObject.SetActive(true);
+        //         }
+        //         characterUiButtonManager.AddDataToActionButtons(helpTable);
+        //         characterUiButtonManager.CharacterOnBoard = allCharacterList.teams[teamIndex].characters[i];//Assigning character to its UI button manager
+        //         // characterUiButtonManager.GetComponent<BottomCornerUI>().characterUiData = spawnedCharacter.GetComponent<PlayerInformation>().characterUiData;
+        //         
+        //         characterUiButtonManager.GetComponent<BottomCornerUI>().EnableAbilities(spawnedCharacter.GetComponent<PlayerInformation>().savedCharacter);
+        //         spawnedCharacter.GetComponent<PlayerInformation>().cornerPortraitBoxInGame = characterUiButtonManager.gameObject;//Assigning UI button manager character to its character
+        //         if (allCharacterList.teams[teamIndex].isTeamAI)
+        //         {
+        //             spawnedCharacter.GetComponent<PlayerInformation>().Respawn = true;
+        //         }
                 
                 Debug.Log("Cia kazkas daroma su ui corner");
-            }
-            i++;
-        }
+            // }
+            // i++;
+        // }
         allCharacterList.teams[teamIndex].undoCount = undoCount;
-        portraitBox.GetComponent<TeamInformation>().ModifyList();
+        portraitTeamBox.ModifyList();
 
         allCharacterList.teams[teamIndex].lastSelectedPlayer = allCharacterList.teams[teamIndex].characters[0];//LastSelectedPlayer
         //portraitBox.SetActive(false);

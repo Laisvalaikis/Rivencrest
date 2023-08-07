@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class TeamInformation : MonoBehaviour
 {
-    public List<GameObject> TeamCharacterPortraitList;
-    public List<GameObject> CharacterOnBoardList;
+    [SerializeField] private PlayerTeams playerTeams;
+    [SerializeField] private Image image;
+    [SerializeField] private List<GameObject> TeamCharacterPortraitList;
+    [SerializeField] private List<GameObject> CharacterOnBoardList;
+    [SerializeField] private List<PvPCharacterSelect> pvpCharacterSelects;
     public int teamIndex;
 
     void Awake()
@@ -25,27 +28,21 @@ public class TeamInformation : MonoBehaviour
     public void ModifyList()
     {
         TeamCharacterPortraitList.Clear();
-        CharacterOnBoardList = GameObject.Find("GameInformation").GetComponent<PlayerTeams>().AliveCharacterList(teamIndex);
+        CharacterOnBoardList = playerTeams.AliveCharacterList(teamIndex);
         for(int i = 0; i < transform.childCount; i++)
         {
             if (i < CharacterOnBoardList.Count)
             {
-                transform.GetChild(i).GetComponent<PvPCharacterSelect>().characterOnBoard = CharacterOnBoardList[i];
+                pvpCharacterSelects[i].characterOnBoard = CharacterOnBoardList[i];
+                TeamCharacterPortraitList.Add(pvpCharacterSelects[i].GetCharacterPortraitFrame());
             }
             else
             {
-                transform.GetChild(i).GetComponent<PvPCharacterSelect>().characterOnBoard = null;
+                pvpCharacterSelects[i].characterOnBoard = null;
             }
-            transform.GetChild(i).GetComponent<PvPCharacterSelect>().CreateCharatersPortrait();
+            pvpCharacterSelects[i].CreateCharatersPortrait();
         }
-        if(CharacterOnBoardList.Count == 0)
-        {
-            gameObject.GetComponent<Image>().enabled = false;
-        }
-        else
-        {
-            gameObject.GetComponent<Image>().enabled = true;
-        }
+        image.enabled = CharacterOnBoardList.Count != 0;
     }
     public void DisableSelection(GameObject selected)
     {
@@ -58,14 +55,14 @@ public class TeamInformation : MonoBehaviour
             selected.GetComponent<Animator>().SetBool("select", true);
         }*/
             
-            for(int i = 0; i < TeamCharacterPortraitList.Count; i++)
-            {
-                if(TeamCharacterPortraitList[i] != selected)
-                {
-                    TeamCharacterPortraitList[i].GetComponent<Animator>().SetBool("select", false);
-                }
-            }
-            selected.GetComponent<Animator>().SetBool("select", true);
+            // for(int i = 0; i < TeamCharacterPortraitList.Count; i++)
+            // {
+            //     if(TeamCharacterPortraitList[i] != selected)
+            //     {
+            //         TeamCharacterPortraitList[i].GetComponent<Animator>().SetBool("select", false);
+            //     }
+            // }
+            // selected.GetComponent<Animator>().SetBool("select", true);
             Debug.Log("Need to fix this");
         }
     public void DisableSelectionAll()
@@ -75,19 +72,20 @@ public class TeamInformation : MonoBehaviour
             transform.GetChild(i).GetComponent<Animator>().SetBool("select", false);
         }*/
             
-            for (int i = 0; i < TeamCharacterPortraitList.Count; i++)
-            {
-                    TeamCharacterPortraitList[i].GetComponent<Animator>().SetBool("select", false);
-            }
-            
+            // for (int i = 0; i < TeamCharacterPortraitList.Count; i++)
+            // {
+            //         TeamCharacterPortraitList[i].GetComponent<Animator>().SetBool("select", false);
+            // }
+            //
+            Debug.Log("Need to fix this");
         }
     public void ChangeBoxSprites(Sprite main, Sprite extension, Sprite button)
     {
-        GetComponent<Image>().sprite = main;
+        image.sprite = main;
         for (int i = 0; i < transform.childCount; i++)
         {
-                transform.GetChild(i).Find("Extension").GetComponent<Image>().sprite = extension;
-                transform.GetChild(i).Find("Frame").GetComponent<Image>().sprite = button;
+            pvpCharacterSelects[i].extension.sprite = extension;
+            pvpCharacterSelects[i].frame.sprite = button;
         }
     }
 }
