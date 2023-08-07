@@ -13,6 +13,7 @@ public class MapData : ScriptableObject
     public List<int> suitableLevels;
     public List<MapCoordinates> mapCoordinates;
     public MapCoordinates aiMapCoordinates;
+    public Vector3 toFollowStartPosition;
     public Vector2 panLimitX;
     public Vector2 panLimitY;
 
@@ -32,6 +33,7 @@ public class MapData : ScriptableObject
         suitableLevels = mapData.suitableLevels;
         mapCoordinates = mapData.mapCoordinates;
         aiMapCoordinates = mapData.aiMapCoordinates;
+        toFollowStartPosition = mapData.toFollowStartPosition;
         panLimitX = mapData.panLimitX;
         panLimitY = mapData.panLimitY;
         
