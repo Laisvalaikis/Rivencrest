@@ -17,6 +17,20 @@ MonoBehaviour:
   - BanditCrossbow
   npcTeam: []
   suitableLevels: 01000000
+  mapCoordinates:
+  - coordinates:
+    - {x: 4.5, y: 1, z: 0}
+    - {x: 5.5, y: 1, z: 0}
+    - {x: 5.5, y: 0, z: 0}
+  - coordinates:
+    - {x: 2.5, y: 6, z: 0}
+    - {x: 5.5, y: 6, z: 0}
+    - {x: 7.5, y: 8, z: 0}
+  aiMapCoordinates:
+    coordinates:
+    - {x: 5.5, y: 3, z: 0}
+    - {x: 3.5, y: 3, z: 0}
+    - {x: 4.5, y: 1, z: 0}
   numberOfEnemies: 3
   mapCategory: Forest
   allowDuplicates: 0

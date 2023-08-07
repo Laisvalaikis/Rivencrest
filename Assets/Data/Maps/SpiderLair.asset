@@ -19,6 +19,18 @@ MonoBehaviour:
   - UndeadSpider
   npcTeam: []
   suitableLevels: 01000000020000000300000004000000
+  mapCoordinates:
+  - coordinates:
+    - {x: 2.5, y: 1, z: 0}
+    - {x: 3.5, y: 0, z: 0}
+    - {x: 4.5, y: 0, z: 0}
+  - coordinates:
+    - {x: 6.5, y: 9, z: 0}
+    - {x: 7.5, y: 5, z: 0}
+    - {x: 11.5, y: 7, z: 0}
+  aiMapCoordinates:
+    coordinates:
+    - {x: 6.5, y: 4, z: 0}
   numberOfEnemies: 3
   mapCategory: Undead
   allowDuplicates: 0
