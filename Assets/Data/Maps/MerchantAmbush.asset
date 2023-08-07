@@ -35,6 +35,9 @@ MonoBehaviour:
     - {x: 2.5, y: 4, z: 0}
     - {x: 3.5, y: 3, z: 0}
     - {x: 1.5, y: 4, z: 0}
+  toFollowStartPosition: {x: 1.99, y: 3.14, z: 0}
+  panLimitX: {x: -0.5, y: 5.5}
+  panLimitY: {x: 0.5, y: 11.5}
   numberOfEnemies: 3
   mapCategory: Forest
   allowDuplicates: 0

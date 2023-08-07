@@ -32,6 +32,9 @@ MonoBehaviour:
   aiMapCoordinates:
     coordinates:
     - {x: 3.5, y: 3, z: 0}
+  toFollowStartPosition: {x: 2.04, y: 1.61, z: -1}
+  panLimitX: {x: 1.5, y: 13.5}
+  panLimitY: {x: -1.5, y: 10.5}
   numberOfEnemies: 3
   mapCategory: Forest
   allowDuplicates: 0
