@@ -20,6 +20,8 @@ public class MapData : ScriptableObject
     public Sprite mapImage;
     public string informationText;
 
+    public GameObject mapPrefab;
+
     public void CopyData(MapData mapData)
     {
         
@@ -34,6 +36,7 @@ public class MapData : ScriptableObject
         allowDuplicates = mapData.allowDuplicates;
         mapImage = mapData.mapImage;
         informationText = mapData.informationText;
+        mapPrefab = mapData.mapPrefab;
     }
 
 }
