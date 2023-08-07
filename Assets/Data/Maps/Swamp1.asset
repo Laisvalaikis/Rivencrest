@@ -20,12 +20,22 @@ MonoBehaviour:
   npcTeam: []
   suitableLevels: 0300000004000000
   mapCoordinates:
-  - coordinates: []
-  - coordinates: []
+  - coordinates:
+    - {x: 5.5, y: -1, z: 0}
+    - {x: 5.5, y: 0, z: 0}
+    - {x: 6.5, y: 0, z: 0}
+  - coordinates:
+    - {x: 0.5, y: 7, z: 0}
+    - {x: 1.5, y: 8, z: 0}
+    - {x: 2.5, y: 8, z: 0}
   aiMapCoordinates:
-    coordinates: []
+    coordinates:
+    - {x: 3.66, y: 3.6, z: 0}
+    - {x: 5.33, y: 4.1, z: 0}
+    - {x: 3.53, y: 1.5, z: 0}
   numberOfEnemies: 3
   mapCategory: Forest
   allowDuplicates: 0
   mapImage: {fileID: 0}
   informationText: 
+  mapPrefab: {fileID: 1722708026810974101, guid: a88dedca8e0734af8a91d31c9cf87d8c, type: 3}
