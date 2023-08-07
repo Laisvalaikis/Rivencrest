@@ -19,6 +19,11 @@ MonoBehaviour:
   - ForestWatcher
   npcTeam: []
   suitableLevels: 0300000004000000
+  mapCoordinates:
+  - coordinates: []
+  - coordinates: []
+  aiMapCoordinates:
+    coordinates: []
   numberOfEnemies: 3
   mapCategory: Forest
   allowDuplicates: 0

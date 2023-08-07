@@ -20,6 +20,20 @@ MonoBehaviour:
   - ForestHuntress
   npcTeam: []
   suitableLevels: 02000000030000000400000005000000
+  mapCoordinates:
+  - coordinates:
+    - {x: 5.5, y: -1, z: 0}
+    - {x: 6.5, y: -2, z: 0}
+    - {x: 7.5, y: -2, z: 0}
+  - coordinates:
+    - {x: 12.5, y: 14, z: 0}
+    - {x: 13.5, y: 14, z: 0}
+    - {x: 14.5, y: 13, z: 0}
+  aiMapCoordinates:
+    coordinates:
+    - {x: 10.5, y: 6, z: 0}
+    - {x: 7.5, y: 4, z: 0}
+    - {x: 13.5, y: 4, z: 0}
   numberOfEnemies: 3
   mapCategory: Forest
   allowDuplicates: 0
