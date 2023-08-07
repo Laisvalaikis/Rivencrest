@@ -34,6 +34,7 @@ MonoBehaviour:
     coordinates:
     - {x: 4.5, y: 2.5, z: 0}
     - {x: 7.5, y: 5.5, z: 0}
+  toFollowStartPosition: {x: 1.78, y: 0.71, z: 0}
   panLimitX: {x: 0.5, y: 10.5}
   panLimitY: {x: -0.5, y: 9.5}
   numberOfEnemies: 3

@@ -33,6 +33,9 @@ MonoBehaviour:
   aiMapCoordinates:
     coordinates:
     - {x: 7.5, y: 4, z: 0}
+  toFollowStartPosition: {x: 7.79, y: 1.2, z: -1}
+  panLimitX: {x: 1.5, y: 13.5}
+  panLimitY: {x: 0.5, y: 10.5}
   numberOfEnemies: 4
   mapCategory: Undead
   allowDuplicates: 0
