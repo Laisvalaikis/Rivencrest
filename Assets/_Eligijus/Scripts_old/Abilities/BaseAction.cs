@@ -43,9 +43,12 @@ using Random = UnityEngine.Random;
         protected List<List<GameObject>> AvailableTiles = new List<List<GameObject>>();
         protected List<GameObject> MergedTileList = new List<GameObject>();
         private AssignSound _assignSound;
+        private PlayerInformationData playerInformationData;
+        private PlayerInformationData _playerInformationData;
         
         void Awake()
         {
+            _playerInformationData = new PlayerInformationData();
             AbilityPoints = AbilityCooldown;
             groundLayer = LayerMask.GetMask("Ground");
             blockingLayer = LayerMask.GetMask("BlockingLayer");
@@ -374,11 +377,11 @@ using Random = UnityEngine.Random;
         {
             int critNumber = Random.Range(0, 100);
             bool crit;
-            if (critNumber > GetComponent<PlayerInformation>().critChance)
+            //if (critNumber > GetComponent<PlayerInformation>().critChance)
             {
                 crit = false;
             }
-            else
+           // else
             {
                 //damage = damage * 2;
                 damage += 3;
@@ -390,7 +393,7 @@ using Random = UnityEngine.Random;
         protected void dodgeActivation(ref int damage, GameObject target) //Dodge temporarily removed
         {
             int dodgeNumber = Random.Range(0, 100);
-            if (dodgeNumber > GetComponent<PlayerInformation>().accuracy - target.GetComponent<PlayerInformation>().dodgeChance)
+            //if (dodgeNumber > GetComponent<PlayerInformation>().accuracy - target.GetComponent<PlayerInformation>().dodgeChance)
             {
                 //damage = -1;
                 //Debug.Log("Dodge");
@@ -530,7 +533,7 @@ using Random = UnityEngine.Random;
         }
         protected bool DoesCharacterHaveBlessing(string blessingName)
         {
-            return GetComponent<PlayerInformation>().BlessingsAndCurses.Find(x => x.blessingName == blessingName) != null;
+            return playerInformationData.BlessingsAndCurses.Find(x => x.blessingName == blessingName) != null;
         }
         public virtual void BuffAbility()
         {

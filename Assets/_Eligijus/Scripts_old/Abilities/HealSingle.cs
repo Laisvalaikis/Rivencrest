@@ -206,7 +206,7 @@ public class HealSingle : BaseAction
 
             foreach (GameObject character in characterList)
             {
-                if (isAllegianceSame(character) && character.GetComponent<PlayerInformation>().health < character.GetComponent<PlayerInformation>().MaxHealth)
+               // if (isAllegianceSame(character) && character.GetComponent<PlayerInformation>().health < character.GetComponent<PlayerInformation>().MaxHealth)
                 {
                     AllyCharacterList.Add(character);
                 }

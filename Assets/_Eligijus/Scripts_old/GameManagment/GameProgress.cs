@@ -55,8 +55,8 @@ public class GameProgress : MonoBehaviour
                     {
                         _data.CharactersOnLastMission.Add(i);
                         gameInformation.allCharacterList.teams[0].characters.Add(_data.Characters[i].prefab);
-                        _data.statistics.charactersSelectedCountByClass[Statistics.GetClassIndex(_data.Characters[i].prefab.GetComponent<PlayerInformation>().ClassName)]++;
-                        _data.globalStatistics.charactersSelectedCountByClass[Statistics.GetClassIndex(_data.Characters[i].prefab.GetComponent<PlayerInformation>().ClassName)]++;
+                       // _data.statistics.charactersSelectedCountByClass[Statistics.GetClassIndex(_data.Characters[i].prefab.GetComponent<PlayerInformation>().ClassName)]++;
+                        //_data.globalStatistics.charactersSelectedCountByClass[Statistics.GetClassIndex(_data.Characters[i].prefab.GetComponent<PlayerInformation>().ClassName)]++;
                     }
                 }
             }
@@ -271,18 +271,18 @@ public class GameProgress : MonoBehaviour
         _data.currentCharacterIndex = index;
         Transform CharInfo = GameObject.Find("CanvasCamera").transform.Find("CharacterInformationFrame");
         SavedCharacter Char = _data.Characters[index];
-        CharInfo.Find("Name").GetComponent<Text>().color = Char.prefab.GetComponent<PlayerInformation>().ClassColor;
+       // CharInfo.Find("Name").GetComponent<Text>().color = Char.prefab.GetComponent<PlayerInformation>().ClassColor;
         CharInfo.Find("Name").GetComponent<Text>().text = Char.characterName;
-        CharInfo.Find("Class").GetComponent<Text>().color = Char.prefab.GetComponent<PlayerInformation>().ClassColor;
-        CharInfo.Find("Class").GetComponent<Text>().text = Char.prefab.GetComponent<PlayerInformation>().ClassName;
-        CharInfo.Find("Role").GetComponent<Text>().color = Char.prefab.GetComponent<PlayerInformation>().ClassColor;
+       // CharInfo.Find("Class").GetComponent<Text>().color = Char.prefab.GetComponent<PlayerInformation>().ClassColor;
+       // CharInfo.Find("Class").GetComponent<Text>().text = Char.prefab.GetComponent<PlayerInformation>().ClassName;
+       // CharInfo.Find("Role").GetComponent<Text>().color = Char.prefab.GetComponent<PlayerInformation>().ClassColor;
         CharInfo.Find("Role").GetComponent<Text>().text = Char.prefab.GetComponent<PlayerInformation>().role;
 
         for (int i = 0; i < 5; i++)
         {
             CharInfo.Find("Abilities").GetChild(i).gameObject.SetActive(true);
             CharInfo.Find("Abilities").GetChild(i).Find("Color").GetComponent<Image>().sprite = Char.prefab.GetComponent<ActionManager>().AbilityBackground;
-            CharInfo.Find("Abilities").GetChild(i).Find("AbilityIcon").GetComponent<Image>().color = Char.prefab.GetComponent<PlayerInformation>().ClassColor;
+           // CharInfo.Find("Abilities").GetChild(i).Find("AbilityIcon").GetComponent<Image>().color = Char.prefab.GetComponent<PlayerInformation>().ClassColor;
         }
         int currentIndex = 2;
         // for (int j = 0; j < Char.unlockedAbilities.Length; j++)
@@ -390,7 +390,7 @@ public class GameProgress : MonoBehaviour
                 {
                     if (blessing.difficultyLevel <= _data.townData.selectedEncounter.encounterLevel)
                     {
-                        character.GetComponent<PlayerInformation>().BlessingsAndCurses.Add(new Blessing(blessing.blessingName, 0, "", "", "", ""));
+                       // character.GetComponent<PlayerInformation>().BlessingsAndCurses.Add(new Blessing(blessing.blessingName, 0, "", "", "", ""));
                     }
                 }
             }

@@ -22,10 +22,19 @@ public class PvPCharacterSelect : MonoBehaviour
     {
         if (characterOnBoard != null)
         {
+<<<<<<< HEAD
             _playerInformation = characterOnBoard.GetComponent<PlayerInformation>();
             _playerInformation.characterPortrait = characterPortraitFrame;
             _playerInformation.TeamManager = transform.parent.gameObject;
             characterPortraitSprite.sprite = _playerInformation.CharacterPortraitSprite;
+=======
+            characterPortraitFrame = transform.Find("Character").gameObject;
+            transform.parent.gameObject.GetComponent<TeamInformation>().AddPortraitToList(characterPortraitFrame);
+           // characterOnBoard.GetComponent<PlayerInformation>().characterPortrait = characterPortraitFrame;
+            characterOnBoard.GetComponent<PlayerInformation>().TeamManager = transform.parent.gameObject;
+           // transform.Find("Character").GetChild(0).gameObject.GetComponent<Image>().sprite =
+           //         characterOnBoard.GetComponent<PlayerInformation>().CharacterPortraitSprite;
+>>>>>>> dec24651bff0b8b8e9f22ddee5b3b9123868cf8b
             gameObject.SetActive(true);
             isButtonAvailable = true;
         }
