@@ -184,7 +184,7 @@ public class HealingSight : BaseAction
     {
         if (canGridBeEnabled())
         {
-            if(GetComponent<PlayerInformation>().health < GetComponent<PlayerInformation>().MaxHealth)
+           // if(GetComponent<PlayerInformation>().health < GetComponent<PlayerInformation>().MaxHealth)
             {
                 return GetSpecificGroundTile(gameObject, 0, 0, groundLayer);
             }

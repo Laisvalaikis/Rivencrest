@@ -19,10 +19,10 @@ public class PvPCharacterSelect : MonoBehaviour
         {
             characterPortraitFrame = transform.Find("Character").gameObject;
             transform.parent.gameObject.GetComponent<TeamInformation>().AddPortraitToList(characterPortraitFrame);
-            characterOnBoard.GetComponent<PlayerInformation>().characterPortrait = characterPortraitFrame;
+           // characterOnBoard.GetComponent<PlayerInformation>().characterPortrait = characterPortraitFrame;
             characterOnBoard.GetComponent<PlayerInformation>().TeamManager = transform.parent.gameObject;
-            transform.Find("Character").GetChild(0).gameObject.GetComponent<Image>().sprite =
-                    characterOnBoard.GetComponent<PlayerInformation>().CharacterPortraitSprite;
+           // transform.Find("Character").GetChild(0).gameObject.GetComponent<Image>().sprite =
+           //         characterOnBoard.GetComponent<PlayerInformation>().CharacterPortraitSprite;
             gameObject.SetActive(true);
             isButtonAvailable = true;
         }

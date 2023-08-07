@@ -38,8 +38,8 @@ public class XPCard : MonoBehaviour
             characterTable.SetActive(true);
             var charInformation = character.prefab.GetComponent<PlayerInformation>(); // Sita sutvarkyti reikia
             className.text = character.characterName; //charInformation.ClassName;
-            className.color = charInformation.ClassColor;
-            portrait.sprite = charInformation.CharacterPortraitSprite;
+           // className.color = charInformation.ClassColor;
+           // portrait.sprite = charInformation.CharacterPortraitSprite;
             XPToLevelUp = _data.XPToLevelUp[character.level - 1];
             xP.text = character.xP + "/" + XPToLevelUp + " XP";
             if (character.level  >= GameProgress.currentMaxLevel())

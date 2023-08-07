@@ -13,7 +13,7 @@ public class HealthDiamond : Consumable
             switch (type)
             {
                 case OrbType.Health:
-                    WhoStepped.GetComponent<PlayerInformation>().MaxHealth += HealthAmount;
+                   // WhoStepped.GetComponent<PlayerInformation>().MaxHealth += HealthAmount;
                     WhoStepped.GetComponent<PlayerInformation>().Heal(HealthAmount, false);
                     //WhoStepped.GetComponent<PlayerInformation>().health += HealthAmount;
                     WhoStepped.transform.Find("VFX").Find("VFXImpact").GetComponent<Animator>().SetTrigger("red1");

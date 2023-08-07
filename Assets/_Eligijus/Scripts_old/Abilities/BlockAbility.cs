@@ -138,7 +138,7 @@ public class BlockAbility : BaseAction
 
             foreach (GameObject character in characterList)
             {
-                if (character != gameObject && canTileBeClicked(character) && character.GetComponent<PlayerInformation>().health < character.GetComponent<PlayerInformation>().MaxHealth)
+                //if (character != gameObject && canTileBeClicked(character) && character.GetComponent<PlayerInformation>().health < character.GetComponent<PlayerInformation>().MaxHealth)
                 {
                     AllyCharacterList.Add(character);
                 }

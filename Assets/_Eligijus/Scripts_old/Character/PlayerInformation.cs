@@ -7,14 +7,16 @@ using System;
 
 public class PlayerInformation : MonoBehaviour
 {
+    private PlayerInformationData playerInformationData;
+    private PlayerInformationData _playerInformationData;
     public SavedCharacter savedCharacter;
-    public int MaxHealth = 100;
+    //public int MaxHealth = 100;
     [HideInInspector] public int health = 100;
-    public int critChance = 5;
-    public int accuracy = 100;
-    public int dodgeChance = 20;
+    //public int critChance = 5;
+    //public int accuracy = 100;
+    //public int dodgeChance = 20;
     public string CharactersTeam = "Default";
-    [HideInInspector] public GameObject characterPortrait; //portraitBoxFrame
+    //[HideInInspector] public GameObject characterPortrait; //portraitBoxFrame
     [HideInInspector] public GameObject TeamManager;
     [HideInInspector] public GameObject FlagInHand = null;
     public string currentState = "Movement";
@@ -25,9 +27,9 @@ public class PlayerInformation : MonoBehaviour
     private List<GameObject> KillList = new List<GameObject>();
     public string role;
     //
-    public Sprite CharacterPortraitSprite;
-    public Sprite CharacterSplashArt;//For character table
-    public Sprite CroppedSplashArt;
+   // public Sprite CharacterPortraitSprite;
+   // public Sprite CharacterSplashArt;//For character table
+   // public Sprite CroppedSplashArt;
     public Data _data;
     //
     [HideInInspector] public Debuffs Debuffs; // :'( uzsirasyti kazkur visus imanomus debuffus
@@ -66,21 +68,24 @@ public class PlayerInformation : MonoBehaviour
     //
     [HideInInspector] public bool isThisObject = false;
     //
-    public string ClassName;
-    public Color ClassColor;
-    public Color ClassColor2;
-    public List<Blessing> BlessingsAndCurses = new List<Blessing>();
+   // public string ClassName;
+  //  public Color ClassColor;
+   // public Color ClassColor2;
+    //public List<Blessing> BlessingsAndCurses = new List<Blessing>();
     //
     private int turnCounter = 1;
     void Awake()
     {
-        health = MaxHealth;
+
+        _playerInformationData = new PlayerInformationData();
+        _playerInformationData.CopyData(playerInformationData);
     }
     void Start()
     {
         LoadPlayerProgression();
         PlayerSetup();
-        health = MaxHealth;
+        //health = MaxHealth;
+        health = _playerInformationData.MaxHealth;
         gameInformation = GameInformation.instance;
     }
     void Update()
@@ -105,7 +110,7 @@ public class PlayerInformation : MonoBehaviour
     }
     public float GetHealthPercentage()
     {
-        float maxHealthDouble = MaxHealth;
+        float maxHealthDouble = _playerInformationData.MaxHealth;
         float healthDouble = health;
         return healthDouble / maxHealthDouble * 100;
     }
@@ -146,8 +151,10 @@ public class PlayerInformation : MonoBehaviour
                     {
                         StartCoroutine(ExecuteAfterTime(0.1f, () =>
                         {
+                            PlayerInformationData playerInformationDataMarker =
+                                Marker.GetComponent<PlayerInformation>()._playerInformationData;
                             DealDamage(5, false, Marker, "Mark");
-                            if (Marker != null && Marker.GetComponent<PlayerInformation>().BlessingsAndCurses.Find(x => x.blessingName == "Astonishing") != null)//Blessing
+                            if (Marker != null && playerInformationDataMarker.BlessingsAndCurses.Find(x => x.blessingName == "Astonishing") != null)//Blessing
                             {
                                 ApplyDebuff("Stun", damageDealer);
                             }
@@ -165,7 +172,9 @@ public class PlayerInformation : MonoBehaviour
                         StartCoroutine(ExecuteAfterTime(0.05f, () =>
                         {
                             int weakSpotDamage = 1;
-                            if (PinkWeakSpot.GetComponent<PlayerInformation>().BlessingsAndCurses.Find(x => x.blessingName == "Painful spot") != null)//Blessing
+                            PlayerInformationData playerInformationDataPink =
+                                PinkWeakSpot.GetComponent<PlayerInformation>()._playerInformationData;
+                            if (playerInformationData.BlessingsAndCurses.Find(x => x.blessingName == "Painful spot") != null)//Blessing
                             {
                                 weakSpotDamage = 2;
                             }
@@ -235,7 +244,7 @@ public class PlayerInformation : MonoBehaviour
         {
             characterPortrait.transform.GetChild(0).GetComponent<Image>().color = Color.grey;
         }*/
-        if(ClassName == "MERCHANT") 
+        if(_playerInformationData.ClassName == "MERCHANT")  // vietoj playerInformationData.ClassName buvo ClassName
         {
             gameInformation.Events.Add("MerchantDied");
         }
@@ -290,26 +299,31 @@ public class PlayerInformation : MonoBehaviour
             XPToGain = 0;
             foreach (GameObject x in KillList)
             {
-                _data.statistics.killCountByClass[Statistics.GetClassIndex(this.ClassName)]++;
-                _data.globalStatistics.killCountByClass[Statistics.GetClassIndex(this.ClassName)]++;
+                _data.statistics.killCountByClass[Statistics.GetClassIndex(_playerInformationData.ClassName)]++; // vietoj playerInformationData.ClassName buvo ClassName
+                _data.globalStatistics.killCountByClass[Statistics.GetClassIndex(_playerInformationData.ClassName)]++; // vietoj playerInformationData.ClassName buvo ClassName
                 XPToGain += 50;
             }
         }
     }
     public void Heal(int healAmount, bool crit)
     {
-        if (health + healAmount >= MaxHealth)
+        //if (health + healAmount >= MaxHealth)
+        if (health + healAmount >= _playerInformationData.MaxHealth)
         {
             if (transform.Find("DamageTexts").transform.Find("DamageText1").gameObject.activeSelf)
             {
                 if (transform.Find("DamageTexts").transform.Find("DamageText2").gameObject.activeSelf)
                 {
-                    EnableDamageText(3, MaxHealth - health, crit, true);
+                    //EnableDamageText(3, MaxHealth - health, crit, true);
+                    EnableDamageText(3, _playerInformationData.MaxHealth - health, crit, true);
                 }
-                else EnableDamageText(2, MaxHealth - health, crit, true);
+                //else EnableDamageText(2, MaxHealth - health, crit, true);
+                else EnableDamageText(2, _playerInformationData.MaxHealth - health, crit, true);
             }
-            else EnableDamageText(1, MaxHealth - health, crit, true);
-            health = MaxHealth;
+            //else EnableDamageText(1, MaxHealth - health, crit, true);
+            else EnableDamageText(1, _playerInformationData.MaxHealth - health, crit, true);
+            //health = MaxHealth;
+            health = _playerInformationData.MaxHealth;
         }
         else
         {
@@ -396,13 +410,17 @@ public class PlayerInformation : MonoBehaviour
             {
                 BlessingsAndCurses.Add(x);
             }*/
-            BlessingsAndCurses = savedCharacter.blessings;
+           // BlessingsAndCurses = savedCharacter.blessings;
+           _playerInformationData.BlessingsAndCurses = savedCharacter.blessings;
             //max hp
-            MaxHealth += (savedCharacter.level - 1) * 2;
+            //MaxHealth += (savedCharacter.level - 1) * 2;
+            _playerInformationData.MaxHealth += (savedCharacter.level - 1) * 2;
             //Healthy
-            if (BlessingsAndCurses.Find(x => x.blessingName == "Healthy") != null)
+            //if (BlessingsAndCurses.Find(x => x.blessingName == "Healthy") != null)
+            if (_playerInformationData.BlessingsAndCurses.Find(x => x.blessingName == "Healthy") != null)
             {
-                MaxHealth += 3;
+                //MaxHealth += 3;
+                _playerInformationData.MaxHealth += 3;
             }
             //Head start
             /* if (BlessingsAndCurses.Contains("Head start"))
@@ -485,7 +503,8 @@ public class PlayerInformation : MonoBehaviour
     public void OnTurnStart()
     {
         turnCounter++;
-        if (BlessingsAndCurses.Find(x => x.blessingName == "Swiftness") != null && turnCounter % 2 == 0)
+        //if (BlessingsAndCurses.Find(x => x.blessingName == "Swiftness") != null && turnCounter % 2 == 0)
+        if (_playerInformationData.BlessingsAndCurses.Find(x => x.blessingName == "Swiftness") != null && turnCounter % 2 == 0)
         {
             GetComponent<GridMovement>().AvailableMovementPoints++;
         }
@@ -501,7 +520,8 @@ public class PlayerInformation : MonoBehaviour
         Poisons.RemoveAll(x => x.turnsLeft <= 0);
         if (poisonDamage > 0 && health > 0)
         {
-            if (BlessingsAndCurses.Find(x => x.blessingName == "Antitoxic") != null)
+            //if (BlessingsAndCurses.Find(x => x.blessingName == "Antitoxic") != null)
+            if (_playerInformationData.BlessingsAndCurses.Find(x => x.blessingName == "Antitoxic") != null)
             {
                 poisonDamage = 0;
             }

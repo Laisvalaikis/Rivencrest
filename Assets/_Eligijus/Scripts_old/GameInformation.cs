@@ -278,14 +278,14 @@ public class GameInformation : MonoBehaviour
            // if (!character.GetComponent<PlayerInformation>().isThisObject)
           //  {
           cornerButtonManager.CharacterOnBoard = character;
-                character.GetComponent<PlayerInformation>().TeamManager.GetComponent<TeamInformation>().DisableSelection(
-                character.GetComponent<PlayerInformation>().characterPortrait);
-                GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].lastSelectedPlayer = SelectedCharacter;
+          //      character.GetComponent<PlayerInformation>().TeamManager.GetComponent<TeamInformation>().DisableSelection(
+           //     character.GetComponent<PlayerInformation>().characterPortrait);
+           //     GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].lastSelectedPlayer = SelectedCharacter;
           //  }
           
-            character.GetComponent<GridMovement>().EnableGrid();
+           // character.GetComponent<GridMovement>().EnableGrid();
             // bottomCornerUI.characterUiData = _selectedCharacter.GetComponent<PlayerInformation>().characterUiData;
-            bottomCornerUI.EnableAbilities(SelectedCharacter.GetComponent<PlayerInformation>().savedCharacter);
+           // bottomCornerUI.EnableAbilities(SelectedCharacter.GetComponent<PlayerInformation>().savedCharacter);
             //character.GetComponent<PlayerInformation>().CornerUIManager.transform.GetChild(0).gameObject.SetActive(true);
             //Camera.GetComponent<CinemachineVirtualCamera>().Follow = character.transform;
         }
@@ -739,8 +739,8 @@ public class GameInformation : MonoBehaviour
                     if (_data.Characters[_data.CharactersOnLastMission[i]].dead)
                     {
                         _data.Characters[_data.CharactersOnLastMission[i]].xPToGain = 0;
-                        _data.statistics.characterDeathsCountByClass[Statistics.GetClassIndex(_data.Characters[_data.CharactersOnLastMission[i]].prefab.GetComponent<PlayerInformation>().ClassName)]++;
-                        _data.globalStatistics.characterDeathsCountByClass[Statistics.GetClassIndex(_data.Characters[_data.CharactersOnLastMission[i]].prefab.GetComponent<PlayerInformation>().ClassName)]++;
+                       // _data.statistics.characterDeathsCountByClass[Statistics.GetClassIndex(_data.Characters[_data.CharactersOnLastMission[i]].prefab.GetComponent<PlayerInformation>().ClassName)]++;
+                      //  _data.globalStatistics.characterDeathsCountByClass[Statistics.GetClassIndex(_data.Characters[_data.CharactersOnLastMission[i]].prefab.GetComponent<PlayerInformation>().ClassName)]++;
                     }
                 }
                 _data.townData.wasLastMissionSuccessful = true;
@@ -759,8 +759,8 @@ public class GameInformation : MonoBehaviour
                 {
                     _data.Characters[_data.CharactersOnLastMission[i]].dead = teamsInformation.allCharacterList.teams[0].characters[i].GetComponent<PlayerInformation>().health <= 0;
                     _data.Characters[_data.CharactersOnLastMission[i]].xPToGain = 0;
-                    _data.statistics.characterDeathsCountByClass[Statistics.GetClassIndex(_data.Characters[_data.CharactersOnLastMission[i]].prefab.GetComponent<PlayerInformation>().ClassName)]++;
-                    _data.globalStatistics.characterDeathsCountByClass[Statistics.GetClassIndex(_data.Characters[_data.CharactersOnLastMission[i]].prefab.GetComponent<PlayerInformation>().ClassName)]++;
+                    //_data.statistics.characterDeathsCountByClass[Statistics.GetClassIndex(_data.Characters[_data.CharactersOnLastMission[i]].prefab.GetComponent<PlayerInformation>().ClassName)]++;
+                    //_data.globalStatistics.characterDeathsCountByClass[Statistics.GetClassIndex(_data.Characters[_data.CharactersOnLastMission[i]].prefab.GetComponent<PlayerInformation>().ClassName)]++;
                 }
                 _data.townData.wasLastMissionSuccessful = false;
                 if (_data.townData.selectedEncounter.mapName == "Merchant Ambush")

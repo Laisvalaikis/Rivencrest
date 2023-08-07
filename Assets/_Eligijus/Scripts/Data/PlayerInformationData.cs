@@ -27,8 +27,33 @@ public class PlayerInformationData : ScriptableObject
     public Sprite roleSprite;
     public List<Sprite> abilitySprites;
     public List<AbilityData> abilities;
-  
     public List<Blessing> BlessingsAndCurses = new List<Blessing>();
+
+    public void CopyData(PlayerInformationData playerInformationData)
+    {
+        ClassName = playerInformationData.ClassName;
+        MaxHealth = playerInformationData.MaxHealth;
+        critChance = playerInformationData.critChance;
+        accuracy = playerInformationData.accuracy;
+        dodgeChance = playerInformationData.dodgeChance;
+        role = playerInformationData.role;
+
+        classColor = playerInformationData.classColor;
+        secondClassColor = playerInformationData.secondClassColor;
+        textColor = playerInformationData.textColor;
+        backgroundColor = playerInformationData.backgroundColor;
+
+        CharacterPortraitSprite = playerInformationData.CharacterPortraitSprite;
+        CharacterSplashArt = playerInformationData.CharacterSplashArt;
+        CroppedSplashArt = playerInformationData.CroppedSplashArt;
+        characterSprite = playerInformationData.characterSprite;
+        roleSprite = playerInformationData.roleSprite;
+        abilitySprites = playerInformationData.abilitySprites;
+        abilities = playerInformationData.abilities;
+
+        BlessingsAndCurses = playerInformationData.BlessingsAndCurses;
+    }
+
 }
 
 

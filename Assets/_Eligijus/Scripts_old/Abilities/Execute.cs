@@ -130,10 +130,10 @@ public class Execute : BaseAction
         {
             base.ResolveAbility(clickedTile);
             GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
-            int damage = ExecuteDamage(target);
+           // int damage = ExecuteDamage(target);
             //dodgeActivation(ref damage, target);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
-            target.GetComponent<PlayerInformation>().DealDamage(damage, false, gameObject);
+           // target.GetComponent<PlayerInformation>().DealDamage(damage, false, gameObject);
             if(target.GetComponent<PlayerInformation>().health <= 0)
             {
                 transform.position = clickedTile.transform.position + new Vector3(0f, 0f, -1f);
@@ -151,14 +151,14 @@ public class Execute : BaseAction
             FinishAbility();
         }
     }
-    private int ExecuteDamage(GameObject target) 
-    {
-        int damage = minimumDamage + Mathf.FloorToInt(float.Parse((
-            (target.GetComponent<PlayerInformation>().MaxHealth) * 0.15
-            ).ToString()));
+   // private int ExecuteDamage(GameObject target) 
+   // {
+       // int damage = minimumDamage + Mathf.FloorToInt(float.Parse((
+           // (target.GetComponent<PlayerInformation>().MaxHealth) * 0.15
+          //  ).ToString()));
 
-        return damage;
-    }
+      //  return damage;
+  //  }
     public override bool canTileBeClicked(GameObject tile)
     {
         if ((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall"))
@@ -170,6 +170,6 @@ public class Execute : BaseAction
     }
     public override void OnTileHover(GameObject tile)
     {
-        EnableDamagePreview(tile, ExecuteDamage(GetSpecificGroundTile(tile, 0, 0, blockingLayer)));
+       // EnableDamagePreview(tile, ExecuteDamage(GetSpecificGroundTile(tile, 0, 0, blockingLayer)));
     }
 }

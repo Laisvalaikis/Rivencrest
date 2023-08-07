@@ -61,7 +61,7 @@ public class PlayerTeams : MonoBehaviour
                 if(allCharacterList.teams[teamIndex].isTeamAI)
                 {
                     int points = 2 * (_data.townData.selectedEncounter.encounterLevel - 1);
-                    spawnedCharacter.GetComponent<PlayerInformation>().MaxHealth += points;
+                  //  spawnedCharacter.GetComponent<PlayerInformation>().MaxHealth += points;
                     Debug.Log("Player " + spawnedCharacter.name + " received additional " + points + " points.");
                 }
                 
