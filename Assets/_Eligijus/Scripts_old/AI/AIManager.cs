@@ -50,7 +50,7 @@ public class AIManager : MonoBehaviour
                         }
                         else
                         {
-                            spawnedEnemy.GetComponent<PlayerMovement>().ChangeVisualActiveSelf(false);
+                            // spawnedEnemy.GetComponent<PlayerMovement>().ChangeVisualActiveSelf(false);
                         }
                         //
                         //spawnedEnemy.GetComponent<PlayerInformation>().CharactersTeam = PlayerTeams.allCharacterList.teams[teamIndex].teamName;

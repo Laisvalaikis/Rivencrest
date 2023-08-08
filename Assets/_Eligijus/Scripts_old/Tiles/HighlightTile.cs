@@ -182,36 +182,36 @@ public class HighlightTile : MonoBehaviour
             //Jei movement
             if (isHighlighted && activeState == "Movement")
             {
-                UndoAction undoAction = new UndoAction(gameInformation.SelectedCharacter.transform.position,
-                    gameInformation.SelectedCharacter, gameInformation.SelectedCharacter.GetComponent<GridMovement>().MovementPointsToReachDestination(gameObject));
-                gameInformation.undoAction = undoAction;
-                gameInformation.SelectedCharacter.GetComponent<GridMovement>().DisableWayTiles();
+                // UndoAction undoAction = new UndoAction(gameInformation.SelectedCharacter.transform.position,
+                    // gameInformation.SelectedCharacter, gameInformation.SelectedCharacter.GetComponent<GridMovement>().MovementPointsToReachDestination(gameObject));
+                // gameInformation.undoAction = undoAction;
+                // gameInformation.SelectedCharacter.GetComponent<GridMovement>().DisableWayTiles();
                 FlipSelectedCharacter(gameInformation);
                 gameInformation.MoveSelectedCharacter(gameObject);
                 
-                gameInformation.FocusSelectedCharacter(gameInformation.SelectedCharacter);
-                gameInformation.SelectedCharacter.GetComponent<GridMovement>().ClearWayList();
-                GameObject characterToSelect = gameInformation.SelectedCharacter;
-                characterToSelect.GetComponent<GridMovement>().DisableGrid();
+                // gameInformation.FocusSelectedCharacter(gameInformation.SelectedCharacter);
+                // gameInformation.SelectedCharacter.GetComponent<GridMovement>().ClearWayList();
+                // GameObject characterToSelect = gameInformation.SelectedCharacter;
+                // characterToSelect.GetComponent<GridMovement>().DisableGrid();
                 //characterToSelect.GetComponent<GridMovement>().EnableGrid();
                 //gameInformation.DeselectTeam(gameInformation.SelectedCharacter); 
                 //gameInformation.SelectACharacter(characterToSelect);
-                StartCoroutine(ExecuteAfterTime(0.01f, () =>
-                {
+                // StartCoroutine(ExecuteAfterTime(0.01f, () =>
+                // {
                     //gameInformation.SelectACharacter(characterToSelect);
-                    characterToSelect.GetComponent<GridMovement>().EnableGrid();
-                }));
+                    // characterToSelect.GetComponent<GridMovement>().EnableGrid();
+                // }));
             }
             //Jei kitas veiksmas
-            else if (isHighlighted
-                && gameInformation.SelectedCharacter.GetComponent<ActionManager>().FindActionByName(activeState).canTileBeClicked(gameObject))
-            {
-                FlipSelectedCharacter(gameInformation);
-                gameInformation.undoAction.available = false;
-                gameInformation.SelectedCharacter.GetComponent<ActionManager>().FindActionByName(activeState).ResolveAbility(gameObject);
-                gameInformation.ChangeVisionTiles();
-
-            }
+            // else if (isHighlighted
+            //     && gameInformation.SelectedCharacter.GetComponent<ActionManager>().FindActionByName(activeState).canTileBeClicked(gameObject))
+            // {
+            //     FlipSelectedCharacter(gameInformation);
+            //     gameInformation.undoAction.available = false;
+            //     gameInformation.SelectedCharacter.GetComponent<ActionManager>().FindActionByName(activeState).ResolveAbility(gameObject);
+            //     gameInformation.ChangeVisionTiles();
+            //
+            // }
         }
         OffHover(false);
     }

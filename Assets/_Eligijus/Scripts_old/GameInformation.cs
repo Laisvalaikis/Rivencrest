@@ -208,12 +208,12 @@ public class GameInformation : MonoBehaviour
         {
             for (int j = 0; j < playerTeamsList.teams[i].characters.Count; j++)
             {
-                playerTeamsList.teams[i].characters[j].GetComponent<PlayerMovement>().FakeUpdate();
+                // playerTeamsList.teams[i].characters[j].GetComponent<PlayerMovement>().FakeUpdate();
             }
         }
         foreach (GameObject x in GetComponent<PlayerTeams>().otherCharacters)
         {
-            x.GetComponent<PlayerMovement>().FakeUpdate();
+            // x.GetComponent<PlayerMovement>().FakeUpdate();
         }
         //
         if (undoAction.available && GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].undoCount > 0)
@@ -514,12 +514,12 @@ public class GameInformation : MonoBehaviour
         {
             for (int j = 0; j < playerTeamsList.teams[i].characters.Count; j++)
             {
-                playerTeamsList.teams[i].characters[j].GetComponent<PlayerMovement>().OnAnyMove();
+                // playerTeamsList.teams[i].characters[j].GetComponent<PlayerMovement>().OnAnyMove();
             }
         }
         foreach (GameObject x in GetComponent<PlayerTeams>().otherCharacters)
         { 
-            x.GetComponent<PlayerMovement>().OnAnyMove();       
+            // x.GetComponent<PlayerMovement>().OnAnyMove();       
         }
     }
     public void ChangeActiveTeam(string newActiveTeamsName)

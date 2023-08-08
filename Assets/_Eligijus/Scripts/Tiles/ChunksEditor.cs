@@ -6,13 +6,13 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 
-[CustomEditor(typeof(Chunks))]
+[CustomEditor(typeof(GameTileMap))]
 public class ChunksEditor : Editor
 {
  
     public override void OnInspectorGUI()
     {
-        Chunks chunks = (Chunks) target;
+        GameTileMap gameTileMap = (GameTileMap) target;
         base.OnInspectorGUI();
         
         // if (GUI.changed)
@@ -30,12 +30,12 @@ public class ChunksEditor : Editor
         GUILayout.BeginHorizontal();
         if (GUILayout.Button("GenerateChunks"))
         {
-            chunks.GenerateChunks();  
+            gameTileMap.GenerateChunks();  
         }
                 
         if (GUILayout.Button("ClearChuncks"))
         {
-            chunks.ResetChunks();  
+            gameTileMap.ResetChunks();  
         }
 
         GUILayout.EndHorizontal();

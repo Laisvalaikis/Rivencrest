@@ -6,11 +6,12 @@ using System.Threading;
 using Unity.VisualScripting;
 using Random = UnityEngine.Random;
 
-public class Chunks : MonoBehaviour
+public class GameTileMap : MonoBehaviour
 {
 
+    public static GameTileMap Tilemap;
     [System.Serializable]
-    private class SaveChunks
+    public class SaveChunks
     {
         public List<ChunkData> chunks;
         
@@ -19,22 +20,10 @@ public class Chunks : MonoBehaviour
             chunks = new List<ChunkData>();
         }
     }
-    
-    [System.Serializable]
-    private class CollumBoundries
-    {
-        public List<Vector2> boundries;
-    }
-    
 
-    // Start is called before the first frame update
-    
-    [SerializeField] private List<CollumBoundries> _mapBoundries;
-    [SerializeField] private Vector2 _initialPosition;
-    [SerializeField] private float _chunkSize = 3f;
-    [SerializeField] private float _mapHeight = 10f;
-    [SerializeField] private float _mapWidth = 10f;
-    [SerializeField] private bool showChunks = false;
+    public CharacterAction selectedCharacterAction;
+    public TileMapData currentMap;
+    [SerializeField] private bool showChunks;
     private int _chunkCountWidth = 0;
     private int _chunkCountHeight = 0;
     private List<SaveChunks> _chunks;
@@ -48,16 +37,29 @@ public class Chunks : MonoBehaviour
 
     private bool _updateWeight = false;
     private int _countForTreeSpawn = 0;
-    
+    private GameObject _currentSelectedCharacter;
+
+    private void Awake()
+    {
+        if (Tilemap == null)
+        {
+            Tilemap = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
     void Start()
     {
 
-        if (_chunkSize > 0)
+        if (currentMap._chunkSize > 0)
         {
             _chunks = new List<SaveChunks>();
             _chunksDraw = new List<ChunkData>();
-            _chunkCountWidth = Mathf.CeilToInt(_mapWidth / _chunkSize);
-            _chunkCountHeight = Mathf.CeilToInt(_mapHeight / _chunkSize);
+            _chunkCountWidth = Mathf.CeilToInt(currentMap._mapWidth / currentMap._chunkSize);
+            _chunkCountHeight = Mathf.CeilToInt(currentMap._mapHeight / currentMap._chunkSize);
             // _avlTree = new AVL();
             _maxHeap = new MaxHeap(_chunkCountWidth*_chunkCountHeight*2);
             _chunksArray = new ChunkData[_chunkCountHeight,_chunkCountWidth];
@@ -81,18 +83,18 @@ public class Chunks : MonoBehaviour
     void CalculateDistance()
     {
 
-        float leftSizeOfHeight = _mapHeight;
-        float heightPosition = _initialPosition.y;
+        float leftSizeOfHeight = currentMap._mapHeight;
+        float heightPosition = currentMap._initialPosition.y;
         for (int h = 0; h < _chunkCountHeight; h++)
         {
-            float leftSizeOfWidth = _mapWidth;
-            float widthPosition = _initialPosition.x;
+            float leftSizeOfWidth = currentMap._mapWidth;
+            float widthPosition = currentMap._initialPosition.x;
             
-            float heightSize = _chunkSize;
+            float heightSize = currentMap._chunkSize;
                 
-            if (leftSizeOfHeight / _chunkSize < 1)
+            if (leftSizeOfHeight / currentMap._chunkSize < 1)
             {
-                heightSize = leftSizeOfHeight / _chunkSize;
+                heightSize = leftSizeOfHeight / currentMap._chunkSize;
             }
             
             
@@ -100,17 +102,17 @@ public class Chunks : MonoBehaviour
             
             for (int w = 0; w < _chunkCountWidth; w++)
             {
-                float widthSize = _chunkSize;
+                float widthSize = currentMap._chunkSize;
             
-                if (leftSizeOfWidth / _chunkSize < 1)
+                if (leftSizeOfWidth / currentMap._chunkSize < 1)
                 {
-                    widthSize = leftSizeOfWidth / _chunkSize;
+                    widthSize = leftSizeOfWidth / currentMap._chunkSize;
                 }
                 ChunkData chunk = new ChunkData(h, w, widthSize, heightSize, widthPosition + (widthSize/2), heightPosition - (heightSize/2), false);
-                if (_mapBoundries[h].boundries[0].y - _chunkSize <= heightPosition - (heightSize) &&
-                    _mapBoundries[h].boundries[0].y >=  heightPosition &&
-                    _mapBoundries[h].boundries[0].x <= widthPosition && 
-                    _mapBoundries[h].boundries[1].x >= widthPosition + widthSize)
+                if (currentMap._mapBoundries[h].boundries[0].y - currentMap._chunkSize <= heightPosition - (heightSize) &&
+                    currentMap._mapBoundries[h].boundries[0].y >=  heightPosition &&
+                    currentMap._mapBoundries[h].boundries[0].x <= widthPosition && 
+                    currentMap._mapBoundries[h].boundries[1].x >= widthPosition + widthSize)
                 {
                     chunk.SetTileIsLocked(false);
                 }
@@ -143,8 +145,8 @@ public class Chunks : MonoBehaviour
 
     public ChunkData GetChunk(Vector3 position)
     {
-        int widthChunk = Mathf.CeilToInt((position.x - _initialPosition.x)/_chunkSize) - 1;
-        int heightChunk = Mathf.CeilToInt((_initialPosition.y - position.z) / _chunkSize) - 1;
+        int widthChunk = Mathf.CeilToInt((position.x - currentMap._initialPosition.x)/currentMap._chunkSize) - 1;
+        int heightChunk = Mathf.CeilToInt((currentMap._initialPosition.y - position.y) / currentMap._chunkSize) - 1;
 
         
         lock (_chunksArray)
@@ -185,12 +187,12 @@ public class Chunks : MonoBehaviour
 
     public void GenerateChunks()
     {
-        if (_chunkSize > 0 && _threadDistance == null || _chunkSize > 0 && !_threadDistance.IsAlive)
+        if (currentMap._chunkSize > 0 && _threadDistance == null || currentMap._chunkSize > 0 && !_threadDistance.IsAlive)
         {
             _chunks = new List<SaveChunks>();
             _chunksDraw = new List<ChunkData>();
-            _chunkCountWidth = Mathf.CeilToInt(_mapWidth / _chunkSize);
-            _chunkCountHeight = Mathf.CeilToInt(_mapHeight / _chunkSize);
+            _chunkCountWidth = Mathf.CeilToInt(currentMap._mapWidth / currentMap._chunkSize);
+            _chunkCountHeight = Mathf.CeilToInt(currentMap._mapHeight / currentMap._chunkSize);
             // _avlTree = new AVL();
             _maxHeap = new MaxHeap(_chunkCountWidth*_chunkCountHeight*2);
             _chunksArray = new ChunkData[_chunkCountHeight,_chunkCountWidth];
@@ -204,8 +206,8 @@ public class Chunks : MonoBehaviour
     {
         _chunks = new List<SaveChunks>();
         _chunksDraw = new List<ChunkData>();
-        _chunkCountWidth = Mathf.CeilToInt(_mapWidth / _chunkSize);
-        _chunkCountHeight = Mathf.CeilToInt(_mapHeight / _chunkSize);
+        _chunkCountWidth = Mathf.CeilToInt(currentMap._mapWidth / currentMap._chunkSize);
+        _chunkCountHeight = Mathf.CeilToInt(currentMap._mapHeight / currentMap._chunkSize);
         _maxHeap = new MaxHeap(_chunkCountWidth*_chunkCountHeight*2);
         _chunksArray = new ChunkData[_chunkCountHeight,_chunkCountWidth];
     }
@@ -261,7 +263,97 @@ public class Chunks : MonoBehaviour
 
     }
 
-    void OnApplicationQuit()
+    public void SetCharacter(Vector3 mousePosition, GameObject character)
+    {
+        if (GetChunk(mousePosition) != null)
+        {
+            ChunkData chunkData = GetChunk(mousePosition);
+            chunkData.SetCurrentCharacter(character);
+        }
+    }
+
+    public bool CharacterIsOnTile(Vector3 mousePosition)
+    {
+        if (GetChunk(mousePosition) != null)
+        {
+            ChunkData chunkData = GetChunk(mousePosition);
+            return chunkData.GetCurrentCharacter() != null;
+        }
+
+        return false;
+    }
+    
+    public bool IsSelectedCharacterIsOnTile(Vector3 mousePosition)
+    {
+        if (GetChunk(mousePosition) != null)
+        {
+            ChunkData chunkData = GetChunk(mousePosition);
+            return chunkData.GetCurrentCharacter() != null && chunkData.GetCurrentCharacter() == _currentSelectedCharacter;
+        }
+
+        return false;
+    }
+
+    public void MoveSelectedCharacter(Vector3 mousePosition, Vector3 offset = default)
+    {
+        
+        // GameObject FinalDestination = SelectedCharacter.GetComponent<GridMovement>().PickUpWayTiles();
+        // if (SelectedCharacter.GetComponent<GridMovement>().AreThereConsumablesOnTheWay())
+        // {
+        //     undoAction.available = false;
+        // }
+        // if (FinalDestination != null)
+        // {
+        //     newPosition = FinalDestination;
+        // }
+
+
+        if (GetChunk(mousePosition) != null)
+        {
+            SetCharacter(_currentSelectedCharacter.transform.position, null);
+            _currentSelectedCharacter.transform.position = GetChunk(mousePosition).GetPosition() - offset;
+            SetCharacter(mousePosition, _currentSelectedCharacter);
+        }
+        // SelectedCharacter.GetComponent<GridMovement>().RemoveAvailableMovementPoints(newPosition);
+        // bottomCornerUI.EnableAbilities(SelectedCharacter.GetComponent<PlayerInformation>().savedCharacter);
+    }
+
+    public void SelectTile(Vector3 mousePosition)
+    {
+        
+        if (GetChunk(mousePosition) != null)
+        {
+            Debug.Log("Pressed");
+            ChunkData chunkData = GetChunk(mousePosition);
+            _currentSelectedCharacter = chunkData.GetCurrentCharacter();
+        }
+    }
+
+    public void DeselectCurrentCharacter()
+    {
+        if (_currentSelectedCharacter != null)
+        {
+            _currentSelectedCharacter = null;
+        }
+    }
+
+    public bool CharacterIsSelected()
+    {
+        return _currentSelectedCharacter != null;
+    }
+
+    public GameObject GetCurrentCharacter()
+    {
+        return _currentSelectedCharacter;
+    }
+
+    // void OnApplicationQuit()
+    // {
+    //     
+    //     
+    // }
+
+    private void OnDestroy()
     {
         _updateWeight = false;
         if (_threadDistance.IsAlive)
@@ -272,7 +364,10 @@ public class Chunks : MonoBehaviour
         {
             _threadDistance.Join(); 
         }
-        
+        if (Tilemap == this)
+        {
+            Tilemap = null;
+        }
     }
 
     private void OnDrawGizmos()
@@ -295,13 +390,17 @@ public class Chunks : MonoBehaviour
             }
 
             Gizmos.color = Color.red;
-            for (int i = 0; i < _mapBoundries.Count; i++)
+            if (currentMap != null)
             {
-                for (int j = 0; j < _mapBoundries[i].boundries.Count-1; j++)
+                for (int i = 0; i < currentMap._mapBoundries.Count; i++)
                 {
-                    Gizmos.DrawLine(_mapBoundries[i].boundries[j], _mapBoundries[i].boundries[j+1]);
+                    for (int j = 0; j < currentMap._mapBoundries[i].boundries.Count - 1; j++)
+                    {
+                        Gizmos.DrawLine(currentMap._mapBoundries[i].boundries[j],
+                            currentMap._mapBoundries[i].boundries[j + 1]);
+                    }
+
                 }
-                
             }
         }
     }

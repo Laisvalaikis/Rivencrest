@@ -77,7 +77,7 @@ public class MistShield : BaseAction
         isAbilityActive = false;
         StartCoroutine(ExecuteAfterTime(0.5f, () =>
         {
-            GetComponent<PlayerMovement>().OnAnyMove();
+            // GetComponent<PlayerMovement>().OnAnyMove();
             GetComponent<PlayerInformation>().Protected = false;
         }));
     }
@@ -90,7 +90,7 @@ public class MistShield : BaseAction
             GetComponent<PlayerInformation>().Protected = true;
             transform.Find("VFX").Find("Protected").gameObject.SetActive(true);
             FinishAbility();
-            GetComponent<PlayerMovement>().OnAnyMove();
+            // GetComponent<PlayerMovement>().OnAnyMove();
     }
     public override bool canTileBeClicked(GameObject tile)
     {

@@ -10,7 +10,7 @@ using Random = UnityEngine.Random;
 
 
 [RequireComponent(typeof(AssignSound))]
-    public abstract class BaseAction : MonoBehaviour
+    public abstract class BaseAction : CharacterAction
     {
 
         // audio effect indexes

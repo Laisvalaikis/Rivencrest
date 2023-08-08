@@ -40,6 +40,9 @@ public class ChunkData
     private bool _standingOnChunk = false;
     private bool _canUseTile = false;
     private bool _tileIsLocked = false;
+    private GameObject _currentCharacter;
+    
+    
     public Vector3 GetPosition()
     {
         return new(_positionWidth, _positionHeight, 0);
@@ -50,6 +53,15 @@ public class ChunkData
         return new(_width,_height, 1f);
     }
 
+    public void SetCurrentCharacter(GameObject gameObject)
+    {
+        _currentCharacter = gameObject;
+    }
+
+    public GameObject GetCurrentCharacter()
+    {
+        return _currentCharacter;
+    }
 
     public void StandingOnChunk(bool standingOnChunk)
     {

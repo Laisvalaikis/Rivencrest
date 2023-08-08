@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67e9b6b12896c3498d37b167bbf9a86, type: 3}
+  m_Name: Meadow
+  m_EditorClassIdentifier: 
+  _mapBoundries:
+  - boundries:
+    - {x: 4, y: 12}
+    - {x: 5, y: 12}
+  - boundries:
+    - {x: 3, y: 11}
+    - {x: 6, y: 11}
+  - boundries:
+    - {x: 2, y: 10}
+    - {x: 6, y: 10}
+  - boundries:
+    - {x: 2, y: 9}
+    - {x: 8, y: 9}
+  - boundries:
+    - {x: 2, y: 8}
+    - {x: 8, y: 8}
+  - boundries:
+    - {x: 1, y: 7}
+    - {x: 7, y: 7}
+  - boundries:
+    - {x: 0, y: 6}
+    - {x: 6, y: 6}
+  - boundries:
+    - {x: -1, y: 5}
+    - {x: 5, y: 5}
+  - boundries:
+    - {x: -1, y: 4}
+    - {x: 5, y: 4}
+  - boundries:
+    - {x: -1, y: 3}
+    - {x: 4, y: 3}
+  - boundries:
+    - {x: -1, y: 2}
+    - {x: 2, y: 2}
+  - boundries:
+    - {x: 0, y: 1}
+    - {x: 2, y: 1}
+  _initialPosition: {x: -1, y: 12}
+  _chunkSize: 1
+  _mapHeight: 12
+  _mapWidth: 9

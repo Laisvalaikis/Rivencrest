@@ -1,38 +1,0 @@
-
-tcsharpsquid:S3776;"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(¢•Óùûÿÿÿÿ
-pcsharpsquid:S3776Ú"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(¡é¯‹
-ucsharpsquid:S3776¡"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(„ÅËÿÿÿÿÿ
-ocsharpsquid:S3776€"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(ÚœÿG
-Gcsharpsquid:S3903"*Move 'AIBehaviour' into a named namespace.(žêˆã
-7csharpsquid:S2933"Make 'TileGrid' 'readonly'.(½å“
-acsharpsquid:S1104
-"DMake this field 'private' and encapsulate it in a 'public' property.(ÿôÈ“
-`csharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(çÍ¥)
-acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(º”Åô
-acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ÚîŽë
-acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Û™×â
-hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(“òæÄ8µ½¶™1
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Ž•Î ÿÿÿÿÿ
-acsharpsquid:S1104ý"DMake this field 'private' and encapsulate it in a 'public' property.(Ã¶@
-gcsharpsquid:S1104þ"DMake this field 'private' and encapsulate it in a 'public' property.(µÇÓÚÿÿÿÿÿ
-gcsharpsquid:S1104ÿ"DMake this field 'private' and encapsulate it in a 'public' property.(Í˜­üÿÿÿÿ
-bcsharpsquid:S1104À"DMake this field 'private' and encapsulate it in a 'public' property.(ÆèÞ–
-gcsharpsquid:S1104Á"DMake this field 'private' and encapsulate it in a 'public' property.(Äí‹çúÿÿÿÿ
-Pcsharpsquid:S3267”"2Loops should be simplified with "LINQ" expressions(ºšêÑ
-Pcsharpsquid:S3267¨"2Loops should be simplified with "LINQ" expressions(ðÇ¾§
-^csharpsquid:S3267´"@Loop should be simplified by calling Select(x => x.abilityName))(ðÇ¾§
-hcsharpsquid:S2589K"DChange this condition so that it does not always evaluate to 'true'.(›ØŸî8™…Òöœ1
-hcsharpsquid:S2589n"DChange this condition so that it does not always evaluate to 'true'.(Ôªí§8™…Òöœ1
-bcsharpsquid:S2589ë"DChange this condition so that it does not always evaluate to 'true'.(å™„„
-@csharpsquid:S125"Remove this commented out code.(Ž–­…ýÿÿÿÿ
-@csharpsquid:S125"Remove this commented out code.(ÒÌâ–øÿÿÿÿ
-;csharpsquid:S125'"Remove this commented out code.(¬ãý¨
-Gcsharpsquid:S125("Remove this commented out code.(¥»àãùÿÿÿÿ8›Êþµ™1
-@csharpsquid:S125~"Remove this commented out code.(÷ÐŽ¼þÿÿÿÿ
-<csharpsquid:S125ô"Remove this commented out code.(Ò­¶ã
-<csharpsquid:S125Ý"Remove this commented out code.(ðñÊ±
-<csharpsquid:S125£"Remove this commented out code.(Åîá¿
-<csharpsquid:S125À"Remove this commented out code.(‹á‚ƒ
-Acsharpsquid:S125ð"Remove this commented out code.(µêß´ùÿÿÿÿ
-5csharpsquid:S4663"Remove this empty comment(è»»_
-6csharpsquid:S4663ù"Remove this empty comment(è»»_

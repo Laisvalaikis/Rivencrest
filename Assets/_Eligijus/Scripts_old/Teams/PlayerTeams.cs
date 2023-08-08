@@ -55,6 +55,7 @@ public class PlayerTeams : MonoBehaviour
             if (i < allCharacterList.teams[teamIndex].characters.Count)
             {
                 GameObject spawnedCharacter = Instantiate(allCharacterList.teams[teamIndex].characters[i], new Vector3(x.x, x.y, 0f), Quaternion.identity); //Spawning the prefab into the scene.
+                GameTileMap.Tilemap.SetCharacter(spawnedCharacter.transform.position + new Vector3(0, 0.5f, 0), spawnedCharacter);
         //         if(allCharacterList.teams[teamIndex].isTeamAI)
         //         {
         //             int points = 2 * (_data.townData.selectedEncounter.encounterLevel - 1);

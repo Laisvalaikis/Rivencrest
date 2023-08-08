@@ -20,11 +20,11 @@ public class CharacterVision : MonoBehaviour
     void Update()
     {
 
-        if (currentCharactersPosition != transform.position)
-        {
-            GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().ChangeVisionTiles();
-            //GetComponent<PlayerMovement>().OnAnyMove();
-        }
+        // if (currentCharactersPosition != transform.position)
+        // {
+        //     GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().ChangeVisionTiles();
+        //     //GetComponent<PlayerMovement>().OnAnyMove();
+        // }
 
 
         currentCharactersPosition = transform.position;

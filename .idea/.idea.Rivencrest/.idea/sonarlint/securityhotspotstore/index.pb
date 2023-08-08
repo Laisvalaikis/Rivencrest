@@ -63,8 +63,6 @@ BAssets/_Eligijus/Scripts/CharacterSelect/CharacterSelectManager.cs,e\3\e3f1d2a
 -Assets/_Eligijus/Scripts/Data/StateManager.cs,4\c\4cd4ef24dc08189ad41cb29e1f08611c79deab3b
 X
 (Assets/_Eligijus/Scripts/PauseManager.cs,a\7\a75293b8087cc7742b41c681a069333715418054
-e
-5Assets/_Eligijus/Scripts/UI/UiViewManagment/ExitUI.cs,4\3\4309db6d41e9c46010cf0c36299fcfb8f5436b4c
 b
 2Assets/_Eligijus/Scripts/UI/ImageFadeController.cs,4\1\41e9e4110624e2025c54bd9b56052a92c06a2ecc
 j
@@ -87,8 +85,6 @@ W
 'Assets/InputManagment/SimpleControls.cs,2\1\218e7f70fd9a8b7a10c790074e473ddbd02e02ad
 n
 >Assets/_Aurimas/Scripts/Encounter/EncounterButtonController.cs,b\f\bfa6c1606a7811141a87e3a18bd384cd2110091a
-c
-3Assets/_Eligijus/Scripts/Camera/CameraController.cs,b\6\b6f9da01951c203d0baf13bb3397d40ed3e08b4e
 j
 :Assets/_Eligijus/Scripts_old/GameManagment/GameProgress.cs,2\3\23ff33bb37cb09f69589beb4a6a58000181ab715
 c
@@ -97,17 +93,11 @@ h
 8Assets/_Aurimas/Scripts/Encounter/EncounterController.cs,c\3\c330f8d6519f47f54e903b402649a3d83176ceea
 ^
 .Assets/_Eligijus/Scripts_old/Abilities/Cage.cs,3\6\3664190ced56ebd3825381c8c582e6e765deefd8
-_
-/Assets/_Eligijus/Scripts_old/GameInformation.cs,e\0\e0a075e84b51447005df55e5882cc6b46380a048
 W
 'Assets/_Eligijus/Scripts/GameManager.cs,1\9\19f7612fc02e540b013f05ee7b9ab279a3dc8e0d
 _
 /Assets/_Eligijus/Scripts/Data/MapCoordinates.cs,7\5\7556506ec5a1b0342941f9348828c0427c2795c1
-^
-.Assets/_Eligijus/Scripts_old/AI/AIBehaviour.cs,e\2\e2dc09fc8252f02cd7d1073fc57663d964db47c0
 X
 (Assets/_Eligijus/Scripts/Data/MapData.cs,a\f\af62b00ba4446e9d3adf42c2de038602329b2498
-i
-9Assets/_Eligijus/Scripts_old/Character/CharacterVision.cs,1\4\14489a78999395cf0e220f4e70840356d48c52f8
 e
 5Assets/_Eligijus/Scripts/SoundManager/SoundManager.cs,c\6\c68d2181140c56edbb15b82ce69cdc831f2b6c23
