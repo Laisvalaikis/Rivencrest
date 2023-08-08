@@ -19,10 +19,12 @@ public class PlayerInformation : MonoBehaviour
     private CreateWhiteField createWhiteField;
     private MindControl mindControl;
     private CharacterModel characterModel;
+    private BoxCollider2D boxCollider2D;
 
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     [SerializeField] private Animator animator;
+
     //public int MaxHealth = 100;
     [HideInInspector] public int health = 100;
     //public int critChance = 5;
@@ -106,17 +108,20 @@ public class PlayerInformation : MonoBehaviour
     {
         if (Input.GetKeyDown("e") && CharactersTeam == "Default")
         {
-            GameObject.Find("GameInformation").gameObject.GetComponent<PlayerTeams>().AddCharacterToCurrentTeam(gameObject);
+            //GameObject.Find("GameInformation").gameObject.GetComponent<PlayerTeams>().AddCharacterToCurrentTeam(gameObject);
+            playerTeams.AddCharacterToCurrentTeam(gameObject);
         }
         if (currentState != AnimationState && StateAnimations)
         {
             if (currentState == "Attack" && GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().SelectedCharacter == transform.gameObject)
             {
-                transform.Find("CharacterModel").GetComponent<Animator>().SetBool("idleAttack", true);
+                //transform.Find("CharacterModel").GetComponent<Animator>().SetBool("idleAttack", true);
+                animator.SetBool("idleAttack", true);
             }
             else
             {
-                transform.Find("CharacterModel").GetComponent<Animator>().SetBool("idleAttack", false);
+                //transform.Find("CharacterModel").GetComponent<Animator>().SetBool("idleAttack", false);
+                animator.SetBool("idleAttack", false);
                 //GetComponent<Animator>().SetTrigger("backToIdle");
             }
             AnimationState = currentState;
@@ -141,8 +146,10 @@ public class PlayerInformation : MonoBehaviour
                 }
                 if (specialInformation == "PinkWeakSpot")
                 {
-                    transform.Find("VFX").Find("VFXImpact").GetComponent<Animator>().SetTrigger("pink1");
-                    transform.Find("VFX").Find("PinkWeakSpot").GetComponent<Animator>().SetTrigger("hit");
+                    //transform.Find("VFX").Find("VFXImpact").GetComponent<Animator>().SetTrigger("pink1");
+                   // transform.Find("VFX").Find("PinkWeakSpot").GetComponent<Animator>().SetTrigger("hit");
+                   animator.SetTrigger("pink1");
+                   animator.SetTrigger("hit");
                     SpecialColor = "PinkWeakSpot";
                 }
                 if (specialInformation == "Mark")
@@ -177,7 +184,8 @@ public class PlayerInformation : MonoBehaviour
                                 ApplyDebuff("CantMove", damageDealer);
                             }
                             Marker = null;
-                            transform.Find("VFX").Find("Mark").GetComponent<Animator>().SetTrigger("explode");
+                           // transform.Find("VFX").Find("Mark").GetComponent<Animator>().SetTrigger("explode");
+                           animator.SetTrigger("explode");
                             gameInformation.FakeUpdate();
                         }));
                     }
@@ -221,12 +229,14 @@ public class PlayerInformation : MonoBehaviour
                 }
                 if (health <= 0) // DEATH
                 {
-                    transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("death");
+                   // transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("death");
+                   animator.SetTrigger("death");
                     DeathStart();
                 }
                 else
                 {
-                    transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerHit");
+                    //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerHit");
+                    animator.SetTrigger("playerHit");
                 }
             }
             else
@@ -237,7 +247,8 @@ public class PlayerInformation : MonoBehaviour
         else
         {
             BarrierProvider = null;
-            transform.Find("VFX").Find("VFXBool").GetComponent<Animator>().SetTrigger("shieldEnd");
+           // transform.Find("VFX").Find("VFXBool").GetComponent<Animator>().SetTrigger("shieldEnd");
+           animator.SetTrigger("shieldEnd");
         }
     }
 
@@ -250,9 +261,11 @@ public class PlayerInformation : MonoBehaviour
     {
         if (wasThisCharacterSpawned)
         {
-            GameObject.Find("GameInformation").GetComponent<PlayerTeams>().RemoveCharacterFromTeam(gameObject, CharactersTeam);
+           // GameObject.Find("GameInformation").GetComponent<PlayerTeams>().RemoveCharacterFromTeam(gameObject, CharactersTeam);
+           playerTeams.RemoveCharacterFromTeam(gameObject,CharactersTeam);
         }
-        transform.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        //transform.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        boxCollider2D.enabled = false;
         if (!CompareTag("Wall"))
         {
             SendKillMessage();
@@ -364,7 +377,8 @@ public class PlayerInformation : MonoBehaviour
             health += healAmount;
         }
         // health = MaxHealth;
-        transform.Find("VFX").Find("VFX1x1").GetComponent<Animator>().SetTrigger("heal");
+        //transform.Find("VFX").Find("VFX1x1").GetComponent<Animator>().SetTrigger("heal");
+        animator.SetTrigger("heal");
     }
     public void ApplyDebuff(string debuff, GameObject DebuffApplier = null)
     {
@@ -417,16 +431,18 @@ public class PlayerInformation : MonoBehaviour
     }
     public void PlayerSetup()
     {
-        GameObject GameInformation;
-        GameInformation = GameObject.Find("GameInformation");
+       // GameObject GameInformation;
+       // GameInformation = GameObject.Find("GameInformation");
         Color TeamUIColor = ColorStorage.TeamColor(CharactersTeam);
         if (CharactersTeam == "Default")
         {
-            GameInformation.gameObject.GetComponent<PlayerTeams>().SpawnDefaultCharacter(gameObject);
+           // GameInformation.gameObject.GetComponent<PlayerTeams>().SpawnDefaultCharacter(gameObject);
+           playerTeams.SpawnDefaultCharacter(gameObject);
         }
         else if (transform.Find("VFX") != null)
         {
-            transform.Find("VFX").Find("TeamUI").GetComponent<SpriteRenderer>().color = TeamUIColor;
+           // transform.Find("VFX").Find("TeamUI").GetComponent<SpriteRenderer>().color = TeamUIColor;
+           spriteRenderer.color = TeamUIColor;
         }
     }
     public void LoadPlayerProgression()
@@ -585,8 +601,8 @@ public class PlayerInformation : MonoBehaviour
                textToDisplay = sign + damageOrHealAmount.ToString();
            }
        }
-       damageTextas.damageBeingDealt = damageOrHealAmount; 
-       //damageTextTest[textIndex].SetActive(true);
+       damageTextas.damageBeingDealt = damageOrHealAmount;
+       //damageText.SetActive(true);
        damageTextTest[textIndex].text = textToDisplay;
        damageTextas.time = 1;
        
@@ -625,7 +641,8 @@ public class PlayerInformation : MonoBehaviour
             if (BarrierProvider != null)
             {
                 BarrierProvider = null;
-                transform.Find("VFX").Find("VFXBool").GetComponent<Animator>().SetTrigger("shieldEnd");
+               // transform.Find("VFX").Find("VFXBool").GetComponent<Animator>().SetTrigger("shieldEnd");
+               animator.SetTrigger("shieldEnd");
             }
         }));
     }

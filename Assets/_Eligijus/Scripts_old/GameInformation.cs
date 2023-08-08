@@ -544,7 +544,7 @@ public class GameInformation : MonoBehaviour
     }
     public void EndTurn()
     {
-        OnAnyMove();//
+        OnAnyMove();
         DisableAllCharacters();
         InspectedCharacter = null;
         for (int j = 0; j < GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].characters.Count; j++) //dabartine komanda
@@ -663,7 +663,7 @@ public class GameInformation : MonoBehaviour
     public void EndAITurn(bool hasEnemySpawningJustOccured)
     {
         isAITurn = false;
-        OnAnyMove();//
+        OnAnyMove();
         if (!isVictoryScreenEnabled || hasEnemySpawningJustOccured)
         {
             EndTurn();

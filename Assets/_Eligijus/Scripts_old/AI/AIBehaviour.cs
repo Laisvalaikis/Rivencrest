@@ -7,47 +7,47 @@ using Random = UnityEngine.Random;
 public class AIBehaviour : MonoBehaviour
 {
     //Grid and Raycasts
-    public List<SpecialAbility> specialAbilities = new List<SpecialAbility>();
-    public List<SpecialBlessing> specialBlessings = new List<SpecialBlessing>();
+    public List<SpecialAbility> specialAbilities;
+    public List<SpecialBlessing> specialBlessings;
     public LayerMask groundLayer;
     public LayerMask blockingLayer;
     public LayerMask fogLayer;
-
+    [SerializeField]
+    private GridMovement gridMovement;
+    [SerializeField]
+    private PlayerInformation playerInformation;
+    [SerializeField]
+    PlayerMovement playerMovement;
+    [SerializeField]
+    ActionManager actionManager;
     private RaycastHit2D raycast;
 
-    private List<List<GameObject>> TileGrid = new List<List<GameObject>>();
-    //private bool isCoroutineExecuting;
-
-    //
-    private List<Vector3> Destinations;
-    private int currentDestinationIndex;
+    private List<List<GameObject>> _tileGrid;
+    private List<Vector3> _destinations;
+    private int _currentDestinationIndex;
     public Vector3 DestinationObject;
-    private int AttackRange;
-    private List<(int, int)> AttackRangeVectors;
-    private float castAfter;
+    private int _attackRange;
+    private List<(int, int)> _attackRangeVectors;
+    private float _castAfter;
     public Data _data;
-    /*void Update()
-    {
-        if (Input.GetKeyDown("e"))
-        {
-            DoTurnActions();
-        }
-    }*/
+
     void Start()
     {
-        Destinations = GameObject.Find("GameInformation").GetComponent<AIManager>().AIDestinations;
-        currentDestinationIndex = 0;//Random.Range(0, Destinations.Count - 1);
-        // DestinationObject = Destinations[currentDestinationIndex++];
-        AttackRange = GetComponent<ActionManager>().FindActionByName("Attack").AttackRange;
-        if (AttackRange == 1)
+        if (_data == null)
         {
-            AttackRangeVectors = new List<(int, int)>
-            {
-            };
+            _data = Data.Instance;
+        }
+
+        _destinations = GameObject.Find("GameInformation").GetComponent<AIManager>().AIDestinations;
+        _currentDestinationIndex = 0;
+        _attackRange = actionManager.FindActionByName("Attack").AttackRange;
+        if (_attackRange == 1)
+        {
+            _attackRangeVectors = new List<(int, int)>();
         }
         else
         {
-            AttackRangeVectors = new List<(int, int)>
+            _attackRangeVectors = new List<(int, int)>
             {
             (1, 1),
             (-1, 1),
@@ -58,82 +58,82 @@ public class AIBehaviour : MonoBehaviour
     }
     public void DoTurnActions()
     {
-        castAfter = 0.5f;
-        if (!GetComponent<PlayerInformation>().Debuffs.Contains("Stun") && !GameObject.Find("GameInformation").GetComponent<GameInformation>().isVictoryScreenEnabled)
+        _castAfter = 0.5f;
+        if (!playerInformation.Debuffs.Contains("Stun") && !GameObject.Find("GameInformation").GetComponent<GameInformation>().isVictoryScreenEnabled)
         {
-            GameObject AttackTarget;
+            GameObject attackTarget;
             if (_data.townData.difficultyLevel == 0)
             {
-                AttackTarget = ClosestVisibleEnemyCharacter(GetCharactersInGrid(3 + AttackRange));
+                attackTarget = ClosestVisibleEnemyCharacter(GetCharactersInGrid(3 + _attackRange));
             }
             else
             {
-                AttackTarget = EnemyWithLeastHealth(GetCharactersInGrid(3 + AttackRange));
+                attackTarget = EnemyWithLeastHealth(GetCharactersInGrid(3 + _attackRange));
             }
-            DestinationObject = Destinations[currentDestinationIndex - 1];
+            DestinationObject = _destinations[_currentDestinationIndex - 1];
             //Direction to go to
-            if (DestinationObject != null && CheckIfSpecificLayer(DestinationObject, 0, 0, blockingLayer) && GetSpecificGroundTile(DestinationObject, 0, 0, blockingLayer) == gameObject)
+            if (CheckIfSpecificLayer(DestinationObject, 0, 0, blockingLayer) && GetSpecificGroundTile(DestinationObject, 0, 0, blockingLayer) == gameObject)
             {
-                if (currentDestinationIndex >= Destinations.Count)
+                if (_currentDestinationIndex >= _destinations.Count)
                 {
-                    currentDestinationIndex = 0;
+                    _currentDestinationIndex = 0;
                 }
-                DestinationObject = Destinations[currentDestinationIndex++];
+                DestinationObject = _destinations[_currentDestinationIndex++];
             }
             //ACTIONS
             //BeforeMovement
             CastAbilitiesByCastOrder(0);
             //Moves and attacks if possible
-            if (AttackTarget != null && PlaceToMoveToWhenAttacking(AttackTarget, AttackRange) != null)
+            if (attackTarget != null && PlaceToMoveToWhenAttacking(attackTarget, _attackRange) != null)
             {
 
-                StartCoroutine(ExecuteAfterTime(castAfter, () =>
+                StartCoroutine(ExecuteAfterTime(_castAfter, () =>
                 {
-                    MoveCharacterToTile(PlaceToMoveToWhenAttacking(AttackTarget, AttackRange));
+                    MoveCharacterToTile(PlaceToMoveToWhenAttacking(attackTarget, _attackRange));
                 }));
-                castAfter += 0.4f;
+                _castAfter += 0.4f;
                 //BeforeAttack
                 CastAbilitiesByCastOrder(1);
                 //Basic attack
-                StartCoroutine(ExecuteAfterTime(castAfter, () =>  //Padaro kazka po sekundes <3
+                StartCoroutine(ExecuteAfterTime(_castAfter, () =>  //Padaro kazka po sekundes <3
                 {
-                    GetComponent<ActionManager>().FindActionByName("Attack").ResolveAbility(AttackTarget);
-                    FlipCharacter(AttackTarget);
+                    actionManager.FindActionByName("Attack").ResolveAbility(attackTarget);
+                    FlipCharacter(attackTarget);
                     EndAIAction();
                 }));
-                castAfter += 0.6f;
+                _castAfter += 0.6f;
                 //Using special Ability
                 CastAbilitiesByCastOrder(3);
             }
     
             //Moves to destination if possible
-            else if (DestinationObject != null && ClosestMovementTileToDestination(DestinationObject) != null)
+            else if (ClosestMovementTileToDestination(DestinationObject) != null)
             {
-                StartCoroutine(ExecuteAfterTime(castAfter, () =>
+                StartCoroutine(ExecuteAfterTime(_castAfter, () =>
                 {
                     MoveCharacterToTile(ClosestMovementTileToDestination(DestinationObject));
                 }));
-                castAfter += 0.4f;
+                _castAfter += 0.4f;
                 //Wall
-                StartCoroutine(ExecuteAfterTime(castAfter, () =>
+                StartCoroutine(ExecuteAfterTime(_castAfter, () =>
                 {
                     int toAttackNearbyWallOrNot = Random.Range(0, 4);//jei tik siaip paeina
-                    if (GetComponent<GridMovement>().AvailableMovementPoints > 0 || toAttackNearbyWallOrNot < 2)
+                    if (gridMovement.AvailableMovementPoints > 0 || toAttackNearbyWallOrNot < 2)
                     {
-                        GameObject WallTarget = ClosestTileFromListToDestination(DestinationObject, GetSurroundingWalls());
-                        if (WallTarget != null)
+                        GameObject wallTarget = ClosestTileFromListToDestination(DestinationObject, GetSurroundingWalls());
+                        if (wallTarget != null)
                         {
                             /*if (AttackRange > 1 && PlaceToMoveToWhenAttacking(WallTarget, AttackRange) != null)
                             {
                                 MoveCharacterToTile(PlaceToMoveToWhenAttacking(AttackTarget, AttackRange));
                             }*/
-                            GetComponent<ActionManager>().FindActionByName("Attack").ResolveAbility(WallTarget);
-                            FlipCharacter(WallTarget);
+                            actionManager.FindActionByName("Attack").ResolveAbility(wallTarget);
+                            FlipCharacter(wallTarget);
                             EndAIAction();
                         }
                     }
                 }));
-                castAfter += 0.6f;
+                _castAfter += 0.6f;
                 //Casts a spell if possible
                 CastAbilitiesByCastOrder(3);
             }
@@ -141,20 +141,20 @@ public class AIBehaviour : MonoBehaviour
     }
     public float TimeRequiredForTurn()//Return max possible time spent in turn
     {
-        float TimeRequired = 0.6f;
-        if (!GetComponent<PlayerInformation>().Debuffs.Contains("Stun"))
+        float timeRequired = 0.6f;
+        if (!playerInformation.Debuffs.Contains("Stun"))
         {
             if (areAllAbilitiesOnCooldown() || RandomEnemyCharacter(GetCharactersInGrid(7)) == null)
             {
-                TimeRequired += 0.5f;
+                timeRequired += 0.5f;
             }
             else
             {
-                TimeRequired += 1f;
-                TimeRequired += availableAbilitiesCount() * 0.6f;
+                timeRequired += 1f;
+                timeRequired += availableAbilitiesCount() * 0.6f;
             }
         }
-        return TimeRequired;
+        return timeRequired;
     }
     private List<GameObject> GetSurroundingWalls()
     {
@@ -166,14 +166,14 @@ public class AIBehaviour : MonoBehaviour
             (-1, 0),
             (0, -1)
         };
-        if (AttackRange > 1)
+        if (_attackRange > 1)
         {
-            directionVectors = AttackRangeVectors;
+            directionVectors = _attackRangeVectors;
         }
 
         foreach (var x in directionVectors)
         {
-            bool isWall = CheckIfSpecificTag(gameObject, x.Item1, x.Item2, blockingLayer, "Wall");
+            bool isWall = CheckIfSpecificTag(gameObject.transform.position, x.Item1, x.Item2, blockingLayer, "Wall");
             if (isWall)
             {
                 GameObject addableTile = GetSpecificGroundTile(gameObject.transform.position, x.Item1, x.Item2, blockingLayer);
@@ -189,11 +189,13 @@ public class AIBehaviour : MonoBehaviour
         float closestDistance = 9999;
         foreach (GameObject character in characterList)
         {
-            if (character.CompareTag("Wall") || isCharacterOnDifferentAllegiance(character) && PlaceToMoveToWhenAttacking(character, AttackRange) != null)
+            if (character.CompareTag("Wall") || isCharacterOnDifferentAllegiance(character) && PlaceToMoveToWhenAttacking(character, _attackRange) != null)
             {
-                float xDistance = Math.Abs(transform.position.x - character.transform.position.x);
-                float yDistance = Math.Abs(transform.position.y - character.transform.position.y);
-                if (xDistance + yDistance == closestDistance)
+                Vector3 characterPosition = character.transform.position;
+                Vector3 transformPosition = transform.position;
+                float xDistance = Math.Abs(transformPosition.x - characterPosition.x);
+                float yDistance = Math.Abs(transformPosition.y - characterPosition.y);
+                if (Math.Abs(xDistance + yDistance - closestDistance) < 0.001f)
                 {
                     closestCharacterList.Add(character);
                 }
@@ -223,16 +225,16 @@ public class AIBehaviour : MonoBehaviour
         //Tier1 CreatingField
         foreach (GameObject character in characterList)
         {
-            if (character.CompareTag("Player") && isCharacterOnDifferentAllegiance(character) && PlaceToMoveToWhenAttacking(character, AttackRange) != null)
+            if (character.CompareTag("Player") && isCharacterOnDifferentAllegiance(character) && PlaceToMoveToWhenAttacking(character, _attackRange) != null)
             {
-
-                if (lowestHealth == character.GetComponent<PlayerInformation>().health && !character.GetComponent<PlayerInformation>().Stasis && (character.GetComponent<PlayerInformation>().IsCreatingWhiteField || character.GetComponent<PlayerInformation>().Marker != null))
+                PlayerInformation characterInformation = character.GetComponent<PlayerInformation>();
+                if (lowestHealth == characterInformation.health && !characterInformation.Stasis && (characterInformation.IsCreatingWhiteField || characterInformation.Marker != null))
                 {
                     lowestHealthCharacterList.Add(character);
                 }
-                else if (character.GetComponent<PlayerInformation>().health < lowestHealth && character.GetComponent<PlayerInformation>().IsCreatingWhiteField && (!character.GetComponent<PlayerInformation>().Stasis || character.GetComponent<PlayerInformation>().health <= 4))
+                else if (characterInformation.health < lowestHealth && characterInformation.IsCreatingWhiteField && (!characterInformation.Stasis || characterInformation.health <= 4))
                 {
-                    lowestHealth = character.GetComponent<PlayerInformation>().health;
+                    lowestHealth = characterInformation.health;
                     lowestHealthCharacterList.Clear();
                     lowestHealthCharacterList.Add(character);
                 }
@@ -243,16 +245,16 @@ public class AIBehaviour : MonoBehaviour
         {
             foreach (GameObject character in characterList)
             {
-                if (character.CompareTag("Player") && isCharacterOnDifferentAllegiance(character) && PlaceToMoveToWhenAttacking(character, AttackRange) != null)
+                if (character.CompareTag("Player") && isCharacterOnDifferentAllegiance(character) && PlaceToMoveToWhenAttacking(character, _attackRange) != null)
                 {
-
-                    if (lowestHealth == character.GetComponent<PlayerInformation>().health && !character.GetComponent<PlayerInformation>().Stasis)
+                    PlayerInformation characterInformation = character.GetComponent<PlayerInformation>();
+                    if (lowestHealth == characterInformation.health && !characterInformation.Stasis)
                     {
                         lowestHealthCharacterList.Add(character);
                     }
-                    else if (character.GetComponent<PlayerInformation>().health < lowestHealth && (!character.GetComponent<PlayerInformation>().Stasis || character.GetComponent<PlayerInformation>().health <= 4))
+                    else if (characterInformation.health < lowestHealth && (!characterInformation.Stasis || characterInformation.health <= 4))
                     {
-                        lowestHealth = character.GetComponent<PlayerInformation>().health;
+                        lowestHealth = characterInformation.health;
                         lowestHealthCharacterList.Clear();
                         lowestHealthCharacterList.Add(character);
                     }
@@ -288,27 +290,28 @@ public class AIBehaviour : MonoBehaviour
     }
     private GameObject ClosestMovementTileToDestination(Vector3 destination)
     {
-        if (GetComponent<PlayerInformation>().CantMove && CheckIfSpecificLayer(gameObject.transform.position, 0, 0, groundLayer))
+        if (playerInformation.CantMove && CheckIfSpecificLayer(gameObject.transform.position, 0, 0, groundLayer))
         {
             return GetSpecificGroundTile(gameObject.transform.position, 0, 0, groundLayer);
         }
-        GetComponent<GridMovement>().CreateGrid();
-        CreateGrid(GetComponent<GridMovement>().AvailableMovementPoints, "Movement");
+        gridMovement.CreateGrid();
+        CreateGrid(gridMovement.AvailableMovementPoints, "Movement");
         GameObject closestTile;
         List<GameObject> closestTileList = new List<GameObject>();
         float closestDistance = 9999;
-        foreach (List<GameObject> tileList in TileGrid)
+        foreach (List<GameObject> tileList in _tileGrid)
         {
             foreach (GameObject tile in tileList)
             {
-                bool isBlockingLayer = CheckIfSpecificLayer(tile.transform.position, 0, 0, blockingLayer);
-                bool isThisPlayerOnTop = (CheckIfSpecificLayer(tile.transform.position, 0, 0, blockingLayer) && GetSpecificGroundTile(tile.transform.position, 0, 0, blockingLayer) == gameObject);
+                Vector3 tilePosition = tile.transform.position;
+                bool isBlockingLayer = CheckIfSpecificLayer(tilePosition, 0, 0, blockingLayer);
+                bool isThisPlayerOnTop = (CheckIfSpecificLayer(tilePosition, 0, 0, blockingLayer) && GetSpecificGroundTile(tilePosition, 0, 0, blockingLayer) == gameObject);
 
                 if ((!isBlockingLayer || (isThisPlayerOnTop)) && !ShouldCharacterBeAfraidToGoOnTile(tile))
                 {
-                    float xDistance = Math.Abs(destination.x - tile.transform.position.x);
-                    float yDistance = Math.Abs(destination.y - tile.transform.position.y);
-                    if (xDistance + yDistance == closestDistance)
+                    float xDistance = Math.Abs(destination.x - tilePosition.x);
+                    float yDistance = Math.Abs(destination.y - tilePosition.y);
+                    if (Math.Abs(xDistance + yDistance - closestDistance) < 0.001f)
                     {
                         closestTileList.Add(tile);
                     }
@@ -340,9 +343,10 @@ public class AIBehaviour : MonoBehaviour
         {
             if (!ShouldCharacterBeAfraidToGoOnTile(tile))
             {
-                float xDistance = Math.Abs(destination.x - tile.transform.position.x);
-                float yDistance = Math.Abs(destination.y - tile.transform.position.y);
-                if (xDistance + yDistance == closestDistance)
+                Vector3 tilePosition = tile.transform.position;
+                float xDistance = Math.Abs(destination.x - tilePosition.x);
+                float yDistance = Math.Abs(destination.y - tilePosition.y);
+                if (Math.Abs(xDistance + yDistance - closestDistance) < 0.001f)
                 {
                     closestTileList.Add(tile);
                 }
@@ -366,14 +370,9 @@ public class AIBehaviour : MonoBehaviour
     }
     private void MoveCharacterToTile(GameObject newPosition)
     {
-        GetComponent<GridMovement>().CreateGrid();
-        GetComponent<GridMovement>().CreateWayList(newPosition);
+        gridMovement.CreateGrid();
+        gridMovement.CreateWayList(newPosition);
         FlipCharacter(newPosition);
-        /* transform.position = newPosition.transform.position + new Vector3(0f, 0f, -1f);
-         if (!(CheckIfSpecificLayer(newPosition, 0, 0, blockingLayer) && GetSpecificGroundTile(newPosition, 0, 0, blockingLayer) == gameObject))
-         {
-             GetComponent<GridMovement>().RemoveAvailableMovementPoints(newPosition);
-         }*/
         GameObject.Find("GameInformation").GetComponent<GameInformation>().MoveCharacter(newPosition, gameObject);
         if (CheckIfSpecificLayer(newPosition.transform.position, 0, 0, groundLayer) &&
             !GetSpecificGroundTile(newPosition.transform.position, 0, 0, groundLayer).GetComponent<HighlightTile>().FogOfWarTile.activeSelf)//focus camera when AI steps on visible tile
@@ -385,29 +384,30 @@ public class AIBehaviour : MonoBehaviour
     {
         List<GameObject> possibleMovePositions = GetSurroundingTiles(attackTarget, attackRange);
         List<GameObject> placesToMove = new List<GameObject>();
-        GetComponent<GridMovement>().CreateGrid();
-        if (GetComponent<PlayerInformation>().CantMove)
+        gridMovement.CreateGrid();
+        if (playerInformation.CantMove)
         {
-            GetComponent<GridMovement>().AvailableMovementTiles.Clear();
+            gridMovement.AvailableMovementTiles.Clear();
         }
-        if (GetComponent<GridMovement>().AvailableMovementTiles.Count > 0)
+        if (gridMovement.AvailableMovementTiles.Count > 0)
         {
-            GetComponent<GridMovement>().AvailableMovementTiles[0].Add(GetSpecificGroundTile(gameObject.transform.position, 0, 0, groundLayer));
+            gridMovement.AvailableMovementTiles[0].Add(GetSpecificGroundTile(gameObject.transform.position, 0, 0, groundLayer));
         }
         else
         {
-            GetComponent<GridMovement>().AvailableMovementTiles.Add(new List<GameObject>());
-            GetComponent<GridMovement>().AvailableMovementTiles[0].Add(GetSpecificGroundTile(gameObject.transform.position, 0, 0, groundLayer));
+            gridMovement.AvailableMovementTiles.Add(new List<GameObject>());
+            gridMovement.AvailableMovementTiles[0].Add(GetSpecificGroundTile(gameObject.transform.position, 0, 0, groundLayer));
         }
-        CreateGrid(GetComponent<GridMovement>().AvailableMovementPoints, "Movement");
-        foreach (List<GameObject> tilesInEachGridIndex in GetComponent<GridMovement>().AvailableMovementTiles) // buvo this.TileGrid
+        CreateGrid(gridMovement.AvailableMovementPoints, "Movement");
+        foreach (List<GameObject> tilesInEachGridIndex in gridMovement.AvailableMovementTiles) // buvo this.TileGrid
         {
             foreach (GameObject tile in tilesInEachGridIndex)
             {
                 foreach (GameObject possibleMovePosition in possibleMovePositions)
                 {
                     //gal random sita checkint
-                    bool isItCantAttackTile = CheckIfSpecificLayer(possibleMovePosition.transform.position, 0, 0, fogLayer) || CheckIfSpecificTag(possibleMovePosition, 0, 0, groundLayer, "Water");
+                    Vector3 possibleMove = possibleMovePosition.transform.position;
+                    bool isItCantAttackTile = CheckIfSpecificLayer(possibleMove, 0, 0, fogLayer) || CheckIfSpecificTag(possibleMove, 0, 0, groundLayer, "Water");
                     if (possibleMovePosition == tile && !isItCantAttackTile && !ShouldCharacterBeAfraidToGoOnTile(possibleMovePosition))
                     {
                         placesToMove.Add(tile);
@@ -424,6 +424,7 @@ public class AIBehaviour : MonoBehaviour
     private List<GameObject> GetSurroundingTiles(GameObject middleTile, int surroundingRange)//tik tos, ant kuriu galima atsistot
     {
         List<GameObject> surroundingTileList = new List<GameObject>();
+        Vector3 middleTilePosition = middleTile.transform.position;
         var directionVectors = new List<(int, int)>
         {
             (surroundingRange, 0),
@@ -431,16 +432,16 @@ public class AIBehaviour : MonoBehaviour
             (-surroundingRange, 0),
             (0, -surroundingRange)
         };
-        var directionVectors2 = AttackRangeVectors;
+        var directionVectors2 = _attackRangeVectors;
         foreach (var x in directionVectors)
         {
-            bool isGround = CheckIfSpecificLayer(middleTile.transform.position, x.Item1, x.Item2, groundLayer);
-            bool isBlockingLayer = CheckIfSpecificLayer(middleTile.transform.position, x.Item1, x.Item2, blockingLayer);
-            bool isThisPlayerOnTop = (CheckIfSpecificLayer(middleTile.transform.position, x.Item1, x.Item2, blockingLayer) && GetSpecificGroundTile(middleTile.transform.position, x.Item1, x.Item2, blockingLayer) == gameObject);
+            bool isGround = CheckIfSpecificLayer(middleTilePosition, x.Item1, x.Item2, groundLayer);
+            bool isBlockingLayer = CheckIfSpecificLayer(middleTilePosition, x.Item1, x.Item2, blockingLayer);
+            bool isThisPlayerOnTop = (CheckIfSpecificLayer(middleTilePosition, x.Item1, x.Item2, blockingLayer) && GetSpecificGroundTile(middleTile.transform.position, x.Item1, x.Item2, blockingLayer) == gameObject);
             bool isThereSomethingInBetween;
             if (surroundingRange > 1)
             {
-                isThereSomethingInBetween = CheckIfSpecificLayer(middleTile.transform.position, x.Item1 / 2, x.Item2 / 2, blockingLayer);
+                isThereSomethingInBetween = CheckIfSpecificLayer(middleTilePosition, x.Item1 / 2, x.Item2 / 2, blockingLayer);
             }
             else
             {
@@ -448,35 +449,38 @@ public class AIBehaviour : MonoBehaviour
             }
             if (isGround && (!isBlockingLayer || isThisPlayerOnTop) && !isThereSomethingInBetween)
             {
-                GameObject addableTile = GetSpecificGroundTile(middleTile.transform.position, x.Item1, x.Item2, groundLayer);
+                GameObject addableTile = GetSpecificGroundTile(middleTilePosition, x.Item1, x.Item2, groundLayer);
                 surroundingTileList.Add(addableTile);
             }
         }
         //istrizi langeliai
         foreach (var x in directionVectors2)
         {
-            bool isGround = CheckIfSpecificLayer(middleTile.transform.position, x.Item1, x.Item2, groundLayer);
-            bool isBlockingLayer = CheckIfSpecificLayer(middleTile.transform.position, x.Item1, x.Item2, blockingLayer);
-            bool isThisPlayerOnTop = (CheckIfSpecificLayer(middleTile.transform.position, x.Item1, x.Item2, blockingLayer) && GetSpecificGroundTile(middleTile.transform.position, x.Item1, x.Item2, blockingLayer) == gameObject);
+            bool isGround = CheckIfSpecificLayer(middleTilePosition, x.Item1, x.Item2, groundLayer);
+            bool isBlockingLayer = CheckIfSpecificLayer(middleTilePosition, x.Item1, x.Item2, blockingLayer);
+            bool isThisPlayerOnTop = (CheckIfSpecificLayer(middleTilePosition, x.Item1, x.Item2, blockingLayer) && GetSpecificGroundTile(middleTilePosition, x.Item1, x.Item2, blockingLayer) == gameObject);
             if (isGround && (!isBlockingLayer || isThisPlayerOnTop))
             {
-                GameObject addableTile = GetSpecificGroundTile(middleTile.transform.position, x.Item1, x.Item2, groundLayer);
+                GameObject addableTile = GetSpecificGroundTile(middleTilePosition, x.Item1, x.Item2, groundLayer);
                 surroundingTileList.Add(addableTile);
             }
         }
         return surroundingTileList;
     }
-    public List<GameObject> GetCharactersInGrid(int GridRange)
+    public List<GameObject> GetCharactersInGrid(int gridRange)
     {
-        CreateGrid(GridRange, "Vision");
+        CreateGrid(gridRange, "Vision");
         List<GameObject> charactersInGrid = new List<GameObject>();
-        foreach (List<GameObject> tilesInEachGridIndex in this.TileGrid)
+        foreach (List<GameObject> tilesInEachGridIndex in this._tileGrid)
         {
             foreach (GameObject tile in tilesInEachGridIndex)
             {
-                if (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") && !GetSpecificGroundTile(tile.transform.position, 0, 0, groundLayer).GetComponent<HighlightTile>().FogOfWarTile.activeSelf) //kad nepultu to ko net nemato;
+                Vector3 tilePosition = tile.transform.position;
+                if (CheckIfSpecificTag(tilePosition, 0, 0, blockingLayer, "Player") &&
+                    !GetSpecificGroundTile(tilePosition, 0, 0, groundLayer).GetComponent<HighlightTile>().FogOfWarTile
+                        .activeSelf) //kad nepultu to ko net nemato
                 {
-                    charactersInGrid.Add(GetSpecificGroundTile(tile.transform.position, 0, 0, blockingLayer));
+                    charactersInGrid.Add(GetSpecificGroundTile(tilePosition, 0, 0, blockingLayer));
                 }
             }
         }
@@ -484,43 +488,37 @@ public class AIBehaviour : MonoBehaviour
     }
 
     //RayCast Functions
-    protected GameObject GetSpecificGroundTile(Vector3 tile, int x, int y, LayerMask chosenLayer)
+    private static RaycastHit2D GetRaycastHit(Vector3 tile, int x, int y, LayerMask chosenLayer)
     {
         Vector3 firstPosition = tile + new Vector3(0f, 0.5f, 0f) + new Vector3(x, y, 0f);
         Vector3 secondPosition = firstPosition + new Vector3(0.1f, 0f, 0f);
-        raycast = Physics2D.Linecast(firstPosition, secondPosition, chosenLayer);
-        return raycast.transform.gameObject;
+        return Physics2D.Linecast(firstPosition, secondPosition, chosenLayer);
     }
-    protected bool CheckIfSpecificLayer(Vector3 tile, int x, int y, LayerMask chosenLayer)
+    private GameObject GetSpecificGroundTile(Vector3 tile, int x, int y, LayerMask chosenLayer)
     {
-        Vector3 firstPosition = tile + new Vector3(0f, 0.5f, 0f) + new Vector3(x, y, 0f);
-        Vector3 secondPosition = firstPosition + new Vector3(0.1f, 0f, 0f);
-        raycast = Physics2D.Linecast(firstPosition, secondPosition, chosenLayer);
-        if (raycast.transform == null)
+    raycast = GetRaycastHit(tile, x, y, chosenLayer);
+    return raycast.transform.gameObject;
+    }
+
+    private bool CheckIfSpecificLayer(Vector3 tile, int x, int y, LayerMask chosenLayer)
+    {
+        raycast = GetRaycastHit(tile, x, y, chosenLayer);
+        return ReferenceEquals(raycast.transform, null);
+    }
+    private bool CheckIfSpecificTag(Vector3 tile, int x, int y, LayerMask chosenLayer, string tagName)
+    {
+        raycast = GetRaycastHit(tile, x, y, chosenLayer);
+        if (ReferenceEquals(raycast.transform, null))
         {
             return false;
         }
-        return true;
-    }
-    protected bool CheckIfSpecificTag(GameObject tile, int x, int y, LayerMask chosenLayer, string tagName)
-    {
-        Vector3 firstPosition = tile.transform.position + new Vector3(0f, 0.5f, 0f) + new Vector3(x, y, 0f);
-        Vector3 secondPosition = firstPosition + new Vector3(0.1f, 0f, 0f);
-        raycast = Physics2D.Linecast(firstPosition, secondPosition, chosenLayer);
-        if (raycast.transform == null)
-        {
-            return false;
-        }
-        else if (raycast.transform.CompareTag(tagName))
-        {
-            return true;
-        }
-        return false;
+        return raycast.transform.CompareTag(tagName);
     }
     //
     //TileGrid
     private void AddSurroundingsToList(GameObject middleTile, int movementIndex, string gridType)
     {
+        Vector3 middleTilePosition = middleTile.transform.position;
         var directionVectors = new List<(int, int)>
         {
             (1, 0),
@@ -530,46 +528,45 @@ public class AIBehaviour : MonoBehaviour
         };
         foreach (var x in directionVectors)
         {
-            bool isGroundLayer = CheckIfSpecificLayer(middleTile.transform.position, x.Item1, x.Item2, groundLayer);
-            bool isBlockingLayer = CheckIfSpecificLayer(middleTile.transform.position, x.Item1, x.Item2, blockingLayer);
+            bool isGroundLayer = CheckIfSpecificLayer(middleTilePosition, x.Item1, x.Item2, groundLayer);
+            bool isBlockingLayer = CheckIfSpecificLayer(middleTilePosition, x.Item1, x.Item2, blockingLayer);
             bool isPlayer;
             bool isWall;
             if (gridType == "Movement")
             {
-                isPlayer = CheckIfSpecificTag(middleTile, x.Item1, x.Item2, blockingLayer, "Player") && !isCharacterOnDifferentAllegiance(GetSpecificGroundTile(middleTile.transform.position, x.Item1, x.Item2, blockingLayer));
+                isPlayer = CheckIfSpecificTag(middleTilePosition, x.Item1, x.Item2, blockingLayer, "Player") && !isCharacterOnDifferentAllegiance(GetSpecificGroundTile(middleTile.transform.position, x.Item1, x.Item2, blockingLayer));
                 isWall = false;
             }
             else
             {
-                isPlayer = CheckIfSpecificTag(middleTile, x.Item1, x.Item2, blockingLayer, "Player");
-                isWall = CheckIfSpecificTag(middleTile, x.Item1, x.Item2, blockingLayer, "Wall");
+                isPlayer = CheckIfSpecificTag(middleTilePosition, x.Item1, x.Item2, blockingLayer, "Player");
+                isWall = CheckIfSpecificTag(middleTilePosition, x.Item1, x.Item2, blockingLayer, "Wall");
             }
-            // bool isWall = CheckIfSpecificTag(middleTile, x.Item1, x.Item2, blockingLayer, "Wall");
-            bool isMiddleTileWall = CheckIfSpecificTag(middleTile, 0, 0, blockingLayer, "Wall");
+            bool isMiddleTileWall = CheckIfSpecificTag(middleTilePosition, 0, 0, blockingLayer, "Wall");
             if (isGroundLayer && (!isBlockingLayer || (isPlayer) || isWall) && !isMiddleTileWall) //&& isCharacterOnDifferentAllegiance(middleTile)
             {
-                GameObject AddableObject = GetSpecificGroundTile(middleTile.transform.position, x.Item1, x.Item2, groundLayer);
-                this.TileGrid[movementIndex].Add(AddableObject);
+                GameObject addableObject = GetSpecificGroundTile(middleTile.transform.position, x.Item1, x.Item2, groundLayer);
+                _tileGrid[movementIndex].Add(addableObject);
             }
         }
     }
     private void CreateGrid(int tileGridRange, string gridType)
     {
-        if (!GetComponent<PlayerInformation>().Debuffs.Contains("Stun") && !(gridType == "Movement" && GetComponent<PlayerInformation>().CantMove))
+        if (!playerInformation.Debuffs.Contains("Stun") && !(gridType == "Movement" && playerInformation.CantMove))
         {
-            this.TileGrid.Clear();
+            _tileGrid.Clear();
             if (tileGridRange > 0)
             {
-                this.TileGrid.Add(new List<GameObject>());
-                TileGrid[0].Add(GetSpecificGroundTile(gameObject.transform.position, 0, 0, groundLayer)); //optional
-                AddSurroundingsToList(GetSpecificGroundTile(gameObject.transform.position, 0, 0, groundLayer), 0, gridType);
+                Vector3 gameObjectPosition = gameObject.transform.position;
+                _tileGrid.Add(new List<GameObject>());
+                _tileGrid[0].Add(GetSpecificGroundTile(gameObjectPosition, 0, 0, groundLayer)); //optional
+                AddSurroundingsToList(GetSpecificGroundTile(gameObjectPosition, 0, 0, groundLayer), 0, gridType);
             }
-
             for (int i = 1; i <= tileGridRange - 1; i++)
             {
-                this.TileGrid.Add(new List<GameObject>());
+                _tileGrid.Add(new List<GameObject>());
 
-                foreach (var tileInPreviousList in this.TileGrid[i - 1])
+                foreach (var tileInPreviousList in this._tileGrid[i - 1])
                 {
                     AddSurroundingsToList(tileInPreviousList, i, gridType);
                 }
@@ -583,7 +580,7 @@ public class AIBehaviour : MonoBehaviour
         {
             GameObject character = GetSpecificGroundTile(charactersTile.transform.position, 0, 0, blockingLayer);
             return GameObject.Find("GameInformation").GetComponent<PlayerTeams>().FindTeamAllegiance(character.GetComponent<PlayerInformation>().CharactersTeam) !=
-                    GameObject.Find("GameInformation").GetComponent<PlayerTeams>().FindTeamAllegiance(GetComponent<PlayerInformation>().CharactersTeam);
+                    GameObject.Find("GameInformation").GetComponent<PlayerTeams>().FindTeamAllegiance(playerInformation.CharactersTeam);
         }
         return false;
     }
@@ -602,26 +599,26 @@ public class AIBehaviour : MonoBehaviour
     {
         if (tile.transform.position.x > transform.position.x)
         {
-            GetComponent<PlayerMovement>().Flip(true);
+            playerMovement.Flip(true);
         }
         else if (tile.transform.position.x < transform.position.x)
         {
-            GetComponent<PlayerMovement>().Flip(false);
+            playerMovement.Flip(false);
         }
     }
     private bool ShouldCharacterBeAfraidToGoOnTile(GameObject tile)
     {
-        bool isItDangerZone = (CheckIfSpecificLayer(tile.transform.position, 0, 0, groundLayer) && ((GetSpecificGroundTile(tile.transform.position, 0, 0, groundLayer).transform.Find("DangerUI").gameObject.activeSelf) 
-            || (GetSpecificGroundTile(tile.transform.position, 0, 0, groundLayer).transform.Find("mapTile").Find("PinkZone").gameObject.activeSelf)
-            || (GetSpecificGroundTile(tile.transform.position, 0, 0, groundLayer).transform.Find("mapTile").Find("GreenZone").gameObject.activeSelf)
+        Vector3 tilePosition = tile.transform.position;
+        bool isItDangerZone = (CheckIfSpecificLayer(tilePosition, 0, 0, groundLayer) && ((GetSpecificGroundTile(tilePosition, 0, 0, groundLayer).transform.Find("DangerUI").gameObject.activeSelf) 
+            || (GetSpecificGroundTile(tilePosition, 0, 0, groundLayer).transform.Find("mapTile").Find("PinkZone").gameObject.activeSelf)
+            || (GetSpecificGroundTile(tilePosition, 0, 0, groundLayer).transform.Find("mapTile").Find("GreenZone").gameObject.activeSelf)
             ));
         //not afraid when
-        bool ShouldCharacterGo = !isItDangerZone || (isItDangerZone && (GetComponent<PlayerInformation>().BarrierProvider != null || GetComponent<GridMovement>().AvailableMovementPoints < 3));
-        return !ShouldCharacterGo;
+        bool shouldCharacterGo = !isItDangerZone || (playerInformation.BarrierProvider != null || gridMovement.AvailableMovementPoints < 3);
+        return !shouldCharacterGo;
     }
     private void EndAIAction()
     {
-        // GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().activateOnce = true;
         GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().ChangeVisionTiles();
         GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().FakeUpdate();
     }
@@ -656,21 +653,21 @@ public class AIBehaviour : MonoBehaviour
         {
             foreach (SpecialAbility x in FindAllSpecialAbilitiesByCastOrder(castOrder))
             {
-                if (GetComponent<ActionManager>().FindActionByName(x.abilityName).canGridBeEnabled() 
+                if (actionManager.FindActionByName(x.abilityName).canGridBeEnabled() 
                     && x.difficultyLevel <= _data.townData.selectedEncounter.encounterLevel)
                 {
-                    StartCoroutine(ExecuteAfterTime(castAfter, () =>
+                    StartCoroutine(ExecuteAfterTime(_castAfter, () =>
                     {
-                        GetComponent<ActionManager>().FindActionByName(x.abilityName).PrepareForAIAction();
-                        GameObject AttackTarget = GetComponent<ActionManager>().FindActionByName(x.abilityName).PossibleAIActionTile();
-                        if (AttackTarget != null)
+                        actionManager.FindActionByName(x.abilityName).PrepareForAIAction();
+                        GameObject attackTarget = actionManager.FindActionByName(x.abilityName).PossibleAIActionTile();
+                        if (attackTarget != null)
                         {
-                            GetComponent<ActionManager>().FindActionByName(x.abilityName).ResolveAbility(AttackTarget);
-                            FlipCharacter(AttackTarget);
+                            actionManager.FindActionByName(x.abilityName).ResolveAbility(attackTarget);
+                            FlipCharacter(attackTarget);
                             EndAIAction();
                         }
                     }));
-                    castAfter += 0.6f;
+                    _castAfter += 0.6f;
                 }
             }
         }
@@ -679,7 +676,7 @@ public class AIBehaviour : MonoBehaviour
     {
         foreach (SpecialAbility x in specialAbilities)
         {
-            if (GetComponent<ActionManager>().FindActionByName(x.abilityName).canGridBeEnabled())
+            if (actionManager.FindActionByName(x.abilityName).canGridBeEnabled())
             {
                 return false;
             }
@@ -691,7 +688,7 @@ public class AIBehaviour : MonoBehaviour
         List<string> availableAbilityNames = new List<string>();
         foreach (SpecialAbility x in specialAbilities)
         {
-            if (GetComponent<ActionManager>().FindActionByName(x.abilityName).canGridBeEnabled() && !availableAbilityNames.Contains(x.abilityName))
+            if (actionManager.FindActionByName(x.abilityName).canGridBeEnabled() && !availableAbilityNames.Contains(x.abilityName))
             {
                 availableAbilityNames.Add(x.abilityName);
             }
