@@ -1,36 +1,0 @@
-
-Mcsharpsquid:S1125 "*Remove the unnecessary Boolean literal(s).(óÉ˜Šùÿÿÿÿ
-wcsharpsquid:S3776‰"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(‰Ì¹8º†üœ1
-Gcsharpsquid:S3903"*Move 'PlayerTeams' into a named namespace.(øùÆ”
-Ocsharpsquid:S3903ö",Move 'CharacterList' into a named namespace.(’Ö”ûÿÿÿÿ
-Fcsharpsquid:S3903‡"(Move 'TeamsList' into a named namespace.(“Óîì
-acsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(¡ßº˜
-fcsharpsquid:S1104
-"DMake this field 'private' and encapsulate it in a 'public' property.(ÉËÉ¼ÿÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(—çŸ«üÿÿÿÿ
-acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(°®ã¿
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(›á§éÿÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(‡¶ÌÌùÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ğÄûÿÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ùÃÓŠüÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(±“¶Îùÿÿÿÿ
-hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ıïß¢8˜Œ­”™1
-gcsharpsquid:S1104ø"DMake this field 'private' and encapsulate it in a 'public' property.(ĞØ•ıÿÿÿÿ
-gcsharpsquid:S1104ù"DMake this field 'private' and encapsulate it in a 'public' property.(ùØÒÿÿÿÿÿ
-bcsharpsquid:S1104ú"DMake this field 'private' and encapsulate it in a 'public' property.(—¸¦Ì
-bcsharpsquid:S1104û"DMake this field 'private' and encapsulate it in a 'public' property.(öÒäï
-bcsharpsquid:S1104ü"DMake this field 'private' and encapsulate it in a 'public' property.(ªœá
-gcsharpsquid:S1104ı"DMake this field 'private' and encapsulate it in a 'public' property.(‡ºÓ·üÿÿÿÿ
-gcsharpsquid:S1104ş"DMake this field 'private' and encapsulate it in a 'public' property.(ë€Ãıÿÿÿÿ
-gcsharpsquid:S1104ÿ"DMake this field 'private' and encapsulate it in a 'public' property.(Ôáææşÿÿÿÿ
-gcsharpsquid:S1104€"DMake this field 'private' and encapsulate it in a 'public' property.(ëÌŒéûÿÿÿÿ
-bcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ŒÍÄ³
-gcsharpsquid:S1104‚"DMake this field 'private' and encapsulate it in a 'public' property.(Êëúİúÿÿÿÿ
-bcsharpsquid:S1104‰"DMake this field 'private' and encapsulate it in a 'public' property.(€ïî
-Xcsharpsquid:S1199x"6Extract this nested code block into a separate method.(ÒÌâ–øÿÿÿÿ
-Xcsharpsquid:S1481'"4Remove the unused local variable 'spawnCoordinates'.(‡Û¡¿8Ë†üœ1
-Gcsharpsquid:S1481"%Remove the unused local variable 'i'.(ıÒÚáÿÿÿÿÿ
-:csharpsquid:S125+"Remove this commented out code.(É›ä1
-Gcsharpsquid:S125U"Remove this commented out code.(éØ»Úûÿÿÿÿ8Ë˜†üœ1
-;csharpsquid:S125\"Remove this commented out code.(‰Ñ‡Í
-;csharpsquid:S125p"Remove this commented out code.(˜äÄ

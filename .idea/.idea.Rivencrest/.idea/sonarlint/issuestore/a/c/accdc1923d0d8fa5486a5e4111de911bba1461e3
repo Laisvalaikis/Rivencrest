@@ -1,11 +1,0 @@
-
-Icsharpsquid:S3903	"%Move 'Chunks' into a named namespace.(«Ç¡ˆ8¹£‚1
-¢csharpsquid:S1186E"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(®±®“üÿÿÿÿ8ø›èƒ1
-tcsharpsquid:S2445g"KDo not lock on writable field '_chunksArray', use a readonly field instead.(ˆëìÜüÿÿÿÿ8ø›èƒ1
-ucsharpsquid:S2445§"KDo not lock on writable field '_chunksArray', use a readonly field instead.(ˆëìÜüÿÿÿÿ8ø›èƒ1
-ucsharpsquid:S2445¹"KDo not lock on writable field '_chunksArray', use a readonly field instead.(ˆëìÜüÿÿÿÿ8ø›èƒ1
-Gcsharpsquid:S1256"Remove this commented out code.(ÈÉÀûüÿÿÿÿ8ø›èƒ1
-Bcsharpsquid:S125v"Remove this commented out code.(ß”ˆ°8ø›èƒ1
-Bcsharpsquid:S125~"Remove this commented out code.(Ú°à¬8¹£‚1
-Hcsharpsquid:S125Ó"Remove this commented out code.(ÈÉÀûüÿÿÿÿ8ø›èƒ1
-csharpsquid:S3260"[Private classes which are not derived in the current assembly should be marked as 'sealed'.(‡å”ê8¹£‚1

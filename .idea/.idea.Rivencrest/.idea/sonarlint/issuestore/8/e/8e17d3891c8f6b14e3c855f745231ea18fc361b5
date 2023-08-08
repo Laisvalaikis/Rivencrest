@@ -1,22 +1,0 @@
-
-tcsharpsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(æ¶â£úÿÿÿÿ
-Jcsharpsquid:S3903"(Move 'AIManager' into a named namespace.(ÁËƒ‹şÿÿÿÿ
-acsharpsquid:S1104
-"DMake this field 'private' and encapsulate it in a 'public' property.(«ºŞ¬
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(æİôóûÿÿÿÿ
-acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¸«ó‘
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Ë„Ûşÿÿÿÿ
-acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(‚œã¨
-acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¨Àâ«
-acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Úîë
-acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(º”Åô
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Õ¤ìàùÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(•Î ÿÿÿÿÿ
-Qcsharpsquid:S1481$"/Remove the unused local variable 'PlayerTeams'.(†À¿¯üÿÿÿÿ
-@csharpsquid:S1258"Remove this commented out code.(ºøõŠıÿÿÿÿ
-@csharpsquid:S125="Remove this commented out code.(ëş¢áùÿÿÿÿ
-;csharpsquid:S125a"Remove this commented out code.(€•Œ
-@csharpsquid:S125h"Remove this commented out code.(ÒÌâ–øÿÿÿÿ
-5csharpsquid:S4663;"Remove this empty comment(è»»_
-5csharpsquid:S4663E"Remove this empty comment(è»»_
-5csharpsquid:S4663J"Remove this empty comment(è»»_

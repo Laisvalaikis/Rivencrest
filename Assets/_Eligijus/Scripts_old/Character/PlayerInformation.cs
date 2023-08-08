@@ -8,7 +8,7 @@ using System;
 public class PlayerInformation : MonoBehaviour
 {
     private PlayerInformationData playerInformationData;
-    private PlayerInformationData _playerInformationData;
+    public PlayerInformationData _playerInformationData;
     public SavedCharacter savedCharacter;
     //public int MaxHealth = 100;
     [HideInInspector] public int health = 100;
