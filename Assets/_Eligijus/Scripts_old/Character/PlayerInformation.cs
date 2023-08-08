@@ -10,6 +10,15 @@ public class PlayerInformation : MonoBehaviour
     private PlayerInformationData playerInformationData;
     public PlayerInformationData _playerInformationData;
     public SavedCharacter savedCharacter;
+    private ActionManager actionManager;
+    private DamageText damageTextas;
+    private PlayerAttack playerAttack;
+    private TextMeshPro textMeshPro;
+    private GridMovement gridMovement;
+    private Animator animator;
+    private PlayerTeams playerTeams;
+    private CreateWhiteField createWhiteField;
+    private MindControl mindControl;
     //public int MaxHealth = 100;
     [HideInInspector] public int health = 100;
     //public int critChance = 5;
@@ -25,6 +34,7 @@ public class PlayerInformation : MonoBehaviour
     public bool StateAnimations = false;
     private List<GameObject> KillerList = new List<GameObject>();
     private List<GameObject> KillList = new List<GameObject>();
+    private List<TextMeshProUGUI> damageTextTest = new List<TextMeshProUGUI>();
     public string role;
     //
    // public Sprite CharacterPortraitSprite;
@@ -184,11 +194,13 @@ public class PlayerInformation : MonoBehaviour
                     }
                     if (IsCreatingWhiteField)
                     {
-                        GetComponent<CreateWhiteField>().OnTurnStart();//sunaikina white field
+                       // GetComponent<CreateWhiteField>().OnTurnStart();//sunaikina white field
+                       createWhiteField.OnTurnStart();
                     }
                     if (MindControlTarget != null)
                     {
-                        GetComponent<MindControl>().OnTurnStart();//sustabdo
+                        //GetComponent<MindControl>().OnTurnStart();//sustabdo
+                        mindControl.OnTurnStart();//sustabdo
                     }
                 }
                 if (transform.CompareTag("Player"))
@@ -354,7 +366,9 @@ public class PlayerInformation : MonoBehaviour
                 GameObject target = gameObject;
                 if (debuff == "IceSlow" || debuff == "OilSlow" || debuff == "Stun")
                 {
-                    GetComponent<GridMovement>().ApplyDebuff(debuff, DebuffApplier);
+                    //GetComponent<GridMovement>().ApplyDebuff(debuff, DebuffApplier);
+                    gridMovement.ApplyDebuff(debuff,DebuffApplier);
+                    
                 }
                 else if (debuff == "CantMove")
                 {
@@ -369,7 +383,7 @@ public class PlayerInformation : MonoBehaviour
                     if (debuff == "MindControl")
                     {
                         MindControlled = true;
-                        DebuffApplier.GetComponent<ActionManager>().FindActionByName("MindControl").SpecificAbilityAction(gameObject);
+                       // DebuffApplier.GetComponent<ActionManager>().FindActionByName("MindControl").SpecificAbilityAction(gameObject);
                     }
                     Silenced = true;
                 }
@@ -428,10 +442,11 @@ public class PlayerInformation : MonoBehaviour
                  GetComponent<GridMovement>().MovementPoints+=2;
              }*/
             //Sharp blade/Far reach
-            GetComponent<ActionManager>().ActivateBlessingBuffs();
+            //GetComponent<ActionManager>().ActivateBlessingBuffs();
+            actionManager.ActivateBlessingBuffs();
         }
     }
-    public void EnableDamageText(int textIndex, int damageOrHealAmount, bool crit, bool heal, string specialColor = "")
+   /*   public void EnableDamageText(int textIndex, int damageOrHealAmount, bool crit, bool heal, string specialColor = "")
     {
         GameObject damageText = null;
         char sign = '-';
@@ -439,7 +454,7 @@ public class PlayerInformation : MonoBehaviour
         switch (textIndex)
         {
             case 1:
-                damageText = transform.Find("DamageTexts").transform.Find("DamageText1").gameObject;
+                //damageText = transform.Find("DamageTexts").transform.Find("DamageText1").gameObject;
                 break;
             case 2:
                 damageText = transform.Find("DamageTexts").transform.Find("DamageText2").gameObject;
@@ -452,10 +467,11 @@ public class PlayerInformation : MonoBehaviour
         if (damageOrHealAmount == -1)
         {
             damageText.GetComponent<TextMeshPro>().color = Color.white;
+            //textMeshPro.color=Color.white;
         }
         else if (!heal)
         {
-            damageText.GetComponent<TextMeshPro>().color = Color.red;
+            //damageText.GetComponent<TextMeshPro>().color = Color.red;
             if (specialColor == "Protected")
             {
                 damageText.GetComponent<TextMeshPro>().color = new Color(221 / 255f, 193 / 255f, 193 / 255f);
@@ -499,14 +515,77 @@ public class PlayerInformation : MonoBehaviour
         damageText.SetActive(true);
         damageText.GetComponent<TextMeshPro>().text = textToDisplay;
         damageText.GetComponent<DamageText>().time = 1;
-    }
+      }
+   */
+   public void EnableDamageText(int textIndex, int damageOrHealAmount, bool crit, bool heal, string specialColor = "")
+   {
+       char sign = '-';
+       if (heal) sign = '+';
+       {
+           TextMeshProUGUI damageText = damageTextTest[textIndex];
+       }
+       string textToDisplay;
+       if (damageOrHealAmount == -1)
+       {
+           damageTextTest[textIndex].color=Color.white;
+       }
+       else if (!heal)
+       {
+           //damageText.GetComponent<TextMeshPro>().color = Color.red;
+           if (specialColor == "Protected")
+           {
+               damageTextTest[textIndex].color = new Color(221 / 255f, 193 / 255f, 193 / 255f);
+           }
+           if (specialColor == "Poison")
+           {
+               damageTextTest[textIndex].color = new Color(0 / 255f, 255 / 255f, 74 / 255f);
+           }
+           if (specialColor == "PinkWeakSpot")
+           {
+               damageTextTest[textIndex].color = new Color(255 / 255f, 145 / 255f, 191 / 255f);
+           }
+       }
+       else
+           damageTextTest[textIndex].color= Color.green;
+       //
+       if (crit && damageOrHealAmount != -1)
+       {
+           textToDisplay = " Crit!\n" + sign + damageOrHealAmount;
+       }
+       else
+       {
+           textToDisplay = sign + damageOrHealAmount.ToString();
+       }
+       //
+       if (damageOrHealAmount == -1)
+       {
+           textToDisplay = "Dodge!";
+       }
+       else
+       {
+           if (crit && damageOrHealAmount != -1)
+           {
+               textToDisplay = " Crit!\n" + sign + damageOrHealAmount.ToString();
+           }
+           else
+           {
+               textToDisplay = sign + damageOrHealAmount.ToString();
+           }
+       }
+       damageTextas.damageBeingDealt = damageOrHealAmount; 
+       //damageTextTest[textIndex].SetActive(true);
+       damageTextTest[textIndex].text = textToDisplay;
+       damageTextas.time = 1;
+       
+   }
     public void OnTurnStart()
     {
         turnCounter++;
         //if (BlessingsAndCurses.Find(x => x.blessingName == "Swiftness") != null && turnCounter % 2 == 0)
         if (_playerInformationData.BlessingsAndCurses.Find(x => x.blessingName == "Swiftness") != null && turnCounter % 2 == 0)
         {
-            GetComponent<GridMovement>().AvailableMovementPoints++;
+            //GetComponent<GridMovement>().AvailableMovementPoints++;
+            gridMovement.AvailableMovementPoints++;
         }
 
         //Poison
@@ -551,11 +630,14 @@ public class PlayerInformation : MonoBehaviour
         if (Aflame != null)
         {
             Aflame.GetComponent<ActionManager>().FindActionByName("Attack").TriggerAflame(gameObject);
+            
         }
         if (Debuffs.Contains("EnvHazardDamageBoost"))
         {
-            GetComponent<PlayerAttack>().minAttackDamage -= 3;
-            GetComponent<PlayerAttack>().maxAttackDamage -= 3;
+           // GetComponent<PlayerAttack>().minAttackDamage -= 3;
+           // GetComponent<PlayerAttack>().maxAttackDamage -= 3;
+           playerAttack.minAttackDamage -= 3;
+           playerAttack.maxAttackDamage -= 3;
             Debuffs.Remove("EnvHazardDamageBoost");
         }
     }

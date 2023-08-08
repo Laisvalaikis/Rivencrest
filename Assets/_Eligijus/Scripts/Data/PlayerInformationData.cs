@@ -28,6 +28,7 @@ public class PlayerInformationData : ScriptableObject
     public List<Sprite> abilitySprites;
     public List<AbilityData> abilities;
     public List<Blessing> BlessingsAndCurses = new List<Blessing>();
+    
 
     public void CopyData(PlayerInformationData playerInformationData)
     {

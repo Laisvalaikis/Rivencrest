@@ -12,6 +12,7 @@ public class DamageText : MonoBehaviour
     private Color originalColor;
     private Color color;
     private TextMeshProUGUI _textMeshProUGUI;
+    private List <TextMeshProUGUI> damageTexts;
     [HideInInspector] public int damageBeingDealt;
 
     void Start()
