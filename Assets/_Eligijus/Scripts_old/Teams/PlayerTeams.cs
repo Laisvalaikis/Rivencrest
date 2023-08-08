@@ -21,7 +21,7 @@ public class PlayerTeams : MonoBehaviour
     void Start()
     {
         _data = Data.Instance;
-        mapSetup.SetupAMap();
+        // mapSetup.SetupAMap();
         for (int i = 0; i < allCharacterList.teams.Count; i++)
         {
             SpawnCharacters(i, allCharacterList.teams[i].coordinates);
@@ -49,12 +49,12 @@ public class PlayerTeams : MonoBehaviour
         // }
         // allCharacterList.teams[teamIndex].teamPortraitBoxGameObject = portraitTeamBox.gameObject;
         //
-        // int i = 0;
-        // foreach (var x in spawnCoordinates)
-        // {
-        //     if (i < allCharacterList.teams[teamIndex].characters.Count)
-        //     {
-        //         GameObject spawnedCharacter = Instantiate(allCharacterList.teams[teamIndex].characters[i], new Vector3(x.x, x.y, 0f), Quaternion.identity); //Spawning the prefab into the scene.
+        int i = 0;
+        foreach (var x in spawnCoordinates)
+        {
+            if (i < allCharacterList.teams[teamIndex].characters.Count)
+            {
+                GameObject spawnedCharacter = Instantiate(allCharacterList.teams[teamIndex].characters[i], new Vector3(x.x, x.y, 0f), Quaternion.identity); //Spawning the prefab into the scene.
         //         if(allCharacterList.teams[teamIndex].isTeamAI)
         //         {
         //             int points = 2 * (_data.townData.selectedEncounter.encounterLevel - 1);
@@ -82,9 +82,9 @@ public class PlayerTeams : MonoBehaviour
         //         }
                 
                 Debug.Log("Cia kazkas daroma su ui corner");
-            // }
-            // i++;
-        // }
+            }
+            i++;
+        }
         allCharacterList.teams[teamIndex].undoCount = undoCount;
         portraitTeamBox.ModifyList();
 

@@ -24,7 +24,7 @@ public class PvPCharacterSelect : MonoBehaviour
         {
             _playerInformation = characterOnBoard.GetComponent<PlayerInformation>();
             _playerInformation.TeamManager = transform.parent.gameObject;
-            characterPortraitSprite.sprite = _playerInformation._playerInformationData.CharacterPortraitSprite;
+            characterPortraitSprite.sprite = _playerInformation.GetPlayerInformationData().CharacterPortraitSprite;
 
             gameObject.SetActive(true);
             isButtonAvailable = true;

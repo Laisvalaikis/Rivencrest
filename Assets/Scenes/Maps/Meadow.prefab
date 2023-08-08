@@ -2882,42 +2882,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mapBoundries:
-  - {x: 0, y: 0}
-  - {x: 0, y: 1}
-  - {x: -1, y: 1}
-  - {x: -1, y: 5}
-  - {x: 0, y: 5}
-  - {x: 0, y: 6}
-  - {x: 1, y: 6}
-  - {x: 1, y: 7}
-  - {x: 2, y: 7}
-  - {x: 2, y: 10}
-  - {x: 3, y: 10}
-  - {x: 3, y: 11}
-  - {x: 4, y: 11}
-  - {x: 4, y: 12}
-  - {x: 5, y: 12}
-  - {x: 5, y: 11}
-  - {x: 6, y: 11}
-  - {x: 6, y: 9}
-  - {x: 8, y: 9}
-  - {x: 8, y: 7}
-  - {x: 7, y: 7}
-  - {x: 7, y: 6}
-  - {x: 6, y: 6}
-  - {x: 6, y: 5}
-  - {x: 5, y: 5}
-  - {x: 5, y: 4}
-  - {x: 4, y: 4}
-  - {x: 4, y: 2}
-  - {x: 2, y: 2}
-  - {x: 2, y: 0}
-  - {x: 0, y: 0.5}
+  - boundries:
+    - {x: 4, y: 12}
+    - {x: 5, y: 12}
+  - boundries:
+    - {x: 3, y: 11}
+    - {x: 6, y: 11}
+  - boundries:
+    - {x: 2, y: 10}
+    - {x: 6, y: 10}
+  - boundries:
+    - {x: 2, y: 9}
+    - {x: 8, y: 9}
+  - boundries:
+    - {x: 2, y: 8}
+    - {x: 8, y: 8}
+  - boundries:
+    - {x: 1, y: 7}
+    - {x: 7, y: 7}
+  - boundries:
+    - {x: 0, y: 6}
+    - {x: 6, y: 6}
+  - boundries:
+    - {x: -1, y: 5}
+    - {x: 5, y: 5}
+  - boundries:
+    - {x: -1, y: 4}
+    - {x: 5, y: 4}
+  - boundries:
+    - {x: -1, y: 3}
+    - {x: 4, y: 3}
+  - boundries:
+    - {x: -1, y: 2}
+    - {x: 2, y: 2}
+  - boundries:
+    - {x: 0, y: 1}
+    - {x: 2, y: 1}
   _initialPosition: {x: -1, y: 12}
   _chunkSize: 1
   _mapHeight: 12
   _mapWidth: 9
-  showChunks: 0
+  showChunks: 1
 --- !u!1 &3677177958225982340
 GameObject:
   m_ObjectHideFlags: 0
