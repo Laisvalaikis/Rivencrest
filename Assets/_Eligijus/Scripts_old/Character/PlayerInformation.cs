@@ -15,10 +15,14 @@ public class PlayerInformation : MonoBehaviour
     private PlayerAttack playerAttack;
     private TextMeshPro textMeshPro;
     private GridMovement gridMovement;
-    private Animator animator;
     private PlayerTeams playerTeams;
     private CreateWhiteField createWhiteField;
     private MindControl mindControl;
+    private CharacterModel characterModel;
+
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
+    [SerializeField] private Animator animator;
     //public int MaxHealth = 100;
     [HideInInspector] public int health = 100;
     //public int critChance = 5;
@@ -184,7 +188,7 @@ public class PlayerInformation : MonoBehaviour
                             int weakSpotDamage = 1;
                             PlayerInformationData playerInformationDataPink =
                                 PinkWeakSpot.GetComponent<PlayerInformation>()._playerInformationData;
-                            if (playerInformationData.BlessingsAndCurses.Find(x => x.blessingName == "Painful spot") != null)//Blessing
+                            if (playerInformationDataPink.BlessingsAndCurses.Find(x => x.blessingName == "Painful spot") != null)//Blessing
                             {
                                 weakSpotDamage = 2;
                             }
@@ -283,8 +287,11 @@ public class PlayerInformation : MonoBehaviour
 
     public void Die()
     {
-        transform.Find("CharacterModel").GetComponent<SpriteRenderer>().enabled = false;
-        transform.Find("CharacterModel").GetComponent<Animator>().enabled = false;
+       // transform.Find("CharacterModel").GetComponent<SpriteRenderer>().enabled = false;
+      //  transform.Find("CharacterModel").GetComponent<Animator>().enabled = false;
+      spriteRenderer.enabled = false;
+      animator.enabled = false;
+        
 
         transform.Find("VFX")?.gameObject.SetActive(false);
         if (isThisObject)
@@ -309,7 +316,8 @@ public class PlayerInformation : MonoBehaviour
         }
         //Debug.Log(killMessage);
     }
-    public void AddKillXP()
+
+   public void AddKillXP()
     {
         if (!isThisObject)
         {
@@ -570,7 +578,7 @@ public class PlayerInformation : MonoBehaviour
        {
            if (crit && damageOrHealAmount != -1)
            {
-               textToDisplay = " Crit!\n" + sign + damageOrHealAmount.ToString();
+               textToDisplay = " Crit!\n" + sign + damageOrHealAmount;
            }
            else
            {
