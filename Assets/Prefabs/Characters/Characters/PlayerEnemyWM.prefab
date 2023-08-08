@@ -34,6 +34,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659955980883675694}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -46,7 +47,6 @@ Transform:
   - {fileID: 3509720886480649299}
   - {fileID: 5996508347386241828}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &659955980883675730
 BoxCollider2D:
@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1abe98737ff8546bdcc88828c38a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInformationData: {fileID: 11400000, guid: c1e4d5ed8cd637e4e90dc47ee58cf55e, type: 2}
   savedCharacter:
     level: 0
     xP: 0
@@ -152,19 +153,15 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 0
-    prefabIndex: 0
+    characterIndex: 0
     playerInformation: {fileID: 0}
     prefab: {fileID: 0}
-  MaxHealth: 19
   health: 100
-  critChance: 4
-  accuracy: 100
-  dodgeChance: 1
   CharactersTeam: Default
-  characterPortrait: {fileID: 0}
   TeamManager: {fileID: 0}
   FlagInHand: {fileID: 0}
   currentState: Movement
@@ -172,9 +169,6 @@ MonoBehaviour:
   isCurrentStateAvailable: 0
   StateAnimations: 0
   role: DAMAGE
-  CharacterPortraitSprite: {fileID: -555003652717319931, guid: 88a9dc2923d4fa842a8fce4120dbf698, type: 3}
-  CharacterSplashArt: {fileID: 0}
-  CroppedSplashArt: {fileID: 0}
   _data: {fileID: 0}
   Blocker: 0
   BlockingAlly: {fileID: 0}
@@ -206,10 +200,6 @@ MonoBehaviour:
   Respawn: 0
   XPToGain: 0
   isThisObject: 0
-  ClassName: 
-  ClassColor: {r: 0.7882353, g: 0.8392157, b: 1, a: 1}
-  ClassColor2: {r: 0.3882353, g: 0.4117647, b: 0.54509807, a: 1}
-  BlessingsAndCurses: []
 --- !u!114 &7282709673297147284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,7 +345,7 @@ MonoBehaviour:
   fogLayer:
     serializedVersion: 2
     m_Bits: 2048
-  DestinationObject: {fileID: 0}
+  DestinationObject: {x: 0, y: 0, z: 0}
   _data: {fileID: 0}
 --- !u!114 &-2536795038536443514
 MonoBehaviour:
@@ -406,13 +396,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659955981309584225}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 659955980883675733}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6052865255359468871
 PrefabInstance:

@@ -29,8 +29,6 @@ d
 4Assets/_Eligijus/Scripts/Character/CharacterModel.cs,6\e\6e2f86afd023390394ff8abba26fe396061c5c29
 `
 0Assets/_Eligijus/Scripts/TownHall/UpgradeData.cs,d\1\d168521ee1221948e0d4baa538a13182cb384cb9
-d
-4Assets/_Eligijus/Scripts_old/Abilities/BaseAction.cs,2\d\2d454a0b52ea5959fce05b97178b5974808b62c5
 f
 6Assets/_Eligijus/Scripts_old/Abilities/BlockAbility.cs,4\c\4ccdf36e0b6635c64a965b2a871dcb17443bb289
 \
@@ -67,8 +65,6 @@ X
 (Assets/_Eligijus/Scripts/PauseManager.cs,a\7\a75293b8087cc7742b41c681a069333715418054
 e
 5Assets/_Eligijus/Scripts/UI/UiViewManagment/ExitUI.cs,4\3\4309db6d41e9c46010cf0c36299fcfb8f5436b4c
-Y
-)Assets/_Eligijus/Scripts/Data/SaveData.cs,c\3\c3583f4382115a7e05b48a80d44a0698fbc60ba1
 b
 2Assets/_Eligijus/Scripts/UI/ImageFadeController.cs,4\1\41e9e4110624e2025c54bd9b56052a92c06a2ecc
 j
@@ -83,8 +79,6 @@ f
 6Assets/_Eligijus/Scripts/UI/UiViewManagment/UIStack.cs,8\1\81f248f7188386dab28e7f18eef094287cbd0cbc
 e
 5Assets/_Eligijus/Scripts/SoundManager/MusicManager.cs,d\9\d988cba870b328ddccf79f2e6bbb1697ec5c6662
-U
-%Assets/_Eligijus/Scripts/Data/Data.cs,8\f\8f5b258bf2116f35ad8cb8bb4172f7c38d5c90ff
 ^
 .Assets/_Eligijus/Scripts/UI/EncounterButton.cs,f\1\f1cd29122a5560beffd18fe139718e5199f0f94c
 j
@@ -113,8 +107,6 @@ _
 .Assets/_Eligijus/Scripts_old/AI/AIBehaviour.cs,e\2\e2dc09fc8252f02cd7d1073fc57663d964db47c0
 X
 (Assets/_Eligijus/Scripts/Data/MapData.cs,a\f\af62b00ba4446e9d3adf42c2de038602329b2498
-h
-8Assets/_Eligijus/Scripts_old/Character/PlayerMovement.cs,3\a\3a7b2598df0cb929ae011464d4639f3691917fd4
 i
 9Assets/_Eligijus/Scripts_old/Character/CharacterVision.cs,1\4\14489a78999395cf0e220f4e70840356d48c52f8
 e

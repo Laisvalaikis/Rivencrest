@@ -56,7 +56,7 @@ using Random = UnityEngine.Random;
             fogLayer = LayerMask.GetMask("Fog");
             portalLayer = LayerMask.GetMask("Portal");
             whiteFieldLayer = LayerMask.GetMask("WhiteField");
-            gameInformation = GameObject.Find("GameInformation").GetComponent<GameInformation>();
+            // gameInformation = GameObject.Find("GameInformation").GetComponent<GameInformation>();
             _assignSound = GetComponent<AssignSound>();
         }
         public virtual void OnTileHover(GameObject tile)//parodo kas bus

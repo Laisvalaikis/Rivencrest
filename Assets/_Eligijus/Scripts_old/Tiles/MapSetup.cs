@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MapSetup : MonoBehaviour
 {
-    [HideInInspector] public string MapName;
+    private string MapName;
     [SerializeField] private List<MapData> _mapDatas;
     public Dictionary<string, MapData> mapDatas;
     [SerializeField] private GameObject mapHolder;
@@ -28,6 +28,8 @@ public class MapSetup : MonoBehaviour
         {
             _data = Data.Instance;
             MapName = _data.townData.selectedMission;
+            Debug.Log(MapName);
+            SetupAMap();
         }
 
     }
@@ -35,7 +37,7 @@ public class MapSetup : MonoBehaviour
     public void SetupAMap() 
     {
 
-        if (mapDatas[MapName] != null)
+        if (mapDatas.ContainsKey(MapName))
         {
             MapData mapInfo = new MapData();
             mapInfo.CopyData(mapDatas[MapName]);
@@ -58,6 +60,10 @@ public class MapSetup : MonoBehaviour
             //AI destinations
             aiManager.AIDestinations = mapInfo.aiMapCoordinates.coordinates;
             CreateMap();
+        }
+        else
+        {
+            Debug.LogError("Map can not be found");
         }
     }
 

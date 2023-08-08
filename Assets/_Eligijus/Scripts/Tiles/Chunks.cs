@@ -20,9 +20,16 @@ public class Chunks : MonoBehaviour
         }
     }
     
+    [System.Serializable]
+    private class CollumBoundries
+    {
+        public List<Vector2> boundries;
+    }
+    
 
     // Start is called before the first frame update
-    [SerializeField] private List<Vector2> _mapBoundries;
+    
+    [SerializeField] private List<CollumBoundries> _mapBoundries;
     [SerializeField] private Vector2 _initialPosition;
     [SerializeField] private float _chunkSize = 3f;
     [SerializeField] private float _mapHeight = 10f;
@@ -88,6 +95,7 @@ public class Chunks : MonoBehaviour
                 heightSize = leftSizeOfHeight / _chunkSize;
             }
             
+            
             _chunks.Add(new SaveChunks());
             
             for (int w = 0; w < _chunkCountWidth; w++)
@@ -98,8 +106,19 @@ public class Chunks : MonoBehaviour
                 {
                     widthSize = leftSizeOfWidth / _chunkSize;
                 }
+                ChunkData chunk = new ChunkData(h, w, widthSize, heightSize, widthPosition + (widthSize/2), heightPosition - (heightSize/2), false);
+                if (_mapBoundries[h].boundries[0].y - _chunkSize <= heightPosition - (heightSize) &&
+                    _mapBoundries[h].boundries[0].y >=  heightPosition &&
+                    _mapBoundries[h].boundries[0].x <= widthPosition && 
+                    _mapBoundries[h].boundries[1].x >= widthPosition + widthSize)
+                {
+                    chunk.SetTileIsLocked(false);
+                }
+                else
+                {
+                    chunk.SetTileIsLocked(true);
+                }
 
-                ChunkData chunk = new ChunkData(h, w, widthSize, heightSize, widthPosition + (widthSize/2), heightPosition - (heightSize/2));
                 lock (_chunksArray)
                 {
                     _chunksArray[h, w] = chunk;
@@ -122,42 +141,6 @@ public class Chunks : MonoBehaviour
         // _avlTree.DisplayTree();
     }
 
-    // private void UpdateChunkWeight()
-    // {
-    //     while (_updateWeight)
-    //     {
-    //         lock (_chunks)
-    //         {
-    //             for (int i = 0; i < _chunks.Count; i++)
-    //             {
-    //                     for (int a = 0; a < _chunks[i].chunks.Count; a++)
-    //                     {
-    //                         ChunkData data = _chunks[i].chunks[a];
-    //                         data.UpdateWeight();
-    //                         if (!data.DataWasInserted() && data.WeightWasUpdated())
-    //                         {
-    //                             _maxHeap.InsertKey(data);
-    //                             data.InsertData();
-    //                         }
-    //
-    //                         if (data.DataWasInserted() && data.WeightWasUpdated())
-    //                         {
-    //                             _maxHeap.RebuildHeap(data.GetHeapIndex());
-    //                         }
-    //                     }
-    //             }
-    //         }
-    //         
-    //         if (_maxHeap.GetMax() != null)
-    //         {
-    //             ChunkData heapData = _maxHeap.GetMax();
-    //             Debug.Log("Index: " + heapData.GetGeneratedIndex() + " Weight: " + heapData.GetWeight());
-    //         }
-    //
-    //         Thread.Sleep((int)(_timeWhenUpdateData*100));
-    //     }
-    // }
-
     public ChunkData GetChunk(Vector3 position)
     {
         int widthChunk = Mathf.CeilToInt((position.x - _initialPosition.x)/_chunkSize) - 1;
@@ -167,7 +150,7 @@ public class Chunks : MonoBehaviour
         lock (_chunksArray)
         {
             
-            if (_chunksArray[heightChunk, widthChunk] != null)
+            if (_chunksArray[heightChunk, widthChunk] != null && !_chunksArray[heightChunk, widthChunk].TileIsLocked())
             {
                 return _chunksArray[heightChunk, widthChunk];
             }
@@ -303,15 +286,22 @@ public class Chunks : MonoBehaviour
                 for (int i = 0; i < _chunksDraw.Count; i++)
                 {
                     ChunkData data = _chunksDraw[i];
-                    Gizmos.color = new Color(0, 1, data.GetWeight(), 1);
-                    Gizmos.DrawCube(data.GetPosition(), data.GetDimensions());
+                    if (!data.TileIsLocked())
+                    {
+                        Gizmos.color = new Color(0, 1, data.GetWeight(), 1);
+                        Gizmos.DrawCube(data.GetPosition(), data.GetDimensions());
+                    }
                 }
             }
 
             Gizmos.color = Color.red;
-            for (int i = 0; i < _mapBoundries.Count-1; i++)
+            for (int i = 0; i < _mapBoundries.Count; i++)
             {
-                Gizmos.DrawLine(_mapBoundries[i], _mapBoundries[i+1]);
+                for (int j = 0; j < _mapBoundries[i].boundries.Count-1; j++)
+                {
+                    Gizmos.DrawLine(_mapBoundries[i].boundries[j], _mapBoundries[i].boundries[j+1]);
+                }
+                
             }
         }
     }

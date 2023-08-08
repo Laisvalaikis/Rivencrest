@@ -7,8 +7,8 @@ using System;
 
 public class PlayerInformation : MonoBehaviour
 {
-    private PlayerInformationData playerInformationData;
-    public PlayerInformationData _playerInformationData;
+    public PlayerInformationData playerInformationData;
+    private PlayerInformationData _playerInformationData;
     public SavedCharacter savedCharacter;
     private ActionManager actionManager;
     private DamageText damageTextas;
@@ -235,6 +235,11 @@ public class PlayerInformation : MonoBehaviour
             BarrierProvider = null;
             transform.Find("VFX").Find("VFXBool").GetComponent<Animator>().SetTrigger("shieldEnd");
         }
+    }
+
+    public PlayerInformationData GetPlayerInformationData()
+    {
+        return _playerInformationData;
     }
 
     public void DeathStart()
