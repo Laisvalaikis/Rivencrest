@@ -123,6 +123,19 @@ public class PlayerInformation : MonoBehaviour
         float healthDouble = health;
         return healthDouble / maxHealthDouble * 100;
     }
+
+    public enum SpecialColor
+    {
+        Poison = 0,
+        PinkWeakSpot = 1,
+        Protected = 2,
+        None = 3
+    };
+
+    public SpecialColor PoisonSpecialColor = SpecialColor.Poison;
+    public SpecialColor PinkWeakSpotSpecialColor = SpecialColor.PinkWeakSpot;
+    public SpecialColor ProtectedSpecialColor = SpecialColor.Protected;
+    
     public void DealDamage(int damage, bool crit, GameObject damageDealer, string specialInformation = "")
     {
        // List<TextMeshProUGUI> damageTextTest = new List<TextMeshProUGUI>();
@@ -130,27 +143,34 @@ public class PlayerInformation : MonoBehaviour
         {
             if (BlockingAlly == null || (BlockingAlly != null && BlockingAlly.GetComponent<PlayerInformation>().health <= 0))
             {
-                string SpecialColor = "";
+                //string SpecialColor = "";
+                SpecialColor specialColor = SpecialColor.None;
                 if (specialInformation == "Poison")
                 {
-                    SpecialColor = "Poison";
+                    //SpecialColor = "Poison";
+                    specialColor = SpecialColor.Poison;
                 }
                 if (specialInformation == "PinkWeakSpot")
                 {
                     animator.SetTrigger("pink1");
                    animator.SetTrigger("hit");
-                    SpecialColor = "PinkWeakSpot";
+                  //  SpecialColor = "PinkWeakSpot";
+                  specialColor = SpecialColor.PinkWeakSpot;
+
                 }
                 if (specialInformation == "Mark")
                 {
-                    SpecialColor = "Protected";
+                   // SpecialColor = "Protected";
+                   specialColor = SpecialColor.Protected;
+
                 }
                 if (damage != -1)
                 {
                     if (Protected || Stasis)
                     {
                         damage /= 2;
-                        SpecialColor = "Protected";
+                        //SpecialColor = "Protected";
+                        specialColor = SpecialColor.Protected;
                     }
                     health -= damage;//Deals damage
                     if (KillerList.Find(x => x == damageDealer) == null)
@@ -210,11 +230,11 @@ public class PlayerInformation : MonoBehaviour
                         //if (transform.Find("DamageTexts").transform.Find("DamageText2").gameObject.activeSelf)
                         if (damageTextTest[1].gameObject.activeSelf)
                         {
-                            EnableDamageText(3, damage, crit, false, SpecialColor);
+                            EnableDamageText(3, damage, crit, false, specialColor.ToString());
                         }
-                        else EnableDamageText(2, damage, crit, false, SpecialColor);
+                        else EnableDamageText(2, damage, crit, false, specialColor.ToString());
                     }
-                    else EnableDamageText(1, damage, crit, false, SpecialColor);
+                    else EnableDamageText(1, damage, crit, false, specialColor.ToString());
                 }
                 if (health <= 0) // DEATH
                 {
