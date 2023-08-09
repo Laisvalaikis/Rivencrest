@@ -131,7 +131,6 @@ public class PlayerInformation : MonoBehaviour
         Protected = 2,
         None = 3
     };
-
     public SpecialColor PoisonSpecialColor = SpecialColor.Poison;
     public SpecialColor PinkWeakSpotSpecialColor = SpecialColor.PinkWeakSpot;
     public SpecialColor ProtectedSpecialColor = SpecialColor.Protected;
@@ -139,8 +138,9 @@ public class PlayerInformation : MonoBehaviour
     public void DealDamage(int damage, bool crit, GameObject damageDealer, string specialInformation = "")
     {
        // List<TextMeshProUGUI> damageTextTest = new List<TextMeshProUGUI>();
-        if (BarrierProvider == null)
+       if (BarrierProvider == null)
         {
+            //if (BlockingAlly == null || (BlockingAlly != null && BlockingAlly.GetComponent<PlayerInformation>().health <= 0))
             if (BlockingAlly == null || (BlockingAlly != null && BlockingAlly.GetComponent<PlayerInformation>().health <= 0))
             {
                 //string SpecialColor = "";

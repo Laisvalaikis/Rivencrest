@@ -14,7 +14,6 @@ public class Debuff
     //Atskira klase AllAvailableDebuffs debuffmanageryje ar kur ten, kur galetume pazymet dar ir bool MovementDebuff
     //public Sprite icon;
 
-
     public Debuff(string debuffName, List<GameObject> causedBy, string animationTag = "")
     {
         this.debuffName = debuffName;

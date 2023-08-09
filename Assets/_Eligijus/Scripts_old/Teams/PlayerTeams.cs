@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerTeams : MonoBehaviour
 {
+    private GameInformation gameInformation;
+    private GameProgress gameProgress;
     public TeamInformation portraitTeamBox;
     public TeamsList allCharacterList;
     public string ChampionTeam;
@@ -27,9 +29,11 @@ public class PlayerTeams : MonoBehaviour
             SpawnCharacters(i, allCharacterList.teams[i].coordinates);
         }
         
-        if (GameObject.Find("GameProgress") != null)
+        //if (GameObject.Find("GameProgress") != null)
+        if(gameInformation!=null)
         {
-            GameObject.Find("GameProgress").GetComponent<GameProgress>().SetSavedCharactersOnPrefabs();
+            //GameObject.Find("GameProgress").GetComponent<GameProgress>().SetSavedCharactersOnPrefabs();
+            gameProgress.SetSavedCharactersOnPrefabs();
         }
         
         isGameOver = false;
@@ -108,7 +112,8 @@ public class PlayerTeams : MonoBehaviour
     }
     public void AddCharacterToCurrentTeam(GameObject character)
     {
-        int teamIndex = GetComponent<GameInformation>().activeTeamIndex;
+        //int teamIndex = GetComponent<GameInformation>().activeTeamIndex;
+        int teamIndex = gameInformation.activeTeamIndex;
         /*//Object
         if (character.GetComponent<PlayerInformation>().isThisObject)
         {
