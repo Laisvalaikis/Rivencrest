@@ -20,16 +20,17 @@ public class PlayerInformation : MonoBehaviour
     private MindControl mindControl;
     private CharacterModel characterModel;
     private BoxCollider2D boxCollider2D;
-
+    private VFXContainer vfxContainer;
+    public GameInformation gameInformation;
+    private TeamInformation teamInformation;
+    private AIManager aiManager;
+    
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     [SerializeField] private Animator animator;
-
-    //public int MaxHealth = 100;
+    
     [HideInInspector] public int health = 100;
-    //public int critChance = 5;
-    //public int accuracy = 100;
-    //public int dodgeChance = 20;
+    
     public string CharactersTeam = "Default";
     //[HideInInspector] public GameObject characterPortrait; //portraitBoxFrame
     [HideInInspector] public GameObject TeamManager;
@@ -42,10 +43,7 @@ public class PlayerInformation : MonoBehaviour
     private List<GameObject> KillList = new List<GameObject>();
     private List<TextMeshProUGUI> damageTextTest = new List<TextMeshProUGUI>();
     public string role;
-    //
-   // public Sprite CharacterPortraitSprite;
-   // public Sprite CharacterSplashArt;//For character table
-   // public Sprite CroppedSplashArt;
+    // public Sprite CharacterSplashArt;//For character table
     public Data _data;
     //
     [HideInInspector] public Debuffs Debuffs; // :'( uzsirasyti kazkur visus imanomus debuffus
@@ -76,19 +74,14 @@ public class PlayerInformation : MonoBehaviour
     [HideInInspector] public List<Poison> Poisons = new List<Poison>();
     [HideInInspector] public bool wasThisCharacterSpawned = false;
     [HideInInspector] public List<string> enabledAbilitiesEnemy;
-    public GameInformation gameInformation;
+    
 
     public bool Respawn;
     //
     [HideInInspector] public int XPToGain = 0;
     //
     [HideInInspector] public bool isThisObject = false;
-    //
-   // public string ClassName;
-  //  public Color ClassColor;
-   // public Color ClassColor2;
-    //public List<Blessing> BlessingsAndCurses = new List<Blessing>();
-    //
+   
     private int turnCounter = 1;
     void Awake()
     {
@@ -108,19 +101,16 @@ public class PlayerInformation : MonoBehaviour
     {
         if (Input.GetKeyDown("e") && CharactersTeam == "Default")
         {
-            //GameObject.Find("GameInformation").gameObject.GetComponent<PlayerTeams>().AddCharacterToCurrentTeam(gameObject);
             playerTeams.AddCharacterToCurrentTeam(gameObject);
         }
         if (currentState != AnimationState && StateAnimations)
         {
-            if (currentState == "Attack" && GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().SelectedCharacter == transform.gameObject)
+            if (currentState == "Attack" && gameInformation.SelectedCharacter == transform.gameObject)
             {
-                //transform.Find("CharacterModel").GetComponent<Animator>().SetBool("idleAttack", true);
                 animator.SetBool("idleAttack", true);
             }
             else
             {
-                //transform.Find("CharacterModel").GetComponent<Animator>().SetBool("idleAttack", false);
                 animator.SetBool("idleAttack", false);
                 //GetComponent<Animator>().SetTrigger("backToIdle");
             }
@@ -135,6 +125,7 @@ public class PlayerInformation : MonoBehaviour
     }
     public void DealDamage(int damage, bool crit, GameObject damageDealer, string specialInformation = "")
     {
+       // List<TextMeshProUGUI> damageTextTest = new List<TextMeshProUGUI>();
         if (BarrierProvider == null)
         {
             if (BlockingAlly == null || (BlockingAlly != null && BlockingAlly.GetComponent<PlayerInformation>().health <= 0))
@@ -146,9 +137,7 @@ public class PlayerInformation : MonoBehaviour
                 }
                 if (specialInformation == "PinkWeakSpot")
                 {
-                    //transform.Find("VFX").Find("VFXImpact").GetComponent<Animator>().SetTrigger("pink1");
-                   // transform.Find("VFX").Find("PinkWeakSpot").GetComponent<Animator>().SetTrigger("hit");
-                   animator.SetTrigger("pink1");
+                    animator.SetTrigger("pink1");
                    animator.SetTrigger("hit");
                     SpecialColor = "PinkWeakSpot";
                 }
@@ -184,8 +173,7 @@ public class PlayerInformation : MonoBehaviour
                                 ApplyDebuff("CantMove", damageDealer);
                             }
                             Marker = null;
-                           // transform.Find("VFX").Find("Mark").GetComponent<Animator>().SetTrigger("explode");
-                           animator.SetTrigger("explode");
+                            animator.SetTrigger("explode");
                             gameInformation.FakeUpdate();
                         }));
                     }
@@ -206,20 +194,21 @@ public class PlayerInformation : MonoBehaviour
                     }
                     if (IsCreatingWhiteField)
                     {
-                       // GetComponent<CreateWhiteField>().OnTurnStart();//sunaikina white field
-                       createWhiteField.OnTurnStart();
+                        createWhiteField.OnTurnStart();//sunaikina white field
                     }
                     if (MindControlTarget != null)
                     {
-                        //GetComponent<MindControl>().OnTurnStart();//sustabdo
                         mindControl.OnTurnStart();//sustabdo
                     }
                 }
+                //
                 if (transform.CompareTag("Player"))
                 {
-                    if (transform.Find("DamageTexts").transform.Find("DamageText1").gameObject.activeSelf)
+                    //if (transform.Find("DamageTexts").transform.Find("DamageText1").gameObject.activeSelf)
+                    if (damageTextTest[0].gameObject.activeSelf)
                     {
-                        if (transform.Find("DamageTexts").transform.Find("DamageText2").gameObject.activeSelf)
+                        //if (transform.Find("DamageTexts").transform.Find("DamageText2").gameObject.activeSelf)
+                        if (damageTextTest[1].gameObject.activeSelf)
                         {
                             EnableDamageText(3, damage, crit, false, SpecialColor);
                         }
@@ -229,13 +218,11 @@ public class PlayerInformation : MonoBehaviour
                 }
                 if (health <= 0) // DEATH
                 {
-                   // transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("death");
-                   animator.SetTrigger("death");
+                    animator.SetTrigger("death");
                     DeathStart();
                 }
                 else
                 {
-                    //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerHit");
                     animator.SetTrigger("playerHit");
                 }
             }
@@ -247,8 +234,7 @@ public class PlayerInformation : MonoBehaviour
         else
         {
             BarrierProvider = null;
-           // transform.Find("VFX").Find("VFXBool").GetComponent<Animator>().SetTrigger("shieldEnd");
-           animator.SetTrigger("shieldEnd");
+            animator.SetTrigger("shieldEnd");
         }
     }
 
@@ -261,16 +247,13 @@ public class PlayerInformation : MonoBehaviour
     {
         if (wasThisCharacterSpawned)
         {
-           // GameObject.Find("GameInformation").GetComponent<PlayerTeams>().RemoveCharacterFromTeam(gameObject, CharactersTeam);
-           playerTeams.RemoveCharacterFromTeam(gameObject,CharactersTeam);
+            playerTeams.RemoveCharacterFromTeam(gameObject,CharactersTeam);
         }
-        //transform.gameObject.GetComponent<BoxCollider2D>().enabled = false;
         boxCollider2D.enabled = false;
         if (!CompareTag("Wall"))
         {
             SendKillMessage();
-            transform.Find("VFX").gameObject.SetActive(false);
-            transform.Find("VFX").Find("TeamUI").gameObject.SetActive(false);
+            vfxContainer.gameObject.SetActive(false);
         }
         //GetComponent<SpriteRenderer>().color = new Color(0, 0, 0);
         //When character dies
@@ -286,9 +269,9 @@ public class PlayerInformation : MonoBehaviour
         {
             TeamManager.GetComponent<TeamInformation>().ModifyList();
         }
-        if (GameObject.Find("GameInformation").GetComponent<PlayerTeams>().IsGameOver())
+        if (playerTeams.IsGameOver())
         {
-            if (Respawn && GameObject.Find("GameInformation").GetComponent<AIManager>().RespawnEnemyWaves && GameObject.Find("GameInformation").GetComponent<AIManager>().RespawnCount > 0)
+            if (Respawn && aiManager.RespawnEnemyWaves && aiManager.RespawnCount > 0)
             {
                 gameInformation.respawnEnemiesDuringThisTurn = true;
             }
@@ -299,14 +282,10 @@ public class PlayerInformation : MonoBehaviour
     }
 
     public void Die()
-    {
-       // transform.Find("CharacterModel").GetComponent<SpriteRenderer>().enabled = false;
-      //  transform.Find("CharacterModel").GetComponent<Animator>().enabled = false;
-      spriteRenderer.enabled = false;
-      animator.enabled = false;
-        
-
-        transform.Find("VFX")?.gameObject.SetActive(false);
+    { 
+        spriteRenderer.enabled = false;
+        animator.enabled = false;
+        vfxContainer?.gameObject.SetActive(false);
         if (isThisObject)
         {
             Destroy(gameObject);
@@ -345,29 +324,28 @@ public class PlayerInformation : MonoBehaviour
     }
     public void Heal(int healAmount, bool crit)
     {
-        //if (health + healAmount >= MaxHealth)
         if (health + healAmount >= _playerInformationData.MaxHealth)
         {
-            if (transform.Find("DamageTexts").transform.Find("DamageText1").gameObject.activeSelf)
+            //if (transform.Find("DamageTexts").transform.Find("DamageText1").gameObject.activeSelf)
+            if (damageTextTest[0].gameObject.activeSelf)
             {
-                if (transform.Find("DamageTexts").transform.Find("DamageText2").gameObject.activeSelf)
+               // if (transform.Find("DamageTexts").transform.Find("DamageText2").gameObject.activeSelf)
+               if (damageTextTest[1].gameObject.activeSelf)
                 {
-                    //EnableDamageText(3, MaxHealth - health, crit, true);
                     EnableDamageText(3, _playerInformationData.MaxHealth - health, crit, true);
                 }
-                //else EnableDamageText(2, MaxHealth - health, crit, true);
-                else EnableDamageText(2, _playerInformationData.MaxHealth - health, crit, true);
+               else EnableDamageText(2, _playerInformationData.MaxHealth - health, crit, true);
             }
-            //else EnableDamageText(1, MaxHealth - health, crit, true);
             else EnableDamageText(1, _playerInformationData.MaxHealth - health, crit, true);
-            //health = MaxHealth;
             health = _playerInformationData.MaxHealth;
         }
         else
         {
-            if (transform.Find("DamageTexts").transform.Find("DamageText1").gameObject.activeSelf)
+            //if (transform.Find("DamageTexts").transform.Find("DamageText1").gameObject.activeSelf)
+            if (damageTextTest[0].gameObject.activeSelf)
             {
-                if (transform.Find("DamageTexts").transform.Find("DamageText2").gameObject.activeSelf)
+               // if (transform.Find("DamageTexts").transform.Find("DamageText2").gameObject.activeSelf)
+               if (damageTextTest[1].gameObject.activeSelf)
                 {
                     EnableDamageText(3, healAmount, crit, true);
                 }
@@ -376,8 +354,6 @@ public class PlayerInformation : MonoBehaviour
             else EnableDamageText(1, healAmount, crit, true);
             health += healAmount;
         }
-        // health = MaxHealth;
-        //transform.Find("VFX").Find("VFX1x1").GetComponent<Animator>().SetTrigger("heal");
         animator.SetTrigger("heal");
     }
     public void ApplyDebuff(string debuff, GameObject DebuffApplier = null)
@@ -393,7 +369,6 @@ public class PlayerInformation : MonoBehaviour
                 GameObject target = gameObject;
                 if (debuff == "IceSlow" || debuff == "OilSlow" || debuff == "Stun")
                 {
-                    //GetComponent<GridMovement>().ApplyDebuff(debuff, DebuffApplier);
                     gridMovement.ApplyDebuff(debuff,DebuffApplier);
                     
                 }
@@ -411,6 +386,7 @@ public class PlayerInformation : MonoBehaviour
                     {
                         MindControlled = true;
                        // DebuffApplier.GetComponent<ActionManager>().FindActionByName("MindControl").SpecificAbilityAction(gameObject);
+                       
                     }
                     Silenced = true;
                 }
@@ -431,18 +407,14 @@ public class PlayerInformation : MonoBehaviour
     }
     public void PlayerSetup()
     {
-       // GameObject GameInformation;
-       // GameInformation = GameObject.Find("GameInformation");
         Color TeamUIColor = ColorStorage.TeamColor(CharactersTeam);
         if (CharactersTeam == "Default")
         {
-           // GameInformation.gameObject.GetComponent<PlayerTeams>().SpawnDefaultCharacter(gameObject);
-           playerTeams.SpawnDefaultCharacter(gameObject);
+            playerTeams.SpawnDefaultCharacter(gameObject);
         }
-        else if (transform.Find("VFX") != null)
+        else if (vfxContainer != null)
         {
-           // transform.Find("VFX").Find("TeamUI").GetComponent<SpriteRenderer>().color = TeamUIColor;
-           spriteRenderer.color = TeamUIColor;
+            spriteRenderer.color = TeamUIColor;
         }
     }
     public void LoadPlayerProgression()
@@ -453,16 +425,12 @@ public class PlayerInformation : MonoBehaviour
             {
                 BlessingsAndCurses.Add(x);
             }*/
-           // BlessingsAndCurses = savedCharacter.blessings;
-           _playerInformationData.BlessingsAndCurses = savedCharacter.blessings;
+            _playerInformationData.BlessingsAndCurses = savedCharacter.blessings;
             //max hp
-            //MaxHealth += (savedCharacter.level - 1) * 2;
             _playerInformationData.MaxHealth += (savedCharacter.level - 1) * 2;
             //Healthy
-            //if (BlessingsAndCurses.Find(x => x.blessingName == "Healthy") != null)
             if (_playerInformationData.BlessingsAndCurses.Find(x => x.blessingName == "Healthy") != null)
             {
-                //MaxHealth += 3;
                 _playerInformationData.MaxHealth += 3;
             }
             //Head start
@@ -471,82 +439,10 @@ public class PlayerInformation : MonoBehaviour
                  GetComponent<GridMovement>().MovementPoints+=2;
              }*/
             //Sharp blade/Far reach
-            //GetComponent<ActionManager>().ActivateBlessingBuffs();
             actionManager.ActivateBlessingBuffs();
         }
     }
-   /*   public void EnableDamageText(int textIndex, int damageOrHealAmount, bool crit, bool heal, string specialColor = "")
-    {
-        GameObject damageText = null;
-        char sign = '-';
-        if (heal) sign = '+';
-        switch (textIndex)
-        {
-            case 1:
-                //damageText = transform.Find("DamageTexts").transform.Find("DamageText1").gameObject;
-                break;
-            case 2:
-                damageText = transform.Find("DamageTexts").transform.Find("DamageText2").gameObject;
-                break;
-            case 3:
-                damageText = transform.Find("DamageTexts").transform.Find("DamageText3").gameObject;
-                break;
-        }
-        string textToDisplay;
-        if (damageOrHealAmount == -1)
-        {
-            damageText.GetComponent<TextMeshPro>().color = Color.white;
-            //textMeshPro.color=Color.white;
-        }
-        else if (!heal)
-        {
-            //damageText.GetComponent<TextMeshPro>().color = Color.red;
-            if (specialColor == "Protected")
-            {
-                damageText.GetComponent<TextMeshPro>().color = new Color(221 / 255f, 193 / 255f, 193 / 255f);
-            }
-            if (specialColor == "Poison")
-            {
-                damageText.GetComponent<TextMeshPro>().color = new Color(0 / 255f, 255 / 255f, 74 / 255f);
-            }
-            if (specialColor == "PinkWeakSpot")
-            {
-                damageText.GetComponent<TextMeshPro>().color = new Color(255 / 255f, 145 / 255f, 191 / 255f);
-            }
-        }
-        else damageText.GetComponent<TextMeshPro>().color = Color.green;
-        //
-        if (crit && damageOrHealAmount != -1)
-        {
-            textToDisplay = " Crit!\n" + sign + damageOrHealAmount;
-        }
-        else
-        {
-            textToDisplay = sign + damageOrHealAmount.ToString();
-        }
-        //
-        if (damageOrHealAmount == -1)
-        {
-            textToDisplay = "Dodge!";
-        }
-        else
-        {
-            if (crit && damageOrHealAmount != -1)
-            {
-                textToDisplay = " Crit!\n" + sign + damageOrHealAmount.ToString();
-            }
-            else
-            {
-                textToDisplay = sign + damageOrHealAmount.ToString();
-            }
-        }
-        damageText.GetComponent<DamageText>().damageBeingDealt = damageOrHealAmount;
-        damageText.SetActive(true);
-        damageText.GetComponent<TextMeshPro>().text = textToDisplay;
-        damageText.GetComponent<DamageText>().time = 1;
-      }
-   */
-   public void EnableDamageText(int textIndex, int damageOrHealAmount, bool crit, bool heal, string specialColor = "")
+    public void EnableDamageText(int textIndex, int damageOrHealAmount, bool crit, bool heal, string specialColor = "")
    {
        char sign = '-';
        if (heal) sign = '+';
@@ -602,7 +498,7 @@ public class PlayerInformation : MonoBehaviour
            }
        }
        damageTextas.damageBeingDealt = damageOrHealAmount;
-       //damageText.SetActive(true);
+       damageTextas.gameObject.SetActive(true);
        damageTextTest[textIndex].text = textToDisplay;
        damageTextas.time = 1;
        
@@ -610,10 +506,8 @@ public class PlayerInformation : MonoBehaviour
     public void OnTurnStart()
     {
         turnCounter++;
-        //if (BlessingsAndCurses.Find(x => x.blessingName == "Swiftness") != null && turnCounter % 2 == 0)
         if (_playerInformationData.BlessingsAndCurses.Find(x => x.blessingName == "Swiftness") != null && turnCounter % 2 == 0)
         {
-            //GetComponent<GridMovement>().AvailableMovementPoints++;
             gridMovement.AvailableMovementPoints++;
         }
 
@@ -628,7 +522,6 @@ public class PlayerInformation : MonoBehaviour
         Poisons.RemoveAll(x => x.turnsLeft <= 0);
         if (poisonDamage > 0 && health > 0)
         {
-            //if (BlessingsAndCurses.Find(x => x.blessingName == "Antitoxic") != null)
             if (_playerInformationData.BlessingsAndCurses.Find(x => x.blessingName == "Antitoxic") != null)
             {
                 poisonDamage = 0;
@@ -641,8 +534,7 @@ public class PlayerInformation : MonoBehaviour
             if (BarrierProvider != null)
             {
                 BarrierProvider = null;
-               // transform.Find("VFX").Find("VFXBool").GetComponent<Animator>().SetTrigger("shieldEnd");
-               animator.SetTrigger("shieldEnd");
+                animator.SetTrigger("shieldEnd");
             }
         }));
     }
@@ -664,9 +556,7 @@ public class PlayerInformation : MonoBehaviour
         }
         if (Debuffs.Contains("EnvHazardDamageBoost"))
         {
-           // GetComponent<PlayerAttack>().minAttackDamage -= 3;
-           // GetComponent<PlayerAttack>().maxAttackDamage -= 3;
-           playerAttack.minAttackDamage -= 3;
+            playerAttack.minAttackDamage -= 3;
            playerAttack.maxAttackDamage -= 3;
             Debuffs.Remove("EnvHazardDamageBoost");
         }
