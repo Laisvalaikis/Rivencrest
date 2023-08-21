@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
+    private BottomCornerUI bottomCornerUI;
+    private Image image;
+    private Animator animator;
+    public ActionButton actionButton;
+    public DebuffManager debuffManager;
     public List<GameObject> ButtonList;
     [HideInInspector] public List<GameObject> ButtonFrameList;
     private List<GameObject> ButtonIconList;
@@ -26,24 +31,31 @@ public class ButtonManager : MonoBehaviour
         ButtonFrameList = new List<GameObject>();
         ButtonIconList = new List<GameObject>();
         for (int i = 0; i < ButtonList.Count; i++)
-        {
-            ButtonFrameList.Add(ButtonList[i].transform.Find("ActionButtonFrame").gameObject);
-            ButtonIconList.Add(ButtonList[i].transform.Find("ActionButtonImage").gameObject);
-            ButtonIconList[i].GetComponent<Image>().color = GetComponent<BottomCornerUI>().ButtonIconColor;
+        { 
+            //ButtonFrameList.Add(ButtonList[i].transform.Find("ActionButtonFrame").gameObject);
+           // ButtonIconList.Add(ButtonList[i].transform.Find("ActionButtonImage").gameObject);
+           ButtonFrameList.Add(ButtonList[i].transform.Find("ActionButtonFrame").gameObject);
+           ButtonIconList.Add(ButtonList[i].transform.Find("ActionButtonImage").gameObject);
+           // ButtonIconList[i].GetComponent<Image>().color = GetComponent<BottomCornerUI>().ButtonIconColor;
+           ButtonIconList[i].GetComponent<Image>().color = bottomCornerUI.ButtonIconColor;
             _actionButtons.Add(ButtonList[i].GetComponent<ActionButton>());
             var CantAttackIcon = ButtonList[i].transform.Find("CantAttackImage");
             if (CantAttackIcon != null)
             {
-                CantAttackIcon.gameObject.GetComponent<Image>().color = GetComponent<BottomCornerUI>().ButtonIconColor;
+               // CantAttackIcon.gameObject.GetComponent<Image>().color = GetComponent<BottomCornerUI>().ButtonIconColor;
+               CantAttackIcon.gameObject.GetComponent<Image>().color = bottomCornerUI.ButtonIconColor;
             }
         }
         // transform.GetChild(0).Find("MovementTextBackground").GetChild(0).gameObject.GetComponent<Text>().color = GetComponent<BottomCornerUI>().ButtonIconColor;
     }
     void Start()
     {
-        if (transform.Find("CornerUI").Find("DebuffIcons") != null)
+        
+        //if (transform.Find("CornerUI").Find("DebuffIcons") != null)
+        if(debuffManager!=null)
         {
-            transform.Find("CornerUI").Find("DebuffIcons").gameObject.GetComponent<DebuffManager>().CharacterOnBoard = CharacterOnBoard;
+            //transform.Find("CornerUI").Find("DebuffIcons").gameObject.GetComponent<DebuffManager>().CharacterOnBoard = CharacterOnBoard;
+            debuffManager.CharacterOnBoard = CharacterOnBoard;
         }
     }
     void Update()
@@ -55,6 +67,7 @@ public class ButtonManager : MonoBehaviour
                 if (Input.GetKeyDown(AbilityChangingButtonSequence[i]))
                 {
                     ButtonList[i].GetComponent<ActionButton>().ChangePlayersState();
+                    
                 }
             }
         }
@@ -73,12 +86,14 @@ public class ButtonManager : MonoBehaviour
         if (_selectedButton != null)
         {
             _selectedButton.SetBool("select", false);
-            _selectedButton = selected.GetComponent<Animator>();
+            //_selectedButton = selected.GetComponent<Animator>();
+            _selectedButton = animator;
             _selectedButton.SetBool("select", true);
         }
         else
         {
-            _selectedButton = selected.GetComponent<Animator>();
+            //_selectedButton = selected.GetComponent<Animator>();
+            _selectedButton = animator;
             _selectedButton.SetBool("select", true);
         }
 
@@ -116,8 +131,10 @@ public class ButtonManager : MonoBehaviour
     {
         if (transform.Find("CornerUI").Find("DebuffIcons") != null)
         {
-            transform.Find("CornerUI").Find("DebuffIcons").gameObject.GetComponent<DebuffManager>().CharacterOnBoard = CharacterOnBoard;
-            transform.Find("CornerUI").Find("DebuffIcons").gameObject.GetComponent<DebuffManager>().UpdateDebuffs();
+           // transform.Find("CornerUI").Find("DebuffIcons").gameObject.GetComponent<DebuffManager>().CharacterOnBoard = CharacterOnBoard;
+           // transform.Find("CornerUI").Find("DebuffIcons").gameObject.GetComponent<DebuffManager>().UpdateDebuffs();
+           debuffManager.CharacterOnBoard = CharacterOnBoard;
+           debuffManager.UpdateDebuffs();
         }
 
         //
@@ -173,8 +190,10 @@ public class ButtonManager : MonoBehaviour
     {
         if (transform.Find("CornerUI").Find("DebuffIcons") != null)
         {
-            transform.Find("CornerUI").Find("DebuffIcons").gameObject.GetComponent<DebuffManager>().CharacterOnBoard = CharacterOnBoard;
-            transform.Find("CornerUI").Find("DebuffIcons").gameObject.GetComponent<DebuffManager>().UpdateDebuffs();
+           // transform.Find("CornerUI").Find("DebuffIcons").gameObject.GetComponent<DebuffManager>().CharacterOnBoard = CharacterOnBoard;
+           // transform.Find("CornerUI").Find("DebuffIcons").gameObject.GetComponent<DebuffManager>().UpdateDebuffs();
+           debuffManager.CharacterOnBoard = CharacterOnBoard;
+           debuffManager.UpdateDebuffs();
         }
     }
 

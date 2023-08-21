@@ -44,7 +44,6 @@ public class TileMapManager : MonoBehaviour
                 gameTileMap.SelectTile(worldPos);
             }
         }
-        Debug.Log("ONE CLICK");
     }
 
 
