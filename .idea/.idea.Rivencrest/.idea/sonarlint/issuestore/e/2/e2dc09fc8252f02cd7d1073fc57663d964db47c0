@@ -1,0 +1,23 @@
+
+Gcsharpsquid:S3903"*Move 'AIBehaviour' into a named namespace.(êˆã
+fcsharpsquid:S1104
+"DMake this field 'private' and encapsulate it in a 'public' property.(ÆÒ¾•ûÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Øß©ûÿÿÿÿ
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(º”Åô
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Úîë
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Û™×â
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(“òæÄ
+fcsharpsquid:S1104 "DMake this field 'private' and encapsulate it in a 'public' property.(•Î ÿÿÿÿÿ
+acsharpsquid:S1104ú"DMake this field 'private' and encapsulate it in a 'public' property.(Ã¶@
+gcsharpsquid:S1104û"DMake this field 'private' and encapsulate it in a 'public' property.(µÇÓÚÿÿÿÿÿ
+gcsharpsquid:S1104ü"DMake this field 'private' and encapsulate it in a 'public' property.(Í˜­üÿÿÿÿ
+bcsharpsquid:S1104½"DMake this field 'private' and encapsulate it in a 'public' property.(ÆèŞ–
+gcsharpsquid:S1104¾"DMake this field 'private' and encapsulate it in a 'public' property.(Äí‹çúÿÿÿÿ
+Pcsharpsquid:S3267–"2Loops should be simplified with "LINQ" expressions(ºšêÑ
+Pcsharpsquid:S3267¥"2Loops should be simplified with "LINQ" expressions(ğÇ¾§
+^csharpsquid:S3267±"@Loop should be simplified by calling Select(x => x.abilityName))(ğÇ¾§
+Scsharpsquid:S3459"6Remove unassigned field '_tileGrid', or set its value.(àãúß
+scsharpsquid:S1450"VRemove the field 'raycast' and declare it as a local variable in the relevant methods.(¼¶ë¸
+@csharpsquid:S125~"Remove this commented out code.(÷Ğ¼şÿÿÿÿ
+<csharpsquid:S125½"Remove this commented out code.(‹á‚ƒ
+6csharpsquid:S4663ö"Remove this empty comment(è»»_

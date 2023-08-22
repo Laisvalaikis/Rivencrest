@@ -85,8 +85,6 @@ W
 'Assets/InputManagment/SimpleControls.cs,2\1\218e7f70fd9a8b7a10c790074e473ddbd02e02ad
 n
 >Assets/_Aurimas/Scripts/Encounter/EncounterButtonController.cs,b\f\bfa6c1606a7811141a87e3a18bd384cd2110091a
-j
-:Assets/_Eligijus/Scripts_old/GameManagment/GameProgress.cs,2\3\23ff33bb37cb09f69589beb4a6a58000181ab715
 c
 3Assets/_Eligijus/Scripts/UI/UiViewManagment/View.cs,f\a\fab08b4b11a0974b49986ef7f6a5ac2e7090ec00
 h
@@ -101,3 +99,15 @@ X
 (Assets/_Eligijus/Scripts/Data/MapData.cs,a\f\af62b00ba4446e9d3adf42c2de038602329b2498
 e
 5Assets/_Eligijus/Scripts/SoundManager/SoundManager.cs,c\6\c68d2181140c56edbb15b82ce69cdc831f2b6c23
+j
+:Assets/_Eligijus/Scripts_old/GameManagment/GameProgress.cs,2\3\23ff33bb37cb09f69589beb4a6a58000181ab715
+k
+;Assets/_Eligijus/Scripts_old/Character/PlayerInformation.cs,0\1\01fa8010973eed4d0d1292541e5cdcf2c7e90204
+a
+1Assets/_Eligijus/Scripts_old/Grid/GridMovement.cs,3\6\36f7935f8f70576428966150462a7db6e7adc4bd
+^
+.Assets/_Eligijus/Scripts_old/AI/AIBehaviour.cs,e\2\e2dc09fc8252f02cd7d1073fc57663d964db47c0
+f
+6Assets/_Eligijus/Scripts_old/Consumable/PurpleSpear.cs,2\0\208c49d0f69962e0ae317e7aa8aa0cafafb5d9b0
+_
+/Assets/_Eligijus/Scripts_old/GameInformation.cs,e\0\e0a075e84b51447005df55e5882cc6b46380a048

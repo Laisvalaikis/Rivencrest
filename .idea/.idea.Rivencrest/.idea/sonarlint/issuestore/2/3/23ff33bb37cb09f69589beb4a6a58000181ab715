@@ -1,6 +1,4 @@
 
-tcsharpsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 36 to the 15 allowed.(¥ÖÉûÿÿÿÿ
-pcsharpsquid:S3776ê"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(õ”î÷
 Hcsharpsquid:S3903
 "+Move 'GameProgress' into a named namespace.(Àèıë
 acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¼õ›è
@@ -15,10 +13,15 @@ bcsharpsquid:S2223"EChange the visibility of 'instance' or make it 'const' o
 wcsharpsquid:S2696"UMake the enclosing instance method 'static' or remove this set on the 'static' field.(ñõîÙşÿÿÿÿ
 Acsharpsquid:S125"Remove this commented out code.(òó©=8Ì°×ê˜1
 Bcsharpsquid:S125"Remove this commented out code.(¥ÿæÖ8àÂ„“™1
+Bcsharpsquid:S125:"Remove this commented out code.(Ã¨Ã‡8ïÏîä¡1
 ;csharpsquid:S125?"Remove this commented out code.(ğõô±
 @csharpsquid:S125q"Remove this commented out code.(¼î¯Îøÿÿÿÿ
 Acsharpsquid:S125£"Remove this commented out code.(ú±Ì¸ùÿÿÿÿ
 ;csharpsquid:S125Ã"Remove this commented out code.(Ô¤I
+Hcsharpsquid:S125’"Remove this commented out code.(“Éšûÿÿÿÿ8õÏîä¡1
+Ccsharpsquid:S125”"Remove this commented out code.(Ç¼¥Ø8õÏîä¡1
+Ccsharpsquid:S125"Remove this commented out code.(ó“ 8õÏîä¡1
 Acsharpsquid:S125 "Remove this commented out code.(ÜêÀÆıÿÿÿÿ
 <csharpsquid:S125ä"Remove this commented out code.(­æıì
+Ccsharpsquid:S125‰"Remove this commented out code.(­£Šì8õÏîä¡1
 Acsharpsquid:S125 "Remove this commented out code.(ÁÄìÏüÿÿÿÿ
