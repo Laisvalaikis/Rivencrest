@@ -34,6 +34,7 @@ public class SelectAction : MonoBehaviour
         {
             if (_playerAbilities[i].enabled)
             {
+                abilityButtons[buttonIndex].gameObject.SetActive(true);
                 abilityButtons[buttonIndex].AbilityInformation(i, _playerAbilities[i].Action, this);
                 abilityButtons[buttonIndex].AbilityButtonImage.sprite = _playerAbilities[i].AbilityImage;
                 abilityButtons[buttonIndex].abilityButtonBackground.color = _playerInformationData.backgroundColor;
@@ -56,6 +57,8 @@ public class SelectAction : MonoBehaviour
     public void SetCurrentCharacter(GameObject currentPlayer)
     {
         _currentPlayer = currentPlayer;
+        GetAbilities();
+        GenerateActions();
     }
     
     
