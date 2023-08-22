@@ -30,7 +30,6 @@ public class BottomCornerUI : MonoBehaviour
     private PlayerInformationData _currentPlayerInformationData;
     private GridMovement characterOnBoardGridMovement;
     private ActionButton actionButtonList;
-    [SerializeField] private List<Image> actionButtonImage;
     [SerializeField] private List<Image> actionButtonFrame;
     private PlayerInformation playerInformationCurrentCharacter;
     private PlayerInformation playerInformationCharacterOnBoard;
@@ -65,16 +64,16 @@ public class BottomCornerUI : MonoBehaviour
         }
         _actionButtons = new List<ActionButton>();
         Debug.Log("Need To update action buttons");
-        ButtonFrameList = new List<GameObject>();
-        ButtonIconList = new List<GameObject>();
+        // ButtonFrameList = new List<GameObject>();
+        // ButtonIconList = new List<GameObject>();
         for (int i = 0; i < ButtonList.Count; i++)
         { 
             //ButtonFrameList.Add(ButtonList[i].transform.Find("ActionButtonFrame").gameObject);
             // ButtonIconList.Add(ButtonList[i].transform.Find("ActionButtonImage").gameObject);
-            ButtonFrameList.Add(actionButtonFrame[i].transform.gameObject);
-            ButtonIconList.Add(actionButtonImage[i].transform.gameObject);
+            // ButtonFrameList.Add(actionButtonFrame[i].transform.gameObject);
+            // ButtonIconList.Add(actionButtonImage[i].transform.gameObject);
             // ButtonIconList[i].GetComponent<Image>().color = GetComponent<BottomCornerUI>().ButtonIconColor;
-            ButtonIconList[i].GetComponent<Image>().color = ButtonIconColor;
+            // ButtonIconList[i].GetComponent<Image>().color = ButtonIconColor;
            // _actionButtons.Add(ButtonList[i].GetComponent<ActionButton>());
             _actionButtons.Add(actionButtonList);
             var CantAttackIcon = ButtonList[i].transform.Find("CantAttackImage");
@@ -325,8 +324,10 @@ public class BottomCornerUI : MonoBehaviour
                         //     && (ButtonList[i].transform.Find("Text").GetComponent<CooldownText>().action.AbilityCooldown - ButtonList[i].transform.Find("Text").GetComponent<CooldownText>().action.AbilityPoints) > 0)
                         // {
                        // var image = ButtonList[i].transform.Find("ActionButtonImage").GetComponent<Image>();
-                          var image = actionButtonImage[i].GetComponent<Image>();
-                        image.color = new Color(image.color.r, image.color.g, image.color.b, 0.3f);
+                       
+                          // var image = actionButtonImage[i].GetComponent<Image>();
+                        // image.color = new Color(image.color.r, image.color.g, image.color.b, 0.3f);
+                        
                         // }
                     }
                     else
