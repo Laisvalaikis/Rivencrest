@@ -61,7 +61,7 @@ using Random = UnityEngine.Random;
         }
         public virtual void OnTileHover(GameObject tile)//parodo kas bus
         {
-
+            
         }
         public virtual void EnableDamagePreview(GameObject tile, int minAttackDamage, int maxAttackDamage = -1)//damage texto ijungimui
         {

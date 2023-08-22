@@ -6,7 +6,7 @@ public class ActionManagerNew : MonoBehaviour
 {
     [SerializeField]
     private List<Ability> _abilities;
-
+    
 
     public List<Ability> ReturnAbilities()
     {

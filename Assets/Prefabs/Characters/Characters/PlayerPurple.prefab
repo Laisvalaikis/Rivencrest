@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 4715086791741578435}
   - component: {fileID: 4966171617031932745}
   - component: {fileID: 7393258757428417652}
+  - component: {fileID: -7820073259761359133}
   m_Layer: 8
   m_Name: PlayerPurple
   m_TagString: Player
@@ -135,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763e3691d60f39f48a88a9e4187954f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 659955981309584226}
+  playerCenter: {x: 0, y: 0.5, z: 0}
 --- !u!114 &1310519675225487401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +164,9 @@ MonoBehaviour:
     characterIndex: 0
     playerInformation: {fileID: 0}
     prefab: {fileID: 0}
+  gameInformation: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  animator: {fileID: 0}
   health: 100
   CharactersTeam: Default
   TeamManager: {fileID: 0}
@@ -199,10 +203,12 @@ MonoBehaviour:
   Stasis: 0
   wasThisCharacterSpawned: 0
   enabledAbilitiesEnemy: []
-  gameInformation: {fileID: 0}
   Respawn: 0
   XPToGain: 0
   isThisObject: 0
+  PoisonSpecialColor: 0
+  PinkWeakSpotSpecialColor: 1
+  ProtectedSpecialColor: 2
 --- !u!114 &7282709673297147284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,6 +366,10 @@ MonoBehaviour:
   fogLayer:
     serializedVersion: 2
     m_Bits: 2048
+  gridMovement: {fileID: 0}
+  playerInformation: {fileID: 0}
+  playerMovement: {fileID: 0}
+  actionManager: {fileID: 0}
   DestinationObject: {x: 0, y: 0, z: 0}
   _data: {fileID: 0}
 --- !u!114 &6163354005351970986
@@ -468,6 +478,34 @@ MonoBehaviour:
   AbilityPoints: 0
   isDisabled: 0
   spawnedCharacter: {fileID: 0}
+--- !u!114 &-7820073259761359133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659955980883675694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ddf932498672ad4bb70355f71596c13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _abilities:
+  - enabled: 1
+    AbilityImage: {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    Action: {fileID: 6890059959884175614}
+  - enabled: 1
+    AbilityImage: {fileID: 8361226031749484295, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    Action: {fileID: 4715086791741578435}
+  - enabled: 1
+    AbilityImage: {fileID: 850385056709354357, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    Action: {fileID: 7393258757428417652}
+  - enabled: 1
+    AbilityImage: {fileID: -1290873878513007113, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    Action: {fileID: 6163354005351970986}
+  - enabled: 1
+    AbilityImage: {fileID: -4035232837558371148, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    Action: {fileID: 4966171617031932745}
 --- !u!1 &659955981309584225
 GameObject:
   m_ObjectHideFlags: 0

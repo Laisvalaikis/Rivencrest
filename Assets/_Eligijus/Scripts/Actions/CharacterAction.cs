@@ -8,4 +8,4 @@ public abstract class CharacterAction : MonoBehaviour
     {
         
     }
-}
+}//visos visu abilities funkcijos
