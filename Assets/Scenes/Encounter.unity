@@ -419,6 +419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CornerUI
       objectReference: {fileID: 0}
+    - target: {fileID: 3598434806333910222, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: _abilityManager
+      value: 
+      objectReference: {fileID: 1649360796}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -552,6 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f815bbc199d5062459b31bb88a395391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _selectAction: {fileID: 0}
   selectedCharacterAction: {fileID: 0}
   currentMap: {fileID: 11400000, guid: ae4fe66ff0493684e856885fe6bbe2f5, type: 2}
   showChunks: 1
@@ -1112,6 +1117,7 @@ GameObject:
   - component: {fileID: 1649360792}
   - component: {fileID: 1649360794}
   - component: {fileID: 1649360795}
+  - component: {fileID: 1649360796}
   m_Layer: 0
   m_Name: Encounter
   m_TagString: Untagged
@@ -1281,6 +1287,20 @@ MonoBehaviour:
     portraitBoxExtension: {fileID: -6365722489516383422, guid: b067f420253935a4d845f3a26dbb96ef, type: 3}
     CharacterButton: {fileID: 8343506056931329783, guid: 537fca279677d01438d779d1beb60aed, type: 3}
   teamInformation: {fileID: 1428143988}
+--- !u!114 &1649360796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649360791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d988dad1ad5eb441bcace10f317c2f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 26522310}
+  gameTileMap: {fileID: 363828190}
 --- !u!1 &1689895465
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,7 +20,7 @@ public class AbilityManager : MonoBehaviour
     }
     private void MouseClick()
     {
-        Vector3 mousePos = new Vector3(_mousePosition.x, _mousePosition.y, GetComponent<Camera>().nearClipPlane);
+        /*Vector3 mousePos = new Vector3(_mousePosition.x, _mousePosition.y, GetComponent<Camera>().nearClipPlane);
         Vector3 worldPos = GetComponent<Camera>().ScreenToWorldPoint(mousePos);
         Debug.Log(worldPos);
         if (!gameTileMap.CharacterIsSelected())
@@ -41,6 +41,6 @@ public class AbilityManager : MonoBehaviour
             {
                 gameTileMap.SelectTile(worldPos);
             }
-        }
+        }*/
     }
 }
