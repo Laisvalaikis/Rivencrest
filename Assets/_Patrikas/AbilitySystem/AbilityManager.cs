@@ -14,7 +14,7 @@ public class AbilityManager : MonoBehaviour
             MouseClick();
     }
 
-    public void SetCurrentAbility()
+    public void SetCurrentAbility(CharacterAction ability)
     {
         
     }

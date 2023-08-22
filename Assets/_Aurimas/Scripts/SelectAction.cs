@@ -8,6 +8,7 @@ public class SelectAction : MonoBehaviour
     private List<Ability> _playerAbilities;
     private GameObject _currentPlayer;
     private PlayerInformationData _playerInformationData;
+    [SerializeField] private AbilityManager _abilityManager;
     [SerializeField] private List<SelectActionButton> abilityButtons;
     void Start()
     {
@@ -49,7 +50,12 @@ public class SelectAction : MonoBehaviour
 
     public void ActionSelection(int index, CharacterAction characterAction)
     {
-        
+        _abilityManager.SetCurrentAbility(characterAction);
+    }
+
+    public void SetCurrentCharacter(GameObject currentPlayer)
+    {
+        _currentPlayer = currentPlayer;
     }
     
     

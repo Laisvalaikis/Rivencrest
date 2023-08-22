@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 
 public class GameTileMap : MonoBehaviour
 {
-
+    [SerializeField] private SelectAction _selectAction;
     public static GameTileMap Tilemap;
     [System.Serializable]
     public class SaveChunks
@@ -269,6 +269,7 @@ public class GameTileMap : MonoBehaviour
         {
             ChunkData chunkData = GetChunk(mousePosition);
             chunkData.SetCurrentCharacter(character);
+            _selectAction.SetCurrentCharacter(character);
         }
     }
 
