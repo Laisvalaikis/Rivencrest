@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class SelectAction : MonoBehaviour
 {
-    private ActionManagerNew actionManagerNew;
-    private List<Ability> playerAbilities;
-    private GameObject currentPlayer;
+    private ActionManagerNew _actionManagerNew;
+    private List<Ability> _playerAbilities;
+    private GameObject _currentPlayer;
+    private PlayerInformationData _playerInformationData;
     [SerializeField] private List<SelectActionButton> abilityButtons;
     void Start()
     {
@@ -21,6 +22,35 @@ public class SelectAction : MonoBehaviour
 
     private void GetAbilities()
     {
-        playerAbilities = currentPlayer.GetComponent<ActionManagerNew>().ReturnAbilities();
+        _playerAbilities = _currentPlayer.GetComponent<ActionManagerNew>().ReturnAbilities();
+        _playerInformationData = _currentPlayer.GetComponent<PlayerInformation>().playerInformationData;
     }
+
+    public void GenerateActions()
+    {
+        int buttonIndex = 0;
+        for (int i = 0; i < _playerAbilities.Count; i++)
+        {
+            if (_playerAbilities[i].enabled)
+            {
+                abilityButtons[buttonIndex].AbilityInformation(i, _playerAbilities[i].Action, this);
+                abilityButtons[buttonIndex].AbilityButtonImage.sprite = _playerAbilities[i].AbilityImage;
+                abilityButtons[buttonIndex].abilityButtonBackground.color = _playerInformationData.backgroundColor;
+                buttonIndex++;
+            }
+        }
+
+        for (int i = buttonIndex; i < abilityButtons.Count; i++)
+        {
+            abilityButtons[i].gameObject.SetActive(false);
+        }
+        
+    }
+
+    public void ActionSelection(int index, CharacterAction characterAction)
+    {
+        
+    }
+    
+    
 }
