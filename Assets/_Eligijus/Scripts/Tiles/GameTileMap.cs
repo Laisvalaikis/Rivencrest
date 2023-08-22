@@ -269,7 +269,7 @@ public class GameTileMap : MonoBehaviour
         {
             ChunkData chunkData = GetChunk(mousePosition);
             chunkData.SetCurrentCharacter(character);
-            _selectAction.SetCurrentCharacter(character);
+
         }
     }
 
@@ -327,6 +327,10 @@ public class GameTileMap : MonoBehaviour
             Debug.Log("Pressed");
             ChunkData chunkData = GetChunk(mousePosition);
             _currentSelectedCharacter = chunkData.GetCurrentCharacter();
+            if (_currentSelectedCharacter != null)
+            {
+                _selectAction.SetCurrentCharacter(_currentSelectedCharacter);
+            }
         }
     }
 

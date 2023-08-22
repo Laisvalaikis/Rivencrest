@@ -16,7 +16,7 @@ public class AbilityManager : MonoBehaviour
 
     public void SetCurrentAbility(CharacterAction ability)
     {
-        
+        Debug.LogWarning("YEEEEEEYYYYYYTTTTTTTTTT " + ability.GetType());
     }
     private void MouseClick()
     {
