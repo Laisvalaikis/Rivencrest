@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SelectAction : MonoBehaviour
 {
@@ -38,6 +40,9 @@ public class SelectAction : MonoBehaviour
                 abilityButtons[buttonIndex].AbilityInformation(i, _playerAbilities[i].Action, this);
                 abilityButtons[buttonIndex].AbilityButtonImage.sprite = _playerAbilities[i].AbilityImage;
                 abilityButtons[buttonIndex].abilityButtonBackground.color = _playerInformationData.backgroundColor;
+                abilityButtons[buttonIndex].characterPortrait.sprite = _playerInformationData.CharacterPortraitSprite;
+                //abilityButtons[buttonIndex].healthBar = _playerInformationData.MaxHealth;
+                abilityButtons[buttonIndex].abilityCounter.color = _playerInformationData.classColor;
                 buttonIndex++;
             }
         }

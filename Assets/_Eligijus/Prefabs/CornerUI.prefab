@@ -346,6 +346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54c010f71099f24c88fa70c74e7b409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterPortrait: {fileID: 5456768208220464992}
+  _abilityManager: {fileID: 0}
   abilityButtons:
   - {fileID: 4225750205019443889}
   - {fileID: 157668101770582905}

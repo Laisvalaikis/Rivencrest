@@ -296,6 +296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityButtonBackground: {fileID: 1624485680852068089}
   AbilityButtonImage: {fileID: 1624485681457137712}
+  characterPortrait: {fileID: 1624485680127925806}
 --- !u!1 &1624485680852068091
 GameObject:
   m_ObjectHideFlags: 0
