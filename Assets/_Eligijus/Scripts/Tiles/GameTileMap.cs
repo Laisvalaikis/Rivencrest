@@ -359,6 +359,11 @@ public class GameTileMap : MonoBehaviour
         _currentSelectedCharacter = currentCharacter;
     }
 
+    public void DeselectTheCharacter(GameObject currentCharacter) //aurio sitas cia test
+    {
+        _currentSelectedCharacter = null;
+    }
+
     // void OnApplicationQuit()
     // {
     //     

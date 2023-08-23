@@ -13,6 +13,7 @@ public class PvPCharacterSelect : MonoBehaviour
     [SerializeField] private Image characterPortraitSprite;
     private PlayerInformationData _playerInformation;
     private bool isButtonAvailable = true;
+    public bool isSelected = false;
     
     void Start()
     {
@@ -47,7 +48,8 @@ public class PvPCharacterSelect : MonoBehaviour
         if (isButtonAvailable) // GameObject.Find("GameInformation").GetComponent<GameInformation>().canButtonsBeClicked fix this bs
         {
             gameTileMap.SetCurrentCharacter(characterOnBoard);
-            
+            isSelected = true;
+
             if (characterOnBoard.GetComponent<PlayerInformation>().health > 0)
             {
                 // if (characterPortraitFrame.GetComponent<Animator>().GetBool("select"))
@@ -63,9 +65,9 @@ public class PvPCharacterSelect : MonoBehaviour
     }
     public void DeselectPortrait()
     {
-        if (isButtonAvailable)
+        if (isButtonAvailable && isSelected)
         {
-            gameTileMap.DeselectCurrentCharacter();
+            gameTileMap.DeselectTheCharacter(characterOnBoard);
         }
     }
     public void OnHover()
