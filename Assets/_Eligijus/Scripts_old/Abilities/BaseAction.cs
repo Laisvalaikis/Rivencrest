@@ -302,7 +302,8 @@ using Random = UnityEngine.Random;
         }
         public override void ResolveAbility(GameObject clickedTile)
         {
-           Debug.Log("We are in BaseAction");
+            base.ResolveAbility(clickedTile);
+            Debug.Log("We are in BaseAction");
             _assignSound.PlaySound(selectedEffectIndex, selectedSongIndex);
             Debug.LogWarning("PlaySound");
             
