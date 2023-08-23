@@ -10,6 +10,7 @@ public class SelectAction : MonoBehaviour
     private List<Ability> _playerAbilities;
     private GameObject _currentPlayer;
     private PlayerInformationData _playerInformationData;
+    [SerializeField] private HelpTable helpTable;
     [SerializeField] private AbilityManager _abilityManager;
     [SerializeField] private List<SelectActionButton> abilityButtons;
     void Start()
@@ -37,7 +38,7 @@ public class SelectAction : MonoBehaviour
             if (_playerAbilities[i].enabled)
             {
                 abilityButtons[buttonIndex].gameObject.SetActive(true);
-                abilityButtons[buttonIndex].AbilityInformation(i, _playerAbilities[i].Action, this);
+                abilityButtons[buttonIndex].AbilityInformation(i, helpTable, _playerAbilities[i], this);
                 abilityButtons[buttonIndex].AbilityButtonImage.sprite = _playerAbilities[i].AbilityImage;
                 abilityButtons[buttonIndex].abilityButtonBackground.color = _playerInformationData.backgroundColor;
                 abilityButtons[buttonIndex].characterPortrait.sprite = _playerInformationData.CharacterPortraitSprite;

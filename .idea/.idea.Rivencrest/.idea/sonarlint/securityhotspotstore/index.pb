@@ -35,8 +35,6 @@ f
 ,Assets/_Eligijus/Scripts/Data/AbilityText.cs,4\3\438dfdb6ecc607940ecc7437c06c68beb6fa1133
 l
 <Assets/_Eligijus/Scripts/RecruitementCenter/RecruitButton.cs,3\f\3f71211a9ea847332b764d3257b68fbb2434f946
-u
-EAssets/_Eligijus/Scripts/RecruitementCenter/CharacterInspectInShop.cs,9\0\902c30d9d41770b0039da66906e81ad349bd6451
 b
 2Assets/_Eligijus/Scripts/TownHall/UpgradeButton.cs,1\c\1c7a58d5fd3d8684072e4e928cefe43332c62e0d
 ]
@@ -45,8 +43,6 @@ o
 ?Assets/_Eligijus/Scripts/CharacterPortrait/CharacterPortrait.cs,6\3\63cb8443b9a3cdec3642926e41621ce9862f702b
 f
 6Assets/_Eligijus/Scripts_old/Abilities/ActionButton.cs,3\7\37917569e0dabfff583d99de6621a0db1078fbe5
-_
-/Assets/_Eligijus/Scripts/HelpTable/HelpTable.cs,2\b\2b2b8c63dbbe3ec93cf805569a192787c7fc327a
 f
 6Assets/_Eligijus/Scripts/SaveManager/SavedCharacter.cs,9\c\9c842d5b8ddb180b625d605eedb9e45979ca17d8
 c

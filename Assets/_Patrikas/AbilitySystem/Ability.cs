@@ -7,7 +7,8 @@ using UnityEngine;
 [System.Serializable]
 public class Ability
 {
-    public bool enabled=true;
+    public string actionName;
+    public bool enabled = true;
     public Sprite AbilityImage;
     public CharacterAction Action;
 }

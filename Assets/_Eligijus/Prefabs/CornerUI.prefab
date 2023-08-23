@@ -346,6 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54c010f71099f24c88fa70c74e7b409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  helpTable: {fileID: 2653853784337392208}
   _abilityManager: {fileID: 0}
   abilityButtons:
   - {fileID: 4225750205019443889}
@@ -2374,35 +2375,11 @@ MonoBehaviour:
   - eventID: 0
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: OnHover
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
   - eventID: 1
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: OffHover
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!114 &2653853784337392208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3685,6 +3662,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 219515217349625064}
     m_Modifications:
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5949574303427822606}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5949574303427822606}
     - target: {fileID: 1624485680837221430, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
       propertyPath: m_Name
       value: ExtensionButton1
@@ -3781,6 +3766,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4076706985032980801, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 8369032573077405776}
+    - target: {fileID: 4076706985032980801, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: characterPortrait
+      value: 
+      objectReference: {fileID: 219515217425139507}
+    - target: {fileID: 4076706985032980801, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: staminaButtonBackground
+      value: 
+      objectReference: {fileID: 3310706611684239604}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3810,6 +3807,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 219515217349625064}
     m_Modifications:
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5949574303427822606}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5949574303427822606}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1624485680837221430, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
       propertyPath: m_Name
       value: ExtensionButton5
@@ -3923,6 +3956,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 219515217349625064}
     m_Modifications:
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5949574303427822606}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5949574303427822606}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1624485680837221430, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
       propertyPath: m_Name
       value: ExtensionButton3
@@ -4036,6 +4105,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 219515217349625064}
     m_Modifications:
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5949574303427822606}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5949574303427822606}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1624485680837221430, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
       propertyPath: m_Name
       value: ExtensionButton4
@@ -4149,6 +4254,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 219515217349625064}
     m_Modifications:
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5949574303427822606}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5949574303427822606}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1624485680837221430, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
       propertyPath: m_Name
       value: ExtensionButton2
@@ -4379,6 +4520,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 219515217349625064}
     m_Modifications:
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5949574303427822606}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5949574303427822606}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624485680837221428, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1624485680837221430, guid: cb6ce843e25c2334c95f4d8fce3febe5, type: 3}
       propertyPath: m_Name
       value: ExtensionButton6

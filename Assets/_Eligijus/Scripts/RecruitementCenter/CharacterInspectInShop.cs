@@ -88,6 +88,7 @@ public class CharacterInspectInShop : MonoBehaviour
         Vector3 position = new Vector3(currentPosition.x, _characterAbilityRecruits[abilityIndex].gameObject.transform.position.y,
             currentPosition.z);
         helpTableTransform.SetPositionAndRotation(position, helpTableTransform.rotation);
-        helpTable.EnableTableForCharacters(abilityIndex, _currentCharacterIndex);
+        // helpTable.EnableTableForCharacters(abilityIndex, _currentCharacterIndex);
+        Debug.LogError("FIX ABILITY INFORMATION");
     }
 }

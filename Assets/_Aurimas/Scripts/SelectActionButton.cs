@@ -9,12 +9,14 @@ public class SelectActionButton : MonoBehaviour
 {
     private SelectAction selectAction;
     private int abilityIndex;
-    private CharacterAction abilityInformation;
+    private Ability abilityInformation;
+    private HelpTable _helpTable;
     public Image abilityButtonBackground;
     public Image AbilityButtonImage;
     public Image characterPortrait;
     public TextMeshProUGUI healthBar;
     public Image staminaButtonBackground;
+    
     
     void Start()
     {
@@ -27,16 +29,27 @@ public class SelectActionButton : MonoBehaviour
         
     }
 
-    public void OnButtonClick()
+    public void OnHover()
     {
-        selectAction.ActionSelection(abilityIndex, abilityInformation);
+        _helpTable.EnableTableForCharacters(abilityInformation);
     }
 
-    public void AbilityInformation(int abilityIndex, CharacterAction characterAction, SelectAction selectedAction)
+    public void OffHover()
+    {
+        
+    }
+
+    public void OnButtonClick()
+    {
+        selectAction.ActionSelection(abilityIndex, abilityInformation.Action);
+    }
+
+    public void AbilityInformation(int abilityIndex, HelpTable helpTable, Ability characterAction, SelectAction selectedAction)
     {
         this.abilityIndex = abilityIndex;
         abilityInformation = characterAction;
         selectAction = selectedAction;
+        _helpTable = helpTable;
     }
     
 }

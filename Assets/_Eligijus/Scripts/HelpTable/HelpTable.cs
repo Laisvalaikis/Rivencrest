@@ -63,7 +63,8 @@ public class HelpTable : MonoBehaviour
         SetupHelpTable();
         ActionManager actionManager = _data.Characters[characterIndex].prefab.GetComponent<ActionManager>();
         SavedCharacter character = _data.Characters[characterIndex];
-        UpdateHelpTable(abilityIndex, character, actionManager);
+        // UpdateHelpTable(abilityIndex, character, actionManager);
+        Debug.LogError("FIX ABILITY INFORMATION");
     }
 
     public void DisableHelpTable()
@@ -75,10 +76,9 @@ public class HelpTable : MonoBehaviour
         }
     }
 
-    private void UpdateHelpTable(int abilityIndex, SavedCharacter character, ActionManager actionManager)
+    private void UpdateHelpTable(Ability currentAbility)
     {
-        var ability = actionManager.FindActionByIndex(abilityIndex).action;
-        AbilityText abilityText = _abilities[ability.actionStateName];
+        AbilityText abilityText = _abilities[currentAbility.actionName];
         if (abilityText != null)
         {
             if (wasSelected)
@@ -89,7 +89,7 @@ public class HelpTable : MonoBehaviour
             else
             {
                 gameObject.SetActive(true);
-                FillTableWithInfo(ability, abilityText, character, actionManager);
+                FillTableWithInfo(currentAbility, abilityText);
                 wasSelected = true;
             }
         }
@@ -97,22 +97,21 @@ public class HelpTable : MonoBehaviour
     
     
 
-    public void EnableTableForCharacters(int abilityIndex, int characterIndex)
+    public void EnableTableForCharacters(Ability currentAbility)
     {
         SetupHelpTable();
-        ActionManager actionManager = _data.AllAvailableCharacters[characterIndex].prefab.GetComponent<ActionManager>();
-        SavedCharacter character = _data.AllAvailableCharacters[characterIndex];
-        UpdateHelpTable(abilityIndex, character, actionManager);
+        UpdateHelpTable(currentAbility);
     }
     
 
-    private void FillTableWithInfo(BaseAction ability, AbilityText abilityText, SavedCharacter character, ActionManager actionManager)
+    private void FillTableWithInfo(Ability ability, AbilityText abilityText)
     {
-        icon.sprite = actionManager.FindActionListByName(ability.actionStateName).AbilityIcon;
+        icon.sprite = ability.AbilityImage;
+        BaseAction baseAction = (BaseAction)ability.Action;
         abilityTitle.text = abilityText.abilityTitle;
         abilityDescription.text = abilityText.abilityDescription;
-        cooldownText.text = ability.AbilityCooldown.ToString();
-        if (ability.maxAttackDamage == 0)
+        cooldownText.text = baseAction.AbilityCooldown.ToString();
+        if (baseAction.maxAttackDamage == 0)
         {
             damageIcon.SetActive(false);
             damageText.gameObject.SetActive(false);
@@ -123,20 +122,20 @@ public class HelpTable : MonoBehaviour
         {
             damageIcon.SetActive(true);
             damageText.gameObject.SetActive(true);
-            damageText.text = ability.GetDamageString();
+            damageText.text = baseAction.GetDamageString();
             Debug.Log("Offset for slow/fast ability off");
             // helpTable.isAbilitySlow.transform.localPosition = isAbilitySlowOriginalPosition;
         }
-        slowAbility.SetActive(ability.isAbilitySlow);
-        fastAbility.SetActive(!ability.isAbilitySlow);
-        rangeText.text = ability.AttackRange.ToString();
-        var blessingsList = character.blessings.FindAll(x => x.spellName == ability.actionStateName);
-        StringBuilder blessingTextBuilder = new StringBuilder();
-        foreach (var blessing in blessingsList)
-        {
-            blessingTextBuilder.Append($"{blessing.blessingName}\n");
-        }
-        blessingsText.text = blessingTextBuilder.ToString();
+        slowAbility.SetActive(baseAction.isAbilitySlow);
+        fastAbility.SetActive(!baseAction.isAbilitySlow);
+        rangeText.text = baseAction.AttackRange.ToString();
+        // var blessingsList = character.blessings.FindAll(x => x.spellName == ability.actionStateName);
+        // StringBuilder blessingTextBuilder = new StringBuilder();
+        // foreach (var blessing in blessingsList)
+        // {
+        //     blessingTextBuilder.Append($"{blessing.blessingName}\n");
+        // }
+        // blessingsText.text = blessingTextBuilder.ToString();
     }
 
 
