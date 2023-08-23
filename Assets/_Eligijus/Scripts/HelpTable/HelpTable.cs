@@ -19,8 +19,6 @@ public class HelpTable : MonoBehaviour
     public GameObject isAbilitySlow;
     public GameObject slowAbility;
     public GameObject fastAbility;
-    public List<AbilityText> abilityText;
-    private Dictionary<string, AbilityText> _abilities;
     [HideInInspector] public bool hasActionButtonBeenEntered = false;
     private Vector3 isAbilitySlowOriginalPosition;
     private bool wasSetuped = false;
@@ -46,13 +44,7 @@ public class HelpTable : MonoBehaviour
             {
                 _data = Data.Instance;
             }
-
-            _abilities = new Dictionary<string, AbilityText>();
-            for (int i = 0; i < abilityText.Count; i++)
-            {
-                _abilities.Add(abilityText[i].name, abilityText[i]);
-            }
-
+            
             isAbilitySlowOriginalPosition = isAbilitySlow.transform.localPosition;
             wasSetuped = true;
         }

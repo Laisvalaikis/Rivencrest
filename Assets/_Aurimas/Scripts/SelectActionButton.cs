@@ -36,7 +36,7 @@ public class SelectActionButton : MonoBehaviour
 
     public void OffHover()
     {
-        
+        _helpTable.DisableHelpTable();
     }
 
     public void OnButtonClick()
