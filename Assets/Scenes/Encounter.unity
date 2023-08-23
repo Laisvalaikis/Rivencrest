@@ -547,6 +547,234 @@ PrefabInstance:
       propertyPath: staminaButtonBackground
       value: 
       objectReference: {fileID: 795026534}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.size
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 278eb7903ef2ead4588f5ee6d8d58d99, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1490fd045cfb03d4ba60a157d7ab435b, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 51b05334c4ca8ca458af01d662eab7f5, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3b8b5c77a2b51c444916b96f3ad170a2, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c29691882b36184eb6a54972f83c5e6, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: b46ba5180bf06504cb37be0158cf65b3, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7131fb23c2e3b4d4a8040020fb33bfef, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: e86bf03cc11027446aa092a7a478d03e, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: cf57b07cbf770f847b3f0806ae43a6b6, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 983cd5b94d7a6aa4b921314dab0f9008, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 432c9baa15528424c88ccb4d8ae76393, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3c9e9081d63d4274c97b32e2c56d5ba0, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: f7f50e4f4ba184c4ea367d6fa9cb8b5c, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[13]
+      value: 
+      objectReference: {fileID: 11400000, guid: 468e548c073c1824a813f0b08b55b423, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[14]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6f87768b1ac371d41a4c0ef15b8c6bbe, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[15]
+      value: 
+      objectReference: {fileID: 11400000, guid: 23e15a62168162d4cb92b073d6e6c3bb, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[16]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4da6bac3a3e6aa9458f3f2eb388bde88, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[17]
+      value: 
+      objectReference: {fileID: 11400000, guid: a8fe2b30b6ea3634fbc3aa5aa26d43b1, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[18]
+      value: 
+      objectReference: {fileID: 11400000, guid: 23e87f3b9286b99489529162d4bc2107, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[19]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d9e742b51036a44d8e895efd3164b00, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[20]
+      value: 
+      objectReference: {fileID: 11400000, guid: f2ad52d58d107564fa2ccc6e8ab65994, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[21]
+      value: 
+      objectReference: {fileID: 11400000, guid: d8d843b41f3ed0f4caf7386b760ad2c1, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[22]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0c9fda63736a55541bb4344dd910c603, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[23]
+      value: 
+      objectReference: {fileID: 11400000, guid: cad85f32c3afc5640b4efc58ce74e410, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[24]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3840d3ea1b9b2d84f8eac53fca84c5ac, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[25]
+      value: 
+      objectReference: {fileID: 11400000, guid: 79e2ec02158e6f74b9cf059fe557af61, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[26]
+      value: 
+      objectReference: {fileID: 11400000, guid: 09207e375a925da4e975dac8531fd2b5, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[27]
+      value: 
+      objectReference: {fileID: 11400000, guid: 39a8802948fa037488b75bfaf62693c3, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[28]
+      value: 
+      objectReference: {fileID: 11400000, guid: 80baab0af04484040a99d41a9f69834c, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[29]
+      value: 
+      objectReference: {fileID: 11400000, guid: 14fe02b640533074ca6ca18c73743119, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[30]
+      value: 
+      objectReference: {fileID: 11400000, guid: 98e1bddd6ab13724bb1469146882b6bf, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[31]
+      value: 
+      objectReference: {fileID: 11400000, guid: 91a7654fb7f473b4b92d1d13c3cf5974, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[32]
+      value: 
+      objectReference: {fileID: 11400000, guid: 556e98b18ae7f984cb574cbbce0672b2, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[33]
+      value: 
+      objectReference: {fileID: 11400000, guid: af0d395f871454140b77fffcfd488a78, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[34]
+      value: 
+      objectReference: {fileID: 11400000, guid: 66879b7eb53187e4daa6894d6e6cd3e2, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[35]
+      value: 
+      objectReference: {fileID: 11400000, guid: 936cf2ea8ffe5d54d921a16e15696119, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[36]
+      value: 
+      objectReference: {fileID: 11400000, guid: e18f6105b03c9d24c944014c9a8844ea, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[37]
+      value: 
+      objectReference: {fileID: 11400000, guid: 43281a5240230c04699b720f96880549, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[38]
+      value: 
+      objectReference: {fileID: 11400000, guid: ffc4d658b7ed26546b53bf2ccc763452, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[39]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7bb5a2309e4102d41aebe89191809cbe, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[40]
+      value: 
+      objectReference: {fileID: 11400000, guid: a5b342583276ec44e8bd6324ce6cac9d, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[41]
+      value: 
+      objectReference: {fileID: 11400000, guid: aa53027cee5ff924bba056798355d4c1, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[42]
+      value: 
+      objectReference: {fileID: 11400000, guid: f55e589f60546a94b97f8b02ed23bafc, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[43]
+      value: 
+      objectReference: {fileID: 11400000, guid: 59e0054747ca1e64c8e28f624aac6f29, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[44]
+      value: 
+      objectReference: {fileID: 11400000, guid: 038b2d0d2020ff346a0efd57eeeb67c6, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[45]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f1e03c39772af848a0192b277d93390, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[46]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4698aee274e7997429878e5b99238e53, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[47]
+      value: 
+      objectReference: {fileID: 11400000, guid: ce9d1e4b70409d14784541f1461613cb, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[48]
+      value: 
+      objectReference: {fileID: 11400000, guid: 88dd88e4d53284a499c5ebbf278aae45, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[49]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5aac8ec6563e8214e9d7f8f5322df44b, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[50]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6a9789e0d2810934faa95b2fe8ff85e0, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[51]
+      value: 
+      objectReference: {fileID: 11400000, guid: 149cd657a1b997d44b630237c0ccd9dd, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[52]
+      value: 
+      objectReference: {fileID: 11400000, guid: daa05c12b3d6880449982cc390af8af6, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[53]
+      value: 
+      objectReference: {fileID: 11400000, guid: 81188ee79b03a6840872cac168e53f16, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[54]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b4244b8cccf3014c9fc132b6e894b79, type: 2}
+    - target: {fileID: 2653853784337392208, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: abilityText.Array.data[55]
+      value: 
+      objectReference: {fileID: 11400000, guid: 77faf37ca2424504fb6545aa87022410, type: 2}
     - target: {fileID: 3112473986988195901, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
       propertyPath: healthBar
       value: 
