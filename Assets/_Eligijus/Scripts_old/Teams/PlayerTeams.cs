@@ -18,14 +18,19 @@ public class PlayerTeams : MonoBehaviour
     public HelpTable helpTable;
     public ButtonManager characterUiButtonManager;
     public MapSetup mapSetup;
+    private TeamsList currentCharacters;
     [SerializeField] private ColorManager colorManager;
     private Data _data;
     void Start()
     {
         _data = Data.Instance;
         // mapSetup.SetupAMap();
+        currentCharacters = new TeamsList();
+        currentCharacters.teams = new List<CharacterList>();
         for (int i = 0; i < allCharacterList.teams.Count; i++)
         {
+            currentCharacters.teams.Add(new CharacterList());
+            currentCharacters.teams[i].characters = new List<GameObject>();
             SpawnCharacters(i, allCharacterList.teams[i].coordinates);
         }
         
@@ -41,7 +46,7 @@ public class PlayerTeams : MonoBehaviour
     private void SpawnCharacters(int teamIndex, List<Vector3> coordinates)
     {
         var spawnCoordinates = coordinates;
-        portraitTeamBox.teamIndex = teamIndex;
+        // portraitTeamBox.teamIndex = teamIndex;
         colorManager.SetPortraitBoxSprites(portraitTeamBox.gameObject, allCharacterList.teams[teamIndex].teamName);// priskiria spalvas mygtukams ir paciam portraitboxui
         //Portrait box color
         //portraitBox.GetComponent<Image>().sprite = allCharacterList.teams[teamIndex].teamPortraitBoxSprite;
@@ -60,7 +65,9 @@ public class PlayerTeams : MonoBehaviour
             {
                 GameObject spawnedCharacter = Instantiate(allCharacterList.teams[teamIndex].characters[i], new Vector3(x.x, x.y, 0f), Quaternion.identity); //Spawning the prefab into the scene.
                 GameTileMap.Tilemap.SetCharacter(spawnedCharacter.transform.position + new Vector3(0, 0.5f, 0), spawnedCharacter);
-        //         if(allCharacterList.teams[teamIndex].isTeamAI)
+                currentCharacters.teams[teamIndex].characters.Add(spawnedCharacter);
+
+                //         if(allCharacterList.teams[teamIndex].isTeamAI)
         //         {
         //             int points = 2 * (_data.townData.selectedEncounter.encounterLevel - 1);
         //             spawnedCharacter.GetComponent<PlayerInformation>().MaxHealth += points;
@@ -194,7 +201,7 @@ public class PlayerTeams : MonoBehaviour
                 aliveCharacterList.Add(allCharacterList.teams[teamIndex].characters[j]);
             }
         }
-        return aliveCharacterList;
+        return currentCharacters.teams[teamIndex].characters;
     }
     public GameObject FirstAliveCharacter(int teamIndex)
     {

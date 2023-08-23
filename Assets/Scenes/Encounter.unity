@@ -1373,6 +1373,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PortraitBox
       objectReference: {fileID: 0}
+    - target: {fileID: 5541860653724981137, guid: dd83df1fab5f75149b7b8e88aa412c33, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859209824211303085, guid: dd83df1fab5f75149b7b8e88aa412c33, type: 3}
+      propertyPath: gameTileMap
+      value: 
+      objectReference: {fileID: 363828190}
     - target: {fileID: 8859209824211303085, guid: dd83df1fab5f75149b7b8e88aa412c33, type: 3}
       propertyPath: playerTeams
       value: 

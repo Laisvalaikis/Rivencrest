@@ -7,6 +7,7 @@ public class TeamInformation : MonoBehaviour
 {
     [SerializeField] private PlayerTeams playerTeams;
     [SerializeField] private Image image;
+    [SerializeField] private GameTileMap gameTileMap;
     [SerializeField] private List<GameObject> TeamCharacterPortraitList;
     [SerializeField] private List<GameObject> CharacterOnBoardList;
     [SerializeField] private List<PvPCharacterSelect> pvpCharacterSelects;
@@ -36,6 +37,7 @@ public class TeamInformation : MonoBehaviour
                 pvpCharacterSelects[i].characterOnBoard = CharacterOnBoardList[i];
                 TeamCharacterPortraitList.Add(pvpCharacterSelects[i].GetCharacterPortraitFrame());
                 pvpCharacterSelects[i].CreateCharatersPortrait();
+                pvpCharacterSelects[i].gameTileMap = gameTileMap;
             }
             else
             {

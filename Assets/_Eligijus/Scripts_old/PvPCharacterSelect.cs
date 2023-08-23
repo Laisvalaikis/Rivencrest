@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class PvPCharacterSelect : MonoBehaviour
 {
+    public GameTileMap gameTileMap;
     public GameObject characterOnBoard;
     [SerializeField] private GameObject characterPortraitFrame;
     public Image extension;
     public Image frame;
     [SerializeField] private Image characterPortraitSprite;
-    private PlayerInformation _playerInformation;
+    private PlayerInformationData _playerInformation;
     private bool isButtonAvailable = true;
     
     void Start()
@@ -22,9 +23,9 @@ public class PvPCharacterSelect : MonoBehaviour
     {
         if (characterOnBoard != null)
         {
-            _playerInformation = characterOnBoard.GetComponent<PlayerInformation>();
-            _playerInformation.TeamManager = transform.parent.gameObject;
-            characterPortraitSprite.sprite = _playerInformation.playerInformationData.CharacterPortraitSprite;
+            _playerInformation = characterOnBoard.GetComponent<PlayerInformation>().playerInformationData;
+            // _playerInformation.TeamManager = transform.parent.gameObject;
+            characterPortraitSprite.sprite = _playerInformation.CharacterPortraitSprite;
 
             gameObject.SetActive(true);
             isButtonAvailable = true;
@@ -45,6 +46,7 @@ public class PvPCharacterSelect : MonoBehaviour
     {
         if (isButtonAvailable) // GameObject.Find("GameInformation").GetComponent<GameInformation>().canButtonsBeClicked fix this bs
         {
+            gameTileMap.SetCurrentCharacter(characterOnBoard);
             if (characterOnBoard.GetComponent<PlayerInformation>().health > 0)
             {
                 // if (characterPortraitFrame.GetComponent<Animator>().GetBool("select"))

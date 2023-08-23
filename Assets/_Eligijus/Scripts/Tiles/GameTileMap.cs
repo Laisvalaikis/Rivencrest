@@ -352,6 +352,11 @@ public class GameTileMap : MonoBehaviour
         return _currentSelectedCharacter;
     }
 
+    public void SetCurrentCharacter(GameObject currentCharacter)
+    {
+        _currentSelectedCharacter = currentCharacter;
+    }
+
     // void OnApplicationQuit()
     // {
     //     
