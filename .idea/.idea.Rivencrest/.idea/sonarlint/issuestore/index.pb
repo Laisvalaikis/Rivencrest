@@ -51,8 +51,6 @@ n
 >Assets/_Eligijus/Scripts/CharacterSelect/PortraitButtonData.cs,2\3\236a9580c5d03dd2aafd3a2a9165e7fc1acb177d
 k
 ;Assets/_Eligijus/Scripts/CharacterSelect/CharacterSelect.cs,4\1\41f83c31c2ec6eb947bd4c9cfaa4d642af0d39a5
-r
-BAssets/_Eligijus/Scripts/CharacterSelect/CharacterSelectManager.cs,e\3\e3f1d2a2b946dfdb8629101205ac23326ce745e1
 c
 3Assets/_Eligijus/Scripts/SaveManager/SaveManager.cs,8\5\851682e5072894eb9180a4349a106616fdae33a1
 ]

@@ -11,6 +11,7 @@ public class TeamInformation : MonoBehaviour
     [SerializeField] private List<GameObject> TeamCharacterPortraitList;
     [SerializeField] private List<GameObject> CharacterOnBoardList;
     [SerializeField] private List<PvPCharacterSelect> pvpCharacterSelects;
+    //private PvPCharacterSelect _pvPCharacterSelect;
     public int teamIndex;
 
     void Awake()

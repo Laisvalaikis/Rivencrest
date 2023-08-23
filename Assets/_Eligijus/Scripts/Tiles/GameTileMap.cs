@@ -312,7 +312,9 @@ public class GameTileMap : MonoBehaviour
         if (GetChunk(mousePosition) != null)
         {
             SetCharacter(_currentSelectedCharacter.transform.position, null);
-            _currentSelectedCharacter.transform.position = GetChunk(mousePosition).GetPosition() - offset;
+            Vector3 characterPosition = GetChunk(mousePosition).GetPosition() - offset;
+            characterPosition.z = _currentSelectedCharacter.transform.position.z;
+            _currentSelectedCharacter.transform.position = characterPosition;
             SetCharacter(mousePosition, _currentSelectedCharacter);
         }
         // SelectedCharacter.GetComponent<GridMovement>().RemoveAvailableMovementPoints(newPosition);

@@ -66,6 +66,5 @@ public class SelectAction : MonoBehaviour
         GetAbilities();
         GenerateActions();
     }
-    
-    
+
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PvPCharacterSelect : MonoBehaviour
 {
-    public GameTileMap gameTileMap;
+    public GameTileMap gameTileMap; //cia private padaryt
     public GameObject characterOnBoard;
     [SerializeField] private GameObject characterPortraitFrame;
     public Image extension;
@@ -47,6 +47,7 @@ public class PvPCharacterSelect : MonoBehaviour
         if (isButtonAvailable) // GameObject.Find("GameInformation").GetComponent<GameInformation>().canButtonsBeClicked fix this bs
         {
             gameTileMap.SetCurrentCharacter(characterOnBoard);
+            
             if (characterOnBoard.GetComponent<PlayerInformation>().health > 0)
             {
                 // if (characterPortraitFrame.GetComponent<Animator>().GetBool("select"))
@@ -58,6 +59,13 @@ public class PvPCharacterSelect : MonoBehaviour
                 //     GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().SelectACharacter(characterOnBoard);
                 // }
             }
+        }
+    }
+    public void DeselectPortrait()
+    {
+        if (isButtonAvailable)
+        {
+            gameTileMap.DeselectCurrentCharacter();
         }
     }
     public void OnHover()

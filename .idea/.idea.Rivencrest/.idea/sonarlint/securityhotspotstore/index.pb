@@ -53,8 +53,6 @@ k
 ;Assets/_Eligijus/Scripts/CharacterSelect/CharacterSelect.cs,4\1\41f83c31c2ec6eb947bd4c9cfaa4d642af0d39a5
 c
 3Assets/_Eligijus/Scripts/SaveManager/SaveManager.cs,8\5\851682e5072894eb9180a4349a106616fdae33a1
-r
-BAssets/_Eligijus/Scripts/CharacterSelect/CharacterSelectManager.cs,e\3\e3f1d2a2b946dfdb8629101205ac23326ce745e1
 ]
 -Assets/_Eligijus/Scripts/Data/StateManager.cs,4\c\4cd4ef24dc08189ad41cb29e1f08611c79deab3b
 X
