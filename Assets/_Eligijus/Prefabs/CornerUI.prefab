@@ -346,7 +346,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54c010f71099f24c88fa70c74e7b409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterPortrait: {fileID: 5456768208220464992}
   _abilityManager: {fileID: 0}
   abilityButtons:
   - {fileID: 4225750205019443889}
@@ -2249,6 +2248,7 @@ GameObject:
   - component: {fileID: 5949574303427822604}
   - component: {fileID: 288223506951742526}
   - component: {fileID: 8843953870794745104}
+  - component: {fileID: 2653853784337392208}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2403,6 +2403,31 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &2653853784337392208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5949574303427822606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77bfe5f3453adc479ca83e1f4861f6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 8259733731835736449}
+  abilityTitle: {fileID: 8995316078841423819}
+  abilityDescription: {fileID: 6162761578684142907}
+  cooldownText: {fileID: 2516692917510148616}
+  rangeText: {fileID: 777228534999241909}
+  damageText: {fileID: 9000210884121715660}
+  blessingsText: {fileID: 8755749031715741868}
+  damageIcon: {fileID: 1375347776980778921}
+  isAbilitySlow: {fileID: 2282717818280383565}
+  slowAbility: {fileID: 8456086727203737567}
+  fastAbility: {fileID: 6205430426309956846}
+  abilityText: []
+  hasActionButtonBeenEntered: 0
 --- !u!1 &6205430426309956846
 GameObject:
   m_ObjectHideFlags: 0
