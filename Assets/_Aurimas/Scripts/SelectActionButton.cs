@@ -14,7 +14,7 @@ public class SelectActionButton : MonoBehaviour
     public Image AbilityButtonImage;
     public Image characterPortrait;
     public TextMeshProUGUI healthBar;
-    public TextMeshProUGUI abilityCounter;
+    public Image staminaButtonBackground;
     
     void Start()
     {

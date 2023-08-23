@@ -41,8 +41,8 @@ public class SelectAction : MonoBehaviour
                 abilityButtons[buttonIndex].AbilityButtonImage.sprite = _playerAbilities[i].AbilityImage;
                 abilityButtons[buttonIndex].abilityButtonBackground.color = _playerInformationData.backgroundColor;
                 abilityButtons[buttonIndex].characterPortrait.sprite = _playerInformationData.CharacterPortraitSprite;
-                //abilityButtons[buttonIndex].healthBar = _playerInformationData.MaxHealth;
-                abilityButtons[buttonIndex].abilityCounter.color = _playerInformationData.classColor;
+                abilityButtons[buttonIndex].healthBar.text = _playerInformationData.MaxHealth.ToString();
+                abilityButtons[buttonIndex].staminaButtonBackground.color = _playerInformationData.backgroundColor;
                 buttonIndex++;
             }
         }
