@@ -35,12 +35,13 @@ public class TeamInformation : MonoBehaviour
             {
                 pvpCharacterSelects[i].characterOnBoard = CharacterOnBoardList[i];
                 TeamCharacterPortraitList.Add(pvpCharacterSelects[i].GetCharacterPortraitFrame());
+                pvpCharacterSelects[i].CreateCharatersPortrait();
             }
             else
             {
                 pvpCharacterSelects[i].characterOnBoard = null;
             }
-            pvpCharacterSelects[i].CreateCharatersPortrait();
+            
         }
         image.enabled = CharacterOnBoardList.Count != 0;
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PvPCharacterSelect : MonoBehaviour
 {
-    [HideInInspector] public GameObject characterOnBoard;
+    public GameObject characterOnBoard;
     [SerializeField] private GameObject characterPortraitFrame;
     public Image extension;
     public Image frame;
@@ -24,7 +24,7 @@ public class PvPCharacterSelect : MonoBehaviour
         {
             _playerInformation = characterOnBoard.GetComponent<PlayerInformation>();
             _playerInformation.TeamManager = transform.parent.gameObject;
-            characterPortraitSprite.sprite = _playerInformation.GetPlayerInformationData().CharacterPortraitSprite;
+            characterPortraitSprite.sprite = _playerInformation.playerInformationData.CharacterPortraitSprite;
 
             gameObject.SetActive(true);
             isButtonAvailable = true;
