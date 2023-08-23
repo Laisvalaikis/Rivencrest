@@ -435,13 +435,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _abilities:
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: 278eb7903ef2ead4588f5ee6d8d58d99, type: 2}
+    enabled: 1
     AbilityImage: {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 6890059959884175614}
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: f7f50e4f4ba184c4ea367d6fa9cb8b5c, type: 2}
+    enabled: 1
     AbilityImage: {fileID: 1157241994225065092, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 6122472945877520687}
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: 4698aee274e7997429878e5b99238e53, type: 2}
+    enabled: 1
     AbilityImage: {fileID: -6869721492570181015, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 3833594599848616198}
 --- !u!1 &659955981309584225

@@ -21,7 +21,6 @@ public class EncounterButton : Button
 
     public override void OnSelect(BaseEventData eventData)
     {
-        Debug.Log("nanana");
         if(!isSelectedEncounter)
         {
             

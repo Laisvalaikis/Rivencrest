@@ -460,13 +460,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _abilities:
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: 278eb7903ef2ead4588f5ee6d8d58d99, type: 2}
+    enabled: 1
     AbilityImage: {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 6890059959884175614}
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: cad85f32c3afc5640b4efc58ce74e410, type: 2}
+    enabled: 1
     AbilityImage: {fileID: 1064230382522644472, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 5892888646307603605}
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: 936cf2ea8ffe5d54d921a16e15696119, type: 2}
+    enabled: 1
     AbilityImage: {fileID: 6003129548037305118, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 4970632064494273277}
 --- !u!1 &659955981309584225

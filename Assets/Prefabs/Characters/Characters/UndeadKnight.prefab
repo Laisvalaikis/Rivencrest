@@ -461,16 +461,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _abilities:
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: 278eb7903ef2ead4588f5ee6d8d58d99, type: 2}
+    enabled: 1
     AbilityImage: {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 6890059959884175614}
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: 556e98b18ae7f984cb574cbbce0672b2, type: 2}
+    enabled: 1
     AbilityImage: {fileID: -7589370023057454629, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 1717870744999803504}
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: d8d843b41f3ed0f4caf7386b760ad2c1, type: 2}
+    enabled: 1
     AbilityImage: {fileID: -4933178696744715701, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 6851183026581156957}
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: 14fe02b640533074ca6ca18c73743119, type: 2}
+    enabled: 1
     AbilityImage: {fileID: -4900127969809747176, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 6281274415127078852}
 --- !u!1 &659955981309584225

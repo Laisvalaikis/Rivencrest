@@ -78,7 +78,7 @@ public class HelpTable : MonoBehaviour
 
     private void UpdateHelpTable(Ability currentAbility)
     {
-        AbilityText abilityText = _abilities[currentAbility.actionName];
+        AbilityText abilityText = currentAbility.abilityText;
         if (abilityText != null)
         {
             if (wasSelected)

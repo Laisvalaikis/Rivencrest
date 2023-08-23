@@ -400,10 +400,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _abilities:
-  - Enabled: 1
+  - abilityText: {fileID: 11400000, guid: 278eb7903ef2ead4588f5ee6d8d58d99, type: 2}
+    enabled: 1
     AbilityImage: {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 6890059959884175614}
-  - Enabled: 1
+  - abilityText: {fileID: 11400000, guid: aa53027cee5ff924bba056798355d4c1, type: 2}
+    enabled: 1
     AbilityImage: {fileID: -4900127969809747176, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 1509992217805985293}
 --- !u!1 &659955981309584225

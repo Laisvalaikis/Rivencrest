@@ -396,10 +396,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _abilities:
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: 278eb7903ef2ead4588f5ee6d8d58d99, type: 2}
+    enabled: 1
     AbilityImage: {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 6890059959884175614}
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: 3840d3ea1b9b2d84f8eac53fca84c5ac, type: 2}
+    enabled: 1
     AbilityImage: {fileID: 5139444604892243456, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: -2536795038536443514}
 --- !u!1 &659955981309584225

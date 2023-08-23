@@ -550,19 +550,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _abilities:
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: 278eb7903ef2ead4588f5ee6d8d58d99, type: 2}
+    enabled: 1
     AbilityImage: {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 6890059959884175614}
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: 7bb5a2309e4102d41aebe89191809cbe, type: 2}
+    enabled: 1
     AbilityImage: {fileID: -1071641158705808608, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 3482240774177602718}
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: 81188ee79b03a6840872cac168e53f16, type: 2}
+    enabled: 1
     AbilityImage: {fileID: 4693665290838367390, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 3283426817414571269}
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: 14fe02b640533074ca6ca18c73743119, type: 2}
+    enabled: 1
     AbilityImage: {fileID: -4900127969809747176, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 382815405823436999}
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: daa05c12b3d6880449982cc390af8af6, type: 2}
+    enabled: 1
     AbilityImage: {fileID: -3297504094695843550, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 490615351732236905}
 --- !u!1 &659955981309584225

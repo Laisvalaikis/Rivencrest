@@ -564,22 +564,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _abilities:
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: 278eb7903ef2ead4588f5ee6d8d58d99, type: 2}
+    enabled: 1
     AbilityImage: {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 6890059959884175614}
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: 91a7654fb7f473b4b92d1d13c3cf5974, type: 2}
+    enabled: 1
     AbilityImage: {fileID: 2653253005981326686, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 7599302567481188515}
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: 983cd5b94d7a6aa4b921314dab0f9008, type: 2}
+    enabled: 1
     AbilityImage: {fileID: -7986213798027018427, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 2468705442434019054}
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: 77faf37ca2424504fb6545aa87022410, type: 2}
+    enabled: 1
     AbilityImage: {fileID: -4147313178977208927, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 2638451210631199083}
-  - enabled: 1
+  - abilityText: {fileID: 11400000, guid: b46ba5180bf06504cb37be0158cf65b3, type: 2}
+    enabled: 1
     AbilityImage: {fileID: 5139444604892243456, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 8454052552203752628}
-  - enabled: 0
+  - abilityText: {fileID: 0}
+    enabled: 0
     AbilityImage: {fileID: 850385056709354357, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 2455695239198874175}
 --- !u!1 &659955981309584225

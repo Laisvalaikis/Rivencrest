@@ -300,9 +300,9 @@ using Random = UnityEngine.Random;
             AvailableAttacks = 1;
             AbilityPoints++;
         }
-        public virtual void ResolveAbility(GameObject clickedTile)
+        public override void ResolveAbility(GameObject clickedTile)
         {
-           
+           Debug.Log("We are in BaseAction");
             _assignSound.PlaySound(selectedEffectIndex, selectedSongIndex);
             Debug.LogWarning("PlaySound");
             

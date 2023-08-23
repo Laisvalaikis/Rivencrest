@@ -24,7 +24,6 @@ public class TileMapManager : MonoBehaviour
     {
         Vector3 mousePos = new Vector3(_mousePosition.x, _mousePosition.y, camera.nearClipPlane);
         Vector3 worldPos = camera.ScreenToWorldPoint(mousePos);
-        Debug.Log(worldPos);
         if (!gameTileMap.CharacterIsSelected())
         {
             gameTileMap.SelectTile(worldPos);
