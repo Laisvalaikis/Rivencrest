@@ -207,21 +207,143 @@ using Random = UnityEngine.Random;
             CreateAvailableTileList();
             MergeIntoOneList();
         }
-        protected void CreateAvailableTileList()
+
+        private List<ChunkData> _chunkList;
+        
+        //Creates a list of available chunks for attack
+        protected void CreateAvailableChunkList()
+        {
+            ChunkData startChunk = new ChunkData();
+            _chunkList.Clear();
+            if(laserGrid)
+            {
+                
+                //laser grid code
+            }
+            else
+            {
+                //regular ass code
+            }
+        }
+        
+        private readonly List<(int, int)> DirectionVectors = new()
+        {
+    (1, 0),
+    (0, 1),
+    (-1, 0),
+    (0, -1)
+};
+
+private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, bool canWallsBeTargeted)
+{
+    bool isGround = CheckIfSpecificLayer(middleTile, xOffset, yOffset, groundLayer);
+    bool isBlockingLayer = CheckIfSpecificLayer(middleTile, xOffset, yOffset, blockingLayer);
+    bool isPlayer = CheckIfSpecificTag(middleTile, xOffset, yOffset, blockingLayer, "Player");
+    bool isWall = CheckIfSpecificTag(middleTile, xOffset, yOffset, blockingLayer, "Wall");
+    bool isMiddleTileWall = CheckIfSpecificTag(middleTile, 0, 0, blockingLayer, "Wall");
+
+    return isGround && (!isBlockingLayer || isPlayer || (canWallsBeTargeted && isWall)) && (!canWallsBeTargeted || !isMiddleTileWall);
+}
+
+protected virtual void AddSurroundingsToList(GameObject middleTile, int movementIndex, bool canWallsBeTargeted = false)
+{
+    foreach (var dir in DirectionVectors)
+    {
+        if (IsTileAccessible(middleTile, dir.Item1, dir.Item2, canWallsBeTargeted))
+        {
+            GameObject tileToAdd = GetSpecificGroundTile(middleTile, dir.Item1, dir.Item2, groundLayer);
+            this.AvailableTiles[movementIndex].Add(tileToAdd);
+        }
+    }
+}
+
+protected virtual void AddSurroundingsToList(GameObject middleTile, int movementIndex, int x, int y)
+{
+    for (int i = 1; i <= AttackRange; i++)
+    {
+        if (IsTileAccessible(middleTile, x * i, y * i, true)) // Assuming walls can be targeted
+        {
+            GameObject tileToAdd = GetSpecificGroundTile(middleTile, x * i, y * i, groundLayer);
+            this.AvailableTiles[movementIndex].Add(tileToAdd);
+        }
+        else
+        {
+            break; // stop if the tile is not accessible (to avoid going through walls)
+        }
+    }
+}
+
+protected void CreateAvailableTileList()
+{
+    AvailableTiles.Clear();
+
+    if (!laserGrid)
+    {
+        if (AttackRange > 0)
+        {
+            AvailableTiles.Add(new List<GameObject>());
+            AddSurroundingsToList(transform.gameObject, 0);
+        }
+
+        for (int i = 1; i <= AttackRange - 1; i++)
+        {
+            this.AvailableTiles.Add(new List<GameObject>());
+
+            foreach (var tileInPreviousList in this.AvailableTiles[i - 1])
+            {
+                AddSurroundingsToList(tileInPreviousList, i);
+            }
+        }
+    }
+    else
+    {
+        this.AvailableTiles.Add(new List<GameObject>());
+        
+        int i = 0;
+        foreach (var dir in DirectionVectors)
+        {
+            this.AvailableTiles.Add(new List<GameObject>());
+            AddSurroundingsToList(transform.gameObject, i, dir.Item1, dir.Item2);
+            i++;
+        }
+    }
+    Debug.Log("Removed action set");
+}
+
+    protected void MergeIntoOneList()
+    {
+    MergedTileList.Clear();
+
+    foreach (List<GameObject> movementTileList in this.AvailableTiles)
+    {
+        foreach (GameObject tile in movementTileList)
+        {
+            if (!MergedTileList.Contains(tile))
+            {
+                MergedTileList.Add(tile);
+            }
+        }
+    }
+
+    if (CheckIfSpecificLayer(gameObject, 0, 0, groundLayer))
+    {
+        MergedTileList.Remove(GetSpecificGroundTile(gameObject, 0, 0, groundLayer));
+    }
+    }
+
+        /*protected void CreateAvailableTileList()
         {
             if(!laserGrid)
             {
-                // transform.gameObject.GetComponent<PlayerInformation>().currentState = actionStateName;
-                this.AvailableTiles.Clear();
+                AvailableTiles.Clear();
                 if (AttackRange > 0)
                 {
-                    this.AvailableTiles.Add(new List<GameObject>());
+                    AvailableTiles.Add(new List<GameObject>());
                     AddSurroundingsToList(transform.gameObject, 0);
                 }
-
                 for (int i = 1; i <= AttackRange - 1; i++)
                 {
-                    this.AvailableTiles.Add(new List<GameObject>());
+                    AvailableTiles.Add(new List<GameObject>());
 
                     foreach (var tileInPreviousList in this.AvailableTiles[i - 1])
                     {
@@ -269,7 +391,7 @@ using Random = UnityEngine.Random;
             {
                 MergedTileList.Remove(GetSpecificGroundTile(gameObject, 0, 0, groundLayer));
             }
-        }
+        }*/
         public virtual void DisableGrid()
         {
             foreach (List<GameObject> movementTileList in this.AvailableTiles)
@@ -304,7 +426,6 @@ using Random = UnityEngine.Random;
         public override void ResolveAbility(Vector3 position)
         {
             base.ResolveAbility(position);
-            Debug.Log("We are in BaseAction");
             _assignSound.PlaySound(selectedEffectIndex, selectedSongIndex);
             Debug.LogWarning("PlaySound");
             
@@ -456,7 +577,7 @@ using Random = UnityEngine.Random;
                 target.GetComponent<PlayerInformation>().DealDamage(randomDamage, crit, gameObject);
             }
         }
-        protected virtual void AddSurroundingsToList(GameObject middleTile, int movementIndex, bool canWallsBeTargeted = false)
+        /*protected virtual void AddSurroundingsToList(GameObject middleTile, int movementIndex, bool canWallsBeTargeted = false)
         {
             var directionVectors = new List<(int, int)>
         {
@@ -479,7 +600,6 @@ using Random = UnityEngine.Random;
                     this.AvailableTiles[movementIndex].Add(AddableObject);
                 }
             }
-
         }
         protected virtual void AddSurroundingsToList(GameObject middleTile, int movementIndex, int x, int y)
         {
@@ -500,7 +620,7 @@ using Random = UnityEngine.Random;
                     break; //kad neitu kiaurai sienas
                 }
             }
-        }
+        }*/
         public virtual void PrepareForAIAction()
         {
             if (CanGridBeEnabled())
@@ -593,7 +713,6 @@ using Random = UnityEngine.Random;
         {
             return $"{minAttackDamage}-{maxAttackDamage}";
         }
-        //
         protected IEnumerator ExecuteAfterTime(float time, Action task)
         {
             yield return new WaitForSeconds(time);
@@ -607,6 +726,5 @@ using Random = UnityEngine.Random;
             }
             task();
         }
-        
     }
 

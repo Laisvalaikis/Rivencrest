@@ -1,0 +1,14 @@
+
+Jcsharpsquid:S3903"(Move 'RaiseRock' into a named namespace.(ÑÔØŞÿÿÿÿÿ
+fcsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(ªŸ«ÿüÿÿÿÿ
+Ucsharpsquid:S3267·"2Loops should be simplified with "LINQ" expressions(Úû°Óşÿÿÿÿ
+ucsharpsquid:S927€"SRename parameter 'clickedTile' to 'gameobject' to match the base class declaration.(•³×˜úÿÿÿÿ
+Pcsharpsquid:S1905ˆ"-Remove this unnecessary cast to 'GameObject'.(¿‘Ÿ¿øÿÿÿÿ
+Pcsharpsquid:S1905ç"-Remove this unnecessary cast to 'GameObject'.(¿‘Ÿ¿øÿÿÿÿ
+Rcsharpsquid:S1481ç"/Remove the unused local variable 'spawnedWall'.(¿‘Ÿ¿øÿÿÿÿ
+;csharpsquid:S125"Remove this commented out code.(Ï¥Ö³
+@csharpsquid:S125"Remove this commented out code.(£ì™ğüÿÿÿÿ
+@csharpsquid:S125"Remove this commented out code.(ÒÌâ–øÿÿÿÿ
+@csharpsquid:S1250"Remove this commented out code.(ÒÌâ–øÿÿÿÿ
+@csharpsquid:S125>"Remove this commented out code.(ÒÌâ–øÿÿÿÿ
+Acsharpsquid:S125"Remove this commented out code.(˜úıÿÿÿÿ

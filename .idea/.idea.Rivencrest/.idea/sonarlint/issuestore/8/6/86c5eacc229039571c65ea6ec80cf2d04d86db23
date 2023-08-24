@@ -1,0 +1,8 @@
+
+Hcsharpsquid:S3903"+Move 'PlayerAttack' into a named namespace.(ìðÚó
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(²åíŽûÿÿÿÿ
+^csharpsquid:S1006"AAdd the default parameter value defined in the overridden method.(úÀ£÷
+{csharpsquid:S9277"SRename parameter 'clickedTile' to 'gameobject' to match the base class declaration.(•³×˜úÿÿÿÿ8Ü¹ò²¢1
+;csharpsquid:S125	"Remove this commented out code.(ÅÍ¦÷
+@csharpsquid:S125"Remove this commented out code.(‚…€Èøÿÿÿÿ
+;csharpsquid:S125j"Remove this commented out code.(Ú°à¬
