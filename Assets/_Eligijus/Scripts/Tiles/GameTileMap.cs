@@ -344,6 +344,7 @@ public class GameTileMap : MonoBehaviour
         if (_currentSelectedCharacter != null)
         {
             _currentSelectedCharacter = null;
+            _selectAction.gameObject.SetActive(false);
         }
     }
 
@@ -438,6 +439,10 @@ public class GameTileMap : MonoBehaviour
         if (!CharacterIsSelected())
         {
             SelectTile(worldPos);
+        }
+        else if(CharacterIsSelected() && CharacterIsOnTile(worldPos))
+        {
+            DeselectCurrentCharacter();
         }
     }
     

@@ -69,7 +69,6 @@ public class SelectAction : MonoBehaviour
     }
     public void DeSetCurrentCharacter()
     {
-        gameObject.SetActive(false);
         _currentPlayer = null;
     }
 
