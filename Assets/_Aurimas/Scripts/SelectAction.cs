@@ -62,9 +62,15 @@ public class SelectAction : MonoBehaviour
 
     public void SetCurrentCharacter(GameObject currentPlayer)
     {
+        gameObject.SetActive(true);
         _currentPlayer = currentPlayer;
         GetAbilities();
         GenerateActions();
+    }
+    public void DeSetCurrentCharacter()
+    {
+        gameObject.SetActive(false);
+        _currentPlayer = null;
     }
 
 }

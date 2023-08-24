@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class TeamInformation : MonoBehaviour
 {
+    
     [SerializeField] private SelectAction selectAction;
     [SerializeField] private PlayerTeams playerTeams;
     [SerializeField] private Image image;

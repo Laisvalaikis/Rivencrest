@@ -56,6 +56,7 @@ public class PvPCharacterSelect : MonoBehaviour
         else if (!isButtonAvailable)
         {
             gameTileMap.DeselectCurrentCharacter();
+            _selectAction.DeSetCurrentCharacter();
             isButtonAvailable = true;
             Debug.Log("Deselected");
         }
