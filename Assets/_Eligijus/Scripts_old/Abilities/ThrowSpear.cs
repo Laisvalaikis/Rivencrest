@@ -141,7 +141,7 @@ public class ThrowSpear : BaseAction
             FinishAbility();
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(GameObject tile)
     {
         return true;
     }

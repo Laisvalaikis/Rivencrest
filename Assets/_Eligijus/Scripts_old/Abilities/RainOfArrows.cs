@@ -147,10 +147,6 @@ public class RainOfArrows : BaseAction
         }
         FinishAbility();
     }
-    public override bool canTileBeClicked(GameObject tile)
-    {
-        return true;
-    }
     public void CreateDamageTileList(GameObject clickedTile)
     {
         DamageTiles.Clear();
@@ -194,7 +190,7 @@ public class RainOfArrows : BaseAction
     }
     public override GameObject PossibleAIActionTile()
     {
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
 
             List<GameObject> characterList = GetComponent<AIBehaviour>().GetCharactersInGrid(2);

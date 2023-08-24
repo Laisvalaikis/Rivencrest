@@ -92,14 +92,11 @@ public class MistShield : BaseAction
             FinishAbility();
             // GetComponent<PlayerMovement>().OnAnyMove();
     }
-    public override bool canTileBeClicked(GameObject tile)
-    {
-        return true;
-    }
+
     public override GameObject PossibleAIActionTile()
     {
         bool isActionPossible = false;
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             List<GameObject> characterList = GetComponent<AIBehaviour>().GetCharactersInGrid(2);
             foreach (GameObject character in characterList)

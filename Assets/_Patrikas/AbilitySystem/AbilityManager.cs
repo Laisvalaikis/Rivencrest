@@ -13,23 +13,29 @@ public class AbilityManager : MonoBehaviour
     public void OnMouseClick(InputAction.CallbackContext context)
     {
         if (context.performed)
+        {
+            _mousePosition = Mouse.current.position.ReadValue();
             ExecuteCurrentAbility();
+        }
     }
 
     public void SetCurrentAbility(CharacterAction ability)
     {
         _currentAbility = ability;
-        Debug.LogError(ability.GetType());
     }
 
     public void ExecuteCurrentAbility()
     {
         if (_currentAbility != null)
         {
-            Debug.LogError("TRIED ABILITY EXECUTION");
-            //_currentAbility.ResolveAbility();
-            Vector3 mousePos = new Vector3(_mousePosition.x, _mousePosition.y, GetComponent<Camera>().nearClipPlane);
-            _currentAbility.OnTileClick(mousePos);
+            Vector3 mousePos = new Vector3(_mousePosition.x, _mousePosition.y, camera.nearClipPlane);
+            Vector3 worldPos = camera.ScreenToWorldPoint(mousePos);
+            ChunkData chunk = gameTileMap.GetChunk(worldPos);
+            if (chunk != null)
+            {
+                _currentAbility.ResolveAbility(chunk.GetPosition());
+                _currentAbility.OnTileClick(worldPos);
+            }
         }
     }
     

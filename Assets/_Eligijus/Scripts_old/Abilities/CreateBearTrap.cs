@@ -140,7 +140,7 @@ public class CreateBearTrap : BaseAction
     public override void ResolveAbility(GameObject clickedTile)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(clickedTile))
         {
             base.ResolveAbility(clickedTile);
             FinishAbility();
@@ -153,7 +153,7 @@ public class CreateBearTrap : BaseAction
         }
     }
 
-    public override bool canTileBeClicked(GameObject tile)
+    public bool CanTileBeClicked(GameObject tile)
     {
         bool isBlockingLayer = CheckIfSpecificLayer(tile, 0, 0, blockingLayer);
         bool isConsumablesLayer = CheckIfSpecificLayer(tile, 0, 0, consumablesLayer);

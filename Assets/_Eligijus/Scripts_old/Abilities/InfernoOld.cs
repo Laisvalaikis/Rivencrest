@@ -157,7 +157,7 @@ public class InfernoOld : BaseAction
             FinishAbility();
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(GameObject tile)
     {
         return true;
     }
@@ -173,7 +173,7 @@ public class InfernoOld : BaseAction
     public override GameObject PossibleAIActionTile()
     {
         List<GameObject> EnemyCharacterList = new List<GameObject>();
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             CreateGrid();
             foreach (GameObject tile in MergedTileList)

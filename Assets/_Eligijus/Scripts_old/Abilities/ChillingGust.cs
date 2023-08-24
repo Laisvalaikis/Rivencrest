@@ -32,7 +32,7 @@ public class ChillingGust : BaseAction
     public override void ResolveAbility(GameObject clickedTile)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(clickedTile))
         {
             base.ResolveAbility(clickedTile);
             if (isAllegianceSame(clickedTile))
@@ -75,7 +75,7 @@ public class ChillingGust : BaseAction
                     CreateDamageTileList(clickedTile);
                     foreach (GameObject tile in AdditionalDamageTiles)
                     {
-                        if (canTileBeClicked(tile))
+                        if (CanTileBeClicked(tile))
                         {
                             target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
                             DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);
@@ -103,7 +103,7 @@ public class ChillingGust : BaseAction
         }
         GetSpecificGroundTile(transform.gameObject, 0, 0, groundLayer).GetComponent<HighlightTile>().SetHighlightBool(true);
     }
-    public override bool canTileBeClicked(GameObject tile)
+    public bool CanTileBeClicked(GameObject tile)
     {
         return CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player");
     }
@@ -145,12 +145,12 @@ public class ChillingGust : BaseAction
     public override GameObject PossibleAIActionTile()
     {
         List<GameObject> EnemyCharacterList = new List<GameObject>();
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             CreateGrid();
             foreach (GameObject tile in MergedTileList)
             {
-                if (canTileBeClicked(tile))
+                if (CanTileBeClicked(tile))
                 {
                     GameObject character = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
                     EnemyCharacterList.Add(character);

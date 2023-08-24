@@ -453,8 +453,8 @@ public class BottomCornerUI : MonoBehaviour
             }
             //else if ((buttonAction != null && buttonAction.canGridBeEnabled())
                 // || (ButtonList[i].GetComponent<ActionButton>().buttonState == "Movement" && CharacterOnBoard.GetComponent<GridMovement>().canGridBeEnabled()))
-               else if ((buttonAction != null && buttonAction.canGridBeEnabled())
-               || (actionButtonList.buttonState == "Movement" && characterOnBoardGridMovement.canGridBeEnabled()))
+               else if ((buttonAction != null && buttonAction.CanGridBeEnabled())
+               || (actionButtonList.buttonState == "Movement" && characterOnBoardGridMovement.CanGridBeEnabled()))
             {
                 ButtonList[i].transform.Find("CantAttackImage").gameObject.SetActive(false);
                 actionButtonImage.color = new Color(actionButtonImage.color.r, actionButtonImage.color.g, actionButtonImage.color.b, 1f);

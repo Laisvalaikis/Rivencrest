@@ -118,13 +118,13 @@ public class MarkEnemy : BaseAction
             target = null;
         }
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
-            target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+            base.ResolveAbility(position);
+            target = GetSpecificGroundTile(position);
             //bool crit = IsItCriticalStrike(ref spellDamage);
             //dodgeActivation(ref spellDamage, target);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");//bus atskira animacija
@@ -152,7 +152,7 @@ public class MarkEnemy : BaseAction
     {
         List<GameObject> EnemyCharacterList = new List<GameObject>();
         bool isAllyNearby = false;
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             CreateGrid();
             List<GameObject> nearbyCharacterList = GetComponent<AIBehaviour>().GetCharactersInGrid(3);
@@ -166,7 +166,7 @@ public class MarkEnemy : BaseAction
             }
             foreach (GameObject tile in MergedTileList)
             {
-                if (canTileBeClicked(tile))
+                if (CanTileBeClicked(tile.transform.position))
                 {
                     GameObject character = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
                     EnemyCharacterList.Add(character);

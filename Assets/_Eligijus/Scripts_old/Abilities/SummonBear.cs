@@ -166,7 +166,7 @@ public class SummonBear : BaseAction
         }
     }
 
-    public override bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(GameObject tile)
     {
         var gameInformation = GameObject.Find("GameInformation").gameObject;
         bool isTeamNotFull = gameInformation.GetComponent<PlayerTeams>().allCharacterList.teams[gameInformation.GetComponent<GameInformation>().activeTeamIndex].characters.Count < 8;
@@ -191,7 +191,7 @@ public class SummonBear : BaseAction
     {
         List<GameObject> PossibleTileList = new List<GameObject>();
         bool isActionPossible = false;
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             List<GameObject> characterList = GetComponent<AIBehaviour>().GetCharactersInGrid(4);
             foreach (GameObject character in characterList)

@@ -91,12 +91,12 @@ public class StunAttack : BaseAction
         }
     }
     */
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
-            GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+            base.ResolveAbility(position);
+            GameObject target = GetSpecificGroundTile(position);
             //bool crit = IsItCriticalStrike(ref spellDamage);
             //dodgeActivation(ref spellDamage, target);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell1");//bus atskira animacija
@@ -113,7 +113,7 @@ public class StunAttack : BaseAction
                 target.GetComponent<PlayerInformation>().Poisons.Add(new PlayerInformation.Poison(gameObject, 2, 2));
             }
             DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);
-            clickedTile.transform.Find("mapTile").Find("VFXImpact").gameObject.GetComponent<Animator>().SetTrigger("burgundy1");
+            //clickedTile.transform.Find("mapTile").Find("VFXImpact").gameObject.GetComponent<Animator>().SetTrigger("burgundy1");
             //target.GetComponent<PlayerInformation>().DealDamage(spellDamage, crit);
             FinishAbility();
         }
@@ -135,7 +135,7 @@ public class StunAttack : BaseAction
     public override GameObject PossibleAIActionTile()
     {
         List<GameObject> EnemyCharacterList = new List<GameObject>();
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             CreateGrid();
             foreach (List<GameObject> MovementTileList in this.AvailableTiles)
@@ -145,7 +145,7 @@ public class StunAttack : BaseAction
                     if (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player"))
                     {
                         GameObject character = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
-                        if (!isAllegianceSame(character) && canTileBeClicked(tile))
+                        if (!isAllegianceSame(character) && CanTileBeClicked(tile.transform.position))
                         {
                             EnemyCharacterList.Add(character);
                         }

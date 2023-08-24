@@ -119,7 +119,7 @@ public class Inferno : BaseAction
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell1");
             foreach (GameObject tile in MergedTileList)
             {
-                if (base.canTileBeClicked(tile))
+                if (base.CanTileBeClicked(tile.transform.position))
                 {
                     GameObject target = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
                     if (target.GetComponent<PlayerInformation>().Aflame != null)
@@ -142,13 +142,13 @@ public class Inferno : BaseAction
             FinishAbility();
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(GameObject tile)
     {
-        return base.canTileBeClicked(tile);
+        return base.CanTileBeClicked(tile.transform.position);
     }
-    public override bool canPreviewBeShown(GameObject tile)
+    public bool canPreviewBeShown(GameObject tile)
     {
-        return base.canTileBeClicked(tile);
+        return base.CanTileBeClicked(tile.transform.position);
     }
     public override void OnTileHover(GameObject tile)
     {
@@ -161,7 +161,7 @@ public class Inferno : BaseAction
     public override GameObject PossibleAIActionTile()
     {
         List<GameObject> EnemyCharacterList = new List<GameObject>();
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             CreateGrid();
             foreach (GameObject tile in MergedTileList)

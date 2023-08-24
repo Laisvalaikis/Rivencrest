@@ -124,7 +124,7 @@ public class CreateWhiteField : BaseAction
     public override void ResolveAbility(GameObject clickedTile)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(clickedTile))
         {
             base.ResolveAbility(clickedTile);
             FinishAbility();
@@ -166,7 +166,7 @@ public class CreateWhiteField : BaseAction
             }
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
+    public bool CanTileBeClicked(GameObject tile)
     {
         return CheckIfSpecificLayer(tile, 0, 0, groundLayer) || CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player");
     }
@@ -188,7 +188,7 @@ public class CreateWhiteField : BaseAction
     {
         bool isEnemyNearby = false;
         List<GameObject> AllyCharacterList = new List<GameObject>();
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             List<GameObject> enemyList = GetComponent<AIBehaviour>().GetCharactersInGrid(4);
             foreach (GameObject character in enemyList)

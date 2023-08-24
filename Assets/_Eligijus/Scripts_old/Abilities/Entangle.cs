@@ -114,19 +114,19 @@ public class Entangle : BaseAction
         GetSpecificGroundTile(transform.gameObject, 0, 0, groundLayer).GetComponent<HighlightTile>().SetHighlightBool(false);
     }
     */
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
-            GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+            base.ResolveAbility(position);
+            GameObject target = GetSpecificGroundTile(position);
             DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
             //
                 target.GetComponent<PlayerInformation>().ApplyDebuff("CantMove");
             //
-            clickedTile.transform.Find("mapTile").Find("VFXImpactBelow").gameObject.GetComponent<Animator>().SetTrigger("forest4");
+            //clickedTile.transform.Find("mapTile").Find("VFXImpactBelow").gameObject.GetComponent<Animator>().SetTrigger("forest4");
             FinishAbility();
         }
     }
@@ -162,7 +162,7 @@ public class Entangle : BaseAction
     public override GameObject PossibleAIActionTile()
     {
         List<GameObject> EnemyCharacterList = new List<GameObject>();
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             CreateGrid();
 
@@ -171,7 +171,7 @@ public class Entangle : BaseAction
                 if (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player"))
                 {
                     GameObject character = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
-                    if (!isAllegianceSame(character) && canTileBeClicked(tile))
+                    if (!isAllegianceSame(character) && CanTileBeClicked(tile.transform.position))
                     {
                         EnemyCharacterList.Add(character);
                     }

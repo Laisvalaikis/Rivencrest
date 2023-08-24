@@ -1,32 +1,0 @@
-
-ucsharpsquid:S3776ë"RRefactor this method to reduce its Cognitive Complexity from 30 to the 15 allowed.(ı÷»±ıÿÿÿÿ
-Ncsharpsquid:S3903",Move 'HighlightTile' into a named namespace.(÷¤À´şÿÿÿÿ
-?csharpsquid:S2933#"Make 'PCControls' 'readonly'.(¸Ê…êüÿÿÿÿ
-fcsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(æ¿À‚ÿÿÿÿÿ
-fcsharpsquid:S1104
-"DMake this field 'private' and encapsulate it in a 'public' property.(ûïıÿÿÿÿ
-acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ÁØû
-`csharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(âº÷V
-`csharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(´ÁÇ/
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(©¡Òùÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ÄÉÊïûÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(°ôÓªùÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¨ºßşùÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(™´©ÿûÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(‹¼œşÿÿÿÿ
-acsharpsquid:S1104""DMake this field 'private' and encapsulate it in a 'public' property.(«àÊ÷
-Rcsharpsquid:S1066·"/Merge this if statement with the enclosing one.(Ó’”–úÿÿÿÿ
-Tcsharpsquid:S1066‹"/Merge this if statement with the enclosing one.(óÁè‘8›˜Ó¨1
-;csharpsquid:S125"Remove this commented out code.(†Î‡ğ
-;csharpsquid:S125"Remove this commented out code.(¦ÂÕû
-@csharpsquid:S125O"Remove this commented out code.(ÒÌâ–øÿÿÿÿ
-@csharpsquid:S125l"Remove this commented out code.(î¦ÏÜûÿÿÿÿ
-;csharpsquid:S125s"Remove this commented out code.(ğ´ÆÉ
-;csharpsquid:S125w"Remove this commented out code.(÷°µ’
-@csharpsquid:S125z"Remove this commented out code.(ÒÌâ–øÿÿÿÿ
-Acsharpsquid:S125˜"Remove this commented out code.(øş—ûÿÿÿÿ
-<csharpsquid:S125ª"Remove this commented out code.(ãôú¿
-Hcsharpsquid:S125º"Remove this commented out code.(ÔÊ“¸úÿÿÿÿ8Œ¦õ¨1
-Bcsharpsquid:S125À"Remove this commented out code.(¼ğÚc8³òö¨1
-Ccsharpsquid:S125Ğ"Remove this commented out code.(Ú°à¬8œ˜Ó¨1
-5csharpsquid:S4663!"Remove this empty comment(è»»_

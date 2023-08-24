@@ -15,13 +15,13 @@ public class Blaze : BaseAction
     {
         actionStateName = "Blaze";
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
-            GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+            base.ResolveAbility(position);
+            GameObject target = GetSpecificGroundTile(position);
             bool aflame = target.GetComponent<PlayerInformation>().Aflame != null;
             if (!aflame)
             {
@@ -96,7 +96,7 @@ public class Blaze : BaseAction
     }
     public override GameObject PossibleAIActionTile()
     {
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
 
             List<GameObject> characterList = GetComponent<AIBehaviour>().GetCharactersInGrid(AttackRange);

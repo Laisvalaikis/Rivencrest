@@ -19,7 +19,7 @@ public class SwordPush : BaseAction
         transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell1");
         TileThatWasClicked = clickedTile;
     }
-    public override bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(GameObject tile)
     {
         return true;
     }

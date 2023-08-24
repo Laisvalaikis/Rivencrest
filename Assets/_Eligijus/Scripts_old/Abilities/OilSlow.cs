@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class OilSlow : BaseAction
 {
     private GameObject SlowedTarget = null;
@@ -21,17 +20,17 @@ public class OilSlow : BaseAction
             SlowedTarget = null;
         }
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
-            GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+            base.ResolveAbility(position);
+            GameObject target = GetSpecificGroundTile(position);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
-            GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer).GetComponent<PlayerInformation>().ApplyDebuff("OilSlow");
+            GetSpecificGroundTile(position).GetComponent<PlayerInformation>().ApplyDebuff("OilSlow");
             DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);
-            clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger("lime1");
+            //clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger("lime1");
             FinishAbility();
 
         }
@@ -39,7 +38,7 @@ public class OilSlow : BaseAction
     public override GameObject PossibleAIActionTile()
     {
         List<GameObject> EnemyCharacterList = new List<GameObject>();
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             CreateGrid();
 
@@ -48,7 +47,7 @@ public class OilSlow : BaseAction
                 if (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player"))
                 {
                     GameObject character = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
-                    if (!isAllegianceSame(character) && canTileBeClicked(tile))
+                    if (!isAllegianceSame(character) && CanTileBeClicked(tile.transform.position))
                     {
                         EnemyCharacterList.Add(character);
                     }

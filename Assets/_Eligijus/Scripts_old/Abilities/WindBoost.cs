@@ -125,14 +125,11 @@ public class WindBoost : BaseAction
         // transform.Find("VFX").Find("Protected").gameObject.SetActive(true);
         FinishAbility();
     }
-    public override bool canTileBeClicked(GameObject tile)
-    {
-        return true;
-    }
+
     public override GameObject PossibleAIActionTile()
     {
         bool isActionPossible = false;
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             List<GameObject> characterList = GetComponent<AIBehaviour>().GetCharactersInGrid(2);
             foreach (GameObject character in characterList)

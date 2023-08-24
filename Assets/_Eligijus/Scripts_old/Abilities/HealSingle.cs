@@ -140,7 +140,7 @@ public class HealSingle : BaseAction
             gameObject.GetComponent<PlayerInformation>().Heal(randomHeal, crit);
             foreach (GameObject tile in MergedTileList)
             {
-                if (canTileBeClicked(tile))
+                if (CanTileBeClicked(tile))
                 {
                     randomHeal = Random.Range(minHealAmount, maxHealAmount);
                     crit = IsItCriticalStrike(ref randomHeal);
@@ -149,7 +149,7 @@ public class HealSingle : BaseAction
             }
             FinishAbility();
         }
-        else if (canTileBeClicked(clickedTile))
+        else if (CanTileBeClicked(clickedTile))
         {
             int randomHeal = Random.Range(minHealAmount, maxHealAmount);
             bool crit = IsItCriticalStrike(ref randomHeal);
@@ -158,7 +158,7 @@ public class HealSingle : BaseAction
             FinishAbility();
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
+    public bool CanTileBeClicked(GameObject tile)
     {
         if (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") && isAllegianceSame(tile))
         {
@@ -172,7 +172,7 @@ public class HealSingle : BaseAction
     }
     public override void EnableDamagePreview(GameObject tile, int minAttackDamage, int maxAttackDamage = -1)
     {
-        if (!tile.GetComponent<HighlightTile>().FogOfWarTile.activeSelf && canTileBeClicked(tile))
+        if (!tile.GetComponent<HighlightTile>().FogOfWarTile.activeSelf && CanTileBeClicked(tile))
         {
             //if ((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall"))
             //    && GetSpecificGroundTile(tile, 0, 0, blockingLayer).GetComponent<PlayerInformation>().health - minAttackDamage <= 0 && canPreviewBeShown(tile))
@@ -182,7 +182,7 @@ public class HealSingle : BaseAction
             //}
             tile.GetComponent<HighlightTile>().HighlightedByPlayerUI.GetComponent<SpriteRenderer>().color = GameObject.Find("GameInformation").GetComponent<ColorManager>().MovementHighlightHover;//tile.GetComponent<HighlightTile>().HoverHighlightColor;
                                                                                                                                                                                                    //ziurim ar random damage ar ne
-            if ((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall")) && canPreviewBeShown(tile))
+            if ((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall")) && CanPreviewBeShown(tile.transform.position))
             {
                 tile.transform.Find("mapTile").Find("DamageText").gameObject.SetActive(true);
                 if (maxAttackDamage == -1)
@@ -198,7 +198,7 @@ public class HealSingle : BaseAction
     }
     public override GameObject PossibleAIActionTile()
     {
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             List<GameObject> characterList = GetComponent<AIBehaviour>().GetCharactersInGrid(2);
 

@@ -12,16 +12,16 @@ public class Avalanche : BaseAction
     {
         actionStateName = "Avalanche";
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
+            base.ResolveAbility(position);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
             foreach (GameObject tile in MergedTileList)
             {
-                if (canTileBeClicked(tile))
+                if (CanTileBeClicked(tile.transform.position))
                 {
                     GameObject target = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
                     DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);
@@ -33,7 +33,7 @@ public class Avalanche : BaseAction
             FinishAbility();
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
+    public bool CanTileBeClicked(GameObject tile)
     {
         //foreach (GameObject tileInList in MergedTileList)
 
@@ -72,12 +72,12 @@ public class Avalanche : BaseAction
     public override GameObject PossibleAIActionTile()
     {
         List<GameObject> EnemyCharacterList = new List<GameObject>();
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             CreateGrid();
             foreach (GameObject tile in MergedTileList)
             {
-                if (canTileBeClicked(tile))
+                if (CanTileBeClicked(tile))
                 {
                     GameObject character = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
                     EnemyCharacterList.Add(character);

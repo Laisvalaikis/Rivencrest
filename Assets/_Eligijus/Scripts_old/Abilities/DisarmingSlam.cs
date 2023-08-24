@@ -151,24 +151,24 @@ public class DisarmingSlam : BaseAction
     }
     */
 
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
+            base.ResolveAbility(position);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("blockSpell1");
-            GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+            GameObject target = GetSpecificGroundTile(position);
             DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);//??was crit false
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
             target.GetComponent<PlayerInformation>().ApplyDebuff("Disarmed");
-            if (TileToDashTo(clickedTile) != null)
+            /*if (TileToDashTo(clickedTile) != null)
             {
                 transform.position = TileToDashTo(clickedTile).transform.position + new Vector3(0f, 0f, -1f);
                 GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().FocusSelectedCharacter(gameObject);
-            }
-            clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger("yellow2");
-            //
+            }*/
+            //clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger("yellow2");
+            
             FinishAbility();
         }
     }
@@ -201,14 +201,14 @@ public class DisarmingSlam : BaseAction
     public override GameObject PossibleAIActionTile()
     {
         List<GameObject> EnemyCharacterList = new List<GameObject>();
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             CreateGrid();
             foreach (List<GameObject> MovementTileList in this.AvailableTiles)
             {
                 foreach (GameObject tile in MovementTileList)
                 {
-                    if (canTileBeClicked(tile))
+                    if (CanTileBeClicked(tile.transform.position))
                     {
                         GameObject character = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
                         EnemyCharacterList.Add(character);

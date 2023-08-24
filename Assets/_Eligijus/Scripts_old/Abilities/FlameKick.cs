@@ -20,14 +20,14 @@ public class FlameKick : BaseAction
         actionStateName = "FlameKick";
         isAbilitySlow = false;
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
+            base.ResolveAbility(position);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
-            GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+            GameObject target = GetSpecificGroundTile(position);
             bool isThisEnemy = !isAllegianceSame(target);
             int bonusDamage = 0;
             // // Push
@@ -63,9 +63,9 @@ public class FlameKick : BaseAction
             FinishAbility();
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
+    public bool CanTileBeClicked(Vector3 position)
     {
-        if (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player"))
+        if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player"))
         {
             return true;
         }
@@ -137,19 +137,16 @@ public class FlameKick : BaseAction
             canTileBeHovered = true;
         }));
     }
-    public override bool canPreviewBeShown(GameObject tile)
-    {
-        return true;
-    }
+
     public override GameObject PossibleAIActionTile()
     {
         List<GameObject> EnemyCharacterList = new List<GameObject>();
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             CreateGrid();
             foreach (GameObject tile in MergedTileList)
             {
-                if (canTileBeClicked(tile))
+                if (CanTileBeClicked(tile.transform.position))
                 {
                     GameObject character = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
                     EnemyCharacterList.Add(character);

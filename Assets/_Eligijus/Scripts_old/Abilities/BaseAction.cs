@@ -65,17 +65,17 @@ using Random = UnityEngine.Random;
         }
         public virtual void EnableDamagePreview(GameObject tile, int minAttackDamage, int maxAttackDamage = -1)//damage texto ijungimui
         {
-            if(!tile.GetComponent<HighlightTile>().FogOfWarTile.activeSelf && (canPreviewBeShown(tile) || canTileBeClicked(tile)))
+            if(!tile.GetComponent<HighlightTile>().FogOfWarTile.activeSelf && (CanPreviewBeShown(tile.transform.position) || CanTileBeClicked(tile.transform.position)))
             {
                 if ((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall"))
-                    && GetSpecificGroundTile(tile, 0, 0, blockingLayer).GetComponent<PlayerInformation>().health - minAttackDamage <= 0 && canPreviewBeShown(tile))
+                    && GetSpecificGroundTile(tile, 0, 0, blockingLayer).GetComponent<PlayerInformation>().health - minAttackDamage <= 0 && CanPreviewBeShown(tile.transform.position))
                 {
                     tile.transform.Find("mapTile").Find("Death").gameObject.SetActive(true);
                     tile.transform.Find("mapTile").Find("DamageText").position = tile.transform.position + new Vector3(0f, 0.65f, 0f);
                 }
                 tile.GetComponent<HighlightTile>().HighlightedByPlayerUI.GetComponent<SpriteRenderer>().color = GameObject.Find("GameInformation").GetComponent<ColorManager>().MovementHighlightHover;//tile.GetComponent<HighlightTile>().HoverHighlightColor;
                 //ziurim ar random damage ar ne
-                if((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall")) && canPreviewBeShown(tile))
+                if((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall")) && CanPreviewBeShown(tile.transform.position))
                 {
                     tile.transform.Find("mapTile").Find("DamageText").gameObject.SetActive(true);
                     if (maxAttackDamage == -1)
@@ -91,16 +91,16 @@ using Random = UnityEngine.Random;
         }
         public virtual void EnableDamagePreview(GameObject tile, GameObject target, int minAttackDamage, int maxAttackDamage = -1)
         {
-            if (!tile.GetComponent<HighlightTile>().FogOfWarTile.activeSelf && (canPreviewBeShown(tile) || canTileBeClicked(tile)))
+            if (!tile.GetComponent<HighlightTile>().FogOfWarTile.activeSelf && (CanPreviewBeShown(tile.transform.position) || CanTileBeClicked(transform.position)))
             {
-                if (target.GetComponent<PlayerInformation>().health - minAttackDamage <= 0 && canPreviewBeShown(tile))
+                if (target.GetComponent<PlayerInformation>().health - minAttackDamage <= 0 && CanPreviewBeShown(tile.transform.position))
                 {
                     tile.transform.Find("mapTile").Find("Death").gameObject.SetActive(true);
                     tile.transform.Find("mapTile").Find("DamageText").position = tile.transform.position + new Vector3(0f, 0.65f, 0f);
                 }
                 //tile.GetComponent<HighlightTile>().HighlightedByPlayerUI.GetComponent<SpriteRenderer>().color = GameObject.Find("GameInformation").GetComponent<ColorManager>().MovementHighlightHover;//tile.GetComponent<HighlightTile>().HoverHighlightColor;
                 //ziurim ar random damage ar ne
-                if (canPreviewBeShown(tile))
+                if (CanPreviewBeShown(tile.transform.position))
                 {
                     tile.transform.Find("mapTile").Find("DamageText").gameObject.SetActive(true);
                     if (maxAttackDamage == -1)
@@ -123,7 +123,7 @@ using Random = UnityEngine.Random;
         }
         public virtual void EnableTextPreview(GameObject tile, string text)
         {
-            if(!tile.GetComponent<HighlightTile>().FogOfWarTile.activeSelf && (canTileBeClicked(tile) || canPreviewBeShown(tile)))
+            if(!tile.GetComponent<HighlightTile>().FogOfWarTile.activeSelf && (CanTileBeClicked(tile.transform.position) || CanPreviewBeShown(tile.transform.position)))
             {
                 tile.transform.Find("mapTile").Find("DamageText").gameObject.SetActive(true);
                 tile.transform.Find("mapTile").Find("DamageText").gameObject.GetComponent<TextMeshPro>().text = text;
@@ -159,20 +159,20 @@ using Random = UnityEngine.Random;
                 DisablePreview(tileInList);
             }
         }
-        public virtual bool canTileBeClicked(GameObject tile)//ar veiks ability
+        public bool CanTileBeClicked(Vector3 position)//ar veiks ability
         {
-            if (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") && !isAllegianceSame(GetSpecificGroundTile(tile, 0, 0, blockingLayer)))
+            if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") && !isAllegianceSame(position))
             {
                 return true;
             }
 
             return false;
         }
-        public virtual bool canPreviewBeShown(GameObject tile)//ar rodys preview
+        public virtual bool CanPreviewBeShown(Vector3 position)//ar rodys preview
         {
-            return canTileBeClicked(tile) && (!(CheckIfSpecificLayer(tile, 0, 0, blockingLayer) && isAllegianceSame(tile)) || friendlyFire);
+            return CanTileBeClicked(position) && (!(CheckIfSpecificLayer(position, 0, 0, blockingLayer) && isAllegianceSame(position)) || friendlyFire);
         }
-        public virtual bool canGridBeEnabled()
+        public virtual bool CanGridBeEnabled()
         {
             if (!isDisabled && AbilityPoints >= AbilityCooldown && (!AttackAbility || (!GetComponent<PlayerInformation>().CantAttackCondition && AvailableAttacks != 0)))
             {
@@ -182,7 +182,7 @@ using Random = UnityEngine.Random;
         }
         public virtual void EnableGrid()
         {
-            if (canGridBeEnabled())
+            if (CanGridBeEnabled())
             {
                 CreateGrid();
                 HighlightAll();
@@ -300,14 +300,26 @@ using Random = UnityEngine.Random;
             AvailableAttacks = 1;
             AbilityPoints++;
         }
-        public override void ResolveAbility(GameObject clickedTile)
+        
+        public override void ResolveAbility(Vector3 position)
         {
-            base.ResolveAbility(clickedTile);
+            base.ResolveAbility(position);
             Debug.Log("We are in BaseAction");
             _assignSound.PlaySound(selectedEffectIndex, selectedSongIndex);
             Debug.LogWarning("PlaySound");
             
         }
+        public virtual void ResolveAbility(GameObject gameobject)
+        {
+            Debug.Log("Fake aah method");
+        }
+        
+        
+
+        /*public virtual void ResolveAbility(GameObject tile)
+        {
+            //Fake method gets overriden while ResolveAbility(Vector3) is being implemented
+        }*/
         public virtual void FinishAbility()
         {
             AbilityPoints = 0;//Cooldown counter
@@ -320,10 +332,10 @@ using Random = UnityEngine.Random;
                 GetComponent<ActionManager>().RemoveAttackActionPoints();
             }
             GetComponent<PlayerInformation>().currentState = "Movement";
-            StartCoroutine(ExecuteAfterTime(0.001f, () =>
+            /*StartCoroutine(ExecuteAfterTime(0.001f, () =>
             {
                 gameInformation.EnableMovementAction();
-            }));
+            }));*/
             if (isAbilitySlow)
             {
                 DisableGrid();
@@ -336,6 +348,23 @@ using Random = UnityEngine.Random;
             RaycastHit2D raycast = Physics2D.Linecast(firstPosition, secondPosition, chosenLayer);
             return raycast.transform.gameObject;
         }
+
+        public GameObject GetSpecificGroundTile(Vector3 position)
+        {
+            return GameTileMap.Tilemap.GetChunk(position).GetCurrentCharacter();
+        }
+        
+        public static bool CheckIfSpecificLayer(Vector3 position, int x, int y, LayerMask chosenLayer)
+        {
+            Vector3 firstPosition = position + new Vector3(0f, 0.5f, 0f) + new Vector3(x, y, 0f);
+            Vector3 secondPosition = firstPosition + new Vector3(0.1f, 0f, 0f);
+            RaycastHit2D raycast = Physics2D.Linecast(firstPosition, secondPosition, chosenLayer);
+            if (raycast.transform == null)
+            {
+                return false;
+            }
+            return true;
+        }
         public static bool CheckIfSpecificLayer(GameObject tile, int x, int y, LayerMask chosenLayer)
         {
             Vector3 firstPosition = tile.transform.position + new Vector3(0f, 0.5f, 0f) + new Vector3(x, y, 0f);
@@ -346,6 +375,22 @@ using Random = UnityEngine.Random;
                 return false;
             }
             return true;
+        }
+
+        public static bool CheckIfSpecificTag(Vector3 position, int x, int y, LayerMask chosenLayer, string tagName)
+        {
+            Vector3 firstPosition = position + new Vector3(0f, 0.5f, 0f) + new Vector3(x, y, 0f);
+            Vector3 secondPosition = firstPosition + new Vector3(0.1f, 0f, 0f);
+            RaycastHit2D raycast = Physics2D.Linecast(firstPosition, secondPosition, chosenLayer);
+            if (raycast.transform == null)
+            {
+                return false;
+            }
+            else if (raycast.transform.CompareTag(tagName))
+            {
+                return true;
+            }
+            return false;
         }
         public static bool CheckIfSpecificTag(GameObject tile, int x, int y, LayerMask chosenLayer, string tagName)
         {
@@ -362,10 +407,18 @@ using Random = UnityEngine.Random;
             }
             return false;
         }
-        protected bool isAllegianceSame(GameObject tile)
+
+        protected bool isAllegianceSame(Vector3 position)
         {
             var playerTeams = gameInformation.GetComponent<PlayerTeams>();
-            return playerTeams.FindTeamAllegiance(GetSpecificGroundTile(tile, 0, 0, blockingLayer).GetComponent<PlayerInformation>().CharactersTeam)
+            return playerTeams.FindTeamAllegiance(GameTileMap.Tilemap.GetChunk(position).GetCurrentCharacter().GetComponent<PlayerInformation>().CharactersTeam)
+                == playerTeams.FindTeamAllegiance(GetComponent<PlayerInformation>().CharactersTeam);
+        }
+        protected bool isAllegianceSame(GameObject position)
+        {
+            Debug.Log("Fix allegiances");
+            var playerTeams = gameInformation.GetComponent<PlayerTeams>();
+            return playerTeams.FindTeamAllegiance(GetSpecificGroundTile(position, 0, 0, blockingLayer).GetComponent<PlayerInformation>().CharactersTeam)
                 == playerTeams.FindTeamAllegiance(GetComponent<PlayerInformation>().CharactersTeam);
         }
         protected bool isAllegianceSame(GameObject tile1, GameObject tile2, LayerMask chosenLayer)
@@ -457,7 +510,7 @@ using Random = UnityEngine.Random;
         }
         public virtual void PrepareForAIAction()
         {
-            if (canGridBeEnabled())
+            if (CanGridBeEnabled())
             {
                 CreateGrid();
             }

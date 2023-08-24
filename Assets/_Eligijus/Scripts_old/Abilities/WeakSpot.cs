@@ -131,7 +131,7 @@ public class WeakSpot : BaseAction
             FinishAbility();
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(GameObject tile)
     {
         if ((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player")) && !isAllegianceSame(tile))
         {
@@ -147,7 +147,7 @@ public class WeakSpot : BaseAction
     {
         List<GameObject> EnemyCharacterList = new List<GameObject>();
         bool isAllyNearby = false;
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             CreateGrid();
             List<GameObject> nearbyCharacterList = GetComponent<AIBehaviour>().GetCharactersInGrid(3);

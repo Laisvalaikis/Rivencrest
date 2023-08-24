@@ -70,7 +70,7 @@ public class LeapAndSlam : BaseAction
         }
     }
 
-    public override bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(GameObject tile)
     {
         if (!CheckIfSpecificLayer(tile, 0, 0, blockingLayer))
         {
@@ -87,7 +87,7 @@ public class LeapAndSlam : BaseAction
     public override GameObject PossibleAIActionTile()
     {
         List<GameObject> EnemyCharacterList = new List<GameObject>();
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             CreateGrid();
             foreach (GameObject tile in MergedTileList)

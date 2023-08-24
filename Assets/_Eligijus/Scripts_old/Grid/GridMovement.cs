@@ -235,7 +235,7 @@ public class GridMovement : BaseAction
         return false;
     }
 
-    public override bool canGridBeEnabled()
+    public override bool CanGridBeEnabled()
     {
         if (!isDisabled && AvailableMovementPoints > 0)
         {
@@ -247,7 +247,7 @@ public class GridMovement : BaseAction
     {
         // transform.gameObject.GetComponent<PlayerInformation>().currentState = "Movement";
         Debug.Log("disable changing state");
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             CreateGrid();
             HighlightMovement();

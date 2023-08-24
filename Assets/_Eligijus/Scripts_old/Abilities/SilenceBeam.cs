@@ -166,10 +166,7 @@ public class SilenceBeam : BaseAction
             FinishAbility();
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
-    {
-        return true;
-    }
+
     public override void OnTileHover(GameObject tile)
     {
         if (FindIndexOfTile(tile) != -1)

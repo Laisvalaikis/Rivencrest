@@ -200,7 +200,7 @@ public class SummonOrb : BaseAction
         }
     }
 
-    public override bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(GameObject tile)
     {
        // var gameInformation = GameObject.Find("GameInformation").gameObject;
        // bool isTeamNotFull = gameInformation.GetComponent<PlayerTeams>().allCharacterList.teams[gameInformation.GetComponent<GameInformation>().activeTeamIndex].characters.Count < 8;
@@ -224,7 +224,7 @@ public class SummonOrb : BaseAction
     public override GameObject PossibleAIActionTile()
     {
         List<GameObject> PossibleTileList = new List<GameObject>();
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             CreateGrid();
             foreach (GameObject tile in MergedTileList)

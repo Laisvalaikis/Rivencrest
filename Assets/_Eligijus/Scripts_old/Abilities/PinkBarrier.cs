@@ -123,7 +123,7 @@ public class PinkBarrier : BaseAction
 
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(GameObject tile)
     {
         if (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") 
             && GetSpecificGroundTile(tile, 0, 0, blockingLayer).GetComponent<PlayerInformation>().BarrierProvider == null
@@ -137,7 +137,7 @@ public class PinkBarrier : BaseAction
     {
         bool isEnemyNearby = false;
         List<GameObject> AllyCharacterList = new List<GameObject>();
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             List<GameObject> enemyList = GetComponent<AIBehaviour>().GetCharactersInGrid(3);
             foreach (GameObject character in enemyList)

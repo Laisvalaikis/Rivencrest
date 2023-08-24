@@ -111,22 +111,19 @@ public class CryoFreeze : BaseAction
         }
         isAbilityActive = false;
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        base.ResolveAbility(clickedTile);
+        base.ResolveAbility(position);
         isAbilityActive = true;
         transform.Find("CharacterModel").GetComponent<Animator>().SetBool("stasis", true);
         GetComponent<PlayerInformation>().Stasis = true;
         FinishAbility();
     }
-    public override bool canTileBeClicked(GameObject tile)
-    {
-        return true;
-    }
+
     public override GameObject PossibleAIActionTile()
     {
         List<GameObject> EnemyCharacterList = new List<GameObject>();
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             List<GameObject> characterList = GetComponent<AIBehaviour>().GetCharactersInGrid(2);
             foreach (GameObject character in characterList)

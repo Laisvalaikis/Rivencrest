@@ -127,11 +127,6 @@ public class FreezeAbility : BaseAction
             GetComponent<GridMovement>().AvailableMovementPoints++;
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
-    {
-        //return CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall");
-        return true;
-    }
     public override void OnTileHover(GameObject tile)
     {
         foreach (List<GameObject> MovementTileList in this.AvailableTiles)

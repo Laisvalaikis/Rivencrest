@@ -145,7 +145,7 @@ public class IsolatedStrike : BaseAction
             
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(GameObject tile)
     {
         if ((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall"))
             && !isAllegianceSame(tile) && !GetComponent<PlayerInformation>().CantAttackCondition)

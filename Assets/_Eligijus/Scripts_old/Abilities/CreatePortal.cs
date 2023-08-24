@@ -117,14 +117,6 @@ public class CreatePortal : BaseAction
         }
 
     }
-    public override bool canTileBeClicked(GameObject tile)
-    {
-        if (!CheckIfSpecificLayer(gameObject, 0, 0, portalLayer) && !CheckIfSpecificLayer(tile, 0, 0, portalLayer))
-        {
-            return true;
-        }
-        else return false;
-    }
     public override void OnTileHover(GameObject tile)
     {
         tile.transform.Find("mapTile").Find("Object").gameObject.SetActive(true);

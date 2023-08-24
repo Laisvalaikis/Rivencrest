@@ -97,13 +97,13 @@ public class Enrage : BaseAction
         GetSpecificGroundTile(transform.gameObject, 0, 0, groundLayer).GetComponent<HighlightTile>().SetHighlightBool(false);
     }
     */
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
        
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
-            GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+            base.ResolveAbility(position);
+            GameObject target = GetSpecificGroundTile(position);
             target.GetComponent<GridMovement>().AvailableMovementPoints++;
             GetComponent<GridMovement>().AvailableMovementPoints++;
             GetSpecificGroundTile(target, 0, 0, groundLayer).transform.
@@ -116,7 +116,7 @@ public class Enrage : BaseAction
             GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().EnableMovementAction();
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
+    public bool CanTileBeClicked(GameObject tile)
     {
         if (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") && isAllegianceSame(tile))
         {

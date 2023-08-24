@@ -136,13 +136,10 @@ public class CometFall : BaseAction
 
         FinishAbility();
     }
-    public override bool canTileBeClicked(GameObject tile)
-    {
-        return CheckIfSpecificLayer(tile, 0, 0, groundLayer);
-    }
+
     public override GameObject PossibleAIActionTile()
     {
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
 
             List<GameObject> characterList = GetComponent<AIBehaviour>().GetCharactersInGrid(2);

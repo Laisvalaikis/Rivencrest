@@ -43,7 +43,7 @@ public class Execute : BaseAction
     */
     public override void EnableGrid()
     {
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             CreateGrid();
             HighlightOuter();
@@ -123,20 +123,20 @@ public class Execute : BaseAction
         }
     }
     */
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
-            GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+            base.ResolveAbility(position);
+            GameObject target = GetSpecificGroundTile(position);
            // int damage = ExecuteDamage(target);
             //dodgeActivation(ref damage, target);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
            // target.GetComponent<PlayerInformation>().DealDamage(damage, false, gameObject);
             if(target.GetComponent<PlayerInformation>().health <= 0)
             {
-                transform.position = clickedTile.transform.position + new Vector3(0f, 0f, -1f);
+                transform.position = position + new Vector3(0f, 0f, -1f);
                 GetComponent<PlayerInformation>().Heal(5, false);
                 if (DoesCharacterHaveBlessing("Feast"))
                 {
@@ -145,7 +145,7 @@ public class Execute : BaseAction
             }
             else 
             {
-                clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").
+                //clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").
                     gameObject.GetComponent<Animator>().SetTrigger("red2");
             }
             FinishAbility();
@@ -159,10 +159,10 @@ public class Execute : BaseAction
 
       //  return damage;
   //  }
-    public override bool canTileBeClicked(GameObject tile)
+    public bool CanTileBeClicked(Vector3 position)
     {
-        if ((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall"))
-            && !isAllegianceSame(tile))// && !GetComponent<PlayerInformation>().CantAttackCondition)
+        if ((CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(position, 0, 0, blockingLayer, "Wall"))
+            && !isAllegianceSame(position))// && !GetComponent<PlayerInformation>().CantAttackCondition)
         {
             return true;
         }

@@ -194,7 +194,7 @@ public class RaiseRock : BaseAction
         }
     }
 
-    public override bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(GameObject tile)
     {
         bool isBlockingLayer = CheckIfSpecificLayer(tile, 0, 0, blockingLayer);
         bool isConsumablesLayer = CheckIfSpecificLayer(tile, 0, 0, consumablesLayer);

@@ -653,7 +653,7 @@ public class AIBehaviour : MonoBehaviour
         {
             foreach (SpecialAbility x in FindAllSpecialAbilitiesByCastOrder(castOrder))
             {
-                if (actionManager.FindActionByName(x.abilityName).canGridBeEnabled() 
+                if (actionManager.FindActionByName(x.abilityName).CanGridBeEnabled() 
                     && x.difficultyLevel <= _data.townData.selectedEncounter.encounterLevel)
                 {
                     StartCoroutine(ExecuteAfterTime(_castAfter, () =>
@@ -676,7 +676,7 @@ public class AIBehaviour : MonoBehaviour
     {
         foreach (SpecialAbility x in specialAbilities)
         {
-            if (actionManager.FindActionByName(x.abilityName).canGridBeEnabled())
+            if (actionManager.FindActionByName(x.abilityName).CanGridBeEnabled())
             {
                 return false;
             }
@@ -688,7 +688,7 @@ public class AIBehaviour : MonoBehaviour
         List<string> availableAbilityNames = new List<string>();
         foreach (SpecialAbility x in specialAbilities)
         {
-            if (actionManager.FindActionByName(x.abilityName).canGridBeEnabled() && !availableAbilityNames.Contains(x.abilityName))
+            if (actionManager.FindActionByName(x.abilityName).CanGridBeEnabled() && !availableAbilityNames.Contains(x.abilityName))
             {
                 availableAbilityNames.Add(x.abilityName);
             }

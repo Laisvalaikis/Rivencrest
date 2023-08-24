@@ -14,7 +14,7 @@ public abstract class CharacterAction : MonoBehaviour
         
     }
     
-    public virtual void ResolveAbility(GameObject clickedTile)
+    public virtual void ResolveAbility(Vector3 position)
     {
         Debug.Log("We are in CharacterAction");
     }

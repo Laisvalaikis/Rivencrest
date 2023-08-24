@@ -16,23 +16,23 @@ public class FromTheShadows : BaseAction
         actionStateName = "FromTheShadows";
         //isAbilitySlow = false;
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
+            base.ResolveAbility(position);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
-            DamageAdjacent(clickedTile);
-            transform.position = clickedTile.transform.position + new Vector3(0f, 0f, -1f);
+            //DamageAdjacent(clickedTile);
+            transform.position = position + new Vector3(0f, 0f, -1f);
             //clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger(ImpactName);        
             FinishAbility();
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
+    public bool CanTileBeClicked(Vector3 position)
     {
-        return CheckIfSpecificLayer(tile, 0, 0, groundLayer) && !CheckIfSpecificLayer(tile, 0, 0, blockingLayer);
+        return CheckIfSpecificLayer(position, 0, 0, groundLayer) && !CheckIfSpecificLayer(position, 0, 0, blockingLayer);
     }
     private void DamageAdjacent(GameObject center)
     {

@@ -17,25 +17,25 @@ public class Scream : BaseAction
         actionStateName = "Scream";
         isAbilitySlow = false;
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
-            GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+            base.ResolveAbility(position);
+            GameObject target = GetSpecificGroundTile(position);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
-            if (isTargetIsolated(target))//
+            if (isTargetIsolated(target))
             {
                 target.GetComponent<PlayerInformation>().Silenced = true;
             }
             DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);
-            clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger("red1");
+            //clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger("red1");
             //
-            GameObject tileToDashBackwards = TileToDashBackwards(clickedTile);
-            if (tileToDashBackwards != null)
-            {
-                GameObject.Find("GameInformation").GetComponent<GameInformation>().MoveSelectedCharacter(tileToDashBackwards);
-            }
+            //GameObject tileToDashBackwards = TileToDashBackwards(clickedTile);
+            //if (tileToDashBackwards != null)
+            //{
+            //    GameObject.Find("GameInformation").GetComponent<GameInformation>().MoveSelectedCharacter(tileToDashBackwards);
+            //}
             FinishAbility();
         }
     }
@@ -121,7 +121,7 @@ public class Scream : BaseAction
     public override GameObject PossibleAIActionTile()
     {
         List<GameObject> EnemyCharacterList = new List<GameObject>();
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             CreateGrid();
             foreach (List<GameObject> MovementTileList in this.AvailableTiles)
@@ -131,7 +131,7 @@ public class Scream : BaseAction
                     if (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player"))
                     {
                         GameObject character = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
-                        if (!isAllegianceSame(character) && canTileBeClicked(tile))
+                        if (!isAllegianceSame(character) && CanTileBeClicked(tile.transform.position))
                         {
                             EnemyCharacterList.Add(character);
                         }

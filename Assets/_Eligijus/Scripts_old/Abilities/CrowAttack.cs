@@ -112,17 +112,17 @@ public class CrowAttack : BaseAction
         GetSpecificGroundTile(transform.gameObject, 0, 0, groundLayer).GetComponent<HighlightTile>().SetHighlightBool(false);
     }
     */
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
+            base.ResolveAbility(position);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
             foreach (GameObject tile in MergedTileList)
             {
-                if (base.canTileBeClicked(tile))
+                if (base.CanTileBeClicked(tile.transform.position))
                 {
                     GameObject target = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
                     int bonusDamage = 0;
@@ -141,14 +141,7 @@ public class CrowAttack : BaseAction
             FinishAbility();
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
-    {
-        return base.canTileBeClicked(tile);
-    }
-    public override bool canPreviewBeShown(GameObject tile)
-    {
-        return base.canTileBeClicked(tile);
-    }
+    
     public override void OnTileHover(GameObject tile)
     {
         EnableDamagePreview(tile, MergedTileList, minAttackDamage, maxAttackDamage);
@@ -159,27 +152,27 @@ public class CrowAttack : BaseAction
     }
     public override GameObject PossibleAIActionTile()
     {
-        List<GameObject> EnemyCharacterList = new List<GameObject>();
-        if (canGridBeEnabled())
+        List<GameObject> enemyCharacterList = new List<GameObject>();
+        if (CanGridBeEnabled())
         {
             CreateGrid();
             foreach (GameObject tile in MergedTileList)
             {
-                if (canTileBeClicked(tile))
+                if (CanTileBeClicked(tile.transform.position))
                 {
                     GameObject character = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
-                    EnemyCharacterList.Add(character);
+                    enemyCharacterList.Add(character);
                 }
             }
         }
         int actionChanceNumber = UnityEngine.Random.Range(0, 100); //ar paleist spella ar ne
-        if (EnemyCharacterList.Count > 1 && actionChanceNumber <= 100)
+        if (enemyCharacterList.Count > 1 && actionChanceNumber <= 100)
         {
-            return GetSpecificGroundTile(EnemyCharacterList[Random.Range(0, EnemyCharacterList.Count - 1)], 0, 0, groundLayer);
+            return GetSpecificGroundTile(enemyCharacterList[Random.Range(0, enemyCharacterList.Count - 1)], 0, 0, groundLayer);
         }
-        else if (EnemyCharacterList.Count > 0 && actionChanceNumber <= 40)
+        else if (enemyCharacterList.Count > 0 && actionChanceNumber <= 40)
         {
-            return GetSpecificGroundTile(EnemyCharacterList[Random.Range(0, EnemyCharacterList.Count - 1)], 0, 0, groundLayer);
+            return GetSpecificGroundTile(enemyCharacterList[Random.Range(0, enemyCharacterList.Count - 1)], 0, 0, groundLayer);
         }
         return null;
     }

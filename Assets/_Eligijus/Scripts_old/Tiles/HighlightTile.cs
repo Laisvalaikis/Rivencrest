@@ -146,7 +146,7 @@ public class HighlightTile : MonoBehaviour
         }
         if (activeState != "Movement" && GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().InspectedCharacter == null &&
             !GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().SelectedCharacter.GetComponent<ActionManager>()
-            .FindActionByName(activeState).canTileBeClicked(gameObject) || !IsSkillAvailableInFOW())
+            .FindActionByName(activeState).CanTileBeClicked(gameObject.transform.position) || !IsSkillAvailableInFOW())
         {
             NotHoveredColor = (new Color(100f / 255f, 100f / 255f, 100f / 255f) + NotHoveredColor) / 2;
             //NotHoveredColor = NotHoveredColor + new Color(-20/255f,-20/255f,-20/255f, -50/255f);
@@ -241,13 +241,13 @@ public class HighlightTile : MonoBehaviour
             {
                 if (activeState != "Movement" && isHighlighted)
                 {
-                    if (gameInformation.SelectedCharacter != null && gameInformation.SelectedCharacter.GetComponent<ActionManager>().FindActionByName(activeState).canTileBeClicked(gameObject)
+                    if (gameInformation.SelectedCharacter != null && gameInformation.SelectedCharacter.GetComponent<ActionManager>().FindActionByName(activeState).CanTileBeClicked(gameObject.transform.position)
                         && IsSkillAvailableInFOW())
                     {
                         HighlightedByPlayerUI.GetComponent<SpriteRenderer>().color = colorManager.MovementHighlightHover;
                         gameInformation.SelectedCharacter.GetComponent<ActionManager>().FindActionByName(activeState).OnTileHover(gameObject);
                     }
-                    else if (gameInformation.InspectedCharacter != null && gameInformation.InspectedCharacter.GetComponent<ActionManager>().FindActionByName(activeState).canTileBeClicked(gameObject)
+                    else if (gameInformation.InspectedCharacter != null && gameInformation.InspectedCharacter.GetComponent<ActionManager>().FindActionByName(activeState).CanTileBeClicked(gameObject.transform.position)
                         && IsSkillAvailableInFOW())
                     {
                         HighlightedByPlayerUI.GetComponent<SpriteRenderer>().color = colorManager.MovementHighlightHover;

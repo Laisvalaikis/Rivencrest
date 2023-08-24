@@ -104,7 +104,7 @@ public class BlockAbility : BaseAction
     public override void ResolveAbility(GameObject clickedTile)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(clickedTile))
         {
             base.ResolveAbility(clickedTile);
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spellToBool");
@@ -115,7 +115,7 @@ public class BlockAbility : BaseAction
             FinishAbility();
         }
     }
-    public override bool canTileBeClicked(GameObject tile)//negalima blokuoti, jei esi blokuojamas
+    public bool CanTileBeClicked(GameObject tile)//negalima blokuoti, jei esi blokuojamas
     {
         if (GetComponent<PlayerInformation>().BlockingAlly == null && CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player")
             && isAllegianceSame(tile))
@@ -130,7 +130,7 @@ public class BlockAbility : BaseAction
     }
     public override GameObject PossibleAIActionTile()
     {
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             List<GameObject> characterList = GetComponent<AIBehaviour>().GetCharactersInGrid(1);
 

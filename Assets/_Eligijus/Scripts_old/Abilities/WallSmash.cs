@@ -51,7 +51,7 @@ public class WallSmash : BaseAction
     */
     public override void EnableGrid()
     {
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             CreateGrid();
             HighlightOuter();
@@ -142,7 +142,7 @@ public class WallSmash : BaseAction
             FinishAbility();
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(GameObject tile)
     {
         if (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall") || (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") && !isAllegianceSame(tile)))
         {

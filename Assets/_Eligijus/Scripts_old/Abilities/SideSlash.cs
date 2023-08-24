@@ -112,10 +112,7 @@ public class SideSlash : BaseAction
             FinishAbility();
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
-    {
-        return true;
-    }
+
     public override void OnTileHover(GameObject tile)
     {  
         if (FindIndexOfTile(tile) != -1)
@@ -134,7 +131,7 @@ public class SideSlash : BaseAction
     public override GameObject PossibleAIActionTile()
     {
         List<GameObject> EnemyCharacterList = new List<GameObject>();
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             CreateGrid();
             foreach (GameObject tile in MergedTileList)

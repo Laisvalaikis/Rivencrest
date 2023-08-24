@@ -137,13 +137,13 @@ public class IceQuake : BaseAction
         GetSpecificGroundTile(transform.gameObject, 0, 0, groundLayer).GetComponent<HighlightTile>().SetHighlightBool(false);
     }
     */
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
-            GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+            base.ResolveAbility(position);
+            GameObject target = GetSpecificGroundTile(position);
             int bonusDamage = 0;
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell3");
             if (target.GetComponent<PlayerInformation>().Slow1 || target.GetComponent<PlayerInformation>().Slow2 || target.GetComponent<PlayerInformation>().Slow3)
@@ -156,7 +156,7 @@ public class IceQuake : BaseAction
             {
                 target.GetComponent<PlayerInformation>().ApplyDebuff("IceSlow");
             }
-            clickedTile.transform.Find("mapTile").Find("VFX9x9Below").gameObject.GetComponent<Animator>().SetTrigger("iceQuake");
+            //clickedTile.transform.Find("mapTile").Find("VFX9x9Below").gameObject.GetComponent<Animator>().SetTrigger("iceQuake");
             DealRandomDamageToTarget(target, minAttackDamage+bonusDamage, maxAttackDamage+ bonusDamage);
             FinishAbility();
         }
@@ -196,8 +196,8 @@ public class IceQuake : BaseAction
    }
     public override GameObject PossibleAIActionTile()
     {
-        List<GameObject> EnemyCharacterList = new List<GameObject>();
-        if (canGridBeEnabled())
+        List<GameObject> enemyCharacterList = new List<GameObject>();
+        if (CanGridBeEnabled())
         {
             CreateGrid();
 
@@ -206,18 +206,18 @@ public class IceQuake : BaseAction
                 if (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player"))
                 {
                     GameObject character = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
-                    if (!isAllegianceSame(character) && canTileBeClicked(tile))
+                    if (!isAllegianceSame(character) && CanTileBeClicked(tile.transform.position))
                     {
-                        EnemyCharacterList.Add(character);
+                        enemyCharacterList.Add(character);
                     }
                 }
             }
         }
 
         int actionChanceNumber = UnityEngine.Random.Range(0, 100); //ar paleist spella ar ne
-        if (EnemyCharacterList.Count > 0 && actionChanceNumber <= 100)
+        if (enemyCharacterList.Count > 0 && actionChanceNumber <= 100)
         {
-            return GetSpecificGroundTile(EnemyCharacterList[Random.Range(0, EnemyCharacterList.Count - 1)], 0, 0, groundLayer);
+            return GetSpecificGroundTile(enemyCharacterList[Random.Range(0, enemyCharacterList.Count - 1)], 0, 0, groundLayer);
         }
         return null;
     }

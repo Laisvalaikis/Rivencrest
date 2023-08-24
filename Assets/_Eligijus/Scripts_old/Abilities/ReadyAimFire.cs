@@ -53,7 +53,7 @@ public class ReadyAimFire : BaseAction
         }
         return -1;
     }
-    public override bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(GameObject tile)
     {
         if ((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player")) && !isAllegianceSame(tile))
         {
@@ -148,7 +148,7 @@ public class ReadyAimFire : BaseAction
     public override GameObject PossibleAIActionTile()
     {
         List<GameObject> EnemyCharacterList = new List<GameObject>();
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             CreateGrid();
             foreach (List<GameObject> MovementTileList in this.AvailableTiles)

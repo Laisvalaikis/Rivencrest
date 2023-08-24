@@ -129,25 +129,16 @@ public class ChainHook : BaseAction
     }
 
 
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
-            //Normal ability
-            if (CheckIfSpecificTag(clickedTile, 0, 0, blockingLayer, "Player"))
+            base.ResolveAbility(position);
+            if(CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player"))
             {
-                //var hookVectors = new List<(int, int)>
-                //{
-                //(1, 0),
-                //(0, 1),
-                //(-1, 0),
-                //(0, -1)
-                //};
-                if (FindIndexOfTile(clickedTile) != -1)
+                if (GameTileMap.Tilemap.GetChunk(position) != null)
                 {
-                    GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+                    GameObject target = GetSpecificGroundTile(position);
                     target.transform.Find("VFX").Find("VFXImpact").gameObject.GetComponent<Animator>().SetTrigger("burgundy2");
                     //int tileIndex = FindIndexOfTile(clickedTile);
                     if (!isAllegianceSame(target))
@@ -165,14 +156,14 @@ public class ChainHook : BaseAction
                 }
             }
             //Grappling hook blessing
-            else if (CheckIfSpecificTag(clickedTile, 0, 0, blockingLayer, "Wall") && grapplingHook) 
+            else if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Wall") && grapplingHook) 
             {
                 //GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
-                if (TileToDashTo(clickedTile) != null)
+                /*if (TileToDashTo(clickedTile) != null)
                 {
                     transform.position = TileToDashTo(clickedTile).transform.position + new Vector3(0f, 0f, -1f);
                     GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().FocusSelectedCharacter(gameObject);
-                }
+                }*/
                 transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
                 FinishAbility();
             }
@@ -228,14 +219,6 @@ public class ChainHook : BaseAction
         print("INDEX NOT FOUND");
         return null;
     }
-    public override bool canTileBeClicked(GameObject tile)
-    {
-        if ((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player")) || (grapplingHook && CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall")))
-        {
-            return true;
-        }
-        else return false;
-    }
     public override void OnTileHover(GameObject tile)
     {
         if(CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player"))
@@ -280,10 +263,6 @@ public class ChainHook : BaseAction
                 canTileBeHovered = true;
             }));
         }
-    }
-    public override bool canPreviewBeShown(GameObject tile)
-    {
-        return true;
     }
     public override void BuffAbility()
     {

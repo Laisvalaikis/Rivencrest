@@ -122,14 +122,7 @@ public class GroundSlam : BaseAction
             }
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
-    {
-        return true;
-    }
-    public override bool canPreviewBeShown(GameObject tile)
-    {
-        return true;
-    }
+
     public override void OnTileHover(GameObject tile)
     {
         EnableDamagePreview(tile, MergedTileList, minAttackDamage, maxAttackDamage);
@@ -155,7 +148,7 @@ public class GroundSlam : BaseAction
     public override GameObject PossibleAIActionTile()
     {
         bool isActionPossible = false;
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
             List<GameObject> characterList = GetComponent<AIBehaviour>().GetCharactersInGrid(2);
             foreach (GameObject character in characterList)

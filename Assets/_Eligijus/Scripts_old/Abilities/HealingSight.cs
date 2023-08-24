@@ -80,7 +80,7 @@ public class HealingSight : BaseAction
     public override void ResolveAbility(GameObject clickedTile)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(clickedTile))
         {
             base.ResolveAbility(clickedTile);
             clickedTile.transform.Find("mapTile").Find("VFX9x9Upper").gameObject.GetComponent<Animator>().SetTrigger("healingSight");
@@ -148,7 +148,7 @@ public class HealingSight : BaseAction
             }
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
+    public bool CanTileBeClicked(GameObject tile)
     {
         /*
         if (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") && isAllegianceSame(tile, blockingLayer))
@@ -182,7 +182,7 @@ public class HealingSight : BaseAction
     }
     public override GameObject PossibleAIActionTile()
     {
-        if (canGridBeEnabled())
+        if (CanGridBeEnabled())
         {
            // if(GetComponent<PlayerInformation>().health < GetComponent<PlayerInformation>().MaxHealth)
             {

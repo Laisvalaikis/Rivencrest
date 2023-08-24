@@ -180,10 +180,6 @@ public class Volley : BaseAction
             FinishAbility();
         }
     }
-    public override bool canTileBeClicked(GameObject tile)
-    {
-            return true;
-    }
     public override void OnTileHover(GameObject tile)
     {
         if(TileToDashBackwards(tile) != null)
@@ -220,8 +216,5 @@ public class Volley : BaseAction
             DisablePreview(tile, AvailableTiles[FindIndexOfTile(tile)]);
         }
     }
-    public override bool canPreviewBeShown(GameObject tile)
-    {
-        return true;
-    }
+
 }
