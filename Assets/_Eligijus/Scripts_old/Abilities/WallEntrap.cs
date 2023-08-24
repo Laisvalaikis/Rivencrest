@@ -28,14 +28,14 @@ public class WallEntrap : BaseAction
             }
         }
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        if (canTileBeClicked(clickedTile))
+        if (canTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
+            base.ResolveAbility(position);
             SpawnedWalls.Clear();
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
-            GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+            GameObject target = GetSpecificGroundTile(position);
             SpawnAdjacentWalls(target);
 
             FinishAbility();
@@ -81,9 +81,9 @@ public class WallEntrap : BaseAction
         }
         GetSpecificGroundTile(transform.gameObject, 0, 0, groundLayer).GetComponent<HighlightTile>().SetHighlightBool(true);
     }
-    public bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(Vector3 position)
     {
-        return CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player");
+        return CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player");
     }
     public override void OnTileHover(GameObject tile)
     {
@@ -99,7 +99,7 @@ public class WallEntrap : BaseAction
             CreateGrid();
             foreach (GameObject tile in MergedTileList)
             {
-                if (canTileBeClicked(tile) && !isAllegianceSame(tile))
+                if (canTileBeClicked(tile.transform.position) && !isAllegianceSame(tile))
                 {
                     GameObject character = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
                     EnemyCharacterList.Add(character);

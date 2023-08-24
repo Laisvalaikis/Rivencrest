@@ -116,9 +116,9 @@ public class WindBoost : BaseAction
         }
         isAbilityActive = false;
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        base.ResolveAbility(clickedTile);
+        base.ResolveAbility(position);
         isAbilityActive = true;
         transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
         transform.Find("VFX").Find("WindBoost").gameObject.SetActive(true);
