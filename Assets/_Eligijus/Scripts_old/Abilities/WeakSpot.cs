@@ -119,21 +119,21 @@ public class WeakSpot : BaseAction
             target = null;
         }
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        if (canTileBeClicked(clickedTile))
+        if (canTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
-            clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger("pink1");
-            target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+            base.ResolveAbility(position);
+           // position.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger("pink1");
+            target = GetSpecificGroundTile(position);
             DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);
             target.GetComponent<PlayerInformation>().PinkWeakSpot = gameObject;
             FinishAbility();
         }
     }
-    public bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(Vector3 position)
     {
-        if ((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player")) && !isAllegianceSame(tile))
+        if ((CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player")) && !isAllegianceSame(position))
         {
             return true;
         }
@@ -161,7 +161,7 @@ public class WeakSpot : BaseAction
             }
             foreach (GameObject tile in MergedTileList)
             {
-                if (canTileBeClicked(tile))
+                if (canTileBeClicked(tile.transform.position))
                 {
                     GameObject character = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
                     EnemyCharacterList.Add(character);
