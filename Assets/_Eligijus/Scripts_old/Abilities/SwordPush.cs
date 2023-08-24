@@ -13,11 +13,11 @@ public class SwordPush : BaseAction
     {
         actionStateName = "SwordPush";
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        base.ResolveAbility(clickedTile);
+        base.ResolveAbility(position);
         transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell1");
-        TileThatWasClicked = clickedTile;
+       // TileThatWasClicked = position;
     }
     public bool canTileBeClicked(GameObject tile)
     {

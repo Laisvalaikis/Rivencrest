@@ -148,14 +148,14 @@ public class SummonBear : BaseAction
             }
         }*/
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        if (canTileBeClicked(clickedTile))
+        if (canTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
+            base.ResolveAbility(position);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell1");
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("createFog");
-            spawnedCharacter = Instantiate(BearPrefab, clickedTile.transform.position - new Vector3(0f,0f,1f), Quaternion.identity) as GameObject;
+            spawnedCharacter = Instantiate(BearPrefab, position- new Vector3(0f,0f,1f), Quaternion.identity) as GameObject;
             spawnedCharacter.transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell1");
             spawnedCharacter.GetComponent<PlayerInformation>().wasThisCharacterSpawned = true;
             //spawnedBear.GetComponent<PlayerInformation>().ApplyDebuff("Stun");
@@ -166,11 +166,11 @@ public class SummonBear : BaseAction
         }
     }
 
-    public bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(Vector3 position)
     {
         var gameInformation = GameObject.Find("GameInformation").gameObject;
         bool isTeamNotFull = gameInformation.GetComponent<PlayerTeams>().allCharacterList.teams[gameInformation.GetComponent<GameInformation>().activeTeamIndex].characters.Count < 8;
-        bool isBlockingLayer = CheckIfSpecificLayer(tile, 0, 0, blockingLayer);
+        bool isBlockingLayer = CheckIfSpecificLayer(position, 0, 0, blockingLayer);
 
         if (isTeamNotFull && !isBlockingLayer)
         {
@@ -206,7 +206,7 @@ public class SummonBear : BaseAction
             CreateGrid();
             foreach (GameObject tile in MergedTileList)
             {
-                if (canTileBeClicked(tile))
+                if (canTileBeClicked(tile.transform.position))
                 {
                     GameObject possibleTile = GetSpecificGroundTile(tile, 0, 0, groundLayer);
                     PossibleTileList.Add(possibleTile);
