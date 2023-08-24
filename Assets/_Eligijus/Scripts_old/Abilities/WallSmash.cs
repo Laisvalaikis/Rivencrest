@@ -123,28 +123,28 @@ public class WallSmash : BaseAction
         }
     }
     */
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        if (canTileBeClicked(clickedTile))
+        if (canTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
-            if(CheckIfSpecificTag(clickedTile, 0, 0, blockingLayer, "Wall"))
+            base.ResolveAbility(position);
+            if(CheckIfSpecificTag(position, 0, 0, blockingLayer, "Wall"))
             {
-                tileForAnimation = clickedTile;
+               // tileForAnimation = position;
                 WallSmashAnimationEnd();
             }
-            else if(CheckIfSpecificTag(clickedTile, 0, 0, blockingLayer, "Player"))
+            else if(CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player"))
             {
-                DealRandomDamageToTarget(GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer), minAttackDamage - 2, maxAttackDamage - 2);
+                DealRandomDamageToTarget(GetSpecificGroundTile(position), minAttackDamage - 2, maxAttackDamage - 2);
             }
-            transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
+            //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
 
             FinishAbility();
         }
     }
-    public bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(Vector3 position)
     {
-        if (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall") || (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") && !isAllegianceSame(tile)))
+        if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Wall") || (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") && !isAllegianceSame(position)))
         {
             return true;
         }
