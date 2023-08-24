@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Threading;
 using Unity.VisualScripting;
+using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
 
 public class GameTileMap : MonoBehaviour
 {
+    [SerializeField] private Camera mainCamera;
     [SerializeField] private SelectAction _selectAction;
     public static GameTileMap Tilemap;
     [System.Serializable]
@@ -38,7 +40,7 @@ public class GameTileMap : MonoBehaviour
     private bool _updateWeight = false;
     private int _countForTreeSpawn = 0;
     private GameObject _currentSelectedCharacter;
-
+    private Vector2 _mousePosition;
     private void Awake()
     {
         if (Tilemap == null)
@@ -315,7 +317,6 @@ public class GameTileMap : MonoBehaviour
         {
             SetCharacter(_currentSelectedCharacter.transform.position, null);
             Vector3 characterPosition = GetChunk(mousePosition).GetPosition() - offset;
-            characterPosition.z = _currentSelectedCharacter.transform.position.z;
             _currentSelectedCharacter.transform.position = characterPosition;
             SetCharacter(mousePosition, _currentSelectedCharacter);
         }
@@ -359,11 +360,6 @@ public class GameTileMap : MonoBehaviour
     public void SetCurrentCharacter(GameObject currentCharacter)
     {
         _currentSelectedCharacter = currentCharacter;
-    }
-
-    public void DeselectTheCharacter(GameObject currentCharacter) //aurio sitas cia test
-    {
-        _currentSelectedCharacter = null;
     }
 
     // void OnApplicationQuit()
@@ -421,6 +417,27 @@ public class GameTileMap : MonoBehaviour
 
                 }
             }
+        }
+    }
+    
+    public void OnMove(InputAction.CallbackContext context)
+    { 
+        _mousePosition = context.ReadValue<Vector2>();
+    }
+    
+    public void OnMouseClick(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            MouseClick();
+    }
+    
+    private void MouseClick()
+    {
+        Vector3 mousePos = new Vector3(_mousePosition.x, _mousePosition.y, mainCamera.nearClipPlane);
+        Vector3 worldPos = mainCamera.ScreenToWorldPoint(mousePos);
+        if (!CharacterIsSelected())
+        {
+            SelectTile(worldPos);
         }
     }
     

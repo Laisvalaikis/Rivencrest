@@ -18,8 +18,8 @@ public class MistShield : BaseAction
     }
     private void AddSurroundingsToList(GameObject middleTile, int movementIndex)
     {
-        GameObject AddableObject = GetSpecificGroundTile(middleTile, 0, 0, groundLayer); //kad galima butu pasirinkt tik save
-        this.AvailableTiles[movementIndex].Add(AddableObject);
+        GameObject addableObject = GetSpecificGroundTile(middleTile, 0, 0, groundLayer); //kad galima butu pasirinkt tik save
+        this.AvailableTiles[movementIndex].Add(addableObject);
     }
     /*
     public override void EnableGrid()
@@ -56,9 +56,9 @@ public class MistShield : BaseAction
 
     public override void HighlightAll()
     {
-        foreach (List<GameObject> MovementTileList in this.AvailableTiles)
+        foreach (List<GameObject> movementTileList in AvailableTiles)
         {
-            foreach (GameObject tile in MovementTileList)
+            foreach (GameObject tile in movementTileList)
             {
                 tile.GetComponent<HighlightTile>().SetHighlightBool(true);
                 tile.GetComponent<HighlightTile>().activeState = actionStateName;
@@ -81,9 +81,9 @@ public class MistShield : BaseAction
             GetComponent<PlayerInformation>().Protected = false;
         }));
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        base.ResolveAbility(clickedTile);
+        base.ResolveAbility(position);
             isAbilityActive = true;
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell1");
             GetComponent<PlayerInformation>().MistShield = true;

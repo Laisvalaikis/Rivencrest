@@ -37,8 +37,8 @@ public class CreateEye : BaseAction
             bool isPlayer = CheckIfSpecificTag(middleTile, x.Item1, x.Item2, blockingLayer, "Player");
             if (isGround && (!isBlockingLayer || isPlayer))
             {
-                GameObject AddableObject = GetSpecificGroundTile(middleTile, x.Item1, x.Item2, groundLayer);
-                this.AvailableTiles[movementIndex].Add(AddableObject);
+                GameObject addableObject = GetSpecificGroundTile(middleTile, x.Item1, x.Item2, groundLayer);
+                this.AvailableTiles[movementIndex].Add(addableObject);
             }
         }
     }
@@ -100,10 +100,10 @@ public class CreateEye : BaseAction
         }
     }
 
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-            base.ResolveAbility(clickedTile);
-            createdEye = Instantiate(EyePrefab, clickedTile.transform.position + new Vector3(0f, 0f, 1f), Quaternion.identity) as GameObject;
+            base.ResolveAbility(position);
+            createdEye = Instantiate(EyePrefab, position + new Vector3(0f, 0f, 1f), Quaternion.identity);
             createdEye.GetComponent<CharacterVision>().EnableGrid();
             GetComponent<PlayerInformation>().VisionGameObject = createdEye;
             isEyeActive = true;

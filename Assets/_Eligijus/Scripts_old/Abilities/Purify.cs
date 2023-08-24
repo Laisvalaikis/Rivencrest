@@ -125,13 +125,13 @@ public class Purify : BaseAction
         }
         GetSpecificGroundTile(transform.gameObject, 0, 0, groundLayer).GetComponent<HighlightTile>().SetHighlightBool(true);
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
-            target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+            base.ResolveAbility(position);
+            target = GetSpecificGroundTile(position);
             if (DoesCharacterHaveBlessing("Enlighten"))
             {
                 int randomHeal = Random.Range(3, 5);
@@ -155,11 +155,11 @@ public class Purify : BaseAction
             FinishAbility();
         }
     }
-    public bool canTileBeClicked(GameObject tile)
+    public override bool CanTileBeClicked(Vector3 position)
     {
-        if ((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player")) && isAllegianceSame(tile))
+        if ((CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player")) && isAllegianceSame(position))
         {
-            GameObject tileTarget = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
+            GameObject tileTarget = GetSpecificGroundTile(position);
             bool poisoned = tileTarget.GetComponent<PlayerInformation>().Poisons.Count > 0;
             bool stunned = tileTarget.GetComponent<PlayerInformation>().Debuffs.Contains("Stun");
             bool slowed1 = tileTarget.GetComponent<PlayerInformation>().Slow1;
@@ -182,23 +182,23 @@ public class Purify : BaseAction
     }
     public override GameObject PossibleAIActionTile()
     {
-        List<GameObject> EnemyCharacterList = new List<GameObject>();
+        List<GameObject> enemyCharacterList = new List<GameObject>();
         if (CanGridBeEnabled())
         {
             CreateGrid();
             foreach (GameObject tile in MergedTileList)
             {
-                if (canTileBeClicked(tile))
+                if (CanTileBeClicked(tile.transform.position))
                 {
                     GameObject character = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
-                    EnemyCharacterList.Add(character);
+                    enemyCharacterList.Add(character);
                 }
             }
         }
         int actionChanceNumber = UnityEngine.Random.Range(0, 100); //ar paleist spella ar ne
-        if (EnemyCharacterList.Count > 0 && actionChanceNumber <= 100)
+        if (enemyCharacterList.Count > 0 && actionChanceNumber <= 100)
         {
-            return GetSpecificGroundTile(EnemyCharacterList[Random.Range(0, EnemyCharacterList.Count - 1)], 0, 0, groundLayer);
+            return GetSpecificGroundTile(enemyCharacterList[Random.Range(0, enemyCharacterList.Count - 1)], 0, 0, groundLayer);
         }
         return null;
     }
@@ -212,7 +212,7 @@ public class Purify : BaseAction
     public override BaseAction GetBuffedAbility(List<Blessing> blessings)
     {
         //Sukuriu kopija
-        Purify ability = new Purify();
+        Purify ability = target.AddComponent<Purify>();
         ability.actionStateName = this.actionStateName;
         ability.AttackRange = this.AttackRange;
         ability.AbilityCooldown = this.AbilityCooldown;

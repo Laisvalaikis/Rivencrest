@@ -34,20 +34,25 @@ public class PlayerMovement : CharacterAction
     void Update()
     {
 
-        if (Input.GetMouseButtonUp(0))
-        {
-            Vector3 mousePos = Input.mousePosition;  
-            Camera mainCamera = Camera.main;
-            mousePos.z = mainCamera.nearClipPlane;
-            Vector3 worldpos = mainCamera.ScreenToWorldPoint(mousePos);
-            OnTileClick(worldpos);
-        }
+        // if (Input.GetMouseButtonUp(0))
+        // {
+        //     // Vector3 mousePos = Input.mousePosition;  
+        //     // Camera mainCamera = Camera.main;
+        //     // mousePos.z = mainCamera.nearClipPlane;
+        //     // Vector3 worldpos = mainCamera.ScreenToWorldPoint(mousePos);
+        //     // OnTileClick(worldpos);
+        // }
        
     }
     
     public override void OnTileClick(Vector3 mousePosition)
     {
-        
+        if (!GameTileMap.Tilemap.CharacterIsOnTile(mousePosition))
+        {
+            GameTileMap.Tilemap.MoveSelectedCharacter(mousePosition, new Vector3(0, 0.5f, 1));
+        }
+
+        Debug.Log("We are in Character");
         base.OnTileClick(mousePosition);
     }
    

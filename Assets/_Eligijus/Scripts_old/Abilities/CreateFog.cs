@@ -119,16 +119,16 @@ public class CreateFog : BaseAction
             }
         }
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (CanTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
+            base.ResolveAbility(position);
             FinishAbility();
-            tileForAnimation = clickedTile;
+            //tileForAnimation = GameTileMap.Tilemap.GetChunk(position);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("createFog");
-            spawnedFog = Instantiate(FogPrefab, tileForAnimation.transform.position + new Vector3(0f, 0f, 1f), Quaternion.identity) as GameObject;
+            spawnedFog = Instantiate(FogPrefab, tileForAnimation.transform.position + new Vector3(0f, 0f, 1f), Quaternion.identity);
             GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().ChangeVisionTiles();
             isFogActive = true;
             i = 0;
