@@ -38,8 +38,8 @@ public class CreatePortal : BaseAction
             bool isPlayer = CheckIfSpecificTag(middleTile, x.Item1, x.Item2, blockingLayer, "Player");
             if (isGround && (!isBlockingLayer || isPlayer))
             {
-                GameObject AddableObject = GetSpecificGroundTile(middleTile, x.Item1, x.Item2, groundLayer);
-                this.AvailableTiles[movementIndex].Add(AddableObject);
+                GameObject addableObject = GetSpecificGroundTile(middleTile, x.Item1, x.Item2, groundLayer);
+                this.AvailableTiles[movementIndex].Add(addableObject);
             }
         }
     }
@@ -100,13 +100,13 @@ public class CreatePortal : BaseAction
         }
     }
 
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        if (!CheckIfSpecificLayer(gameObject, 0, 0, portalLayer) && !CheckIfSpecificLayer(clickedTile, 0, 0, portalLayer))
+        if (!CheckIfSpecificLayer(gameObject, 0, 0, portalLayer) && !CheckIfSpecificLayer(position, 0, 0, portalLayer))
         {
-            base.ResolveAbility(clickedTile);
-            portalExit = Instantiate(PortalPrefab, clickedTile.transform.position + new Vector3(0f, 0f, 1f), Quaternion.identity) as GameObject;
-            portalEntrance = Instantiate(PortalPrefab, transform.position + new Vector3(0f, 0f, 2f), Quaternion.identity) as GameObject;
+            base.ResolveAbility(position);
+            portalExit = Instantiate(PortalPrefab,position + new Vector3(0f, 0f, 1f), Quaternion.identity);
+            portalEntrance = Instantiate(PortalPrefab, transform.position + new Vector3(0f, 0f, 2f), Quaternion.identity);
             portalExit.GetComponent<Portal>().OtherPortalExit = portalEntrance;
             portalEntrance.GetComponent<Portal>().OtherPortalExit = portalExit;
             isPortalActive = true;

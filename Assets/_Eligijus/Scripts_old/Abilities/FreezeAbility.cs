@@ -92,14 +92,14 @@ public class FreezeAbility : BaseAction
         }
     }
     */
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        base.ResolveAbility(clickedTile);
+        base.ResolveAbility(position);
         transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell1");
         transform.Find("VFX").Find("VFX9x9").gameObject.GetComponent<Animator>().SetTrigger("iceFreeze");
-        foreach (List<GameObject> MovementTileList in this.AvailableTiles)
+        foreach (List<GameObject> movementTileList in this.AvailableTiles)
         {
-            foreach (GameObject tile in MovementTileList)
+            foreach (GameObject tile in movementTileList)
             {
                 if (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") ||
                     CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall")) //visiem stovintiems ant kvadrato tilesu, turinciu player arba wall tagga ikerta
@@ -129,16 +129,16 @@ public class FreezeAbility : BaseAction
     }
     public override void OnTileHover(GameObject tile)
     {
-        foreach (List<GameObject> MovementTileList in this.AvailableTiles)
+        foreach (List<GameObject> movementTileList in this.AvailableTiles)
         {
-            EnableDamagePreview(tile, MovementTileList, minAttackDamage, maxAttackDamage);
+            EnableDamagePreview(tile, movementTileList, minAttackDamage, maxAttackDamage);
         }
     }
     public override void OffTileHover(GameObject tile)
     {
-        foreach (List<GameObject> MovementTileList in this.AvailableTiles)
+        foreach (List<GameObject> movementTileList in this.AvailableTiles)
         {
-            DisablePreview(tile, MovementTileList);
+            DisablePreview(tile, movementTileList);
         }
     }
     public override void BuffAbility()
@@ -156,7 +156,7 @@ public class FreezeAbility : BaseAction
     public override BaseAction GetBuffedAbility(List<Blessing> blessings)
     {
         //Sukuriu kopija
-        FreezeAbility ability = new FreezeAbility();
+        FreezeAbility ability = spawnedCharacter.AddComponent<FreezeAbility>();
         ability.actionStateName = this.actionStateName;
         ability.AttackRange = this.AttackRange;
         ability.AbilityCooldown = this.AbilityCooldown;

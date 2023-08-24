@@ -29,15 +29,15 @@ public class ChillingGust : BaseAction
             protectedAlly = null;
         }
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (CanTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
-            if (isAllegianceSame(clickedTile))
+            base.ResolveAbility(position);
+            if (isAllegianceSame(position))
             {
-                GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+                GameObject target = GetSpecificGroundTile(position);
                 target.GetComponent<PlayerInformation>().Protected = true;
                 target.transform.Find("VFX").Find("Protected").gameObject.SetActive(true);
                 if (target.GetComponent<PlayerInformation>().Debuffs.Contains("Protected")) //Dealing with WhiteField
@@ -58,7 +58,7 @@ public class ChillingGust : BaseAction
                 transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
                 //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
 
-                GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+                GameObject target = GetSpecificGroundTile(position);
                 int bonusDamage = 0;
                 if (DoesCharacterHaveBlessing("Harsh winds"))
                 {
@@ -68,16 +68,16 @@ public class ChillingGust : BaseAction
                 target.GetComponent<PlayerInformation>().ApplyDebuff("IceSlow");
                 //target.GetComponent<PlayerInformation>().Poisons.Add(new PlayerInformation.Poison(gameObject, 2, 2));
                 //clickedTile.transform.Find("mapTile").Find("VFX9x9Upper").gameObject.GetComponent<Animator>().SetTrigger("crowAttack");
-                clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger("white2");
+                //clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger("white2");
                 GetSpecificGroundTile(target, 0, 0, groundLayer).transform.Find("mapTile").Find("VFXImpactBelow").gameObject.GetComponent<Animator>().SetTrigger("white1");
                 if (DoesCharacterHaveBlessing("Tempest"))
                 {
-                    CreateDamageTileList(clickedTile);
+                    //CreateDamageTileList(clickedTile);
                     foreach (GameObject tile in AdditionalDamageTiles)
                     {
                         if (CanTileBeClicked(tile))
                         {
-                            target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+                            target = GetSpecificGroundTile(position);
                             DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);
                             target.GetComponent<PlayerInformation>().ApplyDebuff("IceSlow");
                         }

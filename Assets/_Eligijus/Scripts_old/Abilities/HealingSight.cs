@@ -22,8 +22,8 @@ public class HealingSight : BaseAction
     }
     private void AddSurroundingsToList(GameObject middleTile, int movementIndex)
     {
-        GameObject AddableObject = GetSpecificGroundTile(middleTile, 0, 0, groundLayer); //kad galima butu pasirinkt tik save
-        this.AvailableTiles[movementIndex].Add(AddableObject);
+        GameObject addableObject = GetSpecificGroundTile(middleTile, 0, 0, groundLayer); //kad galima butu pasirinkt tik save
+        this.AvailableTiles[movementIndex].Add(addableObject);
     }
     /*
     public override void EnableGrid()
@@ -59,9 +59,9 @@ public class HealingSight : BaseAction
     */
     public override void HighlightAll()
     {
-        foreach (List<GameObject> MovementTileList in this.AvailableTiles)
+        foreach (List<GameObject> movementTileList in this.AvailableTiles)
         {
-            foreach (GameObject tile in MovementTileList)
+            foreach (GameObject tile in movementTileList)
             {
                 tile.GetComponent<HighlightTile>().SetHighlightBool(true);
                 tile.GetComponent<HighlightTile>().activeState = actionStateName;
@@ -77,17 +77,17 @@ public class HealingSight : BaseAction
         GetComponent<ActionManager>().hasSlowAbilityBeenCast = false;
         GetComponent<CharacterVision>().VisionRange = 4;
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (CanTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
-            clickedTile.transform.Find("mapTile").Find("VFX9x9Upper").gameObject.GetComponent<Animator>().SetTrigger("healingSight");
+            base.ResolveAbility(position);
+            //clickedTile.transform.Find("mapTile").Find("VFX9x9Upper").gameObject.GetComponent<Animator>().SetTrigger("healingSight");
             int randomHeal = Random.Range(minHealAmount, maxHealAmount);
             bool crit = IsItCriticalStrike(ref randomHeal);
            // transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("heal");
-            GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer).GetComponent<PlayerInformation>().Heal(randomHeal, crit);
+            GetSpecificGroundTile(position).GetComponent<PlayerInformation>().Heal(randomHeal, crit);
             if (DoesCharacterHaveBlessing("Seeker"))
             {
                 GetComponent<GridMovement>().AvailableMovementPoints ++;
@@ -148,7 +148,7 @@ public class HealingSight : BaseAction
             }
         }
     }
-    public bool CanTileBeClicked(GameObject tile)
+    public override bool CanTileBeClicked(Vector3 position)
     {
         /*
         if (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") && isAllegianceSame(tile, blockingLayer))

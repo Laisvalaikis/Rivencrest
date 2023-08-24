@@ -26,14 +26,14 @@ public class LongShot : BaseAction
         }
     }
 
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
+            base.ResolveAbility(position);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
-            GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+            GameObject target = GetSpecificGroundTile(position);
             DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);
             if (DoesCharacterHaveBlessing("Poisonous shot"))
             {
@@ -44,17 +44,17 @@ public class LongShot : BaseAction
                 target.GetComponent<PlayerInformation>().ApplyDebuff("IceSlow");
                 target.GetComponent<PlayerInformation>().ApplyDebuff("IceSlow");
             }
-            clickedTile.transform.Find("mapTile").Find("VFX9x9Upper").gameObject.GetComponent<Animator>().SetTrigger("rainOfArrows");
-            clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger("green1");
+            //clickedTile.transform.Find("mapTile").Find("VFX9x9Upper").gameObject.GetComponent<Animator>().SetTrigger("rainOfArrows");
+            //clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger("green1");
 
             FinishAbility();
         }
     }
 
-    public bool canTileBeClicked(GameObject tile)
+    public override bool CanTileBeClicked(Vector3 position)
     {
-        if ((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall"))
-            && !isAllegianceSame(tile))
+        if ((CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(position, 0, 0, blockingLayer, "Wall"))
+            && !isAllegianceSame(position))
         {
             return true;
         }
@@ -68,27 +68,27 @@ public class LongShot : BaseAction
 
     public override GameObject PossibleAIActionTile()
     {
-        List<GameObject> EnemyCharacterList = new List<GameObject>();
+        List<GameObject> enemyCharacterList = new List<GameObject>();
         if (CanGridBeEnabled())
         {
             CreateGrid();
             foreach (GameObject tile in MergedTileList)
             {
-                if (canTileBeClicked(tile) && !CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall"))
+                if (CanTileBeClicked(tile.transform.position) && !CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall"))
                 {
                     GameObject character = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
-                    EnemyCharacterList.Add(character);
+                    enemyCharacterList.Add(character);
                 }
             }
         }
         int actionChanceNumber = UnityEngine.Random.Range(0, 100); //ar paleist spella ar ne
-        if (EnemyCharacterList.Count > 1 && actionChanceNumber <= 100)
+        if (enemyCharacterList.Count > 1 && actionChanceNumber <= 100)
         {
-            return GetSpecificGroundTile(EnemyCharacterList[Random.Range(0, EnemyCharacterList.Count - 1)], 0, 0, groundLayer);
+            return GetSpecificGroundTile(enemyCharacterList[Random.Range(0, enemyCharacterList.Count - 1)], 0, 0, groundLayer);
         }
-        else if (EnemyCharacterList.Count > 0 && actionChanceNumber <= 40)
+        else if (enemyCharacterList.Count > 0 && actionChanceNumber <= 40)
         {
-            return GetSpecificGroundTile(EnemyCharacterList[Random.Range(0, EnemyCharacterList.Count - 1)], 0, 0, groundLayer);
+            return GetSpecificGroundTile(enemyCharacterList[Random.Range(0, enemyCharacterList.Count - 1)], 0, 0, groundLayer);
         }
         return null;
     }
