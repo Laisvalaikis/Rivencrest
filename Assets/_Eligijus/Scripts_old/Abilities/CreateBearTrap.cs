@@ -137,16 +137,16 @@ public class CreateBearTrap : BaseAction
             }
         }
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (CanTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
+            base.ResolveAbility(position);
             FinishAbility();
 
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("createFog");
-            spawnedCharacter = Instantiate(BearTrapPrefab, clickedTile.transform.position, Quaternion.identity) as GameObject;
+            spawnedCharacter = Instantiate(BearTrapPrefab, position, Quaternion.identity) as GameObject;
             spawnedCharacter.transform.Find("BearTrapCollider").GetComponent<BearTrap>().creator = gameObject;
             GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().ChangeVisionTiles();
             i = 0;

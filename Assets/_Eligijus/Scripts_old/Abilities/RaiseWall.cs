@@ -80,28 +80,28 @@ public class RaiseWall : BaseAction
         }
     }
     */
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        base.ResolveAbility(clickedTile);
+        base.ResolveAbility(position);
         FinishAbility();
-        GameObject spawnedWall = Instantiate(WallPrefab, clickedTile.transform.position + new Vector3(0f, 0f, 1f), Quaternion.identity) as GameObject;
-        if (transform.position.x == clickedTile.transform.position.x)
+        GameObject spawnedWall = Instantiate(WallPrefab, position + new Vector3(0f, 0f, 1f), Quaternion.identity) as GameObject;
+        if (transform.position.x == position.x)
         {
-            IntantiateNeighborWalls(clickedTile, new List<(int, int)> { (1, 0), (-1, 0) }); //jei paspausto langelio ir characterio x lygus, tai sonines sienos bus i sonus
+            IntantiateNeighborWalls(position, new List<(int, int)> { (1, 0), (-1, 0) }); //jei paspausto langelio ir characterio x lygus, tai sonines sienos bus i sonus
         }
         else
         {
-            IntantiateNeighborWalls(clickedTile, new List<(int, int)> { (0, 1), (0, -1) }); //o jei y lygus, tai i virsu ir i apacia
+            IntantiateNeighborWalls(position, new List<(int, int)> { (0, 1), (0, -1) }); //o jei y lygus, tai i virsu ir i apacia
         }
     }
 
-    private void IntantiateNeighborWalls(GameObject clickedTile, List<(int, int)> directionVectorsX)
+    private void IntantiateNeighborWalls(Vector3 position, List<(int, int)> directionVectorsX)
     {
         foreach (var x in directionVectorsX)
         {
-            if (!CheckIfSpecificLayer(clickedTile, x.Item1, x.Item2, blockingLayer))
+            if (!CheckIfSpecificLayer(position, x.Item1, x.Item2, blockingLayer))
             {
-                Instantiate(WallPrefab, clickedTile.transform.position + new Vector3(x.Item1, x.Item2, 1f), Quaternion.identity);
+                Instantiate(WallPrefab, position + new Vector3(x.Item1, x.Item2, 1f), Quaternion.identity);
             }
         }
     }

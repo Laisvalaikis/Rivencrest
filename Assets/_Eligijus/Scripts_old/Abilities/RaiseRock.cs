@@ -125,18 +125,18 @@ public class RaiseRock : BaseAction
             GetSpecificGroundTile(transform.gameObject, 0, 0, groundLayer).GetComponent<HighlightTile>().SetHighlightBool(false);
         }
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        base.ResolveAbility(clickedTile);
-        if (canTileBeClicked(clickedTile))
+        base.ResolveAbility(position);
+        if (canTileBeClicked(position))
         {
             FinishAbility();
-            tileForAnimation = clickedTile;
+           // tileForAnimation = clickedTile;
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
             GameObject spawnedWall = Instantiate(WallPrefab, tileForAnimation.transform.position + new Vector3(0f, 0f, 1f), Quaternion.identity) as GameObject;
             if (DoesCharacterHaveBlessing("Grand entrance"))
             {
-                DealDamageToAdjacent(clickedTile);
+                DealDamageToAdjacent(position);
             }
             GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().ChangeVisionTiles();
             spawnedWall.transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell1");
@@ -144,7 +144,7 @@ public class RaiseRock : BaseAction
         }
     }
 
-    private void DealDamageToAdjacent(GameObject center)
+    private void DealDamageToAdjacent(Vector3 position)
     {
         var pushDirectionVectors = new List<(int, int)>
                 {
@@ -155,13 +155,13 @@ public class RaiseRock : BaseAction
                 };
         foreach (var x in pushDirectionVectors)
         {
-            if (CheckIfSpecificLayer(center, x.Item1, x.Item2, groundLayer)) //animation on ground
+            if (CheckIfSpecificLayer(position, x.Item1, x.Item2, groundLayer)) //animation on ground
             {
-                GetSpecificGroundTile(center, x.Item1, x.Item2, groundLayer).transform.Find("mapTile").Find("VFXImpactBelow").gameObject.GetComponent<Animator>().SetTrigger("burgundy3");
+                GetSpecificGroundTile(position).transform.Find("mapTile").Find("VFXImpactBelow").gameObject.GetComponent<Animator>().SetTrigger("burgundy3");
             }
-            if (CheckIfSpecificTag(center, x.Item1, x.Item2, blockingLayer, "Player"))
+            if (CheckIfSpecificTag(position, x.Item1, x.Item2, blockingLayer, "Player"))
             {
-                GameObject target = GetSpecificGroundTile(center, x.Item1, x.Item2, blockingLayer);
+                GameObject target = GetSpecificGroundTile(position);
 
                 if (!isAllegianceSame(target))
                 {
@@ -194,10 +194,10 @@ public class RaiseRock : BaseAction
         }
     }
 
-    public bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(Vector3 position)
     {
-        bool isBlockingLayer = CheckIfSpecificLayer(tile, 0, 0, blockingLayer);
-        bool isConsumablesLayer = CheckIfSpecificLayer(tile, 0, 0, consumablesLayer);
+        bool isBlockingLayer = CheckIfSpecificLayer(position, 0, 0, blockingLayer);
+        bool isConsumablesLayer = CheckIfSpecificLayer(position, 0, 0, consumablesLayer);
         if (!isBlockingLayer && !isConsumablesLayer)
         {
             return true;

@@ -136,12 +136,12 @@ public class FlameBlast : BaseAction
             CometTiles.Clear();
         }
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        base.ResolveAbility(clickedTile);
+        base.ResolveAbility(position);
         transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
         CometTiles.Clear();
-        CreateDamageTileList(clickedTile);
+        CreateDamageTileList(position);
         foreach (GameObject tile in DamageTiles)
         {
             if (tile == DamageTiles[0])
@@ -168,7 +168,7 @@ public class FlameBlast : BaseAction
         FinishAbility();
     }
 
-    public void CreateDamageTileList(GameObject clickedTile)
+    public void CreateDamageTileList(Vector3 position)
     {
         DamageTiles.Clear();
         var spellDirectionVectors = new List<(int, int)>
@@ -181,17 +181,17 @@ public class FlameBlast : BaseAction
         };
         foreach (var x in spellDirectionVectors)
         {
-            if (CheckIfSpecificLayer(clickedTile, x.Item1, x.Item2, groundLayer) && (!CheckIfSpecificLayer(clickedTile, x.Item1, x.Item2, blockingLayer) || CheckIfSpecificTag(clickedTile, x.Item1, x.Item2, blockingLayer, "Player")))
+            if (CheckIfSpecificLayer(position, x.Item1, x.Item2, groundLayer) && (!CheckIfSpecificLayer(position, x.Item1, x.Item2, blockingLayer) || CheckIfSpecificTag(position, x.Item1, x.Item2, blockingLayer, "Player")))
             {
-                DamageTiles.Add(GetSpecificGroundTile(clickedTile, x.Item1, x.Item2, groundLayer));
+                DamageTiles.Add(GetSpecificGroundTile(position));
             }
         }
 
     }
-    public override void OnTileHover(GameObject tile)
+    public void OnTileHover(Vector3 position) //pakeisti veliau i public override void
     {
         print("on tile hover");
-        CreateDamageTileList(tile);
+        CreateDamageTileList(position);
         foreach (GameObject tileInList in DamageTiles)
         {
             if (CheckIfSpecificTag(tileInList, 0, 0, blockingLayer, "Player") && (!isAllegianceSame(tileInList) || friendlyFire))

@@ -125,16 +125,16 @@ public class IsolatedStrike : BaseAction
         }
     }
     */
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (canTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
-            GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+            base.ResolveAbility(position);
+            GameObject target = GetSpecificGroundTile(position);
             int bonusDamage = 0;
             //Isolation
-            if (isTargetIsolated(clickedTile))
+            if (isTargetIsolated(position))
             { 
                 bonusDamage += isolationDamage;
             }
@@ -145,10 +145,10 @@ public class IsolatedStrike : BaseAction
             
         }
     }
-    public bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(Vector3 position)
     {
-        if ((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall"))
-            && !isAllegianceSame(tile) && !GetComponent<PlayerInformation>().CantAttackCondition)
+        if ((CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(position, 0, 0, blockingLayer, "Wall"))
+            && !isAllegianceSame(position) && !GetComponent<PlayerInformation>().CantAttackCondition)
         {
             return true;
         }
@@ -158,14 +158,14 @@ public class IsolatedStrike : BaseAction
     {
         int showMinDamage = minAttackDamage;
         int shownMaxDamage = maxAttackDamage;
-        if (isTargetIsolated(tile))
+        if (isTargetIsolated(tile.transform.position))
         {
             showMinDamage += isolationDamage;
             shownMaxDamage += isolationDamage;
         }
         EnableDamagePreview(tile, showMinDamage, shownMaxDamage);
     }
-    bool isTargetIsolated(GameObject tile)
+    bool isTargetIsolated(Vector3 position)
     {
         int isolationNumber = 0;
         var directionVectors = new List<(int, int)>
@@ -178,8 +178,8 @@ public class IsolatedStrike : BaseAction
 
         foreach (var x in directionVectors)
         {
-            if (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") && CheckIfSpecificTag(tile, x.Item1, x.Item2, blockingLayer, "Player") &&
-                isAllegianceSame(GetSpecificGroundTile(tile, 0, 0, blockingLayer), GetSpecificGroundTile(tile, x.Item1, x.Item2, blockingLayer), blockingLayer))
+            if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") && CheckIfSpecificTag(position, x.Item1, x.Item2, blockingLayer, "Player") &&
+                isAllegianceSame(GetSpecificGroundTile(position), GetSpecificGroundTile(position), blockingLayer))
             {
                 isolationNumber++;
             }

@@ -123,15 +123,15 @@ public class CometFall : BaseAction
             DamageTiles.Clear();
         }
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        base.ResolveAbility(clickedTile);
+        base.ResolveAbility(position);
         transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell1"); //CometFallStart animation
         DamageTiles.Clear();
-        if (CheckIfSpecificLayer(clickedTile, 0, 0, groundLayer))
+        if (CheckIfSpecificLayer(position, 0, 0, groundLayer))
         {
-            DamageTiles.Add(GetSpecificGroundTile(clickedTile, 0, 0, groundLayer));
-            GetSpecificGroundTile(clickedTile, 0, 0, groundLayer).transform.Find("mapTile").Find("CometZone").gameObject.SetActive(true);
+            DamageTiles.Add(GetSpecificGroundTile(position));
+            GetSpecificGroundTile(position).transform.Find("mapTile").Find("CometZone").gameObject.SetActive(true);
         }
 
         FinishAbility();

@@ -145,19 +145,19 @@ public class InfernoOld : BaseAction
         }
         isAbilityActive = false;
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (canTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
+            base.ResolveAbility(position);
             isAbilityActive = true;
             transform.Find("VFX").Find("WindBoost").gameObject.SetActive(true);
             //  
             FinishAbility();
         }
     }
-    public bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(Vector3 position)
     {
         return true;
     }
@@ -178,7 +178,7 @@ public class InfernoOld : BaseAction
             CreateGrid();
             foreach (GameObject tile in MergedTileList)
             {
-                if (canTileBeClicked(tile))
+                if (canTileBeClicked(tile.transform.position))
                 {
                     GameObject character = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
                     EnemyCharacterList.Add(character);
