@@ -875,7 +875,6 @@ GameObject:
   m_Component:
   - component: {fileID: 363828189}
   - component: {fileID: 363828190}
-  - component: {fileID: 363828191}
   m_Layer: 0
   m_Name: MapTileGeneration
   m_TagString: Untagged
@@ -910,24 +909,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f815bbc199d5062459b31bb88a395391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 26522310}
   _selectAction: {fileID: 2072924556}
   selectedCharacterAction: {fileID: 0}
   currentMap: {fileID: 11400000, guid: ae4fe66ff0493684e856885fe6bbe2f5, type: 2}
   showChunks: 1
---- !u!114 &363828191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363828188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a77f6706af974964488808f7dc292f4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 26522310}
-  gameTileMap: {fileID: 363828190}
 --- !u!1 &421919350 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 219515216111128601, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
@@ -1966,8 +1952,8 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 363828191}
-        m_TargetAssemblyTypeName: TileMapManager, Assembly-CSharp
+      - m_Target: {fileID: 363828190}
+        m_TargetAssemblyTypeName: GameTileMap, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
@@ -1982,8 +1968,8 @@ MonoBehaviour:
     m_ActionName: Player/Mouse[/Mouse/position]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 363828191}
-        m_TargetAssemblyTypeName: TileMapManager, Assembly-CSharp
+      - m_Target: {fileID: 363828190}
+        m_TargetAssemblyTypeName: GameTileMap, Assembly-CSharp
         m_MethodName: OnMouseClick
         m_Mode: 0
         m_Arguments:

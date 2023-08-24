@@ -498,9 +498,13 @@ MonoBehaviour:
   _abilities:
   - abilityText: {fileID: 0}
     enabled: 1
+    AbilityImage: {fileID: -4915970013280050261, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
+    Action: {fileID: 2605390308202641148}
+  - abilityText: {fileID: 11400000, guid: 278eb7903ef2ead4588f5ee6d8d58d99, type: 2}
+    enabled: 1
     AbilityImage: {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 6890059959884175614}
-  - abilityText: {fileID: 11400000, guid: 278eb7903ef2ead4588f5ee6d8d58d99, type: 2}
+  - abilityText: {fileID: 11400000, guid: 80baab0af04484040a99d41a9f69834c, type: 2}
     enabled: 1
     AbilityImage: {fileID: 1157241994225065092, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 8641430421866009924}
