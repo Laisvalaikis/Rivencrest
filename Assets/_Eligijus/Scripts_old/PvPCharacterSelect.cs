@@ -46,14 +46,14 @@ public class PvPCharacterSelect : MonoBehaviour
 
     public void SelectPortrait()
     {
-        if (isButtonAvailable) // GameObject.Find("GameInformation").GetComponent<GameInformation>().canButtonsBeClicked fix this bs
+        if (gameTileMap.GetCurrentCharacter() != characterOnBoard) // GameObject.Find("GameInformation").GetComponent<GameInformation>().canButtonsBeClicked fix this bs
         {
             gameTileMap.SetCurrentCharacter(characterOnBoard);
             isButtonAvailable = false;
             _selectAction.SetCurrentCharacter(characterOnBoard);
             Debug.Log("Selected");
         }
-        else if (!isButtonAvailable)
+        else if (gameTileMap.GetCurrentCharacter() == characterOnBoard)
         {
             gameTileMap.DeselectCurrentCharacter();
             _selectAction.DeSetCurrentCharacter();
