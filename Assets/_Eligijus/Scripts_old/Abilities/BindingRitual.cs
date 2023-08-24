@@ -38,9 +38,9 @@ public class BindingRitual : BaseAction
         }
         //Merging into one list
         MergedTileList.Clear();
-        foreach (List<GameObject> MovementTileList in this.AvailableTiles)
+        foreach (List<GameObject> movementTileList in this.AvailableTiles)
         {
-            foreach (GameObject tile in MovementTileList)
+            foreach (GameObject tile in movementTileList)
             {
                 if (!MergedTileList.Contains(tile))
                 {
@@ -96,7 +96,7 @@ public class BindingRitual : BaseAction
     }
     public override GameObject PossibleAIActionTile()
     {
-        List<GameObject> EnemyCharacterList = new List<GameObject>();
+        List<GameObject> enemyCharacterList = new List<GameObject>();
         if (CanGridBeEnabled())
         {
             CreateGrid();
@@ -105,18 +105,18 @@ public class BindingRitual : BaseAction
                 if (CanTileBeClicked(tile.transform.position))
                 {
                     GameObject character = GetSpecificGroundTile(tile.transform.position);
-                    EnemyCharacterList.Add(character);
+                    enemyCharacterList.Add(character);
                 }
             }
         }
         int actionChanceNumber = UnityEngine.Random.Range(0, 100); //ar paleist spella ar ne
-        if (EnemyCharacterList.Count > 1 && actionChanceNumber <= 100)
+        if (enemyCharacterList.Count > 1 && actionChanceNumber <= 100)
         {
-            return GetSpecificGroundTile(EnemyCharacterList[Random.Range(0, EnemyCharacterList.Count - 1)], 0, 0, groundLayer);
+            return GetSpecificGroundTile(enemyCharacterList[Random.Range(0, enemyCharacterList.Count - 1)], 0, 0, groundLayer);
         }
-        else if (EnemyCharacterList.Count > 0 && actionChanceNumber <= 45)
+        else if (enemyCharacterList.Count > 0 && actionChanceNumber <= 45)
         {
-            return GetSpecificGroundTile(EnemyCharacterList[Random.Range(0, EnemyCharacterList.Count - 1)], 0, 0, groundLayer);
+            return GetSpecificGroundTile(enemyCharacterList[Random.Range(0, enemyCharacterList.Count - 1)], 0, 0, groundLayer);
         }
         return null;
     }

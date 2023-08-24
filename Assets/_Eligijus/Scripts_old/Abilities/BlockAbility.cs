@@ -101,16 +101,16 @@ public class BlockAbility : BaseAction
         }
     }
 
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (CanTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
+            base.ResolveAbility(position);
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spellToBool");
             transform.Find("CharacterModel").GetComponent<Animator>().SetBool("block", true);
-            GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer).GetComponent<PlayerInformation>().BlockingAlly = transform.gameObject;
-            characterBeingBlocked = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+            GetSpecificGroundTile(position).GetComponent<PlayerInformation>().BlockingAlly = transform.gameObject;
+            characterBeingBlocked = GetSpecificGroundTile(position);
             GetComponent<PlayerInformation>().Blocker = true;
             FinishAbility();
         }
@@ -134,18 +134,18 @@ public class BlockAbility : BaseAction
         {
             List<GameObject> characterList = GetComponent<AIBehaviour>().GetCharactersInGrid(1);
 
-            List<GameObject> AllyCharacterList = new List<GameObject>();
+            List<GameObject> allyCharacterList = new List<GameObject>();
 
             foreach (GameObject character in characterList)
             {
                 //if (character != gameObject && canTileBeClicked(character) && character.GetComponent<PlayerInformation>().health < character.GetComponent<PlayerInformation>().MaxHealth)
                 {
-                    AllyCharacterList.Add(character);
+                    allyCharacterList.Add(character);
                 }
             }
-            if (AllyCharacterList.Count > 0)
+            if (allyCharacterList.Count > 0)
             {
-                return AllyCharacterList[Random.Range(0, AllyCharacterList.Count - 1)];
+                return allyCharacterList[Random.Range(0, allyCharacterList.Count - 1)];
             }
 
         }
@@ -161,7 +161,7 @@ public class BlockAbility : BaseAction
     public override BaseAction GetBuffedAbility(List<Blessing> blessings)
     {
         //Sukuriu kopija
-        BlockAbility ability = new BlockAbility();
+        BlockAbility ability = spawnedCharacter.AddComponent<BlockAbility>();
         ability.actionStateName = this.actionStateName;
         ability.AttackRange = this.AttackRange;
         ability.AbilityCooldown = this.AbilityCooldown;

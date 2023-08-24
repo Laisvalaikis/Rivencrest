@@ -108,14 +108,14 @@ public class SwitchPlaces : BaseAction
         GetSpecificGroundTile(transform.gameObject, 0, 0, groundLayer).GetComponent<HighlightTile>().SetHighlightBool(true);
     }
     */
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        if (canTileBeClicked(clickedTile))
+        var currentPosition = transform.position;
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
+            base.ResolveAbility(position);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
-            var CurrentPosition = transform.position;
-            GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+            GameObject target = GetSpecificGroundTile(position);
             if (!isAllegianceSame(target))
             {
                 if (DoesCharacterHaveBlessing("Stay there"))
@@ -128,18 +128,18 @@ public class SwitchPlaces : BaseAction
                 }
             }
             transform.position = target.transform.position;
-            target.transform.position = CurrentPosition;
+            target.transform.position = currentPosition;
             GameObject.Find("GameInformation").GetComponent<GameInformation>().FocusSelectedCharacter(gameObject);
             FinishAbility();
         }
     }
-    public bool canTileBeClicked(GameObject tile)
+    private new bool CanTileBeClicked(Vector3 position)
     {
-        if (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player"))
+        if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player"))
         {
             return true;
         }
-        else return false;
+        return false;
     }
     public override void OnTileHover(GameObject tile)
     {

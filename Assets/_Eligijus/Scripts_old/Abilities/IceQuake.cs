@@ -139,7 +139,6 @@ public class IceQuake : BaseAction
     */
     public override void ResolveAbility(Vector3 position)
     {
-        
         if (CanTileBeClicked(position))
         {
             base.ResolveAbility(position);

@@ -88,26 +88,25 @@ public class GroundSlam : BaseAction
         isAbilityActive = false;
     }
 
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        base.ResolveAbility(clickedTile);
+        base.ResolveAbility(position);
         transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell3");
         DealDamageToAdjacent();
-        //
         isAbilityActive = true;
         transform.Find("VFX").Find("WindBoost").gameObject.SetActive(true);
         FinishAbility();
     }
     private void DealDamageToAdjacent()
     {
-        var DirectionVectors = new List<(int, int)>
+        var directionVectors = new List<(int, int)>
                 {
                     (1, 0),
                     (0, 1),
                     (-1, 0),
                     (0, -1)
                 };
-        foreach (var x in DirectionVectors)
+        foreach (var x in directionVectors)
         {
             //Ground impact vfx
             if (CheckIfSpecificLayer(gameObject, x.Item1, x.Item2, groundLayer))

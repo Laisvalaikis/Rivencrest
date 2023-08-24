@@ -29,8 +29,6 @@ d
 4Assets/_Eligijus/Scripts/Character/CharacterModel.cs,6\e\6e2f86afd023390394ff8abba26fe396061c5c29
 `
 0Assets/_Eligijus/Scripts/TownHall/UpgradeData.cs,d\1\d168521ee1221948e0d4baa538a13182cb384cb9
-f
-6Assets/_Eligijus/Scripts_old/Abilities/BlockAbility.cs,4\c\4ccdf36e0b6635c64a965b2a871dcb17443bb289
 \
 ,Assets/_Eligijus/Scripts/Data/AbilityText.cs,4\3\438dfdb6ecc607940ecc7437c06c68beb6fa1133
 l
@@ -95,8 +93,6 @@ e
 5Assets/_Eligijus/Scripts/SoundManager/SoundManager.cs,c\6\c68d2181140c56edbb15b82ce69cdc831f2b6c23
 j
 :Assets/_Eligijus/Scripts_old/GameManagment/GameProgress.cs,2\3\23ff33bb37cb09f69589beb4a6a58000181ab715
-a
-1Assets/_Eligijus/Scripts_old/Grid/GridMovement.cs,3\6\36f7935f8f70576428966150462a7db6e7adc4bd
 f
 6Assets/_Eligijus/Scripts_old/Consumable/PurpleSpear.cs,2\0\208c49d0f69962e0ae317e7aa8aa0cafafb5d9b0
 _

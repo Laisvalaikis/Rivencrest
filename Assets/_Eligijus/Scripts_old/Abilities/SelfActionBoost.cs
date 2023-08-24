@@ -15,8 +15,8 @@ public class SelfActionBoost : BaseAction
     }
     private void AddSurroundingsToList(GameObject middleTile, int movementIndex)
     {
-        GameObject AddableObject = GetSpecificGroundTile(middleTile, 0, 0, groundLayer); //kad galima butu pasirinkt tik save
-        this.AvailableTiles[movementIndex].Add(AddableObject);
+        GameObject addableObject = GetSpecificGroundTile(middleTile, 0, 0, groundLayer); //kad galima butu pasirinkt tik save
+        this.AvailableTiles[movementIndex].Add(addableObject);
     }
     /*
     public override void EnableGrid()
@@ -37,9 +37,9 @@ public class SelfActionBoost : BaseAction
     }
     public override void DisableGrid()
     {
-        foreach (List<GameObject> MovementTileList in this.AvailableTiles)
+        foreach (List<GameObject> movementTileList in this.AvailableTiles)
         {
-            foreach (GameObject tile in MovementTileList)
+            foreach (GameObject tile in movementTileList)
             {
                 tile.GetComponent<HighlightTile>().canAbilityTargetAllies = false;
                 tile.GetComponent<HighlightTile>().canAbilityTargetYourself = false;
@@ -49,9 +49,9 @@ public class SelfActionBoost : BaseAction
     }
     public override void HighlightAll()
     {
-        foreach (List<GameObject> MovementTileList in this.AvailableTiles)
+        foreach (List<GameObject> movementTileList in this.AvailableTiles)
         {
-            foreach (GameObject tile in MovementTileList)
+            foreach (GameObject tile in movementTileList)
             {
                 tile.GetComponent<HighlightTile>().SetHighlightBool(true);
                 tile.GetComponent<HighlightTile>().activeState = actionStateName;
@@ -67,9 +67,9 @@ public class SelfActionBoost : BaseAction
         AbilityPoints++;
     }
 
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        base.ResolveAbility(clickedTile);
+        base.ResolveAbility(position);
         //GetComponent<GridMovement>().AvailableMovementPoints++; //debatable
         AbilityPoints = 0;
         AvailableAttacks--;

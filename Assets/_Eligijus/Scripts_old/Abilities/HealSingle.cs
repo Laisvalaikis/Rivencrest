@@ -115,9 +115,9 @@ public class HealSingle : BaseAction
     */
     public override void HighlightAll()
     {
-        foreach (List<GameObject> MovementTileList in this.AvailableTiles)
+        foreach (List<GameObject> movementTileList in this.AvailableTiles)
         {
-            foreach (GameObject tile in MovementTileList)
+            foreach (GameObject tile in movementTileList)
             {
                 tile.GetComponent<HighlightTile>().SetHighlightBool(true);
                 tile.GetComponent<HighlightTile>().canAbilityTargetAllies = true;
@@ -128,12 +128,12 @@ public class HealSingle : BaseAction
         }
         GetSpecificGroundTile(transform.gameObject, 0, 0, groundLayer).GetComponent<HighlightTile>().SetHighlightBool(true);
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
         if (DoesCharacterHaveBlessing("Gather round"))
         {
-            base.ResolveAbility(clickedTile);
+            base.ResolveAbility(position);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("heal");
             int randomHeal = Random.Range(minHealAmount, maxHealAmount);
             bool crit = IsItCriticalStrike(ref randomHeal);
@@ -149,12 +149,12 @@ public class HealSingle : BaseAction
             }
             FinishAbility();
         }
-        else if (CanTileBeClicked(clickedTile))
+        else if (CanTileBeClicked(position))
         {
             int randomHeal = Random.Range(minHealAmount, maxHealAmount);
             bool crit = IsItCriticalStrike(ref randomHeal);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("heal");
-            GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer).GetComponent<PlayerInformation>().Heal(randomHeal, crit);
+            GetSpecificGroundTile(position).GetComponent<PlayerInformation>().Heal(randomHeal, crit);
             FinishAbility();
         }
     }
@@ -202,18 +202,18 @@ public class HealSingle : BaseAction
         {
             List<GameObject> characterList = GetComponent<AIBehaviour>().GetCharactersInGrid(2);
 
-            List<GameObject> AllyCharacterList = new List<GameObject>();
+            List<GameObject> allyCharacterList = new List<GameObject>();
 
             foreach (GameObject character in characterList)
             {
                // if (isAllegianceSame(character) && character.GetComponent<PlayerInformation>().health < character.GetComponent<PlayerInformation>().MaxHealth)
                 {
-                    AllyCharacterList.Add(character);
+                    allyCharacterList.Add(character);
                 }
             }
-            if (AllyCharacterList.Count > 0)
+            if (allyCharacterList.Count > 0)
             {
-                return AllyCharacterList[Random.Range(0, AllyCharacterList.Count - 1)];
+                return allyCharacterList[Random.Range(0, allyCharacterList.Count - 1)];
             }
        
         }
@@ -229,7 +229,7 @@ public class HealSingle : BaseAction
     public override BaseAction GetBuffedAbility(List<Blessing> blessings)
     {
         //Sukuriu kopija
-        HealSingle ability = new HealSingle();
+        HealSingle ability = spawnedCharacter.AddComponent<HealSingle>();
         ability.actionStateName = this.actionStateName;
         ability.AttackRange = this.AttackRange;
         ability.AbilityCooldown = this.AbilityCooldown;

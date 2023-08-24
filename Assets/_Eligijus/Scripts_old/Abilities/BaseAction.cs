@@ -159,7 +159,7 @@ using Random = UnityEngine.Random;
                 DisablePreview(tileInList);
             }
         }
-        public bool CanTileBeClicked(Vector3 position)//ar veiks ability
+        public virtual bool CanTileBeClicked(Vector3 position)//ar veiks ability
         {
             if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") && !isAllegianceSame(position))
             {
@@ -255,9 +255,9 @@ using Random = UnityEngine.Random;
         {
             //Merging into one list
             MergedTileList.Clear();
-            foreach (List<GameObject> MovementTileList in this.AvailableTiles)
+            foreach (List<GameObject> movementTileList in this.AvailableTiles)
             {
-                foreach (GameObject tile in MovementTileList)
+                foreach (GameObject tile in movementTileList)
                 {
                     if (!MergedTileList.Contains(tile))
                     {
@@ -272,9 +272,9 @@ using Random = UnityEngine.Random;
         }
         public virtual void DisableGrid()
         {
-            foreach (List<GameObject> MovementTileList in this.AvailableTiles)
+            foreach (List<GameObject> movementTileList in this.AvailableTiles)
             {
-                foreach (GameObject tile in MovementTileList)
+                foreach (GameObject tile in movementTileList)
                 {
                     tile.GetComponent<HighlightTile>().SetHighlightBool(false);
                 }
@@ -312,14 +312,9 @@ using Random = UnityEngine.Random;
         public virtual void ResolveAbility(GameObject gameobject)
         {
             Debug.Log("Fake aah method");
+            //Dont remove until all abilities are updated
         }
         
-        
-
-        /*public virtual void ResolveAbility(GameObject tile)
-        {
-            //Fake method gets overriden while ResolveAbility(Vector3) is being implemented
-        }*/
         public virtual void FinishAbility()
         {
             AbilityPoints = 0;//Cooldown counter
@@ -437,10 +432,8 @@ using Random = UnityEngine.Random;
             }
            // else
             {
-                //damage = damage * 2;
                 damage += 3;
                 crit = true;
-                //Debug.Log("Crit " + damage);//komentaro komentaras
             }
             return crit;
         }

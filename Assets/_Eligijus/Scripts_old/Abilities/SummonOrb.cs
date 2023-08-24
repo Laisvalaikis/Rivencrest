@@ -180,14 +180,14 @@ public class SummonOrb : BaseAction
             //
         }
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
+            base.ResolveAbility(position);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("createFog");
-            spawnedCharacter = Instantiate(OrbPrefab, clickedTile.transform.position - new Vector3(0f, 0f, 1f), Quaternion.identity) as GameObject;
+            spawnedCharacter = Instantiate(OrbPrefab, position - new Vector3(0f, 0f, 1f), Quaternion.identity) as GameObject;
             spawnedCharacter.transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell1");
             spawnedCharacter.GetComponent<PlayerInformation>().wasThisCharacterSpawned = true;
             spawnedCharacter.GetComponent<PlayerInformation>().isThisObject = true;
@@ -200,17 +200,17 @@ public class SummonOrb : BaseAction
         }
     }
 
-    public bool canTileBeClicked(GameObject tile)
+    public override bool CanTileBeClicked(Vector3 position)
     {
        // var gameInformation = GameObject.Find("GameInformation").gameObject;
        // bool isTeamNotFull = gameInformation.GetComponent<PlayerTeams>().allCharacterList.teams[gameInformation.GetComponent<GameInformation>().activeTeamIndex].characters.Count < 8;
-        bool isBlockingLayer = CheckIfSpecificLayer(tile, 0, 0, blockingLayer);
+        bool isBlockingLayer = CheckIfSpecificLayer(position, 0, 0, blockingLayer);
 
         if (!isBlockingLayer)
         {
             return true;
         }
-        else return false;
+        return false;
     }
     public override void OnTileHover(GameObject tile)
     {
@@ -229,7 +229,7 @@ public class SummonOrb : BaseAction
             CreateGrid();
             foreach (GameObject tile in MergedTileList)
             {
-                if (canTileBeClicked(tile) && AreEnemiesNearbyTile(tile))
+                if (CanTileBeClicked(tile.transform.position) && AreEnemiesNearbyTile(tile))
                 {
                     GameObject possibleTile = GetSpecificGroundTile(tile, 0, 0, groundLayer);
                     PossibleTileList.Add(possibleTile);

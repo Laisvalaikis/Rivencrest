@@ -7,7 +7,7 @@ public class CreateWhiteField : BaseAction
 {
     //private string actionStateName = "CreateWhiteField";
     public GameObject WhiteFieldPrefab;
-    private bool isWhiteFieldActive = false;
+    private bool _isWhiteFieldActive = false;
 
 
     //private List<List<GameObject>> AvailableTiles = new List<List<GameObject>>();//WhiteField list
@@ -102,12 +102,12 @@ public class CreateWhiteField : BaseAction
     */
     public override void OnTurnStart()//pradzioj ejimo
     {
-        if (isWhiteFieldActive)
+        if (_isWhiteFieldActive)
         {
 
-            foreach (List<GameObject> MovementTileList in this.AvailableTiles)
+            foreach (List<GameObject> movementTileList in this.AvailableTiles)
             {
-                foreach (GameObject tile in MovementTileList)
+                foreach (GameObject tile in movementTileList)
                 {
                     if (CheckIfSpecificLayer(tile, 0, 0, whiteFieldLayer))
                     {
@@ -115,18 +115,18 @@ public class CreateWhiteField : BaseAction
                     }
                 }
             }
-            isWhiteFieldActive = false;
+            _isWhiteFieldActive = false;
             GetComponent<PlayerInformation>().IsCreatingWhiteField = false;
             transform.Find("CharacterModel").GetComponent<Animator>().SetBool("block", false);
             AvailableTiles.Clear();
         }
     }
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (CanTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
+            base.ResolveAbility(position);
             FinishAbility();
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spellToBool");
             transform.Find("CharacterModel").GetComponent<Animator>().SetBool("block", true);
@@ -134,9 +134,9 @@ public class CreateWhiteField : BaseAction
             {
                 CreateGrid();
             }
-            foreach (List<GameObject> MovementTileList in this.AvailableTiles)
+            foreach (List<GameObject> movementTileList in this.AvailableTiles)
             {
-                foreach (GameObject tile in MovementTileList)
+                foreach (GameObject tile in movementTileList)
                 {
                     if (tile != GetSpecificGroundTile(gameObject, 0, 0, groundLayer))
                     {
@@ -149,14 +149,14 @@ public class CreateWhiteField : BaseAction
                         }
                         else
                         {
-                            GameObject newWhiteField = Instantiate(WhiteFieldPrefab, tile.transform.position + new Vector3(0f, 0f, 1f), Quaternion.identity) as GameObject;
+                            GameObject newWhiteField = Instantiate(WhiteFieldPrefab, tile.transform.position + new Vector3(0f, 0f, 1f), Quaternion.identity);
                             newWhiteField.GetComponent<WhiteField>().Owners.Add(gameObject);
                         }
                     }
                 }
             }
             GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().ChangeVisionTiles();
-            isWhiteFieldActive = true;
+            _isWhiteFieldActive = true;
             GetComponent<PlayerInformation>().IsCreatingWhiteField = true;
             //Blessing
             if (DoesCharacterHaveBlessing("Breezy defence"))
@@ -172,22 +172,22 @@ public class CreateWhiteField : BaseAction
     }
     public override void OnTileHover(GameObject tile)
     {
-        foreach (List<GameObject> MovementTileList in this.AvailableTiles)
+        foreach (List<GameObject> movementTileList in this.AvailableTiles)
         {
-            EnableTextPreview(tile, MovementTileList, "");
+            EnableTextPreview(tile, movementTileList, "");
         }
     }
     public override void OffTileHover(GameObject tile)
     {
-        foreach (List<GameObject> MovementTileList in this.AvailableTiles)
+        foreach (List<GameObject> movementTileList in this.AvailableTiles)
         {
-            DisablePreview(tile, MovementTileList);
+            DisablePreview(tile, movementTileList);
         }
     }
     public override GameObject PossibleAIActionTile()
     {
         bool isEnemyNearby = false;
-        List<GameObject> AllyCharacterList = new List<GameObject>();
+        List<GameObject> allyCharacterList = new List<GameObject>();
         if (CanGridBeEnabled())
         {
             List<GameObject> enemyList = GetComponent<AIBehaviour>().GetCharactersInGrid(4);
@@ -199,19 +199,19 @@ public class CreateWhiteField : BaseAction
                     break;
                 }
             }
-            List<GameObject> AllyList = GetComponent<AIBehaviour>().GetCharactersInGrid(AttackRange);
-            foreach (GameObject character in AllyList)
+            List<GameObject> allyList = GetComponent<AIBehaviour>().GetCharactersInGrid(AttackRange);
+            foreach (GameObject character in allyList)
             {
                 if (isAllegianceSame(character) && character != gameObject)
                 {
-                    AllyCharacterList.Add(character);
+                    allyCharacterList.Add(character);
                 }
             }
         }
-        int actionChanceNumber = UnityEngine.Random.Range(0, 100); //ar paleist spella ar ne
-        if (isEnemyNearby && AllyCharacterList.Count > 0 && actionChanceNumber <= 100)
+        int actionChanceNumber = Random.Range(0, 100); //ar paleisti spella ar ne
+        if (isEnemyNearby && allyCharacterList.Count > 0 && actionChanceNumber <= 100)
         {
-            return AllyCharacterList[Random.Range(0, AllyCharacterList.Count - 1)];
+            return allyCharacterList[Random.Range(0, allyCharacterList.Count - 1)];
         }
         return null;
     }
