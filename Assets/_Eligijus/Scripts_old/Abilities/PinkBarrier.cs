@@ -84,9 +84,9 @@ public class PinkBarrier : BaseAction
     */
     public override void HighlightAll()
     {
-        foreach (List<GameObject> MovementTileList in this.AvailableTiles)
+        foreach (List<GameObject> movementTileList in this.AvailableTiles)
         {
-            foreach (GameObject tile in MovementTileList)
+            foreach (GameObject tile in movementTileList)
             {
                 tile.GetComponent<HighlightTile>().SetHighlightBool(true);
                 tile.GetComponent<HighlightTile>().canAbilityTargetAllies = true;
@@ -109,25 +109,25 @@ public class PinkBarrier : BaseAction
             characterWithBarrier = null;
         }));
     }*/
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
-            GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer).GetComponent<PlayerInformation>().BarrierProvider = gameObject;
+            base.ResolveAbility(position);
+            GetSpecificGroundTile(position).GetComponent<PlayerInformation>().BarrierProvider = gameObject;
             //characterWithBarrier = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
-            GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer).transform.Find("VFX").Find("VFXBool").GetComponent<Animator>().SetTrigger("shieldStart");
-            GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer).GetComponent<GridMovement>().AvailableMovementPoints++;
+            GetSpecificGroundTile(position).transform.Find("VFX").Find("VFXBool").GetComponent<Animator>().SetTrigger("shieldStart");
+            GetSpecificGroundTile(position).GetComponent<GridMovement>().AvailableMovementPoints++;
             FinishAbility();
 
         }
     }
-    public bool canTileBeClicked(GameObject tile)
+    public override bool CanTileBeClicked(Vector3 position)
     {
-        if (CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") 
-            && GetSpecificGroundTile(tile, 0, 0, blockingLayer).GetComponent<PlayerInformation>().BarrierProvider == null
-            && isAllegianceSame(tile))
+        if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") 
+            && GetSpecificGroundTile(position).GetComponent<PlayerInformation>().BarrierProvider == null
+            && isAllegianceSame(position))
         {
             return true;
         }
@@ -136,7 +136,7 @@ public class PinkBarrier : BaseAction
     public override GameObject PossibleAIActionTile()
     {
         bool isEnemyNearby = false;
-        List<GameObject> AllyCharacterList = new List<GameObject>();
+        List<GameObject> allyCharacterList = new List<GameObject>();
         if (CanGridBeEnabled())
         {
             List<GameObject> enemyList = GetComponent<AIBehaviour>().GetCharactersInGrid(3);
@@ -153,14 +153,14 @@ public class PinkBarrier : BaseAction
             {
                 if (isAllegianceSame(character) && character != gameObject)
                 {
-                    AllyCharacterList.Add(character);
+                    allyCharacterList.Add(character);
                 }
             }
         }
         int actionChanceNumber = UnityEngine.Random.Range(0, 100); //ar paleist spella ar ne
-        if (isEnemyNearby && AllyCharacterList.Count > 0 && actionChanceNumber <= 100)
+        if (isEnemyNearby && allyCharacterList.Count > 0 && actionChanceNumber <= 100)
         {
-            return AllyCharacterList[Random.Range(0, AllyCharacterList.Count - 1)];
+            return allyCharacterList[Random.Range(0, allyCharacterList.Count - 1)];
         }
         else if(isEnemyNearby && actionChanceNumber <= 100)
         {

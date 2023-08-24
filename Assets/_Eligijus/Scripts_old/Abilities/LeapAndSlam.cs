@@ -25,18 +25,18 @@ public class LeapAndSlam : BaseAction
                 MergedTileList.Remove(tile);
             }
         }*/
-        MergedTileList.RemoveAll(tile => !canTileBeClicked(tile));
+        MergedTileList.RemoveAll(tile => !CanTileBeClicked(tile.transform.position));
     }
 
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
         
-        if (canTileBeClicked(clickedTile))
+        if (CanTileBeClicked(position))
         {   
-            base.ResolveAbility(clickedTile);
-            DealDamageToAdjacent(clickedTile);
+            base.ResolveAbility(position);
+            //DealDamageToAdjacent(clickedTile);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
-            transform.position = clickedTile.transform.position + new Vector3(0f, 0f, -1f);
+            transform.position = position + new Vector3(0f, 0f, -1f);
             gameInformation.FocusSelectedCharacter(gameObject);
 
             FinishAbility();
@@ -70,9 +70,9 @@ public class LeapAndSlam : BaseAction
         }
     }
 
-    public bool canTileBeClicked(GameObject tile)
+    public override bool CanTileBeClicked(Vector3 position)
     {
-        if (!CheckIfSpecificLayer(tile, 0, 0, blockingLayer))
+        if (!CheckIfSpecificLayer(position, 0, 0, blockingLayer))
         {
             return true;
         }
@@ -92,7 +92,7 @@ public class LeapAndSlam : BaseAction
             CreateGrid();
             foreach (GameObject tile in MergedTileList)
             {
-                if (canTileBeClicked(tile) && !CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall"))
+                if (CanTileBeClicked(tile.transform.position) && !CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall"))
                 {
                     GameObject character = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
                     EnemyCharacterList.Add(character);
