@@ -48,9 +48,16 @@ public class PvPCharacterSelect : MonoBehaviour
         if (isButtonAvailable) // GameObject.Find("GameInformation").GetComponent<GameInformation>().canButtonsBeClicked fix this bs
         {
             gameTileMap.SetCurrentCharacter(characterOnBoard);
-            isSelected = true;
-
-            if (characterOnBoard.GetComponent<PlayerInformation>().health > 0)
+            isButtonAvailable = false;
+            Debug.Log("Selected");
+        }
+        else if (!isButtonAvailable)
+        {
+            gameTileMap.DeselectCurrentCharacter();
+            isButtonAvailable = true;
+            Debug.Log("Deselected");
+        }
+        if (characterOnBoard.GetComponent<PlayerInformation>().health > 0)
             {
                 // if (characterPortraitFrame.GetComponent<Animator>().GetBool("select"))
                 // {
@@ -61,7 +68,7 @@ public class PvPCharacterSelect : MonoBehaviour
                 //     GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().SelectACharacter(characterOnBoard);
                 // }
             }
-        }
+        
     }
     public void DeselectPortrait()
     {
