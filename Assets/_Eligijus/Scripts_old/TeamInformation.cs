@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class TeamInformation : MonoBehaviour
 {
+    [SerializeField] private SelectAction selectAction;
     [SerializeField] private PlayerTeams playerTeams;
     [SerializeField] private Image image;
     [SerializeField] private GameTileMap gameTileMap;
@@ -38,6 +39,7 @@ public class TeamInformation : MonoBehaviour
                 pvpCharacterSelects[i].characterOnBoard = CharacterOnBoardList[i];
                 TeamCharacterPortraitList.Add(pvpCharacterSelects[i].GetCharacterPortraitFrame());
                 pvpCharacterSelects[i].CreateCharatersPortrait();
+                pvpCharacterSelects[i].SetSelectAction(selectAction);
                 pvpCharacterSelects[i].gameTileMap = gameTileMap;
             }
             else
