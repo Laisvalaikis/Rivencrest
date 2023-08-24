@@ -152,7 +152,9 @@ public class GameTileMap : MonoBehaviour
         lock (_chunksArray)
         {
             
-            if (_chunksArray[heightChunk, widthChunk] != null && !_chunksArray[heightChunk, widthChunk].TileIsLocked())
+            if (_chunksArray.GetLength(0) > heightChunk && heightChunk >= 0
+                && _chunksArray.GetLength(1) > widthChunk && widthChunk >= 0
+                && _chunksArray[heightChunk, widthChunk] != null && !_chunksArray[heightChunk, widthChunk].TileIsLocked())
             {
                 return _chunksArray[heightChunk, widthChunk];
             }

@@ -1,0 +1,9 @@
+
+Scsharpsquid:S3903"1Move 'SelectActionButton' into a named namespace.(ÀæÌƒûÿÿÿÿ
+¢csharpsquid:S1186"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(ûàîºûÿÿÿÿ8ñ´¶‘¢1
+¢csharpsquid:S1186"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(®±®“üÿÿÿÿ8ñ´¶‘¢1
+mcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(÷Ú‡Øûÿÿÿÿ8ñ´¶‘¢1
+gcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Ñ€—8ñ´¶‘¢1
+hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(æ­ºæ8ñ´¶‘¢1
+mcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ŸÉ’˜øÿÿÿÿ8ñ´¶‘¢1
+hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Óü×©8ñ´¶‘¢1
