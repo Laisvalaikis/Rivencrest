@@ -63,9 +63,9 @@ public class SelfMovementBoost : BaseAction
         }
     }
 
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        base.ResolveAbility(clickedTile);
+        base.ResolveAbility(position);
         GetComponent<GridMovement>().AvailableMovementPoints++;
         AbilityPoints = 0;
         AvailableAttacks = 0;

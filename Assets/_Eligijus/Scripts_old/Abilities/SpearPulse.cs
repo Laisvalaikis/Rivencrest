@@ -134,11 +134,11 @@ public class SpearPulse : BaseAction
         }
     }
     */
-    public override void ResolveAbility(GameObject clickedTile)
+    public override void ResolveAbility(Vector3 position)
     {
-        if (canTileBeClicked(clickedTile))
+        if (canTileBeClicked(position))
         {
-            base.ResolveAbility(clickedTile);
+            base.ResolveAbility(position);
             // transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
             foreach (GameObject tile in MergedTileList)
@@ -154,7 +154,7 @@ public class SpearPulse : BaseAction
             FinishAbility();
         }
     }
-    public bool canTileBeClicked(GameObject tile)
+    public bool canTileBeClicked(Vector3 position)
     {
         return true;
         /* foreach (GameObject tileInList in MergedTileList)
@@ -188,7 +188,7 @@ public class SpearPulse : BaseAction
             CreateGrid();
             foreach (GameObject tile in MergedTileList)
             {
-                if (canTileBeClicked(tile))
+                if (canTileBeClicked(tile.transform.position))
                 {
                     GameObject character = GetSpecificGroundTile(tile, 0, 0, blockingLayer);
                     EnemyCharacterList.Add(character);
