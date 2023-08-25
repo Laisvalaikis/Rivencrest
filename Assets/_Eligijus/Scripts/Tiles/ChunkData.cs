@@ -52,10 +52,8 @@ public class ChunkData
         {
             _tileSpriteRenderer.gameObject.transform.position = GetChunkCenterPosition();
         }
-        else
-        {
-            _tileSpriteRenderer.gameObject.SetActive(false);
-        }
+        _tileSpriteRenderer.gameObject.SetActive(false);
+        
     }
 
     public Vector3 GetPosition()
