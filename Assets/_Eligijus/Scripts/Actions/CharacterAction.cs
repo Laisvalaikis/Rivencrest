@@ -8,6 +8,11 @@ public abstract class CharacterAction : MonoBehaviour
     {
         
     }
+
+    public virtual void CreateGrid()
+    {
+        
+    }
     
     public virtual void DealRandomDamageToTarget(GameObject target, int minDamage, int maxDamage)
     {

@@ -101,8 +101,6 @@ h
 8Assets/_Eligijus/Scripts_old/Abilities/CreateBearTrap.cs,5\2\523d9fe5ba7d442d7f93378b7193a5a832872b78
 c
 3Assets/_Eligijus/Scripts_old/Abilities/BlindDart.cs,0\3\03e17b9bdf0712fc05bbcab7f3a9c8e788f391c4
-d
-4Assets/_Eligijus/Scripts_old/Abilities/CryoFreeze.cs,4\9\49bad6acbd6f08e2c792a26fc6f464a9d2b58c9b
 h
 8Assets/_Eligijus/Scripts_old/Abilities/DisarmingBlast.cs,1\8\188b0be14f152976e0ca41d5c4b8723fd54234f1
 d
@@ -175,8 +173,6 @@ k
 ;Assets/_Eligijus/Scripts_old/Abilities/SelfMovementBoost.cs,d\1\d10f4d291ff27f5640b638e6907214d4e61c1190
 f
 6Assets/_Eligijus/Scripts_old/Abilities/BlockAbility.cs,4\c\4ccdf36e0b6635c64a965b2a871dcb17443bb289
-g
-7Assets/_Eligijus/Scripts_old/Abilities/BindingRitual.cs,6\2\62cf37f1e2c95375fba927c88e299c0bd74fa114
 c
 3Assets/_Eligijus/Scripts_old/Abilities/RaiseRock.cs,0\4\044ce870b0b2922610e42cf66f89cc4d1ab10e60
 i
@@ -225,5 +221,3 @@ d
 4Assets/_Eligijus/Scripts_old/Abilities/FlameBlast.cs,0\8\082f4b69618250c92f8e20bf54f960ca0a611338
 e
 5Assets/_Eligijus/Scripts_old/Abilities/PinkBarrier.cs,7\5\753408c595a991425a7c82f27da87f3b54e913c7
-f
-6Assets/_Eligijus/Scripts_old/Abilities/PlayerAttack.cs,8\6\86c5eacc229039571c65ea6ec80cf2d04d86db23

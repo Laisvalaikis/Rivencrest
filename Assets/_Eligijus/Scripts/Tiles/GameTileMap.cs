@@ -144,6 +144,11 @@ public class GameTileMap : MonoBehaviour
         // _threadWeight.Start();
         // _avlTree.DisplayTree();
     }
+    
+    public ChunkData[,] GetChunksArray()
+    {
+        return _chunksArray;
+    }
 
     public ChunkData GetChunk(Vector3 position)
     {

@@ -45,10 +45,12 @@ using Random = UnityEngine.Random;
         private AssignSound _assignSound;
         private PlayerInformationData playerInformationData;
         private PlayerInformationData _playerInformationData;
+        private List<ChunkData> _chunkList;
         
         void Awake()
         {
             _playerInformationData = new PlayerInformationData();
+            _chunkList = new List<ChunkData>();
             AbilityPoints = AbilityCooldown;
             groundLayer = LayerMask.GetMask("Ground");
             blockingLayer = LayerMask.GetMask("BlockingLayer");
@@ -58,6 +60,89 @@ using Random = UnityEngine.Random;
             whiteFieldLayer = LayerMask.GetMask("WhiteField");
             // gameInformation = GameObject.Find("GameInformation").GetComponent<GameInformation>();
             _assignSound = GetComponent<AssignSound>();
+        }
+        
+        
+        public override void CreateGrid()
+        {
+            //CreateAvailableTileList();
+            //MergeIntoOneList();
+            CreateAvailableChunkList();
+        }
+
+        //Creates a list of available chunks for attack
+        private void CreateAvailableChunkList()
+        {
+            ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
+            _chunkList.Clear();
+            if(laserGrid)
+            {
+                Debug.Log("Laser grid");
+                GeneratePlusPattern(startChunk, AttackRange);
+            }
+            else
+            {
+                Debug.Log("Diamond grid");
+                GenerateDiamondPattern(startChunk, AttackRange);
+            }
+        }
+        
+        public void GenerateDiamondPattern(ChunkData centerChunk, int radius)
+        {
+            (int centerX, int centerY) = centerChunk.GetIndexes();
+            ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray();
+            for (int y = -radius; y <= radius; y++)
+            {
+                for (int x = -radius; x <= radius; x++)
+                {
+                    if (Mathf.Abs(x) + Mathf.Abs(y) <= radius)
+                    {
+                        int targetX = centerX + x;
+                        int targetY = centerY + y;
+                        Debug.Log("X: " + targetX + " Y: " + targetY);
+                        Debug.Log(chunksArray.GetLength(0));
+                        Debug.Log(chunksArray.GetLength(1));
+                        // Ensuring we don't go out of array bounds.
+                        if (targetX >= 0 && targetX < chunksArray.GetLength(1) && targetY >= 0 && targetY < chunksArray.GetLength(0))
+                        {
+                            ChunkData chunk = chunksArray[targetY, targetX];
+                            if (chunk != null && !chunk.TileIsLocked())
+                            {
+                                _chunkList.Add(chunk);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        public void GeneratePlusPattern(ChunkData centerChunk, int length)
+        {
+            (int centerX, int centerY) = centerChunk.GetIndexes();
+            ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray();
+
+            for (int i = 1; i <= length; i++)
+            {
+                List<(int, int)> positions = new List<(int, int)> 
+                {
+                    (centerX, centerY + i),  // Up
+                    (centerX, centerY - i),  // Down
+                    (centerX + i, centerY),  // Right
+                    (centerX - i, centerY)   // Left
+                };
+
+                foreach (var (x, y) in positions)
+                {
+                    if (x >= 0 && x < chunksArray.GetLength(1) && y >= 0 && y < chunksArray.GetLength(0))
+                    {
+                        ChunkData chunk = chunksArray[y, x];
+                        if (chunk != null && !chunk.TileIsLocked())
+                        {
+                            _chunkList.Add(chunk);
+                        }
+                    }
+                }
+            }
         }
         public virtual void OnTileHover(GameObject tile)//parodo kas bus
         {
@@ -201,39 +286,7 @@ using Random = UnityEngine.Random;
             }
             GetSpecificGroundTile(transform.gameObject, 0, 0, groundLayer).GetComponent<HighlightTile>().SetHighlightBool(false);
         }
-
-        public virtual void CreateGrid()
-        {
-            CreateAvailableTileList();
-            MergeIntoOneList();
-        }
-
-        private List<ChunkData> _chunkList;
         
-        //Creates a list of available chunks for attack
-        protected void CreateAvailableChunkList()
-        {
-            ChunkData startChunk = new ChunkData();
-            _chunkList.Clear();
-            if(laserGrid)
-            {
-                
-                //laser grid code
-            }
-            else
-            {
-                //regular ass code
-            }
-        }
-        
-        private readonly List<(int, int)> DirectionVectors = new()
-        {
-    (1, 0),
-    (0, 1),
-    (-1, 0),
-    (0, -1)
-};
-
 private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, bool canWallsBeTargeted)
 {
     bool isGround = CheckIfSpecificLayer(middleTile, xOffset, yOffset, groundLayer);
@@ -247,14 +300,14 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
 
 protected virtual void AddSurroundingsToList(GameObject middleTile, int movementIndex, bool canWallsBeTargeted = false)
 {
-    foreach (var dir in DirectionVectors)
+    /*foreach (var dir in DirectionVectors)
     {
         if (IsTileAccessible(middleTile, dir.Item1, dir.Item2, canWallsBeTargeted))
         {
             GameObject tileToAdd = GetSpecificGroundTile(middleTile, dir.Item1, dir.Item2, groundLayer);
             this.AvailableTiles[movementIndex].Add(tileToAdd);
         }
-    }
+    }*/
 }
 
 protected virtual void AddSurroundingsToList(GameObject middleTile, int movementIndex, int x, int y)
@@ -300,12 +353,12 @@ protected void CreateAvailableTileList()
         this.AvailableTiles.Add(new List<GameObject>());
         
         int i = 0;
-        foreach (var dir in DirectionVectors)
+        /*foreach (var dir in DirectionVectors)
         {
             this.AvailableTiles.Add(new List<GameObject>());
             AddSurroundingsToList(transform.gameObject, i, dir.Item1, dir.Item2);
             i++;
-        }
+        }*/
     }
     Debug.Log("Removed action set");
 }
