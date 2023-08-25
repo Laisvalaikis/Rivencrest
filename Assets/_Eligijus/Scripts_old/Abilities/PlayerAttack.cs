@@ -24,7 +24,7 @@ public class PlayerAttack : BaseAction
         if (CanGridBeEnabled())
         {
             CreateGrid();
-            HighlightOuter();
+            
         }
         else
         {
@@ -32,60 +32,48 @@ public class PlayerAttack : BaseAction
         }
 
     }
-    public void HighlightOuter()
+
+    public override void ResolveAbility(Vector3 position)
     {
-        if (AttackRange != 0)
-        {
-            foreach (GameObject tile in this.AvailableTiles[this.AvailableTiles.Count - 1])
-            {
-                tile.GetComponent<HighlightTile>().SetHighlightBool(true);
-                tile.GetComponent<HighlightTile>().activeState = actionStateName;
-                tile.GetComponent<HighlightTile>().ChangeBaseColor();
-            }
-            for (int i = this.AvailableTiles.Count - 1; i > 0; i--)
-            {
-                foreach (GameObject tile in this.AvailableTiles[i - 1])
-                {
-                    tile.GetComponent<HighlightTile>().SetHighlightBool(false);
-                }
-            }
-            GetSpecificGroundTile(transform.gameObject, 0, 0, groundLayer).GetComponent<HighlightTile>().SetHighlightBool(false);
-        }
+        base.ResolveAbility(position);
+        DealRandomDamageToTarget(position, minAttackDamage, maxAttackDamage);
+        FinishAbility();
     }
-    public override void ResolveAbility(GameObject clickedTile)
-    {
-        
-        if (canTileBeClicked(clickedTile))
-        {
-            base.ResolveAbility(clickedTile);
-            GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
-            transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
-            if (impactVFXName != "")
-            {
-                GetSpecificGroundTile(clickedTile, 0, 0, groundLayer).transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger(impactVFXName);
-            }
-            DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);    
-            //Blessing
-            if (DoesCharacterHaveBlessing("Freezing touch"))
-            {
-                target.GetComponent<PlayerInformation>().ApplyDebuff("IceSlow");
-            }
-            if (DoesCharacterHaveBlessing("Venomous touch"))
-            {
-                target.GetComponent<PlayerInformation>().Poisons.Add(new PlayerInformation.Poison(gameObject, 1, 2));
-            }
-            if (DoesCharacterHaveBlessing("Molten touch"))
-            {
-                target.GetComponent<PlayerInformation>().Aflame = gameObject;
-            }
-            if (DoesCharacterHaveBlessing("Vampiric touch"))
-            {
-                GetComponent<PlayerInformation>().Heal(3, false);
-            }
-            //Finish
-            FinishAbility();
-        }
-    }
+
+    // public override void ResolveAbility(GameObject clickedTile)
+    // {
+    //     
+    //     if (canTileBeClicked(clickedTile))
+    //     {
+    //         base.ResolveAbility(clickedTile);
+    //         GameObject target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
+    //         transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
+    //         if (impactVFXName != "")
+    //         {
+    //             GetSpecificGroundTile(clickedTile, 0, 0, groundLayer).transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger(impactVFXName);
+    //         }
+    //         DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);    
+    //         //Blessing
+    //         if (DoesCharacterHaveBlessing("Freezing touch"))
+    //         {
+    //             target.GetComponent<PlayerInformation>().ApplyDebuff("IceSlow");
+    //         }
+    //         if (DoesCharacterHaveBlessing("Venomous touch"))
+    //         {
+    //             target.GetComponent<PlayerInformation>().Poisons.Add(new PlayerInformation.Poison(gameObject, 1, 2));
+    //         }
+    //         if (DoesCharacterHaveBlessing("Molten touch"))
+    //         {
+    //             target.GetComponent<PlayerInformation>().Aflame = gameObject;
+    //         }
+    //         if (DoesCharacterHaveBlessing("Vampiric touch"))
+    //         {
+    //             GetComponent<PlayerInformation>().Heal(3, false);
+    //         }
+    //         //Finish
+    //         FinishAbility();
+    //     }
+    // }
 
     public bool canTileBeClicked(GameObject tile)
     {

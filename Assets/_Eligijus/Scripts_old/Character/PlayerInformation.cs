@@ -81,6 +81,8 @@ public class PlayerInformation : MonoBehaviour
     [HideInInspector] public int XPToGain = 0;
     //
     [HideInInspector] public bool isThisObject = false;
+
+    private int _currentCharacterTeam = -1;
    
     private int turnCounter = 1;
     void Awake()
@@ -122,6 +124,16 @@ public class PlayerInformation : MonoBehaviour
         float maxHealthDouble = _playerInformationData.MaxHealth;
         float healthDouble = health;
         return healthDouble / maxHealthDouble * 100;
+    }
+
+    public void SetPlayerTeam(int currentCharacterTeam)
+    {
+        _currentCharacterTeam = currentCharacterTeam;
+    }
+
+    public int GetPlayerTeam()
+    {
+        return _currentCharacterTeam;
     }
 
     public enum SpecialColor

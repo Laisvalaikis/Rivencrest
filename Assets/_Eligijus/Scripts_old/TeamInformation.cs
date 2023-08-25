@@ -11,7 +11,6 @@ public class TeamInformation : MonoBehaviour
     [SerializeField] private Image image;
     [SerializeField] private GameTileMap gameTileMap;
     [SerializeField] private List<GameObject> TeamCharacterPortraitList;
-    [SerializeField] private List<GameObject> CharacterOnBoardList;
     [SerializeField] private List<PvPCharacterSelect> pvpCharacterSelects;
     //private PvPCharacterSelect _pvPCharacterSelect;
     public int teamIndex;
@@ -19,7 +18,6 @@ public class TeamInformation : MonoBehaviour
     void Awake()
     {
         TeamCharacterPortraitList = new List<GameObject>();
-        CharacterOnBoardList = new List<GameObject>();
     }
     public void AddPortraitToList(GameObject character)
     {
@@ -32,12 +30,13 @@ public class TeamInformation : MonoBehaviour
     public void ModifyList()
     {
         TeamCharacterPortraitList.Clear();
-        CharacterOnBoardList = playerTeams.AliveCharacterList(teamIndex);
+        List<GameObject> CharacterOnBoardList = playerTeams.AliveCharacterList(teamIndex);
+        List<PlayerInformation> characterAlivePlayerInformation = playerTeams.AliveCharacterPlayerInformationList(teamIndex);
         for(int i = 0; i < transform.childCount; i++)
         {
             if (i < CharacterOnBoardList.Count)
             {
-                pvpCharacterSelects[i].characterOnBoard = CharacterOnBoardList[i];
+                pvpCharacterSelects[i].SetPortraitCharacter(CharacterOnBoardList[i], characterAlivePlayerInformation[i]);
                 TeamCharacterPortraitList.Add(pvpCharacterSelects[i].GetCharacterPortraitFrame());
                 pvpCharacterSelects[i].CreateCharatersPortrait();
                 pvpCharacterSelects[i].SetSelectAction(selectAction);
@@ -45,7 +44,7 @@ public class TeamInformation : MonoBehaviour
             }
             else
             {
-                pvpCharacterSelects[i].characterOnBoard = null;
+                pvpCharacterSelects[i].SetPortraitCharacter( null, null);
             }
             
         }

@@ -6,12 +6,13 @@ using UnityEngine;
 public class PvPCharacterSelect : MonoBehaviour
 {
     public GameTileMap gameTileMap; //cia private padaryt
-    public GameObject characterOnBoard;
     [SerializeField] private GameObject characterPortraitFrame;
     public Image extension;
     public Image frame;
     [SerializeField] private Image characterPortraitSprite;
-    private PlayerInformationData _playerInformation;
+    private GameObject characterOnBoard;
+    private PlayerInformation _playerInformation;
+    private PlayerInformationData _playerInformationData;
     private SelectAction _selectAction;
    // private SelectActionButton _selectActionButton;
     private bool isButtonAvailable = true;
@@ -25,9 +26,8 @@ public class PvPCharacterSelect : MonoBehaviour
     {
         if (characterOnBoard != null)
         {
-            _playerInformation = characterOnBoard.GetComponent<PlayerInformation>().playerInformationData;
-            // _playerInformation.TeamManager = transform.parent.gameObject;
-            characterPortraitSprite.sprite = _playerInformation.CharacterPortraitSprite;
+            _playerInformationData = _playerInformation.playerInformationData;
+            characterPortraitSprite.sprite = _playerInformationData.CharacterPortraitSprite;
 
             gameObject.SetActive(true);
             isButtonAvailable = true;
@@ -37,6 +37,12 @@ public class PvPCharacterSelect : MonoBehaviour
             gameObject.SetActive(false);
             isButtonAvailable = false;
         }
+    }
+
+    public void SetPortraitCharacter(GameObject character, PlayerInformation characterInformation)
+    {
+        characterOnBoard = character;
+        _playerInformation = characterInformation;
     }
 
     public GameObject GetCharacterPortraitFrame()

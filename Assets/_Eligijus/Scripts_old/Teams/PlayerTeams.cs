@@ -31,6 +31,8 @@ public class PlayerTeams : MonoBehaviour
         {
             currentCharacters.teams.Add(new CharacterList());
             currentCharacters.teams[i].characters = new List<GameObject>();
+            currentCharacters.teams[i].aliveCharacters = new List<GameObject>();
+            currentCharacters.teams[i].aliveCharactersPlayerInformation = new List<PlayerInformation>();
             SpawnCharacters(i, allCharacterList.teams[i].coordinates);
         }
         
@@ -64,9 +66,12 @@ public class PlayerTeams : MonoBehaviour
             if (i < allCharacterList.teams[teamIndex].characters.Count)
             {
                 GameObject spawnedCharacter = Instantiate(allCharacterList.teams[teamIndex].characters[i], new Vector3(x.x, x.y, 0f), Quaternion.identity); //Spawning the prefab into the scene.
-                GameTileMap.Tilemap.SetCharacter(spawnedCharacter.transform.position + new Vector3(0, 0.5f, 0), spawnedCharacter);
+                PlayerInformation playerInformation = spawnedCharacter.GetComponent<PlayerInformation>();
+                playerInformation.SetPlayerTeam(teamIndex);
+                GameTileMap.Tilemap.SetCharacter(spawnedCharacter.transform.position + new Vector3(0, 0.5f, 0), spawnedCharacter, playerInformation);
                 currentCharacters.teams[teamIndex].characters.Add(spawnedCharacter);
-
+                currentCharacters.teams[teamIndex].aliveCharacters.Add(spawnedCharacter);
+                currentCharacters.teams[teamIndex].aliveCharactersPlayerInformation.Add(playerInformation);
                 //         if(allCharacterList.teams[teamIndex].isTeamAI)
         //         {
         //             int points = 2 * (_data.townData.selectedEncounter.encounterLevel - 1);
@@ -191,18 +196,30 @@ public class PlayerTeams : MonoBehaviour
         }
         else return false;
     }
+    // public List<GameObject> AliveCharacterList(int teamIndex)
+    // {
+    //     List<GameObject> aliveCharacterList = new List<GameObject>();
+    //     for (int j = 0; j < allCharacterList.teams[teamIndex].characters.Count; j++)
+    //     {
+    //         if (allCharacterList.teams[teamIndex].characters[j].GetComponent<PlayerInformation>().health > 0)
+    //         {
+    //             aliveCharacterList.Add(allCharacterList.teams[teamIndex].characters[j]);
+    //         }
+    //     }
+    //     return currentCharacters.teams[teamIndex].characters;
+    // }
+    
+    
     public List<GameObject> AliveCharacterList(int teamIndex)
     {
-        List<GameObject> aliveCharacterList = new List<GameObject>();
-        for (int j = 0; j < allCharacterList.teams[teamIndex].characters.Count; j++)
-        {
-            if (allCharacterList.teams[teamIndex].characters[j].GetComponent<PlayerInformation>().health > 0)
-            {
-                aliveCharacterList.Add(allCharacterList.teams[teamIndex].characters[j]);
-            }
-        }
-        return currentCharacters.teams[teamIndex].characters;
+        return currentCharacters.teams[teamIndex].aliveCharacters;
     }
+    
+    public List<PlayerInformation> AliveCharacterPlayerInformationList(int teamIndex)
+    {
+        return currentCharacters.teams[teamIndex].aliveCharactersPlayerInformation;
+    }
+    
     public GameObject FirstAliveCharacter(int teamIndex)
     {
         if (allCharacterList.teams[teamIndex].lastSelectedPlayer.GetComponent<PlayerInformation>().health > 0)
@@ -259,6 +276,8 @@ public class PlayerTeams : MonoBehaviour
 public class CharacterList
 {
     public List<GameObject> characters;
+    public List<GameObject> aliveCharacters;
+    public List<PlayerInformation> aliveCharactersPlayerInformation;
     public List<Vector3> coordinates;
     public string teamName;
     public string teamAllegiance;

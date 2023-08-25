@@ -153,14 +153,8 @@ g
 7Assets/_Eligijus/Scripts_old/Abilities/DisarmingSlam.cs,a\c\ac96b65c60cb557ee0dd3520c9ef27eab4d7f027
 d
 4Assets/_Eligijus/Scripts_old/Abilities/PoisonDart.cs,a\2\a2b4d65bb316c503e3e3866495b45f474615718c
-a
-1Assets/_Eligijus/Scripts_old/Grid/GridMovement.cs,3\6\36f7935f8f70576428966150462a7db6e7adc4bd
-h
-8Assets/_Eligijus/Scripts_old/Character/PlayerMovement.cs,3\a\3a7b2598df0cb929ae011464d4639f3691917fd4
 b
 2Assets/_Eligijus/Scripts_old/Abilities/IceQuake.cs,0\b\0b4b52ca45ce6e499d4ccbeefce1361f20dc57b5
-k
-;Assets/_Eligijus/Scripts_old/Character/PlayerInformation.cs,0\1\01fa8010973eed4d0d1292541e5cdcf2c7e90204
 c
 3Assets/_Eligijus/Scripts_old/Abilities/Avalanche.cs,d\1\d14d06d7f650af68441d006473b543984fe17b93
 c

@@ -1,27 +1,0 @@
-
-{csharpsquid:S3776;"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(¢•Óùûÿÿÿÿ8Û•—ã¡1
-wcsharpsquid:S3776Ü"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(¡é¯‹8Û•—ã¡1
-|csharpsquid:S3776£"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(„ÅËÿÿÿÿÿ8Ü•—ã¡1
-vcsharpsquid:S3776ÿ"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(ÚœÿG8Ü•—ã¡1
-Gcsharpsquid:S3903"*Move 'AIBehaviour' into a named namespace.(žêˆã
-fcsharpsquid:S1104
-"DMake this field 'private' and encapsulate it in a 'public' property.(ÆÒ¾•ûÿÿÿÿ
-mcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Øß©ûÿÿÿÿ8Ý•—ã¡1
-hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(º”Åô8Ý•—ã¡1
-hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ÚîŽë8Þ•—ã¡1
-hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Û™×â8Þ•—ã¡1
-hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(“òæÄ8Þ•—ã¡1
-mcsharpsquid:S1104 "DMake this field 'private' and encapsulate it in a 'public' property.(Ž•Î ÿÿÿÿÿ8Þ•—ã¡1
-hcsharpsquid:S1104ú"DMake this field 'private' and encapsulate it in a 'public' property.(Ã¶@8Þ•—ã¡1
-ncsharpsquid:S1104û"DMake this field 'private' and encapsulate it in a 'public' property.(µÇÓÚÿÿÿÿÿ8Þ•—ã¡1
-ncsharpsquid:S1104ü"DMake this field 'private' and encapsulate it in a 'public' property.(Í˜­üÿÿÿÿ8Þ•—ã¡1
-bcsharpsquid:S1104½"DMake this field 'private' and encapsulate it in a 'public' property.(ÆèÞ–
-gcsharpsquid:S1104¾"DMake this field 'private' and encapsulate it in a 'public' property.(Äí‹çúÿÿÿÿ
-Wcsharpsquid:S3267–"2Loops should be simplified with "LINQ" expressions(ºšêÑ8ß•—ã¡1
-Wcsharpsquid:S3267¥"2Loops should be simplified with "LINQ" expressions(ðÇ¾§8ùˆ¬³¢1
-ecsharpsquid:S3267±"@Loop should be simplified by calling Select(x => x.abilityName))(ðÇ¾§8ùˆ¬³¢1
-Zcsharpsquid:S3459"6Remove unassigned field '_tileGrid', or set its value.(àãúß8ß•—ã¡1
-zcsharpsquid:S1450"VRemove the field 'raycast' and declare it as a local variable in the relevant methods.(¼¶ë¸8ß•—ã¡1
-Gcsharpsquid:S125~"Remove this commented out code.(÷ÐŽ¼þÿÿÿÿ8ß•—ã¡1
-Ccsharpsquid:S125½"Remove this commented out code.(‹á‚ƒ8ß•—ã¡1
-=csharpsquid:S4663ö"Remove this empty comment(è»»_8ß•—ã¡1

@@ -44,6 +44,7 @@ public class GameTileMap : MonoBehaviour
     private bool _updateWeight = false;
     private int _countForTreeSpawn = 0;
     private GameObject _currentSelectedCharacter;
+    private PlayerInformation _currentPlayerInformation;
     private Vector2 _mousePosition;
     private int chunckIndex;
     private bool chuncksIsSetUp = false;
@@ -320,6 +321,16 @@ public class GameTileMap : MonoBehaviour
 
         }
     }
+    
+    public void SetCharacter(Vector3 mousePosition, GameObject character, PlayerInformation playerInformation)
+    {
+        if (GetChunk(mousePosition) != null)
+        {
+            ChunkData chunkData = GetChunk(mousePosition);
+            chunkData.SetCurrentCharacter(character, playerInformation);
+
+        }
+    }
 
     public bool CharacterIsOnTile(Vector3 mousePosition)
     {
@@ -376,6 +387,7 @@ public class GameTileMap : MonoBehaviour
             Debug.Log("Pressed");
             ChunkData chunkData = GetChunk(mousePosition);
             _currentSelectedCharacter = chunkData.GetCurrentCharacter();
+            _currentPlayerInformation = chunkData.GetCurrentPlayerInformation();
             if (_currentSelectedCharacter != null)
             {
                 _selectAction.SetCurrentCharacter(_currentSelectedCharacter);
@@ -388,6 +400,7 @@ public class GameTileMap : MonoBehaviour
         if (_currentSelectedCharacter != null)
         {
             _currentSelectedCharacter = null;
+            _currentPlayerInformation = null;
             _selectAction.gameObject.SetActive(false);
         }
     }

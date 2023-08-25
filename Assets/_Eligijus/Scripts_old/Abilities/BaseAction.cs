@@ -18,7 +18,8 @@ using Random = UnityEngine.Random;
         public int selectedEffectIndex;
         public int selectedSongIndex;
 
-        [Header("Base Action")]
+        [Header("Base Action")] 
+        [SerializeField] protected PlayerInformation playerInformation;
         public string actionStateName;
         protected LayerMask groundLayer;
         protected LayerMask blockingLayer;
@@ -510,6 +511,7 @@ protected void CreateAvailableTileList()
                 DisableGrid();
             }
         }
+        
         public static GameObject GetSpecificGroundTile(GameObject tile, int x, int y, LayerMask chosenLayer)
         {
             Vector3 firstPosition = tile.transform.position + new Vector3(0f, 0.5f, 0f) + new Vector3(x, y, 0f);
@@ -579,10 +581,22 @@ protected void CreateAvailableTileList()
 
         protected bool isAllegianceSame(Vector3 position)
         {
-            var playerTeams = gameInformation.GetComponent<PlayerTeams>();
-            return playerTeams.FindTeamAllegiance(GameTileMap.Tilemap.GetChunk(position).GetCurrentCharacter().GetComponent<PlayerInformation>().CharactersTeam)
-                == playerTeams.FindTeamAllegiance(GetComponent<PlayerInformation>().CharactersTeam);
+            ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
+            if (chunkData != null && chunkData.GetCurrentPlayerInformation().GetPlayerTeam() != playerInformation.GetPlayerTeam() || friendlyFire)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+            // var playerTeams = gameInformation.GetComponent<PlayerTeams>();
+            // return playerTeams.FindTeamAllegiance(GameTileMap.Tilemap.GetChunk(position).GetCurrentCharacter().GetComponent<PlayerInformation>().CharactersTeam)
+            //     == playerTeams.FindTeamAllegiance(GetComponent<PlayerInformation>().CharactersTeam);
         }
+        
+        
         protected bool isAllegianceSame(GameObject position)
         {
             Debug.Log("Fix allegiances");
@@ -596,6 +610,7 @@ protected void CreateAvailableTileList()
             return playerTeams.FindTeamAllegiance(GetSpecificGroundTile(tile1, 0, 0, chosenLayer).GetComponent<PlayerInformation>().CharactersTeam)
                 == playerTeams.FindTeamAllegiance(GetSpecificGroundTile(tile2, 0, 0, chosenLayer).GetComponent<PlayerInformation>().CharactersTeam);
         }
+        
         protected bool IsItCriticalStrike(ref int damage)
         {
             int critNumber = Random.Range(0, 100);
@@ -620,14 +635,30 @@ protected void CreateAvailableTileList()
                 //Debug.Log("Dodge");
             }
         }
-        protected void DealRandomDamageToTarget(GameObject target, int minAttackDamage, int maxAttackDamage)
+        // protected void DealRandomDamageToTarget(GameObject target, int minAttackDamage, int maxAttackDamage)
+        // {
+        //     if(!isAllegianceSame(target) || friendlyFire)
+        //     {
+        //         int randomDamage = Random.Range(minAttackDamage, maxAttackDamage);
+        //         bool crit = IsItCriticalStrike(ref randomDamage);
+        //         dodgeActivation(ref randomDamage, target);
+        //         target.GetComponent<PlayerInformation>().DealDamage(randomDamage, crit, gameObject);
+        //     }
+        // }
+        
+        protected void DealRandomDamageToTarget(Vector3 targetChunk, int minAttackDamage, int maxAttackDamage)
         {
-            if(!isAllegianceSame(target) || friendlyFire)
+            // if(!isAllegianceSame(target) || friendlyFire)
+            // {
+            //     int randomDamage = Random.Range(minAttackDamage, maxAttackDamage);
+            //     bool crit = IsItCriticalStrike(ref randomDamage);
+            //     dodgeActivation(ref randomDamage, target);
+            //     target.GetComponent<PlayerInformation>().DealDamage(randomDamage, crit, gameObject);
+            // }
+            ChunkData chunkData = GameTileMap.Tilemap.GetChunk(targetChunk);
+            if (chunkData != null && chunkData.GetCurrentCharacter() != null)
             {
-                int randomDamage = Random.Range(minAttackDamage, maxAttackDamage);
-                bool crit = IsItCriticalStrike(ref randomDamage);
-                dodgeActivation(ref randomDamage, target);
-                target.GetComponent<PlayerInformation>().DealDamage(randomDamage, crit, gameObject);
+                
             }
         }
         /*protected virtual void AddSurroundingsToList(GameObject middleTile, int movementIndex, bool canWallsBeTargeted = false)

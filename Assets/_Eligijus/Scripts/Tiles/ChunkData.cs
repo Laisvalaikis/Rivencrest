@@ -43,6 +43,7 @@ public class ChunkData
     private bool _canUseTile = false;
     private bool _tileIsLocked = false;
     private GameObject _currentCharacter;
+    private PlayerInformation _currentPlayerInformation;
     private SpriteRenderer _tileSpriteRenderer;
     private HighlightTile _highlightTile;
     
@@ -102,6 +103,12 @@ public class ChunkData
         return _highlightTile;
     }
 
+    public void SetCurrentCharacter(GameObject gameObject, PlayerInformation playerInformation)
+    {
+        _currentCharacter = gameObject;
+        _currentPlayerInformation = playerInformation;
+    }
+    
     public void SetCurrentCharacter(GameObject gameObject)
     {
         _currentCharacter = gameObject;
@@ -110,6 +117,11 @@ public class ChunkData
     public GameObject GetCurrentCharacter()
     {
         return _currentCharacter;
+    }
+
+    public PlayerInformation GetCurrentPlayerInformation()
+    {
+        return _currentPlayerInformation;
     }
 
     public void StandingOnChunk(bool standingOnChunk)
