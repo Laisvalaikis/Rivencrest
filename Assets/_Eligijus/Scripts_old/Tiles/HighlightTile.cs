@@ -34,46 +34,46 @@ public class HighlightTile : MonoBehaviour
     public bool notification = false;
     private bool PCControls = true; //Galima pakeisti i mobile pasiemus boola Start funkcijoj is GameInformation
 
-    void Update()
-    {
-        //Updating isCharacterOnTop to prevent bug
-        if (Input.GetMouseButtonUp(0) && isHovered)
-        {
-            isCharacterOnTop = CheckIfSpecificTag(gameObject, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(gameObject, 0, 0, blockingLayer, "Wall");
-        }
-
-        //Mobile controls
-        if (Input.GetMouseButtonUp(0) && isHovered && (!isCharacterOnTop)) //|| 
-                                                                           //(!CheckIfSpecificTag(gameObject, 0, 0, blockingLayer, "Player") && !CheckIfSpecificTag(gameObject, 0, 0, blockingLayer, "Wall")) )) //???
-        {
-            if (notification)
-            {
-                Debug.Log(gameObject.ToString() + " " + transform.position.x + " " + transform.position.y);
-            }
-            //HighlightedByPlayerUI.GetComponent<SpriteRenderer>().color == HoverHighlightColor
-            OnTileClick();
-        }
-        //Keitimas į movement antru pelės mygtuku iš pradžių tegul išjungia dabartinį gridą
-        if (isHighlighted && Input.GetMouseButtonDown(1) && activeState != "Movement")
-        {
-            var gameInformation = GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>();
-            if (gameInformation.SelectedCharacter != null)
-            {
-                gameInformation.SelectedCharacter.GetComponent<ActionManager>().FindActionByName(activeState).OffTileHover(gameObject);
-            }
-            else if (gameInformation.InspectedCharacter != null)
-            {
-                gameInformation.InspectedCharacter.GetComponent<ActionManager>().FindActionByName(activeState).OffTileHover(gameObject);
-            }
-        }
-        if (FogOfWarTile.activeSelf)
-        {
-            HighlightedByPlayerUI.GetComponent<SpriteRenderer>().sortingLayerName = "UI";
-        }
-        else
-        {
-            HighlightedByPlayerUI.GetComponent<SpriteRenderer>().sortingLayerName = "Items";
-        }
+    // void Update()
+    // {
+    //     //Updating isCharacterOnTop to prevent bug
+    //     if (Input.GetMouseButtonUp(0) && isHovered)
+    //     {
+    //         isCharacterOnTop = CheckIfSpecificTag(gameObject, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(gameObject, 0, 0, blockingLayer, "Wall");
+    //     }
+    //
+    //     //Mobile controls
+    //     if (Input.GetMouseButtonUp(0) && isHovered && (!isCharacterOnTop)) //|| 
+    //                                                                        //(!CheckIfSpecificTag(gameObject, 0, 0, blockingLayer, "Player") && !CheckIfSpecificTag(gameObject, 0, 0, blockingLayer, "Wall")) )) //???
+    //     {
+    //         if (notification)
+    //         {
+    //             Debug.Log(gameObject.ToString() + " " + transform.position.x + " " + transform.position.y);
+    //         }
+    //         //HighlightedByPlayerUI.GetComponent<SpriteRenderer>().color == HoverHighlightColor
+    //         OnTileClick();
+    //     }
+    //     //Keitimas į movement antru pelės mygtuku iš pradžių tegul išjungia dabartinį gridą
+    //     if (isHighlighted && Input.GetMouseButtonDown(1) && activeState != "Movement")
+    //     {
+    //         var gameInformation = GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>();
+    //         if (gameInformation.SelectedCharacter != null)
+    //         {
+    //             gameInformation.SelectedCharacter.GetComponent<ActionManager>().FindActionByName(activeState).OffTileHover(gameObject);
+    //         }
+    //         else if (gameInformation.InspectedCharacter != null)
+    //         {
+    //             gameInformation.InspectedCharacter.GetComponent<ActionManager>().FindActionByName(activeState).OffTileHover(gameObject);
+    //         }
+    //     }
+    //     if (FogOfWarTile.activeSelf)
+    //     {
+    //         HighlightedByPlayerUI.GetComponent<SpriteRenderer>().sortingLayerName = "UI";
+    //     }
+    //     else
+    //     {
+    //         HighlightedByPlayerUI.GetComponent<SpriteRenderer>().sortingLayerName = "Items";
+    //     }
         /*
         if (fogOfWar && isFogOfWarEnabled)
         {
@@ -84,7 +84,7 @@ public class HighlightTile : MonoBehaviour
             FogOfWarTile.SetActive(false);
             fogOfWar = true;
         }*/
-    }
+    // }
 
     public void SetHighlightBool(bool statement)
     {
@@ -104,19 +104,16 @@ public class HighlightTile : MonoBehaviour
     }
     void Start()
     {
-        blockingLayer = LayerMask.GetMask("BlockingLayer");
-        //FogOfWarTile.SetActive(false);
-        FogOfWarTile.SetActive(true);
-        colorManager = GameObject.Find("GameInformation").gameObject.GetComponent<ColorManager>();
-        MovementHighlightColor = colorManager.MovementHighlight;//lol
-        HighlightedByPlayerUI.GetComponent<SpriteRenderer>().color = MovementHighlightColor;
-        NotHoveredColor = HighlightedByPlayerUI.GetComponent<SpriteRenderer>().color;
-        AttackHighlightColor = colorManager.AttackHighlight;
-        //HoverHighlightColor = colorManager.MovementHighlightHover;
-        OtherHighlight = colorManager.OtherHighlight;
-        InspectionHighlight = colorManager.InspectionHighlight;
-        isFogOfWarEnabled = GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().isFogOfWarEnabled;
-        //OriginalSprite = HighlightedByPlayerUI.GetComponent<SpriteRenderer>().sprite;
+        // blockingLayer = LayerMask.GetMask("BlockingLayer");
+        // FogOfWarTile.SetActive(true);
+        // colorManager = GameObject.Find("GameInformation").gameObject.GetComponent<ColorManager>();
+        // MovementHighlightColor = colorManager.MovementHighlight;//lol
+        // HighlightedByPlayerUI.GetComponent<SpriteRenderer>().color = MovementHighlightColor;
+        // NotHoveredColor = HighlightedByPlayerUI.GetComponent<SpriteRenderer>().color;
+        // AttackHighlightColor = colorManager.AttackHighlight;
+        // OtherHighlight = colorManager.OtherHighlight;
+        // InspectionHighlight = colorManager.InspectionHighlight;
+        // isFogOfWarEnabled = GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().isFogOfWarEnabled;
     }
     /*void Update()
     {

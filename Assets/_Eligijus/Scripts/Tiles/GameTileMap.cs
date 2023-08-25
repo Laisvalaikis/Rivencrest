@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Threading;
 using Unity.VisualScripting;
+using UnityEditor.Tilemaps;
 using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
 
@@ -25,11 +26,13 @@ public class GameTileMap : MonoBehaviour
 
     public CharacterAction selectedCharacterAction;
     public TileMapData currentMap;
+    [SerializeField] private SpriteRenderer[] tileSpriteRenderers;
+    [SerializeField] private HighlightTile[] tileHighlights;
     [SerializeField] private bool showChunks;
     private int _chunkCountWidth = 0;
     private int _chunkCountHeight = 0;
     private List<SaveChunks> _chunks;
-    private List<ChunkData> _chunksDraw;
+    private List<ChunkData> _allChunks;
     private List<ChunkData> _spawned;
     private ChunkData[,] _chunksArray;
     
@@ -41,6 +44,9 @@ public class GameTileMap : MonoBehaviour
     private int _countForTreeSpawn = 0;
     private GameObject _currentSelectedCharacter;
     private Vector2 _mousePosition;
+    private int chunckIndex;
+    private bool chuncksIsSetUp = false;
+    private bool chunckSetupFinished = false;
     private void Awake()
     {
         if (Tilemap == null)
@@ -59,9 +65,16 @@ public class GameTileMap : MonoBehaviour
         if (currentMap._chunkSize > 0)
         {
             _chunks = new List<SaveChunks>();
-            _chunksDraw = new List<ChunkData>();
+            _allChunks = new List<ChunkData>();
             _chunkCountWidth = Mathf.CeilToInt(currentMap._mapWidth / currentMap._chunkSize);
             _chunkCountHeight = Mathf.CeilToInt(currentMap._mapHeight / currentMap._chunkSize);
+            int tileSize = _chunkCountWidth * _chunkCountHeight;
+            Debug.Log(tileSize);
+            chunckIndex = 0;
+            for (int i = tileSize; i < tileSpriteRenderers.Length; i++)
+            {
+                tileSpriteRenderers[i].gameObject.SetActive(false);
+            }
             // _avlTree = new AVL();
             _maxHeap = new MaxHeap(_chunkCountWidth*_chunkCountHeight*2);
             _chunksArray = new ChunkData[_chunkCountHeight,_chunkCountWidth];
@@ -79,9 +92,23 @@ public class GameTileMap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!_threadDistance.IsAlive && !chuncksIsSetUp)
+        {
+            StartCoroutine(SetupChunckTiles());
+            chuncksIsSetUp = true;
+        }
     }
-    
+
+    IEnumerator SetupChunckTiles()
+    {
+        for (int i = 0; i < _allChunks.Count; i++)
+        {
+            _allChunks[i].SetupChunk();
+            yield return null;
+        }
+        chunckSetupFinished = true;
+    }
+
     void CalculateDistance()
     {
 
@@ -110,7 +137,7 @@ public class GameTileMap : MonoBehaviour
                 {
                     widthSize = leftSizeOfWidth / currentMap._chunkSize;
                 }
-                ChunkData chunk = new ChunkData(h, w, widthSize, heightSize, widthPosition + (widthSize/2), heightPosition - (heightSize/2), false);
+                ChunkData chunk = new ChunkData(h, w, widthSize, heightSize, widthPosition + (widthSize/2), heightPosition - (heightSize/2), tileSpriteRenderers[chunckIndex], tileHighlights[chunckIndex], false);
                 if (currentMap._mapBoundries[h].boundries[0].y - currentMap._chunkSize <= heightPosition - (heightSize) &&
                     currentMap._mapBoundries[h].boundries[0].y >=  heightPosition &&
                     currentMap._mapBoundries[h].boundries[0].x <= widthPosition && 
@@ -122,13 +149,13 @@ public class GameTileMap : MonoBehaviour
                 {
                     chunk.SetTileIsLocked(true);
                 }
-
+                chunckIndex++;
                 lock (_chunksArray)
                 {
                     _chunksArray[h, w] = chunk;
                 }
                 _chunks[h].chunks.Add(chunk);
-                _chunksDraw.Add(chunk);
+                _allChunks.Add(chunk);
                 
                 leftSizeOfWidth -= widthSize;
                 widthPosition += widthSize;
@@ -199,7 +226,7 @@ public class GameTileMap : MonoBehaviour
         if (currentMap._chunkSize > 0 && _threadDistance == null || currentMap._chunkSize > 0 && !_threadDistance.IsAlive)
         {
             _chunks = new List<SaveChunks>();
-            _chunksDraw = new List<ChunkData>();
+            _allChunks = new List<ChunkData>();
             _chunkCountWidth = Mathf.CeilToInt(currentMap._mapWidth / currentMap._chunkSize);
             _chunkCountHeight = Mathf.CeilToInt(currentMap._mapHeight / currentMap._chunkSize);
             // _avlTree = new AVL();
@@ -214,7 +241,7 @@ public class GameTileMap : MonoBehaviour
     public void ResetChunks()
     {
         _chunks = new List<SaveChunks>();
-        _chunksDraw = new List<ChunkData>();
+        _allChunks = new List<ChunkData>();
         _chunkCountWidth = Mathf.CeilToInt(currentMap._mapWidth / currentMap._chunkSize);
         _chunkCountHeight = Mathf.CeilToInt(currentMap._mapHeight / currentMap._chunkSize);
         _maxHeap = new MaxHeap(_chunkCountWidth*_chunkCountHeight*2);
@@ -393,15 +420,15 @@ public class GameTileMap : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (_chunksDraw != null)
+        if (_allChunks != null)
         {
             if (showChunks)
             {
                 Gizmos.color = Color.cyan;
 
-                for (int i = 0; i < _chunksDraw.Count; i++)
+                for (int i = 0; i < _allChunks.Count; i++)
                 {
-                    ChunkData data = _chunksDraw[i];
+                    ChunkData data = _allChunks[i];
                     if (!data.TileIsLocked())
                     {
                         Gizmos.color = new Color(0, 1, data.GetWeight(), 1);

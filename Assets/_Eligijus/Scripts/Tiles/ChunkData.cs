@@ -6,7 +6,7 @@ using UnityEngine;
 public class ChunkData
 {
 
-    public ChunkData(int indexHeight, int indexWidth, float width, float height, float positionWidth, float positionHeight, bool tileIsLocked)
+    public ChunkData(int indexHeight, int indexWidth, float width, float height, float positionWidth, float positionHeight, SpriteRenderer tileSpriteRenderer, HighlightTile highlightTile,  bool tileIsLocked)
     {
         _indexHeight = indexHeight;
         _indexWidth = indexWidth;
@@ -15,6 +15,8 @@ public class ChunkData
         _positionWidth = positionWidth;
         _positionHeight = positionHeight;
         _tileIsLocked = tileIsLocked;
+        _tileSpriteRenderer = tileSpriteRenderer;
+        _highlightTile = highlightTile;
     }
     
     public ChunkData(int indexHeight, int indexWidth)
@@ -41,16 +43,44 @@ public class ChunkData
     private bool _canUseTile = false;
     private bool _tileIsLocked = false;
     private GameObject _currentCharacter;
+    private SpriteRenderer _tileSpriteRenderer;
+    private HighlightTile _highlightTile;
     
-    
+    public void SetupChunk()
+    {
+        if (!TileIsLocked())
+        {
+            _tileSpriteRenderer.gameObject.transform.position = GetChunkCenterPosition();
+        }
+        else
+        {
+            _tileSpriteRenderer.gameObject.SetActive(false);
+        }
+    }
+
     public Vector3 GetPosition()
     {
         return new(_positionWidth, _positionHeight, 0);
+    }
+    
+    public Vector3 GetChunkCenterPosition()
+    {
+        return new(_positionWidth, _positionHeight - _height/2, -0.1f);
     }
 
     public Vector3 GetDimensions()
     {
         return new(_width,_height, 1f);
+    }
+
+    public SpriteRenderer GetTileSpriteRenderer()
+    {
+        return _tileSpriteRenderer;
+    }
+    
+    public HighlightTile GetTileHighlight()
+    {
+        return _highlightTile;
     }
 
     public void SetCurrentCharacter(GameObject gameObject)
