@@ -1,0 +1,38 @@
+
+|csharpsquid:S3776è"RRefactor this method to reduce its Cognitive Complexity from 30 to the 15 allowed.(ı÷»±ıÿÿÿÿ8Ö¿çâ¢1
+Ncsharpsquid:S3903",Move 'HighlightTile' into a named namespace.(÷¤À´şÿÿÿÿ
+Hcsharpsquid:S2933"$Make 'isFogOfWarEnabled' 'readonly'.(öé¹Ü8Ğâäâ¢1
+?csharpsquid:S2933#"Make 'PCControls' 'readonly'.(¸Ê…êüÿÿÿÿ
+fcsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(æ¿À‚ÿÿÿÿÿ
+fcsharpsquid:S1104
+"DMake this field 'private' and encapsulate it in a 'public' property.(ûïıÿÿÿÿ
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ÁØû
+`csharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(âº÷V
+`csharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(´ÁÇ/
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(©¡Òùÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ÄÉÊïûÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(°ôÓªùÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¨ºßşùÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(™´©ÿûÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(‹¼œşÿÿÿÿ
+acsharpsquid:S1104""DMake this field 'private' and encapsulate it in a 'public' property.(«àÊ÷
+Ycsharpsquid:S1066´"/Merge this if statement with the enclosing one.(Ó’”–úÿÿÿÿ8˜°äâ¢1
+Tcsharpsquid:S1066ˆ"/Merge this if statement with the enclosing one.(óÁè‘8˜°äâ¢1
+ecsharpsquid:S3459"ARemove unassigned field 'AttackHighlightColor', or set its value.(‹îê“8×¿çâ¢1
+gcsharpsquid:S3459"CRemove unassigned field 'MovementHighlightColor', or set its value.(İ²ïü8×¿çâ¢1
+_csharpsquid:S3459";Remove unassigned field 'OtherHighlight', or set its value.(•ê¹È8×¿çâ¢1
+icsharpsquid:S3459"@Remove unassigned field 'InspectionHighlight', or set its value.(úâ²éÿÿÿÿÿ8×¿çâ¢1
+bcsharpsquid:S3459 "9Remove unassigned field 'colorManager', or set its value.(İ´öôùÿÿÿÿ8Ø¿çâ¢1
+;csharpsquid:S125"Remove this commented out code.(†Î‡ğ
+;csharpsquid:S125"Remove this commented out code.(¦ÂÕû
+Bcsharpsquid:S125&"Remove this commented out code.(Ú°à¬8™°äâ¢1
+@csharpsquid:S125O"Remove this commented out code.(ÒÌâ–øÿÿÿÿ
+Gcsharpsquid:S125W"Remove this commented out code.(éØ»Úûÿÿÿÿ8Ù¿çâ¢1
+Gcsharpsquid:S125k"Remove this commented out code.(Õ¿àáÿÿÿÿÿ8Òâäâ¢1
+Gcsharpsquid:S125w"Remove this commented out code.(ÒÌâ–øÿÿÿÿ8˜°äâ¢1
+Hcsharpsquid:S125•"Remove this commented out code.(øş—ûÿÿÿÿ8˜°äâ¢1
+Ccsharpsquid:S125§"Remove this commented out code.(ãôú¿8˜°äâ¢1
+Hcsharpsquid:S125·"Remove this commented out code.(ÔÊ“¸úÿÿÿÿ8™°äâ¢1
+Bcsharpsquid:S125½"Remove this commented out code.(¼ğÚc8™°äâ¢1
+Ccsharpsquid:S125Í"Remove this commented out code.(Ú°à¬8“©çâ¢1
+5csharpsquid:S4663!"Remove this empty comment(è»»_

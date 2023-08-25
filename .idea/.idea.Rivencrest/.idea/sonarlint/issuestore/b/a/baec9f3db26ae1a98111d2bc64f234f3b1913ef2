@@ -1,0 +1,13 @@
+
+Scsharpsquid:S3903"1Move 'PvPCharacterSelect' into a named namespace.(Á¼¶«úÿÿÿÿ
+mcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(§ƒ€±ıÿÿÿÿ8·¯ø’¢1
+hcsharpsquid:S1104
+"DMake this field 'private' and encapsulate it in a 'public' property.(¦‘¤È8§Şªûœ1
+hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(÷ƒ8§Şªûœ1
+csharpsquid:S1450"eRemove the field '_playerInformationData' and declare it as a local variable in the relevant methods.(òÿ¥äûÿÿÿÿ8Æ¶Ææ¢1
+Gcsharpsquid:S125"Remove this commented out code.(µšÿ÷üÿÿÿÿ8°¬³¢1
+Gcsharpsquid:S125"Remove this commented out code.(ˆÈ‚¿ıÿÿÿÿ8±¬³¢1
+Gcsharpsquid:S125G"Remove this commented out code.(ºÈ’¦şÿÿÿÿ8±¬³¢1
+Gcsharpsquid:S125Z"Remove this commented out code.(‚ÿê‰ùÿÿÿÿ8·¢œûœ1
+Gcsharpsquid:S125i"Remove this commented out code.(‚ÿê‰ùÿÿÿÿ8§´œûœ1
+@csharpsquid:S125p"Remove this commented out code.(ÒÌâ–øÿÿÿÿ

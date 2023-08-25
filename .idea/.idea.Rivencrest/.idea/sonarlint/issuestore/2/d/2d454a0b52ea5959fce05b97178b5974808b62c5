@@ -1,0 +1,43 @@
+
+{csharpsquid:S3776["RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(åÛÑõüÿÿÿÿ8§Ÿéá¢1
+\csharpsquid:S1854ì"8Remove this useless assignment to local variable 'crit'.(¢§—C8ÙÓµ¢1
+Kcsharpsquid:S3903")Move 'BaseAction' into a named namespace.(Ù˜åúÿÿÿÿ
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¬ºç†
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ë”·
+hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Ì¹êÂ8“ÓÂç¢1
+acsharpsquid:S1104!"DMake this field 'private' and encapsulate it in a 'public' property.(½äÍó
+acsharpsquid:S1104""DMake this field 'private' and encapsulate it in a 'public' property.(¥¿¤
+acsharpsquid:S1104#"DMake this field 'private' and encapsulate it in a 'public' property.(»Ñï€
+fcsharpsquid:S1104$"DMake this field 'private' and encapsulate it in a 'public' property.(ç§É¦øÿÿÿÿ
+fcsharpsquid:S1104%"DMake this field 'private' and encapsulate it in a 'public' property.(’¡Íúûÿÿÿÿ
+fcsharpsquid:S1104&"DMake this field 'private' and encapsulate it in a 'public' property.(”™–ìùÿÿÿÿ
+fcsharpsquid:S1104'"DMake this field 'private' and encapsulate it in a 'public' property.(ÚÚÓ„üÿÿÿÿ
+fcsharpsquid:S1104("DMake this field 'private' and encapsulate it in a 'public' property.(ŠÆƒıÿÿÿÿ
+fcsharpsquid:S1104)"DMake this field 'private' and encapsulate it in a 'public' property.(¼°©Ïøÿÿÿÿ
+`csharpsquid:S1104*"DMake this field 'private' and encapsulate it in a 'public' property.(ÊÄ÷
+acsharpsquid:S1104+"DMake this field 'private' and encapsulate it in a 'public' property.( Ä—ö
+`csharpsquid:S1199ë"6Extract this nested code block into a separate method.(ÒÌâ–øÿÿÿÿ8ğ¬³¢1
+`csharpsquid:S1199ï"6Extract this nested code block into a separate method.(ÒÌâ–øÿÿÿÿ8ÙÓµ¢1
+`csharpsquid:S1199ù"6Extract this nested code block into a separate method.(ÒÌâ–øÿÿÿÿ8ÙÓµ¢1
+fcsharpsquid:S3459/"BRemove unassigned field 'playerInformationData', or set its value.(Ë‰‘õ8İÖø¦1
+Ocsharpsquid:S1481ä"%Remove the unused local variable 'i'.(ùó›Ìøÿÿÿÿ8«Ÿéá¢1
+Scsharpsquid:S1481è".Remove the unused local variable 'critNumber'.(ù×µ8ÙÓµ¢1
+Scsharpsquid:S1481÷"/Remove the unused local variable 'dodgeNumber'.(ÀˆòW8ğ¬³¢1
+;csharpsquid:S125 "Remove this commented out code.(Å¿ ò
+Gcsharpsquid:S125>"Remove this commented out code.(€¶”Öøÿÿÿÿ8¬Ÿéá¢1
+Acsharpsquid:S125E"Remove this commented out code.(ŠÿÕ8¶Ÿéá¢1
+Ccsharpsquid:S125¢"Remove this commented out code.(­îÂ¬8¶Ÿéá¢1
+Bcsharpsquid:S125»"Remove this commented out code.(Ìà¬}8¶Ÿéá¢1
+Ccsharpsquid:S125Ø"Remove this commented out code.(­îÂ¬8¶Ÿéá¢1
+Hcsharpsquid:S125±"Remove this commented out code.(ÒÌâ–øÿÿÿÿ8ÙÓµ¢1
+Hcsharpsquid:S125æ"Remove this commented out code.(ÒÌâ–øÿÿÿÿ8Î§Òá¢1
+Hcsharpsquid:S125…"Remove this commented out code.(ÒÌâ–øÿÿÿÿ8Ï§Òá¢1
+Hcsharpsquid:S125ú"Remove this commented out code.(ÒÌâ–øÿÿÿÿ8·Ÿéá¢1
+Ccsharpsquid:S125Ò"Remove this commented out code.(—ãÄ8ÉµÇç¢1
+Ccsharpsquid:S125ê"Remove this commented out code.(ğ ÖÈ8ÙÓµ¢1
+Ccsharpsquid:S125ø"Remove this commented out code.(×¢’Û8ñ¬³¢1
+Hcsharpsquid:S125ú"Remove this commented out code.(ˆ˜¿¿øÿÿÿÿ8ñ¬³¢1
+Ccsharpsquid:S125ÿ"Remove this commented out code.(Ú°à¬8¸ƒƒæ¢1
+Ccsharpsquid:S125Œ"Remove this commented out code.(Ú°à¬8¼„„æ¢1
+Hcsharpsquid:S125›"Remove this commented out code.(ÒÌâ–øÿÿÿÿ8İ„…æ¢1
+Ccsharpsquid:S125Ö"Remove this commented out code.(°ş–¾8İ„…æ¢1

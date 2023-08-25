@@ -650,14 +650,16 @@ protected void CreateAvailableTileList()
         {
             // if(!isAllegianceSame(target) || friendlyFire)
             // {
-            //     int randomDamage = Random.Range(minAttackDamage, maxAttackDamage);
-            //     bool crit = IsItCriticalStrike(ref randomDamage);
-            //     dodgeActivation(ref randomDamage, target);
-            //     target.GetComponent<PlayerInformation>().DealDamage(randomDamage, crit, gameObject);
+            //     i
             // }
             ChunkData chunkData = GameTileMap.Tilemap.GetChunk(targetChunk);
-            if (chunkData != null && chunkData.GetCurrentCharacter() != null)
+            if (chunkData != null && chunkData.GetCurrentCharacter() != null && isAllegianceSame(targetChunk))
             {
+                int randomDamage = Random.Range(minAttackDamage, maxAttackDamage);
+                bool crit = IsItCriticalStrike(ref randomDamage);
+                Debug.LogError("FIX DODGE ACTIVATION");
+                dodgeActivation(ref randomDamage, chunkData.GetCurrentPlayerInformation().gameObject);
+                chunkData.GetCurrentPlayerInformation().DealDamage(randomDamage, crit, gameObject);
                 
             }
         }

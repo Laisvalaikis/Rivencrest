@@ -1,0 +1,28 @@
+
+Ncsharpsquid:S3903",Move 'ButtonManager' into a named namespace.(ò“Ì³üÿÿÿÿ
+Rcsharpsquid:S2933"0Make 'AbilityChangingButtonSequence' 'readonly'.(Í²©™ÿÿÿÿÿ
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(×ŠÄ‚
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(»¡–âûÿÿÿÿ
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(”Éò„
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(äöîüÿÿÿÿ
+]csharpsquid:S3459	";Remove unassigned field 'bottomCornerUI', or set its value.(İ¤ãŠùÿÿÿÿ
+Qcsharpsquid:S3459"5Remove unassigned field 'animator', or set its value.(àƒä
+csharpsquid:S1450"]Remove the field 'ButtonIconList' and declare it as a local variable in the relevant methods.(ø¨Ê˜üÿÿÿÿ
+acsharpsquid:S2292"DMake this an auto-implemented property and remove its backing field.(¬Òİâ
+;csharpsquid:S125#"Remove this commented out code.(Œ–§
+@csharpsquid:S125'"Remove this commented out code.(ú’Ïÿÿÿÿÿ
+@csharpsquid:S125-"Remove this commented out code.(ü®—áıÿÿÿÿ
+@csharpsquid:S1251"Remove this commented out code.(íÑÿ£şÿÿÿÿ
+;csharpsquid:S1256"Remove this commented out code.(™Ê¡©
+;csharpsquid:S1259"Remove this commented out code.(òÉ›ô
+@csharpsquid:S125Y"Remove this commented out code.(úè·œøÿÿÿÿ
+@csharpsquid:S125_"Remove this commented out code.(úè·œøÿÿÿÿ
+;csharpsquid:S125d"Remove this commented out code.(ğ„ûŒ
+@csharpsquid:S125~"Remove this commented out code.(ÒÌâ–øÿÿÿÿ
+<csharpsquid:S125†"Remove this commented out code.(òÉ›ô
+Acsharpsquid:S125"Remove this commented out code.(ş¯§Óúÿÿÿÿ
+<csharpsquid:S125Á"Remove this commented out code.(òÉ›ô
+Acsharpsquid:S125ì"Remove this commented out code.(Ì›Ø¸şÿÿÿÿ
+6csharpsquid:S4663Œ"Remove this empty comment(è»»_
+6csharpsquid:S4663£"Remove this empty comment(è»»_
+6csharpsquid:S4663«"Remove this empty comment(è»»_

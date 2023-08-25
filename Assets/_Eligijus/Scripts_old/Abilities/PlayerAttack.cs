@@ -37,6 +37,7 @@ public class PlayerAttack : BaseAction
     {
         base.ResolveAbility(position);
         DealRandomDamageToTarget(position, minAttackDamage, maxAttackDamage);
+        Debug.LogError("FIX FINISH ABILITY");
         FinishAbility();
     }
 
