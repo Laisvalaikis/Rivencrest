@@ -11,6 +11,8 @@ using Random = UnityEngine.Random;
 
 public class XPProgressManager : MonoBehaviour
 {
+    [SerializeField] public Image image;
+    private PlayerInformationData _playerInformationData;
     public TextMeshProUGUI buttonText;
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI goldWonText;
