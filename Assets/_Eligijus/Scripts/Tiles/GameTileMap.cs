@@ -108,6 +108,7 @@ public class GameTileMap : MonoBehaviour
             yield return null;
         }
         chunckSetupFinished = true;
+        DisableAllTiles();
     }
 
     void CalculateDistance()

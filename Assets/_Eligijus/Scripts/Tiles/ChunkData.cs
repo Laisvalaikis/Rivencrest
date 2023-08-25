@@ -51,8 +51,13 @@ public class ChunkData
         if (!TileIsLocked())
         {
             _tileSpriteRenderer.gameObject.transform.position = GetChunkCenterPosition();
+            _tileSpriteRenderer.gameObject.SetActive(true);
         }
-        _tileSpriteRenderer.gameObject.SetActive(false);
+        else
+        {
+            _tileSpriteRenderer.gameObject.SetActive(false);
+        }
+        
         
     }
 
