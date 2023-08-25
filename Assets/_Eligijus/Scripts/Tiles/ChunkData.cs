@@ -56,6 +56,22 @@ public class ChunkData
         
     }
 
+    public void EnableTileRendering()
+    {
+        if (!_tileIsLocked)
+        {
+            _tileSpriteRenderer.gameObject.SetActive(true);
+        }
+    }
+    
+    public void DisableTileRendering()
+    {
+        if (!_tileIsLocked)
+        {
+            _tileSpriteRenderer.gameObject.SetActive(false);
+        }
+    }
+
     public Vector3 GetPosition()
     {
         return new(_positionWidth, _positionHeight, 0);

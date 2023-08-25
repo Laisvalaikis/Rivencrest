@@ -28,6 +28,7 @@ public class GameTileMap : MonoBehaviour
     public TileMapData currentMap;
     [SerializeField] private SpriteRenderer[] tileSpriteRenderers;
     [SerializeField] private HighlightTile[] tileHighlights;
+    [SerializeField] private GameObject tiles;
     [SerializeField] private bool showChunks;
     private int _chunkCountWidth = 0;
     private int _chunkCountHeight = 0;
@@ -198,6 +199,16 @@ public class GameTileMap : MonoBehaviour
             }
         }
 
+    }
+
+    public void EnableAllTiles()
+    {
+        tiles.SetActive(true);
+    }
+
+    public void DisableAllTiles()
+    {
+        tiles.SetActive(false);
     }
 
     public ChunkData GetRandomChunkAround(int indexX, int indexY)

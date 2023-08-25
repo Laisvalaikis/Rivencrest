@@ -6070,6 +6070,7 @@ MonoBehaviour:
   - {fileID: 1468909542}
   - {fileID: 1830183425}
   - {fileID: 1617066992}
+  tiles: {fileID: 1666844226}
   showChunks: 1
 --- !u!1001 &364912360
 PrefabInstance:
