@@ -59,7 +59,7 @@ public class CreatePortal : BaseAction
         this.AvailableTiles.Clear();
         this.AvailableTiles.Add(new List<GameObject>());
         AddSurroundingsToList(transform.gameObject, 0);
-        MergeIntoOneList();
+        //MergeIntoOneList();
     }
     /*
     public override void DisableGrid()

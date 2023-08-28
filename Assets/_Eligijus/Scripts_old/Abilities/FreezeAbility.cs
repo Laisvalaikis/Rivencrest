@@ -64,7 +64,7 @@ public class FreezeAbility : BaseAction
             this.AvailableTiles.Add(new List<GameObject>());
             AddSurroundingsToList(transform.gameObject, 0);
         }
-        MergeIntoOneList();
+        //MergeIntoOneList();
     }
     /*
     public override void DisableGrid()

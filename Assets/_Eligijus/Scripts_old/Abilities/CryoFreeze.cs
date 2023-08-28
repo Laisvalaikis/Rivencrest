@@ -56,7 +56,7 @@ public class CryoFreeze : BaseAction
         }
     }
     */
-    public override void HighlightAll()
+    protected override void HighlightAll()
     {
         foreach (List<GameObject> MovementTileList in this.AvailableTiles)
         {

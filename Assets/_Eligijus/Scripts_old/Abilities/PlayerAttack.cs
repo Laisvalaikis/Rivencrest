@@ -14,9 +14,9 @@ public class PlayerAttack : BaseAction
         actionStateName = "Attack";
         AttackAbility = true;
     }
-    protected override void AddSurroundingsToList(GameObject middleTile, int movementIndex, bool canWallsBeTargeted)
+    protected void AddSurroundingsToList(GameObject middleTile, int movementIndex, bool canWallsBeTargeted)
     {
-        base.AddSurroundingsToList(middleTile, movementIndex, true);
+        //base.AddSurroundingsToList(middleTile, movementIndex, true);
     }
     
     public override void EnableGrid()

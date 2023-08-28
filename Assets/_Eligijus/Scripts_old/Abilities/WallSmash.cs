@@ -19,9 +19,9 @@ public class WallSmash : BaseAction
         actionStateName = "WallSmash";
         isAbilitySlow = false;
     }
-    protected override void AddSurroundingsToList(GameObject middleTile, int movementIndex, bool canWallsBeTargeted)
+    protected void AddSurroundingsToList(GameObject middleTile, int movementIndex, bool canWallsBeTargeted)
     {
-        base.AddSurroundingsToList(middleTile, movementIndex, true);
+        //base.AddSurroundingsToList(middleTile, movementIndex, true);
     }
     /*
     private void AddSurroundingsToList(GameObject middleTile, int movementIndex)

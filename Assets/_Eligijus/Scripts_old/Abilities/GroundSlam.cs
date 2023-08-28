@@ -36,7 +36,7 @@ public class GroundSlam : BaseAction
             {
                 AvailableTiles[0].Add(GetSpecificGroundTile(gameObject, 0, 0, groundLayer));
             }
-            AddSurroundingsToList(gameObject, 0);
+            //AddSurroundingsToList(gameObject, 0);
         }
 
         for (int i = 1; i <= AttackRange - 1; i++)
@@ -45,14 +45,15 @@ public class GroundSlam : BaseAction
 
             foreach (var tileInPreviousList in this.AvailableTiles[i - 1])
             {
-                AddSurroundingsToList(tileInPreviousList, i);
+                //AddSurroundingsToList(tileInPreviousList, i);
             }
         }
 
-        MergeIntoOneList();
+        //MergeIntoOneList();
         MergedTileList.Add(GetSpecificGroundTile(gameObject, 0, 0, groundLayer));
     }
-    public override void HighlightAll()
+
+    protected override void HighlightAll()
     {
         foreach (GameObject tile in MergedTileList)
         {

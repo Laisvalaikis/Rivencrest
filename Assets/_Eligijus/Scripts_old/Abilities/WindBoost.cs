@@ -37,7 +37,7 @@ public class WindBoost : BaseAction
         this.AvailableTiles.Clear();
         this.AvailableTiles.Add(new List<GameObject>());
         AddSurroundingsToList(transform.gameObject, 0);
-        MergeIntoOneList();
+        //MergeIntoOneList();
     }
     /*
     public override void DisableGrid()
@@ -54,7 +54,7 @@ public class WindBoost : BaseAction
     }
     */
 
-    public override void HighlightAll()
+    protected override void HighlightAll()
     {
         foreach (List<GameObject> MovementTileList in this.AvailableTiles)
         {

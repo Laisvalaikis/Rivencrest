@@ -110,7 +110,8 @@ public class InfernoOld : BaseAction
             characterTile.GetComponent<HighlightTile>().SetHighlightBool(false);
         }
     }
-    public override void HighlightAll()
+
+    protected override void HighlightAll()
     {
         if (characterTile != null)
         {

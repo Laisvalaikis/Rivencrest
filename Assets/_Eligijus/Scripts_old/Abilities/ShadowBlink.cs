@@ -17,7 +17,7 @@ public class ShadowBlink : BaseAction
         laserGrid = true;
         actionStateName = "ShadowBlink";
     }
-    protected override void AddSurroundingsToList(GameObject middleTile, int movementIndex, int x, int y)
+    protected void AddSurroundingsToList(GameObject middleTile, int movementIndex, int x, int y)
     {
         for (int i = 1; i <= AttackRange; i++)
         {

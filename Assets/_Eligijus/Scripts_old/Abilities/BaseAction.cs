@@ -47,7 +47,6 @@ using Random = UnityEngine.Random;
         private PlayerInformationData playerInformationData;
         private PlayerInformationData _playerInformationData;
         private List<ChunkData> _chunkList;
-        private ActionManagerNew _actionManagerNew;
         
         void Awake()
         {
@@ -60,9 +59,7 @@ using Random = UnityEngine.Random;
             fogLayer = LayerMask.GetMask("Fog");
             portalLayer = LayerMask.GetMask("Portal");
             whiteFieldLayer = LayerMask.GetMask("WhiteField");
-            // gameInformation = GameObject.Find("GameInformation").GetComponent<GameInformation>();
             _assignSound = GetComponent<AssignSound>();
-            _actionManagerNew = GetComponent<ActionManagerNew>();
         }
         
         
@@ -90,12 +87,10 @@ using Random = UnityEngine.Random;
             ClearGrid();
             if(laserGrid)
             {
-                Debug.Log("Laser grid");
                 GeneratePlusPattern(startChunk, AttackRange);
             }
             else
             {
-                Debug.Log("Diamond grid");
                 GenerateDiamondPattern(startChunk, AttackRange);
             }
         }
@@ -230,7 +225,8 @@ using Random = UnityEngine.Random;
                 EnableDamagePreview(tileInList, minAttackDamage, maxAttackDamage);
             }
         }
-        public virtual void EnableTextPreview(GameObject tile, string text)
+
+        protected virtual void EnableTextPreview(GameObject tile, string text)
         {
             if(!tile.GetComponent<HighlightTile>().FogOfWarTile.activeSelf && (CanTileBeClicked(tile.transform.position) || CanPreviewBeShown(tile.transform.position)))
             {
@@ -239,7 +235,8 @@ using Random = UnityEngine.Random;
                 tile.GetComponent<HighlightTile>().HighlightedByPlayerUI.GetComponent<SpriteRenderer>().color = GameObject.Find("GameInformation").GetComponent<ColorManager>().MovementHighlightHover;//tile.GetComponent<HighlightTile>().HoverHighlightColor;
             }
         }
-        public virtual void EnableTextPreview(GameObject tile, List<GameObject> tileList, string text)
+
+        protected virtual void EnableTextPreview(GameObject tile, List<GameObject> tileList, string text)
         {
             foreach(GameObject tileInList in tileList)
             {
@@ -250,7 +247,8 @@ using Random = UnityEngine.Random;
         {
             DisablePreview(tile);
         }
-        public virtual void DisablePreview(GameObject tile)//damage texto isjungimui
+
+        protected void DisablePreview(GameObject tile)//damage texto isjungimui
         {
             tile.transform.Find("mapTile").Find("Death").gameObject.SetActive(false);
             tile.transform.Find("mapTile").Find("DamageText").position = tile.transform.position + new Vector3(0f, 0.50f, 0f);
@@ -261,9 +259,10 @@ using Random = UnityEngine.Random;
             tile.transform.Find("mapTile").Find("Highlight").gameObject.SetActive(false);
             tile.GetComponent<HighlightTile>().HighlightedByPlayerUI.GetComponent<SpriteRenderer>().color = tile.GetComponent<HighlightTile>().NotHoveredColor;
         }
-        public virtual void DisablePreview(GameObject tile, List<GameObject> tileList)
+
+        protected void DisablePreview(GameObject tile, List<GameObject> tileList)
         {
-            foreach (GameObject tileInList in tileList)
+            foreach (var tileInList in tileList)
             {
                 DisablePreview(tileInList);
             }
@@ -277,7 +276,8 @@ using Random = UnityEngine.Random;
 
             return false;
         }
-        public virtual bool CanPreviewBeShown(Vector3 position)//ar rodys preview
+
+        protected bool CanPreviewBeShown(Vector3 position)//ar rodys preview
         {
             return CanTileBeClicked(position) && (!(CheckIfSpecificLayer(position, 0, 0, blockingLayer) && isAllegianceSame(position)) || friendlyFire);
         }
@@ -298,7 +298,8 @@ using Random = UnityEngine.Random;
             }
 
         }
-        public virtual void HighlightAll()
+
+        protected virtual void HighlightAll()
         {
             foreach (GameObject tile in MergedTileList)
             {
@@ -322,153 +323,7 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
     return isGround && (!isBlockingLayer || isPlayer || (canWallsBeTargeted && isWall)) && (!canWallsBeTargeted || !isMiddleTileWall);
 }
 
-protected virtual void AddSurroundingsToList(GameObject middleTile, int movementIndex, bool canWallsBeTargeted = false)
-{
-    /*foreach (var dir in DirectionVectors)
-    {
-        if (IsTileAccessible(middleTile, dir.Item1, dir.Item2, canWallsBeTargeted))
-        {
-            GameObject tileToAdd = GetSpecificGroundTile(middleTile, dir.Item1, dir.Item2, groundLayer);
-            this.AvailableTiles[movementIndex].Add(tileToAdd);
-        }
-    }*/
-}
 
-protected virtual void AddSurroundingsToList(GameObject middleTile, int movementIndex, int x, int y)
-{
-    for (int i = 1; i <= AttackRange; i++)
-    {
-        if (IsTileAccessible(middleTile, x * i, y * i, true)) // Assuming walls can be targeted
-        {
-            GameObject tileToAdd = GetSpecificGroundTile(middleTile, x * i, y * i, groundLayer);
-            this.AvailableTiles[movementIndex].Add(tileToAdd);
-        }
-        else
-        {
-            break; // stop if the tile is not accessible (to avoid going through walls)
-        }
-    }
-}
-
-protected void CreateAvailableTileList()
-{
-    AvailableTiles.Clear();
-
-    if (!laserGrid)
-    {
-        if (AttackRange > 0)
-        {
-            AvailableTiles.Add(new List<GameObject>());
-            AddSurroundingsToList(transform.gameObject, 0);
-        }
-
-        for (int i = 1; i <= AttackRange - 1; i++)
-        {
-            this.AvailableTiles.Add(new List<GameObject>());
-
-            foreach (var tileInPreviousList in this.AvailableTiles[i - 1])
-            {
-                AddSurroundingsToList(tileInPreviousList, i);
-            }
-        }
-    }
-    else
-    {
-        this.AvailableTiles.Add(new List<GameObject>());
-        
-        int i = 0;
-        /*foreach (var dir in DirectionVectors)
-        {
-            this.AvailableTiles.Add(new List<GameObject>());
-            AddSurroundingsToList(transform.gameObject, i, dir.Item1, dir.Item2);
-            i++;
-        }*/
-    }
-    Debug.Log("Removed action set");
-}
-
-    protected void MergeIntoOneList()
-    {
-    MergedTileList.Clear();
-
-    foreach (List<GameObject> movementTileList in this.AvailableTiles)
-    {
-        foreach (GameObject tile in movementTileList)
-        {
-            if (!MergedTileList.Contains(tile))
-            {
-                MergedTileList.Add(tile);
-            }
-        }
-    }
-
-    if (CheckIfSpecificLayer(gameObject, 0, 0, groundLayer))
-    {
-        MergedTileList.Remove(GetSpecificGroundTile(gameObject, 0, 0, groundLayer));
-    }
-    }
-
-        /*protected void CreateAvailableTileList()
-        {
-            if(!laserGrid)
-            {
-                AvailableTiles.Clear();
-                if (AttackRange > 0)
-                {
-                    AvailableTiles.Add(new List<GameObject>());
-                    AddSurroundingsToList(transform.gameObject, 0);
-                }
-                for (int i = 1; i <= AttackRange - 1; i++)
-                {
-                    AvailableTiles.Add(new List<GameObject>());
-
-                    foreach (var tileInPreviousList in this.AvailableTiles[i - 1])
-                    {
-                        AddSurroundingsToList(tileInPreviousList, i);
-                    }
-                }
-            }
-            else
-            {
-                // transform.gameObject.GetComponent<PlayerInformation>().currentState = actionStateName;
-                this.AvailableTiles.Clear();
-                this.AvailableTiles.Add(new List<GameObject>());
-                var directionVectors = new List<(int, int)>
-                {
-                    (1, 0),
-                    (0, 1),
-                    (-1, 0),
-                    (0, -1)
-                };
-                int i = 0;
-                foreach (var x in directionVectors)
-                {
-                    this.AvailableTiles.Add(new List<GameObject>());
-                    AddSurroundingsToList(transform.gameObject, i, x.Item1, x.Item2);
-                    i++;
-                }
-            }
-            Debug.Log("Removed action set");
-        }
-        protected void MergeIntoOneList()
-        {
-            //Merging into one list
-            MergedTileList.Clear();
-            foreach (List<GameObject> movementTileList in this.AvailableTiles)
-            {
-                foreach (GameObject tile in movementTileList)
-                {
-                    if (!MergedTileList.Contains(tile))
-                    {
-                        MergedTileList.Add(tile);
-                    }
-                }
-            }
-            if (CheckIfSpecificLayer(gameObject, 0, 0, groundLayer))
-            {
-                MergedTileList.Remove(GetSpecificGroundTile(gameObject, 0, 0, groundLayer));
-            }
-        }*/
         public virtual void DisableGrid()
         {
             foreach (List<GameObject> movementTileList in this.AvailableTiles)
@@ -512,27 +367,22 @@ protected void CreateAvailableTileList()
             Debug.Log("Fake aah method");
             //Dont remove until all abilities are updated
         }
-        
-        public virtual void FinishAbility()
+
+        protected virtual void FinishAbility()
         {
             AbilityPoints = 0;//Cooldown counter
             if (isAbilitySlow)
             {
-                // _actionManagerNew
-                _actionManagerNew.RemoveAllActionPoints();
+                GetComponent<ActionManager>().RemoveAllActionPoints();
             }
             if (AttackAbility)
             {
-                _actionManagerNew.RemoveActionPoints();
+                GetComponent<ActionManager>().RemoveAttackActionPoints();
             }
-            // playerInformation.currentState = "Movement";
-            /*StartCoroutine(ExecuteAfterTime(0.001f, () =>
-            {
-                gameInformation.EnableMovementAction();
-            }));*/
+            GetComponent<PlayerInformation>().currentState = "Movement";
             if (isAbilitySlow)
             {
-                GameTileMap.Tilemap.DisableAllTiles();
+                DisableGrid();
             }
         }
         
@@ -643,7 +493,7 @@ protected void CreateAvailableTileList()
             {
                 crit = false;
             }
-           else
+            else
             {
                 damage += 3;
                 crit = true;
@@ -669,17 +519,7 @@ protected void CreateAvailableTileList()
                 Debug.Log("Dodge");
             }
         }
-        // protected void DealRandomDamageToTarget(GameObject target, int minAttackDamage, int maxAttackDamage)
-        // {
-        //     if(!isAllegianceSame(target) || friendlyFire)
-        //     {
-        //         int randomDamage = Random.Range(minAttackDamage, maxAttackDamage);
-        //         bool crit = IsItCriticalStrike(ref randomDamage);
-        //         dodgeActivation(ref randomDamage, target);
-        //         target.GetComponent<PlayerInformation>().DealDamage(randomDamage, crit, gameObject);
-        //     }
-        // }
-        
+
         protected void DealRandomDamageToTarget(Vector3 targetChunk, int minAttackDamage, int maxAttackDamage)
         {
             ChunkData chunkData = GameTileMap.Tilemap.GetChunk(targetChunk);
@@ -692,51 +532,6 @@ protected void CreateAvailableTileList()
                 
             }
         }
-        
-        /*protected virtual void AddSurroundingsToList(GameObject middleTile, int movementIndex, bool canWallsBeTargeted = false)
-        {
-            var directionVectors = new List<(int, int)>
-        {
-            (1, 0),
-            (0, 1),
-            (-1, 0),
-            (0, -1)
-        };
-
-            foreach (var x in directionVectors)
-            {
-                bool isGroundLayer = CheckIfSpecificLayer(middleTile, x.Item1, x.Item2, groundLayer);
-                bool isBlockingLayer = CheckIfSpecificLayer(middleTile, x.Item1, x.Item2, blockingLayer);
-                bool isPlayer = CheckIfSpecificTag(middleTile, x.Item1, x.Item2, blockingLayer, "Player");
-                bool isWall = CheckIfSpecificTag(middleTile, x.Item1, x.Item2, blockingLayer, "Wall");
-                bool isMiddleTileWall = CheckIfSpecificTag(middleTile, 0, 0, blockingLayer, "Wall");
-                if (isGroundLayer && (!isBlockingLayer || isPlayer || (canWallsBeTargeted && isWall)) && (!canWallsBeTargeted || !isMiddleTileWall))
-                {
-                    GameObject AddableObject = GetSpecificGroundTile(middleTile, x.Item1, x.Item2, groundLayer);
-                    this.AvailableTiles[movementIndex].Add(AddableObject);
-                }
-            }
-        }
-        protected virtual void AddSurroundingsToList(GameObject middleTile, int movementIndex, int x, int y)
-        {
-            for (int i = 1; i <= AttackRange; i++)
-            {
-                //cia visur x ir y dauginama kad pasiektu tuos langelius kurie in range yra 
-                bool isGround = CheckIfSpecificLayer(middleTile, x * i, y * i, groundLayer);
-                bool isBlockingLayer = CheckIfSpecificLayer(middleTile, x * i, y * i, blockingLayer);
-                bool isPlayer = CheckIfSpecificTag(middleTile, x * i, y * i, blockingLayer, "Player");
-                bool isWall = CheckIfSpecificTag(middleTile, x * i, y * i, blockingLayer, "Wall");
-                if (isGround && (!isBlockingLayer || isPlayer || isWall))
-                {
-                    GameObject AddableObject = GetSpecificGroundTile(middleTile, x * i, y * i, groundLayer);
-                    this.AvailableTiles[movementIndex].Add(AddableObject);
-                }
-                else
-                {
-                    break; //kad neitu kiaurai sienas
-                }
-            }
-        }*/
         public virtual void PrepareForAIAction()
         {
             if (CanGridBeEnabled())
@@ -753,40 +548,6 @@ protected void CreateAvailableTileList()
         }
         public virtual void TriggerAflame(GameObject aflameCharacter)
         {
-            //    if (aflameCharacter != null && aflameCharacter.GetComponent<PlayerInformation>().Aflame != null && aflameCharacter.GetComponent<PlayerInformation>().health > 0)
-            //    {
-            //        var directionVectors = new List<(int, int)>
-            //{
-            //    (1, 0),
-            //    (0, 1),
-            //    (-1, 0),
-            //    (0, -1)
-            //};
-            //        aflameCharacter.transform.Find("VFX").Find("Aflame").GetComponent<Animator>().SetTrigger("explode");
-            //        aflameCharacter.transform.Find("VFX").Find("Aflame").GetComponent<Animator>().SetBool("aflame", false);
-            //        int randomDamage;
-            //        bool crit;
-            //        foreach (var x in directionVectors)
-            //        {
-            //            bool isPlayer = CheckIfSpecificTag(aflameCharacter, x.Item1, x.Item2, blockingLayer, "Player");
-            //            if (isPlayer)
-            //            {
-            //                GameObject target = GetSpecificGroundTile(aflameCharacter, x.Item1, x.Item2, blockingLayer);
-            //                if (isAllegianceSame(aflameCharacter, target, blockingLayer))
-            //                {
-            //                    randomDamage = 2;//Random.Range(1, 2);
-            //                    crit = IsItCriticalStrike(ref randomDamage);
-            //                    dodgeActivation(ref randomDamage, target);
-            //                    target.GetComponent<PlayerInformation>().DealDamage(randomDamage, crit, gameObject);
-            //                }
-            //            }
-            //        }
-            //        randomDamage = 2;//Random.Range(1, 2);
-            //        crit = IsItCriticalStrike(ref randomDamage);
-            //        dodgeActivation(ref randomDamage, aflameCharacter);
-            //        aflameCharacter.GetComponent<PlayerInformation>().DealDamage(randomDamage, crit, gameObject);
-            //        aflameCharacter.GetComponent<PlayerInformation>().Aflame = null;
-            //    }
             if (aflameCharacter != null && aflameCharacter.GetComponent<PlayerInformation>().Aflame != null && aflameCharacter.GetComponent<PlayerInformation>().health > 0)
             {
                 var directionVectors = new List<(int, int)>

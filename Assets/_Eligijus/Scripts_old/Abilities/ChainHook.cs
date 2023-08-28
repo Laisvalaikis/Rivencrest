@@ -21,7 +21,7 @@ public class ChainHook : BaseAction
         isAbilitySlow = false;
     }
 
-    protected override void AddSurroundingsToList(GameObject middleTile, int movementIndex, int x, int y) //special tile pattern
+    protected void AddSurroundingsToList(GameObject middleTile, int movementIndex, int x, int y) //special tile pattern
     {
         for (int i = 1; i <= AttackRange; i++)
         {

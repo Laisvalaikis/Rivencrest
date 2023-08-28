@@ -66,7 +66,8 @@ public class WallEntrap : BaseAction
             }
         }
     }
-    public override void HighlightAll()
+
+    protected override void HighlightAll()
     {
         foreach (List<GameObject> MovementTileList in this.AvailableTiles)
         {

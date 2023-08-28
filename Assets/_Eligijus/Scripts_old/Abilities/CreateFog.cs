@@ -21,7 +21,7 @@ public class CreateFog : BaseAction
     }
     private void AddSurroundingsToList(GameObject middleTile, int movementIndex)
     {
-        base.AddSurroundingsToList(middleTile, movementIndex, true);
+        //base.AddSurroundingsToList(middleTile, movementIndex, true);
     }
     /*
     public override void EnableGrid()
