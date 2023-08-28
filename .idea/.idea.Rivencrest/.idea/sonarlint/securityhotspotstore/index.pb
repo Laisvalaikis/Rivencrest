@@ -109,8 +109,6 @@ d
 0Assets/_Eligijus/Scripts_old/Abilities/Enrage.cs,6\1\61558abc73ada45f4b7d17d3747427413cd1faf7
 b
 2Assets/_Eligijus/Scripts_old/Abilities/Entangle.cs,7\1\71e8af8106730600feb8f8c6c278343fd42aef55
-a
-1Assets/_Eligijus/Scripts_old/Abilities/Execute.cs,e\6\e62d2b2e72912b521a25f1bf446dc281e77ad3d9
 c
 3Assets/_Eligijus/Scripts_old/Abilities/FlameKick.cs,4\4\443413703e94ed38018cc9bc6c9d5ef9c64b7bdc
 h
@@ -161,8 +159,6 @@ b
 2Assets/_Eligijus/Scripts_old/Abilities/IceQuake.cs,0\b\0b4b52ca45ce6e499d4ccbeefce1361f20dc57b5
 g
 7Assets/_Eligijus/Scripts_old/Abilities/AbilityAction.cs,c\7\c7fb61b2edf2bb467f525c2da8a353f0ee274052
-k
-;Assets/_Eligijus/Scripts_old/Abilities/SelfMovementBoost.cs,d\1\d10f4d291ff27f5640b638e6907214d4e61c1190
 c
 3Assets/_Eligijus/Scripts_old/Abilities/Avalanche.cs,d\1\d14d06d7f650af68441d006473b543984fe17b93
 f
@@ -223,11 +219,21 @@ Y
 )Assets/_Patrikas/AbilitySystem/Ability.cs,9\b\9bd05de091994ceece1f597b98ac30f6a379b7ce
 b
 2Assets/_Patrikas/AbilitySystem/ActionManagerNew.cs,c\7\c782fe82227bed1f0e7c259163ec44c469bed950
-c
-3Assets/_Eligijus/Scripts/Actions/CharacterAction.cs,0\7\0721ef4a79dd3565e052b3acef974cd2850856a9
-W
-'Assets/_Aurimas/Scripts/SelectAction.cs,8\2\82b1ae552192d7299aeefd462a295b804c4e036d
-c
-3Assets/_Eligijus/Scripts_old/Tiles/HighlightTile.cs,a\3\a3f10fc7b6566bac8b918a588d840647d29111c7
 a
+<<<<<<< HEAD
 1Assets/_Eligijus/Scripts_old/Grid/GridMovement.cs,3\6\36f7935f8f70576428966150462a7db6e7adc4bd
+=======
+1Assets/_Eligijus/Scripts_old/Grid/GridMovement.cs,3\6\36f7935f8f70576428966150462a7db6e7adc4bd
+b
+2Assets/_Eligijus/Scripts_old/PvPCharacterSelect.cs,b\a\baec9f3db26ae1a98111d2bc64f234f3b1913ef2
+_
+/Assets/_Eligijus/Scripts_old/TeamInformation.cs,0\c\0c5a2f8489671386abf57ed6231e40466632e940
+k
+;Assets/_Eligijus/Scripts_old/Character/PlayerInformation.cs,0\1\01fa8010973eed4d0d1292541e5cdcf2c7e90204
+a
+1Assets/_Eligijus/Scripts_old/Teams/PlayerTeams.cs,7\7\77fd0c71dc6d715b52718057ec3b34a0173ec3d7
+f
+6Assets/_Eligijus/Scripts_old/Abilities/PlayerAttack.cs,8\6\86c5eacc229039571c65ea6ec80cf2d04d86db23
+a
+1Assets/_Eligijus/Scripts_old/Abilities/Execute.cs,e\6\e62d2b2e72912b521a25f1bf446dc281e77ad3d9
+>>>>>>> 3ea98b8cff431753cffca0ca107f469671dcfec8

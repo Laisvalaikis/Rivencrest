@@ -70,12 +70,22 @@ using Random = UnityEngine.Random;
             //MergeIntoOneList();
             CreateAvailableChunkList();
         }
+        public void ClearGrid()
+        {
+            foreach (var chunk in _chunkList)
+            {
+                chunk.DisableTileRendering();
+                chunk.DisableTileRenderingGameObject();
+                chunk.GetTileSpriteRenderer().color = Color.white;
+            }
+            _chunkList.Clear();
+        }
 
         //Creates a list of available chunks for attack
         private void CreateAvailableChunkList()
         {
             ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
-            _chunkList.Clear();
+            ClearGrid();
             if(laserGrid)
             {
                 Debug.Log("Laser grid");
@@ -88,10 +98,11 @@ using Random = UnityEngine.Random;
             }
         }
         
-        public void GenerateDiamondPattern(ChunkData centerChunk, int radius)
+        private void GenerateDiamondPattern(ChunkData centerChunk, int radius)
         {
             (int centerX, int centerY) = centerChunk.GetIndexes();
-            ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray();
+            ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray(); 
+            GameTileMap.Tilemap.EnableAllTiles();
             for (int y = -radius; y <= radius; y++)
             {
                 for (int x = -radius; x <= radius; x++)
@@ -100,16 +111,17 @@ using Random = UnityEngine.Random;
                     {
                         int targetX = centerX + x;
                         int targetY = centerY + y;
-                        Debug.Log("X: " + targetX + " Y: " + targetY);
-                        Debug.Log(chunksArray.GetLength(0));
-                        Debug.Log(chunksArray.GetLength(1));
+
                         // Ensuring we don't go out of array bounds.
-                        if (targetX >= 0 && targetX < chunksArray.GetLength(1) && targetY >= 0 && targetY < chunksArray.GetLength(0))
+                        if (targetX >= 0 && targetX < chunksArray.GetLength(0) && targetY >= 0 && targetY < chunksArray.GetLength(1))
                         {
-                            ChunkData chunk = chunksArray[targetY, targetX];
+                            ChunkData chunk = chunksArray[targetX, targetY];
                             if (chunk != null && !chunk.TileIsLocked())
                             {
                                 _chunkList.Add(chunk);
+                                chunk.EnableTileRenderingGameObject();
+                                chunk.EnableTileRendering();
+                                chunk.GetTileSpriteRenderer().color= Color.red;
                             }
                         }
                     }
@@ -117,10 +129,11 @@ using Random = UnityEngine.Random;
             }
         }
         
-        public void GeneratePlusPattern(ChunkData centerChunk, int length)
+        private void GeneratePlusPattern(ChunkData centerChunk, int length)
         {
             (int centerX, int centerY) = centerChunk.GetIndexes();
             ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray();
+            GameTileMap.Tilemap.EnableAllTiles();
 
             for (int i = 1; i <= length; i++)
             {
@@ -134,12 +147,15 @@ using Random = UnityEngine.Random;
 
                 foreach (var (x, y) in positions)
                 {
-                    if (x >= 0 && x < chunksArray.GetLength(1) && y >= 0 && y < chunksArray.GetLength(0))
+                    if (x >= 0 && x < chunksArray.GetLength(0) && y >= 0 && y < chunksArray.GetLength(1))
                     {
-                        ChunkData chunk = chunksArray[y, x];
+                        ChunkData chunk = chunksArray[x, y];
                         if (chunk != null && !chunk.TileIsLocked())
                         {
                             _chunkList.Add(chunk);
+                            chunk.EnableTileRenderingGameObject();
+                            chunk.EnableTileRendering();
+                            chunk.GetTileSpriteRenderer().color= Color.red;
                         }
                     }
                 }
@@ -482,7 +498,7 @@ protected void CreateAvailableTileList()
             base.ResolveAbility(position);
             _assignSound.PlaySound(selectedEffectIndex, selectedSongIndex);
             Debug.LogWarning("PlaySound");
-            
+            ClearGrid();
         }
         public virtual void ResolveAbility(GameObject gameobject)
         {

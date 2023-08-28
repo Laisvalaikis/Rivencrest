@@ -45,7 +45,7 @@ public class ChunkData
     private GameObject _currentCharacter;
     private PlayerInformation _currentPlayerInformation;
     private SpriteRenderer _tileSpriteRenderer;
-    private HighlightTile _highlightTile;
+    public HighlightTile _highlightTile;
     
     public void SetupChunk()
     {
@@ -66,11 +66,27 @@ public class ChunkData
     {
         if (!_tileIsLocked)
         {
-            _tileSpriteRenderer.gameObject.SetActive(true);
+            _tileSpriteRenderer.enabled = true;
         }
     }
     
     public void DisableTileRendering()
+    {
+        if (!_tileIsLocked)
+        {
+            _tileSpriteRenderer.enabled = true;
+        }
+    }
+    
+    public void EnableTileRenderingGameObject()
+    {
+        if (!_tileIsLocked)
+        {
+            _tileSpriteRenderer.gameObject.SetActive(true);
+        }
+    }
+    
+    public void DisableTileRenderingGameObject()
     {
         if (!_tileIsLocked)
         {
@@ -128,6 +144,7 @@ public class ChunkData
     {
         _standingOnChunk = standingOnChunk;
     }
+    
 
     public bool TileIsLocked()
     {

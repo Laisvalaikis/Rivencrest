@@ -13,24 +13,13 @@ public class SelectAction : MonoBehaviour
     [SerializeField] private HelpTable helpTable;
     [SerializeField] private AbilityManager _abilityManager;
     [SerializeField] private List<SelectActionButton> abilityButtons;
-    void Start()
-    {
-        
-    }
-
-    
-    void Update()
-    {
-        
-    }
-
     private void GetAbilities()
     {
         _playerAbilities = _currentPlayer.GetComponent<ActionManagerNew>().ReturnAbilities();
         _playerInformationData = _currentPlayer.GetComponent<PlayerInformation>().playerInformationData;
     }
 
-    public void GenerateActions()
+    private void GenerateActions()
     {
         int buttonIndex = 0;
         for (int i = 0; i < _playerAbilities.Count; i++)
@@ -55,7 +44,7 @@ public class SelectAction : MonoBehaviour
         
     }
 
-    public void ActionSelection(int index, CharacterAction characterAction)
+    public void ActionSelection(CharacterAction characterAction)
     {
         _abilityManager.SetCurrentAbility(characterAction);
         characterAction.CreateGrid();
@@ -67,6 +56,7 @@ public class SelectAction : MonoBehaviour
         _currentPlayer = currentPlayer;
         GetAbilities();
         GenerateActions();
+        _abilityManager.SetCurrentAbility(_playerAbilities[0].Action);
     }
     public void DeSetCurrentCharacter()
     {
