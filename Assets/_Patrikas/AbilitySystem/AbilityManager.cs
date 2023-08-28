@@ -21,7 +21,13 @@ public class AbilityManager : MonoBehaviour
 
     public void SetCurrentAbility(CharacterAction ability)
     {
+        if (_currentAbility != null)
+        {
+            _currentAbility.ClearGrid();
+        }
+
         _currentAbility = ability;
+        _currentAbility.CreateGrid();
     }
 
     public void ExecuteCurrentAbility()

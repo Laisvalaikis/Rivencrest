@@ -72,7 +72,7 @@ using Random = UnityEngine.Random;
             //MergeIntoOneList();
             CreateAvailableChunkList();
         }
-        public void ClearGrid()
+        public override void ClearGrid()
         {
             foreach (var chunk in _chunkList)
             {

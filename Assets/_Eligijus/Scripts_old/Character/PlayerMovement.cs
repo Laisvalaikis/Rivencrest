@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerMovement : CharacterAction
+public class PlayerMovement : BaseAction
 {
     private bool ArrowMovement = false;
     private int horizontal = 0;
