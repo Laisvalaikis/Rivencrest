@@ -72,7 +72,7 @@ public class SpearPulse : BaseAction
             {
                 AvailableTiles[0].Add(GetSpecificGroundTile(startingPoint, 0, 0, groundLayer));
             }
-            AddSurroundingsToList(startingPoint, 0);
+            //AddSurroundingsToList(startingPoint, 0);
         }
 
         for (int i = 1; i <= AttackRange - 1; i++)
@@ -81,7 +81,7 @@ public class SpearPulse : BaseAction
 
             foreach (var tileInPreviousList in this.AvailableTiles[i - 1])
             {
-                AddSurroundingsToList(tileInPreviousList, i);
+                //AddSurroundingsToList(tileInPreviousList, i);
             }
         }
         /*
@@ -102,7 +102,7 @@ public class SpearPulse : BaseAction
             MergedTileList.Remove(GetSpecificGroundTile(startingPoint, 0, 0, groundLayer));
         }
         */
-        MergeIntoOneList();
+        //MergeIntoOneList();
     }
     /*
     public override void DisableGrid()

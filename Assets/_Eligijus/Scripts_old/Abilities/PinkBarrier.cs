@@ -82,7 +82,7 @@ public class PinkBarrier : BaseAction
         }
     }
     */
-    public override void HighlightAll()
+    protected override void HighlightAll()
     {
         foreach (List<GameObject> movementTileList in this.AvailableTiles)
         {

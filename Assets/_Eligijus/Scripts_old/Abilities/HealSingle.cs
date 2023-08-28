@@ -113,7 +113,7 @@ public class HealSingle : BaseAction
         GetSpecificGroundTile(transform.gameObject, 0, 0, groundLayer).GetComponent<HighlightTile>().SetHighlightBool(true);
     }
     */
-    public override void HighlightAll()
+    protected override void HighlightAll()
     {
         foreach (List<GameObject> movementTileList in this.AvailableTiles)
         {

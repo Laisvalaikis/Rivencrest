@@ -24,7 +24,7 @@ public class BindingRitual : BaseAction
         if (AttackRange > 0)
         {
             this.AvailableTiles.Add(new List<GameObject>());
-            AddSurroundingsToList(transform.gameObject, 0);
+            //AddSurroundingsToList(transform.gameObject, 0);
         }
 
         for (int i = 1; i <= AttackRange - 1; i++)
@@ -33,7 +33,7 @@ public class BindingRitual : BaseAction
 
             foreach (var tileInPreviousList in this.AvailableTiles[i - 1])
             {
-                AddSurroundingsToList(tileInPreviousList, i);
+               // AddSurroundingsToList(tileInPreviousList, i);
             }
         }
         //Merging into one list

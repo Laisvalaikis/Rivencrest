@@ -74,7 +74,7 @@ public class SideSlash : BaseAction
         // transform.gameObject.GetComponent<PlayerInformation>().currentState = actionStateName;
         this.AvailableTiles.Clear();
         AddSurroundingsToList(transform.gameObject);
-        MergeIntoOneList();
+        //MergeIntoOneList();
     }
     
     private int FindIndexOfTile(GameObject tileBeingSearched)

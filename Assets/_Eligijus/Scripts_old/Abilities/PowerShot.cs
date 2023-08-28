@@ -15,7 +15,7 @@ public class PowerShot : BaseAction
         laserGrid = true;
         actionStateName = "PowerShot";
     }
-    protected override void AddSurroundingsToList(GameObject middleTile, int movementIndex, int x, int y)
+    protected void AddSurroundingsToList(GameObject middleTile, int movementIndex, int x, int y)
     {
         for (int i = 1; i <= AttackRange; i++)
         {

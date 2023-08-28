@@ -31,7 +31,8 @@ public class SwordPush : BaseAction
             TileThatWasClicked.transform.Find("VFX9x9").gameObject.GetComponent<Animator>().SetTrigger("swordPush");
         }
     }
-    public override void HighlightAll()
+
+    protected override void HighlightAll()
     {
         foreach (List<GameObject> MovementTileList in this.AvailableTiles)
         {

@@ -41,7 +41,7 @@ public class HealingSight : BaseAction
         this.AvailableTiles.Clear();
         this.AvailableTiles.Add(new List<GameObject>());
         AddSurroundingsToList(transform.gameObject, 0);
-        MergeIntoOneList();
+        //MergeIntoOneList();
     }
     /*
     public override void DisableGrid()
@@ -57,7 +57,7 @@ public class HealingSight : BaseAction
         }
     }
     */
-    public override void HighlightAll()
+    protected override void HighlightAll()
     {
         foreach (List<GameObject> movementTileList in this.AvailableTiles)
         {
