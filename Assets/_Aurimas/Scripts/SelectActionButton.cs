@@ -17,18 +17,6 @@ public class SelectActionButton : MonoBehaviour
     public TextMeshProUGUI healthBar;
     public Image staminaButtonBackground;
     
-    
-    void Start()
-    {
-        
-    }
-
-    
-    void Update()
-    {
-        
-    }
-
     public void OnHover()
     {
         _helpTable.EnableTableForCharacters(abilityInformation);
@@ -41,7 +29,7 @@ public class SelectActionButton : MonoBehaviour
 
     public void OnButtonClick()
     {
-        selectAction.ActionSelection(abilityIndex, abilityInformation.Action);
+        selectAction.ActionSelection(abilityInformation.Action);
     }
 
     public void AbilityInformation(int abilityIndex, HelpTable helpTable, Ability characterAction, SelectAction selectedAction)
