@@ -103,7 +103,7 @@ public class Enrage : BaseAction
         if (CanTileBeClicked(position))
         {
             base.ResolveAbility(position);
-            GameObject target = GetSpecificGroundTile(position);
+            GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
             target.GetComponent<GridMovement>().AvailableMovementPoints++;
             GetComponent<GridMovement>().AvailableMovementPoints++;
             GetSpecificGroundTile(target, 0, 0, groundLayer).transform.

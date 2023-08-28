@@ -129,7 +129,7 @@ public class Execute : BaseAction
         if (CanTileBeClicked(position))
         {
             base.ResolveAbility(position);
-            GameObject target = GetSpecificGroundTile(position);
+            GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
            // int damage = ExecuteDamage(target);
             //dodgeActivation(ref damage, target);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");

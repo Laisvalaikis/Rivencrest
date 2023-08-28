@@ -130,8 +130,8 @@ public class CometFall : BaseAction
         DamageTiles.Clear();
         if (CheckIfSpecificLayer(position, 0, 0, groundLayer))
         {
-            DamageTiles.Add(GetSpecificGroundTile(position));
-            GetSpecificGroundTile(position).transform.Find("mapTile").Find("CometZone").gameObject.SetActive(true);
+            DamageTiles.Add(GetSpecificGroundTile(position).GetCurrentCharacter());
+            GetSpecificGroundTile(position).GetCurrentCharacter().transform.Find("mapTile").Find("CometZone").gameObject.SetActive(true);
         }
 
         FinishAbility();

@@ -142,7 +142,7 @@ public class IceQuake : BaseAction
         if (CanTileBeClicked(position))
         {
             base.ResolveAbility(position);
-            GameObject target = GetSpecificGroundTile(position);
+            GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
             int bonusDamage = 0;
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell3");
             if (target.GetComponent<PlayerInformation>().Slow1 || target.GetComponent<PlayerInformation>().Slow2 || target.GetComponent<PlayerInformation>().Slow3)

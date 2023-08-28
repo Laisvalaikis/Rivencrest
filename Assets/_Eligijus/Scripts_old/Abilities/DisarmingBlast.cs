@@ -147,7 +147,7 @@ public class DisarmingBlast : BaseAction
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
 
-            GameObject target = GetSpecificGroundTile(position);
+            GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
             DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);
             target.GetComponent<PlayerInformation>().ApplyDebuff("Disarmed");
            // target.GetComponent<PlayerInformation>().Poisons.Add(new PlayerInformation.Poison(gameObject, 2, 2));

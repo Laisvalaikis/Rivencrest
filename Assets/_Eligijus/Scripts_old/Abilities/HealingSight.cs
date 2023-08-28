@@ -87,7 +87,7 @@ public class HealingSight : BaseAction
             int randomHeal = Random.Range(minHealAmount, maxHealAmount);
             bool crit = IsItCriticalStrike(ref randomHeal);
            // transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("heal");
-            GetSpecificGroundTile(position).GetComponent<PlayerInformation>().Heal(randomHeal, crit);
+            GetSpecificGroundTile(position).GetCurrentCharacter().GetComponent<PlayerInformation>().Heal(randomHeal, crit);
             if (DoesCharacterHaveBlessing("Seeker"))
             {
                 GetComponent<GridMovement>().AvailableMovementPoints ++;

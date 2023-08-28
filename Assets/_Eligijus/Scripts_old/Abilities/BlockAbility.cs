@@ -109,8 +109,8 @@ public class BlockAbility : BaseAction
             base.ResolveAbility(position);
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spellToBool");
             transform.Find("CharacterModel").GetComponent<Animator>().SetBool("block", true);
-            GetSpecificGroundTile(position).GetComponent<PlayerInformation>().BlockingAlly = transform.gameObject;
-            characterBeingBlocked = GetSpecificGroundTile(position);
+            GetSpecificGroundTile(position).GetCurrentCharacter().GetComponent<PlayerInformation>().BlockingAlly = transform.gameObject;
+            characterBeingBlocked = GetSpecificGroundTile(position).GetCurrentCharacter();
             GetComponent<PlayerInformation>().Blocker = true;
             FinishAbility();
         }

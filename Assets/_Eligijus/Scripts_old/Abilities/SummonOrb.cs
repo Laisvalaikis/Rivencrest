@@ -164,15 +164,15 @@ public class SummonOrb : BaseAction
                     }
                     if (CheckIfSpecificTag(spawnedCharacter, x.Item1, x.Item2, blockingLayer, "Player"))
                     {
-                        GameObject target = GetSpecificGroundTile(spawnedCharacter, x.Item1, x.Item2, blockingLayer);
+                        ChunkData target = GetSpecificGroundTile(new Vector3(x.Item1, x.Item2, 0));
                         int randomDamage = UnityEngine.Random.Range(minAttackDamage, maxAttackDamage);
                         bool crit = IsItCriticalStrike(ref randomDamage);
-                        dodgeActivation(ref randomDamage, target);
-                        if (isAllegianceSame(target))
+                        dodgeActivation(ref randomDamage, target.GetCurrentPlayerInformation());
+                        if (isAllegianceSame(target.GetCurrentCharacter()))
                         {
                             randomDamage /= 3;
                         }
-                        target.GetComponent<PlayerInformation>().DealDamage(randomDamage, crit, gameObject);
+                        target.GetCurrentPlayerInformation().DealDamage(randomDamage, crit, gameObject);
                     }
                 }
                 //

@@ -16,8 +16,8 @@ public class
     {
         if(BaseAction.CheckIfSpecificTag(gameObject, 0, 0, LayerMask.GetMask("BlockingLayer"), "Player"))
         {
-            GameObject target = BaseAction.GetSpecificGroundTile(gameObject, 0, 0, LayerMask.GetMask("BlockingLayer"));
-            if(GameObject.Find("GameInformation").GetComponent<GameInformation>().ActiveTeam == target.GetComponent<PlayerInformation>().CharactersTeam)
+            ChunkData target = GameTileMap.Tilemap.GetChunk(new Vector3(0, 0,0));
+            if(GameObject.Find("GameInformation").GetComponent<GameInformation>().ActiveTeam == target.GetCurrentPlayerInformation().CharactersTeam)
             {
                 if (onTurnEnd)
                 {
@@ -25,11 +25,11 @@ public class
                     {
                         case HazardAction.DealDamage:
                             //Debug.Log("Environmental hazard: DealDamage");
-                            DealDamageToCharacter(target);
+                            DealDamageToCharacter(target.GetCurrentCharacter());
                             break;
                         case HazardAction.Poison:
                             //Debug.Log("Environmental hazard: Poison");
-                            PoisonCharacter(target);
+                            PoisonCharacter(target.GetCurrentCharacter());
                             break;
                         case HazardAction.Aflame:
                             //Debug.Log("Environmental hazard: Aflame");
@@ -45,11 +45,11 @@ public class
                     {
                         case HazardAction.Freeze:
                             //Debug.Log("Environmental hazard: Freeze");
-                            FreezeCharacter(target);
+                            FreezeCharacter(target.GetCurrentCharacter());
                             break;
                         case HazardAction.DamageBoost:
                             //Debug.Log("Environmental hazard: DamageBoost");
-                            DamageBoostCharacter(target);
+                            DamageBoostCharacter(target.GetCurrentCharacter());
                             break;
                         case HazardAction.Teleport:
                             //Debug.Log("Environmental hazard: Teleport");

@@ -134,7 +134,7 @@ public class MindControl : BaseAction
         {
             base.ResolveAbility(position);
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
-            GameObject target = GetSpecificGroundTile(position);
+            GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
             DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);
             target.GetComponent<PlayerInformation>().ApplyDebuff("MindControl", gameObject);
             //clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger(impactVFXName);

@@ -125,7 +125,7 @@ public class WeakSpot : BaseAction
         {
             base.ResolveAbility(position);
            // position.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger("pink1");
-            target = GetSpecificGroundTile(position);
+            target = GetSpecificGroundTile(position).GetCurrentCharacter();
             DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);
             target.GetComponent<PlayerInformation>().PinkWeakSpot = gameObject;
             FinishAbility();

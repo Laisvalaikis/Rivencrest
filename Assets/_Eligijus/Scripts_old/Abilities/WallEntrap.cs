@@ -35,7 +35,7 @@ public class WallEntrap : BaseAction
             base.ResolveAbility(position);
             SpawnedWalls.Clear();
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
-            GameObject target = GetSpecificGroundTile(position);
+            GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
             SpawnAdjacentWalls(target);
 
             FinishAbility();

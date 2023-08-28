@@ -131,7 +131,7 @@ public class IsolatedStrike : BaseAction
         if (canTileBeClicked(position))
         {
             base.ResolveAbility(position);
-            GameObject target = GetSpecificGroundTile(position);
+            GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
             int bonusDamage = 0;
             //Isolation
             if (isTargetIsolated(position))
@@ -179,7 +179,7 @@ public class IsolatedStrike : BaseAction
         foreach (var x in directionVectors)
         {
             if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") && CheckIfSpecificTag(position, x.Item1, x.Item2, blockingLayer, "Player") &&
-                isAllegianceSame(GetSpecificGroundTile(position), GetSpecificGroundTile(position), blockingLayer))
+                isAllegianceSame(GetSpecificGroundTile(position).GetCurrentCharacter(), GetSpecificGroundTile(position).GetCurrentCharacter(), blockingLayer))
             {
                 isolationNumber++;
             }

@@ -21,7 +21,7 @@ public class Blaze : BaseAction
         if (CanTileBeClicked(position))
         {
             base.ResolveAbility(position);
-            GameObject target = GetSpecificGroundTile(position);
+            GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
             bool aflame = target.GetComponent<PlayerInformation>().Aflame != null;
             if (!aflame)
             {
@@ -77,21 +77,24 @@ public class Blaze : BaseAction
                 bool isPlayer = CheckIfSpecificTag(aflameCharacter, x.Item1, x.Item2, blockingLayer, "Player");
                 if (isPlayer)
                 {
-                    GameObject target = GetSpecificGroundTile(aflameCharacter, x.Item1, x.Item2, blockingLayer);
-                    if (isAllegianceSame(aflameCharacter, target, blockingLayer))
+                    ChunkData target = GetSpecificGroundTile(new Vector3(x.Item1, x.Item2, 0));
+                    
+                    if (isAllegianceSame(aflameCharacter, target.GetCurrentCharacter(), blockingLayer))
                     {
                         randomDamage = Random.Range(minAttackDamage, maxAttackDamage);
                         crit = IsItCriticalStrike(ref randomDamage);
-                        dodgeActivation(ref randomDamage, target);
-                        target.GetComponent<PlayerInformation>().DealDamage(randomDamage, crit, gameObject);
+                        dodgeActivation(ref randomDamage, target.GetCurrentPlayerInformation());
+                        target.GetCurrentPlayerInformation().DealDamage(randomDamage, crit, gameObject);
                     }
                 }
             }
+
+            PlayerInformation playerInformation = aflameCharacter.GetComponent<PlayerInformation>();
             randomDamage = Random.Range(minAttackDamage, maxAttackDamage);
             crit = IsItCriticalStrike(ref randomDamage);
-            dodgeActivation(ref randomDamage, aflameCharacter);
-            aflameCharacter.GetComponent<PlayerInformation>().DealDamage(randomDamage, crit, gameObject);
-            aflameCharacter.GetComponent<PlayerInformation>().Aflame = null;
+            dodgeActivation(ref randomDamage, playerInformation);
+            playerInformation.DealDamage(randomDamage, crit, gameObject);
+            playerInformation.Aflame = null;
         }
     }
     public override GameObject PossibleAIActionTile()

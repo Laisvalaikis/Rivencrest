@@ -183,7 +183,7 @@ public class FlameBlast : BaseAction
         {
             if (CheckIfSpecificLayer(position, x.Item1, x.Item2, groundLayer) && (!CheckIfSpecificLayer(position, x.Item1, x.Item2, blockingLayer) || CheckIfSpecificTag(position, x.Item1, x.Item2, blockingLayer, "Player")))
             {
-                DamageTiles.Add(GetSpecificGroundTile(position));
+                DamageTiles.Add(GetSpecificGroundTile(position).GetCurrentCharacter());
             }
         }
 

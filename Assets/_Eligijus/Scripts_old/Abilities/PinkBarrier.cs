@@ -115,10 +115,10 @@ public class PinkBarrier : BaseAction
         if (CanTileBeClicked(position))
         {
             base.ResolveAbility(position);
-            GetSpecificGroundTile(position).GetComponent<PlayerInformation>().BarrierProvider = gameObject;
+            GetSpecificGroundTile(position).GetCurrentCharacter().GetComponent<PlayerInformation>().BarrierProvider = gameObject;
             //characterWithBarrier = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
-            GetSpecificGroundTile(position).transform.Find("VFX").Find("VFXBool").GetComponent<Animator>().SetTrigger("shieldStart");
-            GetSpecificGroundTile(position).GetComponent<GridMovement>().AvailableMovementPoints++;
+            GetSpecificGroundTile(position).GetCurrentCharacter().transform.Find("VFX").Find("VFXBool").GetComponent<Animator>().SetTrigger("shieldStart");
+            GetSpecificGroundTile(position).GetCurrentCharacter().GetComponent<GridMovement>().AvailableMovementPoints++;
             FinishAbility();
 
         }
@@ -126,7 +126,7 @@ public class PinkBarrier : BaseAction
     public override bool CanTileBeClicked(Vector3 position)
     {
         if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") 
-            && GetSpecificGroundTile(position).GetComponent<PlayerInformation>().BarrierProvider == null
+            && GetSpecificGroundTile(position).GetCurrentCharacter().GetComponent<PlayerInformation>().BarrierProvider == null
             && isAllegianceSame(position))
         {
             return true;

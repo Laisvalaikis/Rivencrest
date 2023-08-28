@@ -96,7 +96,7 @@ public class StunAttack : BaseAction
         if (CanTileBeClicked(position))
         {
             base.ResolveAbility(position);
-            GameObject target = GetSpecificGroundTile(position);
+            GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
             //bool crit = IsItCriticalStrike(ref spellDamage);
             //dodgeActivation(ref spellDamage, target);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell1");//bus atskira animacija

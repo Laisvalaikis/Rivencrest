@@ -138,7 +138,7 @@ public class ChainHook : BaseAction
             {
                 if (GameTileMap.Tilemap.GetChunk(position) != null)
                 {
-                    GameObject target = GetSpecificGroundTile(position);
+                    GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
                     target.transform.Find("VFX").Find("VFXImpact").gameObject.GetComponent<Animator>().SetTrigger("burgundy2");
                     //int tileIndex = FindIndexOfTile(clickedTile);
                     if (!isAllegianceSame(target))

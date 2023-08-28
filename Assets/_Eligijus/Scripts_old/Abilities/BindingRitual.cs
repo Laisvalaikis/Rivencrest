@@ -104,7 +104,7 @@ public class BindingRitual : BaseAction
             {
                 if (CanTileBeClicked(tile.transform.position))
                 {
-                    GameObject character = GetSpecificGroundTile(tile.transform.position);
+                    GameObject character = GetSpecificGroundTile(tile.transform.position).GetCurrentCharacter();
                     enemyCharacterList.Add(character);
                 }
             }

@@ -22,7 +22,7 @@ public class Scream : BaseAction
         if (CanTileBeClicked(position))
         {
             base.ResolveAbility(position);
-            GameObject target = GetSpecificGroundTile(position);
+            GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
             if (isTargetIsolated(target))
             {

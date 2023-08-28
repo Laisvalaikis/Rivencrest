@@ -157,11 +157,11 @@ public class RaiseRock : BaseAction
         {
             if (CheckIfSpecificLayer(position, x.Item1, x.Item2, groundLayer)) //animation on ground
             {
-                GetSpecificGroundTile(position).transform.Find("mapTile").Find("VFXImpactBelow").gameObject.GetComponent<Animator>().SetTrigger("burgundy3");
+                GetSpecificGroundTile(position).GetCurrentCharacter().transform.Find("mapTile").Find("VFXImpactBelow").gameObject.GetComponent<Animator>().SetTrigger("burgundy3");
             }
             if (CheckIfSpecificTag(position, x.Item1, x.Item2, blockingLayer, "Player"))
             {
-                GameObject target = GetSpecificGroundTile(position);
+                GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
 
                 if (!isAllegianceSame(target))
                 {

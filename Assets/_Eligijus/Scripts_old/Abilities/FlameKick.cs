@@ -27,7 +27,7 @@ public class FlameKick : BaseAction
         {
             base.ResolveAbility(position);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
-            GameObject target = GetSpecificGroundTile(position);
+            GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
             bool isThisEnemy = !isAllegianceSame(target);
             int bonusDamage = 0;
             // // Push

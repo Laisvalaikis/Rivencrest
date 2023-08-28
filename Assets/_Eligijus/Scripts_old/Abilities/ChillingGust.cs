@@ -37,7 +37,7 @@ public class ChillingGust : BaseAction
             base.ResolveAbility(position);
             if (isAllegianceSame(position))
             {
-                GameObject target = GetSpecificGroundTile(position);
+                GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
                 target.GetComponent<PlayerInformation>().Protected = true;
                 target.transform.Find("VFX").Find("Protected").gameObject.SetActive(true);
                 if (target.GetComponent<PlayerInformation>().Debuffs.Contains("Protected")) //Dealing with WhiteField
@@ -58,7 +58,7 @@ public class ChillingGust : BaseAction
                 transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
                 //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
 
-                GameObject target = GetSpecificGroundTile(position);
+                GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
                 int bonusDamage = 0;
                 if (DoesCharacterHaveBlessing("Harsh winds"))
                 {
@@ -77,7 +77,7 @@ public class ChillingGust : BaseAction
                     {
                         if (CanTileBeClicked(tile))
                         {
-                            target = GetSpecificGroundTile(position);
+                            target = GetSpecificGroundTile(position).GetCurrentCharacter();
                             DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);
                             target.GetComponent<PlayerInformation>().ApplyDebuff("IceSlow");
                         }

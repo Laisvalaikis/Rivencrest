@@ -135,7 +135,7 @@ public class WallSmash : BaseAction
             }
             else if(CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player"))
             {
-                DealRandomDamageToTarget(GetSpecificGroundTile(position), minAttackDamage - 2, maxAttackDamage - 2);
+                DealRandomDamageToTarget(GetSpecificGroundTile(position).GetCurrentCharacter(), minAttackDamage - 2, maxAttackDamage - 2);
             }
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
 

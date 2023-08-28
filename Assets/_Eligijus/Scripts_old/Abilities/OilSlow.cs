@@ -26,9 +26,9 @@ public class OilSlow : BaseAction
         if (CanTileBeClicked(position))
         {
             base.ResolveAbility(position);
-            GameObject target = GetSpecificGroundTile(position);
+            GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
-            GetSpecificGroundTile(position).GetComponent<PlayerInformation>().ApplyDebuff("OilSlow");
+            GetSpecificGroundTile(position).GetCurrentCharacter().GetComponent<PlayerInformation>().ApplyDebuff("OilSlow");
             DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);
             //clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger("lime1");
             FinishAbility();

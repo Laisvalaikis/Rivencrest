@@ -386,17 +386,19 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
             }
         }
         
-        public static GameObject GetSpecificGroundTile(GameObject tile, int x, int y, LayerMask chosenLayer)
+        public GameObject GetSpecificGroundTile(GameObject tile, int x, int y, LayerMask chosenLayer)
         {
             Vector3 firstPosition = tile.transform.position + new Vector3(0f, 0.5f, 0f) + new Vector3(x, y, 0f);
             Vector3 secondPosition = firstPosition + new Vector3(0.1f, 0f, 0f);
             RaycastHit2D raycast = Physics2D.Linecast(firstPosition, secondPosition, chosenLayer);
             return raycast.transform.gameObject;
         }
+        
+        // public static 
 
-        public GameObject GetSpecificGroundTile(Vector3 position)
+        public ChunkData GetSpecificGroundTile(Vector3 position)
         {
-            return GameTileMap.Tilemap.GetChunk(position).GetCurrentCharacter();
+            return GameTileMap.Tilemap.GetChunk(position);
         }
         
         public static bool CheckIfSpecificLayer(Vector3 position, int x, int y, LayerMask chosenLayer)
@@ -500,16 +502,7 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
             }
             return crit;
         }
-        protected void dodgeActivation(ref int damage, GameObject target) //Dodge temporarily removed
-        {
-            int dodgeNumber = Random.Range(0, 100);
-            if (dodgeNumber > playerInformationData.accuracy - target.GetComponent<PlayerInformation>().playerInformationData.dodgeChance)
-            {
-                damage = -1;
-                Debug.Log("Dodge");
-            }
-        }
-        
+
         protected void dodgeActivation(ref int damage, PlayerInformation target) //Dodge temporarily removed
         {
             int dodgeNumber = Random.Range(0, 100);

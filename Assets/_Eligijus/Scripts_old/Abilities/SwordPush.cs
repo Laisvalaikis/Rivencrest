@@ -66,23 +66,23 @@ public class SwordPush : BaseAction
             {
                 if (CheckIfSpecificTag(TileThatWasClicked, x.Item1, x.Item2, blockingLayer, "Player"))
                 {
-                    GameObject pushTarget = GetSpecificGroundTile(TileThatWasClicked, x.Item1, x.Item2, blockingLayer);
+                    ChunkData pushTarget = GetSpecificGroundTile(new Vector3(x.Item1, x.Item2,0));
                     if (!CheckIfSpecificLayer(TileThatWasClicked, x.Item1 * 2, x.Item2 * 2, blockingLayer))//pushing target
                     {
-                        pushTarget.transform.position = GetSpecificGroundTile(TileThatWasClicked, x.Item1 * 2, x.Item2 * 2, groundLayer).transform.position + new Vector3(0f, 0f, -1f);
+                        pushTarget.GetCurrentCharacter().transform.position = GetSpecificGroundTile(TileThatWasClicked, x.Item1 * 2, x.Item2 * 2, groundLayer).transform.position + new Vector3(0f, 0f, -1f);
                     }
-                    dodgeActivation(ref pushDamageDealt, pushTarget);
-                    pushTarget.GetComponent<PlayerInformation>().DealDamage(pushDamageDealt, crit, gameObject);
+                    dodgeActivation(ref pushDamageDealt, pushTarget.GetCurrentPlayerInformation());
+                    pushTarget.GetCurrentPlayerInformation().DealDamage(pushDamageDealt, crit, gameObject);
                 }
             }
             if (CheckIfSpecificTag(TileThatWasClicked, 0, 0, blockingLayer, "Player"))
             {
-                GameObject centerTarget = GetSpecificGroundTile(TileThatWasClicked, 0, 0, blockingLayer);
-                dodgeActivation(ref centerDamageDealt, centerTarget);
-                centerTarget.GetComponent<PlayerInformation>().DealDamage(centerDamageDealt, crit, gameObject); //deal damage to center
+                ChunkData centerTarget = GetSpecificGroundTile(new Vector3(0, 0, 0));
+                dodgeActivation(ref centerDamageDealt, centerTarget.GetCurrentPlayerInformation());
+                centerTarget.GetCurrentPlayerInformation().DealDamage(centerDamageDealt, crit, gameObject); //deal damage to center
                 if (DoesCharacterHaveBlessing("Halt"))
                 {
-                    centerTarget.GetComponent<PlayerInformation>().ApplyDebuff("CantMove");
+                    centerTarget.GetCurrentPlayerInformation().ApplyDebuff("CantMove");
                 }
             }
             FinishAbility();

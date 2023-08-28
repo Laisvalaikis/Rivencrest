@@ -117,7 +117,7 @@ public class BlindDart : BaseAction
         if (CanTileBeClicked(position))
         {
             base.ResolveAbility(position);
-            BlindedTarget = GetSpecificGroundTile(position);
+            BlindedTarget = GetSpecificGroundTile(position).GetCurrentCharacter();
             BlindedTarget.GetComponent<CharacterVision>().VisionRange = 1;
 
             FinishAbility();

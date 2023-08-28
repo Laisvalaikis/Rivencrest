@@ -131,7 +131,7 @@ public class Purify : BaseAction
         if (CanTileBeClicked(position))
         {
             base.ResolveAbility(position);
-            target = GetSpecificGroundTile(position);
+            target = GetSpecificGroundTile(position).GetCurrentCharacter();
             if (DoesCharacterHaveBlessing("Enlighten"))
             {
                 int randomHeal = Random.Range(3, 5);
@@ -159,7 +159,7 @@ public class Purify : BaseAction
     {
         if ((CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player")) && isAllegianceSame(position))
         {
-            GameObject tileTarget = GetSpecificGroundTile(position);
+            GameObject tileTarget = GetSpecificGroundTile(position).GetCurrentCharacter();
             bool poisoned = tileTarget.GetComponent<PlayerInformation>().Poisons.Count > 0;
             bool stunned = tileTarget.GetComponent<PlayerInformation>().Debuffs.Contains("Stun");
             bool slowed1 = tileTarget.GetComponent<PlayerInformation>().Slow1;

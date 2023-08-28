@@ -120,7 +120,7 @@ public class Entangle : BaseAction
         if (CanTileBeClicked(position))
         {
             base.ResolveAbility(position);
-            GameObject target = GetSpecificGroundTile(position);
+            GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
             DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
             //

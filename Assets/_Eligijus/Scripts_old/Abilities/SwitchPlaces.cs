@@ -115,7 +115,7 @@ public class SwitchPlaces : BaseAction
         {
             base.ResolveAbility(position);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
-            GameObject target = GetSpecificGroundTile(position);
+            GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
             if (!isAllegianceSame(target))
             {
                 if (DoesCharacterHaveBlessing("Stay there"))

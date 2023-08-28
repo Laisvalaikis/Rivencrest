@@ -158,7 +158,7 @@ public class DisarmingSlam : BaseAction
         {
             base.ResolveAbility(position);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("blockSpell1");
-            GameObject target = GetSpecificGroundTile(position);
+            GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
             DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);//??was crit false
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
             target.GetComponent<PlayerInformation>().ApplyDebuff("Disarmed");

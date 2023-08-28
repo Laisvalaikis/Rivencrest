@@ -124,7 +124,7 @@ public class MarkEnemy : BaseAction
         if (CanTileBeClicked(position))
         {
             base.ResolveAbility(position);
-            target = GetSpecificGroundTile(position);
+            target = GetSpecificGroundTile(position).GetCurrentCharacter();
             //bool crit = IsItCriticalStrike(ref spellDamage);
             //dodgeActivation(ref spellDamage, target);
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");//bus atskira animacija

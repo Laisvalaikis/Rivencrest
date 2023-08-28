@@ -26,7 +26,7 @@ public class PoisonDart : BaseAction
             transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
 
-            GameObject target = GetSpecificGroundTile(position);
+            GameObject target = GetSpecificGroundTile(position).GetCurrentCharacter();
             DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);
             target.GetComponent<PlayerInformation>().Poisons.Add(new PlayerInformation.Poison(gameObject, 2, 2));
             //clickedTile.transform.Find("mapTile").Find("VFX9x9Upper").gameObject.GetComponent<Animator>().SetTrigger("crowAttack");
