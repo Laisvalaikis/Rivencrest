@@ -1,19 +1,0 @@
-
-|csharpsquid:S3776¾"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(à€®øøÿÿÿÿ8Ñ„Ûã¢1
-Scsharpsquid:S3903"*Move 'GameTileMap' into a named namespace.(˜É§úÿÿÿÿ8–€©1
-mcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(şûÅ”şÿÿÿÿ8ê±ì¡1
-mcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(µÒßüúÿÿÿÿ8ê±ì¡1
-hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ëîâŒ8ê±ì¡1
-mcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(äÌÛ…şÿÿÿÿ8ê±ì¡1
-ucsharpsquid:S2445œ"KDo not lock on writable field '_chunksArray', use a readonly field instead.(ˆëìÜüÿÿÿÿ8Ñ„Ûã¢1
-ucsharpsquid:S2445½"KDo not lock on writable field '_chunksArray', use a readonly field instead.(ˆëìÜüÿÿÿÿ8Ñ„Ûã¢1
-ucsharpsquid:S2445Û"KDo not lock on writable field '_chunksArray', use a readonly field instead.(ˆëìÜüÿÿÿÿ8Ñ„Ûã¢1
-mcsharpsquid:S2223"DChange the visibility of 'Tilemap' or make it 'const' or 'readonly'.(şûÅ”şÿÿÿÿ8ê±ì¡1
-~csharpsquid:S26968"UMake the enclosing instance method 'static' or remove this set on the 'static' field.(ÑË«ôşÿÿÿÿ8ˆø·ª1
-zcsharpsquid:S2696º"UMake the enclosing instance method 'static' or remove this set on the 'static' field.(•¾˜ù8Ñ„Ûã¢1
-Gcsharpsquid:S125P"Remove this commented out code.(ÈÉÀûüÿÿÿÿ8İò€ã¢1
-Ccsharpsquid:S125«"Remove this commented out code.(ß”ˆ°8Ñ„Ûã¢1
-Hcsharpsquid:S125õ"Remove this commented out code.(ÈÉÀûüÿÿÿÿ8Ò„Ûã¢1
-Hcsharpsquid:S125è"Remove this commented out code.(÷Ë‰ûÿÿÿÿ8Ò„Ûã¢1
-Ccsharpsquid:S125ú"Remove this commented out code.(¤©¨×8Ò„Ûã¢1
-Ccsharpsquid:S125¨"Remove this commented out code.(Ú°à¬8Ò„Ûã¢1

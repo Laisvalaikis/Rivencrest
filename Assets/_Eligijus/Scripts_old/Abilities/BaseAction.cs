@@ -615,11 +615,11 @@ protected void CreateAvailableTileList()
         {
             int critNumber = Random.Range(0, 100);
             bool crit;
-            //if (critNumber > GetComponent<PlayerInformation>().critChance)
+            if (critNumber > playerInformationData.critChance)
             {
                 crit = false;
             }
-           // else
+           else
             {
                 damage += 3;
                 crit = true;
@@ -629,10 +629,20 @@ protected void CreateAvailableTileList()
         protected void dodgeActivation(ref int damage, GameObject target) //Dodge temporarily removed
         {
             int dodgeNumber = Random.Range(0, 100);
-            //if (dodgeNumber > GetComponent<PlayerInformation>().accuracy - target.GetComponent<PlayerInformation>().dodgeChance)
+            if (dodgeNumber > playerInformationData.accuracy - target.GetComponent<PlayerInformation>().playerInformationData.dodgeChance)
             {
-                //damage = -1;
-                //Debug.Log("Dodge");
+                damage = -1;
+                Debug.Log("Dodge");
+            }
+        }
+        
+        protected void dodgeActivation(ref int damage, PlayerInformation target) //Dodge temporarily removed
+        {
+            int dodgeNumber = Random.Range(0, 100);
+            if (dodgeNumber > playerInformationData.accuracy - target.playerInformationData.dodgeChance)
+            {
+                damage = -1;
+                Debug.Log("Dodge");
             }
         }
         // protected void DealRandomDamageToTarget(GameObject target, int minAttackDamage, int maxAttackDamage)
@@ -648,21 +658,17 @@ protected void CreateAvailableTileList()
         
         protected void DealRandomDamageToTarget(Vector3 targetChunk, int minAttackDamage, int maxAttackDamage)
         {
-            // if(!isAllegianceSame(target) || friendlyFire)
-            // {
-            //     i
-            // }
             ChunkData chunkData = GameTileMap.Tilemap.GetChunk(targetChunk);
             if (chunkData != null && chunkData.GetCurrentCharacter() != null && isAllegianceSame(targetChunk))
             {
                 int randomDamage = Random.Range(minAttackDamage, maxAttackDamage);
                 bool crit = IsItCriticalStrike(ref randomDamage);
-                Debug.LogError("FIX DODGE ACTIVATION");
-                dodgeActivation(ref randomDamage, chunkData.GetCurrentPlayerInformation().gameObject);
+                dodgeActivation(ref randomDamage, chunkData.GetCurrentPlayerInformation());
                 chunkData.GetCurrentPlayerInformation().DealDamage(randomDamage, crit, gameObject);
                 
             }
         }
+        
         /*protected virtual void AddSurroundingsToList(GameObject middleTile, int movementIndex, bool canWallsBeTargeted = false)
         {
             var directionVectors = new List<(int, int)>
