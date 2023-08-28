@@ -6,11 +6,30 @@ public class ActionManagerNew : MonoBehaviour
 {
     [SerializeField]
     private List<Ability> _abilities;
-    
+
+    [SerializeField]
+    private int availableAttackPoints;
+
+    [SerializeField] 
+    private int availableMovementPoints;
+
+    private bool hasSlowAbilityBeenCast = false;
 
     public List<Ability> ReturnAbilities()
     {
         return _abilities;
+    }
+    
+    public virtual void RemoveActionPoints()
+    {
+        availableAttackPoints--;
+    }
+    
+    public void RemoveAllActionPoints() 
+    {
+        availableMovementPoints = 0;
+        hasSlowAbilityBeenCast = true;
+
     }
 }
 

@@ -47,6 +47,7 @@ using Random = UnityEngine.Random;
         private PlayerInformationData playerInformationData;
         private PlayerInformationData _playerInformationData;
         private List<ChunkData> _chunkList;
+        private ActionManagerNew _actionManagerNew;
         
         void Awake()
         {
@@ -61,6 +62,7 @@ using Random = UnityEngine.Random;
             whiteFieldLayer = LayerMask.GetMask("WhiteField");
             // gameInformation = GameObject.Find("GameInformation").GetComponent<GameInformation>();
             _assignSound = GetComponent<AssignSound>();
+            _actionManagerNew = GetComponent<ActionManagerNew>();
         }
         
         
@@ -511,20 +513,21 @@ protected void CreateAvailableTileList()
             AbilityPoints = 0;//Cooldown counter
             if (isAbilitySlow)
             {
-                GetComponent<ActionManager>().RemoveAllActionPoints();
+                // _actionManagerNew
+                _actionManagerNew.RemoveAllActionPoints();
             }
             if (AttackAbility)
             {
-                GetComponent<ActionManager>().RemoveAttackActionPoints();
+                _actionManagerNew.RemoveActionPoints();
             }
-            GetComponent<PlayerInformation>().currentState = "Movement";
+            // playerInformation.currentState = "Movement";
             /*StartCoroutine(ExecuteAfterTime(0.001f, () =>
             {
                 gameInformation.EnableMovementAction();
             }));*/
             if (isAbilitySlow)
             {
-                DisableGrid();
+                GameTileMap.Tilemap.DisableAllTiles();
             }
         }
         
