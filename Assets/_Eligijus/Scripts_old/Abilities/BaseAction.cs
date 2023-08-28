@@ -75,7 +75,7 @@ using Random = UnityEngine.Random;
             {
                 chunk.DisableTileRendering();
                 chunk.DisableTileRenderingGameObject();
-                chunk.GetTileSpriteRenderer().color = Color.white;
+                chunk.GetTileHighlight().ActivateMovementTile(false);
             }
             _chunkList.Clear();
         }
@@ -84,7 +84,6 @@ using Random = UnityEngine.Random;
         private void CreateAvailableChunkList()
         {
             ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
-            ClearGrid();
             if(laserGrid)
             {
                 GeneratePlusPattern(startChunk, AttackRange);
@@ -123,7 +122,7 @@ using Random = UnityEngine.Random;
                                 _chunkList.Add(chunk);
                                 chunk.EnableTileRenderingGameObject();
                                 chunk.EnableTileRendering();
-                                chunk.GetTileSpriteRenderer().color= Color.red;
+                                chunk.GetTileHighlight().ActivateMovementTile(true);
                             }
                         }
                     }
@@ -157,7 +156,7 @@ using Random = UnityEngine.Random;
                             _chunkList.Add(chunk);
                             chunk.EnableTileRenderingGameObject();
                             chunk.EnableTileRendering();
-                            chunk.GetTileSpriteRenderer().color= Color.red;
+                            chunk.GetTileHighlight().ActivateMovementTile(true);
                         }
                     }
                 }

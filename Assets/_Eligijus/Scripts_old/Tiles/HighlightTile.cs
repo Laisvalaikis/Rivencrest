@@ -34,6 +34,12 @@ public class HighlightTile : MonoBehaviour
     public bool notification = false;
     private bool PCControls = true; //Galima pakeisti i mobile pasiemus boola Start funkcijoj is GameInformation
 
+    public void ActivateMovementTile(bool value)
+    {
+        
+        HighlightedByPlayerUI.SetActive(value);
+    }
+    
     // void Update()
     // {
     //     //Updating isCharacterOnTop to prevent bug
@@ -151,7 +157,7 @@ public class HighlightTile : MonoBehaviour
         HighlightedByPlayerUI.GetComponent<SpriteRenderer>().color = NotHoveredColor;
     }
     //void OnMouseDown()
-    void OnMouseDown()
+    /*void OnMouseDown()
     {
         if (isHighlighted)
         {
@@ -161,18 +167,18 @@ public class HighlightTile : MonoBehaviour
         {
             OnEnter();
         }
-    }
-    void OnMouseUp()
+    }*/
+    /*void OnMouseUp()
     {
         //OnTileClick();
         if (isHighlighted)
         {
             GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().isDragAvailable = true;
         }
-    }
+    }*/
     public void OnTileClick()
     {
-        OffHover(false);
+        //OffHover(false);
         var gameInformation = GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>();
         if (!gameInformation.isBoardDisabled && gameInformation.InspectedCharacter == null && IsSkillAvailableInFOW())
         {
@@ -210,7 +216,7 @@ public class HighlightTile : MonoBehaviour
             //
             // }
         }
-        OffHover(false);
+        //OffHover(false);
     }
 
     private void FlipSelectedCharacter(GameInformation gameInformation)
@@ -225,7 +231,7 @@ public class HighlightTile : MonoBehaviour
         }
     }
 
-    void OnMouseOver()
+    /*void OnMouseOver()
     {
         OnHover(false);
     }
@@ -279,8 +285,8 @@ public class HighlightTile : MonoBehaviour
                 OnEnter();
             }
         }
-    }
-    void OnMouseEnter()
+    }*/
+    /*void OnMouseEnter()
     {
         if (PCControls || Input.GetMouseButton(0))
         {
@@ -329,7 +335,7 @@ public class HighlightTile : MonoBehaviour
             gameInformation.InspectedCharacter.GetComponent<ActionManager>().FindActionByName(activeState).OffTileHover(gameObject);
         }
         isHovered = false;
-    }
+    }*/
     bool IsSkillAvailableInFOW()
     {
         return (!FogOfWarTile.activeSelf || activeState == "CreateEye" || activeState == "CreatePortal");

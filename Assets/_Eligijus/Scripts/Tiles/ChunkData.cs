@@ -45,7 +45,7 @@ public class ChunkData
     private GameObject _currentCharacter;
     private PlayerInformation _currentPlayerInformation;
     private SpriteRenderer _tileSpriteRenderer;
-    public HighlightTile _highlightTile;
+    private HighlightTile _highlightTile;
     
     public void SetupChunk()
     {
