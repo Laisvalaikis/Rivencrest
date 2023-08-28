@@ -1,8 +1,0 @@
-
-£csharpsquid:S101"†Rename class 'SimpleController_UsingPlayerInput' to match pascal case naming rules, consider using 'SimpleControllerUsingPlayerInput'.(‹Ö´Œ
-]csharpsquid:S3903"@Move 'SimpleController_UsingPlayerInput' into a named namespace.(‹Ö´Œ
-fcsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(ı‘¨Èúÿÿÿÿ
-fcsharpsquid:S1104
-"DMake this field 'private' and encapsulate it in a 'public' property.(„ÌÈúÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¹£”¬ûÿÿÿÿ
-`csharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Ÿñ«o

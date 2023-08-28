@@ -1,17 +1,0 @@
-
-{csharpsquid:S3776'"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(æ¶â£úÿÿÿÿ8¯™¨®1
-Jcsharpsquid:S3903"(Move 'AIManager' into a named namespace.(ÁËƒ‹şÿÿÿÿ
-acsharpsquid:S1104
-"DMake this field 'private' and encapsulate it in a 'public' property.(«ºŞ¬
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(æİôóûÿÿÿÿ
-acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¸«ó‘
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Ë„Ûşÿÿÿÿ
-acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(‚œã¨
-acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¨Àâ«
-acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Úîë
-acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(º”Åô
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Õ¤ìàùÿÿÿÿ
-fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(•Î ÿÿÿÿÿ
-zcsharpsquid:S1450"VRemove the field 'raycast' and declare it as a local variable in the relevant methods.(¼¶ë¸8¯™¨®1
-Bcsharpsquid:S125:"Remove this commented out code.(ÀÁñí8íë°®1
-Gcsharpsquid:S125g"Remove this commented out code.(Ò’Öõøÿÿÿÿ8™š±®1

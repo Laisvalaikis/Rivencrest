@@ -1,12 +1,0 @@
-
-Kcsharpsquid:S3903")Move 'ThrowSpear' into a named namespace.(î¦ãŞûÿÿÿÿ
-acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ÆÅ£ú
-tcsharpsquid:S927q"SRename parameter 'clickedTile' to 'gameobject' to match the base class declaration.(•³×˜úÿÿÿÿ
-Pcsharpsquid:S1905Š"-Remove this unnecessary cast to 'GameObject'.(÷Âûıÿÿÿÿ
-;csharpsquid:S125"Remove this commented out code.(² ñ˜
-;csharpsquid:S125"Remove this commented out code.(ÂÊ²§
-@csharpsquid:S125"Remove this commented out code.(ÒÌâ–øÿÿÿÿ
-<csharpsquid:S125‹"Remove this commented out code.(Û¡âˆ
-Acsharpsquid:S125©"Remove this commented out code.(–ì³Ğúÿÿÿÿ
-Acsharpsquid:S125¯"Remove this commented out code.(–ì³Ğúÿÿÿÿ
-6csharpsquid:S4663ˆ"Remove this empty comment(è»»_
