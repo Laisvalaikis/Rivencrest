@@ -100,6 +100,11 @@ using Random = UnityEngine.Random;
             }
         }
         
+        protected override List<ChunkData> GeneratePattern(ChunkData centerChunk, ChunkData[,] chunksArray, int length)
+        {
+            return base.GeneratePattern(centerChunk, chunksArray, length);
+        }
+
         private void GenerateDiamondPattern(ChunkData centerChunk, int radius)
         {
             (int centerX, int centerY) = centerChunk.GetIndexes();

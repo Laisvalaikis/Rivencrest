@@ -23,7 +23,12 @@ public abstract class CharacterAction : MonoBehaviour
     {
         
     }
-    
+
+    protected virtual List<ChunkData> GeneratePattern(ChunkData centerChunk, ChunkData[,] chunksArray, int length)
+    {
+        return null;
+    }
+
     public virtual void ResolveAbility(Vector3 position)
     {
     }
