@@ -47,7 +47,6 @@ public class SelectAction : MonoBehaviour
     public void ActionSelection(CharacterAction characterAction)
     {
         _abilityManager.SetCurrentAbility(characterAction);
-        characterAction.CreateGrid();
     }
 
     public void SetCurrentCharacter(GameObject currentPlayer)
