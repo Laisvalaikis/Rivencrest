@@ -247,7 +247,5 @@ k
 ;Assets/_Eligijus/Scripts_old/Character/PlayerInformation.cs,0\1\01fa8010973eed4d0d1292541e5cdcf2c7e90204
 a
 1Assets/_Eligijus/Scripts_old/Teams/PlayerTeams.cs,7\7\77fd0c71dc6d715b52718057ec3b34a0173ec3d7
-d
-4Assets/_Eligijus/Scripts_old/Abilities/BaseAction.cs,2\d\2d454a0b52ea5959fce05b97178b5974808b62c5
 f
 6Assets/_Eligijus/Scripts_old/Abilities/PlayerAttack.cs,8\6\86c5eacc229039571c65ea6ec80cf2d04d86db23

@@ -26130,6 +26130,8 @@ MonoBehaviour:
       - {fileID: 659955980883675694, guid: 511d92ea4c1a41345bbb4895f1df4e0b, type: 3}
       - {fileID: 659955980883675694, guid: 2fed0c255a6c85a43bb650b3dc9c0bac, type: 3}
       - {fileID: 659955980883675694, guid: 2d5128fc605f5d94f98e6d8bcfb13a68, type: 3}
+      aliveCharacters: []
+      aliveCharactersPlayerInformation: []
       coordinates:
       - {x: 5.1487e-41, y: 5.82e-43, z: 0}
       - {x: 0, y: 0, z: 0}
@@ -26147,6 +26149,8 @@ MonoBehaviour:
       - {fileID: 659955980883675694, guid: 511d92ea4c1a41345bbb4895f1df4e0b, type: 3}
       - {fileID: 659955980883675694, guid: 2fed0c255a6c85a43bb650b3dc9c0bac, type: 3}
       - {fileID: 659955980883675694, guid: 9a59304bf2eb94b4abd6bb0302237d1b, type: 3}
+      aliveCharacters: []
+      aliveCharactersPlayerInformation: []
       coordinates:
       - {x: 5.1487e-41, y: 5.82e-43, z: 0}
       - {x: 0, y: 0, z: 0}
@@ -26161,6 +26165,8 @@ MonoBehaviour:
       teamPortraitBoxGameObject: {fileID: 0}
       lastSelectedPlayer: {fileID: 0}
     - characters: []
+      aliveCharacters: []
+      aliveCharactersPlayerInformation: []
       coordinates: []
       teamName: White
       teamAllegiance: 1
@@ -26756,7 +26762,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1666844227
 Transform:
   m_ObjectHideFlags: 0

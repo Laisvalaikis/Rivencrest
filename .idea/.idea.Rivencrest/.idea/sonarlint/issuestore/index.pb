@@ -241,8 +241,6 @@ _
 .Assets/_Eligijus/Scripts_old/AI/AIBehaviour.cs,e\2\e2dc09fc8252f02cd7d1073fc57663d964db47c0
 f
 6Assets/_Eligijus/Scripts_old/Abilities/PlayerAttack.cs,8\6\86c5eacc229039571c65ea6ec80cf2d04d86db23
-d
-4Assets/_Eligijus/Scripts_old/Abilities/BaseAction.cs,2\d\2d454a0b52ea5959fce05b97178b5974808b62c5
 k
 ;Assets/_Eligijus/Scripts_old/Character/PlayerInformation.cs,0\1\01fa8010973eed4d0d1292541e5cdcf2c7e90204
 a
