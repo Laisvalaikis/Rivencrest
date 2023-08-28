@@ -26,7 +26,7 @@ public class XPProgressManager : MonoBehaviour
     public SaveData _saveData;
     public Data _data;
     public UnlockedAbilities unlockedAbilities;
-
+    //this is gonna be bad
     //BLESSINGS:
     [System.Serializable]
     public class GeneratedBlessing
