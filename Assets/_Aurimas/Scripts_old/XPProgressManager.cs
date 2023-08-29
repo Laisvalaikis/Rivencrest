@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,7 +12,6 @@ using Random = UnityEngine.Random;
 
 public class XPProgressManager : MonoBehaviour
 {
-    [SerializeField] public Image image;
     private PlayerInformationData _playerInformationData;
     public TextMeshProUGUI buttonText;
     public TextMeshProUGUI titleText;
@@ -22,9 +22,13 @@ public class XPProgressManager : MonoBehaviour
     private bool hasXPGrowthEnded = false;
     public List<Blessing> BlessingList = new List<Blessing>();
     public List<GeneratedBlessing> GeneratedBlessingList = new List<GeneratedBlessing>();
-    public TextAsset blessingsFile;
+    [SerializeField] private List<BlessingInformation> blessingInformations;
+    [SerializeField] private List<GameObject> blessingTable;
+    //[SerializeField] private List<GameObject> characterXp;
+    [SerializeField] private List<XPCard> _xpCard;
+    //public TextAsset blessingsFile;
     public SaveData _saveData;
-    public Data _data;
+    private Data _data;
     public UnlockedAbilities unlockedAbilities;
     //this is gonna be bad
     //BLESSINGS:
@@ -40,34 +44,83 @@ public class XPProgressManager : MonoBehaviour
             this.character = character;
         }
     }
-
-    public void RerollBlessings()
+    //XP:
+    void Start()
     {
-        MakeBlessingList(BlessingList);
+        _data = Data.Instance;
+        blessingInformations = new List<BlessingInformation>();
+      //  MakeBlessingList(BlessingList);
+        //transform.Find("ContinueButton").transform.Find("Text").GetComponent<Text>().text = "SKIP";
+        //transform.Find("ContinueButton").GetComponent<Button>().interactable = false;
         GenerateBlessings(0);
         SetupBlessingCards();
     }
-    private void MakeBlessingList(List<Blessing> blessingList)
+
+    public void RerollBlessings()
     {
-        blessingList.Clear();
-        using (var file = new StringReader(blessingsFile.text))
-        {
-            string line;
-            while ((line = file.ReadLine()) != null)
-            {
-                string[] parts = line.Split(';');
-                string blessingName = parts[0];
-                int rarity = int.Parse(parts[1]);
-                string className = parts[2];
-                string spellName = parts[3];
-                string condition = parts[4];
-                string description = parts[5];
-                Blessing blessingToAdd = new Blessing(blessingName, rarity, className, spellName, condition, description);
-                blessingList.Add(blessingToAdd);
-                //Debug.Log(blessingName);
-            }
-        }
+       // MakeBlessingList(BlessingList);
+        GenerateBlessings(0);
+        SetupBlessingCards();
     }
+    //DELETE ALL
+    // private void MakeBlessingList(List<Blessing> blessingList)
+    // {
+    //     blessingList.Clear();
+    //     using (var file = new StringReader(blessingsFile.text))
+    //     {
+    //         string line;
+    //         while ((line = file.ReadLine()) != null)
+    //         {
+    //             string[] parts = line.Split(';');
+    //             string blessingName = parts[0];
+    //             int rarity = int.Parse(parts[1]);
+    //             string className = parts[2];
+    //             string spellName = parts[3];
+    //             string condition = parts[4];
+    //             string description = parts[5];
+    //             Blessing blessingToAdd = new Blessing(blessingName, rarity, className, spellName, condition, description);
+    //             blessingList.Add(blessingToAdd);
+    //             //Debug.Log(blessingName);
+    //         }
+    //     }
+    // }
+    // private void GenerateBlessings(int rarityLevel)
+    // {
+    //     GeneratedBlessingList.Clear();
+    //     //su while;
+    //     for (int i = 0; i < 3; i++)
+    //     {
+    //         bool wasTargetFound = false;
+    //         while (!wasTargetFound)
+    //         {
+    //             if (BlessingList.Count < 1)
+    //             {
+    //                 wasTargetFound = true;
+    //                 break;
+    //             }
+    //             //check rarity
+    //             int randomBlessingIndex = Random.Range(0, BlessingList.Count);
+    //             Blessing randomBlessing = BlessingList[randomBlessingIndex];
+    //             List<SavedCharacter> BlessingTargets = PossibleBlessingTargets(randomBlessing);
+    //             //jeigu ne tuscias
+    //             if (BlessingTargets.Count > 0)
+    //             {
+    //                 wasTargetFound = true;
+    //                 int randomTargetIndex = Random.Range(0, BlessingTargets.Count);
+    //                 SavedCharacter randomBlessingTarget = BlessingTargets[randomTargetIndex];
+    //                 GeneratedBlessing blessingToAdd = new GeneratedBlessing(randomBlessing, randomBlessingTarget);
+    //                 GeneratedBlessingList.Add(blessingToAdd);
+    //             }
+    //             else
+    //             {
+    //                 //Debug.Log(randomBlessing.blessingName);
+    //                 BlessingList.Remove(randomBlessing);
+    //             }
+    //             
+    //         }
+    //     }
+    //
+    // }
     private void GenerateBlessings(int rarityLevel)
     {
         GeneratedBlessingList.Clear();
@@ -77,55 +130,80 @@ public class XPProgressManager : MonoBehaviour
             bool wasTargetFound = false;
             while (!wasTargetFound)
             {
-                if (BlessingList.Count < 1)
+                if (blessingInformations.Count < 1)
                 {
                     wasTargetFound = true;
                     break;
                 }
                 //check rarity
-                int randomBlessingIndex = Random.Range(0, BlessingList.Count);
-                Blessing randomBlessing = BlessingList[randomBlessingIndex];
-                List<SavedCharacter> BlessingTargets = PossibleBlessingTargets(randomBlessing);
+                int randomBlessingIndex = Random.Range(0, blessingInformations.Count);
+                blessingInformations[i] = blessingInformations[randomBlessingIndex];
+                //List<SavedCharacter> BlessingTargets = PossibleBlessingTargets(randomBlessing);
                 //jeigu ne tuscias
-                if (BlessingTargets.Count > 0)
+               // if (BlessingTargets.Count > 0)
                 {
                     wasTargetFound = true;
-                    int randomTargetIndex = Random.Range(0, BlessingTargets.Count);
-                    SavedCharacter randomBlessingTarget = BlessingTargets[randomTargetIndex];
-                    GeneratedBlessing blessingToAdd = new GeneratedBlessing(randomBlessing, randomBlessingTarget);
-                    GeneratedBlessingList.Add(blessingToAdd);
+                   // int randomTargetIndex = Random.Range(0, BlessingTargets.Count);
+                   // SavedCharacter randomBlessingTarget = BlessingTargets[randomTargetIndex];
+                   // GeneratedBlessing blessingToAdd = new GeneratedBlessing(blessingInformations, randomBlessingTarget);
+                   // GeneratedBlessingList.Add(blessingToAdd);
                 }
-                else
+               // else
                 {
                     //Debug.Log(randomBlessing.blessingName);
-                    BlessingList.Remove(randomBlessing);
+                    blessingInformations.Remove(blessingInformations[i]);
                 }
                 
             }
         }
 
     }
+    //serialize field imesti blessingtable
+    // private void SetupBlessingCards()
+    // {
+    //     var blessingCards = GameObject.Find("CanvasCamera").transform.Find("Blessings");
+    //     for(int i = 0; i< blessingCards.childCount; i++)
+    //     {
+    //         if(i < GeneratedBlessingList.Count)
+    //         {
+    //             blessingCards.GetChild(i).gameObject.SetActive(true);
+    //             var card = blessingCards.GetChild(i);
+    //             card.Find("Highlights").gameObject.GetComponent<Image>().color = GeneratedBlessingList[i].character.prefab.GetComponent<PlayerInformationData>().secondClassColor;
+    //             card.Find("Portrait").gameObject.GetComponent<Image>().sprite = GeneratedBlessingList[i].character.prefab.GetComponent<PlayerInformationData>().CharacterPortraitSprite;
+    //             //icon
+    //             card.Find("BlessingIcon").gameObject.GetComponent<Image>().color = GeneratedBlessingList[i].character.prefab.GetComponent<PlayerInformationData>().classColor;
+    //             card.Find("CharacterName").gameObject.GetComponent<TextMeshProUGUI>().text = GeneratedBlessingList[i].character.characterName;
+    //             card.Find("BlessingName").gameObject.GetComponent<TextMeshProUGUI>().text = GeneratedBlessingList[i].blessing.blessingName;
+    //             card.Find("BlessingDescription").gameObject.GetComponent<TextMeshProUGUI>().text = GeneratedBlessingList[i].blessing.description;
+    //         }
+    //         //Out of bound of generated blessings
+    //         else
+    //         {
+    //             blessingCards.GetChild(i).gameObject.SetActive(false);
+    //         }
+    //     }
+    // }
     private void SetupBlessingCards()
     {
-        var blessingCards = GameObject.Find("CanvasCamera").transform.Find("Blessings");
-        for(int i = 0; i< blessingCards.childCount; i++)
+        //var blessingCards = GameObject.Find("CanvasCamera").transform.Find("Blessings");
+        for(int i = 0; i< blessingTable.Count; i++)
         {
             if(i < GeneratedBlessingList.Count)
             {
-                blessingCards.GetChild(i).gameObject.SetActive(true);
-                var card = blessingCards.GetChild(i);
-                card.Find("Highlights").gameObject.GetComponent<Image>().color = GeneratedBlessingList[i].character.prefab.GetComponent<PlayerInformationData>().secondClassColor;
-                card.Find("Portrait").gameObject.GetComponent<Image>().sprite = GeneratedBlessingList[i].character.prefab.GetComponent<PlayerInformationData>().CharacterPortraitSprite;
+                blessingTable[i].SetActive(true);
+                //var card = blessingCards.GetChild(i);
+                blessingTable[i].GetComponent<Image>().color = GeneratedBlessingList[i].character.prefab.GetComponent<PlayerInformationData>().secondClassColor;
+                blessingTable[i].GetComponent<Image>().sprite = GeneratedBlessingList[i].character.prefab.GetComponent<PlayerInformationData>().CharacterPortraitSprite;
                 //icon
-                card.Find("BlessingIcon").gameObject.GetComponent<Image>().color = GeneratedBlessingList[i].character.prefab.GetComponent<PlayerInformationData>().classColor;
-                card.Find("CharacterName").gameObject.GetComponent<TextMeshProUGUI>().text = GeneratedBlessingList[i].character.characterName;
-                card.Find("BlessingName").gameObject.GetComponent<TextMeshProUGUI>().text = GeneratedBlessingList[i].blessing.blessingName;
-                card.Find("BlessingDescription").gameObject.GetComponent<TextMeshProUGUI>().text = GeneratedBlessingList[i].blessing.description;
+                blessingTable[i].GetComponent<Image>().color = GeneratedBlessingList[i].character.prefab.GetComponent<PlayerInformationData>().classColor;
+                blessingTable[i].GetComponent<TextMeshProUGUI>().text = GeneratedBlessingList[i].character.characterName;
+                blessingTable[i].GetComponent<TextMeshProUGUI>().text = GeneratedBlessingList[i].blessing.blessingName;
+                blessingTable[i].GetComponent<TextMeshProUGUI>().text = GeneratedBlessingList[i].blessing.description;
             }
             //Out of bound of generated blessings
             else
             {
-                blessingCards.GetChild(i).gameObject.SetActive(false);
+                blessingTable[i].SetActive(false);
             }
         }
     }
@@ -202,19 +280,9 @@ public class XPProgressManager : MonoBehaviour
         {
             GeneratedBlessingList[blessingIndex].character.blessings.Add(GeneratedBlessingList[blessingIndex].blessing);
         }
-        ChangeScene("Town");
+        //ChangeScene("Town");
     }
-
-    //XP:
-    void Start()
-    {
-        MakeBlessingList(BlessingList);
-        //transform.Find("ContinueButton").transform.Find("Text").GetComponent<Text>().text = "SKIP";
-        //transform.Find("ContinueButton").GetComponent<Button>().interactable = false;
-        GenerateBlessings(0);
-        SetupBlessingCards();
-    }
-
+    
     void FixedUpdate()
     {
         if (XPGrow)
@@ -294,7 +362,7 @@ public class XPProgressManager : MonoBehaviour
             }
             else
             {
-                ChangeScene("Town");
+                //ChangeScene("Town");
             }
         }
         else
@@ -303,23 +371,32 @@ public class XPProgressManager : MonoBehaviour
         }
     }
 
+    // private void SkipXPGrowth()
+    // {
+    //     Transform characters = transform.Find("Characters").transform;
+    //     for (int i = 0; i < characters.childCount; i++)
+    //     {
+    //         var xpCard = characters.GetChild(i).gameObject.GetComponent<XPCard>();
+    //         if(xpCard.character != null)
+    //             xpCard.GrowXP(xpCard.character.xPToGain);
+    //     }
+    //     hasXPGrowthEnded = true;
+    // }
     private void SkipXPGrowth()
     {
-        Transform characters = transform.Find("Characters").transform;
-        for (int i = 0; i < characters.childCount; i++)
+        for (int i = 0; i < _xpCard.Count; i++)
         {
-            var xpCard = characters.GetChild(i).gameObject.GetComponent<XPCard>();
-            if(xpCard.character != null)
-                xpCard.GrowXP(xpCard.character.xPToGain);
+            if(_xpCard[i].character != null)
+                _xpCard[i].GrowXP(_xpCard[i].character.xPToGain);
         }
         hasXPGrowthEnded = true;
     }
 
-    public void ChangeScene(string sceneName)
-    {
-        _data.createNewRCcharacters = true;
-        //_saveData.SaveTownData();
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
-        Time.timeScale = 1;
-    }
+   // public void ChangeScene(string sceneName)
+   // {
+     //   _data.createNewRCcharacters = true;
+    //    //_saveData.SaveTownData();
+     //   SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+     //   Time.timeScale = 1;
+   // }
 }
