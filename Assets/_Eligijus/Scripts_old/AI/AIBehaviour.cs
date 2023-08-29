@@ -19,7 +19,7 @@ public class AIBehaviour : MonoBehaviour
     [SerializeField]
     PlayerMovement playerMovement;
     [SerializeField]
-    ActionManager actionManager;
+    // ActionManager actionManager;
     private RaycastHit2D raycast;
 
     private List<List<GameObject>> _tileGrid;
@@ -40,7 +40,7 @@ public class AIBehaviour : MonoBehaviour
 
         _destinations = GameObject.Find("GameInformation").GetComponent<AIManager>().AIDestinations;
         _currentDestinationIndex = 0;
-        _attackRange = actionManager.FindActionByName("Attack").AttackRange;
+        // _attackRange = actionManager.FindActionByName("Attack").AttackRange;
         if (_attackRange == 1)
         {
             _attackRangeVectors = new List<(int, int)>();
@@ -97,7 +97,7 @@ public class AIBehaviour : MonoBehaviour
                 //Basic attack
                 StartCoroutine(ExecuteAfterTime(_castAfter, () =>  //Padaro kazka po sekundes <3
                 {
-                    actionManager.FindActionByName("Attack").ResolveAbility(attackTarget);
+                    // actionManager.FindActionByName("Attack").ResolveAbility(attackTarget);
                     FlipCharacter(attackTarget);
                     EndAIAction();
                 }));
@@ -127,7 +127,7 @@ public class AIBehaviour : MonoBehaviour
                             {
                                 MoveCharacterToTile(PlaceToMoveToWhenAttacking(AttackTarget, AttackRange));
                             }*/
-                            actionManager.FindActionByName("Attack").ResolveAbility(wallTarget);
+                            // actionManager.FindActionByName("Attack").ResolveAbility(wallTarget);
                             FlipCharacter(wallTarget);
                             EndAIAction();
                         }
@@ -653,47 +653,47 @@ public class AIBehaviour : MonoBehaviour
         {
             foreach (SpecialAbility x in FindAllSpecialAbilitiesByCastOrder(castOrder))
             {
-                if (actionManager.FindActionByName(x.abilityName).CanGridBeEnabled() 
-                    && x.difficultyLevel <= _data.townData.selectedEncounter.encounterLevel)
-                {
-                    StartCoroutine(ExecuteAfterTime(_castAfter, () =>
-                    {
-                        actionManager.FindActionByName(x.abilityName).PrepareForAIAction();
-                        GameObject attackTarget = actionManager.FindActionByName(x.abilityName).PossibleAIActionTile();
-                        if (attackTarget != null)
-                        {
-                            actionManager.FindActionByName(x.abilityName).ResolveAbility(attackTarget);
-                            FlipCharacter(attackTarget);
-                            EndAIAction();
-                        }
-                    }));
-                    _castAfter += 0.6f;
-                }
+                // if (actionManager.FindActionByName(x.abilityName).CanGridBeEnabled() 
+                //     && x.difficultyLevel <= _data.townData.selectedEncounter.encounterLevel)
+                // {
+                //     StartCoroutine(ExecuteAfterTime(_castAfter, () =>
+                //     {
+                //         actionManager.FindActionByName(x.abilityName).PrepareForAIAction();
+                //         GameObject attackTarget = actionManager.FindActionByName(x.abilityName).PossibleAIActionTile();
+                //         if (attackTarget != null)
+                //         {
+                //             actionManager.FindActionByName(x.abilityName).ResolveAbility(attackTarget);
+                //             FlipCharacter(attackTarget);
+                //             EndAIAction();
+                //         }
+                //     }));
+                //     _castAfter += 0.6f;
+                // }
             }
         }
     }
     private bool areAllAbilitiesOnCooldown()
     {
-        foreach (SpecialAbility x in specialAbilities)
-        {
-            if (actionManager.FindActionByName(x.abilityName).CanGridBeEnabled())
-            {
-                return false;
-            }
-        }
+        // foreach (SpecialAbility x in specialAbilities)
+        // {
+        //     // if (actionManager.FindActionByName(x.abilityName).CanGridBeEnabled())
+        //     // {
+        //     //     return false;
+        //     // }
+        // }
         return true;
     }
     private int availableAbilitiesCount()
     {
-        List<string> availableAbilityNames = new List<string>();
-        foreach (SpecialAbility x in specialAbilities)
-        {
-            if (actionManager.FindActionByName(x.abilityName).CanGridBeEnabled() && !availableAbilityNames.Contains(x.abilityName))
-            {
-                availableAbilityNames.Add(x.abilityName);
-            }
-        }
-        return availableAbilityNames.Count;
+        // List<string> availableAbilityNames = new List<string>();
+        // foreach (SpecialAbility x in specialAbilities)
+        // {
+        //     if (actionManager.FindActionByName(x.abilityName).CanGridBeEnabled() && !availableAbilityNames.Contains(x.abilityName))
+        //     {
+        //         availableAbilityNames.Add(x.abilityName);
+        //     }
+        // }
+        return 0;
     }
     [System.Serializable]
     public class SpecialBlessing

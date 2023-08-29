@@ -8,12 +8,12 @@ public class PurpleSpear : Consumable
     {
         if (WhoStepped.gameObject.tag == "Player")
         {
-            if (WhoStepped.GetComponent<ActionManager>().FindActionByName("ThrowSpear") &&
-                 WhoStepped.GetComponent<ActionManager>().FindActionByName("ThrowSpear").spawnedCharacter == transform.parent.gameObject)
-            {
-                WhoStepped.GetComponent<ActionManager>().FindActionByName("ThrowSpear").SpecificAbilityAction();
-                Destroy(gameObject.transform.parent.gameObject);
-            }
+            // if (WhoStepped.GetComponent<ActionManager>().FindActionByName("ThrowSpear") &&
+            //      WhoStepped.GetComponent<ActionManager>().FindActionByName("ThrowSpear").spawnedCharacter == transform.parent.gameObject)
+            // {
+            //     WhoStepped.GetComponent<ActionManager>().FindActionByName("ThrowSpear").SpecificAbilityAction();
+            //     Destroy(gameObject.transform.parent.gameObject);
+            // }
             //WhoStepped.GetComponent<PlayerInformation>().MaxHealth += HealthAmount;
             // WhoStepped.GetComponent<PlayerInformation>().health += HealthAmount;
             //transform.parent.gameObject.SetActive(false);

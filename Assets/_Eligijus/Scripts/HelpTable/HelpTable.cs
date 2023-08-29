@@ -53,7 +53,7 @@ public class HelpTable : MonoBehaviour
     public void EnableTableForBoughtCharacters(int abilityIndex, int characterIndex)
     {
         SetupHelpTable();
-        ActionManager actionManager = _data.Characters[characterIndex].prefab.GetComponent<ActionManager>();
+        // ActionManager actionManager = _data.Characters[characterIndex].prefab.GetComponent<ActionManager>();
         SavedCharacter character = _data.Characters[characterIndex];
         // UpdateHelpTable(abilityIndex, character, actionManager);
         Debug.LogError("FIX ABILITY INFORMATION");

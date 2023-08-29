@@ -247,14 +247,14 @@ public class XPProgressManager : MonoBehaviour
                     targets.Remove(x);
                 }
                 //else check if has that spell
-                else if (x.prefab.GetComponent<ActionManager>().ActionScripts.Find(y => y.actionName == blessing.spellName) != null)
-                {
-                    int spellIndex = x.prefab.GetComponent<ActionManager>().ActionScripts.Find(y => y.actionName == blessing.spellName).AbilityIndex;
-                    //if(unlockedAbilities[spellIndex] == '0') //aurio komentaras reiks fixint cia
-                   // {
-                       // targets.Remove(x);
-                   // }
-                }
+                // else if (x.prefab.GetComponent<ActionManager>().ActionScripts.Find(y => y.actionName == blessing.spellName) != null)
+                // {
+                //     int spellIndex = x.prefab.GetComponent<ActionManager>().ActionScripts.Find(y => y.actionName == blessing.spellName).AbilityIndex;
+                //     //if(unlockedAbilities[spellIndex] == '0') //aurio komentaras reiks fixint cia
+                //    // {
+                //        // targets.Remove(x);
+                //    // }
+                // }
                 
             }
         }

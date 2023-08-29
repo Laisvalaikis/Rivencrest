@@ -363,13 +363,13 @@ public class GameInformation : MonoBehaviour
 
     private static void DisableCharacter(GameObject character)
     {
-        character.GetComponent<PlayerInformation>().ToggleSelectionBorder(false);
-        character.GetComponent<GridMovement>().DisableGrid();
-        instance.cornerButtonManager.transform.GetChild(0).gameObject.SetActive(false);
-        for (int k = 0; k < character.GetComponent<ActionManager>().ActionScripts.Count; k++)
-        {
-            character.GetComponent<ActionManager>().ActionScripts[k].action.DisableGrid();
-        }
+        // character.GetComponent<PlayerInformation>().ToggleSelectionBorder(false);
+        // character.GetComponent<GridMovement>().DisableGrid();
+        // instance.cornerButtonManager.transform.GetChild(0).gameObject.SetActive(false);
+        // for (int k = 0; k < character.GetComponent<ActionManager>().ActionScripts.Count; k++)
+        // {
+        //     character.GetComponent<ActionManager>().ActionScripts[k].action.DisableGrid();
+        // }
     }
 
     public void DisableGrids()
@@ -378,22 +378,22 @@ public class GameInformation : MonoBehaviour
         {
             for (int j = 0; j < GetComponent<PlayerTeams>().allCharacterList.teams[i].characters.Count; j++)
             {
-                GameObject characterInList = GetComponent<PlayerTeams>().allCharacterList.teams[i].characters[j];
-                characterInList.GetComponent<GridMovement>().DisableGrid();
-                characterInList.GetComponent<GridMovement>().DisableWayTiles();
-                for (int k = 0; k < characterInList.GetComponent<ActionManager>().ActionScripts.Count; k++)
-                {
-                    characterInList.GetComponent<ActionManager>().ActionScripts[k].action.DisableGrid();
-                }
+                // GameObject characterInList = GetComponent<PlayerTeams>().allCharacterList.teams[i].characters[j];
+                // characterInList.GetComponent<GridMovement>().DisableGrid();
+                // characterInList.GetComponent<GridMovement>().DisableWayTiles();
+                // for (int k = 0; k < characterInList.GetComponent<ActionManager>().ActionScripts.Count; k++)
+                // {
+                //     characterInList.GetComponent<ActionManager>().ActionScripts[k].action.DisableGrid();
+                // }
             }
         }
         foreach (GameObject x in GetComponent<PlayerTeams>().otherCharacters)
         {
-            x.GetComponent<GridMovement>().DisableGrid();
-            for (int k = 0; k < x.GetComponent<ActionManager>().ActionScripts.Count; k++)
-            {
-                x.GetComponent<ActionManager>().ActionScripts[k].action.DisableGrid();
-            }
+            // x.GetComponent<GridMovement>().DisableGrid();
+            // for (int k = 0; k < x.GetComponent<ActionManager>().ActionScripts.Count; k++)
+            // {
+            //     x.GetComponent<ActionManager>().ActionScripts[k].action.DisableGrid();
+            // }
         }
     }
     public void MoveSelectedCharacter(GameObject newPosition)
@@ -549,13 +549,13 @@ public class GameInformation : MonoBehaviour
         InspectedCharacter = null;
         for (int j = 0; j < GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].characters.Count; j++) //dabartine komanda
         {
-            GameObject characterInList = GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].characters[j];
-            characterInList.GetComponent<GridMovement>().OnTurnEnd();
-            characterInList.GetComponent<PlayerInformation>().OnTurnEnd();
-            for (int k = 0; k < characterInList.GetComponent<ActionManager>().ActionScripts.Count; k++)
-            {
-                characterInList.GetComponent<ActionManager>().ActionScripts[k].action.OnTurnEnd();
-            }
+            // GameObject characterInList = GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].characters[j];
+            // characterInList.GetComponent<GridMovement>().OnTurnEnd();
+            // characterInList.GetComponent<PlayerInformation>().OnTurnEnd();
+            // for (int k = 0; k < characterInList.GetComponent<ActionManager>().ActionScripts.Count; k++)
+            // {
+            //     characterInList.GetComponent<ActionManager>().ActionScripts[k].action.OnTurnEnd();
+            // }
         }
         //----------Environmental hazards iskvietimas
         foreach (EnvironmentalHazard hazard in environmentalHazards)
@@ -578,10 +578,10 @@ public class GameInformation : MonoBehaviour
         {
             GameObject characterInList = GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].characters[j];
             characterInList.GetComponent<GridMovement>().OnTurnStart();
-             for (int k = 0; k < characterInList.GetComponent<ActionManager>().ActionScripts.Count; k++)
-            {
-                characterInList.GetComponent<ActionManager>().ActionScripts[k].action.OnTurnStart();
-            }
+            //  for (int k = 0; k < characterInList.GetComponent<ActionManager>().ActionScripts.Count; k++)
+            // {
+            //     characterInList.GetComponent<ActionManager>().ActionScripts[k].action.OnTurnStart();
+            // }
             characterInList.GetComponent<PlayerInformation>().OnTurnStart();
         }
 

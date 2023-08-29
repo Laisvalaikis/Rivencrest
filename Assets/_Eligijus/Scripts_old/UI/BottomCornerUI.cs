@@ -17,7 +17,7 @@ public class BottomCornerUI : MonoBehaviour
     private GameObject healthText;
     public GameObject buttonPrefab;
     public List<TextMeshProUGUI> buttonText;
-    public List<ActionButton> buttonAction;
+    // public List<ActionButton> buttonAction;
     public List<Image> buttonImages;
     public List<Image> buttonBackgroundImages;
     public List<Image> backgroundImages;
@@ -29,11 +29,11 @@ public class BottomCornerUI : MonoBehaviour
     public GameObject cornerUi;
     private PlayerInformationData _currentPlayerInformationData;
     private GridMovement characterOnBoardGridMovement;
-    private ActionButton actionButtonList;
+    // private ActionButton actionButtonList;
     [SerializeField] private List<Image> actionButtonFrame;
     private PlayerInformation playerInformationCurrentCharacter;
     private PlayerInformation playerInformationCharacterOnBoard;
-    private ActionManager actionManagerCharacterOnBoard;
+    // private ActionManager actionManagerCharacterOnBoard;
     private GridMovement gridMovementCharacterOnBoard;
     
     private Image image;
@@ -48,8 +48,8 @@ public class BottomCornerUI : MonoBehaviour
         set { _characterOnBorad = value; }
     }
     private KeyCode[] AbilityChangingButtonSequence = { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R, KeyCode.T, KeyCode.Y };
-    private List<ActionButton> _actionButtons;
-    [SerializeField] private ActionButton movementButton;
+    // private List<ActionButton> _actionButtons;
+    // [SerializeField] private ActionButton movementButton;
     [SerializeField] private Animator movementButtonFrame;
     private Animator _selectedButton;
     void Awake()
@@ -58,11 +58,11 @@ public class BottomCornerUI : MonoBehaviour
         // movementText = transform.GetChild(0).Find("MovementTextBackground").GetChild(0).gameObject;
         // healthText = transform.GetChild(0).Find("HealthBar").Find("HealthText").gameObject;
 
-        for (int i = 0; i < ButtonList.Count; i++)
-        {
-            ActionButton actionButtonList = ButtonList[i].GetComponent<ActionButton>();
-        }
-        _actionButtons = new List<ActionButton>();
+        // for (int i = 0; i < ButtonList.Count; i++)
+        // {
+        //     ActionButton actionButtonList = ButtonList[i].GetComponent<ActionButton>();
+        // }
+        // _actionButtons = new List<ActionButton>();
         Debug.Log("Need To update action buttons");
         // ButtonFrameList = new List<GameObject>();
         // ButtonIconList = new List<GameObject>();
@@ -75,7 +75,7 @@ public class BottomCornerUI : MonoBehaviour
             // ButtonIconList[i].GetComponent<Image>().color = GetComponent<BottomCornerUI>().ButtonIconColor;
             // ButtonIconList[i].GetComponent<Image>().color = ButtonIconColor;
            // _actionButtons.Add(ButtonList[i].GetComponent<ActionButton>());
-            _actionButtons.Add(actionButtonList);
+            // _actionButtons.Add(actionButtonList);
             var CantAttackIcon = ButtonList[i].transform.Find("CantAttackImage");
             if (CantAttackIcon != null)
             {
@@ -91,7 +91,7 @@ public class BottomCornerUI : MonoBehaviour
         GridMovement characterOnBoardGridMovement = CharacterOnBoard.GetComponent<GridMovement>();
         PlayerInformation playerInformationCurrentCharacter = currentCharacter.GetComponent<PlayerInformation>();
         PlayerInformation playerInformationCharacterOnBoard = CharacterOnBoard.GetComponent<PlayerInformation>();
-        ActionManager actionManagerCharacterOnBoard = CharacterOnBoard.GetComponent<ActionManager>();
+        // ActionManager actionManagerCharacterOnBoard = CharacterOnBoard.GetComponent<ActionManager>();
         //if (transform.Find("CornerUI").Find("DebuffIcons") != null)
         if(debuffManager!=null)
         {
@@ -113,7 +113,7 @@ public class BottomCornerUI : MonoBehaviour
                if (Input.GetKeyDown(AbilityChangingButtonSequence[i]))
                {
                    //ButtonList[i].GetComponent<ActionButton>().ChangePlayersState();
-                   actionButtonList.ChangePlayersState();
+                   // actionButtonList.ChangePlayersState();
                     
                }
            }
@@ -173,7 +173,7 @@ public class BottomCornerUI : MonoBehaviour
         }
         buttonText[buttonIndex].color = _currentPlayerInformationData.textColor;
         buttonImages[buttonIndex].sprite = _currentPlayerInformationData.abilities[index].sprite;
-        buttonAction[buttonIndex].buttonState = _currentPlayerInformationData.abilities[index].abilityAction.ToString();
+        // buttonAction[buttonIndex].buttonState = _currentPlayerInformationData.abilities[index].abilityAction.ToString();
         buttonBackgroundImages[buttonIndex].color = _currentPlayerInformationData.backgroundColor;
         UpdateCommonData();
     }
@@ -250,10 +250,10 @@ public class BottomCornerUI : MonoBehaviour
         {
             for (int i = 0; i < playerInformation.enabledAbilitiesEnemy.Count; i++)
             {
-                if (ButtonList.Count > currentButtonIndex && character.GetComponent<ActionManager>().FindActionListByName(playerInformation.enabledAbilitiesEnemy[i]) != null)
+                if (ButtonList.Count > currentButtonIndex )
                 {
                     UpdateData(buttonIndex, i);
-                    buttonAction[buttonIndex].buttonState = character.GetComponent<ActionManager>().FindActionListByName(playerInformation.enabledAbilitiesEnemy[i]).actionName;
+                    // buttonAction[buttonIndex].buttonState = character.GetComponent<ActionManager>().FindActionListByName(playerInformation.enabledAbilitiesEnemy[i]).actionName;
                     // _buttonManager.ButtonList[currentButtonIndex].transform.Find("ActionButtonImage").GetComponent<Image>().sprite = character.GetComponent<ActionManager>().FindActionListByName(playerInformation.enabledAbilitiesEnemy[i]).AbilityIcon;
                     // _buttonManager.ButtonList[currentButtonIndex].GetComponent<ActionButton>().buttonState = 
                     currentButtonIndex++;
@@ -283,63 +283,63 @@ public class BottomCornerUI : MonoBehaviour
             {
                // if (ButtonList[i].GetComponent<ActionButton>().buttonState != "Movement" &&
                  //   CharacterOnBoard.GetComponent<ActionManager>().FindActionByName(ButtonList[i].GetComponent<ActionButton>().buttonState) != null) 
-                 if (actionButtonList.buttonState != "Movement" && actionManagerCharacterOnBoard.FindActionByName(actionButtonList.buttonState) != null)
-                {
-                   // var buttonActionScript = CharacterOnBoard.GetComponent<ActionManager>().FindActionByName(ButtonList[i].GetComponent<ActionButton>().buttonState);
-                   var buttonActionScript = actionManagerCharacterOnBoard.FindActionByName(actionButtonList.buttonState);
-                    if (buttonActionScript.AbilityPoints < buttonActionScript.AbilityCooldown || buttonActionScript.AvailableAttacks == 0)
-                    {
-                        // _buttonManager.ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>().color = Color.gray;
-                        ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>().color = _currentPlayerInformationData.backgroundColor - new Color(0.2f, 0.2f, 0.2f, 0f);
-                        for(int j = 0; j < ButtonList[i].transform.childCount; j++)
-                        {
-                            if(ButtonList[i].transform.GetChild(j).name == "Text" && buttonActionScript.AbilityPoints < buttonActionScript.AbilityCooldown)
-                            {
-                                var image = ButtonList[i].transform.Find("ActionButtonImage").GetComponent<Image>();
-                                image.color = new Color(image.color.r, image.color.g, image.color.b, 0.3f);
-                            }
-                        }
-                    }
-                    else
-                    {
-                       ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>().color = _currentPlayerInformationData.backgroundColor;
-                        if (ButtonList[i].transform.Find("Text") != null)
-                        {
-                            var image = ButtonList[i].transform.Find("ActionButtonImage").GetComponent<Image>();
-                            image.color = new Color(image.color.r, image.color.g, image.color.b, 1f);
-                        }
-                    }
-                    Debug.Log("Need to redo this some time");
-                }
+                //  if (actionButtonList.buttonState != "Movement" && actionManagerCharacterOnBoard.FindActionByName(actionButtonList.buttonState) != null)
+                // {
+                //    // var buttonActionScript = CharacterOnBoard.GetComponent<ActionManager>().FindActionByName(ButtonList[i].GetComponent<ActionButton>().buttonState);
+                //    var buttonActionScript = actionManagerCharacterOnBoard.FindActionByName(actionButtonList.buttonState);
+                //     if (buttonActionScript.AbilityPoints < buttonActionScript.AbilityCooldown || buttonActionScript.AvailableAttacks == 0)
+                //     {
+                //         // _buttonManager.ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>().color = Color.gray;
+                //         ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>().color = _currentPlayerInformationData.backgroundColor - new Color(0.2f, 0.2f, 0.2f, 0f);
+                //         for(int j = 0; j < ButtonList[i].transform.childCount; j++)
+                //         {
+                //             if(ButtonList[i].transform.GetChild(j).name == "Text" && buttonActionScript.AbilityPoints < buttonActionScript.AbilityCooldown)
+                //             {
+                //                 var image = ButtonList[i].transform.Find("ActionButtonImage").GetComponent<Image>();
+                //                 image.color = new Color(image.color.r, image.color.g, image.color.b, 0.3f);
+                //             }
+                //         }
+                //     }
+                //     else
+                //     {
+                //        ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>().color = _currentPlayerInformationData.backgroundColor;
+                //         if (ButtonList[i].transform.Find("Text") != null)
+                //         {
+                //             var image = ButtonList[i].transform.Find("ActionButtonImage").GetComponent<Image>();
+                //             image.color = new Color(image.color.r, image.color.g, image.color.b, 1f);
+                //         }
+                //     }
+                //     Debug.Log("Need to redo this some time");
+                // }
 
                // else if (ButtonList[i].GetComponent<ActionButton>().buttonState == "Movement")
-                 else if (actionButtonList.buttonState == "Movement")
-                {
-                    //var characterMovementScript = CharacterOnBoard.GetComponent<GridMovement>();
-                    var characterMovementScript = characterOnBoardGridMovement;
-                    if (characterMovementScript.AvailableMovementPoints == 0)
-                    {
-                        ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>().color = _currentPlayerInformationData.backgroundColor - new Color(0.2f, 0.2f, 0.2f, 0f);
-                        // if (ButtonList[i].transform.Find("Text") != null
-                        //     && (ButtonList[i].transform.Find("Text").GetComponent<CooldownText>().action.AbilityCooldown - ButtonList[i].transform.Find("Text").GetComponent<CooldownText>().action.AbilityPoints) > 0)
-                        // {
-                       // var image = ButtonList[i].transform.Find("ActionButtonImage").GetComponent<Image>();
-                       
-                          // var image = actionButtonImage[i].GetComponent<Image>();
-                        // image.color = new Color(image.color.r, image.color.g, image.color.b, 0.3f);
-                        
-                        // }
-                    }
-                    else
-                    {
-                        ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>().color = _currentPlayerInformationData.backgroundColor;
-                        // if (ButtonList[i].transform.Find("Text") != null)
-                        // {
-                        var image = ButtonList[i].transform.Find("ActionButtonImage").GetComponent<Image>();
-                        image.color = new Color(image.color.r, image.color.g, image.color.b, 1f);
-                        // }
-                    }
-                }
+                //  else if (actionButtonList.buttonState == "Movement")
+                // {
+                //     //var characterMovementScript = CharacterOnBoard.GetComponent<GridMovement>();
+                //     var characterMovementScript = characterOnBoardGridMovement;
+                //     if (characterMovementScript.AvailableMovementPoints == 0)
+                //     {
+                //         ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>().color = _currentPlayerInformationData.backgroundColor - new Color(0.2f, 0.2f, 0.2f, 0f);
+                //         // if (ButtonList[i].transform.Find("Text") != null
+                //         //     && (ButtonList[i].transform.Find("Text").GetComponent<CooldownText>().action.AbilityCooldown - ButtonList[i].transform.Find("Text").GetComponent<CooldownText>().action.AbilityPoints) > 0)
+                //         // {
+                //        // var image = ButtonList[i].transform.Find("ActionButtonImage").GetComponent<Image>();
+                //        
+                //           // var image = actionButtonImage[i].GetComponent<Image>();
+                //         // image.color = new Color(image.color.r, image.color.g, image.color.b, 0.3f);
+                //         
+                //         // }
+                //     }
+                //     else
+                //     {
+                //         ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>().color = _currentPlayerInformationData.backgroundColor;
+                //         // if (ButtonList[i].transform.Find("Text") != null)
+                //         // {
+                //         var image = ButtonList[i].transform.Find("ActionButtonImage").GetComponent<Image>();
+                //         image.color = new Color(image.color.r, image.color.g, image.color.b, 1f);
+                //         // }
+                //     }
+                // }
             }
         }
     }
@@ -349,13 +349,13 @@ public class BottomCornerUI : MonoBehaviour
     
     
     
-     public void AddDataToActionButtons(HelpTable helpTable)
-    {
-        for (int i = 0; i < _actionButtons.Count; i++)
-        {
-            _actionButtons[i]._helpTable = helpTable;
-        }
-    }
+    //  public void AddDataToActionButtons(HelpTable helpTable)
+    // {
+    //     for (int i = 0; i < _actionButtons.Count; i++)
+    //     {
+    //         _actionButtons[i]._helpTable = helpTable;
+    //     }
+    // }
 
     public void DisableSelection(GameObject selected)
     {
@@ -438,32 +438,32 @@ public class BottomCornerUI : MonoBehaviour
             ChangeAbilityDisabledConditions();
             //
             //var buttonAction = CharacterOnBoard.GetComponent<ActionManager>().FindActionByName(ButtonList[i].GetComponent<ActionButton>().buttonState);
-            var buttonAction = actionManagerCharacterOnBoard.FindActionByName(actionButtonList.buttonState);
+            // var buttonAction = actionManagerCharacterOnBoard.FindActionByName(actionButtonList.buttonState);
             var actionButtonImage = ButtonList[i].transform.Find("ActionButtonImage").GetComponent<Image>();
             var actionButtonImageBackground = ButtonList[i].transform.Find("ActionButtonBackground").GetComponent<Image>();
             //if ((buttonAction != null && buttonAction.isDisabled)
                // || (ButtonList[i].GetComponent<ActionButton>().buttonState == "Movement" && CharacterOnBoard.GetComponent<GridMovement>().isDisabled))
-               if ((buttonAction != null && buttonAction.isDisabled)
-                || (actionButtonList.buttonState == "Movement" && characterOnBoardGridMovement.isDisabled))
-            {
-                ButtonList[i].transform.Find("CantAttackImage").gameObject.SetActive(true);
-                //
-                actionButtonImage.color = new Color(actionButtonImage.color.r, actionButtonImage.color.g, actionButtonImage.color.b, 0.1f);
-                actionButtonImageBackground.color = Color.gray;
-            }
+            //    if ((buttonAction != null && buttonAction.isDisabled)
+            //     || (actionButtonList.buttonState == "Movement" && characterOnBoardGridMovement.isDisabled))
+            // {
+            //     ButtonList[i].transform.Find("CantAttackImage").gameObject.SetActive(true);
+            //     //
+            //     actionButtonImage.color = new Color(actionButtonImage.color.r, actionButtonImage.color.g, actionButtonImage.color.b, 0.1f);
+            //     actionButtonImageBackground.color = Color.gray;
+            // }
             //else if ((buttonAction != null && buttonAction.canGridBeEnabled())
                 // || (ButtonList[i].GetComponent<ActionButton>().buttonState == "Movement" && CharacterOnBoard.GetComponent<GridMovement>().canGridBeEnabled()))
-               else if ((buttonAction != null && buttonAction.CanGridBeEnabled())
-               || (actionButtonList.buttonState == "Movement" && characterOnBoardGridMovement.CanGridBeEnabled()))
-            {
-                ButtonList[i].transform.Find("CantAttackImage").gameObject.SetActive(false);
-                actionButtonImage.color = new Color(actionButtonImage.color.r, actionButtonImage.color.g, actionButtonImage.color.b, 1f);
-                actionButtonImageBackground.color = Color.white;
-            }
-            else
-            {
-                ButtonList[i].transform.Find("CantAttackImage").gameObject.SetActive(false);
-            }
+            //    else if ((buttonAction != null && buttonAction.CanGridBeEnabled())
+            //    || (actionButtonList.buttonState == "Movement" && characterOnBoardGridMovement.CanGridBeEnabled()))
+            // {
+            //     ButtonList[i].transform.Find("CantAttackImage").gameObject.SetActive(false);
+            //     actionButtonImage.color = new Color(actionButtonImage.color.r, actionButtonImage.color.g, actionButtonImage.color.b, 1f);
+            //     actionButtonImageBackground.color = Color.white;
+            // }
+            // else
+            // {
+            //     ButtonList[i].transform.Find("CantAttackImage").gameObject.SetActive(false);
+            // }
         }
     }
 
@@ -483,26 +483,26 @@ public class BottomCornerUI : MonoBehaviour
         for (int i = 0; i < ButtonList.Count; i++)
         {
             //var buttonAction = CharacterOnBoard.GetComponent<ActionManager>().FindActionByName(ButtonList[i].GetComponent<ActionButton>().buttonState);
-            var buttonAction = actionManagerCharacterOnBoard.FindActionByName(actionButtonList.buttonState);
+            // var buttonAction = actionManagerCharacterOnBoard.FindActionByName(actionButtonList.buttonState);
             // veiksmai, ne movement
             //if (buttonAction != null && 
                // (CharacterOnBoard.GetComponent<PlayerInformation>().Debuffs.Contains("Stun")
               //  || (buttonAction.AttackAbility && CharacterOnBoard.GetComponent<PlayerInformation>().CantAttackCondition)
                // || (CharacterOnBoard.GetComponent<PlayerInformation>().Silenced && !(buttonAction is PlayerAttack))
               //  || (CharacterOnBoard.GetComponent<PlayerInformation>().Stasis)))
-              if (buttonAction != null && 
-                  (playerInformationCharacterOnBoard.Debuffs.Contains("Stun")
-                   || (buttonAction.AttackAbility && playerInformationCharacterOnBoard.CantAttackCondition)
-                   || (playerInformationCharacterOnBoard.Silenced && !(buttonAction is PlayerAttack))
-                   || (playerInformationCharacterOnBoard.Stasis)))
-            {
-                buttonAction.isDisabled = true;
-            }
-            else if (buttonAction != null)
-            {
-                buttonAction.isDisabled = false;
-
-            }
+            //   if (buttonAction != null && 
+            //       (playerInformationCharacterOnBoard.Debuffs.Contains("Stun")
+            //        || (buttonAction.AttackAbility && playerInformationCharacterOnBoard.CantAttackCondition)
+            //        || (playerInformationCharacterOnBoard.Silenced && !(buttonAction is PlayerAttack))
+            //        || (playerInformationCharacterOnBoard.Stasis)))
+            // {
+            //     buttonAction.isDisabled = true;
+            // }
+            // else if (buttonAction != null)
+            // {
+            //     buttonAction.isDisabled = false;
+            //
+            // }
             // movement
            // if (ButtonList[i].GetComponent<ActionButton>().buttonState == "Movement"
                 //&& (CharacterOnBoard.GetComponent<PlayerInformation>().Debuffs.Contains("Stun")
@@ -513,20 +513,20 @@ public class BottomCornerUI : MonoBehaviour
                  //  && (CharacterOnBoard.GetComponent<PlayerInformation>().Debuffs.Contains("Stun")
                  //      || CharacterOnBoard.GetComponent<PlayerInformation>().CantMove)
                 //   || CharacterOnBoard.GetComponent<PlayerInformation>().Stasis)
-                if (actionButtonList.buttonState == "Movement"
-                    && (playerInformationCharacterOnBoard.Debuffs.Contains("Stun")
-                        || playerInformationCharacterOnBoard.CantMove)
-                    || playerInformationCharacterOnBoard.Stasis)
-            {
-                //CharacterOnBoard.GetComponent<GridMovement>().isDisabled = true;
-                characterOnBoardGridMovement.isDisabled = true;
-            }
+            //     if (actionButtonList.buttonState == "Movement"
+            //         && (playerInformationCharacterOnBoard.Debuffs.Contains("Stun")
+            //             || playerInformationCharacterOnBoard.CantMove)
+            //         || playerInformationCharacterOnBoard.Stasis)
+            // {
+            //     //CharacterOnBoard.GetComponent<GridMovement>().isDisabled = true;
+            //     characterOnBoardGridMovement.isDisabled = true;
+            // }
            // else if (ButtonList[i].GetComponent<ActionButton>().buttonState == "Movement")
-               else if (actionButtonList.buttonState == "Movement")
-            {
-                //CharacterOnBoard.GetComponent<GridMovement>().isDisabled = false;
-                characterOnBoardGridMovement.isDisabled = false;
-            }
+            //    else if (actionButtonList.buttonState == "Movement")
+            // {
+            //     //CharacterOnBoard.GetComponent<GridMovement>().isDisabled = false;
+            //     characterOnBoardGridMovement.isDisabled = false;
+            // }
         }
     }
     public void GenerateAbilities()
@@ -553,27 +553,27 @@ public class BottomCornerUI : MonoBehaviour
 
     public void GenerateAbilitiesForEnemy(List<string> abilitiesToEnable)
     {
-        int currentButtonIndex = 2;
-        GameObject character = CharacterOnBoard;
-        if (character != null)
-        {
-            foreach(string ability in abilitiesToEnable)
-            {
-                if (ButtonList.Count > currentButtonIndex && character.GetComponent<ActionManager>().FindActionListByName(ability) != null)
-                {
-                    ButtonList[currentButtonIndex].transform.parent.gameObject.SetActive(false);
-                    ButtonList[currentButtonIndex].transform.Find("ActionButtonImage").GetComponent<Image>().sprite = character.GetComponent<ActionManager>().FindActionListByName(ability).AbilityIcon;
-                    ButtonList[currentButtonIndex].GetComponent<ActionButton>().buttonState = character.GetComponent<ActionManager>().FindActionListByName(ability).actionName;
-                    currentButtonIndex++;
-                }
-            }
-            for (int i = currentButtonIndex; i < ButtonList.Count; i++)
-            {
-                ButtonList[i].transform.parent.gameObject.SetActive(false);
-                string extensionName = "Extension" + (i + 1).ToString();
-                transform.Find("CornerUI").Find(extensionName).gameObject.SetActive(false);
-            }
-        }
+        // int currentButtonIndex = 2;
+        // GameObject character = CharacterOnBoard;
+        // if (character != null)
+        // {
+        //     foreach(string ability in abilitiesToEnable)
+        //     {
+        //         if (ButtonList.Count > currentButtonIndex && character.GetComponent<ActionManager>().FindActionListByName(ability) != null)
+        //         {
+        //             ButtonList[currentButtonIndex].transform.parent.gameObject.SetActive(false);
+        //             ButtonList[currentButtonIndex].transform.Find("ActionButtonImage").GetComponent<Image>().sprite = character.GetComponent<ActionManager>().FindActionListByName(ability).AbilityIcon;
+        //             ButtonList[currentButtonIndex].GetComponent<ActionButton>().buttonState = character.GetComponent<ActionManager>().FindActionListByName(ability).actionName;
+        //             currentButtonIndex++;
+        //         }
+        //     }
+        //     for (int i = currentButtonIndex; i < ButtonList.Count; i++)
+        //     {
+        //         ButtonList[i].transform.parent.gameObject.SetActive(false);
+        //         string extensionName = "Extension" + (i + 1).ToString();
+        //         transform.Find("CornerUI").Find(extensionName).gameObject.SetActive(false);
+        //     }
+        // }
     }
     
     

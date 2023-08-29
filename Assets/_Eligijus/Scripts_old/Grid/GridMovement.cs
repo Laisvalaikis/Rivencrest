@@ -135,10 +135,10 @@ public class GridMovement : BaseAction
             gameObject.GetComponent<PlayerInformation>().Debuffs.Add(new Debuff("Stun", DebuffApplier));
             transform.Find("VFX").Find("VFXStun").gameObject.SetActive(true);
             Stun = false;
-            if (GetComponent<PlayerInformation>().IsCreatingWhiteField)
-            {
-                GetComponent<CreateWhiteField>().OnTurnStart();//sunaikina white field
-            }
+            // if (GetComponent<PlayerInformation>().IsCreatingWhiteField)
+            // {
+            //     GetComponent<CreateWhiteField>().OnTurnStart();//sunaikina white field
+            // }
         }
         gameObject.GetComponent<PlayerInformation>().Slow1 = false;
         gameObject.GetComponent<PlayerInformation>().Slow2 = false;
@@ -157,19 +157,19 @@ public class GridMovement : BaseAction
         {
             gameObject.GetComponent<PlayerInformation>().Slow3 = true;
         }
-        if (GetComponent<PlayerInformation>().Blocker && isDisabled)
-        {
-            GetComponent<ActionManager>().FindActionByName("Block").OnTurnStart();
-        }
+        // if (GetComponent<PlayerInformation>().Blocker && isDisabled)
+        // {
+        //     GetComponent<ActionManager>().FindActionByName("Block").OnTurnStart();
+        // }
     }
     public void RemoveDebuff(string debuff)
     {
         if (debuff == "Slows")
         {
-            if (!GetComponent<ActionManager>().hasSlowAbilityBeenCast)
-            {
-                AvailableMovementPoints += currentlyRemovedMovementPoints;
-            }
+            // if (!GetComponent<ActionManager>().hasSlowAbilityBeenCast)
+            // {
+            //     AvailableMovementPoints += currentlyRemovedMovementPoints;
+            // }
             currentlyRemovedMovementPoints=0;
             officiallyRemovedMovementPoints=0;
             transform.Find("VFX").Find("VFXIceFreeze").GetComponent<Animator>().SetBool("iceFreeze", false);
@@ -210,7 +210,7 @@ public class GridMovement : BaseAction
                  this.AvailableMovementTiles[movementIndex].Add(AddableObject);
              }
              else*/
-            if (!isTileInFogOfWar && isGround && (!isBlockingLayer || (isPlayer && (isAllegianceSame(GetSpecificGroundTile(middleTile, x.Item1, x.Item2, blockingLayer)) || DoesCharacterHaveBlessing("Spectral")))))
+            if (!isTileInFogOfWar && isGround && (!isBlockingLayer || (isPlayer && (isAllegianceSame(GetSpecificGroundTile(middleTile, x.Item1, x.Item2, blockingLayer).transform.position) || DoesCharacterHaveBlessing("Spectral")))))
                 //GameObject.Find("GameInformation").GetComponent<PlayerTeams>().FindTeamAllegiance(GetSpecificGroundTile(middleTile, x.Item1, x.Item2, blockingLayer).GetComponent<PlayerInformation>().CharactersTeam) ==
                     //GameObject.Find("GameInformation").GetComponent<PlayerTeams>().FindTeamAllegiance(GetComponent<PlayerInformation>().CharactersTeam))))
             {

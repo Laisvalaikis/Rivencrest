@@ -281,7 +281,7 @@ public class GameProgress : MonoBehaviour
         for (int i = 0; i < 5; i++)
         {
             CharInfo.Find("Abilities").GetChild(i).gameObject.SetActive(true);
-            CharInfo.Find("Abilities").GetChild(i).Find("Color").GetComponent<Image>().sprite = Char.prefab.GetComponent<ActionManager>().AbilityBackground;
+            // CharInfo.Find("Abilities").GetChild(i).Find("Color").GetComponent<Image>().sprite = Char.prefab.GetComponent<ActionManager>().AbilityBackground;
            // CharInfo.Find("Abilities").GetChild(i).Find("AbilityIcon").GetComponent<Image>().color = Char.prefab.GetComponent<PlayerInformation>().ClassColor;
         }
         int currentIndex = 2;

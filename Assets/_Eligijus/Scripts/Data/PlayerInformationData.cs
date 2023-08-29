@@ -63,6 +63,6 @@ public class PlayerInformationData : ScriptableObject
 public class AbilityData
 {
     public Sprite sprite;
-    public AbilityAction abilityAction;
+    // public AbilityAction abilityAction;
 }
 

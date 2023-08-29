@@ -342,7 +342,7 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
         public virtual void OnTurnEnd()
         {
             RefillActionPoints();
-            GetComponent<ActionManager>().hasSlowAbilityBeenCast = false;
+            
         }
         public virtual void RemoveActionPoints()//panaudojus action
         {
@@ -370,14 +370,14 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
         protected virtual void FinishAbility()
         {
             AbilityPoints = 0;//Cooldown counter
-            if (isAbilitySlow)
-            {
-                GetComponent<ActionManager>().RemoveAllActionPoints();
-            }
-            if (AttackAbility)
-            {
-                GetComponent<ActionManager>().RemoveAttackActionPoints();
-            }
+            // if (isAbilitySlow)
+            // {
+            //     GetComponent<ActionManager>().RemoveAllActionPoints();
+            // }
+            // if (AttackAbility)
+            // {
+            //     GetComponent<ActionManager>().RemoveAttackActionPoints();
+            // }
             GetComponent<PlayerInformation>().currentState = "Movement";
             if (isAbilitySlow)
             {
