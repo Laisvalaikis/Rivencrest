@@ -192,31 +192,7 @@ using Random = UnityEngine.Random;
                 }
             }
         }
-        public virtual void EnableDamagePreview(GameObject tile, GameObject target, int minAttackDamage, int maxAttackDamage = -1)
-        {
-            if (!tile.GetComponent<HighlightTile>().FogOfWarTile.activeSelf && (CanPreviewBeShown(tile.transform.position) || CanTileBeClicked(transform.position)))
-            {
-                if (target.GetComponent<PlayerInformation>().health - minAttackDamage <= 0 && CanPreviewBeShown(tile.transform.position))
-                {
-                    tile.transform.Find("mapTile").Find("Death").gameObject.SetActive(true);
-                    tile.transform.Find("mapTile").Find("DamageText").position = tile.transform.position + new Vector3(0f, 0.65f, 0f);
-                }
-                //tile.GetComponent<HighlightTile>().HighlightedByPlayerUI.GetComponent<SpriteRenderer>().color = GameObject.Find("GameInformation").GetComponent<ColorManager>().MovementHighlightHover;//tile.GetComponent<HighlightTile>().HoverHighlightColor;
-                //ziurim ar random damage ar ne
-                if (CanPreviewBeShown(tile.transform.position))
-                {
-                    tile.transform.Find("mapTile").Find("DamageText").gameObject.SetActive(true);
-                    if (maxAttackDamage == -1)
-                    {
-                        tile.transform.Find("mapTile").Find("DamageText").gameObject.GetComponent<TextMeshPro>().text = "-" + minAttackDamage.ToString();
-                    }
-                    else
-                    {
-                        tile.transform.Find("mapTile").Find("DamageText").gameObject.GetComponent<TextMeshPro>().text = minAttackDamage.ToString() + "-" + maxAttackDamage.ToString();
-                    }
-                }
-            }
-        }
+       
         public virtual void EnableDamagePreview(GameObject tile, List<GameObject> tileList, int minAttackDamage, int maxAttackDamage = -1)//damage texto ijungimui
         {
             foreach(GameObject tileInList in tileList)
@@ -538,35 +514,7 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
         public virtual void SpecificAbilityAction(GameObject character = null)
         {
         }
-        public virtual void TriggerAflame(GameObject aflameCharacter)
-        {
-            if (aflameCharacter != null && aflameCharacter.GetComponent<PlayerInformation>().Aflame != null && aflameCharacter.GetComponent<PlayerInformation>().health > 0)
-            {
-                var directionVectors = new List<(int, int)>
-                {
-                    (1, 0),
-                    (0, 1),
-                    (-1, 0),
-                    (0, -1)
-                };
-                aflameCharacter.transform.Find("VFX").Find("Aflame").GetComponent<Animator>().SetTrigger("explode");
-                aflameCharacter.transform.Find("VFX").Find("Aflame").GetComponent<Animator>().SetBool("aflame", false);
-                foreach (var x in directionVectors)
-                {
-                    bool isPlayer = CheckIfSpecificTag(aflameCharacter, x.Item1, x.Item2, blockingLayer, "Player");
-                    if (isPlayer)
-                    {
-                        GameObject target = GetSpecificGroundTile(aflameCharacter, x.Item1, x.Item2, blockingLayer);
-                        if (isAllegianceSame(aflameCharacter, target, blockingLayer))
-                        {
-                            DealRandomDamageToTarget(target, 2, 2);
-                        }
-                    }
-                }
-                DealRandomDamageToTarget(aflameCharacter, 2, 2);
-                aflameCharacter.GetComponent<PlayerInformation>().Aflame = null;
-            }
-        }
+       
         protected bool DoesCharacterHaveBlessing(string blessingName)
         {
             return playerInformationData.BlessingsAndCurses.Find(x => x.blessingName == blessingName) != null;
