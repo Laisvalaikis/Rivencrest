@@ -135,8 +135,8 @@ using Random = UnityEngine.Random;
                             if (chunk != null && !chunk.TileIsLocked())
                             {
                                 _chunkList.Add(chunk);
-                                chunk.EnableTileRenderingGameObject();
-                                chunk.EnableTileRendering();
+                                //chunk.EnableTileRenderingGameObject();
+                                //chunk.EnableTileRendering();
                                 chunk.GetTileHighlight().ActivateMovementTile(true);
                             }
                         }
