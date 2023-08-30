@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class HighlightTile : MonoBehaviour
 {
-    public GameObject HighlightedByPlayerUI;
-    public GameObject FogOfWarTile;
-    public GameObject ArrowTile;
-    public GameObject DangerUI;
+    [SerializeField] private SpriteRenderer HighlightedByPlayerUI;
+    [SerializeField] private SpriteRenderer FogOfWarTile;
+    [SerializeField] private SpriteRenderer ArrowTile;
+    [SerializeField] private SpriteRenderer DangerUI;
     //public Sprite HoverSprite;
     //private Sprite OriginalSprite;
     private Color AttackHighlightColor;
@@ -36,10 +36,24 @@ public class HighlightTile : MonoBehaviour
 
     public void ActivateMovementTile(bool value)
     {
-        
-        HighlightedByPlayerUI.SetActive(value);
+        HighlightedByPlayerUI.enabled = value;
     }
-    
+
+    public void SetHighlightColor(Color color)
+    {
+        HighlightedByPlayerUI.color = color;
+    }
+
+    public void EnableDisableFogOfWar(bool value)
+    {
+        FogOfWarTile.enabled = value;
+    }
+
+    public bool FogOfWarIsEnabled()
+    {
+        return FogOfWarTile.enabled;
+    }
+
     // void Update()
     // {
     //     //Updating isCharacterOnTop to prevent bug
@@ -94,7 +108,7 @@ public class HighlightTile : MonoBehaviour
 
     public void SetHighlightBool(bool statement)
     {
-        HighlightedByPlayerUI.SetActive(statement);
+        HighlightedByPlayerUI.enabled = statement;
         isHighlighted = statement;
         if (!statement)
         {
@@ -338,7 +352,7 @@ public class HighlightTile : MonoBehaviour
     }*/
     bool IsSkillAvailableInFOW()
     {
-        return (!FogOfWarTile.activeSelf || activeState == "CreateEye" || activeState == "CreatePortal");
+        return (!FogOfWarTile.enabled || activeState == "CreateEye" || activeState == "CreatePortal");
     }
     IEnumerator ExecuteAfterTime(float time, Action task)
     {

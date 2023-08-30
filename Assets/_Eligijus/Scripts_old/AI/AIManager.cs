@@ -52,7 +52,7 @@ public class AIManager : MonoBehaviour
                 {
                     GameObject spawnedEnemy = Instantiate(EnemyPrefabs[Random.Range(0, EnemyPrefabs.Count)], position, Quaternion.identity);
                     if (CheckIfSpecificLayer(enemySpawnPointsCopy[index], 0, 0, groundLayer) &&
-                    !GetSpecificGroundTile(enemySpawnPointsCopy[index], 0, 0, groundLayer).GetComponent<HighlightTile>().FogOfWarTile.activeSelf)
+                    !GetSpecificGroundTile(enemySpawnPointsCopy[index], 0, 0, groundLayer).GetComponent<HighlightTile>().FogOfWarIsEnabled())
                     {
 // <<<<<<< HEAD
 //                         GameObject spawnedEnemy = Instantiate(EnemyPrefabs[UnityEngine.Random.Range(0, EnemyPrefabs.Count)], position, Quaternion.identity);

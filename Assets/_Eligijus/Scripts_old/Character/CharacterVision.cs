@@ -104,10 +104,10 @@ public class CharacterVision : MonoBehaviour
         {
             foreach (GameObject tile in MovementTileList)
             {
-                tile.GetComponent<HighlightTile>().FogOfWarTile.SetActive(true);
+                tile.GetComponent<HighlightTile>().EnableDisableFogOfWar(true);
             }
         }
-        GetSpecificGroundTile(gameObject, 0, 0, groundLayer).GetComponent<HighlightTile>().FogOfWarTile.SetActive(true);
+        GetSpecificGroundTile(gameObject, 0, 0, groundLayer).GetComponent<HighlightTile>().EnableDisableFogOfWar(true);
     }
     public void HighlightAll()
     {
@@ -116,10 +116,10 @@ public class CharacterVision : MonoBehaviour
             foreach (GameObject tile in MovementTileList)
             {
                 //tile.GetComponent<HighlightTile>().fogOfWar = false;
-                tile.GetComponent<HighlightTile>().FogOfWarTile.SetActive(false);
+                tile.GetComponent<HighlightTile>().EnableDisableFogOfWar(false);
             }
         }
-        GetSpecificGroundTile(gameObject,0,0,groundLayer).GetComponent<HighlightTile>().FogOfWarTile.SetActive(false);
+        GetSpecificGroundTile(gameObject,0,0,groundLayer).GetComponent<HighlightTile>().EnableDisableFogOfWar(false);
     }
     protected GameObject GetSpecificGroundTile(GameObject tile, int x, int y, LayerMask chosenLayer)
     {

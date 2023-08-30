@@ -169,7 +169,7 @@ using Random = UnityEngine.Random;
         }
         public virtual void EnableDamagePreview(GameObject tile, int minAttackDamage, int maxAttackDamage = -1)//damage texto ijungimui
         {
-            if(!tile.GetComponent<HighlightTile>().FogOfWarTile.activeSelf && (CanPreviewBeShown(tile.transform.position) || CanTileBeClicked(tile.transform.position)))
+            if(!tile.GetComponent<HighlightTile>().FogOfWarIsEnabled() && (CanPreviewBeShown(tile.transform.position) || CanTileBeClicked(tile.transform.position)))
             {
                 if ((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall"))
                     && GetSpecificGroundTile(tile, 0, 0, blockingLayer).GetComponent<PlayerInformation>().health - minAttackDamage <= 0 && CanPreviewBeShown(tile.transform.position))
@@ -177,7 +177,7 @@ using Random = UnityEngine.Random;
                     tile.transform.Find("mapTile").Find("Death").gameObject.SetActive(true);
                     tile.transform.Find("mapTile").Find("DamageText").position = tile.transform.position + new Vector3(0f, 0.65f, 0f);
                 }
-                tile.GetComponent<HighlightTile>().HighlightedByPlayerUI.GetComponent<SpriteRenderer>().color = GameObject.Find("GameInformation").GetComponent<ColorManager>().MovementHighlightHover;//tile.GetComponent<HighlightTile>().HoverHighlightColor;
+                tile.GetComponent<HighlightTile>().SetHighlightColor(GameObject.Find("GameInformation").GetComponent<ColorManager>().MovementHighlightHover);
                 //ziurim ar random damage ar ne
                 if((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall")) && CanPreviewBeShown(tile.transform.position))
                 {
@@ -204,11 +204,11 @@ using Random = UnityEngine.Random;
 
         protected virtual void EnableTextPreview(GameObject tile, string text)
         {
-            if(!tile.GetComponent<HighlightTile>().FogOfWarTile.activeSelf && (CanTileBeClicked(tile.transform.position) || CanPreviewBeShown(tile.transform.position)))
+            if(!tile.GetComponent<HighlightTile>().FogOfWarIsEnabled() && (CanTileBeClicked(tile.transform.position) || CanPreviewBeShown(tile.transform.position)))
             {
                 tile.transform.Find("mapTile").Find("DamageText").gameObject.SetActive(true);
                 tile.transform.Find("mapTile").Find("DamageText").gameObject.GetComponent<TextMeshPro>().text = text;
-                tile.GetComponent<HighlightTile>().HighlightedByPlayerUI.GetComponent<SpriteRenderer>().color = GameObject.Find("GameInformation").GetComponent<ColorManager>().MovementHighlightHover;//tile.GetComponent<HighlightTile>().HoverHighlightColor;
+                tile.GetComponent<HighlightTile>().SetHighlightColor(GameObject.Find("GameInformation").GetComponent<ColorManager>().MovementHighlightHover);//tile.GetComponent<HighlightTile>().HoverHighlightColor;
             }
         }
 
@@ -233,7 +233,7 @@ using Random = UnityEngine.Random;
             tile.transform.Find("mapTile").Find("CharacterAlpha").gameObject.SetActive(false);
             tile.transform.Find("mapTile").Find("Object").gameObject.SetActive(false);
             tile.transform.Find("mapTile").Find("Highlight").gameObject.SetActive(false);
-            tile.GetComponent<HighlightTile>().HighlightedByPlayerUI.GetComponent<SpriteRenderer>().color = tile.GetComponent<HighlightTile>().NotHoveredColor;
+            tile.GetComponent<HighlightTile>().SetHighlightColor(tile.GetComponent<HighlightTile>().NotHoveredColor);
         }
 
         protected void DisablePreview(GameObject tile, List<GameObject> tileList)

@@ -373,7 +373,7 @@ public class AIBehaviour : MonoBehaviour
         FlipCharacter(newPosition);
         GameObject.Find("GameInformation").GetComponent<GameInformation>().MoveCharacter(newPosition, gameObject);
         if (CheckIfSpecificLayer(newPosition.transform.position, 0, 0, groundLayer) &&
-            !GetSpecificGroundTile(newPosition.transform.position, 0, 0, groundLayer).GetComponent<HighlightTile>().FogOfWarTile.activeSelf)//focus camera when AI steps on visible tile
+            !GetSpecificGroundTile(newPosition.transform.position, 0, 0, groundLayer).GetComponent<HighlightTile>().FogOfWarIsEnabled())//focus camera when AI steps on visible tile
         {
             GameObject.Find("GameInformation").GetComponent<GameInformation>().FocusSelectedCharacter(gameObject);
         }
@@ -475,8 +475,7 @@ public class AIBehaviour : MonoBehaviour
             {
                 Vector3 tilePosition = tile.transform.position;
                 if (CheckIfSpecificTag(tilePosition, 0, 0, blockingLayer, "Player") &&
-                    !GetSpecificGroundTile(tilePosition, 0, 0, groundLayer).GetComponent<HighlightTile>().FogOfWarTile
-                        .activeSelf) //kad nepultu to ko net nemato
+                    !GetSpecificGroundTile(tilePosition, 0, 0, groundLayer).GetComponent<HighlightTile>().FogOfWarIsEnabled()) //kad nepultu to ko net nemato
                 {
                     charactersInGrid.Add(GetSpecificGroundTile(tilePosition, 0, 0, blockingLayer));
                 }
