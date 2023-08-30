@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AcidRain : BaseAction
 {
+    private List<Poison> _poisons;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class AcidRain : BaseAction
                 if (CanTileBeClicked(position))
                 {
                     ChunkData target = GetSpecificGroundTile(tile.GetPosition());
-                    target.GetCurrentPlayerInformation().Poisons.Add(new PlayerInformation.Poison(gameObject, 2, 2));
+                    _poisons.Add(new Poison(target, 2, 2));
                 }
             }
             FinishAbility();
@@ -31,27 +32,20 @@ public class AcidRain : BaseAction
     public override void OnTurnStart()
     {
         base.OnTurnStart();
-        Poison();
+        PoisonPlayer();
     }
 
-    private void Poison()
+    private void PoisonPlayer()
     {
-        int poisonDamage = 0;
-
-        // foreach (Poison x in Poisons)
-        // {
-        //     x.turnsLeft--;
-        // }
-        // poisonDamage = TotalPoisonDamage();
-        // Poisons.RemoveAll(x => x.turnsLeft <= 0);
-        // if (poisonDamage > 0 && health > 0)
-        // {
-        //     if (BlessingsAndCurses.Find(x => x.blessingName == "Antitoxic") != null)
-        //     {
-        //         poisonDamage = 0;
-        //     }
-        //     DealDamage(poisonDamage, false, gameObject, "Poison");
-        // }
+        foreach (Poison x in _poisons)
+        {
+            if (x.poisonValue > 0 && x.chunk.GetCurrentPlayerInformation().GetHealth() > 0)
+            {
+                DealDamage(x.chunk, x.poisonValue, false, gameObject, "Poison");
+            }
+            x.turnsLeft--;
+        }
+        
     }
 
     public override void OnTileHover(GameObject tile)

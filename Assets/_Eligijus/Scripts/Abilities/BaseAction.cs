@@ -515,6 +515,15 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
                 
             }
         }
+
+        protected void DealDamage(ChunkData chunkData, int damage, bool crit, GameObject damageDealer, string specialInformation = "")
+        {
+            if (chunkData != null && chunkData.GetCurrentCharacter() != null && isAllegianceSame(chunkData.GetPosition()))
+            {
+                chunkData.GetCurrentPlayerInformation().DealDamage(damage, crit, gameObject);
+            }
+        }
+
         public virtual void PrepareForAIAction()
         {
             if (CanGridBeEnabled())

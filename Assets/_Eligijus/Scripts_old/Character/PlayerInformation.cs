@@ -146,6 +146,11 @@ public class PlayerInformation : MonoBehaviour
            
     }
 
+    public int GetHealth()
+    {
+        return _health;
+    }
+
     public PlayerInformationData GetPlayerInformationData()
     {
         return _playerInformationData;
@@ -226,18 +231,7 @@ public class PlayerInformation : MonoBehaviour
     {
        
     }
-    public class Poison
-    {
-        public GameObject Poisoner;
-        public int turnsLeft;
-        public int poisonValue;
-        public Poison(GameObject poisoner, int turnsleft, int poisonvalue)
-        {
-            Poisoner = poisoner;
-            turnsLeft = turnsleft;
-            poisonValue = poisonvalue;
-        }
-    }
+    
     public int TotalPoisonDamage()
     {
         int totalDamage = 0;
