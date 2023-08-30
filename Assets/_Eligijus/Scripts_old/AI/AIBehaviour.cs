@@ -21,9 +21,9 @@ public class AIBehaviour : MonoBehaviour
     private RaycastHit2D raycast;
 
     private List<List<GameObject>> _tileGrid;
-    private List<Vector3> _destinations;
+    // private List<Vector3> _destinations;
     private int _currentDestinationIndex;
-    public Vector3 DestinationObject;
+    // public Vector3 DestinationObject;
     private int _attackRange;
     private List<(int, int)> _attackRangeVectors;
     private float _castAfter;
@@ -36,7 +36,7 @@ public class AIBehaviour : MonoBehaviour
             _data = Data.Instance;
         }
 
-        _destinations = GameObject.Find("GameInformation").GetComponent<AIManager>().AIDestinations;
+        // _destinations = GameObject.Find("GameInformation").GetComponent<AIManager>().AIDestinations;
         _currentDestinationIndex = 0;
         // _attackRange = actionManager.FindActionByName("Attack").AttackRange;
         if (_attackRange == 1)
@@ -68,16 +68,16 @@ public class AIBehaviour : MonoBehaviour
             {
                 attackTarget = EnemyWithLeastHealth(GetCharactersInGrid(3 + _attackRange));
             }
-            DestinationObject = _destinations[_currentDestinationIndex - 1];
+            // DestinationObject = _destinations[_currentDestinationIndex - 1];
             //Direction to go to
-            if (CheckIfSpecificLayer(DestinationObject, 0, 0, blockingLayer) && GetSpecificGroundTile(DestinationObject, 0, 0, blockingLayer) == gameObject)
-            {
-                if (_currentDestinationIndex >= _destinations.Count)
-                {
-                    _currentDestinationIndex = 0;
-                }
-                DestinationObject = _destinations[_currentDestinationIndex++];
-            }
+            // if (CheckIfSpecificLayer(DestinationObject, 0, 0, blockingLayer) && GetSpecificGroundTile(DestinationObject, 0, 0, blockingLayer) == gameObject)
+            // {
+                // if (_currentDestinationIndex >= _destinations.Count)
+                // {
+                    // _currentDestinationIndex = 0;
+                // }
+                // DestinationObject = _destinations[_currentDestinationIndex++];
+            // }
             //ACTIONS
             //BeforeMovement
             CastAbilitiesByCastOrder(0);
@@ -105,17 +105,17 @@ public class AIBehaviour : MonoBehaviour
             }
     
             //Moves to destination if possible
-            else if (ClosestMovementTileToDestination(DestinationObject) != null)
-            {
-                StartCoroutine(ExecuteAfterTime(_castAfter, () =>
-                {
-                    MoveCharacterToTile(ClosestMovementTileToDestination(DestinationObject));
-                }));
-                _castAfter += 0.4f;
+            // else if (ClosestMovementTileToDestination(DestinationObject) != null)
+            // {
+            //     StartCoroutine(ExecuteAfterTime(_castAfter, () =>
+            //     {
+            //         MoveCharacterToTile(ClosestMovementTileToDestination(DestinationObject));
+            //     }));
+                // _castAfter += 0.4f;
                 //Wall
-                StartCoroutine(ExecuteAfterTime(_castAfter, () =>
-                {
-                    int toAttackNearbyWallOrNot = Random.Range(0, 4);//jei tik siaip paeina
+                // StartCoroutine(ExecuteAfterTime(_castAfter, () =>
+                // {
+                    // int toAttackNearbyWallOrNot = Random.Range(0, 4);//jei tik siaip paeina
                     // if (gridMovement.AvailableMovementPoints > 0 || toAttackNearbyWallOrNot < 2)
                     // {
                     //     GameObject wallTarget = ClosestTileFromListToDestination(DestinationObject, GetSurroundingWalls());
@@ -130,11 +130,11 @@ public class AIBehaviour : MonoBehaviour
                     //         EndAIAction();
                     //     }
                     // }
-                }));
-                _castAfter += 0.6f;
+                // }));
+                // _castAfter += 0.6f;
                 //Casts a spell if possible
-                CastAbilitiesByCastOrder(3);
-            }
+                // CastAbilitiesByCastOrder(3);
+            // }
         }
     }
     public float TimeRequiredForTurn()//Return max possible time spent in turn
