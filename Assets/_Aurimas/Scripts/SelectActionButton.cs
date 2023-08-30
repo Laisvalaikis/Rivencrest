@@ -13,9 +13,7 @@ public class SelectActionButton : MonoBehaviour
     private HelpTable _helpTable;
     public Image abilityButtonBackground;
     public Image AbilityButtonImage;
-    public Image characterPortrait;
-    public TextMeshProUGUI healthBar;
-    public Image staminaButtonBackground;
+    
     
     public void OnHover()
     {

@@ -14,7 +14,7 @@ public class PlayerInformation : MonoBehaviour
     private DamageText damageTextas;
     private PlayerAttack playerAttack;
     private TextMeshPro textMeshPro;
-    private GridMovement gridMovement;
+    // private GridMovement gridMovement;
     private PlayerTeams playerTeams;
     // private CreateWhiteField createWhiteField;
     // private MindControl mindControl;

@@ -25,7 +25,7 @@ using UnityEngine.UI;
             GameObject.Find("GameInformation").GetComponent<GameInformation>().DeselectTeam(character);
             GameObject.Find("GameInformation").GetComponent<GameInformation>().FocusSelectedCharacter(character);
             character.transform.position = coordinates + new Vector3(0f, 0f, -1f);
-            character.GetComponent<GridMovement>().AvailableMovementPoints += movementPoints;
+            // character.GetComponent<GridMovement>().AvailableMovementPoints += movementPoints;
             GameObject.Find("GameInformation").GetComponent<GameInformation>().undoAction.available = false;
         }
     }

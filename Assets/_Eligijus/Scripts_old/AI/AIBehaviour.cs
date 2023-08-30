@@ -13,8 +13,6 @@ public class AIBehaviour : MonoBehaviour
     public LayerMask blockingLayer;
     public LayerMask fogLayer;
     [SerializeField]
-    private GridMovement gridMovement;
-    [SerializeField]
     private PlayerInformation playerInformation;
     [SerializeField]
     PlayerMovement playerMovement;
@@ -118,20 +116,20 @@ public class AIBehaviour : MonoBehaviour
                 StartCoroutine(ExecuteAfterTime(_castAfter, () =>
                 {
                     int toAttackNearbyWallOrNot = Random.Range(0, 4);//jei tik siaip paeina
-                    if (gridMovement.AvailableMovementPoints > 0 || toAttackNearbyWallOrNot < 2)
-                    {
-                        GameObject wallTarget = ClosestTileFromListToDestination(DestinationObject, GetSurroundingWalls());
-                        if (wallTarget != null)
-                        {
+                    // if (gridMovement.AvailableMovementPoints > 0 || toAttackNearbyWallOrNot < 2)
+                    // {
+                    //     GameObject wallTarget = ClosestTileFromListToDestination(DestinationObject, GetSurroundingWalls());
+                    //     if (wallTarget != null)
+                    //     {
                             /*if (AttackRange > 1 && PlaceToMoveToWhenAttacking(WallTarget, AttackRange) != null)
                             {
                                 MoveCharacterToTile(PlaceToMoveToWhenAttacking(AttackTarget, AttackRange));
                             }*/
                             // actionManager.FindActionByName("Attack").ResolveAbility(wallTarget);
-                            FlipCharacter(wallTarget);
-                            EndAIAction();
-                        }
-                    }
+                    //         FlipCharacter(wallTarget);
+                    //         EndAIAction();
+                    //     }
+                    // }
                 }));
                 _castAfter += 0.6f;
                 //Casts a spell if possible
@@ -294,8 +292,8 @@ public class AIBehaviour : MonoBehaviour
         {
             return GetSpecificGroundTile(gameObject.transform.position, 0, 0, groundLayer);
         }
-        gridMovement.CreateGrid();
-        CreateGrid(gridMovement.AvailableMovementPoints, "Movement");
+        // gridMovement.CreateGrid();
+        // CreateGrid(gridMovement.AvailableMovementPoints, "Movement");
         GameObject closestTile;
         List<GameObject> closestTileList = new List<GameObject>();
         float closestDistance = 9999;
@@ -370,8 +368,8 @@ public class AIBehaviour : MonoBehaviour
     }
     private void MoveCharacterToTile(GameObject newPosition)
     {
-        gridMovement.CreateGrid();
-        gridMovement.CreateWayList(newPosition);
+        // gridMovement.CreateGrid();
+        // gridMovement.CreateWayList(newPosition);
         FlipCharacter(newPosition);
         GameObject.Find("GameInformation").GetComponent<GameInformation>().MoveCharacter(newPosition, gameObject);
         if (CheckIfSpecificLayer(newPosition.transform.position, 0, 0, groundLayer) &&
@@ -384,37 +382,37 @@ public class AIBehaviour : MonoBehaviour
     {
         List<GameObject> possibleMovePositions = GetSurroundingTiles(attackTarget, attackRange);
         List<GameObject> placesToMove = new List<GameObject>();
-        gridMovement.CreateGrid();
-        if (playerInformation.CantMove)
-        {
-            gridMovement.AvailableMovementTiles.Clear();
-        }
-        if (gridMovement.AvailableMovementTiles.Count > 0)
-        {
-            gridMovement.AvailableMovementTiles[0].Add(GetSpecificGroundTile(gameObject.transform.position, 0, 0, groundLayer));
-        }
-        else
-        {
-            gridMovement.AvailableMovementTiles.Add(new List<GameObject>());
-            gridMovement.AvailableMovementTiles[0].Add(GetSpecificGroundTile(gameObject.transform.position, 0, 0, groundLayer));
-        }
-        CreateGrid(gridMovement.AvailableMovementPoints, "Movement");
-        foreach (List<GameObject> tilesInEachGridIndex in gridMovement.AvailableMovementTiles) // buvo this.TileGrid
-        {
-            foreach (GameObject tile in tilesInEachGridIndex)
-            {
-                foreach (GameObject possibleMovePosition in possibleMovePositions)
-                {
-                    //gal random sita checkint
-                    Vector3 possibleMove = possibleMovePosition.transform.position;
-                    bool isItCantAttackTile = CheckIfSpecificLayer(possibleMove, 0, 0, fogLayer) || CheckIfSpecificTag(possibleMove, 0, 0, groundLayer, "Water");
-                    if (possibleMovePosition == tile && !isItCantAttackTile && !ShouldCharacterBeAfraidToGoOnTile(possibleMovePosition))
-                    {
-                        placesToMove.Add(tile);
-                    }
-                }
-            }
-        }
+        // gridMovement.CreateGrid();
+        // if (playerInformation.CantMove)
+        // {
+        //     gridMovement.AvailableMovementTiles.Clear();
+        // }
+        // if (gridMovement.AvailableMovementTiles.Count > 0)
+        // {
+        //     gridMovement.AvailableMovementTiles[0].Add(GetSpecificGroundTile(gameObject.transform.position, 0, 0, groundLayer));
+        // }
+        // else
+        // {
+        //     gridMovement.AvailableMovementTiles.Add(new List<GameObject>());
+        //     gridMovement.AvailableMovementTiles[0].Add(GetSpecificGroundTile(gameObject.transform.position, 0, 0, groundLayer));
+        // }
+        // CreateGrid(gridMovement.AvailableMovementPoints, "Movement");
+        // foreach (List<GameObject> tilesInEachGridIndex in gridMovement.AvailableMovementTiles) // buvo this.TileGrid
+        // {
+        //     foreach (GameObject tile in tilesInEachGridIndex)
+        //     {
+        //         foreach (GameObject possibleMovePosition in possibleMovePositions)
+        //         {
+        //             //gal random sita checkint
+        //             Vector3 possibleMove = possibleMovePosition.transform.position;
+        //             bool isItCantAttackTile = CheckIfSpecificLayer(possibleMove, 0, 0, fogLayer) || CheckIfSpecificTag(possibleMove, 0, 0, groundLayer, "Water");
+        //             if (possibleMovePosition == tile && !isItCantAttackTile && !ShouldCharacterBeAfraidToGoOnTile(possibleMovePosition))
+        //             {
+        //                 placesToMove.Add(tile);
+        //             }
+        //         }
+        //     }
+        // }
         if (placesToMove.Count > 0)
         {
             return placesToMove[Random.Range(0, placesToMove.Count - 1)];
@@ -614,7 +612,7 @@ public class AIBehaviour : MonoBehaviour
             || (GetSpecificGroundTile(tilePosition, 0, 0, groundLayer).transform.Find("mapTile").Find("GreenZone").gameObject.activeSelf)
             ));
         //not afraid when
-        bool shouldCharacterGo = !isItDangerZone || (playerInformation.BarrierProvider != null || gridMovement.AvailableMovementPoints < 3);
+        bool shouldCharacterGo = !isItDangerZone || (playerInformation.BarrierProvider != null);
         return !shouldCharacterGo;
     }
     private void EndAIAction()

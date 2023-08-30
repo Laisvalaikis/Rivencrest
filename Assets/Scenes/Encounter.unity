@@ -2332,6 +2332,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 219515217425139505, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1494327655473584074, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnButtonClick
@@ -2644,6 +2648,10 @@ PrefabInstance:
       propertyPath: staminaButtonBackground
       value: 
       objectReference: {fileID: 795026534}
+    - target: {fileID: 7632583219671813087, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8208496935546252417, guid: 1f557172b14a9c6488af381ae98d74df, type: 3}
       propertyPath: characterPortrait
       value: 

@@ -348,6 +348,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   helpTable: {fileID: 2653853784337392208}
   _abilityManager: {fileID: 0}
+  characterPortrait: {fileID: 219515217425139507}
+  healthBar: {fileID: 8369032573077405776}
+  staminaButtonBackground: {fileID: 3310706611684239604}
   abilityButtons:
   - {fileID: 4225750205019443889}
   - {fileID: 157668101770582905}
@@ -2403,7 +2406,6 @@ MonoBehaviour:
   isAbilitySlow: {fileID: 2282717818280383565}
   slowAbility: {fileID: 8456086727203737567}
   fastAbility: {fileID: 6205430426309956846}
-  abilityText: []
   hasActionButtonBeenEntered: 0
 --- !u!1 &6205430426309956846
 GameObject:

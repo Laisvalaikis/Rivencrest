@@ -28,13 +28,13 @@ public class BottomCornerUI : MonoBehaviour
     public Animator healthAnimator;
     public GameObject cornerUi;
     private PlayerInformationData _currentPlayerInformationData;
-    private GridMovement characterOnBoardGridMovement;
+    // private GridMovement characterOnBoardGridMovement;
     // private ActionButton actionButtonList;
     [SerializeField] private List<Image> actionButtonFrame;
     private PlayerInformation playerInformationCurrentCharacter;
     private PlayerInformation playerInformationCharacterOnBoard;
     // private ActionManager actionManagerCharacterOnBoard;
-    private GridMovement gridMovementCharacterOnBoard;
+    // private GridMovement gridMovementCharacterOnBoard;
     
     private Image image;
     private Animator animator;
@@ -88,7 +88,7 @@ public class BottomCornerUI : MonoBehaviour
     //Start nebuvo cia ButtonManager start
     void Start()
     {
-        GridMovement characterOnBoardGridMovement = CharacterOnBoard.GetComponent<GridMovement>();
+        // GridMovement characterOnBoardGridMovement = CharacterOnBoard.GetComponent<GridMovement>();
         PlayerInformation playerInformationCurrentCharacter = currentCharacter.GetComponent<PlayerInformation>();
         PlayerInformation playerInformationCharacterOnBoard = CharacterOnBoard.GetComponent<PlayerInformation>();
         // ActionManager actionManagerCharacterOnBoard = CharacterOnBoard.GetComponent<ActionManager>();
@@ -197,7 +197,7 @@ public class BottomCornerUI : MonoBehaviour
             backgroundImages[i].color = _currentPlayerInformationData.backgroundColor;
         }
         currentCharacter = CharacterOnBoard;
-        staminaPoints.text = currentCharacter.GetComponent<GridMovement>().AvailableMovementPoints.ToString(); //Sets movement text playerInformationCurrentCharacter
+        // staminaPoints.text = currentCharacter.GetComponent<GridMovement>().AvailableMovementPoints.ToString(); //Sets movement text playerInformationCurrentCharacter
         //healthPoints.text = currentCharacter.GetComponent<PlayerInformation>().health.ToString(); //Sets health text
        // healthAnimator.SetFloat("healthPercent", currentCharacter.GetComponent<PlayerInformation>().GetHealthPercentage());
         healthPoints.text = playerInformationCurrentCharacter.health.ToString(); //Sets health text

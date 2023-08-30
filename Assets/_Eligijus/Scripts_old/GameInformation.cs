@@ -246,14 +246,14 @@ public class GameInformation : MonoBehaviour
         DisableGrids();
         if (SelectedCharacter != null)
         {
-            SelectedCharacter.GetComponent<GridMovement>().EnableGrid();
+            // SelectedCharacter.GetComponent<GridMovement>().EnableGrid();
             cornerButtonManager.DisableSelection(
                 cornerButtonManager.ButtonList[0].transform.Find("ActionButtonFrame").gameObject); //ijungia movement frame
             
         }
         else if (InspectedCharacter != null)
         {
-            InspectedCharacter.GetComponent<GridMovement>().EnableGrid();
+            // InspectedCharacter.GetComponent<GridMovement>().EnableGrid();
             cornerButtonManager.DisableSelection(
                 cornerButtonManager.ButtonList[0].transform.Find("ActionButtonFrame").gameObject); //ijungia movement frame
         }
@@ -309,7 +309,7 @@ public class GameInformation : MonoBehaviour
             if (SelectedCharacter != null)
                 DeselectTeam(SelectedCharacter);
             DisableOtherCharacterMovement(CharacterToInspect);
-            CharacterToInspect.GetComponent<GridMovement>().EnableGrid();
+            // CharacterToInspect.GetComponent<GridMovement>().EnableGrid();
             cornerButtonManager.transform.GetChild(0).gameObject.SetActive(true);
             Debug.Log("cia kazkas daroma su corner ui manager");
             SelectedCharacter = null;
@@ -398,32 +398,32 @@ public class GameInformation : MonoBehaviour
     }
     public void MoveSelectedCharacter(GameObject newPosition)
     {
-        GameObject FinalDestination = SelectedCharacter.GetComponent<GridMovement>().PickUpWayTiles();
-        if (SelectedCharacter.GetComponent<GridMovement>().AreThereConsumablesOnTheWay())
-        {
-            undoAction.available = false;
-        }
-        if (FinalDestination != null)
-        {
-            newPosition = FinalDestination;
-        }
+        // GameObject FinalDestination = SelectedCharacter.GetComponent<GridMovement>().PickUpWayTiles();
+        // if (SelectedCharacter.GetComponent<GridMovement>().AreThereConsumablesOnTheWay())
+        // {
+            // undoAction.available = false;
+        // }
+        // if (FinalDestination != null)
+        // {
+            // newPosition = FinalDestination;
+        // }
         SelectedCharacter.transform.position = newPosition.transform.position + new Vector3(0f, 0f, -1f);
-        SelectedCharacter.GetComponent<GridMovement>().RemoveAvailableMovementPoints(newPosition);
+        // SelectedCharacter.GetComponent<GridMovement>().RemoveAvailableMovementPoints(newPosition);
         bottomCornerUI.EnableAbilities(SelectedCharacter.GetComponent<PlayerInformation>().savedCharacter);
     }
     public void MoveCharacter(GameObject newPosition, GameObject character)
     {
-        GameObject FinalDestination = character.GetComponent<GridMovement>().PickUpWayTiles();
-        if (character.GetComponent<GridMovement>().AreThereConsumablesOnTheWay())
-        {
-            undoAction.available = false;
-        }
-        if (FinalDestination != null)
-        {
-            newPosition = FinalDestination;
-        }
+        // GameObject FinalDestination = character.GetComponent<GridMovement>().PickUpWayTiles();
+        // if (character.GetComponent<GridMovement>().AreThereConsumablesOnTheWay())
+        // {
+            // undoAction.available = false;
+        // }
+        // if (FinalDestination != null)
+        // {
+            // newPosition = FinalDestination;
+        // }
         character.transform.position = newPosition.transform.position + new Vector3(0f, 0f, -1f);
-        character.GetComponent<GridMovement>().RemoveAvailableMovementPoints(newPosition);
+        // character.GetComponent<GridMovement>().RemoveAvailableMovementPoints(newPosition);
         bottomCornerUI.EnableAbilities(character.GetComponent<PlayerInformation>().savedCharacter);
     }
     public void FocusSelectedCharacter(GameObject character)
@@ -577,7 +577,7 @@ public class GameInformation : MonoBehaviour
         for (int j = 0; j < GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].characters.Count; j++)//komanda kurios dabar eile bus
         {
             GameObject characterInList = GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].characters[j];
-            characterInList.GetComponent<GridMovement>().OnTurnStart();
+            // characterInList.GetComponent<GridMovement>().OnTurnStart();
             //  for (int k = 0; k < characterInList.GetComponent<ActionManager>().ActionScripts.Count; k++)
             // {
             //     characterInList.GetComponent<ActionManager>().ActionScripts[k].action.OnTurnStart();
@@ -820,7 +820,7 @@ public class GameInformation : MonoBehaviour
         bool highlightEndTurn = true;
         foreach (GameObject character in GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].characters)
         {
-            if (character.GetComponent<GridMovement>().AvailableMovementPoints > 2 && character.GetComponent<PlayerInformation>().health > 0 && !character.GetComponent<PlayerInformation>().Debuffs.Contains("Stun"))
+            // if (character.GetComponent<GridMovement>().AvailableMovementPoints > 2 && character.GetComponent<PlayerInformation>().health > 0 && !character.GetComponent<PlayerInformation>().Debuffs.Contains("Stun"))
                 highlightEndTurn = false;
         }
         GameObject.Find("Canvas").transform.Find("EndTurn").GetComponent<EndTurn>().ChangeSprite(highlightEndTurn);
