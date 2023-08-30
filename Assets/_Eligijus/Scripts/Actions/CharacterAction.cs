@@ -19,7 +19,7 @@ public abstract class CharacterAction : MonoBehaviour
         
     }
     
-    public virtual void DealRandomDamageToTarget(GameObject target, int minDamage, int maxDamage)
+    public virtual void DealRandomDamageToTarget(ChunkData chunkData, int minDamage, int maxDamage)
     {
         
     }
