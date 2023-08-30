@@ -103,7 +103,12 @@ using Random = UnityEngine.Random;
                 GenerateDiamondPattern(startChunk, AttackRange);
             }
         }
-        
+
+        public List<ChunkData> ReturnGeneratedChunks()
+        {
+            return _chunkList;
+        }
+
         protected override List<ChunkData> GeneratePattern(ChunkData centerChunk, ChunkData[,] chunksArray, int length)
         {
             return base.GeneratePattern(centerChunk, chunksArray, length);
