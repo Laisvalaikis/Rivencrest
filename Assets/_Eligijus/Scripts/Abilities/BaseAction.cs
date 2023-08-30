@@ -45,7 +45,7 @@ using Random = UnityEngine.Random;
         protected List<GameObject> MergedTileList = new List<GameObject>();
         private AssignSound _assignSound;
         private PlayerInformationData _playerInformationData;
-        private List<ChunkData> _chunkList;
+        protected List<ChunkData> _chunkList;
         
         void Awake()
         {
@@ -259,10 +259,10 @@ using Random = UnityEngine.Random;
         }
         public virtual bool CanTileBeClicked(Vector3 position)//ar veiks ability
         {
-            if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") && !isAllegianceSame(position))
-            {
-                return true;
-            }
+            // if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") && !isAllegianceSame(position))
+            // {
+            //     return true;
+            // }
 
             return false;
         }
