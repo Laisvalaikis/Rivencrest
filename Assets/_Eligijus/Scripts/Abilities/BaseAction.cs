@@ -63,7 +63,16 @@ using Random = UnityEngine.Random;
             _assignSound = GetComponent<AssignSound>();
         }
         
-        
+        private void HighlightCharacterMovement()
+        {
+            foreach (var chunk in _chunkList)
+            {
+                if (chunk.GetCurrentCharacter() == null)
+                {
+                    
+                }
+            }
+        }
         public override void CreateGrid()
         {
             //CreateAvailableTileList();
