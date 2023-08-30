@@ -123,7 +123,7 @@ public class PlayerInformation : MonoBehaviour
         Protected = 2,
         None = 3
     };
-    
+
     public void DealDamage(int damage, bool crit, GameObject damageDealer, string specialInformation = "")
     {
        // List<TextMeshProUGUI> damageTextTest = new List<TextMeshProUGUI>();
@@ -218,7 +218,7 @@ public class PlayerInformation : MonoBehaviour
        
     } 
    
-    public void OnTurnStart()
+    public virtual void OnTurnStart()
     {
         
     }

@@ -19,13 +19,39 @@ public class AcidRain : BaseAction
             {
                 if (CanTileBeClicked(position))
                 {
-                    ChunkData target=GetSpecificGroundTile(tile.GetPosition());
-                    
+                    ChunkData target = GetSpecificGroundTile(tile.GetPosition());
+                    target.GetCurrentPlayerInformation().Poisons.Add(new PlayerInformation.Poison(gameObject, 2, 2));
                 }
             }
             FinishAbility();
         }
         
+    }
+
+    public override void OnTurnStart()
+    {
+        base.OnTurnStart();
+        Poison();
+    }
+
+    private void Poison()
+    {
+        int poisonDamage = 0;
+
+        // foreach (Poison x in Poisons)
+        // {
+        //     x.turnsLeft--;
+        // }
+        // poisonDamage = TotalPoisonDamage();
+        // Poisons.RemoveAll(x => x.turnsLeft <= 0);
+        // if (poisonDamage > 0 && health > 0)
+        // {
+        //     if (BlessingsAndCurses.Find(x => x.blessingName == "Antitoxic") != null)
+        //     {
+        //         poisonDamage = 0;
+        //     }
+        //     DealDamage(poisonDamage, false, gameObject, "Poison");
+        // }
     }
 
     public override void OnTileHover(GameObject tile)
