@@ -53,7 +53,7 @@ public class SelectAction : MonoBehaviour
         staminaButtonBackground.color = _playerInformationData.backgroundColor;
     }
 
-    public void ActionSelection(CharacterAction characterAction)
+    public void ActionSelection(BaseAction characterAction)
     {
         _abilityManager.SetCurrentAbility(characterAction);
     }
@@ -64,8 +64,8 @@ public class SelectAction : MonoBehaviour
         _currentPlayer = currentPlayer;
         GetAbilities();
         UpdatePlayerInfo();
-        GenerateActions();
         _abilityManager.SetCurrentAbility(_playerAbilities[0].Action);
+        GenerateActions();
     }
     public void DeSetCurrentCharacter()
     {

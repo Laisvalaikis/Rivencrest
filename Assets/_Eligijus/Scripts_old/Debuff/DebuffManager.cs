@@ -155,12 +155,12 @@ public class DebuffManager : MonoBehaviour
         {
             character.transform.Find("VFX").Find("Aflame").GetComponent<Animator>().SetBool("aflame", false);
         }
-        if (character.Poisons.Count > 0)
-        {
-            debuffs.Add("Poison");
-            k++;
-            character.transform.Find("VFX").Find("Poison").gameObject.SetActive(true);
-        }
+       // if (character.Poisons.Count > 0)
+       // {
+        //    debuffs.Add("Poison");
+        //    k++;
+        //    character.transform.Find("VFX").Find("Poison").gameObject.SetActive(true);
+        //}
         else
         {
             character.transform.Find("VFX").Find("Poison").gameObject.SetActive(false);

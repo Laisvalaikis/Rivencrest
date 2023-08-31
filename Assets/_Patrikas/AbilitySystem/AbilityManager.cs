@@ -8,7 +8,7 @@ public class AbilityManager : MonoBehaviour
     [SerializeField] private Camera camera;
     [SerializeField] private GameTileMap gameTileMap;
     private Vector2 _mousePosition;
-    private CharacterAction _currentAbility;
+    private BaseAction _currentAbility;
 
     public void OnMouseClick(InputAction.CallbackContext context)
     {
@@ -19,7 +19,7 @@ public class AbilityManager : MonoBehaviour
         }
     }
 
-    public void SetCurrentAbility(CharacterAction ability)
+    public void SetCurrentAbility(BaseAction ability)
     {
         if (_currentAbility != null)
         {

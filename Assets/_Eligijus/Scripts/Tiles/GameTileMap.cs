@@ -353,7 +353,7 @@ public class GameTileMap : MonoBehaviour
         return false;
     }
     
-    public bool IsSelectedCharacterIsOnTile(Vector3 mousePosition)
+    public bool SelectedCharacterIsOnTile(Vector3 mousePosition)
     {
         if (GetChunk(mousePosition) != null)
         {
@@ -506,7 +506,7 @@ public class GameTileMap : MonoBehaviour
     {
         Vector3 mousePos = new Vector3(_mousePosition.x, _mousePosition.y, mainCamera.nearClipPlane);
         Vector3 worldPos = mainCamera.ScreenToWorldPoint(mousePos);
-        if (!CharacterIsSelected())
+        if (!CharacterIsSelected() || !SelectedCharacterIsOnTile(mousePos))
         {
             SelectTile(worldPos);
         }

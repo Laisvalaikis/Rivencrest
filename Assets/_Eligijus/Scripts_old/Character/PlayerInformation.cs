@@ -73,7 +73,7 @@ public class PlayerInformation : MonoBehaviour
     [HideInInspector] public bool Protected = false;
     [HideInInspector] public bool MistShield = false; //UndeadKnightSpell
     [HideInInspector] public bool Stasis = false;
-    [HideInInspector] public List<Poison> Poisons = new List<Poison>();
+    //[HideInInspector] public List<Poison> Poisons = new List<Poison>();
     [HideInInspector] public bool wasThisCharacterSpawned = false;
     [HideInInspector] public List<string> enabledAbilitiesEnemy;
     
@@ -235,10 +235,10 @@ public class PlayerInformation : MonoBehaviour
     public int TotalPoisonDamage()
     {
         int totalDamage = 0;
-        foreach (Poison x in Poisons)
-        {
-            totalDamage += x.poisonValue;
-        }
+        //foreach (Poison x in Poisons)
+       // {
+        //    totalDamage += x.poisonValue;
+        //}
         return totalDamage;
     }
     IEnumerator ExecuteAfterTime(float time, Action task)

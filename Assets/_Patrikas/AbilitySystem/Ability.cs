@@ -11,5 +11,5 @@ public class Ability
     public AbilityText abilityText;
     public bool enabled = true;
     public Sprite AbilityImage;
-    public CharacterAction Action;
+    public BaseAction Action;
 }
