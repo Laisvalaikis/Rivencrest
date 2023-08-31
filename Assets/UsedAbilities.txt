@@ -6,7 +6,7 @@ BlindDart+
 BlockAbility+
 ChainHook+-
 ChillingGust+
-CometFall	
+CometFall+	
 CreateBearTrap+-
 CreateEye+-
 CreateFog+-
@@ -17,7 +17,7 @@ CyroFreeze+
 DissarmingBlast+
 DissarmingSlam+	
 Enrage+	
-Entangle	
+Entangle+-	
 Excute+	
 FlameBlast+	
 FlameKick+	
