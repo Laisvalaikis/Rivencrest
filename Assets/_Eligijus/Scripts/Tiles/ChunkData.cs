@@ -58,8 +58,6 @@ public class ChunkData
         {
             _tileSpriteRenderer.gameObject.SetActive(false);
         }
-        
-        
     }
 
     public void EnableTileRendering()
@@ -205,5 +203,4 @@ public class ChunkData
     {
         return _heapIndex;
     }
-
 }

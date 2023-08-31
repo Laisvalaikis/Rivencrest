@@ -10,6 +10,8 @@ public class HighlightTile : MonoBehaviour
     [SerializeField] private SpriteRenderer FogOfWarTile;
     [SerializeField] private SpriteRenderer ArrowTile;
     [SerializeField] private SpriteRenderer DangerUI;
+    [SerializeField] private Sprite PlayerSelect;
+    [SerializeField] private Sprite MovementSelect;
     //public Sprite HoverSprite;
     //private Sprite OriginalSprite;
     private Color AttackHighlightColor;
@@ -30,15 +32,23 @@ public class HighlightTile : MonoBehaviour
     private RaycastHit2D raycast;
     private LayerMask blockingLayer;
     private ColorManager colorManager;
+    
     //
     public bool notification = false;
     private bool PCControls = true; //Galima pakeisti i mobile pasiemus boola Start funkcijoj is GameInformation
 
     public void ActivateMovementTile(bool value)
     {
+        HighlightedByPlayerUI.sprite = MovementSelect;
         HighlightedByPlayerUI.enabled = value;
     }
 
+    public void ActivatePlayerTile(bool value)
+    {
+        HighlightedByPlayerUI.sprite = PlayerSelect;
+        HighlightedByPlayerUI.enabled = value;
+    }
+    
     public void SetHighlightColor(Color color)
     {
         HighlightedByPlayerUI.color = color;
