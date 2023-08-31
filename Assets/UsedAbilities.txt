@@ -59,7 +59,7 @@ SummonOrb+-
 SwitchPlaces	
 SwordPush+	
 ThrowBehind	
-ThrowSpear+	
+ThrowSpear+-	
 Volley+	
 WallEntrap+	
 WallSmash+	
