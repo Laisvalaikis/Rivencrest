@@ -5,6 +5,7 @@ using UnityEngine;
 using System.Threading;
 using Unity.VisualScripting;
 using UnityEditor.Tilemaps;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
 
@@ -25,7 +26,7 @@ public class GameTileMap : MonoBehaviour
     }
 
     public CharacterAction selectedCharacterAction;
-    public TileMapData currentMap;
+    public TileMapData currentMap; 
     [SerializeField] private SpriteRenderer[] tileSpriteRenderers;
     [SerializeField] private HighlightTile[] tileHighlights;
     [SerializeField] private GameObject tiles;
@@ -63,7 +64,6 @@ public class GameTileMap : MonoBehaviour
 
     void Start()
     {
-
         if (currentMap._chunkSize > 0)
         {
             _chunks = new List<SaveChunks>();
@@ -318,17 +318,27 @@ public class GameTileMap : MonoBehaviour
         {
             ChunkData chunkData = GetChunk(mousePosition);
             chunkData.SetCurrentCharacter(character);
-
+            chunkData.GetTileHighlight().ActivatePlayerTile(true);
         }
     }
-    
+
+    public void ResetChunkCharacter(Vector3 mousePosition)
+    {
+        if (GetChunk(mousePosition) != null)
+        {
+            ChunkData chunk = GetChunk(mousePosition);
+            chunk.SetCurrentCharacter(null, null);
+            chunk.GetTileHighlight().ActivateMovementTile(false);
+        }
+    }
+
     public void SetCharacter(Vector3 mousePosition, GameObject character, PlayerInformation playerInformation)
     {
         if (GetChunk(mousePosition) != null)
         {
             ChunkData chunkData = GetChunk(mousePosition);
             chunkData.SetCurrentCharacter(character, playerInformation);
-
+            chunkData.GetTileHighlight().ActivatePlayerTile(true);
         }
     }
 
@@ -370,7 +380,7 @@ public class GameTileMap : MonoBehaviour
 
         if (GetChunk(mousePosition) != null)
         {
-            SetCharacter(_currentSelectedCharacter.transform.position, null);
+            ResetChunkCharacter(mousePosition);
             Vector3 characterPosition = GetChunk(mousePosition).GetPosition() - offset;
             _currentSelectedCharacter.transform.position = characterPosition;
             SetCharacter(mousePosition, _currentSelectedCharacter);
