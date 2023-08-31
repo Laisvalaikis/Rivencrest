@@ -105,6 +105,7 @@ public class GameTileMap : MonoBehaviour
     {
         for (int i = 0; i < _allChunks.Count; i++)
         {
+            //gal cia?
             _allChunks[i].SetupChunk();
             yield return null;
         }
@@ -380,10 +381,13 @@ public class GameTileMap : MonoBehaviour
 
         if (GetChunk(mousePosition) != null)
         {
-            ResetChunkCharacter(mousePosition);
+            ChunkData previousCharacterChunk =
+                GameTileMap.Tilemap.GetChunk(_currentSelectedCharacter.transform.position);
+            ResetChunkCharacter(previousCharacterChunk.GetPosition());
             Vector3 characterPosition = GetChunk(mousePosition).GetPosition() - offset;
             _currentSelectedCharacter.transform.position = characterPosition;
             SetCharacter(mousePosition, _currentSelectedCharacter);
+            
         }
         // SelectedCharacter.GetComponent<GridMovement>().RemoveAvailableMovementPoints(newPosition);
         // bottomCornerUI.EnableAbilities(SelectedCharacter.GetComponent<PlayerInformation>().savedCharacter);
