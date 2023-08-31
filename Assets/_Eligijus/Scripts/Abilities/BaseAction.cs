@@ -69,7 +69,7 @@ using Random = UnityEngine.Random;
             {
                 if (chunk.GetCurrentCharacter() == null)
                 {
-                    
+                    chunk.GetTileHighlight().ActivateMovementTile(true);
                 }
             }
         }
@@ -89,8 +89,6 @@ using Random = UnityEngine.Random;
         {
             foreach (var chunk in _chunkList)
             {
-                chunk.DisableTileRendering();
-                chunk.DisableTileRenderingGameObject();
                 chunk.GetTileHighlight().ActivateMovementTile(false);
             }
             _chunkList.Clear();
@@ -108,6 +106,7 @@ using Random = UnityEngine.Random;
             {
                 GenerateDiamondPattern(startChunk, AttackRange);
             }
+            HighlightCharacterMovement();
         }
 
         public List<ChunkData> ReturnGeneratedChunks()
@@ -141,9 +140,6 @@ using Random = UnityEngine.Random;
                             if (chunk != null && !chunk.TileIsLocked())
                             {
                                 _chunkList.Add(chunk);
-                                //chunk.EnableTileRenderingGameObject();
-                                //chunk.EnableTileRendering();
-                                chunk.GetTileHighlight().ActivateMovementTile(true);
                             }
                         }
                     }
@@ -175,9 +171,6 @@ using Random = UnityEngine.Random;
                         if (chunk != null && !chunk.TileIsLocked())
                         {
                             _chunkList.Add(chunk);
-                            chunk.EnableTileRenderingGameObject();
-                            chunk.EnableTileRendering();
-                            chunk.GetTileHighlight().ActivateMovementTile(true);
                         }
                     }
                 }
