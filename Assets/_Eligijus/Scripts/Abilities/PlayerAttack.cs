@@ -44,7 +44,8 @@ public class PlayerAttack : BaseAction
     public override void ResolveAbility(Vector3 position)
     {
         base.ResolveAbility(position);
-        DealRandomDamageToTarget(position, minAttackDamage, maxAttackDamage);
+        ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
+        DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
         Debug.LogError("FIX FINISH ABILITY");
         FinishAbility();
     }

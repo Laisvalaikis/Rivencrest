@@ -265,10 +265,10 @@ using Random = UnityEngine.Random;
         }
         public virtual bool CanTileBeClicked(Vector3 position)//ar veiks ability
         {
-            // if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") && !isAllegianceSame(position))
-            // {
-            //     return true;
-            // }
+            if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") && !isAllegianceSame(position))
+            {
+                return true;
+            }
 
             return false;
         }
@@ -510,12 +510,11 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
             }
         }
 
-        protected void DealRandomDamageToTarget(Vector3 targetChunk, int minAttackDamage, int maxAttackDamage)
+        protected override void DealRandomDamageToTarget(ChunkData chunkData, int minDamage, int maxDamage)
         {
-            ChunkData chunkData = GameTileMap.Tilemap.GetChunk(targetChunk);
-            if (chunkData != null && chunkData.GetCurrentCharacter() != null && isAllegianceSame(targetChunk))
+            if (chunkData != null && chunkData.GetCurrentCharacter() != null && isAllegianceSame(chunkData.GetPosition()))
             {
-                int randomDamage = Random.Range(minAttackDamage, maxAttackDamage);
+                int randomDamage = Random.Range(minDamage, maxDamage);
                 bool crit = IsItCriticalStrike(ref randomDamage);
                 dodgeActivation(ref randomDamage, chunkData.GetCurrentPlayerInformation());
                 chunkData.GetCurrentPlayerInformation().DealDamage(randomDamage, crit, gameObject);

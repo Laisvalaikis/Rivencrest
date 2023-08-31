@@ -24,7 +24,7 @@ public abstract class CharacterAction : MonoBehaviour
         
     }
     
-    public virtual void DealRandomDamageToTarget(ChunkData chunkData, int minDamage, int maxDamage)
+    protected virtual void DealRandomDamageToTarget(ChunkData chunkData, int minDamage, int maxDamage)
     {
         
     }

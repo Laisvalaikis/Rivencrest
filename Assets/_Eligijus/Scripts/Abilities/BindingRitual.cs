@@ -6,17 +6,19 @@ public class BindingRitual : BaseAction
 {
     public override void ResolveAbility(Vector3 position)
     {
-        if (CanTileBeClicked(position))
+        // if (CanTileBeClicked(position))
+        // {
+        foreach (ChunkData tile in ReturnGeneratedChunks())
         {
-            base.ResolveAbility(position);
+            DealRandomDamageToTarget(tile, minAttackDamage, maxAttackDamage);
+        }
+        
+        base.ResolveAbility(position);
             
-            foreach (ChunkData tile in ReturnGeneratedChunks())
-            {
-                DealRandomDamageToTarget(tile, minAttackDamage, maxAttackDamage);
-            }
+            
             
             FinishAbility();
-        }
+        // }
         
     }
     
