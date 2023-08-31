@@ -63,7 +63,7 @@ using Random = UnityEngine.Random;
             _assignSound = GetComponent<AssignSound>();
         }
         
-        private void HighlightCharacterMovement()
+        protected void HighlightCharacterMovement()
         {
             foreach (var chunk in _chunkList)
             {
@@ -100,7 +100,7 @@ using Random = UnityEngine.Random;
         //Creates a list of available chunks for attack
         private void CreateAvailableChunkList()
         {
-            ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
+            ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position + new Vector3(0, 0.5f, 0));
             if(laserGrid)
             {
                 GeneratePlusPattern(startChunk, AttackRange);
@@ -285,7 +285,7 @@ using Random = UnityEngine.Random;
         {
             if (CanGridBeEnabled())
             {
-                ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
+                ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position + new Vector3(0, 0.5f, 0));
                 CreateGrid(startChunk, AttackRange);
                 HighlightAll();
             }
@@ -530,7 +530,7 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
         {
             if (CanGridBeEnabled())
             {
-                ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
+                ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position + new Vector3(0, 0.5f, 0));
                 CreateGrid(startChunk, AttackRange);
             }
         }

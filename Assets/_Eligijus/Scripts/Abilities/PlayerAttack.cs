@@ -20,27 +20,6 @@ public class PlayerAttack : BaseAction
         //base.AddSurroundingsToList(middleTile, movementIndex, true);
     }
 
-    public override void EnableGrid()
-    {
-        if (CanGridBeEnabled())
-        {
-            ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
-            CreateGrid(startChunk, AttackRange);
-
-        }
-        else
-        {
-            // transform.gameObject.GetComponent<PlayerInformation>().currentState = "Movement";
-        }
-
-    }
-
-    public override void CreateGrid()
-    {
-        ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
-        CreateGrid(startChunk, AttackRange);
-    }
-
     public override void ResolveAbility(Vector3 position)
     {
         base.ResolveAbility(position);

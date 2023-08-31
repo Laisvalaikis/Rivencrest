@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerMovement : CharacterAction
+public class PlayerMovement : BaseAction
 {
     private bool ArrowMovement = false;
     private int horizontal = 0;
@@ -45,15 +45,26 @@ public class PlayerMovement : CharacterAction
        
     }
     
+    public override void ResolveAbility(Vector3 position)
+    {
+        base.ResolveAbility(position);
+        if (!GameTileMap.Tilemap.CharacterIsOnTile(position))
+        {
+            GameTileMap.Tilemap.MoveSelectedCharacter(position, new Vector3(0, 0.5f, 1));
+        }
+        
+        FinishAbility();
+    }
+    
     public override void OnTileClick(Vector3 mousePosition)
     {
-        if (!GameTileMap.Tilemap.CharacterIsOnTile(mousePosition))
-        {
-            GameTileMap.Tilemap.MoveSelectedCharacter(mousePosition, new Vector3(0, 0.5f, 1));
-        }
-
-        Debug.Log("We are in Character");
-        base.OnTileClick(mousePosition);
+        // if (!GameTileMap.Tilemap.CharacterIsOnTile(mousePosition))
+        // {
+        //     GameTileMap.Tilemap.MoveSelectedCharacter(mousePosition, new Vector3(0, 0.5f, 1));
+        // }
+        //
+        // Debug.Log("We are in Character");
+        // base.OnTileClick(mousePosition);
     }
    
     public void Flip(bool shouldCharacterFaceRight)
