@@ -44,6 +44,14 @@ public class PlayerMovement : BaseAction
         // }
        
     }
+
+    protected override void HighlightGridTile(ChunkData chunkData)
+    {
+        if (chunkData.GetCurrentCharacter() == null)
+        {
+            chunkData.GetTileHighlight().ActivateColorGridTile(true);
+        }
+    }
     
     public override void ResolveAbility(Vector3 position)
     {
@@ -52,7 +60,6 @@ public class PlayerMovement : BaseAction
         {
             GameTileMap.Tilemap.MoveSelectedCharacter(position, new Vector3(0, 0.5f, 1));
         }
-        
         FinishAbility();
     }
     

@@ -2,16 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class HighlightTile : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer HighlightedByPlayerUI;
+    [SerializeField] private SpriteRenderer ColorGridTile;
     [SerializeField] private SpriteRenderer FogOfWarTile;
     [SerializeField] private SpriteRenderer ArrowTile;
     [SerializeField] private SpriteRenderer DangerUI;
-    [SerializeField] private Sprite PlayerSelect;
-    [SerializeField] private Sprite MovementSelect;
+    [SerializeField] private SpriteRenderer PlayerSelect;
+
     //public Sprite HoverSprite;
     //private Sprite OriginalSprite;
     private Color AttackHighlightColor;
@@ -33,25 +34,19 @@ public class HighlightTile : MonoBehaviour
     private LayerMask blockingLayer;
     private ColorManager colorManager;
     
-    //
-    public bool notification = false;
-    private bool PCControls = true; //Galima pakeisti i mobile pasiemus boola Start funkcijoj is GameInformation
-
-    public void ActivateMovementTile(bool value)
+    public void ActivateColorGridTile(bool value)
     {
-        HighlightedByPlayerUI.sprite = MovementSelect;
-        HighlightedByPlayerUI.enabled = value;
+        ColorGridTile.enabled = value;
     }
-
+    
     public void ActivatePlayerTile(bool value)
     {
-        HighlightedByPlayerUI.sprite = PlayerSelect;
-        HighlightedByPlayerUI.enabled = value;
+        PlayerSelect.enabled = value;
     }
     
     public void SetHighlightColor(Color color)
     {
-        HighlightedByPlayerUI.color = color;
+        ColorGridTile.color = color;
     }
 
     public void EnableDisableFogOfWar(bool value)
@@ -118,7 +113,7 @@ public class HighlightTile : MonoBehaviour
 
     public void SetHighlightBool(bool statement)
     {
-        HighlightedByPlayerUI.enabled = statement;
+        ColorGridTile.enabled = statement;
         isHighlighted = statement;
         if (!statement)
         {
@@ -178,7 +173,7 @@ public class HighlightTile : MonoBehaviour
         //     NotHoveredColor = (new Color(100f / 255f, 100f / 255f, 100f / 255f) + NotHoveredColor) / 2;
         //     //NotHoveredColor = NotHoveredColor + new Color(-20/255f,-20/255f,-20/255f, -50/255f);
         // }
-        HighlightedByPlayerUI.GetComponent<SpriteRenderer>().color = NotHoveredColor;
+        ColorGridTile.GetComponent<SpriteRenderer>().color = NotHoveredColor;
     }
     //void OnMouseDown()
     /*void OnMouseDown()

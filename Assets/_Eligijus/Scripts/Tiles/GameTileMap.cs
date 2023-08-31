@@ -327,7 +327,7 @@ public class GameTileMap : MonoBehaviour
         {
             ChunkData chunk = GetChunk(mousePosition);
             chunk.SetCurrentCharacter(null, null);
-            chunk.GetTileHighlight().ActivateMovementTile(false);
+            chunk.GetTileHighlight().ActivatePlayerTile(false);
         }
     }
 

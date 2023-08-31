@@ -45,7 +45,7 @@ public class BindingRitual : BaseAction
                         if (chunk != null && !chunk.TileIsLocked())
                         {
                             _chunkList.Add(chunk);
-                            HighlightCharacterMovement(chunk);
+                            HighlightGridTile(chunk);
                             //chunk.EnableTileRenderingGameObject();
                             //chunk.EnableTileRendering();
                         }

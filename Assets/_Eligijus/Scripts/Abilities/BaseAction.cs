@@ -63,19 +63,14 @@ using Random = UnityEngine.Random;
             _assignSound = GetComponent<AssignSound>();
         }
         
-        protected void HighlightCharacterMovement(ChunkData chunkData)
+        protected virtual void HighlightGridTile(ChunkData chunkData)
         {
-            
-            if (chunkData.GetCurrentCharacter() == null) 
-            {
-                chunkData.GetTileHighlight().ActivateMovementTile(true);
-            }
-            
+            chunkData.GetTileHighlight().ActivateColorGridTile(true);
         }
+        
+        
         public override void CreateGrid(ChunkData chunkData, int radius)
         {
-            //CreateAvailableTileList();
-            //MergeIntoOneList();
             CreateAvailableChunkList();
         }
         
@@ -88,10 +83,7 @@ using Random = UnityEngine.Random;
         {
             foreach (var chunk in _chunkList)
             {
-                if (chunk.GetCurrentCharacter() == null)
-                {
-                    chunk.GetTileHighlight().ActivateMovementTile(false);
-                }
+                    chunk.GetTileHighlight().ActivateColorGridTile(false);
             }
             _chunkList.Clear();
         }
@@ -140,7 +132,7 @@ using Random = UnityEngine.Random;
                             if (chunk != null && !chunk.TileIsLocked())
                             {
                                 _chunkList.Add(chunk);
-                                HighlightCharacterMovement(chunk);
+                                HighlightGridTile(chunk);
                             }
                         }
                     }
@@ -171,7 +163,7 @@ using Random = UnityEngine.Random;
                         if (chunk != null && !chunk.TileIsLocked())
                         {
                             _chunkList.Add(chunk);
-                            HighlightCharacterMovement(chunk);
+                            HighlightGridTile(chunk);
                         }
                     }
                 }
