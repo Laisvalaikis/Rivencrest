@@ -29,8 +29,6 @@ public class BindingRitual : BaseAction
         (int centerX, int centerY) = centerChunk.GetIndexes();
         _chunkList.Clear();
         ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray(); 
-        GameTileMap.Tilemap.EnableAllTiles();
-        
         for (int y = -radius; y <= radius; y++)
         {
             for (int x = -radius; x <= radius; x++)
@@ -47,9 +45,9 @@ public class BindingRitual : BaseAction
                         if (chunk != null && !chunk.TileIsLocked())
                         {
                             _chunkList.Add(chunk);
+                            HighlightCharacterMovement(chunk);
                             //chunk.EnableTileRenderingGameObject();
                             //chunk.EnableTileRendering();
-                            chunk.GetTileHighlight().ActivateMovementTile(true);
                         }
                     }
                 }
@@ -77,5 +75,4 @@ public class BindingRitual : BaseAction
     {
         DisablePreview(tile, MergedTileList);
     }
-    
 }

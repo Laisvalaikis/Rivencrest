@@ -63,15 +63,14 @@ using Random = UnityEngine.Random;
             _assignSound = GetComponent<AssignSound>();
         }
         
-        private void HighlightCharacterMovement()
+        protected void HighlightCharacterMovement(ChunkData chunkData)
         {
-            foreach (var chunk in _chunkList)
+            
+            if (chunkData.GetCurrentCharacter() == null) 
             {
-                if (chunk.GetCurrentCharacter() == null)
-                {
-                    chunk.GetTileHighlight().ActivateMovementTile(true);
-                }
+                chunkData.GetTileHighlight().ActivateMovementTile(true);
             }
+            
         }
         public override void CreateGrid(ChunkData chunkData, int radius)
         {
@@ -109,7 +108,6 @@ using Random = UnityEngine.Random;
             {
                 GenerateDiamondPattern(startChunk, AttackRange);
             }
-            HighlightCharacterMovement();
         }
 
         public List<ChunkData> ReturnGeneratedChunks()
@@ -126,7 +124,6 @@ using Random = UnityEngine.Random;
         {
             (int centerX, int centerY) = centerChunk.GetIndexes();
             ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray(); 
-            GameTileMap.Tilemap.EnableAllTiles();
             for (int y = -radius; y <= radius; y++)
             {
                 for (int x = -radius; x <= radius; x++)
@@ -143,6 +140,7 @@ using Random = UnityEngine.Random;
                             if (chunk != null && !chunk.TileIsLocked())
                             {
                                 _chunkList.Add(chunk);
+                                HighlightCharacterMovement(chunk);
                             }
                         }
                     }
@@ -154,7 +152,6 @@ using Random = UnityEngine.Random;
         {
             (int centerX, int centerY) = centerChunk.GetIndexes();
             ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray();
-            GameTileMap.Tilemap.EnableAllTiles();
 
             for (int i = 1; i <= length; i++)
             {
@@ -174,6 +171,7 @@ using Random = UnityEngine.Random;
                         if (chunk != null && !chunk.TileIsLocked())
                         {
                             _chunkList.Add(chunk);
+                            HighlightCharacterMovement(chunk);
                         }
                     }
                 }
