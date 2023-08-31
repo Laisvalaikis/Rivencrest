@@ -89,7 +89,10 @@ using Random = UnityEngine.Random;
         {
             foreach (var chunk in _chunkList)
             {
-                chunk.GetTileHighlight().ActivateMovementTile(false);
+                if (chunk.GetCurrentCharacter() == null)
+                {
+                    chunk.GetTileHighlight().ActivateMovementTile(false);
+                }
             }
             _chunkList.Clear();
         }
@@ -316,13 +319,13 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
 
         public virtual void DisableGrid()
         {
-            foreach (List<GameObject> movementTileList in this.AvailableTiles)
+            /*foreach (List<GameObject> movementTileList in this.AvailableTiles)
             {
                 foreach (GameObject tile in movementTileList)
                 {
                     tile.GetComponent<HighlightTile>().SetHighlightBool(false);
                 }
-            }
+            }*/
         }
         public virtual void OnTurnStart()
         {
