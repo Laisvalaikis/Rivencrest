@@ -88,7 +88,6 @@ public class GameTileMap : MonoBehaviour
         {
             Debug.LogError("Chunk size can't be 0");
         }
-        
     }
 
     // Update is called once per frame
@@ -105,12 +104,11 @@ public class GameTileMap : MonoBehaviour
     {
         for (int i = 0; i < _allChunks.Count; i++)
         {
-            //gal cia?
             _allChunks[i].SetupChunk();
             yield return null;
         }
         chunckSetupFinished = true;
-        DisableAllTiles();
+        EnableAllTiles();
     }
 
     void CalculateDistance()

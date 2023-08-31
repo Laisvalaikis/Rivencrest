@@ -63,15 +63,14 @@ using Random = UnityEngine.Random;
             _assignSound = GetComponent<AssignSound>();
         }
         
-        protected void HighlightCharacterMovement()
+        protected void HighlightCharacterMovement(ChunkData chunkData)
         {
-            foreach (var chunk in _chunkList)
+            
+            if (chunkData.GetCurrentCharacter() == null) 
             {
-                if (chunk.GetCurrentCharacter() == null)
-                {
-                    chunk.GetTileHighlight().ActivateMovementTile(true);
-                }
+                chunkData.GetTileHighlight().ActivateMovementTile(true);
             }
+            
         }
         public override void CreateGrid(ChunkData chunkData, int radius)
         {
@@ -100,7 +99,7 @@ using Random = UnityEngine.Random;
         //Creates a list of available chunks for attack
         private void CreateAvailableChunkList()
         {
-            ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position + new Vector3(0, 0.5f, 0));
+            ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
             if(laserGrid)
             {
                 GeneratePlusPattern(startChunk, AttackRange);
@@ -109,7 +108,6 @@ using Random = UnityEngine.Random;
             {
                 GenerateDiamondPattern(startChunk, AttackRange);
             }
-            HighlightCharacterMovement();
         }
 
         public List<ChunkData> ReturnGeneratedChunks()
@@ -126,7 +124,6 @@ using Random = UnityEngine.Random;
         {
             (int centerX, int centerY) = centerChunk.GetIndexes();
             ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray(); 
-            GameTileMap.Tilemap.EnableAllTiles();
             for (int y = -radius; y <= radius; y++)
             {
                 for (int x = -radius; x <= radius; x++)
@@ -143,6 +140,7 @@ using Random = UnityEngine.Random;
                             if (chunk != null && !chunk.TileIsLocked())
                             {
                                 _chunkList.Add(chunk);
+                                HighlightCharacterMovement(chunk);
                             }
                         }
                     }
@@ -154,7 +152,6 @@ using Random = UnityEngine.Random;
         {
             (int centerX, int centerY) = centerChunk.GetIndexes();
             ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray();
-            GameTileMap.Tilemap.EnableAllTiles();
 
             for (int i = 1; i <= length; i++)
             {
@@ -174,6 +171,7 @@ using Random = UnityEngine.Random;
                         if (chunk != null && !chunk.TileIsLocked())
                         {
                             _chunkList.Add(chunk);
+                            HighlightCharacterMovement(chunk);
                         }
                     }
                 }
@@ -285,7 +283,7 @@ using Random = UnityEngine.Random;
         {
             if (CanGridBeEnabled())
             {
-                ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position + new Vector3(0, 0.5f, 0));
+                ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
                 CreateGrid(startChunk, AttackRange);
                 HighlightAll();
             }
@@ -530,7 +528,7 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
         {
             if (CanGridBeEnabled())
             {
-                ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position + new Vector3(0, 0.5f, 0));
+                ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
                 CreateGrid(startChunk, AttackRange);
             }
         }
