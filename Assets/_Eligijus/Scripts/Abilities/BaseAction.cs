@@ -73,12 +73,18 @@ using Random = UnityEngine.Random;
                 }
             }
         }
-        public override void CreateGrid()
+        public override void CreateGrid(ChunkData chunkData, int radius)
         {
             //CreateAvailableTileList();
             //MergeIntoOneList();
             CreateAvailableChunkList();
         }
+        
+        public override void CreateGrid()
+        {
+            CreateAvailableChunkList();
+        }
+        
         public override void ClearGrid()
         {
             foreach (var chunk in _chunkList)
@@ -283,7 +289,8 @@ using Random = UnityEngine.Random;
         {
             if (CanGridBeEnabled())
             {
-                CreateGrid();
+                ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
+                CreateGrid(startChunk, AttackRange);
                 HighlightAll();
             }
 
@@ -528,7 +535,8 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
         {
             if (CanGridBeEnabled())
             {
-                CreateGrid();
+                ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
+                CreateGrid(startChunk, AttackRange);
             }
         }
         public virtual GameObject PossibleAIActionTile()

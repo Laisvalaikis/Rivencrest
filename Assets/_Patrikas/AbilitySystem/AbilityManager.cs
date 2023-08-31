@@ -27,6 +27,7 @@ public class AbilityManager : MonoBehaviour
         }
 
         _currentAbility = ability;
+        ChunkData chunkData = GameTileMap.Tilemap.GetChunk(_currentAbility.transform.position);
         _currentAbility.CreateGrid();
     }
 

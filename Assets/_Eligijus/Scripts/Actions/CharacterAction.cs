@@ -9,6 +9,11 @@ public abstract class CharacterAction : MonoBehaviour
         
     }
 
+    public virtual void CreateGrid(ChunkData chunkData, int radius)
+    {
+        
+    }
+
     public virtual void CreateGrid()
     {
         

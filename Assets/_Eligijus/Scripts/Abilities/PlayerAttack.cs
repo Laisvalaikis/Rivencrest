@@ -14,23 +14,31 @@ public class PlayerAttack : BaseAction
         actionStateName = "Attack";
         AttackAbility = true;
     }
+
     protected void AddSurroundingsToList(GameObject middleTile, int movementIndex, bool canWallsBeTargeted)
     {
         //base.AddSurroundingsToList(middleTile, movementIndex, true);
     }
-    
+
     public override void EnableGrid()
     {
         if (CanGridBeEnabled())
         {
-            CreateGrid();
-            
+            ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
+            CreateGrid(startChunk, AttackRange);
+
         }
         else
         {
             // transform.gameObject.GetComponent<PlayerInformation>().currentState = "Movement";
         }
 
+    }
+
+    public override void CreateGrid()
+    {
+        ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
+        CreateGrid(startChunk, AttackRange);
     }
 
     public override void ResolveAbility(Vector3 position)

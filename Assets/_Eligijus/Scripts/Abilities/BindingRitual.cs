@@ -12,8 +12,7 @@ public class BindingRitual : BaseAction
             
             foreach (ChunkData tile in ReturnGeneratedChunks())
             {
-                GameObject target = tile.GetCurrentCharacter();
-                DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);
+                DealRandomDamageToTarget(tile, minAttackDamage, maxAttackDamage);
             }
             
             FinishAbility();
@@ -21,35 +20,45 @@ public class BindingRitual : BaseAction
         
     }
     
-    public override void CreateGrid()
+    public override void CreateGrid(ChunkData centerChunk, int radius)
     {
-        // transform.gameObject.GetComponent<PlayerInformation>().currentState = actionStateName;
         
         //Merging into one list
+        (int centerX, int centerY) = centerChunk.GetIndexes();
         _chunkList.Clear();
+        ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray(); 
+        GameTileMap.Tilemap.EnableAllTiles();
         
-        foreach (List<GameObject> MovementTileList in this.AvailableTiles)
+        for (int y = -radius; y <= radius; y++)
         {
-            foreach (GameObject tile in MovementTileList)
+            for (int x = -radius; x <= radius; x++)
             {
-                if (!MergedTileList.Contains(tile))
+                if (Mathf.Abs(x) + Mathf.Abs(y) == radius)
                 {
-                    MergedTileList.Add(tile);
+                    int targetX = centerX + x;
+                    int targetY = centerY + y;
+
+                    // Ensuring we don't go out of array bounds.
+                    if (targetX >= 0 && targetX < chunksArray.GetLength(0) && targetY >= 0 && targetY < chunksArray.GetLength(1))
+                    {
+                        ChunkData chunk = chunksArray[targetX, targetY];
+                        if (chunk != null && !chunk.TileIsLocked())
+                        {
+                            _chunkList.Add(chunk);
+                            //chunk.EnableTileRenderingGameObject();
+                            //chunk.EnableTileRendering();
+                            chunk.GetTileHighlight().ActivateMovementTile(true);
+                        }
+                    }
                 }
             }
         }
-        //RemoveInner
-        for (int i = this.AvailableTiles.Count - 1; i > 0; i--)
-        {
-            foreach (GameObject tile in this.AvailableTiles[i - 1])
-            {
-                MergedTileList.Remove(tile);
-            }
-        }
-        if (CheckIfSpecificLayer(gameObject, 0, 0, groundLayer))
-        {
-            MergedTileList.Remove(GetSpecificGroundTile(gameObject, 0, 0, groundLayer));
-        }
+    }
+
+    public override void CreateGrid()
+    {
+        ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
+        CreateGrid(startChunk, AttackRange);
     }
 
     public override void OnTurnStart()
