@@ -44,7 +44,7 @@ public class GameTileMap : MonoBehaviour
 
     private bool _updateWeight = false;
     private int _countForTreeSpawn = 0;
-    private GameObject _currentSelectedCharacter;
+    public GameObject _currentSelectedCharacter;
     private PlayerInformation _currentPlayerInformation;
     private Vector2 _mousePosition;
     private int chunckIndex;
@@ -378,8 +378,9 @@ public class GameTileMap : MonoBehaviour
         // }
 
 
-        if (GetChunk(mousePosition) != null)
+        if (GetChunk(mousePosition) != null && _currentSelectedCharacter != null)
         {
+            Debug.Log("Inside if statement"); //_currentSelectedCharacter yra null kazkodel. idk, padariau public, inspektoriuje ne null. gal kai paclickini, pasidaro null, o tik tada kvieciama sita funkcija?
             ChunkData previousCharacterChunk =
                 GameTileMap.Tilemap.GetChunk(_currentSelectedCharacter.transform.position);
             ResetChunkCharacter(previousCharacterChunk.GetPosition());

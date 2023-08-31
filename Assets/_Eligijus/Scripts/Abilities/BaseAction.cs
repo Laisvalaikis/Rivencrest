@@ -76,7 +76,6 @@ using Random = UnityEngine.Random;
         
         public override void CreateGrid()
         {
-            Debug.Log("In create grid");
             CreateAvailableChunkList();
         }
         
