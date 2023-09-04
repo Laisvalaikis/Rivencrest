@@ -6080,6 +6080,7 @@ MonoBehaviour:
   - {fileID: 1617066992}
   tiles: {fileID: 1666844226}
   showChunks: 1
+  _currentSelectedCharacter: {fileID: 0}
 --- !u!1001 &364912360
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27544,8 +27545,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2142535632}
-        m_TargetAssemblyTypeName: CameraController, Assembly-CSharp
+      - m_Target: {fileID: 1649360796}
+        m_TargetAssemblyTypeName: AbilityManager, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
@@ -27608,8 +27609,8 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 363828190}
-        m_TargetAssemblyTypeName: GameTileMap, Assembly-CSharp
+      - m_Target: {fileID: 1649360796}
+        m_TargetAssemblyTypeName: AbilityManager, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
