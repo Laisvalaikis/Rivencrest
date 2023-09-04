@@ -9,7 +9,41 @@ public class AbilityManager : MonoBehaviour
     [SerializeField] private GameTileMap gameTileMap;
     private Vector2 _mousePosition;
     private BaseAction _currentAbility;
+    private HighlightTile _previousChunk;
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        if (_currentAbility != null)
+        {
+            _mousePosition = context.ReadValue<Vector2>();
+            Vector3 worldPos = camera.ScreenToWorldPoint(_mousePosition);
+            if (gameTileMap.GetChunk(worldPos)!=null)
+            {
+                HighlightTile hoveredChunkHighlight = gameTileMap.GetChunk(worldPos).GetTileHighlight();
+                if (hoveredChunkHighlight == null)
+                {
+                    return;
+                }
 
+                if (hoveredChunkHighlight != _previousChunk)
+                {
+                    if (hoveredChunkHighlight.isHighlighted)
+                    {
+                        hoveredChunkHighlight.SetHighlightColor(Color.red);
+                    }
+
+
+                    if (_previousChunk != null)
+                    {
+                        Debug.Log("Was not null");
+
+                        _previousChunk.SetHighlightColor(Color.green);
+                    }
+                    _previousChunk = hoveredChunkHighlight;
+                }
+            }
+        }
+
+    }
     public void OnMouseClick(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -34,7 +68,6 @@ public class AbilityManager : MonoBehaviour
     {
         if (_currentAbility != null)
         {
-            Debug.Log("Executing a non-null ability");
             Vector3 mousePos = new Vector3(_mousePosition.x, _mousePosition.y, camera.nearClipPlane);
             Vector3 worldPos = camera.ScreenToWorldPoint(mousePos);
             ChunkData chunk = gameTileMap.GetChunk(worldPos);

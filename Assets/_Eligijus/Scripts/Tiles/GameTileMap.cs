@@ -492,15 +492,9 @@ public class GameTileMap : MonoBehaviour
                         Gizmos.DrawLine(currentMap._mapBoundries[i].boundries[j],
                             currentMap._mapBoundries[i].boundries[j + 1]);
                     }
-
                 }
             }
         }
-    }
-    
-    public void OnMove(InputAction.CallbackContext context)
-    { 
-        _mousePosition = context.ReadValue<Vector2>();
     }
     
     public void OnMouseClick(InputAction.CallbackContext context)
@@ -511,6 +505,7 @@ public class GameTileMap : MonoBehaviour
     
     private void MouseClick()
     {
+        _mousePosition = Input.mousePosition;
         Vector3 mousePos = new Vector3(_mousePosition.x, _mousePosition.y, mainCamera.nearClipPlane);
         Vector3 worldPos = mainCamera.ScreenToWorldPoint(mousePos);
         if (!CharacterIsSelected())

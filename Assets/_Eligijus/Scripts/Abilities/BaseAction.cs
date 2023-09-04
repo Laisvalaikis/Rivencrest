@@ -241,7 +241,7 @@ using Random = UnityEngine.Random;
             tile.transform.Find("mapTile").Find("Object").gameObject.SetActive(false);
             tile.transform.Find("mapTile").Find("Highlight").gameObject.SetActive(false);
             tile.GetComponent<HighlightTile>().SetHighlightColor(tile.GetComponent<HighlightTile>().NotHoveredColor);
-        }
+        } 
 
         protected void DisablePreview(GameObject tile, List<GameObject> tileList)
         {

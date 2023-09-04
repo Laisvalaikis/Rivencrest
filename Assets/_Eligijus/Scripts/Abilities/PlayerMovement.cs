@@ -55,7 +55,6 @@ public class PlayerMovement : BaseAction
     
     public override void ResolveAbility(Vector3 position)
     {
-        Debug.Log("Resolving move ability");
         base.ResolveAbility(position);
         if (!GameTileMap.Tilemap.CharacterIsOnTile(position))
         {

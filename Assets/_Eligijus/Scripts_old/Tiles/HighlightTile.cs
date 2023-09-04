@@ -37,6 +37,7 @@ public class HighlightTile : MonoBehaviour
     public void ActivateColorGridTile(bool value)
     {
         ColorGridTile.enabled = value;
+        isHighlighted = value;
     }
     
     public void ActivatePlayerTile(bool value)
