@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 6557585452070711417}
   - component: {fileID: 5674145605068567940}
   m_Layer: 8
-  m_Name: PlayerCyan
+  m_Name: PlayerCyanCopy
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -340,7 +340,7 @@ MonoBehaviour:
   - abilityText: {fileID: 11400000, guid: 3840d3ea1b9b2d84f8eac53fca84c5ac, type: 2}
     enabled: 1
     AbilityImage: {fileID: 5139444604892243456, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 0}
+    Action: {fileID: 5674145605068567940}
   - abilityText: {fileID: 11400000, guid: 1490fd045cfb03d4ba60a157d7ab435b, type: 2}
     enabled: 1
     AbilityImage: {fileID: -9139038222646363919, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
@@ -370,7 +370,7 @@ MonoBehaviour:
   selectedEffectIndex: 0
   selectedSongIndex: 0
   playerInformation: {fileID: 1310519675225487401}
-  actionStateName: 
+  actionStateName: ThrowSpear
   AttackRange: 1
   AbilityCooldown: 1
   minAttackDamage: 0

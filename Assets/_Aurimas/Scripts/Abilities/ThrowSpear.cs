@@ -6,7 +6,7 @@ public class ThrowSpear : BaseAction
 //reikes tvarkyt problema gali buti nes nera FindIndexOfTile eligijaus knowledge reikes cia
 {
     [SerializeField] private GameObject spearPrefab;
-    private bool laserGrid = false;
+    private bool laserGrid = true;
 
     public override void CreateGrid(ChunkData centerChunk, int radius)
     {

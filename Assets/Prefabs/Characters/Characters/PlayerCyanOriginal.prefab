@@ -13,17 +13,12 @@ GameObject:
   - component: {fileID: 659955980883675729}
   - component: {fileID: 2605390308202641148}
   - component: {fileID: 1310519675225487401}
-  - component: {fileID: 7282709673297147284}
-  - component: {fileID: 3087791199313970238}
   - component: {fileID: 6890059959884175614}
   - component: {fileID: 711100996200367084}
   - component: {fileID: 4438398929298113651}
   - component: {fileID: 2884985102919791894}
-  - component: {fileID: -2536795038536443514}
-  - component: {fileID: -1076421315493078305}
-  - component: {fileID: -3625560305788934848}
-  - component: {fileID: 5235778589916404231}
   - component: {fileID: 6557585452070711417}
+  - component: {fileID: 4412733437642072568}
   m_Layer: 8
   m_Name: PlayerCyanOriginal
   m_TagString: Player
@@ -136,6 +131,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763e3691d60f39f48a88a9e4187954f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedEffectIndex: 0
+  selectedSongIndex: 0
+  playerInformation: {fileID: 0}
+  actionStateName: 
+  AttackRange: 1
+  AbilityCooldown: 1
+  minAttackDamage: 0
+  maxAttackDamage: 0
+  isAbilitySlow: 1
+  friendlyFire: 0
+  AttackAbility: 0
+  AvailableAttacks: 1
+  AbilityPoints: 0
+  isDisabled: 0
+  spawnedCharacter: {fileID: 0}
   playerCenter: {x: 0, y: 0.5, z: 0}
 --- !u!114 &1310519675225487401
 MonoBehaviour:
@@ -206,79 +216,6 @@ MonoBehaviour:
   Respawn: 0
   XPToGain: 0
   isThisObject: 0
-  PoisonSpecialColor: 0
-  PinkWeakSpotSpecialColor: 1
-  ProtectedSpecialColor: 2
---- !u!114 &7282709673297147284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5e8ea6dfe66da4fb5b6999ba9f19bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityBackground: {fileID: -8237375101347807692, guid: f12fdd45e276893438b8ce4098f754cb, type: 3}
-  ActionScripts:
-  - action: {fileID: 6890059959884175614}
-    actionName: Attack
-    AbilityIcon: {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    AbilityIndex: -1
-  - action: {fileID: -2536795038536443514}
-    actionName: IceFreeze
-    AbilityIcon: {fileID: 5139444604892243456, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    AbilityIndex: 0
-  - action: {fileID: -1076421315493078305}
-    actionName: Avalanche
-    AbilityIcon: {fileID: -9139038222646363919, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    AbilityIndex: 1
-  - action: {fileID: -3625560305788934848}
-    actionName: IceQuake
-    AbilityIcon: {fileID: 854833402398890380, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    AbilityIndex: 2
-  - action: {fileID: 5235778589916404231}
-    actionName: CryoFreeze
-    AbilityIcon: {fileID: -1700655540090428342, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    AbilityIndex: 3
-  hasSlowAbilityBeenCast: 0
---- !u!114 &3087791199313970238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d94be52245746e9438ecf5c3b0c05488, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedEffectIndex: 0
-  selectedSongIndex: 0
-  actionStateName: 
-  AttackRange: 1
-  AbilityCooldown: 1
-  minAttackDamage: 0
-  maxAttackDamage: 0
-  isAbilitySlow: 1
-  friendlyFire: 0
-  AttackAbility: 0
-  AvailableAttacks: 1
-  AbilityPoints: 0
-  isDisabled: 0
-  spawnedCharacter: {fileID: 0}
-  MovementPoints: 3
-  AvailableMovementPoints: 0
-  IceSlow: 0
-  OilSlow: 0
-  Stun: 0
-  currentlyRemovedMovementPoints: 0
-  officiallyRemovedMovementPoints: 0
-  WayTilesList: []
-  PreferredWayTile: {fileID: 0}
 --- !u!114 &6890059959884175614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,6 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedEffectIndex: 0
   selectedSongIndex: 0
+  playerInformation: {fileID: 0}
   actionStateName: Attack
   AttackRange: 2
   AbilityCooldown: 1
@@ -375,117 +313,9 @@ MonoBehaviour:
   fogLayer:
     serializedVersion: 2
     m_Bits: 2048
-  gridMovement: {fileID: 0}
   playerInformation: {fileID: 0}
   playerMovement: {fileID: 0}
-  actionManager: {fileID: 0}
-  DestinationObject: {x: 0, y: 0, z: 0}
   _data: {fileID: 0}
---- !u!114 &-2536795038536443514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 642e55f9569f3d1498755eba3160043b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedEffectIndex: 0
-  selectedSongIndex: 0
-  actionStateName: IceFreeze
-  AttackRange: 1
-  AbilityCooldown: 3
-  minAttackDamage: 3
-  maxAttackDamage: 4
-  isAbilitySlow: 1
-  friendlyFire: 1
-  AttackAbility: 0
-  AvailableAttacks: 1
-  AbilityPoints: 0
-  isDisabled: 0
-  spawnedCharacter: {fileID: 0}
---- !u!114 &-1076421315493078305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df33c5f7be365814c94031c9b40f3c05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedEffectIndex: 0
-  selectedSongIndex: 0
-  actionStateName: Avalanche
-  AttackRange: 3
-  AbilityCooldown: 2
-  minAttackDamage: 4
-  maxAttackDamage: 5
-  isAbilitySlow: 1
-  friendlyFire: 0
-  AttackAbility: 0
-  AvailableAttacks: 1
-  AbilityPoints: 0
-  isDisabled: 0
-  spawnedCharacter: {fileID: 0}
---- !u!114 &-3625560305788934848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1609a0184004f4cb9879086a4fd0dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedEffectIndex: 0
-  selectedSongIndex: 0
-  actionStateName: IceQuake
-  AttackRange: 3
-  AbilityCooldown: 2
-  minAttackDamage: 1
-  maxAttackDamage: 3
-  isAbilitySlow: 1
-  friendlyFire: 0
-  AttackAbility: 0
-  AvailableAttacks: 1
-  AbilityPoints: 0
-  isDisabled: 0
-  spawnedCharacter: {fileID: 0}
-  rootDamage: 5
---- !u!114 &5235778589916404231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4b6bc38e2c79084396202244ace6bc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedEffectIndex: 0
-  selectedSongIndex: 0
-  actionStateName: CryoFreeze
-  AttackRange: 1
-  AbilityCooldown: 3
-  minAttackDamage: 2
-  maxAttackDamage: 4
-  isAbilitySlow: 1
-  friendlyFire: 0
-  AttackAbility: 0
-  AvailableAttacks: 1
-  AbilityPoints: 0
-  isDisabled: 0
-  spawnedCharacter: {fileID: 0}
 --- !u!114 &6557585452070711417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,19 +340,49 @@ MonoBehaviour:
   - abilityText: {fileID: 11400000, guid: 3840d3ea1b9b2d84f8eac53fca84c5ac, type: 2}
     enabled: 1
     AbilityImage: {fileID: 5139444604892243456, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: -2536795038536443514}
+    Action: {fileID: 4412733437642072568}
   - abilityText: {fileID: 11400000, guid: 1490fd045cfb03d4ba60a157d7ab435b, type: 2}
     enabled: 1
     AbilityImage: {fileID: -9139038222646363919, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: -1076421315493078305}
+    Action: {fileID: 0}
   - abilityText: {fileID: 11400000, guid: 79e2ec02158e6f74b9cf059fe557af61, type: 2}
     enabled: 1
     AbilityImage: {fileID: 854833402398890380, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: -3625560305788934848}
+    Action: {fileID: 0}
   - abilityText: {fileID: 11400000, guid: 3c9e9081d63d4274c97b32e2c56d5ba0, type: 2}
     enabled: 1
     AbilityImage: {fileID: -1700655540090428342, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 5235778589916404231}
+    Action: {fileID: 0}
+  availableAttackPoints: 0
+  availableMovementPoints: 0
+--- !u!114 &4412733437642072568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659955980883675694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cdc50bf0820edb4f9d7a7a6e7fddb0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedEffectIndex: 0
+  selectedSongIndex: 0
+  playerInformation: {fileID: 1310519675225487401}
+  actionStateName: ThrowSpear
+  AttackRange: 1
+  AbilityCooldown: 1
+  minAttackDamage: 0
+  maxAttackDamage: 0
+  isAbilitySlow: 1
+  friendlyFire: 0
+  AttackAbility: 0
+  AvailableAttacks: 1
+  AbilityPoints: 0
+  isDisabled: 0
+  spawnedCharacter: {fileID: 0}
+  spearPrefab: {fileID: 8132253506860624366, guid: 4696a10556cb148bd8a62952ac8440fe, type: 3}
 --- !u!1 &659955981309584225
 GameObject:
   m_ObjectHideFlags: 0
