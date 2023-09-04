@@ -34,6 +34,7 @@ public class AbilityManager : MonoBehaviour
     {
         if (_currentAbility != null)
         {
+            Debug.Log("Executing a non-null ability");
             Vector3 mousePos = new Vector3(_mousePosition.x, _mousePosition.y, camera.nearClipPlane);
             Vector3 worldPos = camera.ScreenToWorldPoint(mousePos);
             ChunkData chunk = gameTileMap.GetChunk(worldPos);
@@ -44,5 +45,4 @@ public class AbilityManager : MonoBehaviour
             }
         }
     }
-    
 }

@@ -55,13 +55,16 @@ public class PlayerMovement : BaseAction
     
     public override void ResolveAbility(Vector3 position)
     {
+        Debug.Log("Resolving move ability");
         base.ResolveAbility(position);
         if (!GameTileMap.Tilemap.CharacterIsOnTile(position))
         {
             GameTileMap.Tilemap.MoveSelectedCharacter(position, new Vector3(0, 0.5f, 1));
         }
         FinishAbility();
+        CreateGrid();
     }
+    
     
     public override void OnTileClick(Vector3 mousePosition)
     {

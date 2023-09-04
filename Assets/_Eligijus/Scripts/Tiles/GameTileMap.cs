@@ -311,16 +311,6 @@ public class GameTileMap : MonoBehaviour
 
     }
 
-    public void SetCharacter(Vector3 mousePosition, GameObject character)
-    {
-        if (GetChunk(mousePosition) != null)
-        {
-            ChunkData chunkData = GetChunk(mousePosition);
-            chunkData.SetCurrentCharacter(character);
-            chunkData.GetTileHighlight().ActivatePlayerTile(true);
-        }
-    }
-
     public void ResetChunkCharacter(Vector3 mousePosition)
     {
         if (GetChunk(mousePosition) != null)
@@ -330,7 +320,15 @@ public class GameTileMap : MonoBehaviour
             chunk.GetTileHighlight().ActivatePlayerTile(false);
         }
     }
-
+    public void SetCharacter(Vector3 mousePosition, GameObject character)
+    {
+        if (GetChunk(mousePosition) != null)
+        {
+            ChunkData chunkData = GetChunk(mousePosition);
+            chunkData.SetCurrentCharacter(character);
+            chunkData.GetTileHighlight().ActivatePlayerTile(true);
+        }
+    }
     public void SetCharacter(Vector3 mousePosition, GameObject character, PlayerInformation playerInformation)
     {
         if (GetChunk(mousePosition) != null)
@@ -364,6 +362,16 @@ public class GameTileMap : MonoBehaviour
         return false;
     }
 
+    public bool OtherCharacterIsOnTile(Vector3 mousePosition)
+    {
+        if (GetChunk(mousePosition) != null)
+        {
+            ChunkData chunkData = GetChunk(mousePosition);
+            return chunkData.GetCurrentCharacter() != null && chunkData.GetCurrentCharacter() != _currentSelectedCharacter;
+        }
+        return false;
+    }
+
     public void MoveSelectedCharacter(Vector3 mousePosition, Vector3 offset = default)
     {
         
@@ -378,9 +386,8 @@ public class GameTileMap : MonoBehaviour
         // }
 
 
-        if (GetChunk(mousePosition) != null && _currentSelectedCharacter != null)
+        if (GetChunk(mousePosition) != null && _currentSelectedCharacter != null && !CharacterIsOnTile(mousePosition))
         {
-            Debug.Log("Inside if statement"); //_currentSelectedCharacter yra null kazkodel. idk, padariau public, inspektoriuje ne null. gal kai paclickini, pasidaro null, o tik tada kvieciama sita funkcija?
             ChunkData previousCharacterChunk =
                 GameTileMap.Tilemap.GetChunk(_currentSelectedCharacter.transform.position);
             ResetChunkCharacter(previousCharacterChunk.GetPosition());
@@ -398,7 +405,6 @@ public class GameTileMap : MonoBehaviour
         
         if (GetChunk(mousePosition) != null)
         {
-            Debug.Log("Pressed");
             ChunkData chunkData = GetChunk(mousePosition);
             _currentSelectedCharacter = chunkData.GetCurrentCharacter();
             _currentPlayerInformation = chunkData.GetCurrentPlayerInformation();
@@ -507,7 +513,11 @@ public class GameTileMap : MonoBehaviour
     {
         Vector3 mousePos = new Vector3(_mousePosition.x, _mousePosition.y, mainCamera.nearClipPlane);
         Vector3 worldPos = mainCamera.ScreenToWorldPoint(mousePos);
-        if (!CharacterIsSelected() || !SelectedCharacterIsOnTile(mousePos))
+        if (!CharacterIsSelected())
+        {
+            SelectTile(worldPos);
+        }
+        else if (CharacterIsSelected() && OtherCharacterIsOnTile(worldPos)) //fix in future so that you can attack enemies instead of selecting them
         {
             SelectTile(worldPos);
         }
@@ -516,5 +526,4 @@ public class GameTileMap : MonoBehaviour
             DeselectCurrentCharacter();
         }
     }
-    
 }

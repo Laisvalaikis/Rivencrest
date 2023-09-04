@@ -86,6 +86,7 @@ using Random = UnityEngine.Random;
                     chunk.GetTileHighlight().ActivateColorGridTile(false);
             }
             _chunkList.Clear();
+
         }
 
         //Creates a list of available chunks for attack
@@ -345,12 +346,6 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
             Debug.LogWarning("PlaySound");
             ClearGrid();
         }
-        public virtual void ResolveAbility(GameObject gameobject)
-        {
-            Debug.Log("Fake aah method");
-            //Dont remove until all abilities are updated
-        }
-
         protected virtual void FinishAbility()
         {
             AbilityPoints = 0;//Cooldown counter
