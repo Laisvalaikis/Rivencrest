@@ -25,15 +25,15 @@ public class FlagPoint : Consumable
              collision.gameObject.GetComponent<PlayerInformation>().FlagInHand.GetComponent<Flag>().followThePlayer = false;
          }
     }*/
-    public override void PickUp(GameObject WhoStepped)
+    public override void PickUp(GameObject whoStepped)
     {
-        if (WhoStepped.gameObject.GetComponent<PlayerInformation>().FlagInHand != null
-             && WhoStepped.gameObject.GetComponent<PlayerInformation>().CharactersTeam == team)
+        if (whoStepped.gameObject.GetComponent<PlayerInformation>().FlagInHand != null
+            && whoStepped.gameObject.GetComponent<PlayerInformation>().CharactersTeam == team)
         {
-            WhoStepped.gameObject.GetComponent<PlayerInformation>().FlagInHand.transform.parent.transform.position = transform.position - new Vector3(0f, 0.25f, 0f);
-            WhoStepped.gameObject.GetComponent<PlayerInformation>().FlagInHand.GetComponent<BoxCollider2D>().enabled = false;
-            WhoStepped.gameObject.GetComponent<PlayerInformation>().FlagInHand.GetComponent<Flag>().followThePlayer = false;
-            WhoStepped.gameObject.GetComponent<PlayerInformation>().FlagInHand = null;
+            whoStepped.gameObject.GetComponent<PlayerInformation>().FlagInHand.transform.parent.transform.position = transform.position - new Vector3(0f, 0.25f, 0f);
+            whoStepped.gameObject.GetComponent<PlayerInformation>().FlagInHand.GetComponent<BoxCollider2D>().enabled = false;
+            whoStepped.gameObject.GetComponent<PlayerInformation>().FlagInHand.GetComponent<Flag>().followThePlayer = false;
+            whoStepped.gameObject.GetComponent<PlayerInformation>().FlagInHand = null;
             //string winMessage = team.ToString() + " team wins!";
             //Debug.Log(winMessage);
             GameObject.Find("GameInformation").GetComponent<PlayerTeams>().ChampionTeam = team.ToString();

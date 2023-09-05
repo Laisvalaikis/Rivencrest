@@ -9,7 +9,7 @@ using UnityEngine;
     public abstract class Consumable : MonoBehaviour
     {
         public bool Stop = false;
-        public virtual void PickUp(GameObject WhoStepped)
+        public virtual void PickUp(GameObject whoStepped)
         {
         }
     }
