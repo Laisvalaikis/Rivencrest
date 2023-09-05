@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 930733572363193471}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &930733572363193468
 SpriteRenderer:
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 589450711
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -8153578164284583991, guid: 77a0a4865f27c0240b5c9270aa911c66, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -139,6 +139,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1abe98737ff8546bdcc88828c38a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  playerInformationData: {fileID: 0}
   savedCharacter:
     level: 0
     xP: 0
@@ -146,36 +148,25 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 0
-    prefabIndex: 0
+    characterIndex: 0
     playerInformation: {fileID: 0}
     prefab: {fileID: 0}
-  MaxHealth: 100
+  spriteRenderer: {fileID: 0}
+  animator: {fileID: 0}
   health: 100
-  critChance: 5
-  accuracy: 100
-  dodgeChance: 20
   CharactersTeam: 
-  characterPortrait: {fileID: 0}
   TeamManager: {fileID: 0}
   FlagInHand: {fileID: 0}
-  currentState: Movement
-  AnimationState: Movement
-  isCurrentStateAvailable: 0
-  StateAnimations: 0
   role: 
-  CharacterPortraitSprite: {fileID: 0}
-  CharacterSplashArt: {fileID: 0}
-  CroppedSplashArt: {fileID: 0}
-  _data: {fileID: 0}
   Blocker: 0
   BlockingAlly: {fileID: 0}
   BarrierProvider: {fileID: 0}
   Marker: {fileID: 0}
   PinkWeakSpot: {fileID: 0}
-  Stun: 0
   Slow1: 0
   Slow2: 0
   Slow3: 0
@@ -185,22 +176,10 @@ MonoBehaviour:
   Aflame: {fileID: 0}
   Danger: 0
   IsCreatingWhiteField: 0
-  MindControlTarget: {fileID: 0}
   VisionGameObject: {fileID: 0}
   CantAttackCondition: 0
-  Disarmed: 0
-  cornerPortraitBoxInGame: {fileID: 0}
-  Caged: 0
   Protected: 0
-  MistShield: 0
   Stasis: 0
-  wasThisCharacterSpawned: 0
   enabledAbilitiesEnemy: []
-  gameInformation: {fileID: 0}
-  Respawn: 0
   XPToGain: 0
   isThisObject: 0
-  ClassName: 
-  ClassColor: {r: 0, g: 0, b: 0, a: 0}
-  ClassColor2: {r: 0, g: 0, b: 0, a: 0}
-  BlessingsAndCurses: []

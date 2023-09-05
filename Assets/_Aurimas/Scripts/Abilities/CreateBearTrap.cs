@@ -18,7 +18,7 @@ public class CreateBearTrap : BaseAction
         i = 0;
         FinishAbility();
     }
-
+    
     public override void OnTurnStart()
     {
         if (spawnedCharacter != null)
