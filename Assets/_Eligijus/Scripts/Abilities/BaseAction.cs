@@ -357,7 +357,6 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
             // {
             //     GetComponent<ActionManager>().RemoveAttackActionPoints();
             // }
-            GetComponent<PlayerInformation>().currentState = "Movement";
             if (isAbilitySlow)
             {
                 DisableGrid();

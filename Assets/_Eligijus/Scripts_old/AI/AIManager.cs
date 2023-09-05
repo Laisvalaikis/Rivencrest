@@ -130,9 +130,7 @@ private void InitializeEnemy(GameObject spawnedEnemy)
     Debug.Log("Panaikinti finda, kai animatoriai bus sukurti");
     var vfxAnimator = spawnedEnemy.transform.Find("VFX").Find("VFX9x9").GetComponent<Animator>();
     var characterModelAnimator = spawnedEnemy.transform.Find("CharacterModel").GetComponent<Animator>();
-
-    playerInfo.cornerPortraitBoxInGame = cornerUIManager;
-    playerInfo.Respawn = true;
+    
     
     if (vfxAnimator != null && vfxAnimator.isActiveAndEnabled)
     {

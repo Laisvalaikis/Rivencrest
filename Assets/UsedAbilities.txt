@@ -61,7 +61,7 @@ SwordPush+
 ThrowBehind	
 ThrowSpear+-	
 Volley+	
-WallEntrap+	
-WallSmash+	
-WeakSpot+	
+WallEntrap+-	
+WallSmash+-	
+WeakSpot+-	
 WindBoost	

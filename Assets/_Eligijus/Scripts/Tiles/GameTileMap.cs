@@ -202,6 +202,11 @@ public class GameTileMap : MonoBehaviour
 
     }
 
+    public ChunkData GetChunkDataByIndex(int x, int y)
+    {
+        return _chunksArray[x, y];
+    }
+
     public void EnableAllTiles()
     {
         tiles.SetActive(true);

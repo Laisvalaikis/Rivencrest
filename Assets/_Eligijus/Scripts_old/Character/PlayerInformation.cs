@@ -7,6 +7,7 @@ using System;
 
 public class PlayerInformation : MonoBehaviour
 {
+    [SerializeField] private InformationType type = InformationType.Player;
     public PlayerInformationData playerInformationData;
     private PlayerInformationData _playerInformationData;
     public SavedCharacter savedCharacter;
@@ -21,7 +22,6 @@ public class PlayerInformation : MonoBehaviour
     private CharacterModel characterModel;
     private BoxCollider2D boxCollider2D;
     private VFXContainer vfxContainer;
-    public GameInformation gameInformation;
     private TeamInformation teamInformation;
     private AIManager aiManager;
 
@@ -37,24 +37,14 @@ public class PlayerInformation : MonoBehaviour
     //[HideInInspector] public GameObject characterPortrait; //portraitBoxFrame
     [HideInInspector] public GameObject TeamManager;
     [HideInInspector] public GameObject FlagInHand = null;
-    public string currentState = "Movement";
-    public string AnimationState = "Movement";
-    [HideInInspector] public bool isCurrentStateAvailable;//nereikalinga?
-    public bool StateAnimations = false;
-    private List<GameObject> KillerList = new List<GameObject>();
-    private List<GameObject> KillList = new List<GameObject>();
-    private List<TextMeshProUGUI> damageTextTest = new List<TextMeshProUGUI>();
     public string role;
     // public Sprite CharacterSplashArt;//For character table
-    public Data _data;
-    //
     [HideInInspector] public Debuffs Debuffs; // :'( uzsirasyti kazkur visus imanomus debuffus
     [HideInInspector] public bool Blocker = false; //is this character blocking another ally
     [HideInInspector] public GameObject BlockingAlly = null;
     [HideInInspector] public GameObject BarrierProvider = null;
     [HideInInspector] public GameObject Marker = null;
     [HideInInspector] public GameObject PinkWeakSpot = null;
-    [HideInInspector] public bool Stun = false;//
     [HideInInspector] public bool Slow1 = false;
     [HideInInspector] public bool Slow2 = false;
     [HideInInspector] public bool Slow3 = false;
@@ -64,21 +54,12 @@ public class PlayerInformation : MonoBehaviour
     [HideInInspector] public GameObject Aflame = null; //DamageDealer
     [HideInInspector] public bool Danger = false;
     [HideInInspector] public bool IsCreatingWhiteField = false;
-    [HideInInspector] public GameObject MindControlTarget = null;
     [HideInInspector] public GameObject VisionGameObject;
     [HideInInspector] public bool CantAttackCondition = false;
-    [HideInInspector] public bool Disarmed = false;
-    [HideInInspector] public GameObject cornerPortraitBoxInGame; //CornerUI
-    [HideInInspector] public bool Caged = false;
     [HideInInspector] public bool Protected = false;
-    [HideInInspector] public bool MistShield = false; //UndeadKnightSpell
     [HideInInspector] public bool Stasis = false;
-    //[HideInInspector] public List<Poison> Poisons = new List<Poison>();
-    [HideInInspector] public bool wasThisCharacterSpawned = false;
     [HideInInspector] public List<string> enabledAbilitiesEnemy;
-    
 
-    public bool Respawn;
     [HideInInspector] public int XPToGain = 0;
     [HideInInspector] public bool isThisObject = false;
 
@@ -94,7 +75,6 @@ public class PlayerInformation : MonoBehaviour
     {
         LoadPlayerProgression();
         PlayerSetup();
-        //health = MaxHealth;
         health = _playerInformationData.MaxHealth;
         _health = _playerInformationData.MaxHealth;
     }
@@ -104,6 +84,11 @@ public class PlayerInformation : MonoBehaviour
         float maxHealthDouble = _playerInformationData.MaxHealth;
         float healthDouble = health;
         return healthDouble / maxHealthDouble * 100;
+    }
+
+    public InformationType GetInformationType()
+    {
+        return type;
     }
 
     public void SetPlayerTeam(int currentCharacterTeam)

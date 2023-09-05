@@ -118,7 +118,6 @@ public class PlayerTeams : MonoBehaviour
         // GameObject cornerUIManager = Instantiate(character.GetComponent<PlayerInformation>().CornerUIManager, CornerUIManagerContainer); //Spawning cornerUI of each player.
         // character.GetComponent<PlayerInformation>().CornerUIManager = cornerUIManager; //Turning prefabs into gameObjects in canvas.
         characterUiButtonManager.CharacterOnBoard = character;//Assigning character to its UI button manager
-        character.GetComponent<PlayerInformation>().cornerPortraitBoxInGame = characterUiButtonManager.gameObject;//Assigning UI button manager character to its character
         Debug.Log("Cia kazkas daroma su Ui corner manager");
         AddCharacterToCurrentTeam(character);
     }

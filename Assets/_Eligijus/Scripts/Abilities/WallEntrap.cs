@@ -11,7 +11,6 @@ public class WallEntrap : BaseAction
     {
         base.ResolveAbility(position);
         ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
-        DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
         SpawnAdjacentWalls();
         FinishAbility();
     }
@@ -46,9 +45,9 @@ public class WallEntrap : BaseAction
                 ChunkData chunkData = chunkDataArray[x.Item1, x.Item2];
                 GameObject spawnedWall = Instantiate(wallPrefab, chunkData.GetPosition() - new Vector3(0f, 0.5f, 0f),
                     Quaternion.identity);
-                PlayerInformation playerInformation = spawnedWall.GetComponent<PlayerInformation>();
-                GameTileMap.Tilemap.SetCharacter(chunkData.GetPosition(), spawnedCharacter, playerInformation);
-                _playerInformations.Add(playerInformation);
+                PlayerInformation tempPlayerInformation = spawnedWall.GetComponent<PlayerInformation>();
+                GameTileMap.Tilemap.SetCharacter(chunkData.GetPosition(), spawnedWall, tempPlayerInformation);
+                _playerInformations.Add(tempPlayerInformation);
             }
         }
     }

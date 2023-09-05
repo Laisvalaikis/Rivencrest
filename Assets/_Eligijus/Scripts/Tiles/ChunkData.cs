@@ -44,6 +44,7 @@ public class ChunkData
     private bool _tileIsLocked = false;
     private GameObject _currentCharacter;
     private PlayerInformation _currentPlayerInformation;
+    private InformationType _type = InformationType.None;
     private SpriteRenderer _tileSpriteRenderer;
     private HighlightTile _highlightTile;
     
@@ -121,8 +122,23 @@ public class ChunkData
     {
         _currentCharacter = gameObject;
         _currentPlayerInformation = playerInformation;
+        if (playerInformation != null)
+        {
+            _type = playerInformation.GetInformationType(); 
+        }
+        else
+        {
+            _type = InformationType.None;
+        }
+
+        
     }
-    
+
+    public InformationType GetInformationType()
+    {
+        return _type;
+    }
+
     public void SetCurrentCharacter(GameObject gameObject)
     {
         _currentCharacter = gameObject;
