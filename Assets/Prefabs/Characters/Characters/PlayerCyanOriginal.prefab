@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 2884985102919791894}
   - component: {fileID: 6557585452070711417}
   - component: {fileID: 5109015720195256487}
-  - component: {fileID: 5367967792389739726}
+  - component: {fileID: 2890484779094238839}
   m_Layer: 8
   m_Name: PlayerCyanOriginal
   m_TagString: Player
@@ -136,6 +136,7 @@ MonoBehaviour:
   selectedSongIndex: 0
   playerInformation: {fileID: 0}
   actionStateName: 
+  laserGrid: 0
   AttackRange: 1
   AbilityCooldown: 1
   minAttackDamage: 0
@@ -220,6 +221,7 @@ MonoBehaviour:
   selectedSongIndex: 0
   playerInformation: {fileID: 0}
   actionStateName: Attack
+  laserGrid: 0
   AttackRange: 2
   AbilityCooldown: 1
   minAttackDamage: 7
@@ -332,7 +334,7 @@ MonoBehaviour:
   - abilityText: {fileID: 11400000, guid: 1490fd045cfb03d4ba60a157d7ab435b, type: 2}
     enabled: 1
     AbilityImage: {fileID: -9139038222646363919, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 5367967792389739726}
+    Action: {fileID: 2890484779094238839}
   - abilityText: {fileID: 11400000, guid: 79e2ec02158e6f74b9cf059fe557af61, type: 2}
     enabled: 1
     AbilityImage: {fileID: 854833402398890380, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
@@ -359,7 +361,8 @@ MonoBehaviour:
   selectedSongIndex: 0
   playerInformation: {fileID: 0}
   actionStateName: 
-  AttackRange: 1
+  laserGrid: 0
+  AttackRange: 2
   AbilityCooldown: 1
   minAttackDamage: 0
   maxAttackDamage: 0
@@ -371,7 +374,7 @@ MonoBehaviour:
   isDisabled: 0
   spawnedCharacter: {fileID: 0}
   eyePrefab: {fileID: 930733572363193471, guid: 9532c08d23bec452eb1135da7cb1884a, type: 3}
---- !u!114 &5367967792389739726
+--- !u!114 &2890484779094238839
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -380,25 +383,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 659955980883675694}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6341f8c12ee4a6b45ba1905c516e0f75, type: 3}
+  m_Script: {fileID: 11500000, guid: ca9228a4f505ec14099f2adbfc197d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   selectedEffectIndex: 0
   selectedSongIndex: 0
   playerInformation: {fileID: 0}
   actionStateName: 
+  laserGrid: 0
   AttackRange: 1
   AbilityCooldown: 1
   minAttackDamage: 0
   maxAttackDamage: 0
   isAbilitySlow: 1
-  friendlyFire: 0
+  friendlyFire: 1
   AttackAbility: 0
   AvailableAttacks: 1
   AbilityPoints: 0
   isDisabled: 0
   spawnedCharacter: {fileID: 0}
-  bearTrapPrefab: {fileID: 2474793349534955981, guid: d1b034f397084084f9299b903af8950b, type: 3}
+  spellDamage: 6
 --- !u!1 &659955981309584225
 GameObject:
   m_ObjectHideFlags: 0
