@@ -12,9 +12,9 @@ public class AbilityManager : MonoBehaviour
     private HighlightTile _previousChunk;
     public void OnMove(InputAction.CallbackContext context)
     {
+        _mousePosition = context.ReadValue<Vector2>();
         if (_currentAbility != null)
         {
-            _mousePosition = context.ReadValue<Vector2>();
             Vector3 worldPos = camera.ScreenToWorldPoint(_mousePosition);
             if (gameTileMap.GetChunk(worldPos)!=null)
             {
@@ -34,7 +34,6 @@ public class AbilityManager : MonoBehaviour
 
                     if (_previousChunk != null)
                     {
-                        Debug.Log("Was not null");
 
                         _previousChunk.SetHighlightColor(Color.green);
                     }
@@ -48,7 +47,6 @@ public class AbilityManager : MonoBehaviour
     {
         if (context.performed)
         {
-            _mousePosition = Mouse.current.position.ReadValue();
             ExecuteCurrentAbility();
         }
     }
@@ -62,6 +60,16 @@ public class AbilityManager : MonoBehaviour
 
         _currentAbility = ability;
         _currentAbility.CreateGrid();
+    }
+
+    public bool IsAbilitySelected()
+    {
+        return _currentAbility != null;
+    }
+
+    public void DeselectAbility()
+    {
+        _currentAbility = null;
     }
 
     public void ExecuteCurrentAbility()
