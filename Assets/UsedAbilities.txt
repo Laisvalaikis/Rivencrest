@@ -57,7 +57,7 @@ StunAttack+
 SummonBear+-	
 SummonOrb+-	
 SwitchPlaces	
-SwordPush+	
+SwordPush+-	
 ThrowBehind+-
 ThrowSpear+-	
 Volley+-	

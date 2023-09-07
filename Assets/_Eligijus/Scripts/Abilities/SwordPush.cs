@@ -22,12 +22,14 @@ public class SwordPush : BaseAction
         {
             if (i > 0)
             {
-                _side = ChunkSideByCharacter(current, _attackTiles[i]);
-                int2 sideVector = GetSideVector(_side);
-                MovePlayerToSide(_attackTiles[i], sideVector);
                 int damage = pushDamage;
                 bool crit = IsItCriticalStrike(ref damage);
                 DealDamage(_attackTiles[i], damage, crit);
+                _side = ChunkSideByCharacter(current, _attackTiles[i]);
+                int2 sideVector = GetSideVector(_side);
+                Debug.Log(sideVector);
+                MovePlayerToSide(_attackTiles[i], sideVector);
+                
             }
             else
             {
@@ -69,6 +71,7 @@ public class SwordPush : BaseAction
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(indexes.Item1, indexes.Item2);
                 if (chunkData.CharacterIsOnTile())
                 {
+                    Debug.Log("SMTH");
                     _attackTiles.Add(chunkData);
                 }
             }

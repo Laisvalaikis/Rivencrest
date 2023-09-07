@@ -367,7 +367,7 @@ MonoBehaviour:
   playerInformation: {fileID: 1310519675225487401}
   actionStateName: 
   laserGrid: 0
-  AttackRange: 1
+  AttackRange: 2
   AbilityCooldown: 1
   minAttackDamage: 0
   maxAttackDamage: 0

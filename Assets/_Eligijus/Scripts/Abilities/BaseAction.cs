@@ -175,16 +175,16 @@ using Random = UnityEngine.Random;
             switch (side)
             {
                 case Side.isFront:
-                    sideVector = new int2(1, 0);
-                    break;
-                case Side.isBack:
                     sideVector = new int2(-1, 0);
                     break;
+                case Side.isBack:
+                    sideVector = new int2(1, 0);
+                    break;
                 case Side.isRight:
-                    sideVector = new int2(0, -1);
+                    sideVector = new int2(0, 1);
                     break;
                 case Side.isLeft:
-                    sideVector = new int2(0, 1);
+                    sideVector = new int2(0, -1);
                     break;
                 case Side.none:
                     sideVector = int2.zero;
