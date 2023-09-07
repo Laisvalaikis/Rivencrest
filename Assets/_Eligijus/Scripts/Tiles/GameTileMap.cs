@@ -400,22 +400,14 @@ public class GameTileMap : MonoBehaviour
     public void MoveSelectedCharacter(Vector3 mousePosition, Vector3 offset = default, GameObject character = null)
     {
         
-        // GameObject FinalDestination = SelectedCharacter.GetComponent<GridMovement>().PickUpWayTiles();
-        // if (SelectedCharacter.GetComponent<GridMovement>().AreThereConsumablesOnTheWay())
-        // {
-        //     undoAction.available = false;
-        // }
-        // if (FinalDestination != null)
-        // {
-        //     newPosition = FinalDestination;
-        // }
+        
         GameObject moveCharacter = _currentSelectedCharacter;
         if (character != null)
         {
             moveCharacter = character;
         }
 
-        if (GetChunk(mousePosition) != null && moveCharacter != null && !CharacterIsOnTile(mousePosition))
+        if (GetChunk(mousePosition) != null && moveCharacter != null) // !CharacterIsOnTile(mousePosition)
         {
             ChunkData previousCharacterChunk =
                 GameTileMap.Tilemap.GetChunk(moveCharacter.transform.position);
@@ -424,6 +416,25 @@ public class GameTileMap : MonoBehaviour
             SetCharacter(mousePosition, moveCharacter, previousCharacterChunk.GetCurrentPlayerInformation());
             ResetChunkCharacter(previousCharacterChunk.GetPosition());
             
+        }
+        // SelectedCharacter.GetComponent<GridMovement>().RemoveAvailableMovementPoints(newPosition);
+        // bottomCornerUI.EnableAbilities(SelectedCharacter.GetComponent<PlayerInformation>().savedCharacter);
+    }
+    
+    public void MoveSelectedCharacterWithoutReset(Vector3 mousePosition, Vector3 offset = default, GameObject character = null)
+    {
+        
+        
+        GameObject moveCharacter = _currentSelectedCharacter;
+        if (character != null)
+        {
+            moveCharacter = character;
+        }
+
+        if (GetChunk(mousePosition) != null && moveCharacter != null) // !CharacterIsOnTile(mousePosition)
+        {
+            Vector3 characterPosition = GetChunk(mousePosition).GetPosition() - offset;
+            moveCharacter.transform.position = characterPosition;
         }
         // SelectedCharacter.GetComponent<GridMovement>().RemoveAvailableMovementPoints(newPosition);
         // bottomCornerUI.EnableAbilities(SelectedCharacter.GetComponent<PlayerInformation>().savedCharacter);
