@@ -30,10 +30,12 @@ public class AbilityManager : MonoBehaviour
         if (hoveredChunkHighlight.isHighlighted)
         {
             if (_lastPath != null)
+
             {
                 foreach (ChunkData chunk in _lastPath)
                 {
                     chunk.GetTileHighlight().DeactivateArrowTile();
+
                 }
             }
             if (_lastPath != null && _lastPath.Any() && IsAdjacent(hoveredChunk, _lastPath[^1]))
@@ -199,7 +201,6 @@ public class AbilityManager : MonoBehaviour
     {
         if (context.performed)
         {
-            _mousePosition = Mouse.current.position.ReadValue();
             ExecuteCurrentAbility();
         }
     }
@@ -214,8 +215,18 @@ public class AbilityManager : MonoBehaviour
         _currentAbility = ability;
         _currentAbility.CreateGrid();
     }
+    
+    public bool IsAbilitySelected()
+    {
+        return _currentAbility != null;
+    }
 
-    private void ExecuteCurrentAbility()
+    public void DeselectAbility()
+    {
+        _currentAbility = null;
+    }
+
+    public void ExecuteCurrentAbility()
     {
         if (_currentAbility != null)
         {

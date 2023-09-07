@@ -31,6 +31,7 @@ public class GameTileMap : MonoBehaviour
     [SerializeField] private HighlightTile[] tileHighlights;
     [SerializeField] private GameObject tiles;
     [SerializeField] private bool showChunks;
+    [SerializeField] private AbilityManager abilityManager;
     private int _chunkCountWidth = 0;
     private int _chunkCountHeight = 0;
     private List<SaveChunks> _chunks;
@@ -207,6 +208,33 @@ public class GameTileMap : MonoBehaviour
         return _chunksArray[x, y];
     }
 
+    public bool CheckBounds(Vector3 position)
+    {
+        int widthChunk = Mathf.CeilToInt((position.x - currentMap._initialPosition.x)/currentMap._chunkSize) - 1;
+        int heightChunk = Mathf.CeilToInt((currentMap._initialPosition.y - position.y) / currentMap._chunkSize) - 1;
+        if (_chunksArray.GetLength(0) > heightChunk && heightChunk >= 0 
+                                                    && _chunksArray.GetLength(1) > widthChunk && widthChunk >= 0
+                                                    && _chunksArray[heightChunk, widthChunk] != null 
+                                                    && !_chunksArray[heightChunk, widthChunk].TileIsLocked())
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public bool CheckBounds(int x, int y)
+    {
+        if (_chunksArray.GetLength(0) > x && x >= 0 
+                                                    && _chunksArray.GetLength(1) > y && y >= 0
+                                                    && _chunksArray[x, y] != null 
+                                                    && !_chunksArray[x, y].TileIsLocked())
+        {
+            return true;
+        }
+        return false;
+    }
+
     public void EnableAllTiles()
     {
         tiles.SetActive(true);
@@ -325,15 +353,7 @@ public class GameTileMap : MonoBehaviour
             chunk.GetTileHighlight().ActivatePlayerTile(false);
         }
     }
-    public void SetCharacter(Vector3 mousePosition, GameObject character)
-    {
-        if (GetChunk(mousePosition) != null)
-        {
-            ChunkData chunkData = GetChunk(mousePosition);
-            chunkData.SetCurrentCharacter(character);
-            chunkData.GetTileHighlight().ActivatePlayerTile(true);
-        }
-    }
+    
     public void SetCharacter(Vector3 mousePosition, GameObject character, PlayerInformation playerInformation)
     {
         if (GetChunk(mousePosition) != null)
@@ -377,7 +397,7 @@ public class GameTileMap : MonoBehaviour
         return false;
     }
 
-    public void MoveSelectedCharacter(Vector3 mousePosition, Vector3 offset = default)
+    public void MoveSelectedCharacter(Vector3 mousePosition, Vector3 offset = default, GameObject character = null)
     {
         
         // GameObject FinalDestination = SelectedCharacter.GetComponent<GridMovement>().PickUpWayTiles();
@@ -389,16 +409,20 @@ public class GameTileMap : MonoBehaviour
         // {
         //     newPosition = FinalDestination;
         // }
+        GameObject moveCharacter = _currentSelectedCharacter;
+        if (character != null)
+        {
+            moveCharacter = character;
+        }
 
-
-        if (GetChunk(mousePosition) != null && _currentSelectedCharacter != null && !CharacterIsOnTile(mousePosition))
+        if (GetChunk(mousePosition) != null && moveCharacter != null && !CharacterIsOnTile(mousePosition))
         {
             ChunkData previousCharacterChunk =
-                GameTileMap.Tilemap.GetChunk(_currentSelectedCharacter.transform.position);
-            ResetChunkCharacter(previousCharacterChunk.GetPosition());
+                GameTileMap.Tilemap.GetChunk(moveCharacter.transform.position);
             Vector3 characterPosition = GetChunk(mousePosition).GetPosition() - offset;
-            _currentSelectedCharacter.transform.position = characterPosition;
-            SetCharacter(mousePosition, _currentSelectedCharacter);
+            moveCharacter.transform.position = characterPosition;
+            SetCharacter(mousePosition, moveCharacter, previousCharacterChunk.GetCurrentPlayerInformation());
+            ResetChunkCharacter(previousCharacterChunk.GetPosition());
             
         }
         // SelectedCharacter.GetComponent<GridMovement>().RemoveAvailableMovementPoints(newPosition);
@@ -426,6 +450,7 @@ public class GameTileMap : MonoBehaviour
         {
             _currentSelectedCharacter = null;
             _currentPlayerInformation = null;
+            // abilityManager.DeselectAbility();
             _selectAction.gameObject.SetActive(false);
         }
     }
@@ -517,7 +542,7 @@ public class GameTileMap : MonoBehaviour
         {
             SelectTile(worldPos);
         }
-        else if (CharacterIsSelected() && OtherCharacterIsOnTile(worldPos)) //fix in future so that you can attack enemies instead of selecting them
+        else if (CharacterIsSelected() && OtherCharacterIsOnTile(worldPos) && !abilityManager.IsAbilitySelected()) //fix in future so that you can attack enemies instead of selecting them
         {
             SelectTile(worldPos);
         }

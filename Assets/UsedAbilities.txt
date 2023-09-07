@@ -58,9 +58,9 @@ SummonBear+-
 SummonOrb+-	
 SwitchPlaces	
 SwordPush+	
-ThrowBehind	
+ThrowBehind+-
 ThrowSpear+-	
-Volley+	
+Volley+-	
 WallEntrap+-	
 WallSmash+-	
 WeakSpot+-	

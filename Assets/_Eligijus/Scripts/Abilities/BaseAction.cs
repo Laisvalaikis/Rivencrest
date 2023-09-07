@@ -28,7 +28,7 @@ using Random = UnityEngine.Random;
         protected LayerMask portalLayer;
         protected LayerMask whiteFieldLayer;
         protected GameInformation gameInformation;
-        protected bool laserGrid = false;
+        [SerializeField] protected bool laserGrid = false;
         //private RaycastHit2D raycast;
         public int AttackRange = 1;
         public int AbilityCooldown = 1;

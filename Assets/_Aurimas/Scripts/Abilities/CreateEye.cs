@@ -9,54 +9,43 @@ public class CreateEye : BaseAction
     private bool isEyeActive = true;
     private CharacterVision _characterVision;
     private PlayerInformation _playerInformation;
-
-    private void AddSurroundingsToList(GameObject middleTile, int movementIndex)
+    
+    public override void ResolveAbility(Vector3 position)
     {
-        (int x, int y) coordinates = GameTileMap.Tilemap.GetChunk(transform.position + new Vector3(0, 0.5f, 0)).GetIndexes();
-        var directionVectors = new List<(int, int)>
+        
+        for (int i = 0; i < _chunkList.Count; i++)
         {
-            (AttackRange, coordinates.y + 0),
-            (coordinates.x + 0, AttackRange),
-            (-AttackRange, coordinates.y + 0),
-            (coordinates.x + 0, -AttackRange)
-        };
-        ChunkData[,] chunkDataArray = GameTileMap.Tilemap.GetChunksArray();
-        foreach (var x in directionVectors)
-        {
-            bool isGround = CheckIfSpecificLayer(middleTile, x.Item1, x.Item2, groundLayer);
-            bool isBlockingLayer = CheckIfSpecificLayer(middleTile, x.Item1, x.Item2, blockingLayer);
-            bool isPlayer = CheckIfSpecificTag(middleTile, x.Item1, x.Item2, blockingLayer, "Player");
-            if (isGround && (!isBlockingLayer || isPlayer))
-            {
-                GameObject AddableObject = GetSpecificGroundTile(middleTile, x.Item1, x.Item2, groundLayer);
-                this.AvailableTiles[movementIndex].Add(AddableObject);
-            }
+            spawnedCharacter = Instantiate(eyePrefab, _chunkList[i].GetPosition() + new Vector3(0.015f, -0.8f, 0), Quaternion.identity);
         }
+        base.ResolveAbility(position);
+        //_characterVision.EnableGrid();
+        //_playerInformation.VisionGameObject = eyePrefab;
+        //isEyeActive = true;
+        FinishAbility();
     }
-    // public override void CreateGrid()
-    // {
-    //     this.AvailableTiles.Clear();
-    //     this.AvailableTiles.Add(new List<GameObject>());
-    //     AddSurroundingsToList(transform.gameObject, 0);
-    //     
-    // }
+    
+    public override void CreateGrid(ChunkData centerChunk, int radius)
+    {
+        
+        (int y, int x) coordinates = GameTileMap.Tilemap.GetChunk(transform.position).GetIndexes();
+        ChunkData[,] chunkDataArray = GameTileMap.Tilemap.GetChunksArray();
+        _chunkList.Clear();
+        
+        int topY = coordinates.y - AttackRange;
+        ChunkData chunkData = chunkDataArray[topY, coordinates.x];
+        HighlightGridTile(chunkData);
+        _chunkList.Add(chunkData);
+        
+        
+    }
+    
     public override void CreateGrid()
     {
         ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
-        AddSurroundingsToList(transform.gameObject,0);
         CreateGrid(startChunk, AttackRange);
-        Debug.Log("Generates");
     }
 
-    public override void ResolveAbility(Vector3 position)
-    {
-        base.ResolveAbility(position);
-        eyePrefab = Instantiate(eyePrefab, position + new Vector3(0f, 0f, 1f), Quaternion.identity);
-        _characterVision.EnableGrid();
-        _playerInformation.VisionGameObject = eyePrefab;
-        isEyeActive = true;
-        FinishAbility();
-    }
+    
     public override void OnTileHover(GameObject tile)
     {
         EnableDamagePreview(tile, minAttackDamage, maxAttackDamage);
