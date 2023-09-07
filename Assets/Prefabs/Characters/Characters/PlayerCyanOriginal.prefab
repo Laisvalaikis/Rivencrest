@@ -233,7 +233,6 @@ MonoBehaviour:
   AbilityPoints: 0
   isDisabled: 0
   spawnedCharacter: {fileID: 0}
-  impactVFXName: 
 --- !u!114 &711100996200367084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,7 +361,7 @@ MonoBehaviour:
   playerInformation: {fileID: 0}
   actionStateName: 
   laserGrid: 0
-  AttackRange: 2
+  AttackRange: 3
   AbilityCooldown: 1
   minAttackDamage: 0
   maxAttackDamage: 0
@@ -374,6 +373,7 @@ MonoBehaviour:
   isDisabled: 0
   spawnedCharacter: {fileID: 0}
   eyePrefab: {fileID: 930733572363193471, guid: 9532c08d23bec452eb1135da7cb1884a, type: 3}
+  AttackRange: 2
 --- !u!114 &2890484779094238839
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,46 +9,41 @@ public class CreateEye : BaseAction
     private bool isEyeActive = true;
     private CharacterVision _characterVision;
     private PlayerInformation _playerInformation;
-    //private void AddSurroundingsToList(GameObject middleTile, int movementIndex)
+    
     public override void ResolveAbility(Vector3 position)
     {
+        
+        for (int i = 0; i < _chunkList.Count; i++)
+        {
+            spawnedCharacter = Instantiate(eyePrefab, _chunkList[i].GetPosition() + new Vector3(0.015f, -0.8f, 0), Quaternion.identity);
+        }
         base.ResolveAbility(position);
-        ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
-        spawnedCharacter = Instantiate(eyePrefab, position + new Vector3(0f,-0.8f,1f) , Quaternion.identity);
         //_characterVision.EnableGrid();
         //_playerInformation.VisionGameObject = eyePrefab;
         //isEyeActive = true;
         FinishAbility();
     }
+    
     public override void CreateGrid(ChunkData centerChunk, int radius)
     {
-        (int x, int y) coordinates = GameTileMap.Tilemap.GetChunk(transform.position + new Vector3(0, 0.5f, 0)).GetIndexes();
-        var directionVectors = new List<(int, int)>
-        {
-            (coordinates.x + 1, AttackRange + 1),
-            (coordinates.x + 0, AttackRange + 1),
-            (coordinates.x + (-1), AttackRange + 1),
-            (coordinates.x + 0, AttackRange + (-1))
-        };
-        ChunkData[,] chunkDataArray = GameTileMap.Tilemap.GetChunksArray();
-        foreach (var x in directionVectors)
-        {
-            if (x.Item1 >= 0 && x.Item1 < chunkDataArray.GetLength(0) && AttackRange >= 0 && AttackRange < chunkDataArray.GetLength(1))
-            {
-                ChunkData chunkData = chunkDataArray[x.Item1, AttackRange];
-            }
-        }
         
+        (int y, int x) coordinates = GameTileMap.Tilemap.GetChunk(transform.position).GetIndexes();
+        ChunkData[,] chunkDataArray = GameTileMap.Tilemap.GetChunksArray();
+        _chunkList.Clear();
+        
+        int topY = coordinates.y - AttackRange;
+        ChunkData chunkData = chunkDataArray[topY, coordinates.x];
+        HighlightGridTile(chunkData);
+        _chunkList.Add(chunkData);
         
         
     }
-    // public override void CreateGrid()
-    // {
-    //     ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
-    //     CreateGrid(startChunk, AttackRange);
-    //     HighlightAll();
-    //     Debug.Log("Generates");
-    // }
+    
+    public override void CreateGrid()
+    {
+        ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
+        CreateGrid(startChunk, AttackRange);
+    }
 
     
     public override void OnTileHover(GameObject tile)
