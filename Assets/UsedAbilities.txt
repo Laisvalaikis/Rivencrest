@@ -1,6 +1,6 @@
-AcidRain	
+AcidRain+-	
 Avalanche	
-BindingRitual	
+BindingRitual+-	
 Blaze+
 BlindDart+
 BlockAbility+
@@ -56,7 +56,7 @@ SpearPulse+
 StunAttack+	
 SummonBear+-	
 SummonOrb+-	
-SwitchPlaces	
+SwitchPlaces+-	
 SwordPush+-	
 ThrowBehind+-
 ThrowSpear+-	
