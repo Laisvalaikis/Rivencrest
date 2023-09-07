@@ -41,7 +41,7 @@ public class AcidRain : BaseAction
         {
             if (x.poisonValue > 0 && x.chunk.GetCurrentPlayerInformation().GetHealth() > 0)
             {
-                DealDamage(x.chunk, x.poisonValue, false, gameObject, "Poison");
+                DealDamage(x.chunk, x.poisonValue, false);
             }
             x.turnsLeft--;
         }

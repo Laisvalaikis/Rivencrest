@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TMPro;
+using Unity.Mathematics;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -88,6 +90,32 @@ using Random = UnityEngine.Random;
             _chunkList.Clear();
 
         }
+        
+        protected Side ChunkSideByCharacter(ChunkData playerChunk, ChunkData chunkDataTarget)
+        {
+        
+            (int x, int y) playerChunkIndex = playerChunk.GetIndexes();
+            (int x, int y) chunkIndex = chunkDataTarget.GetIndexes();
+            if (playerChunkIndex.x > chunkIndex.x)
+            {
+                return Side.isFront;
+            }
+            else if (playerChunkIndex.x < chunkIndex.x)
+            {
+                return Side.isBack;
+            }
+            else if (playerChunkIndex.y < chunkIndex.y)
+            {
+                return Side.isRight;
+            }
+            else if (playerChunkIndex.y > chunkIndex.y)
+            {
+                return Side.isLeft;
+            }
+
+            return Side.none;
+
+        }
 
         //Creates a list of available chunks for attack
         private void CreateAvailableChunkList()
@@ -140,7 +168,46 @@ using Random = UnityEngine.Random;
                 }
             }
         }
-        
+
+        protected int2 GetSideVector(Side side)
+        {
+            int2 sideVector = int2.zero;
+            switch (side)
+            {
+                case Side.isFront:
+                    sideVector = new int2(1, 0);
+                    break;
+                case Side.isBack:
+                    sideVector = new int2(-1, 0);
+                    break;
+                case Side.isRight:
+                    sideVector = new int2(0, -1);
+                    break;
+                case Side.isLeft:
+                    sideVector = new int2(0, 1);
+                    break;
+                case Side.none:
+                    sideVector = int2.zero;
+                    break;
+            }
+            
+            return sideVector;
+        }
+
+        protected void MovePlayerToSide(ChunkData player, int2 sideVector)
+        {
+            (int x, int y) indexes = player.GetIndexes();
+            int2 tempIndexes = new int2(indexes.x + sideVector.x, indexes.y + sideVector.y);
+            if (GameTileMap.Tilemap.CheckBounds(tempIndexes.x, tempIndexes.y))
+            {
+                ChunkData tile = GameTileMap.Tilemap.GetChunkDataByIndex(tempIndexes.x, tempIndexes.y);
+                if (!tile.CharacterIsOnTile())
+                {
+                    GameTileMap.Tilemap.MoveSelectedCharacter(tile.GetPosition(), new Vector3(0, 0.5f, 1), player.GetCurrentCharacter());
+                }
+            }
+        }
+
         private void GeneratePlusPattern(ChunkData centerChunk, int length)
         {
             (int centerX, int centerY) = centerChunk.GetIndexes();
@@ -502,7 +569,7 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
             }
         }
 
-        protected void DealDamage(ChunkData chunkData, int damage, bool crit, GameObject damageDealer, string specialInformation = "")
+        protected void DealDamage(ChunkData chunkData, int damage, bool crit)
         {
             if (chunkData != null && chunkData.GetCurrentCharacter() != null && isAllegianceSame(chunkData.GetPosition()))
             {

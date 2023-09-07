@@ -1,64 +1,78 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 
 public class SwordPush : BaseAction
 {
     public int pushDamage = 15;
     public int centerDamage = 30;
+    private List<ChunkData> _attackTiles;
     
-        public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(Vector3 position)
     {
         // if (CanTileBeClicked(position))
         // {
-        foreach (ChunkData tile in ReturnGeneratedChunks())
+        base.ResolveAbility(position);
+        ChunkData current = GameTileMap.Tilemap.GetChunk(position);
+        Side _side = Side.none;
+        CreateAttackGrid(current);
+        for (int i = 0; i < _attackTiles.Count; i++)
         {
-            DealRandomDamageToTarget(tile, minAttackDamage, maxAttackDamage);
+            if (i > 0)
+            {
+                _side = ChunkSideByCharacter(current, _attackTiles[i]);
+                int2 sideVector = GetSideVector(_side);
+                MovePlayerToSide(_attackTiles[i], sideVector);
+                int damage = pushDamage;
+                bool crit = IsItCriticalStrike(ref damage);
+                DealDamage(_attackTiles[i], damage, crit);
+            }
+            else
+            {
+                int damage = centerDamage;
+                bool crit = IsItCriticalStrike(ref damage);
+                DealDamage(_attackTiles[i], damage, crit);
+            }
         }
         
-        base.ResolveAbility(position);
-            FinishAbility();
+        
+        FinishAbility();
         // }
         
     }
-    
-    public override void CreateGrid(ChunkData centerChunk, int radius)
-    {
-        
-        //Merging into one list
-        (int centerX, int centerY) = centerChunk.GetIndexes();
-        _chunkList.Clear();
-        ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray(); 
-        for (int y = -radius; y <= radius; y++)
-        {
-            for (int x = -radius; x <= radius; x++)
-            {
-                if (Mathf.Abs(x) + Mathf.Abs(y) == radius)
-                {
-                    int targetX = centerX + x;
-                    int targetY = centerY + y;
 
-                    // Ensuring we don't go out of array bounds.
-                    if (targetX >= 0 && targetX < chunksArray.GetLength(0) && targetY >= 0 && targetY < chunksArray.GetLength(1))
-                    {
-                        ChunkData chunk = chunksArray[targetX, targetY];
-                        if (chunk != null && !chunk.TileIsLocked())
-                        {
-                            _chunkList.Add(chunk);
-                            HighlightGridTile(chunk);
-                            //chunk.EnableTileRenderingGameObject();
-                            //chunk.EnableTileRendering();
-                        }
-                    }
+    private void CreateAttackGrid(ChunkData selected)
+    {
+        (int x, int y) tileIndex = selected.GetIndexes();
+        List<(int, int)> positionIndexes = new List<(int, int)> 
+        {
+            (tileIndex.x, tileIndex.y + 1),  // Up
+            (tileIndex.x, tileIndex.y - 1),  // Down
+            (tileIndex.x + 1, tileIndex.y),  // Right
+            (tileIndex.x - 1, tileIndex.y)   // Left
+        };
+        if (_attackTiles == null)
+        {
+            _attackTiles = new List<ChunkData>();
+        }
+        else
+        {
+            _attackTiles.Clear();
+        }
+        _attackTiles.Add(selected); // added center chunk;
+        foreach (var indexes in positionIndexes)
+        {
+            if (GameTileMap.Tilemap.CheckBounds(indexes.Item1, indexes.Item2))
+            {
+                ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(indexes.Item1, indexes.Item2);
+                if (chunkData.CharacterIsOnTile())
+                {
+                    _attackTiles.Add(chunkData);
                 }
             }
         }
-    }
-
-    public override void CreateGrid()
-    {
-        ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
-        CreateGrid(startChunk, AttackRange);
     }
 
     public override void OnTurnStart()
