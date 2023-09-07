@@ -17,25 +17,25 @@ public class AbilityManager : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
+        //todo: highlight chunk that is hovered
+        //todo: arrows disappear when not hovering over grid
         if (_currentAbility == null) return;
         _mousePosition = context.ReadValue<Vector2>();
         Vector3 worldPos = camera.ScreenToWorldPoint(_mousePosition);
         ChunkData[,] chunkArray = gameTileMap.GetChunksArray();
         ChunkData hoveredChunk = gameTileMap.GetChunk(worldPos);
-        if (hoveredChunk == null) return;
         
+        if (hoveredChunk == null) return;
         HighlightTile hoveredChunkHighlight = hoveredChunk.GetTileHighlight();
         if (hoveredChunkHighlight == null || hoveredChunkHighlight == _previousChunk) return;
         
         if (hoveredChunkHighlight.isHighlighted)
         {
             if (_lastPath != null)
-
             {
                 foreach (ChunkData chunk in _lastPath)
                 {
                     chunk.GetTileHighlight().DeactivateArrowTile();
-
                 }
             }
             if (_lastPath != null && _lastPath.Any() && IsAdjacent(hoveredChunk, _lastPath[^1]))
@@ -168,6 +168,7 @@ public class AbilityManager : MonoBehaviour
             Debug.Log(cx + " " + px);
             Debug.Log(cy + " " + py);
             
+            //corner math
             if ((cx > px && cy == py && cx == nx && cy > ny) || (cx == px && cy > py && cx > nx && cy == ny))
                 return 11;
             
@@ -179,18 +180,6 @@ public class AbilityManager : MonoBehaviour
 
             if ((cx == px && cy < py && cx > nx && cy == ny) || (cx > px && cy == py && cx == nx && cy < ny))
                 return 13;
-            
-            
-            /*if (cx != px && cy == py && px < cx && cy > ny) return 11; // top right Corner
-            if (cx != px && cy == py && px > cx && cy > ny) return 13; // top left Corner
-            
-            if (cx != px && cy == py && px < cx && cy < ny) return 14; // bottom right Corner
-            if (cx != px && cy == py && px > cx && cy < ny) return 12; // bottom left Corner*/
-            
-            // if (cx != px && cy != py) return 12; // Top Left Corner
-            // if (cx != nx && cy != ny) return 13; // Bottom Right Corner nope
-            // if (cx != nx && cy != py) return 14; // Top Right Corner
-
         }
         return 0;  
     }
