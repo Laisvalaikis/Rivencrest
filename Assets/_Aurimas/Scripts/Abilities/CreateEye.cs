@@ -13,7 +13,7 @@ public class CreateEye : BaseAction
     public override void ResolveAbility(Vector3 position)
     {
         
-        for (int i = 0; i < _chunkList.Count; i++)
+       for (int i = 0; i < _chunkList.Count; i++)
         {
             spawnedCharacter = Instantiate(eyePrefab, _chunkList[i].GetPosition() + new Vector3(0.015f, -0.8f, 0), Quaternion.identity);
         }
