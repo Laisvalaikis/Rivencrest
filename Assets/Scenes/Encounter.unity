@@ -6080,6 +6080,7 @@ MonoBehaviour:
   - {fileID: 1617066992}
   tiles: {fileID: 1666844226}
   showChunks: 1
+  abilityManager: {fileID: 1649360796}
   _currentSelectedCharacter: {fileID: 0}
 --- !u!1001 &364912360
 PrefabInstance:

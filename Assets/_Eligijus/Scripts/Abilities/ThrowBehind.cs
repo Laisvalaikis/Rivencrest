@@ -6,10 +6,7 @@ using UnityEngine;
 
 public class ThrowBehind : BaseAction
 {
-    private bool inFront = false;
-    private bool inBack = false;
-    private bool inLeft = false;
-    private bool inRight = false;
+    private Side _side;
     public override void ResolveAbility(Vector3 position)
     {
         if (GameTileMap.Tilemap.CharacterIsOnTile(position))
@@ -23,36 +20,13 @@ public class ThrowBehind : BaseAction
             FinishAbility();
         }
     }
-
-    private void ChunkSideByCharacter(ChunkData playerChunk, ChunkData chunkDataTarget)
-    {
-        
-        (int x, int y) playerChunkIndex = playerChunk.GetIndexes();
-        (int x, int y) chunkIndex = chunkDataTarget.GetIndexes();
-        if (playerChunkIndex.x > chunkIndex.x)
-        {
-            inFront = true;
-        }
-        else if (playerChunkIndex.x < chunkIndex.x)
-        {
-            inBack = true;
-        }
-        else if (playerChunkIndex.y < chunkIndex.y)
-        {
-            inRight = true;
-        }
-        else if (playerChunkIndex.y > chunkIndex.y)
-        {
-            inLeft = true;
-        }
-
-    }
+    
 
     private void MoveCharacter(ChunkData chunk, ChunkData target)
     {
         (int x, int y) playerChunkIndex = chunk.GetIndexes();
         (int x, int y) targetChunkIndex = target.GetIndexes();
-        if (inFront)
+        if (_side == Side.isFront)
         {
             int range = Math.Abs(playerChunkIndex.x - targetChunkIndex.x);
             if (GameTileMap.Tilemap.GetChunkDataByIndex(playerChunkIndex.x + range, targetChunkIndex.y) != null)
@@ -63,7 +37,7 @@ public class ThrowBehind : BaseAction
                 GameTileMap.Tilemap.MoveSelectedCharacter(positionChunk.GetPosition(), new Vector3(0, 0.5f, 1), target.GetCurrentPlayerInformation().gameObject);
             }
         }
-        else if (inBack)
+        else if (_side == Side.isBack)
         {
             int range = Math.Abs(playerChunkIndex.x - targetChunkIndex.x);
             if (GameTileMap.Tilemap.GetChunkDataByIndex(playerChunkIndex.x - range, targetChunkIndex.y) != null)
@@ -74,7 +48,7 @@ public class ThrowBehind : BaseAction
                 GameTileMap.Tilemap.MoveSelectedCharacter(positionChunk.GetPosition(), new Vector3(0, 0.5f, 1), target.GetCurrentPlayerInformation().gameObject);
             }
         }
-        else if (inRight)
+        else if (_side == Side.isRight)
         {
             int range = Math.Abs(playerChunkIndex.y - targetChunkIndex.y);
             if (GameTileMap.Tilemap.GetChunkDataByIndex(targetChunkIndex.x, playerChunkIndex.y - range) != null)
@@ -85,7 +59,7 @@ public class ThrowBehind : BaseAction
                 GameTileMap.Tilemap.MoveSelectedCharacter(positionChunk.GetPosition(), new Vector3(0, 0.5f, 1), target.GetCurrentPlayerInformation().gameObject);
             }
         }
-        else if (inLeft)
+        else if (_side == Side.isLeft)
         {
             int range = Math.Abs(playerChunkIndex.y - targetChunkIndex.y);
             if (GameTileMap.Tilemap.GetChunkDataByIndex(targetChunkIndex.x, playerChunkIndex.y + range) != null)
@@ -100,10 +74,7 @@ public class ThrowBehind : BaseAction
 
     protected override void FinishAbility()
     {
-        inFront = false;
-        inBack = false;
-        inRight = false;
-        inLeft = false;
+        _side = Side.none;
         base.FinishAbility();
     }
 

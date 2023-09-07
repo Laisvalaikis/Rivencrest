@@ -149,6 +149,11 @@ public class ChunkData
         return _currentCharacter;
     }
 
+    public bool CharacterIsOnTile()
+    {
+        return _currentCharacter != null;
+    }
+
     public PlayerInformation GetCurrentPlayerInformation()
     {
         return _currentPlayerInformation;

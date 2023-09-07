@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4438398929298113651}
   - component: {fileID: 2884985102919791894}
   - component: {fileID: -816085581043963763}
-  - component: {fileID: 6236945185559072746}
+  - component: {fileID: 2261460347511136821}
   m_Layer: 8
   m_Name: PlayerPink
   m_TagString: Player
@@ -232,7 +232,6 @@ MonoBehaviour:
   AbilityPoints: 0
   isDisabled: 0
   spawnedCharacter: {fileID: 0}
-  impactVFXName: 
 --- !u!114 &711100996200367084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,7 +331,7 @@ MonoBehaviour:
   - abilityText: {fileID: 11400000, guid: 66879b7eb53187e4daa6894d6e6cd3e2, type: 2}
     enabled: 1
     AbilityImage: {fileID: -2885244205613315195, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 6236945185559072746}
+    Action: {fileID: 2261460347511136821}
   - abilityText: {fileID: 11400000, guid: 43281a5240230c04699b720f96880549, type: 2}
     enabled: 1
     AbilityImage: {fileID: -4147313178977208927, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
@@ -351,7 +350,7 @@ MonoBehaviour:
     Action: {fileID: 0}
   availableAttackPoints: 0
   availableMovementPoints: 0
---- !u!114 &6236945185559072746
+--- !u!114 &2261460347511136821
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -360,25 +359,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 659955980883675694}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28c1b6eb88a9dfd46916001e0bcc8669, type: 3}
+  m_Script: {fileID: 11500000, guid: e6ee9c5f7114a9442aada67005a0ce0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   selectedEffectIndex: 0
   selectedSongIndex: 0
   playerInformation: {fileID: 1310519675225487401}
-  actionStateName: Throw Behind
-  laserGrid: 1
-  AttackRange: 2
+  actionStateName: 
+  laserGrid: 0
+  AttackRange: 1
   AbilityCooldown: 1
   minAttackDamage: 0
   maxAttackDamage: 0
   isAbilitySlow: 1
-  friendlyFire: 1
+  friendlyFire: 0
   AttackAbility: 0
   AvailableAttacks: 1
   AbilityPoints: 0
   isDisabled: 0
   spawnedCharacter: {fileID: 0}
+  pushDamage: 15
+  centerDamage: 30
 --- !u!1 &659955981309584225
 GameObject:
   m_ObjectHideFlags: 0
