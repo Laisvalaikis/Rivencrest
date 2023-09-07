@@ -13,6 +13,25 @@ public class HighlightTile : MonoBehaviour
     [SerializeField] private SpriteRenderer DangerUI;
     [SerializeField] private SpriteRenderer PlayerSelect;
 
+    
+    [SerializeField] private Sprite rightStartArrow;
+    [SerializeField] private Sprite leftStartArrow;
+    [SerializeField] private Sprite downStartArrow;
+    [SerializeField] private Sprite upStartArrow;
+
+    [SerializeField] private Sprite rightEndArrow;
+    [SerializeField] private Sprite leftEndArrow;
+    [SerializeField] private Sprite downEndArrow;
+    [SerializeField] private Sprite upEndArrow;
+
+    [SerializeField] private Sprite verticalIntermediateArrow;
+    [SerializeField] private Sprite horizontalIntermediateArrow;
+
+    [SerializeField] private Sprite topLeftCornerArrow;
+    [SerializeField] private Sprite bottomLeftCornerArrow;
+    [SerializeField] private Sprite topRightCornerArrow;
+    [SerializeField] private Sprite bottomRightCornerArrow;
+    
     //public Sprite HoverSprite;
     //private Sprite OriginalSprite;
     private Color AttackHighlightColor;
@@ -22,7 +41,7 @@ public class HighlightTile : MonoBehaviour
     private Color OtherHighlight;
     private Color InspectionHighlight;
     [HideInInspector] public bool fogOfWar = true;
-    [HideInInspector] public bool isHighlighted = false;
+    public bool isHighlighted = false;
     public string activeState;
     [HideInInspector] public bool canAbilityTargetAllies = false;
     [HideInInspector] public bool canAbilityTargetYourself = false;
@@ -38,6 +57,67 @@ public class HighlightTile : MonoBehaviour
     {
         ColorGridTile.enabled = value;
         isHighlighted = value;
+    }
+
+    public void SetArrowSprite(int arrowType)
+    {
+        Sprite arrowSprite = null;
+
+        switch (arrowType)
+        {
+            case 1:
+                arrowSprite = rightStartArrow;
+                break;
+            case 2:
+                arrowSprite = leftStartArrow;
+                break;
+            case 3:
+                arrowSprite = downStartArrow;
+                break;
+            case 4:
+                arrowSprite = upStartArrow;
+                break;
+            case 5:
+                arrowSprite = rightEndArrow;
+                break;
+            case 6:
+                arrowSprite = leftEndArrow;
+                break;
+            case 7:
+                arrowSprite = downEndArrow;
+                break;
+            case 8:
+                arrowSprite = upEndArrow;
+                break;
+            case 9:
+                arrowSprite = verticalIntermediateArrow;
+                break;
+            case 10:
+                arrowSprite = horizontalIntermediateArrow;
+                break;
+            case 11:
+                arrowSprite = topLeftCornerArrow;
+                break;
+            case 12:
+                arrowSprite = topRightCornerArrow;
+                break;
+            case 13:
+                arrowSprite = bottomLeftCornerArrow;
+                break;
+            case 14:
+                arrowSprite = bottomRightCornerArrow;
+                break;
+            default:
+                // Debug.LogError("Invalid arrow type");
+                return;
+        }
+        ArrowTile.sprite = arrowSprite;
+        ArrowTile.enabled = true;
+    }
+
+    public void DeactivateArrowTile()
+    {
+        ArrowTile.enabled = false;
     }
     
     public void ActivatePlayerTile(bool value)

@@ -107,6 +107,20 @@ MonoBehaviour:
   ArrowTile: {fileID: 6581313568193182979}
   DangerUI: {fileID: 4852370062007705694}
   PlayerSelect: {fileID: 3087432897853189744}
+  rightStartArrow: {fileID: -3542878067732243954, guid: 77cbe22315e95d946a8d2837b65e5e8f, type: 3}
+  leftStartArrow: {fileID: 7728714638524574292, guid: 77cbe22315e95d946a8d2837b65e5e8f, type: 3}
+  downStartArrow: {fileID: -7513417289121308173, guid: 77cbe22315e95d946a8d2837b65e5e8f, type: 3}
+  upStartArrow: {fileID: 6779826495228880055, guid: 77cbe22315e95d946a8d2837b65e5e8f, type: 3}
+  rightEndArrow: {fileID: 8433643086981630964, guid: 77cbe22315e95d946a8d2837b65e5e8f, type: 3}
+  leftEndArrow: {fileID: -2122732486614428207, guid: 77cbe22315e95d946a8d2837b65e5e8f, type: 3}
+  downEndArrow: {fileID: -7396131574025795045, guid: 77cbe22315e95d946a8d2837b65e5e8f, type: 3}
+  upEndArrow: {fileID: -1884097847600645503, guid: 77cbe22315e95d946a8d2837b65e5e8f, type: 3}
+  verticalIntermediateArrow: {fileID: 5208953614434484821, guid: 77cbe22315e95d946a8d2837b65e5e8f, type: 3}
+  horizontalIntermediateArrow: {fileID: -6505892567686172497, guid: 77cbe22315e95d946a8d2837b65e5e8f, type: 3}
+  topLeftCornerArrow: {fileID: -3050244012597853300, guid: 77cbe22315e95d946a8d2837b65e5e8f, type: 3}
+  bottomLeftCornerArrow: {fileID: 1411812226603530787, guid: 77cbe22315e95d946a8d2837b65e5e8f, type: 3}
+  topRightCornerArrow: {fileID: 9120545819743474600, guid: 77cbe22315e95d946a8d2837b65e5e8f, type: 3}
+  bottomRightCornerArrow: {fileID: -7991758245133678637, guid: 77cbe22315e95d946a8d2837b65e5e8f, type: 3}
   NotHoveredColor: {r: 0, g: 0, b: 0, a: 0}
   fogOfWar: 1
   isHighlighted: 0
@@ -356,7 +370,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 992625187518623988, guid: 56db417f4415ee04ab8bf10991d27168, type: 3}
-  m_Color: {r: 0.50980395, g: 1, b: 0.37254903, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
