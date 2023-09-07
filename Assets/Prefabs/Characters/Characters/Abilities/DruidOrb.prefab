@@ -13,9 +13,7 @@ GameObject:
   - component: {fileID: 5113059019578474823}
   - component: {fileID: 3334284853941846806}
   - component: {fileID: 6275271594646152352}
-  - component: {fileID: 9220905871656868590}
   - component: {fileID: 5426544059064292782}
-  - component: {fileID: 5787685188252791117}
   - component: {fileID: 1856158736296814074}
   - component: {fileID: 1464778643864779060}
   - component: {fileID: 8998103371300949827}
@@ -33,6 +31,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5113059019578474808}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -45,7 +44,6 @@ Transform:
   - {fileID: 4656347988876996350}
   - {fileID: 652167036607892921}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &5113059019578474820
 BoxCollider2D:
@@ -131,7 +129,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763e3691d60f39f48a88a9e4187954f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 5113059020209940596}
+  selectedEffectIndex: 0
+  selectedSongIndex: 0
+  playerInformation: {fileID: 6275271594646152352}
+  actionStateName: 
+  laserGrid: 0
+  AttackRange: 1
+  AbilityCooldown: 1
+  minAttackDamage: 0
+  maxAttackDamage: 0
+  isAbilitySlow: 1
+  friendlyFire: 0
+  AttackAbility: 0
+  AvailableAttacks: 1
+  AbilityPoints: 0
+  isDisabled: 0
+  spawnedCharacter: {fileID: 0}
+  playerCenter: {x: 0, y: 0.5, z: 0}
 --- !u!114 &6275271594646152352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,6 +158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1abe98737ff8546bdcc88828c38a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  playerInformationData: {fileID: 11400000, guid: 7f446d112584189418ae75e6032529b5, type: 2}
   savedCharacter:
     level: 0
     xP: 0
@@ -151,36 +167,25 @@ MonoBehaviour:
     characterName: 
     dead: 0
     abilityPointCount: 0
-    unlockedAbilities: 
+    unlockedAbilities: []
+    toConfirmAbilities: 0
     blessings: []
     cost: 0
-    prefabIndex: 0
+    characterIndex: 0
     playerInformation: {fileID: 0}
     prefab: {fileID: 0}
-  MaxHealth: 4
+  spriteRenderer: {fileID: 0}
+  animator: {fileID: 0}
   health: 100
-  critChance: 3
-  accuracy: 100
-  dodgeChance: 1
   CharactersTeam: Default
-  characterPortrait: {fileID: 0}
   TeamManager: {fileID: 0}
   FlagInHand: {fileID: 0}
-  currentState: Movement
-  AnimationState: Movement
-  isCurrentStateAvailable: 0
-  StateAnimations: 0
   role: DAMAGE
-  CharacterPortraitSprite: {fileID: -3097636228661507150, guid: 88a9dc2923d4fa842a8fce4120dbf698, type: 3}
-  CharacterSplashArt: {fileID: 0}
-  CroppedSplashArt: {fileID: 0}
-  _data: {fileID: 0}
   Blocker: 0
   BlockingAlly: {fileID: 0}
   BarrierProvider: {fileID: 0}
   Marker: {fileID: 0}
   PinkWeakSpot: {fileID: 0}
-  Stun: 0
   Slow1: 0
   Slow2: 0
   Slow3: 0
@@ -190,44 +195,13 @@ MonoBehaviour:
   Aflame: {fileID: 0}
   Danger: 0
   IsCreatingWhiteField: 0
-  MindControlTarget: {fileID: 0}
   VisionGameObject: {fileID: 0}
   CantAttackCondition: 0
-  Disarmed: 0
-  cornerPortraitBoxInGame: {fileID: 0}
-  Caged: 0
   Protected: 0
-  MistShield: 0
   Stasis: 0
-  wasThisCharacterSpawned: 0
   enabledAbilitiesEnemy: []
-  gameInformation: {fileID: 0}
-  Respawn: 0
   XPToGain: 0
   isThisObject: 0
-  ClassName: BEAR
-  ClassColor: {r: 0.3647059, g: 1, b: 0.13333334, a: 1}
-  ClassColor2: {r: 0, g: 0, b: 0, a: 0}
-  BlessingsAndCurses: []
---- !u!114 &9220905871656868590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5113059019578474808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5e8ea6dfe66da4fb5b6999ba9f19bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityBackground: {fileID: 3662352932837186737, guid: f12fdd45e276893438b8ce4098f754cb, type: 3}
-  ActionScripts:
-  - action: {fileID: 0}
-    actionName: Attack
-    AbilityIcon: {fileID: 0}
-    AbilityIndex: -1
-  hasSlowAbilityBeenCast: 0
 --- !u!114 &5426544059064292782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,41 +220,6 @@ MonoBehaviour:
   soundNames: []
   selectedEffectIndex: 0
   selectedSongIndex: 0
---- !u!114 &5787685188252791117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5113059019578474808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d94be52245746e9438ecf5c3b0c05488, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedEffectIndex: 0
-  selectedSongIndex: 0
-  actionStateName: 
-  AttackRange: 1
-  AbilityCooldown: 1
-  minAttackDamage: 0
-  maxAttackDamage: 0
-  isAbilitySlow: 1
-  friendlyFire: 0
-  AttackAbility: 0
-  AvailableAttacks: 1
-  AbilityPoints: 0
-  isDisabled: 0
-  spawnedCharacter: {fileID: 0}
-  MovementPoints: 0
-  AvailableMovementPoints: 0
-  IceSlow: 0
-  OilSlow: 0
-  Stun: 0
-  currentlyRemovedMovementPoints: 0
-  officiallyRemovedMovementPoints: 0
-  WayTilesList: []
-  PreferredWayTile: {fileID: 0}
 --- !u!114 &1856158736296814074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,7 +234,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedEffectIndex: 0
   selectedSongIndex: 0
+  playerInformation: {fileID: 0}
   actionStateName: 
+  laserGrid: 0
   AttackRange: 1
   AbilityCooldown: 1
   minAttackDamage: 6
@@ -307,7 +248,6 @@ MonoBehaviour:
   AbilityPoints: 0
   isDisabled: 0
   spawnedCharacter: {fileID: 0}
-  impactVFXName: forest2
 --- !u!114 &1464778643864779060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,7 +290,8 @@ MonoBehaviour:
   fogLayer:
     serializedVersion: 2
     m_Bits: 2048
-  DestinationObject: {fileID: 0}
+  playerInformation: {fileID: 0}
+  playerMovement: {fileID: 0}
   _data: {fileID: 0}
 --- !u!1 &5113059020209940599
 GameObject:
@@ -375,13 +316,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5113059020209940599}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5113059019578474819}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &965588323812141935
 PrefabInstance:
@@ -483,7 +424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5642735115460123181, guid: 3fe24b4f19efe534991ae111a6f4da7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5642735115460123181, guid: 3fe24b4f19efe534991ae111a6f4da7d, type: 3}
       propertyPath: m_LocalPosition.z

@@ -90,6 +90,11 @@ public class PlayerInformation : MonoBehaviour
     {
         return type;
     }
+    
+    public void SetInformationType(InformationType informationType)
+    {
+        type = informationType;
+    }
 
     public void SetPlayerTeam(int currentCharacterTeam)
     {

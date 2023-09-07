@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4438398929298113651}
   - component: {fileID: 2884985102919791894}
   - component: {fileID: -816085581043963763}
-  - component: {fileID: 6743656599309474685}
+  - component: {fileID: 135130130340736634}
   m_Layer: 8
   m_Name: PlayerPink
   m_TagString: Player
@@ -331,26 +331,10 @@ MonoBehaviour:
   - abilityText: {fileID: 11400000, guid: 66879b7eb53187e4daa6894d6e6cd3e2, type: 2}
     enabled: 1
     AbilityImage: {fileID: -2885244205613315195, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 6743656599309474685}
-  - abilityText: {fileID: 11400000, guid: 43281a5240230c04699b720f96880549, type: 2}
-    enabled: 1
-    AbilityImage: {fileID: -4147313178977208927, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 0}
-  - abilityText: {fileID: 11400000, guid: 7b4244b8cccf3014c9fc132b6e894b79, type: 2}
-    enabled: 1
-    AbilityImage: {fileID: 850385056709354357, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 0}
-  - abilityText: {fileID: 11400000, guid: 59e0054747ca1e64c8e28f624aac6f29, type: 2}
-    enabled: 1
-    AbilityImage: {fileID: -6000465129233884172, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 0}
-  - abilityText: {fileID: 11400000, guid: cad85f32c3afc5640b4efc58ce74e410, type: 2}
-    enabled: 1
-    AbilityImage: {fileID: 1064230382522644472, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 0}
+    Action: {fileID: 135130130340736634}
   availableAttackPoints: 0
   availableMovementPoints: 0
---- !u!114 &6743656599309474685
+--- !u!114 &135130130340736634
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -359,7 +343,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 659955980883675694}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f719db42f204bac4d8757974d7438ef2, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c9f1710fe5fc644986f921f09569dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   selectedEffectIndex: 0
@@ -367,7 +351,7 @@ MonoBehaviour:
   playerInformation: {fileID: 0}
   actionStateName: 
   laserGrid: 0
-  AttackRange: 2
+  AttackRange: 1
   AbilityCooldown: 1
   minAttackDamage: 0
   maxAttackDamage: 0
@@ -378,6 +362,7 @@ MonoBehaviour:
   AbilityPoints: 0
   isDisabled: 0
   spawnedCharacter: {fileID: 0}
+  orbPrefab: {fileID: 5113059019578474808, guid: 51ec839864e83344ca9756e9be47d813, type: 3}
 --- !u!1 &659955981309584225
 GameObject:
   m_ObjectHideFlags: 0
