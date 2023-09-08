@@ -32,6 +32,9 @@ using Random = UnityEngine.Random;
         protected LayerMask whiteFieldLayer;
         protected GameInformation gameInformation;
         [SerializeField] protected bool laserGrid = false;
+        [HideInInspector] public GameObject spawnedCharacter;
+        protected List<List<GameObject>> AvailableTiles = new List<List<GameObject>>();
+        protected List<GameObject> MergedTileList = new List<GameObject>();
         //private RaycastHit2D raycast;
         public int AttackRange = 1;
         public int AbilityCooldown = 1;
@@ -43,9 +46,6 @@ using Random = UnityEngine.Random;
         [HideInInspector] public int AvailableAttacks = 1;//Kiek zaidejas gali naudoti ability per ejima
         [HideInInspector] public int AbilityPoints; //dabartiniai pointsai, jie turi buti lygus arba didesni uz AbilityCooldown, kad galetum leist ability
         [HideInInspector] public bool isDisabled = false;
-        [HideInInspector] public GameObject spawnedCharacter;
-        protected List<List<GameObject>> AvailableTiles = new List<List<GameObject>>();
-        protected List<GameObject> MergedTileList = new List<GameObject>();
         private AssignSound _assignSound;
         private PlayerInformationData _playerInformationData;
         protected List<ChunkData> _chunkList;

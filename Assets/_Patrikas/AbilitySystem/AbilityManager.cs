@@ -22,20 +22,36 @@ public class AbilityManager : MonoBehaviour
         Vector3 worldPos = camera.ScreenToWorldPoint(_mousePosition);
         ChunkData hoveredChunk = gameTileMap.GetChunk(worldPos);
         HighlightTile previousChunkHighlight=null;
-        if(previousChunk!=null)
+        if (previousChunk != null)
+        {
             previousChunkHighlight = previousChunk.GetTileHighlight();
-        if(previousChunkHighlight!=null && (hoveredChunk==null || !hoveredChunk.GetTileHighlight().isHighlighted))
+        }
+
+        if (previousChunkHighlight != null && (hoveredChunk == null || !hoveredChunk.GetTileHighlight().isHighlighted))
+        {
             previousChunkHighlight.SetHighlightColor(Color.green);
+        }
+
         _currentAbility.OnMove(hoveredChunk,previousChunk);
-        if (hoveredChunk == null) return;
+        if (hoveredChunk == null)
+        {
+            previousChunk = null;
+            return;
+        }
         HighlightTile hoveredChunkHighlight = hoveredChunk.GetTileHighlight();
-        if (hoveredChunkHighlight == null || hoveredChunk == previousChunk) return;
+        if (hoveredChunkHighlight == null || hoveredChunk == previousChunk)
+        {
+            return;
+        }
         if (hoveredChunkHighlight.isHighlighted)
         {
             hoveredChunkHighlight.SetHighlightColor(Color.red);
         }
-        if(previousChunkHighlight!=null)
+
+        if (previousChunkHighlight != null)
+        {
             previousChunkHighlight.SetHighlightColor(Color.green);
+        }
         previousChunk = hoveredChunk;
     }
     

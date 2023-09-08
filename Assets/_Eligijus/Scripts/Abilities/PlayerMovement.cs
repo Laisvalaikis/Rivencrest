@@ -8,18 +8,11 @@ using UnityEngine.UI;
 
 public class PlayerMovement : BaseAction
 {
-    private bool ArrowMovement = false;
-    private int horizontal = 5;
-    private int vertical = 5;
     private LayerMask blockingLayer;
     private LayerMask groundLayer;
     private LayerMask fogLayer;
     private LayerMask whiteFieldLayer;
-    public Vector3 playerCenter = new Vector3(0, 0.5f, 0);
-    private bool Hovered;
     private bool isFacingRight = true;
-    private Vector3 currentPosition;
-    private RaycastHit2D raycast;
     private GameTileMap _gameTileMap;
 
     private List<ChunkData> _lastPath;
@@ -28,6 +21,7 @@ public class PlayerMovement : BaseAction
 
     void Start()
     {
+        AttackAbility = true;
         _gameTileMap = GameTileMap.Tilemap;
         _chunkArray = _gameTileMap.GetChunksArray();
         blockingLayer = LayerMask.GetMask("BlockingLayer");
@@ -35,46 +29,42 @@ public class PlayerMovement : BaseAction
         fogLayer = LayerMask.GetMask("Fog");
         whiteFieldLayer = LayerMask.GetMask("WhiteField");
         //boardManager = GameObject.Find("GameManager(Clone)").GetComponent<BoardManager>();
-        currentPosition = transform.position;
         transform.position = new Vector3(transform.position.x, transform.position.y, -1f);
     }
 
     public override void OnMove(ChunkData hoveredChunk, ChunkData previousChunk)
     {
-        ChunkData[,] chunkArray = _gameTileMap.GetChunksArray();
+        if (hoveredChunk==null || !hoveredChunk.GetTileHighlight().isHighlighted)
+        {
+            ClearArrowPath();
+            return;
+        }        
+        HighlightTile hoveredChunkHighlight = hoveredChunk.GetTileHighlight();
+        if (hoveredChunkHighlight == null || previousChunk!=null && hoveredChunkHighlight == previousChunk.GetTileHighlight()) return;
         
-        if (_lastPath != null && (hoveredChunk==null || !hoveredChunk.GetTileHighlight().isHighlighted)) 
+        if (hoveredChunkHighlight.isHighlighted)
+        {
+            ClearArrowPath();
+            if (_lastPath != null && _lastPath.Any() && IsAdjacent(hoveredChunk, _lastPath[^1]))
+            {
+                UpdatePath(hoveredChunk, _lastPath, _chunkArray);
+            }
+            else
+            {
+                _lastPath = GetDiagonalPath(_gameTileMap.GetChunk(transform.position), hoveredChunk, _chunkArray);
+            }
+            SetTileArrow(_lastPath,0,_lastPath.Count-1);
+        }
+    }
+
+    private void ClearArrowPath()
+    {
+        if (_lastPath != null)
         {
             foreach (ChunkData chunk in _lastPath)
             {
                 chunk.GetTileHighlight().DeactivateArrowTile();
             }
-        }        
-        
-        if (hoveredChunk == null) return;
-        HighlightTile hoveredChunkHighlight = hoveredChunk.GetTileHighlight();
-        HighlightTile previousChunkHighlight;
-        if (hoveredChunkHighlight == null || hoveredChunkHighlight == previousChunk.GetTileHighlight()) return;
-        
-        if (hoveredChunkHighlight.isHighlighted)
-        {
-            if (_lastPath != null)
-            {
-                foreach (ChunkData chunk in _lastPath)
-                {
-                    chunk.GetTileHighlight().DeactivateArrowTile();
-                }
-            }
-            if (_lastPath != null && _lastPath.Any() && IsAdjacent(hoveredChunk, _lastPath[^1]))
-            {
-                UpdatePath(hoveredChunk, _lastPath, chunkArray);
-            }
-            else
-            {
-                _lastPath = GetDiagonalPath(_gameTileMap.GetChunk(transform.position), hoveredChunk, chunkArray);
-            }
-            SetTileArrow(_lastPath,0,_lastPath.Count-1);
-
         }
     }
     
@@ -89,6 +79,9 @@ public class PlayerMovement : BaseAction
     
     public override void ResolveAbility(Vector3 position)
     {
+        ClearArrowPath();
+        _path = null;
+        _lastPath = null;
         base.ResolveAbility(position);
         if (!GameTileMap.Tilemap.CharacterIsOnTile(position))
         {

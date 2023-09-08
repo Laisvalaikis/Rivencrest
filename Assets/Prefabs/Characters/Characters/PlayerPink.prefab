@@ -136,7 +136,8 @@ MonoBehaviour:
   playerInformation: {fileID: 0}
   actionStateName: 
   laserGrid: 0
-  AttackRange: 1
+  spawnedCharacter: {fileID: 0}
+  AttackRange: 3
   AbilityCooldown: 1
   minAttackDamage: 0
   maxAttackDamage: 0
@@ -146,8 +147,6 @@ MonoBehaviour:
   AvailableAttacks: 1
   AbilityPoints: 0
   isDisabled: 0
-  spawnedCharacter: {fileID: 0}
-  playerCenter: {x: 0, y: 0.5, z: 0}
 --- !u!114 &1310519675225487401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,6 +220,7 @@ MonoBehaviour:
   playerInformation: {fileID: 0}
   actionStateName: Attack
   laserGrid: 0
+  spawnedCharacter: {fileID: 0}
   AttackRange: 2
   AbilityCooldown: 1
   minAttackDamage: 6
@@ -231,7 +231,6 @@ MonoBehaviour:
   AvailableAttacks: 1
   AbilityPoints: 0
   isDisabled: 0
-  spawnedCharacter: {fileID: 0}
 --- !u!114 &711100996200367084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,6 +350,7 @@ MonoBehaviour:
   playerInformation: {fileID: 0}
   actionStateName: 
   laserGrid: 0
+  spawnedCharacter: {fileID: 0}
   AttackRange: 1
   AbilityCooldown: 1
   minAttackDamage: 0
@@ -361,7 +361,6 @@ MonoBehaviour:
   AvailableAttacks: 1
   AbilityPoints: 0
   isDisabled: 0
-  spawnedCharacter: {fileID: 0}
   orbPrefab: {fileID: 5113059019578474808, guid: 51ec839864e83344ca9756e9be47d813, type: 3}
 --- !u!1 &659955981309584225
 GameObject:
