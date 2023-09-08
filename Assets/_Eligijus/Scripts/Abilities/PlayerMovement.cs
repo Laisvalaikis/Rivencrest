@@ -1,13 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class PlayerMovement : BaseAction
 {
     private bool ArrowMovement = false;
-    private int horizontal = 0;
-    private int vertical = 0;
+    private int horizontal = 5;
+    private int vertical = 5;
     private LayerMask blockingLayer;
     private LayerMask groundLayer;
     private LayerMask fogLayer;
@@ -19,9 +22,14 @@ public class PlayerMovement : BaseAction
     private RaycastHit2D raycast;
     private GameTileMap _gameTileMap;
 
+    private List<ChunkData> _lastPath;
+    private List<ChunkData> _path;
+    private ChunkData[,] _chunkArray;
+
     void Start()
     {
         _gameTileMap = GameTileMap.Tilemap;
+        _chunkArray = _gameTileMap.GetChunksArray();
         blockingLayer = LayerMask.GetMask("BlockingLayer");
         groundLayer = LayerMask.GetMask("Ground");
         fogLayer = LayerMask.GetMask("Fog");
@@ -31,20 +39,46 @@ public class PlayerMovement : BaseAction
         transform.position = new Vector3(transform.position.x, transform.position.y, -1f);
     }
 
-    void Update()
+    public override void OnMove(ChunkData hoveredChunk, ChunkData previousChunk)
     {
+        ChunkData[,] chunkArray = _gameTileMap.GetChunksArray();
+        
+        if (_lastPath != null && (hoveredChunk==null || !hoveredChunk.GetTileHighlight().isHighlighted)) 
+        {
+            foreach (ChunkData chunk in _lastPath)
+            {
+                chunk.GetTileHighlight().DeactivateArrowTile();
+            }
+        }        
+        
+        if (hoveredChunk == null) return;
+        HighlightTile hoveredChunkHighlight = hoveredChunk.GetTileHighlight();
+        HighlightTile previousChunkHighlight;
+        if (hoveredChunkHighlight == null || hoveredChunkHighlight == previousChunk.GetTileHighlight()) return;
+        
+        if (hoveredChunkHighlight.isHighlighted)
+        {
+            if (_lastPath != null)
+            {
+                foreach (ChunkData chunk in _lastPath)
+                {
+                    chunk.GetTileHighlight().DeactivateArrowTile();
+                }
+            }
+            if (_lastPath != null && _lastPath.Any() && IsAdjacent(hoveredChunk, _lastPath[^1]))
+            {
+                UpdatePath(hoveredChunk, _lastPath, chunkArray);
+            }
+            else
+            {
+                _lastPath = GetDiagonalPath(_gameTileMap.GetChunk(transform.position), hoveredChunk, chunkArray);
+            }
+            SetTileArrow(_lastPath,0,_lastPath.Count-1);
 
-        // if (Input.GetMouseButtonUp(0))
-        // {
-        //     // Vector3 mousePos = Input.mousePosition;  
-        //     // Camera mainCamera = Camera.main;
-        //     // mousePos.z = mainCamera.nearClipPlane;
-        //     // Vector3 worldpos = mainCamera.ScreenToWorldPoint(mousePos);
-        //     // OnTileClick(worldpos);
-        // }
-       
+        }
     }
-
+    
+    
     protected override void HighlightGridTile(ChunkData chunkData)
     {
         if (chunkData.GetCurrentCharacter() == null)
@@ -83,5 +117,134 @@ public class PlayerMovement : BaseAction
             isFacingRight = !isFacingRight;
             transform.Find("CharacterModel").Rotate(0f, 180f, 0f);
         }
+    }
+    
+    private List<ChunkData> GetDiagonalPath(ChunkData start, ChunkData end, ChunkData[,] chunkArray)
+    {
+        List<ChunkData> stairStepPath = new List<ChunkData>();
+
+        // Get the starting and ending indexes
+        int startX = start.GetIndexes().Item2;
+        int startY = start.GetIndexes().Item1;
+        int endX = end.GetIndexes().Item2;
+        int endY = end.GetIndexes().Item1;
+
+        int x = startX, y = startY;
+
+        // Determine the direction of the moves
+        int xStep = (endX > startX) ? 1 : -1;
+        int yStep = (endY > startY) ? 1 : -1;
+
+        while (x != endX || y != endY)
+        {
+            if (x != endX)
+            {
+                stairStepPath.Add(chunkArray[y, x]);
+                x += xStep;
+            }
+            if (y != endY)
+            {
+                stairStepPath.Add(chunkArray[y, x]);
+                y += yStep;
+            }
+        }
+        // Add the end point
+        stairStepPath.Add(chunkArray[endY, endX]);
+        return stairStepPath;
+    }
+    private void UpdatePath(ChunkData newEnd, List<ChunkData> existingPath, ChunkData[,] chunkArray)
+    {
+        int expectedLength = GetExpectedPathLength(existingPath[0], newEnd);
+    
+        if (existingPath.Count > expectedLength)
+        {
+            ChunkData startingPoint = existingPath[0];
+            existingPath.Clear();
+            existingPath.AddRange(GetDiagonalPath(startingPoint, newEnd, chunkArray));
+            // Reset all arrows as the path has been cleared
+            SetTileArrow(existingPath, 0, existingPath.Count - 1);
+        }
+        else
+        {
+            // Update the arrow for the old end point first
+            if (existingPath.Count > 1)
+            {
+                SetTileArrow(existingPath, existingPath.Count - 2, existingPath.Count - 1);
+            }
+
+            // Add the new end point and set its arrow
+            existingPath.Add(newEnd);
+            SetTileArrow(existingPath, existingPath.Count - 1, existingPath.Count - 1);
+        }
+    }
+    private int GetExpectedPathLength(ChunkData start, ChunkData end)
+    {
+        var (startX, startY) = start.GetIndexes();
+        var (endX, endY) = end.GetIndexes();
+    
+        return Math.Abs(endX - startX) + Math.Abs(endY - startY);
+    }
+    private bool IsAdjacent(ChunkData a, ChunkData b)
+    {
+        var (ax, ay) = a.GetIndexes();
+        var (bx, by) = b.GetIndexes();
+
+        return Math.Abs(ax - bx) + Math.Abs(ay - by) == 1;
+    }
+
+    private void SetTileArrow(List<ChunkData> path, int start, int end)
+    {
+        for (int i = start; i <= end; i++)
+        {
+            ChunkData current = path[i];
+            ChunkData prev = i > 0 ? path[i - 1] : null;
+            ChunkData next = i < path.Count - 1 ? path[i + 1] : null;
+
+            int arrowType = DetermineArrowType(current, prev, next);
+            path[i].GetTileHighlight().SetArrowSprite(arrowType);
+        }
+    }
+
+    private int DetermineArrowType(ChunkData current, ChunkData prev, ChunkData next)
+    {
+        if (prev == null && next == null) return 0;  // Invalid case
+
+        var (cy, cx) = current.GetIndexes();
+        var (py, px) = prev?.GetIndexes() ?? (0, 0);
+        var (ny, nx) = next?.GetIndexes() ?? (0, 0);
+        
+        if (prev == null)  // Start
+        {
+            if (cx < nx) return 1;  // Right Start
+            if (cx > nx) return 2;  // Left Start
+            if (cy < ny) return 3;  // Down Start
+            if (cy > ny) return 4;  // Up Start
+        }
+        else if (next == null)  // End
+        {
+            if (cx > px) return 5;  // Right End
+            if (cx < px) return 6;  // Left End
+            if (cy > py) return 7;  // Down End
+            if (cy < py) return 8;  // Up End
+        }
+        else  // Intermediate or Corner
+        {
+            if (cx == px && cx == nx) return 9;  // Vertical Intermediate
+            if (cy == py && cy == ny) return 10; // Horizontal Intermediate
+            
+            //corner math
+            if ((cx > px && cy == py && cx == nx && cy > ny) || (cx == px && cy > py && cx > nx && cy == ny))
+                return 11;
+            
+            if ((px == cx && py < cy && cx < nx && cy == ny) || (px > cx && cy == py && cx == nx && cy > ny))
+                return 12;
+            
+            if ((cx == px && cy < py && cx < nx && cy == ny) || (cx < px && cy == py && cx == nx && cy < ny))
+                return 14;
+
+            if ((cx == px && cy < py && cx > nx && cy == ny) || (cx > px && cy == py && cx == nx && cy < ny))
+                return 13;
+        }
+        return 0;  
     }
 }

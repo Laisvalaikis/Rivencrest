@@ -8,6 +8,7 @@ using TMPro;
 using Unity.Mathematics;
 using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
 
 
@@ -69,7 +70,11 @@ using Random = UnityEngine.Random;
         {
             chunkData.GetTileHighlight().ActivateColorGridTile(true);
         }
-        
+
+        public virtual void OnMove(ChunkData hoveredChunk, ChunkData previousChunk)
+        {
+            
+        }
         
         public override void CreateGrid(ChunkData chunkData, int radius)
         {
