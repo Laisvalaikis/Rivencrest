@@ -2,13 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StunAttack : BaseAction
+public class SpearPulse : BaseAction
 {
-    private List<Poison> _poisons;
-    // Start is called before the first frame update
     void Start()
     {
-        actionStateName = "StunAttack";
+        actionStateName = "SpearPulse";
     }
 
     public override void ResolveAbility(Vector3 position)
@@ -26,21 +24,8 @@ public class StunAttack : BaseAction
     public override void OnTurnStart()
     {
         base.OnTurnStart();
-        PoisonPlayer();
     }
-
-    private void PoisonPlayer()
-    {
-        foreach (Poison x in _poisons)
-        {
-            if (x.poisonValue > 0 && x.chunk.GetCurrentPlayerInformation().GetHealth() > 0)
-            {
-                DealDamage(x.chunk, x.poisonValue, false);
-            }
-            x.turnsLeft--;
-        }
-        
-    }
+    
 
     public override void OnTileHover(GameObject tile)
     {
@@ -51,5 +36,4 @@ public class StunAttack : BaseAction
     {
         DisablePreview(tile,MergedTileList);
     }
-
 }

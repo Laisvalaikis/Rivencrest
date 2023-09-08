@@ -53,7 +53,7 @@ ShadowBlink+
 SideSlash+	
 SilenceBeam+	
 SpearPulse+	
-StunAttack+	
+StunAttack+-	
 SummonBear+-	
 SummonOrb+-	
 SwitchPlaces+-	
