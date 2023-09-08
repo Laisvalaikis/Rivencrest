@@ -130,17 +130,35 @@ public class PlayerMovement : BaseAction
 
         while (x != endX || y != endY)
         {
+            // Checking the corners for out-of-bounds and deciding the path accordingly
             if (x != endX)
             {
                 stairStepPath.Add(chunkArray[y, x]);
-                x += xStep;
+                if (!chunkArray[y, x + xStep].GetTileHighlight().isHighlighted)
+                {
+                    y += yStep;
+                }
+                else
+                {
+                    x += xStep;
+                }
+                
             }
             if (y != endY)
             {
                 stairStepPath.Add(chunkArray[y, x]);
-                y += yStep;
+                if (!chunkArray[y + yStep, x].GetTileHighlight().isHighlighted)
+                {
+                    x += xStep;
+                }
+                else
+                {
+                    y += yStep;
+                }
+                
             }
         }
+
         // Add the end point
         stairStepPath.Add(chunkArray[endY, endX]);
         return stairStepPath;
