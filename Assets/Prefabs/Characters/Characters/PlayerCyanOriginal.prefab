@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 2884985102919791894}
   - component: {fileID: 6557585452070711417}
   - component: {fileID: 5109015720195256487}
-  - component: {fileID: 1056542966532592811}
+  - component: {fileID: -3535186597556098204}
   m_Layer: 8
   m_Name: PlayerCyanOriginal
   m_TagString: Player
@@ -333,7 +333,7 @@ MonoBehaviour:
   - abilityText: {fileID: 11400000, guid: 1490fd045cfb03d4ba60a157d7ab435b, type: 2}
     enabled: 1
     AbilityImage: {fileID: -9139038222646363919, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 1056542966532592811}
+    Action: {fileID: -3535186597556098204}
   - abilityText: {fileID: 11400000, guid: 79e2ec02158e6f74b9cf059fe557af61, type: 2}
     enabled: 1
     AbilityImage: {fileID: 854833402398890380, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
@@ -373,7 +373,7 @@ MonoBehaviour:
   isDisabled: 0
   spawnedCharacter: {fileID: 0}
   eyePrefab: {fileID: 930733572363193471, guid: 9532c08d23bec452eb1135da7cb1884a, type: 3}
---- !u!114 &1056542966532592811
+--- !u!114 &-3535186597556098204
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -382,7 +382,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 659955980883675694}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b16d6af98300b41438fb72d862942a15, type: 3}
+  m_Script: {fileID: 11500000, guid: f6195449002280d40a19efd79ec9101b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   selectedEffectIndex: 0
@@ -390,7 +390,7 @@ MonoBehaviour:
   playerInformation: {fileID: 0}
   actionStateName: 
   laserGrid: 0
-  AttackRange: 1
+  AttackRange: 3
   AbilityCooldown: 1
   minAttackDamage: 0
   maxAttackDamage: 0
@@ -401,7 +401,6 @@ MonoBehaviour:
   AbilityPoints: 0
   isDisabled: 0
   spawnedCharacter: {fileID: 0}
-  bearPrefab: {fileID: 659955980883675694, guid: a17daa48096d45d4e90908312ab8cf6a, type: 3}
 --- !u!1 &659955981309584225
 GameObject:
   m_ObjectHideFlags: 0
