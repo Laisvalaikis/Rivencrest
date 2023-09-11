@@ -78,21 +78,13 @@ using Random = UnityEngine.Random;
 
         public virtual void OnMoveHover(ChunkData hoveredChunk, ChunkData previousChunk)
         {
-            HighlightTile previousChunkHighlight=null;
-            HighlightTile hoveredChunkHighlight = null;
-            if (previousChunk != null)
-            {
-                previousChunkHighlight = previousChunk.GetTileHighlight();
-            }
+            HighlightTile previousChunkHighlight = previousChunk?.GetTileHighlight();
+            HighlightTile hoveredChunkHighlight = hoveredChunk?.GetTileHighlight();
 
-            if (previousChunkHighlight != null && (hoveredChunk == null || !hoveredChunk.GetTileHighlight().isHighlighted))
+            if (previousChunkHighlight != null && (hoveredChunk == null || !hoveredChunkHighlight.isHighlighted))
             {
                 previousChunkHighlight.SetHighlightColor(Color.green);
             }
-
-            if(hoveredChunk!=null)
-                hoveredChunkHighlight = hoveredChunk.GetTileHighlight();
-            
             if (hoveredChunkHighlight == null || hoveredChunk == previousChunk)
             {
                 return;
@@ -101,7 +93,6 @@ using Random = UnityEngine.Random;
             {
                 hoveredChunkHighlight.SetHighlightColor(Color.red);
             }
-
             if (previousChunkHighlight != null)
             {
                 previousChunkHighlight.SetHighlightColor(Color.green);
@@ -168,7 +159,7 @@ using Random = UnityEngine.Random;
             }
         }
 
-        public List<ChunkData> ReturnGeneratedChunks()
+        protected List<ChunkData> ReturnGeneratedChunks()
         {
             return _chunkList;
         }

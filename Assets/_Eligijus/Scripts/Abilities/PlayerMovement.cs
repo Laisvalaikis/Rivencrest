@@ -115,7 +115,6 @@ public class PlayerMovement : BaseAction
     private List<ChunkData> GetDiagonalPath(ChunkData start, ChunkData end, ChunkData[,] chunkArray)
     {
         List<ChunkData> stairStepPath = new List<ChunkData>();
-
         // Get the starting and ending indexes
         int startX = start.GetIndexes().Item2;
         int startY = start.GetIndexes().Item1;
@@ -155,10 +154,8 @@ public class PlayerMovement : BaseAction
                 {
                     y += yStep;
                 }
-                
             }
         }
-
         // Add the end point
         stairStepPath.Add(chunkArray[endY, endX]);
         return stairStepPath;

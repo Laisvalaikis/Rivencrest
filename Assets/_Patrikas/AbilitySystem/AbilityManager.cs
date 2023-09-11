@@ -11,7 +11,7 @@ public class AbilityManager : MonoBehaviour
     [SerializeField] private GameTileMap gameTileMap;
     private Vector2 _mousePosition;
     private BaseAction _currentAbility;
-    private ChunkData previousChunk;
+    private ChunkData _previousChunk;
     private List<ChunkData> _path;
     private List<ChunkData> _lastPath;
 
@@ -22,10 +22,9 @@ public class AbilityManager : MonoBehaviour
         Vector3 worldPos = camera.ScreenToWorldPoint(_mousePosition);
         ChunkData hoveredChunk = gameTileMap.GetChunk(worldPos);
         
-        _currentAbility.OnMoveArrows(hoveredChunk,previousChunk);
-        _currentAbility.OnMoveHover(hoveredChunk,previousChunk);
-        if(previousChunk!=hoveredChunk)
-            previousChunk = hoveredChunk;
+        _currentAbility.OnMoveArrows(hoveredChunk,_previousChunk);
+        _currentAbility.OnMoveHover(hoveredChunk,_previousChunk);
+        _previousChunk = hoveredChunk;
     }
     
     public void OnMouseClick(InputAction.CallbackContext context)
