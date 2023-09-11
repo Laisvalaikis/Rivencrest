@@ -71,9 +71,41 @@ using Random = UnityEngine.Random;
             chunkData.GetTileHighlight().ActivateColorGridTile(true);
         }
 
-        public virtual void OnMove(ChunkData hoveredChunk, ChunkData previousChunk)
+        public virtual void OnMoveArrows(ChunkData hoveredChunk, ChunkData previousChunk)
         {
             
+        }
+
+        public virtual void OnMoveHover(ChunkData hoveredChunk, ChunkData previousChunk)
+        {
+            HighlightTile previousChunkHighlight=null;
+            HighlightTile hoveredChunkHighlight = null;
+            if (previousChunk != null)
+            {
+                previousChunkHighlight = previousChunk.GetTileHighlight();
+            }
+
+            if (previousChunkHighlight != null && (hoveredChunk == null || !hoveredChunk.GetTileHighlight().isHighlighted))
+            {
+                previousChunkHighlight.SetHighlightColor(Color.green);
+            }
+
+            if(hoveredChunk!=null)
+                hoveredChunkHighlight = hoveredChunk.GetTileHighlight();
+            
+            if (hoveredChunkHighlight == null || hoveredChunk == previousChunk)
+            {
+                return;
+            }
+            if (hoveredChunkHighlight.isHighlighted)
+            {
+                hoveredChunkHighlight.SetHighlightColor(Color.red);
+            }
+
+            if (previousChunkHighlight != null)
+            {
+                previousChunkHighlight.SetHighlightColor(Color.green);
+            }
         }
         
         public override void CreateGrid(ChunkData chunkData, int radius)

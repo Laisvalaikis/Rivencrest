@@ -32,7 +32,7 @@ public class PlayerMovement : BaseAction
         transform.position = new Vector3(transform.position.x, transform.position.y, -1f);
     }
 
-    public override void OnMove(ChunkData hoveredChunk, ChunkData previousChunk)
+    public override void OnMoveArrows(ChunkData hoveredChunk, ChunkData previousChunk)
     {
         if (hoveredChunk==null || !hoveredChunk.GetTileHighlight().isHighlighted)
         {
@@ -134,7 +134,7 @@ public class PlayerMovement : BaseAction
             if (x != endX)
             {
                 stairStepPath.Add(chunkArray[y, x]);
-                if (!chunkArray[y, x + xStep].GetTileHighlight().isHighlighted)
+                if (!chunkArray[y, x + xStep].GetTileHighlight().isHighlighted && chunkArray[y,x+xStep].GetCurrentCharacter()==null)
                 {
                     y += yStep;
                 }
@@ -147,7 +147,7 @@ public class PlayerMovement : BaseAction
             if (y != endY)
             {
                 stairStepPath.Add(chunkArray[y, x]);
-                if (!chunkArray[y + yStep, x].GetTileHighlight().isHighlighted)
+                if (!chunkArray[y + yStep, x].GetTileHighlight().isHighlighted && chunkArray[y+yStep,x].GetCurrentCharacter()==null)
                 {
                     x += xStep;
                 }
