@@ -199,19 +199,25 @@ using Random = UnityEngine.Random;
             return sideVector;
         }
 
-        protected void MovePlayerToSide(ChunkData player, int2 sideVector)
+        protected void MovePlayerToSide(ChunkData player, int2 sideVector, ChunkData positionTile = null)
         {
             (int x, int y) indexes = player.GetIndexes();
+            if (positionTile != null)
+            {
+                indexes = positionTile.GetIndexes();
+            }
             int2 tempIndexes = new int2(indexes.x + sideVector.x, indexes.y + sideVector.y);
             if (GameTileMap.Tilemap.CheckBounds(tempIndexes.x, tempIndexes.y))
             {
-                ChunkData tile = GameTileMap.Tilemap.GetChunkDataByIndex(tempIndexes.x, tempIndexes.y);
-                if (!tile.CharacterIsOnTile())
+                ChunkData tempTile = GameTileMap.Tilemap.GetChunkDataByIndex(tempIndexes.x, tempIndexes.y);
+                if (!tempTile.CharacterIsOnTile())
                 {
-                    GameTileMap.Tilemap.MoveSelectedCharacter(tile.GetPosition(), new Vector3(0, 0.5f, 1), player.GetCurrentCharacter());
+                    GameTileMap.Tilemap.MoveSelectedCharacter(tempTile.GetPosition(), new Vector3(0, 0.5f, 1), player.GetCurrentCharacter());
                 }
             }
         }
+        
+        
 
         protected void GeneratePlusPattern(ChunkData centerChunk, int length)
         {

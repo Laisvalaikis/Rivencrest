@@ -45,11 +45,9 @@ Purify+
 RainOfArrows+	
 RaiseRock+	
 RaiseWall+	
-ReadyAimFire+	
-Scream+-	
-SelfActionBoost+-	
-SelfMovementBoost+-	
-ShadowBlink+
+ReadyAimFire+-	
+Scream+-			
+ShadowBlink+-
 SideSlash+-	
 SilenceBeam+-	
 SpearPulse+-	

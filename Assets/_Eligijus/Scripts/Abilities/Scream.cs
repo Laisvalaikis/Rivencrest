@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class ShadowBlink : BaseAction
+public class Scream : BaseAction
 {
     public override void ResolveAbility(Vector3 position)
     {
         base.ResolveAbility(position);
         ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
         ChunkData current = GameTileMap.Tilemap.GetChunk(transform.position + new Vector3(0, 0.5f, 0));
-        Side _side = ChunkSideByCharacter(current, chunkData);
-        int2 sideVector = GetSideVector(_side);
+        Side side = ChunkSideByCharacter(current, chunkData);
+        int2 sideVector = GetSideVector(side);
         DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
-        MovePlayerToSide(current, sideVector, chunkData);
+        MovePlayerToSide(current, -sideVector);
         FinishAbility();
     }
     
