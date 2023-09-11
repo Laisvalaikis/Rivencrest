@@ -50,9 +50,9 @@ Scream+-
 SelfActionBoost+-	
 SelfMovementBoost+-	
 ShadowBlink+
-SideSlash+	
-SilenceBeam+	
-SpearPulse+	
+SideSlash+-	
+SilenceBeam+-	
+SpearPulse+-	
 StunAttack+-	
 SummonBear+-	
 SummonOrb+-	

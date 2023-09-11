@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Volley : BaseAction
+public class SideSlash : BaseAction
 {
     [SerializeField] private int spellDamage = 6;
     private ChunkData[,] _chunkArray;
-    private List<Poison> _poisons;
     public override void ResolveAbility(Vector3 position)
     {
         base.ResolveAbility(position);
@@ -17,7 +16,6 @@ public class Volley : BaseAction
             for (int i = 0; i < _chunkArray.GetLength(1); i++)
             {
                 ChunkData damageChunk = _chunkArray[index, i];
-                _poisons.Add(new Poison(damageChunk, 2, 1));
                 DealRandomDamageToTarget(damageChunk, minAttackDamage, maxAttackDamage);
             }
 
@@ -32,7 +30,6 @@ public class Volley : BaseAction
         {
             if (_chunkArray[0,i] != null)
             {
-                // Debug.Log("Array indexes 0: " + _chunkArray[0,i].GetIndexes() + " VS " + chunkData.GetIndexes());
                 if (_chunkArray[0,i] == chunkData)
                 {
                     index = 0;
@@ -42,7 +39,6 @@ public class Volley : BaseAction
             
             if(_chunkArray[1,i] != null)
             {
-                // Debug.Log("Array indexes 1: " + _chunkArray[1,i].GetIndexes() + " VS " + chunkData.GetIndexes());
                 if (_chunkArray[1,i] == chunkData)
                 {
                     index = 1;
@@ -52,7 +48,6 @@ public class Volley : BaseAction
             
             if (_chunkArray[2,i] != null)
             {
-                // Debug.Log("Array indexes 2: " + _chunkArray[2,i].GetIndexes() + " VS " + chunkData.GetIndexes());
                 if (_chunkArray[2,i] == chunkData)
                 {
                     index = 2;
@@ -62,7 +57,6 @@ public class Volley : BaseAction
 
             if (_chunkArray[3,i] != null)
             {
-                // Debug.Log("Array indexes 3: " + _chunkArray[3,i].GetIndexes() + " VS " + chunkData.GetIndexes());
                 if (_chunkArray[3,i] == chunkData)
                 {
                     index = 3;
@@ -130,25 +124,6 @@ public class Volley : BaseAction
     {
         ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         CreateGrid(startChunk, AttackRange);
-    }
-    
-    public override void OnTurnStart()
-    {
-        base.OnTurnStart();
-        PoisonPlayer();
-    }
-
-    private void PoisonPlayer()
-    {
-        foreach (Poison x in _poisons)
-        {
-            if (x.poisonValue > 0 && x.chunk.GetCurrentPlayerInformation().GetHealth() > 0)
-            {
-                DealDamage(x.chunk, x.poisonValue, false);
-            }
-            x.turnsLeft--;
-        }
-        
     }
     
     public override void OnTurnEnd()

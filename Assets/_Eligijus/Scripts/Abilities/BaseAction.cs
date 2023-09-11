@@ -146,7 +146,7 @@ using Random = UnityEngine.Random;
             return base.GeneratePattern(centerChunk, chunksArray, length);
         }
 
-        private void GenerateDiamondPattern(ChunkData centerChunk, int radius)
+        protected void GenerateDiamondPattern(ChunkData centerChunk, int radius)
         {
             (int centerX, int centerY) = centerChunk.GetIndexes();
             ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray(); 
@@ -213,7 +213,7 @@ using Random = UnityEngine.Random;
             }
         }
 
-        private void GeneratePlusPattern(ChunkData centerChunk, int length)
+        protected void GeneratePlusPattern(ChunkData centerChunk, int length)
         {
             (int centerX, int centerY) = centerChunk.GetIndexes();
             ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray();

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpearPulse : BaseAction
 {
+    private ChunkData _currentChunk;
     void Start()
     {
         actionStateName = "SpearPulse";
@@ -11,14 +12,38 @@ public class SpearPulse : BaseAction
 
     public override void ResolveAbility(Vector3 position)
     {
-        if (CanTileBeClicked(position))
-        {
+        // if (CanTileBeClicked(position))
+        // {
+            for (int i = 0; i < _chunkList.Count; i++)
+            {
+                DealRandomDamageToTarget(_chunkList[i], minAttackDamage, maxAttackDamage);
+            }
             base.ResolveAbility(position);
-            ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
-            DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
             FinishAbility();
-        }
+        // }
         
+    }
+    
+    public override void CreateGrid()
+    {
+        ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
+        if (_currentChunk != null && _currentChunk.CharacterIsOnTile())
+        {
+            CreateGrid(startChunk, AttackRange);
+        }
+    }
+    
+    public override void OnMove(ChunkData hoveredChunk, ChunkData previousChunk)
+    {
+        if (hoveredChunk != _currentChunk)
+        {
+            _currentChunk = hoveredChunk;
+            if (_currentChunk != null && _currentChunk.CharacterIsOnTile())
+            {
+                ClearGrid();
+                GenerateDiamondPattern(_currentChunk, AttackRange);
+            }
+        }
     }
 
     public override void OnTurnStart()
