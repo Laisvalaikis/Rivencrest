@@ -6,8 +6,8 @@ public class CyroFreeze : BaseAction
 {
    private PlayerInformation _playerInformation;
    private bool isAbilityActive = false;
-   
-   public override void OnTurnStart()//pradzioj ejimo
+
+   public override void OnTurnStart() //pradzioj ejimo
    {
       if (isAbilityActive && (GetComponent<PlayerInformation>().health > 0))
       {
@@ -30,12 +30,16 @@ public class CyroFreeze : BaseAction
             {
                if (CheckIfSpecificLayer(gameObject, x.Item1, x.Item2, groundLayer)) //animation on ground
                {
-                  GetSpecificGroundTile(gameObject, x.Item1, x.Item2, groundLayer).transform.Find("mapTile").Find("VFXImpactBelow").gameObject.GetComponent<Animator>().SetTrigger("white1");
+                  GetSpecificGroundTile(gameObject, x.Item1, x.Item2, groundLayer).transform.Find("mapTile")
+                     .Find("VFXImpactBelow").gameObject.GetComponent<Animator>().SetTrigger("white1");
                }
+
                if (CheckIfSpecificTag(gameObject, x.Item1, x.Item2, blockingLayer, "Player"))
                {
-                  GameObject target = GetSpecificGroundTile(gameObject, x.Item1, x.Item2, blockingLayer);
-                  if (isAllegianceSame(target))
+                  // GameObject target = GetSpecificGroundTile(gameObject, x.Item1, x.Item2, blockingLayer);
+                  ChunkData target =
+                     GameTileMap.Tilemap.GetChunk(gameObject.transform.position + new Vector3(0, 0.5f, 0));
+                  if (isAllegianceSame(target.GetPosition()))
                   {
                      DealRandomDamageToTarget(target, minAttackDamage / 2, maxAttackDamage / 2);
                   }
@@ -47,6 +51,8 @@ public class CyroFreeze : BaseAction
             }
          }));
       }
+   }
+
    public override void ResolveAbility(Vector3 position)
    {
       base.ResolveAbility(position);
