@@ -33,7 +33,7 @@ public class SpearPulse : BaseAction
         }
     }
     
-    public override void OnMove(ChunkData hoveredChunk, ChunkData previousChunk)
+    public override void OnMoveArrows(ChunkData hoveredChunk, ChunkData previousChunk)
     {
         if (hoveredChunk != _currentChunk)
         {

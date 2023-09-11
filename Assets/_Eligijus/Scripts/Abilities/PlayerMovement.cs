@@ -15,7 +15,6 @@ public class PlayerMovement : BaseAction
     private bool isFacingRight = true;
     private GameTileMap _gameTileMap;
 
-    private List<ChunkData> _lastPath;
     private List<ChunkData> _path;
     private ChunkData[,] _chunkArray;
 
@@ -32,7 +31,7 @@ public class PlayerMovement : BaseAction
         transform.position = new Vector3(transform.position.x, transform.position.y, -1f);
     }
 
-    public override void OnMove(ChunkData hoveredChunk, ChunkData previousChunk)
+    public override void OnMoveArrows(ChunkData hoveredChunk, ChunkData previousChunk)
     {
         if (hoveredChunk==null || !hoveredChunk.GetTileHighlight().isHighlighted)
         {
@@ -45,23 +44,23 @@ public class PlayerMovement : BaseAction
         if (hoveredChunkHighlight.isHighlighted)
         {
             ClearArrowPath();
-            if (_lastPath != null && _lastPath.Any() && IsAdjacent(hoveredChunk, _lastPath[^1]))
+            if (_path != null && _path.Any() && IsAdjacent(hoveredChunk, _path[^1]))
             {
-                UpdatePath(hoveredChunk, _lastPath, _chunkArray);
+                UpdatePath(hoveredChunk, _path, _chunkArray);
             }
             else
             {
-                _lastPath = GetDiagonalPath(_gameTileMap.GetChunk(transform.position), hoveredChunk, _chunkArray);
+                _path = GetDiagonalPath(_gameTileMap.GetChunk(transform.position), hoveredChunk, _chunkArray);
             }
-            SetTileArrow(_lastPath,0,_lastPath.Count-1);
+            SetTileArrow(_path,0,_path.Count-1);
         }
     }
 
     private void ClearArrowPath()
     {
-        if (_lastPath != null)
+        if (_path != null)
         {
-            foreach (ChunkData chunk in _lastPath)
+            foreach (ChunkData chunk in _path)
             {
                 chunk.GetTileHighlight().DeactivateArrowTile();
             }
@@ -81,7 +80,6 @@ public class PlayerMovement : BaseAction
     {
         ClearArrowPath();
         _path = null;
-        _lastPath = null;
         base.ResolveAbility(position);
         if (!GameTileMap.Tilemap.CharacterIsOnTile(position))
         {
@@ -115,7 +113,6 @@ public class PlayerMovement : BaseAction
     private List<ChunkData> GetDiagonalPath(ChunkData start, ChunkData end, ChunkData[,] chunkArray)
     {
         List<ChunkData> stairStepPath = new List<ChunkData>();
-
         // Get the starting and ending indexes
         int startX = start.GetIndexes().Item2;
         int startY = start.GetIndexes().Item1;
@@ -134,7 +131,7 @@ public class PlayerMovement : BaseAction
             if (x != endX)
             {
                 stairStepPath.Add(chunkArray[y, x]);
-                if (!chunkArray[y, x + xStep].GetTileHighlight().isHighlighted)
+                if (!chunkArray[y, x + xStep].GetTileHighlight().isHighlighted && chunkArray[y,x+xStep].GetCurrentCharacter()==null)
                 {
                     y += yStep;
                 }
@@ -142,12 +139,11 @@ public class PlayerMovement : BaseAction
                 {
                     x += xStep;
                 }
-                
             }
             if (y != endY)
             {
                 stairStepPath.Add(chunkArray[y, x]);
-                if (!chunkArray[y + yStep, x].GetTileHighlight().isHighlighted)
+                if (!chunkArray[y + yStep, x].GetTileHighlight().isHighlighted && chunkArray[y+yStep,x].GetCurrentCharacter()==null)
                 {
                     x += xStep;
                 }
@@ -155,10 +151,8 @@ public class PlayerMovement : BaseAction
                 {
                     y += yStep;
                 }
-                
             }
         }
-
         // Add the end point
         stairStepPath.Add(chunkArray[endY, endX]);
         return stairStepPath;

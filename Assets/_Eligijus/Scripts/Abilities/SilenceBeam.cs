@@ -67,11 +67,38 @@ public class SilenceBeam : BaseAction
         }
         return index;
     }
-    
+
+    public override void OnMoveHover(ChunkData hoveredChunk, ChunkData previousChunk)
+    {
+        if (hoveredChunk == previousChunk) return;
+        if (hoveredChunk != null && hoveredChunk.GetTileHighlight().isHighlighted)
+        {
+            int index = FindChunkIndex(hoveredChunk);
+            if (index != -1)
+            {
+                for (int i = 0; i < _chunkArray.GetLength(1); i++)
+                {
+                    ChunkData chunkToHighLight = _chunkArray[index, i];
+                    chunkToHighLight?.GetTileHighlight().SetHighlightColor(Color.magenta);
+                }
+            }
+        }
+        else if (hoveredChunk == null || !hoveredChunk.GetTileHighlight().isHighlighted)
+        {
+            int index = FindChunkIndex(previousChunk);
+            if (index != -1)
+            {
+                for (int i = 0; i < _chunkArray.GetLength(1); i++)
+                {
+                    ChunkData chunkToHighLight = _chunkArray[index, i];
+                    chunkToHighLight?.GetTileHighlight().SetHighlightColor(Color.green);
+                }
+            }
+        }
+    }
     
     public override void CreateGrid(ChunkData centerChunk, int radius)
     {
-        
         //Merging into one list
         (int centerX, int centerY) = centerChunk.GetIndexes();
         _chunkList.Clear();
