@@ -21,6 +21,33 @@ public class BindingRitual : BaseAction
         // }
         
     }
+
+    public override void OnMoveHover(ChunkData hoveredChunk, ChunkData previousChunk)
+    {
+        if (hoveredChunk == previousChunk) return;
+        if (hoveredChunk != null && hoveredChunk.GetTileHighlight().isHighlighted)
+        {
+            foreach (var chunk in _chunkList)
+            {
+                HighlightTile highlightTile = chunk.GetTileHighlight();
+                if (highlightTile != null)
+                {
+                    highlightTile.SetHighlightColor(Color.magenta);
+                }
+            }
+        }
+        else if (hoveredChunk == null || !hoveredChunk.GetTileHighlight().isHighlighted)
+        {
+            foreach (var chunk in _chunkList)
+            {
+                HighlightTile highlightTile = chunk.GetTileHighlight();
+                if (highlightTile != null)
+                {
+                    highlightTile.SetHighlightColor(Color.green);
+                }
+            }
+        }
+    }
     
     public override void CreateGrid(ChunkData centerChunk, int radius)
     {
