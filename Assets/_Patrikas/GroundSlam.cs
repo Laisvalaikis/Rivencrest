@@ -15,16 +15,10 @@ public class GroundSlam : BaseAction
         isAbilitySlow = false;
     }
     
-    public override void OnTurnStart()//pradzioj ejimo
-    {
-        base.OnTurnStart();
-    }
-
     public override void CreateGrid()
     {
         base.CreateGrid();
         _chunkListCopy = new List<ChunkData>(_chunkList);
-        Debug.Log("We createded it");
     }
 
     public override void ResolveAbility(Vector3 position)
@@ -36,18 +30,14 @@ public class GroundSlam : BaseAction
     }
     private void DealDamageToAdjacent()
     {
-        if(_chunkListCopy.Count==0)
-            Debug.Log("SAD");
         foreach (var chunk in _chunkListCopy)
         {
             chunk.GetTileHighlight().SetHighlightColor(Color.green);
             if (chunk.GetCurrentCharacter() != null && chunk!=GameTileMap.Tilemap.GetChunk(transform.position))
             {
                 DealRandomDamageToTarget(chunk, minAttackDamage, maxAttackDamage);
-                Debug.Log("Dealt damage");
             }
         }
-        
     }
     
     public override void OnMoveHover(ChunkData hoveredChunk, ChunkData previousChunk)
