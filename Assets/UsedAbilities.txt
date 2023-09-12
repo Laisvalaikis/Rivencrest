@@ -42,9 +42,8 @@ PlayerAttack
 PoisonDart+	
 PowerShot+	
 Purify+	
-RainOfArrows+	
-RaiseRock+	
-RaiseWall+	
+RainOfArrows+-	
+RaiseRock+-	
 ReadyAimFire+-	
 Scream+-			
 ShadowBlink+-
