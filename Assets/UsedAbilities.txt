@@ -43,8 +43,7 @@ PoisonDart+
 PowerShot+	
 Purify+	
 RainOfArrows+	
-RaiseRock+	
-RaiseWall+	
+RaiseRock+-	
 ReadyAimFire+-	
 Scream+-			
 ShadowBlink+-
