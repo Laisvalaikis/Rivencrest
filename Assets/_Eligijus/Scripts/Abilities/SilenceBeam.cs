@@ -72,7 +72,7 @@ public class SilenceBeam : BaseAction
     public override void OnMoveHover(ChunkData hoveredChunk, ChunkData previousChunk)
     {
         if (hoveredChunk == previousChunk) return;
-        if (globalIndex != -1) // cia sita darom, nes buvo buggas kad jei hoverini nuo vienos row kampo prie kitos, highlightintos lieka abi eiles
+        if (globalIndex != -1)
         {
             for (int i = 0; i < _chunkArray.GetLength(1); i++)
             {
@@ -83,27 +83,13 @@ public class SilenceBeam : BaseAction
         if (hoveredChunk != null && hoveredChunk.GetTileHighlight().isHighlighted)
         {
             
-            int index = FindChunkIndex(hoveredChunk);
-            globalIndex = index;
-            if (index != -1)
+            globalIndex = FindChunkIndex(hoveredChunk);
+            if (globalIndex != -1)
             {
-                Debug.Log(index);
                 for (int i = 0; i < _chunkArray.GetLength(1); i++)
                 {
-                    ChunkData chunkToHighLight = _chunkArray[index, i];
+                    ChunkData chunkToHighLight = _chunkArray[globalIndex, i];
                     chunkToHighLight?.GetTileHighlight().SetHighlightColor(Color.magenta);
-                }
-            }
-        }
-        else if (hoveredChunk == null || !hoveredChunk.GetTileHighlight().isHighlighted || FindChunkIndex(previousChunk)==FindChunkIndex(hoveredChunk))
-        {
-            int index = FindChunkIndex(previousChunk);
-            if (index != -1)
-            {
-                for (int i = 0; i < _chunkArray.GetLength(1); i++)
-                {
-                    ChunkData chunkToHighLight = _chunkArray[index, i];
-                    chunkToHighLight?.GetTileHighlight().SetHighlightColor(Color.green);
                 }
             }
         }
