@@ -8,10 +8,10 @@ public class FlameBlast : BaseAction
     {
         base.ResolveAbility(position);
         if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") && (!isAllegianceSame(position) || friendlyFire))
-            {
-                ChunkData chunkData = GetSpecificGroundTile(position);
-                DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
-            }
+        {
+            ChunkData chunkData = GetSpecificGroundTile(position);
+            DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
+        }
         FinishAbility();
     }
     public override void OnTileHover(GameObject tile)
