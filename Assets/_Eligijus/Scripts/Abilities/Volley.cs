@@ -73,6 +73,33 @@ public class Volley : BaseAction
         }
         return index;
     }
+    
+    private int globalIndex = -1;
+    public override void OnMoveHover(ChunkData hoveredChunk, ChunkData previousChunk)
+    {
+        if (hoveredChunk == previousChunk) return;
+        if (globalIndex != -1)
+        {
+            for (int i = 0; i < _chunkArray.GetLength(1); i++)
+            {
+                ChunkData chunkToHighLight = _chunkArray[globalIndex, i];
+                chunkToHighLight?.GetTileHighlight().SetHighlightColor(Color.green);
+            }
+        }
+        if (hoveredChunk != null && hoveredChunk.GetTileHighlight().isHighlighted)
+        {
+            
+            globalIndex = FindChunkIndex(hoveredChunk);
+            if (globalIndex != -1)
+            {
+                for (int i = 0; i < _chunkArray.GetLength(1); i++)
+                {
+                    ChunkData chunkToHighLight = _chunkArray[globalIndex, i];
+                    chunkToHighLight?.GetTileHighlight().SetHighlightColor(Color.magenta);
+                }
+            }
+        }
+    }
 
     public override void CreateGrid(ChunkData centerChunk, int radius)
     {
