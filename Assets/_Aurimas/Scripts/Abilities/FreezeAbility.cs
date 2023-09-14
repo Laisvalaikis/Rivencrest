@@ -6,6 +6,8 @@ public class FreezeAbility : BaseAction
 {
     public override void CreateGrid(ChunkData centerChunk, int radius)
     {
+        (int x, int y) = centerChunk.GetIndexes();
+        List<ChunkData> damageTiles = new List<ChunkData>();
         var directionVectors = new List<(int, int)> //cube around player
         {
             (AttackRange, 0),
@@ -17,12 +19,10 @@ public class FreezeAbility : BaseAction
             (0, -AttackRange),
             (AttackRange, -AttackRange)
         };
-        foreach (var x in directionVectors)
+        if (GameTileMap.Tilemap.CheckBounds(AttackRange, AttackRange))
         {
-            bool isGround = CheckIfSpecificLayer(centerChunk.GetChunkCenterPosition(), x.Item1, x.Item2, groundLayer);
-            bool isBlockingLayer = CheckIfSpecificLayer(centerChunk.GetChunkCenterPosition(), x.Item1, x.Item2, blockingLayer);
-            bool isPlayer = CheckIfSpecificTag(centerChunk.GetChunkCenterPosition(), x.Item1, x.Item2, blockingLayer, "Player");
-            bool isWall = CheckIfSpecificTag(centerChunk.GetChunkCenterPosition(), x.Item1, x.Item2, blockingLayer, "Wall");
+            ChunkData temp = GameTileMap.Tilemap.GetChunkDataByIndex(AttackRange, AttackRange);
+            damageTiles.Add(temp);
         }
     }
     public override void CreateGrid()
@@ -36,6 +36,32 @@ public class FreezeAbility : BaseAction
         ChunkData chunkData = GetSpecificGroundTile(position);
         DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
         FinishAbility();
+    }
+    public List<ChunkData> CreateDamageTileList(Vector3 position)
+    {
+        ChunkData chunk = GameTileMap.Tilemap.GetChunk(position);
+        (int x, int y) = chunk.GetIndexes();
+        List<ChunkData> damageTiles = new List<ChunkData>();
+        var directionVectors = new List<(int, int)>
+        {
+            (AttackRange, 0),
+            (AttackRange, AttackRange),
+            (0, AttackRange),
+            (-AttackRange, AttackRange),
+            (-AttackRange, 0),
+            (-AttackRange, -AttackRange),
+            (0, -AttackRange),
+            (AttackRange, -AttackRange)
+        };
+        foreach (var direction in directionVectors)
+        {
+            if (GameTileMap.Tilemap.CheckBounds(direction.Item1, direction.Item2))
+            {
+                ChunkData temp = GameTileMap.Tilemap.GetChunkDataByIndex(direction.Item1, direction.Item2);
+                damageTiles.Add(temp);
+            }
+        }
+        return damageTiles;
     }
     public override void OnTileHover(GameObject tile)
     {
