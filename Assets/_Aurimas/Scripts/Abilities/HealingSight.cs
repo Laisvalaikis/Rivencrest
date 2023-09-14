@@ -2,20 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealSingle : BaseAction
+public class HealingSight : BaseAction
 {
-    private PlayerInformation _playerInformation;
     public int minHealAmount = 3;
     public int maxHealAmount = 7;
+    private CharacterVision _characterVision;
+    
     public override void ResolveAbility(Vector3 position)
     {
         base.ResolveAbility(position);
         int randomHeal = Random.Range(minHealAmount, maxHealAmount);
         bool crit = IsItCriticalStrike(ref randomHeal);
-        _playerInformation.Heal(randomHeal,crit);
+        GetSpecificGroundTile(position).GetCurrentPlayerInformation().Heal(randomHeal, crit);
+        _characterVision.VisionRange = 6;
         FinishAbility();
         
     }
+
     public override void OnTileHover(GameObject tile)
     {
         EnableDamagePreview(tile, minAttackDamage, maxAttackDamage);
