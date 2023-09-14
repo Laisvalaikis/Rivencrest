@@ -6,23 +6,32 @@ public class FreezeAbility : BaseAction
 {
     public override void CreateGrid(ChunkData centerChunk, int radius)
     {
-        (int x, int y) = centerChunk.GetIndexes();
-        List<ChunkData> damageTiles = new List<ChunkData>();
+        _chunkList.Clear();
+        ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray();
         var directionVectors = new List<(int, int)> //cube around player
         {
-            (AttackRange, 0),
-            (AttackRange, AttackRange),
-            (0, AttackRange),
-            (-AttackRange, AttackRange),
-            (-AttackRange, 0),
-            (-AttackRange, -AttackRange),
-            (0, -AttackRange),
-            (AttackRange, -AttackRange)
+            (1, 0),
+            (1, 1),
+            (0, 1),
+            (-1, 1),
+            (-1, 0),
+            (-1, -1),
+            (0, -1),
+            (1, -1)
+            
         };
-        if (GameTileMap.Tilemap.CheckBounds(AttackRange, AttackRange))
+        foreach (var x in directionVectors)
         {
-            ChunkData temp = GameTileMap.Tilemap.GetChunkDataByIndex(AttackRange, AttackRange);
-            damageTiles.Add(temp);
+            bool isGround = CheckIfSpecificLayer(centerChunk.GetChunkCenterPosition(), x.Item1, x.Item2, groundLayer);
+            bool isBlockingLayer = CheckIfSpecificLayer(centerChunk.GetChunkCenterPosition(), x.Item1, x.Item2, blockingLayer);
+            bool isPlayer = CheckIfSpecificTag(centerChunk.GetChunkCenterPosition(), x.Item1, x.Item2, blockingLayer, "Player");
+            bool isWall = CheckIfSpecificTag(centerChunk.GetChunkCenterPosition(), x.Item1, x.Item2, blockingLayer, "Wall");
+            if (isGround && (!isBlockingLayer || isPlayer || isWall))
+            {
+                ChunkData chunk = GameTileMap.Tilemap.GetRandomChunkAround(1,1);
+                _chunkList.Add(chunk);
+                HighlightGridTile(chunk);
+            }
         }
     }
     public override void CreateGrid()
@@ -36,32 +45,6 @@ public class FreezeAbility : BaseAction
         ChunkData chunkData = GetSpecificGroundTile(position);
         DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
         FinishAbility();
-    }
-    public List<ChunkData> CreateDamageTileList(Vector3 position)
-    {
-        ChunkData chunk = GameTileMap.Tilemap.GetChunk(position);
-        (int x, int y) = chunk.GetIndexes();
-        List<ChunkData> damageTiles = new List<ChunkData>();
-        var directionVectors = new List<(int, int)>
-        {
-            (AttackRange, 0),
-            (AttackRange, AttackRange),
-            (0, AttackRange),
-            (-AttackRange, AttackRange),
-            (-AttackRange, 0),
-            (-AttackRange, -AttackRange),
-            (0, -AttackRange),
-            (AttackRange, -AttackRange)
-        };
-        foreach (var direction in directionVectors)
-        {
-            if (GameTileMap.Tilemap.CheckBounds(direction.Item1, direction.Item2))
-            {
-                ChunkData temp = GameTileMap.Tilemap.GetChunkDataByIndex(direction.Item1, direction.Item2);
-                damageTiles.Add(temp);
-            }
-        }
-        return damageTiles;
     }
     public override void OnTileHover(GameObject tile)
     {
