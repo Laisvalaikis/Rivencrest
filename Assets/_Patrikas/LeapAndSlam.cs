@@ -30,24 +30,23 @@ public class LeapAndSlam : BaseAction
     private void DamageAdjacent(ChunkData centerChunk)
     {
         ChunkData[,] chunks = GameTileMap.Tilemap.GetChunksArray();
-        (int y,int x) indexes = centerChunk.GetIndexes();
+        (int y, int x) indexes = centerChunk.GetIndexes();
         int x = indexes.x;
         int y = indexes.y;
-        if (GameTileMap.Tilemap.CheckBounds(x,y+1) && chunks[x, y + 1].GetCurrentCharacter() != null)
+
+        int[] dx = { 0, 0, 1, -1 };
+        int[] dy = { 1, -1, 0, 0 };
+
+        for (int i = 0; i < 4; i++)
         {
-            DealRandomDamageToTarget(chunks[x, y + 1], minAttackDamage,maxAttackDamage);
-        }
-        if (GameTileMap.Tilemap.CheckBounds(x,y-1) && chunks[x, y + 1].GetCurrentCharacter() != null)
-        {
-            DealRandomDamageToTarget(chunks[x, y - 1], minAttackDamage,maxAttackDamage);
-        }
-        if (GameTileMap.Tilemap.CheckBounds(x+1,y) && chunks[x, y + 1].GetCurrentCharacter() != null)
-        {
-            DealRandomDamageToTarget(chunks[x+1, y], minAttackDamage,maxAttackDamage);
-        }
-        if (GameTileMap.Tilemap.CheckBounds(x-1,y) && chunks[x, y + 1].GetCurrentCharacter() != null)
-        {
-            DealRandomDamageToTarget(chunks[x-1, y], minAttackDamage,maxAttackDamage);
+            int nx = x + dx[i];
+            int ny = y + dy[i];
+
+            if (GameTileMap.Tilemap.CheckBounds(nx, ny) && chunks[nx, ny]?.GetCurrentCharacter() != null)
+            {
+                DealRandomDamageToTarget(chunks[nx, ny], minAttackDamage, maxAttackDamage);
+            }
         }
     }
+
 }
