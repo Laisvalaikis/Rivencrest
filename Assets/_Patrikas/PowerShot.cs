@@ -24,7 +24,7 @@ public class PowerShot : BaseAction
             {
                 bonusDamage = 3;
             }
-            transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
+            //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
            
             playerInformation.ApplyDebuff("IceSlow");
             if (DoesCharacterHaveBlessing("Chilling shot"))

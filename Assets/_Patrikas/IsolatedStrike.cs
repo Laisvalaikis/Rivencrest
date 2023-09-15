@@ -31,7 +31,7 @@ public class IsolatedStrike : BaseAction
             bonusDamage += isolationDamage;
         }
 
-        transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
+        //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
         DealRandomDamageToTarget(target, minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
         FinishAbility();
     }
