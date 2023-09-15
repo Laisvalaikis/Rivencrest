@@ -64,7 +64,7 @@ public class IsolatedStrike : BaseAction
             int nx = x + dx[i];
             int ny = y + dy[i];
 
-            if (GameTileMap.Tilemap.CheckBounds(nx, ny) && chunks[nx, ny]?.GetCurrentCharacter() != null /*patikrinti ar skirtingos komandos*/)
+            if (GameTileMap.Tilemap.CheckBounds(ny, nx) && chunks[ny, nx]?.GetCurrentCharacter() != null /*patikrinti ar skirtingos komandos*/)
             {
                 return false;
             }

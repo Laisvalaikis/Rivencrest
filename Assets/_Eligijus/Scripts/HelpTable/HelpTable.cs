@@ -101,9 +101,7 @@ public class HelpTable : MonoBehaviour
         icon.sprite = ability.AbilityImage;
         BaseAction baseAction = (BaseAction)ability.Action;
         abilityTitle.text = abilityText.abilityTitle;
-        Debug.Log(baseAction.GetType());
         abilityDescription.text = abilityText.abilityDescription;
-        Debug.Log(baseAction.GetType());
         cooldownText.text = baseAction.AbilityCooldown.ToString();
         if (baseAction.maxAttackDamage == 0)
         {

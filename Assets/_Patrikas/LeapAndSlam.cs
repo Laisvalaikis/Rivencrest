@@ -42,7 +42,7 @@ public class LeapAndSlam : BaseAction
             int nx = x + dx[i];
             int ny = y + dy[i];
 
-            if (GameTileMap.Tilemap.CheckBounds(nx, ny) && chunks[nx, ny]?.GetCurrentCharacter() != null)
+            if (GameTileMap.Tilemap.CheckBounds(ny, nx) && chunks[ny, nx]?.GetCurrentCharacter() != null)
             {
                 DealRandomDamageToTarget(chunks[nx, ny], minAttackDamage, maxAttackDamage);
             }
