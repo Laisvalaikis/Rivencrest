@@ -108,15 +108,14 @@ using Random = UnityEngine.Random;
         {
             CreateAvailableChunkList();
         }
-        
         public override void ClearGrid()
         {
             foreach (var chunk in _chunkList)
             {
-                    chunk.GetTileHighlight().ActivateColorGridTile(false);
+                HighlightTile highlightTile = chunk.GetTileHighlight();
+                highlightTile.ActivateColorGridTile(false);
             }
             _chunkList.Clear();
-
         }
         
         protected Side ChunkSideByCharacter(ChunkData playerChunk, ChunkData chunkDataTarget)
