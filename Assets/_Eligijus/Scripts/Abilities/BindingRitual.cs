@@ -51,8 +51,6 @@ public class BindingRitual : BaseAction
     
     public override void CreateGrid(ChunkData centerChunk, int radius)
     {
-        
-        //Merging into one list
         (int centerX, int centerY) = centerChunk.GetIndexes();
         _chunkList.Clear();
         ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray(); 
@@ -81,17 +79,10 @@ public class BindingRitual : BaseAction
             }
         }
     }
-
     public override void CreateGrid()
     {
         ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         CreateGrid(startChunk, AttackRange);
-    }
-
-    public override void OnTurnStart()
-    {
-        base.OnTurnStart();
-        
     }
     
     public override void OnTileHover(GameObject tile)

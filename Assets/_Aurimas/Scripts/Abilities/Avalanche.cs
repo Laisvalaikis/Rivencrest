@@ -11,12 +11,6 @@ public class Avalanche : BaseAction
         actionStateName = "Avalanche";
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public override void ResolveAbility(Vector3 position)
     {
         if (CanTileBeClicked(position))

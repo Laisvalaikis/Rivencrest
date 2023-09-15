@@ -69,6 +69,7 @@ using Random = UnityEngine.Random;
         protected virtual void HighlightGridTile(ChunkData chunkData)
         {
             chunkData.GetTileHighlight().ActivateColorGridTile(true);
+            _chunkList.Add(chunkData);
         }
 
         public virtual void OnMoveArrows(ChunkData hoveredChunk, ChunkData previousChunk)
@@ -187,7 +188,6 @@ using Random = UnityEngine.Random;
                             ChunkData chunk = chunksArray[targetX, targetY];
                             if (chunk != null && !chunk.TileIsLocked())
                             {
-                                _chunkList.Add(chunk);
                                 HighlightGridTile(chunk);
                             }
                         }
@@ -263,7 +263,6 @@ using Random = UnityEngine.Random;
                         ChunkData chunk = chunksArray[x, y];
                         if (chunk != null && !chunk.TileIsLocked())
                         {
-                            _chunkList.Add(chunk);
                             HighlightGridTile(chunk);
                         }
                     }

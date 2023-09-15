@@ -73,6 +73,7 @@ public class PlayerMovement : BaseAction
         if (chunkData.GetCurrentCharacter() == null)
         {
             chunkData.GetTileHighlight().ActivateColorGridTile(true);
+            _chunkList.Add(chunkData);
         }
     }
     
