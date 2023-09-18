@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VampiricTouch : ScriptableObject
+public class VampiricTouch : NewBlessing
 {
-    public string name;
-    public int rarity;
-    [TextArea]
-    public string description;
+    public override void UseBlessing()
+    {
+        base.UseBlessing();
+    }
 }

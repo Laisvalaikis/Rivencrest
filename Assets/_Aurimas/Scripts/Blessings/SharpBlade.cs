@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SharpBlade : ScriptableObject
+public class SharpBlade : NewBlessing
 {
-    public string name;
-    public int rarity;
-    [TextArea]
-    public string description;
+    public override void UseBlessing()
+    {
+        base.UseBlessing();
+    }
 }

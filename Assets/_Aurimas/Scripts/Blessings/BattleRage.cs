@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattleRage : ScriptableObject
+public class BattleRage : NewBlessing
 {
-    public string blessingName;
-    public int rarity;
-    public string className;
-    public string spellName;
-    [TextArea]
-    public string description;
+    public override void UseBlessing()
+    {
+        base.UseBlessing();
+    }
 }
