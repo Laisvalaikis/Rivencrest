@@ -20,6 +20,8 @@ public class PlayerMovement : BaseAction
 
     void Start()
     {
+        AttackHighlight = new Color32(130, 255, 95, 255);
+        AttackHighlightHover = new Color32(255, 227, 0, 255);
         AttackAbility = true;
         _gameTileMap = GameTileMap.Tilemap;
         _chunkArray = _gameTileMap.GetChunksArray();
@@ -73,6 +75,7 @@ public class PlayerMovement : BaseAction
         if (chunkData.GetCurrentCharacter() == null)
         {
             chunkData.GetTileHighlight().ActivateColorGridTile(true);
+            chunkData.GetTileHighlight().SetHighlightColor(AttackHighlight);
             _chunkList.Add(chunkData);
         }
     }

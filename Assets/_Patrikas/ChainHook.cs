@@ -10,7 +10,6 @@ public class ChainHook : BaseAction
     //public int minAttackDamage = 0;
     //public int maxAttackDamage = 1;
     private bool grapplingHook = false;
-    private Color alphaColor = new Color(1, 1, 1, 110 / 255f);
     private bool canTileBeHovered = true;
     
     void Start()
@@ -144,7 +143,7 @@ public class ChainHook : BaseAction
 
     if (previousChunkHighlight != null && (hoveredChunk == null || !hoveredChunkHighlight.isHighlighted))
     {
-        previousChunkHighlight.SetHighlightColor(Color.green);
+        previousChunkHighlight.SetHighlightColor(AttackHighlight);
         ResetCharacterSpriteRendererAndTilePreview();
     }
 
@@ -168,7 +167,7 @@ public class ChainHook : BaseAction
                 characterSpriteRenderer.color = new Color(1f, 1f, 1f, 1f);
             }
         }
-        previousChunkHighlight.SetHighlightColor(Color.green);
+        previousChunkHighlight.SetHighlightColor(AttackHighlight);
     }
 }
 
@@ -188,11 +187,11 @@ private void SetHoveredChunkHighlight(ChunkData hoveredChunk, HighlightTile hove
 {
     if (currentCharacter == null)
     {
-        hoveredChunkHighlight.SetHighlightColor(Color.red);
+        hoveredChunkHighlight.SetHighlightColor(AttackHighlight);
     }
     else
     {
-        hoveredChunkHighlight.SetHighlightColor(Color.magenta);
+        hoveredChunkHighlight.SetHighlightColor(AttackHighlightHover);
 
         if (currentPlayerInfo != null)
         {

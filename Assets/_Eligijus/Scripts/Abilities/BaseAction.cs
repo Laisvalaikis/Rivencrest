@@ -49,7 +49,12 @@ using Random = UnityEngine.Random;
         private AssignSound _assignSound;
         private PlayerInformationData _playerInformationData;
         protected List<ChunkData> _chunkList;
-        
+
+        [Header("Highlight colors")] 
+        protected Color32 AttackHighlight = new Color32(255, 69, 69, 255);
+        protected Color32 AttackHighlightHover = new Color32(255, 227, 0, 255);
+        protected Color32 OtherHighlight = new Color32(146, 212, 255, 255);
+        protected Color32 InspectionHighlight = new Color32(113, 113, 113, 255);
         void Awake()
         {
             playerInformation = GetComponent<PlayerInformation>();
@@ -68,6 +73,7 @@ using Random = UnityEngine.Random;
         
         protected virtual void HighlightGridTile(ChunkData chunkData)
         {
+            chunkData.GetTileHighlight().SetHighlightColor(AttackHighlight);
             chunkData.GetTileHighlight().ActivateColorGridTile(true);
             _chunkList.Add(chunkData);
         }
@@ -84,7 +90,7 @@ using Random = UnityEngine.Random;
 
             if (previousChunkHighlight != null && (hoveredChunk == null || !hoveredChunkHighlight.isHighlighted))
             {
-                previousChunkHighlight.SetHighlightColor(Color.green);
+                previousChunkHighlight.SetHighlightColor(AttackHighlight);
             }
             if (hoveredChunkHighlight == null || hoveredChunk == previousChunk)
             {
@@ -92,11 +98,11 @@ using Random = UnityEngine.Random;
             }
             if (hoveredChunkHighlight.isHighlighted)
             {
-                hoveredChunkHighlight.SetHighlightColor(Color.red);
+                hoveredChunkHighlight.SetHighlightColor(AttackHighlightHover);
             }
             if (previousChunkHighlight != null)
             {
-                previousChunkHighlight.SetHighlightColor(Color.green);
+                previousChunkHighlight.SetHighlightColor(AttackHighlight);
             }
         }
         
@@ -162,11 +168,6 @@ using Random = UnityEngine.Random;
         protected List<ChunkData> ReturnGeneratedChunks()
         {
             return _chunkList;
-        }
-
-        protected override List<ChunkData> GeneratePattern(ChunkData centerChunk, ChunkData[,] chunksArray, int length)
-        {
-            return base.GeneratePattern(centerChunk, chunksArray, length);
         }
 
         protected void GenerateDiamondPattern(ChunkData centerChunk, int radius)
