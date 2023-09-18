@@ -25,7 +25,7 @@ public class PlayerInformation : MonoBehaviour
     private TeamInformation teamInformation;
     private AIManager aiManager;
 
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] public SpriteRenderer spriteRenderer;
 
     [SerializeField] private Animator animator;
     

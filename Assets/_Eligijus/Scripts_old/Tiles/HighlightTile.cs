@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -12,7 +13,7 @@ public class HighlightTile : MonoBehaviour
     [SerializeField] private SpriteRenderer ArrowTile;
     [SerializeField] private SpriteRenderer DangerUI;
     [SerializeField] private SpriteRenderer PlayerSelect;
-
+    [SerializeField] private SpriteRenderer Preview;
     
     [SerializeField] private Sprite rightStartArrow;
     [SerializeField] private Sprite leftStartArrow;
@@ -57,6 +58,16 @@ public class HighlightTile : MonoBehaviour
     {
         ColorGridTile.enabled = value;
         isHighlighted = value;
+    }
+    
+    public void SetPreviewSprite(Sprite sprite)
+    {
+        Preview.sprite = sprite;
+    }
+
+    public void TogglePreviewSprite(bool value)
+    {
+        Preview.enabled = value;
     }
 
     public void SetArrowSprite(int arrowType)

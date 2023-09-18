@@ -364,6 +364,15 @@ public class GameTileMap : MonoBehaviour
             chunkData.GetTileHighlight().ActivatePlayerTile(true);
         }
     }
+    
+    public void SetCharacter(ChunkData chunk, GameObject character, PlayerInformation playerInformation)
+    {
+        if (chunk != null)
+        {
+            chunk.SetCurrentCharacter(character, playerInformation);
+            chunk.GetTileHighlight().ActivatePlayerTile(true);
+        }
+    }
 
     public bool CharacterIsOnTile(Vector3 mousePosition)
     {
@@ -399,8 +408,6 @@ public class GameTileMap : MonoBehaviour
 
     public void MoveSelectedCharacter(Vector3 mousePosition, Vector3 offset = default, GameObject character = null)
     {
-        
-        
         GameObject moveCharacter = _currentSelectedCharacter;
         if (character != null)
         {
@@ -414,8 +421,29 @@ public class GameTileMap : MonoBehaviour
             Vector3 characterPosition = GetChunk(mousePosition).GetPosition() - offset;
             moveCharacter.transform.position = characterPosition;
             SetCharacter(mousePosition, moveCharacter, previousCharacterChunk.GetCurrentPlayerInformation());
-            ResetChunkCharacter(previousCharacterChunk.GetPosition());
+            if(previousCharacterChunk!=GetChunk(mousePosition))
+                ResetChunkCharacter(previousCharacterChunk.GetPosition());
             
+        }
+        // SelectedCharacter.GetComponent<GridMovement>().RemoveAvailableMovementPoints(newPosition);
+        // bottomCornerUI.EnableAbilities(SelectedCharacter.GetComponent<PlayerInformation>().savedCharacter);
+    }
+
+    public void MoveSelectedCharacter(ChunkData chunk, GameObject character = null)
+    {
+        GameObject moveCharacter = _currentSelectedCharacter;
+        if (character != null)
+        {
+            moveCharacter = character;
+        }
+
+        if (chunk != null && moveCharacter != null) // !CharacterIsOnTile(mousePosition)
+        {
+            ChunkData previousCharacterChunk = Tilemap.GetChunk(moveCharacter.transform.position);
+            Vector3 characterPosition = chunk.GetPosition();
+            moveCharacter.transform.position = characterPosition;
+            SetCharacter(chunk, moveCharacter, previousCharacterChunk.GetCurrentPlayerInformation());
+            ResetChunkCharacter(previousCharacterChunk.GetPosition());
         }
         // SelectedCharacter.GetComponent<GridMovement>().RemoveAvailableMovementPoints(newPosition);
         // bottomCornerUI.EnableAbilities(SelectedCharacter.GetComponent<PlayerInformation>().savedCharacter);
@@ -423,8 +451,6 @@ public class GameTileMap : MonoBehaviour
     
     public void MoveSelectedCharacterWithoutReset(Vector3 mousePosition, Vector3 offset = default, GameObject character = null)
     {
-        
-        
         GameObject moveCharacter = _currentSelectedCharacter;
         if (character != null)
         {

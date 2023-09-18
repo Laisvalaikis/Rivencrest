@@ -241,7 +241,7 @@ using Random = UnityEngine.Random;
         
         
 
-        protected void GeneratePlusPattern(ChunkData centerChunk, int length)
+        protected virtual void GeneratePlusPattern(ChunkData centerChunk, int length)
         {
             (int centerX, int centerY) = centerChunk.GetIndexes();
             ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray();
