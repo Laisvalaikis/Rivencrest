@@ -14,6 +14,8 @@ public class ChainHook : BaseAction
     
     void Start()
     {
+        AttackHighlight = new Color32(0x7B,0x9C,0xB2,0xFF);
+        OtherHighlight = new Color32(0x67, 0x88, 0x9E, 0xFF);
         laserGrid = true;
         actionStateName = "ChainHook";
         isAbilitySlow = false;
@@ -187,7 +189,7 @@ private void SetHoveredChunkHighlight(ChunkData hoveredChunk, HighlightTile hove
 {
     if (currentCharacter == null)
     {
-        hoveredChunkHighlight.SetHighlightColor(AttackHighlight);
+        hoveredChunkHighlight.SetHighlightColor(OtherHighlight);
     }
     else
     {
