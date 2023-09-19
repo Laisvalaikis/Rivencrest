@@ -15,7 +15,7 @@ public class ChainHook : BaseAction
     void Start()
     {
         AttackHighlight = new Color32(0x7B,0x9C,0xB2,0xFF);
-        OtherHighlight = new Color32(0x67, 0x88, 0x9E, 0xFF);
+        AttackHoverCharacter = new Color32(0x67, 0x88, 0x9E, 0xFF);
         laserGrid = true;
         actionStateName = "ChainHook";
         isAbilitySlow = false;
@@ -75,7 +75,7 @@ public class ChainHook : BaseAction
         if (character!=null)
         {
             //target.transform.Find("VFX").Find("VFXImpact").gameObject.GetComponent<Animator>().SetTrigger("burgundy2");
-            if (!isAllegianceSame(position))
+            if (!IsAllegianceSame(position))
             { 
                 int multiplier = GetMultiplier(position);
                 if (multiplier != 0)
@@ -189,7 +189,7 @@ private void SetHoveredChunkHighlight(ChunkData hoveredChunk, HighlightTile hove
 {
     if (currentCharacter == null)
     {
-        hoveredChunkHighlight.SetHighlightColor(OtherHighlight);
+        hoveredChunkHighlight.SetHighlightColor(AttackHoverCharacter);
     }
     else
     {

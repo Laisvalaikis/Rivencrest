@@ -24,7 +24,7 @@ public class PlayerAttack : BaseAction
     public bool canTileBeClicked(GameObject tile)
     {
         if ((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall"))
-            && !isAllegianceSame(tile.transform.position) && !GetComponent<PlayerInformation>().CantAttackCondition)
+            && !IsAllegianceSame(tile.transform.position) && !GetComponent<PlayerInformation>().CantAttackCondition)
         {
             return true;
         }

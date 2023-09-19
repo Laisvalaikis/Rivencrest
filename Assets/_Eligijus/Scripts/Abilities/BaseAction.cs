@@ -51,10 +51,12 @@ using Random = UnityEngine.Random;
         protected List<ChunkData> _chunkList;
 
         [Header("Highlight colors")] 
-        protected Color32 AttackHighlight = new Color32(255, 69, 69, 255);
-        protected Color32 AttackHighlightHover = new Color32(255, 227, 0, 255);
-        protected Color32 OtherHighlight = new Color32(146, 212, 255, 255);
-        protected Color32 InspectionHighlight = new Color32(113, 113, 113, 255);
+        protected Color32 AttackHighlight = new Color32(0xB2,0x5E,0x55,0xff);
+        protected Color32 AttackHighlightHover = new Color32(0x9E, 0x4A, 0x41, 0xff);
+        protected Color32 AttackHoverCharacter = new Color32(255, 227, 0, 255);
+        protected Color32 OtherOnGrid = new Color32(113, 113, 113, 255);
+        protected Color32 CharacterOnGrid = new Color32(0xFF, 0x59, 0x47, 0xff);
+
         void Awake()
         {
             playerInformation = GetComponent<PlayerInformation>();
@@ -73,9 +75,25 @@ using Random = UnityEngine.Random;
         
         protected virtual void HighlightGridTile(ChunkData chunkData)
         {
-            chunkData.GetTileHighlight().SetHighlightColor(AttackHighlight);
-            chunkData.GetTileHighlight().ActivateColorGridTile(true);
-            _chunkList.Add(chunkData);
+            if (chunkData.GetCurrentCharacter() != GameTileMap.Tilemap.GetCurrentCharacter())
+            {
+                SetNonHoveredAttackColor(chunkData);
+                chunkData.GetTileHighlight().ActivateColorGridTile(true);
+                _chunkList.Add(chunkData);
+            }
+        }
+
+        private void SetNonHoveredAttackColor(ChunkData chunkData)
+        {
+            chunkData.GetTileHighlight()
+                .SetHighlightColor(chunkData.GetCurrentCharacter() == null ? AttackHighlight : CharacterOnGrid);
+        }
+
+        private void SetHoveredAttackColor(ChunkData chunkData)
+        {
+            chunkData.GetTileHighlight().SetHighlightColor(chunkData.GetCurrentCharacter() == null
+                ? AttackHighlightHover
+                : AttackHoverCharacter);
         }
 
         public virtual void OnMoveArrows(ChunkData hoveredChunk, ChunkData previousChunk)
@@ -90,7 +108,7 @@ using Random = UnityEngine.Random;
 
             if (previousChunkHighlight != null && (hoveredChunk == null || !hoveredChunkHighlight.isHighlighted))
             {
-                previousChunkHighlight.SetHighlightColor(AttackHighlight);
+                SetNonHoveredAttackColor(previousChunk);
             }
             if (hoveredChunkHighlight == null || hoveredChunk == previousChunk)
             {
@@ -98,11 +116,11 @@ using Random = UnityEngine.Random;
             }
             if (hoveredChunkHighlight.isHighlighted)
             {
-                hoveredChunkHighlight.SetHighlightColor(AttackHighlightHover);
+                SetHoveredAttackColor(hoveredChunk);
             }
             if (previousChunkHighlight != null)
             {
-                previousChunkHighlight.SetHighlightColor(AttackHighlight);
+                SetNonHoveredAttackColor(previousChunk);
             }
         }
         
@@ -350,9 +368,9 @@ using Random = UnityEngine.Random;
                 DisablePreview(tileInList);
             }
         }
-        public virtual bool CanTileBeClicked(Vector3 position)//ar veiks ability
+        protected virtual bool CanTileBeClicked(Vector3 position)//ar veiks ability
         {
-            if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") && !isAllegianceSame(position))
+            if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") && !IsAllegianceSame(position))
             {
                 return true;
             }
@@ -362,7 +380,7 @@ using Random = UnityEngine.Random;
 
         protected bool CanPreviewBeShown(Vector3 position)//ar rodys preview
         {
-            return CanTileBeClicked(position) && (!(CheckIfSpecificLayer(position, 0, 0, blockingLayer) && isAllegianceSame(position)) || friendlyFire);
+            return CanTileBeClicked(position) && (!(CheckIfSpecificLayer(position, 0, 0, blockingLayer) && IsAllegianceSame(position)) || friendlyFire);
         }
         public virtual bool CanGridBeEnabled()
         {
@@ -372,52 +390,7 @@ using Random = UnityEngine.Random;
             }
             return false;
         }
-        public virtual void EnableGrid()
-        {
-            if (CanGridBeEnabled())
-            {
-                ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
-                CreateGrid(startChunk, AttackRange);
-                HighlightAll();
-            }
-
-        }
-
-        protected virtual void HighlightAll()
-        {
-            foreach (GameObject tile in MergedTileList)
-            {
-                tile.GetComponent<HighlightTile>().SetHighlightBool(true);
-                tile.GetComponent<HighlightTile>().activeState = actionStateName;
-                tile.GetComponent<HighlightTile>().ChangeBaseColor();
-                tile.GetComponent<HighlightTile>().canAbilityTargetAllies = true;
-                tile.GetComponent<HighlightTile>().canAbilityTargetYourself = true;
-            }
-            GetSpecificGroundTile(transform.gameObject, 0, 0, groundLayer).GetComponent<HighlightTile>().SetHighlightBool(false);
-        }
         
-private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, bool canWallsBeTargeted)
-{
-    bool isGround = CheckIfSpecificLayer(middleTile, xOffset, yOffset, groundLayer);
-    bool isBlockingLayer = CheckIfSpecificLayer(middleTile, xOffset, yOffset, blockingLayer);
-    bool isPlayer = CheckIfSpecificTag(middleTile, xOffset, yOffset, blockingLayer, "Player");
-    bool isWall = CheckIfSpecificTag(middleTile, xOffset, yOffset, blockingLayer, "Wall");
-    bool isMiddleTileWall = CheckIfSpecificTag(middleTile, 0, 0, blockingLayer, "Wall");
-
-    return isGround && (!isBlockingLayer || isPlayer || (canWallsBeTargeted && isWall)) && (!canWallsBeTargeted || !isMiddleTileWall);
-}
-
-
-        public virtual void DisableGrid()
-        {
-            /*foreach (List<GameObject> movementTileList in this.AvailableTiles)
-            {
-                foreach (GameObject tile in movementTileList)
-                {
-                    tile.GetComponent<HighlightTile>().SetHighlightBool(false);
-                }
-            }*/
-        }
         public virtual void OnTurnStart()
         {
         }
@@ -459,7 +432,7 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
             // }
             if (isAbilitySlow)
             {
-                DisableGrid();
+                //DisableGrid();
             }
         }
         
@@ -481,17 +454,6 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
         public static bool CheckIfSpecificLayer(Vector3 position, int x, int y, LayerMask chosenLayer)
         {
             Vector3 firstPosition = position + new Vector3(0f, 0.5f, 0f) + new Vector3(x, y, 0f);
-            Vector3 secondPosition = firstPosition + new Vector3(0.1f, 0f, 0f);
-            RaycastHit2D raycast = Physics2D.Linecast(firstPosition, secondPosition, chosenLayer);
-            if (raycast.transform == null)
-            {
-                return false;
-            }
-            return true;
-        }
-        public static bool CheckIfSpecificLayer(GameObject tile, int x, int y, LayerMask chosenLayer)
-        {
-            Vector3 firstPosition = tile.transform.position + new Vector3(0f, 0.5f, 0f) + new Vector3(x, y, 0f);
             Vector3 secondPosition = firstPosition + new Vector3(0.1f, 0f, 0f);
             RaycastHit2D raycast = Physics2D.Linecast(firstPosition, secondPosition, chosenLayer);
             if (raycast.transform == null)
@@ -532,7 +494,7 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
             return false;
         }
 
-        protected bool isAllegianceSame(Vector3 position)
+        protected bool IsAllegianceSame(Vector3 position)
         {
             ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
             if (chunkData != null && chunkData.GetCurrentPlayerInformation().GetPlayerTeam() != playerInformation.GetPlayerTeam() || friendlyFire)
@@ -547,21 +509,6 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
             // var playerTeams = gameInformation.GetComponent<PlayerTeams>();
             // return playerTeams.FindTeamAllegiance(GameTileMap.Tilemap.GetChunk(position).GetCurrentCharacter().GetComponent<PlayerInformation>().CharactersTeam)
             //     == playerTeams.FindTeamAllegiance(GetComponent<PlayerInformation>().CharactersTeam);
-        }
-        
-        
-        protected bool isAllegianceSame(GameObject position)
-        {
-            Debug.Log("Fix allegiances");
-            var playerTeams = gameInformation.GetComponent<PlayerTeams>();
-            return playerTeams.FindTeamAllegiance(GetSpecificGroundTile(position, 0, 0, blockingLayer).GetComponent<PlayerInformation>().CharactersTeam)
-                == playerTeams.FindTeamAllegiance(GetComponent<PlayerInformation>().CharactersTeam);
-        }
-        protected bool isAllegianceSame(GameObject tile1, GameObject tile2, LayerMask chosenLayer)
-        {
-            var playerTeams = gameInformation.GetComponent<PlayerTeams>();
-            return playerTeams.FindTeamAllegiance(GetSpecificGroundTile(tile1, 0, 0, chosenLayer).GetComponent<PlayerInformation>().CharactersTeam)
-                == playerTeams.FindTeamAllegiance(GetSpecificGroundTile(tile2, 0, 0, chosenLayer).GetComponent<PlayerInformation>().CharactersTeam);
         }
         
         protected bool IsItCriticalStrike(ref int damage)
@@ -580,23 +527,22 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
             return crit;
         }
 
-        protected void dodgeActivation(ref int damage, PlayerInformation target) //Dodge temporarily removed
+        private void DodgeActivation(ref int damage, PlayerInformation target) //Dodge temporarily removed
         {
             int dodgeNumber = Random.Range(0, 100);
             if (dodgeNumber > _playerInformationData.accuracy - target.playerInformationData.dodgeChance)
             {
                 damage = -1;
-                Debug.Log("Dodge");
             }
         }
 
         protected override void DealRandomDamageToTarget(ChunkData chunkData, int minDamage, int maxDamage)
         {
-            if (chunkData != null && chunkData.GetCurrentCharacter() != null && isAllegianceSame(chunkData.GetPosition()))
+            if (chunkData != null && chunkData.GetCurrentCharacter() != null && IsAllegianceSame(chunkData.GetPosition()))
             {
                 int randomDamage = Random.Range(minDamage, maxDamage);
                 bool crit = IsItCriticalStrike(ref randomDamage);
-                dodgeActivation(ref randomDamage, chunkData.GetCurrentPlayerInformation());
+                DodgeActivation(ref randomDamage, chunkData.GetCurrentPlayerInformation());
                 chunkData.GetCurrentPlayerInformation().DealDamage(randomDamage, crit, gameObject);
                 
             }
@@ -604,7 +550,7 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
 
         protected void DealDamage(ChunkData chunkData, int damage, bool crit)
         {
-            if (chunkData != null && chunkData.GetCurrentCharacter() != null && isAllegianceSame(chunkData.GetPosition()))
+            if (chunkData != null && chunkData.GetCurrentCharacter() != null && IsAllegianceSame(chunkData.GetPosition()))
             {
                 chunkData.GetCurrentPlayerInformation().DealDamage(damage, crit, gameObject);
             }
@@ -644,14 +590,6 @@ private bool IsTileAccessible(GameObject middleTile, int xOffset, int yOffset, b
         protected IEnumerator ExecuteAfterTime(float time, Action task)
         {
             yield return new WaitForSeconds(time);
-            task();
-        }
-        protected IEnumerator ExecuteAfterFrames(int frameCount, Action task)
-        {
-            for(int i = 0; i < frameCount; i++)
-            {
-                yield return null;
-            }
             task();
         }
     }

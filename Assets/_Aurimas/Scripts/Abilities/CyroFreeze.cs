@@ -37,7 +37,7 @@ public class CyroFreeze : BaseAction
                if (CheckIfSpecificTag(gameObject, x.Item1, x.Item2, blockingLayer, "Player"))
                {
                   ChunkData chunkData = GameTileMap.Tilemap.GetChunk(transform.position);
-                  if (isAllegianceSame(chunkData.GetPosition()))
+                  if (IsAllegianceSame(chunkData.GetPosition()))
                   {
                      DealRandomDamageToTarget(chunkData, minAttackDamage / 2, maxAttackDamage / 2);
                   }

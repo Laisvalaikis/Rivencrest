@@ -37,7 +37,7 @@ public class ChillingGust : BaseAction
             GameObject target = chunk.GetCurrentCharacter();
             PlayerInformation clickedPlayerInformation = target.GetComponent<PlayerInformation>();
             
-            if (isAllegianceSame(position))
+            if (IsAllegianceSame(position))
             {
                 clickedPlayerInformation.Protected = true;
                 //target.transform.Find("VFX").Find("Protected").gameObject.SetActive(true);
@@ -106,11 +106,11 @@ public class ChillingGust : BaseAction
         }
 
     }*/
-    public override void OnTileHover(GameObject tile)
+    public void OnTileHover(Vector3 position)
     {
-        if (isAllegianceSame(tile))
+        if (IsAllegianceSame(position))
         {
-            EnableTextPreview(tile, "PROTECT");
+            //EnableTextPreview(position, "PROTECT");
         }
         else
         {
@@ -119,7 +119,7 @@ public class ChillingGust : BaseAction
             {
                 bonusDamage = bonusBlessingDamage;
             }
-            EnableDamagePreview(tile, minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
+            //EnableDamagePreview(tile, minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
         }
     }
     

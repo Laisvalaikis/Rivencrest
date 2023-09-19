@@ -5,7 +5,6 @@ using UnityEngine;
 public class AcidRain : BaseAction
 {
     private List<Poison> _poisons;
-    // Start is called before the first frame update
     void Start()
     {
         actionStateName = "AcidRain";
@@ -16,7 +15,7 @@ public class AcidRain : BaseAction
         if (CanTileBeClicked(position))
         {
             base.ResolveAbility(position);
-            foreach (ChunkData tile in ReturnGeneratedChunks())
+            foreach (ChunkData tile in _chunkList)
             {
                 if (CanTileBeClicked(position))
                 {
@@ -26,7 +25,6 @@ public class AcidRain : BaseAction
             }
             FinishAbility();
         }
-        
     }
 
     public override void OnTurnStart()

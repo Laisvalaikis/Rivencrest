@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4438398929298113651}
   - component: {fileID: 2884985102919791894}
   - component: {fileID: -816085581043963763}
-  - component: {fileID: 5823231512213798535}
+  - component: {fileID: 3650746029519673977}
   m_Layer: 8
   m_Name: PlayerPink
   m_TagString: Player
@@ -330,10 +330,10 @@ MonoBehaviour:
   - abilityText: {fileID: 11400000, guid: 66879b7eb53187e4daa6894d6e6cd3e2, type: 2}
     enabled: 1
     AbilityImage: {fileID: -2885244205613315195, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 5823231512213798535}
+    Action: {fileID: 3650746029519673977}
   availableAttackPoints: 0
   availableMovementPoints: 0
---- !u!114 &5823231512213798535
+--- !u!114 &3650746029519673977
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 659955980883675694}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a800ef8af2a9ff445914d8524b94f772, type: 3}
+  m_Script: {fileID: 11500000, guid: 83a4bdf254c47be4f8ded2239fdaa0b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   selectedEffectIndex: 0
@@ -351,7 +351,7 @@ MonoBehaviour:
   actionStateName: 
   laserGrid: 0
   spawnedCharacter: {fileID: 0}
-  AttackRange: 4
+  AttackRange: 2
   AbilityCooldown: 1
   minAttackDamage: 0
   maxAttackDamage: 0

@@ -25,7 +25,7 @@ public class RainOfArrows : BaseAction
         List<ChunkData> damageTiles = CreateDamageTileList(position);
         foreach (ChunkData tile in damageTiles)
         {
-            if (tile.IsStandingOnChunk() && !isAllegianceSame(tile.GetPosition()))
+            if (tile.IsStandingOnChunk() && !IsAllegianceSame(tile.GetPosition()))
             {
                 _cometTiles.Add(tile);
             }

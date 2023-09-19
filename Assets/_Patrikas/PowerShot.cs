@@ -36,12 +36,12 @@ public class PowerShot : BaseAction
             DealRandomDamageToTarget(chunk, minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
             FinishAbility();
     }
-    public override void OnTileHover(GameObject tile)
+    public void OnTileHover(Vector3 position)
     {
-        if (!isAllegianceSame(tile)) //jei priesas, tada jam ikirs
+        if (!IsAllegianceSame(position)) //jei priesas, tada jam ikirs
         {
             var bonusDamage = (DoesCharacterHaveBlessing("Release toxins")/* && GetSpecificGroundTile(tile, 0, 0, blockingLayer).GetComponent<PlayerInformation>().Poisons.Count > 0*/) ? 3 : 0;
-            EnableDamagePreview(tile, minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
+            //EnableDamagePreview(position, minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
         }
     }
 }
