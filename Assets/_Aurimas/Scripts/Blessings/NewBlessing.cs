@@ -9,9 +9,17 @@ public class NewBlessing : ScriptableObject
     [TextArea]
     public string description;
 
-    public virtual void UseBlessing()
+    public virtual void UseBlessing(Vector3 position)
     {
         
+    }
+    public virtual void OnTurnStart()
+    {
+        
+    }
+    public virtual void OnTurnEnd()
+    {
+
     }
 
 }

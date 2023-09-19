@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Agility : NewBlessing
 {
-    public override void UseBlessing()
+    public override void UseBlessing(Vector3 position)
     {
-        base.UseBlessing();
+        base.UseBlessing(position);
     }
 }
