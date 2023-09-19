@@ -1,21 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TMPro;
 using Unity.Mathematics;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
-
 
 [RequireComponent(typeof(AssignSound))]
     public abstract class BaseAction : CharacterAction
     {
-
         // audio effect indexes
         [Header("Sound Effect")]
         public int selectedEffectIndex;
@@ -23,7 +16,6 @@ using Random = UnityEngine.Random;
 
         [Header("Base Action")] 
         [SerializeField] protected PlayerInformation playerInformation;
-        public string actionStateName;
         protected LayerMask groundLayer;
         protected LayerMask blockingLayer;
         protected LayerMask consumablesLayer;
@@ -492,28 +484,15 @@ using Random = UnityEngine.Random;
             }
             return false;
         }
-
         protected bool IsAllegianceSame(Vector3 position)
         {
             ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
-            if (chunkData != null && chunkData.GetCurrentPlayerInformation().GetPlayerTeam() != playerInformation.GetPlayerTeam() && friendlyFire)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-            // var playerTeams = gameInformation.GetComponent<PlayerTeams>();
-            // return playerTeams.FindTeamAllegiance(GameTileMap.Tilemap.GetChunk(position).GetCurrentCharacter().GetComponent<PlayerInformation>().CharactersTeam)
-            //     == playerTeams.FindTeamAllegiance(GetComponent<PlayerInformation>().CharactersTeam);
+            return chunkData == null || chunkData.GetCurrentPlayerInformation().GetPlayerTeam() == playerInformation.GetPlayerTeam() || !friendlyFire;
         }
-
         protected bool IsAllegianceSame(ChunkData chunk)
         {
             return chunk == null || chunk.GetCurrentPlayerInformation().GetPlayerTeam() == playerInformation.GetPlayerTeam() || !friendlyFire;
         }
-        
         protected bool IsItCriticalStrike(ref int damage)
         {
             int critNumber = Random.Range(0, 100);
@@ -529,7 +508,6 @@ using Random = UnityEngine.Random;
             }
             return crit;
         }
-
         private void DodgeActivation(ref int damage, PlayerInformation target) //Dodge temporarily removed
         {
             int dodgeNumber = Random.Range(0, 100);

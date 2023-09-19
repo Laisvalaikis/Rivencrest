@@ -3,33 +3,33 @@ using UnityEngine;
 
 public class ChillingGust : BaseAction
 {
-    //public int minAttackDamage = 3;
-    //public int maxAttackDamage = 5;
-    public int bonusBlessingDamage = 2;
-
-
-    private List<GameObject> AdditionalDamageTiles = new List<GameObject>();
-    private GameObject protectedAlly;
+    private const int MinAttackDamage = 3;
+    private const int MaxAttackDamage = 5;
+    private const int BonusBlessingDamage = 2;
+    private List<ChunkData> _additionalDamageTiles=new List<ChunkData>();
+    private GameObject _protectedAlly;
 
     void Start()
     {
         isAbilitySlow = false;
+        AttackHighlight = new Color32(123,156, 178,255);
+        AttackHighlightHover = new Color32(103, 136, 158, 255);
+        CharacterOnGrid = new Color32(146, 212, 255, 255);
     }
 
     public override void OnTurnStart()
     {
-        if (protectedAlly != null)
+        if (_protectedAlly != null)
         {
-            protectedAlly.GetComponent<PlayerInformation>().Protected = false;
+            _protectedAlly.GetComponent<PlayerInformation>().Protected = false;
             //protectedAlly.transform.Find("VFX").Find("Protected").gameObject.SetActive(false);
-            protectedAlly.GetComponent<PlayerInformation>().Debuffs.Remove("Protected");
-            protectedAlly = null;
+            _protectedAlly.GetComponent<PlayerInformation>().Debuffs.Remove("Protected");
+            _protectedAlly = null;
         }
     }
     public override void ResolveAbility(Vector3 position)
     {
             base.ResolveAbility(position);
-            
             ChunkData chunk = GameTileMap.Tilemap.GetChunk(position);
             GameObject target = chunk.GetCurrentCharacter();
             PlayerInformation clickedPlayerInformation = target.GetComponent<PlayerInformation>();
@@ -43,7 +43,7 @@ public class ChillingGust : BaseAction
                     clickedPlayerInformation.Debuffs.Remove("Protected");
                 }
                 clickedPlayerInformation.Debuffs.Add(new Debuff("Protected", gameObject));
-                protectedAlly = target;
+                _protectedAlly = target;
                 if (DoesCharacterHaveBlessing("Healing winds"))
                 {
                     int randomHeal = Random.Range(3, 5);
@@ -58,35 +58,34 @@ public class ChillingGust : BaseAction
                 int bonusDamage = 0;
                 if (DoesCharacterHaveBlessing("Harsh winds"))
                 {
-                    bonusDamage = bonusBlessingDamage;
+                    bonusDamage = BonusBlessingDamage;
                 }
-                DealRandomDamageToTarget(chunk, minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
+                DealRandomDamageToTarget(chunk, MinAttackDamage + bonusDamage, MaxAttackDamage + bonusDamage);
                 clickedPlayerInformation.ApplyDebuff("IceSlow");
                 //target.GetComponent<PlayerInformation>().Poisons.Add(new PlayerInformation.Poison(gameObject, 2, 2));
                 //clickedTile.transform.Find("mapTile").Find("VFX9x9Upper").gameObject.GetComponent<Animator>().SetTrigger("crowAttack");
                 //clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger("white2");
                 //GetSpecificGroundTile(target, 0, 0, groundLayer).transform.Find("mapTile").Find("VFXImpactBelow").gameObject.GetComponent<Animator>().SetTrigger("white1");
-                /*if (DoesCharacterHaveBlessing("Tempest"))
+                if (DoesCharacterHaveBlessing("Tempest"))
                 {
-                    CreateDamageTileList(clickedTile);
-                    foreach (GameObject tile in AdditionalDamageTiles)
+                    CreateDamageTileList(chunk);
+                    foreach (ChunkData c in _additionalDamageTiles)
                     {
-                        if (canTileBeClicked(tile))
+                        if (CanTileBeClicked(c.GetPosition()))
                         {
-                            target = GetSpecificGroundTile(clickedTile, 0, 0, blockingLayer);
-                            DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);
-                            target.GetComponent<PlayerInformation>().ApplyDebuff("IceSlow");
+                            DealRandomDamageToTarget(c, minAttackDamage, maxAttackDamage);
+                            c.GetCurrentCharacter().GetComponent<PlayerInformation>().ApplyDebuff("IceSlow");
                         }
-                        tile.transform.Find("mapTile").Find("VFXImpactBelow").gameObject.GetComponent<Animator>().SetTrigger("white1");
+                        //tile.transform.Find("mapTile").Find("VFXImpactBelow").gameObject.GetComponent<Animator>().SetTrigger("white1");
                     }
-                }*/
+                }
             }
             FinishAbility();
     }
     
-    /*private void CreateDamageTileList(GameObject clickedTile)
+    private void CreateDamageTileList(ChunkData chunk)
     {
-        AdditionalDamageTiles.Clear();
+        _additionalDamageTiles.Clear();
         var spellDirectionVectors = new List<(int, int)>
         {
             (1, 0),
@@ -96,13 +95,12 @@ public class ChillingGust : BaseAction
         };
         foreach (var x in spellDirectionVectors)
         {
-            if (CheckIfSpecificLayer(clickedTile, x.Item1, x.Item2, groundLayer) && (!CheckIfSpecificLayer(clickedTile, x.Item1, x.Item2, blockingLayer) || CheckIfSpecificTag(clickedTile, x.Item1, x.Item2, blockingLayer, "Player")))
+            if (CheckIfSpecificLayer(chunk.GetPosition(), x.Item1, x.Item2, groundLayer) && (!CheckIfSpecificLayer(chunk.GetPosition(), x.Item1, x.Item2, blockingLayer) || CheckIfSpecificTag(chunk.GetPosition(), x.Item1, x.Item2, blockingLayer, "Player")))
             {
-                AdditionalDamageTiles.Add(GetSpecificGroundTile(clickedTile, x.Item1, x.Item2, groundLayer));
+                _additionalDamageTiles.Add(chunk);
             }
         }
-
-    }*/
+    }
     public void OnTileHover(Vector3 position)
     {
         if (IsAllegianceSame(position))
@@ -114,7 +112,7 @@ public class ChillingGust : BaseAction
             int bonusDamage = 0;
             if (DoesCharacterHaveBlessing("Harsh winds"))
             {
-                bonusDamage = bonusBlessingDamage;
+                bonusDamage = BonusBlessingDamage;
             }
             //EnableDamagePreview(tile, minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
         }

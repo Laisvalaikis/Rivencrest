@@ -5,14 +5,6 @@ public class FromTheShadows : BaseAction
     public string ImpactName = "red1";
     //public int minAttackDamage = 3;
     //public int maxAttackDamage = 4;
-    
-
-
-    void Start()
-    {
-        actionStateName = "FromTheShadows";
-        //isAbilitySlow = false;
-    }
     public override void ResolveAbility(Vector3 position)
     {
             base.ResolveAbility(position);
@@ -26,7 +18,6 @@ public class FromTheShadows : BaseAction
             DamageAdjacent(chunk);
             //clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger(ImpactName);        
             FinishAbility();
-        
     }
     private void DamageAdjacent(ChunkData centerChunk)
     {
@@ -43,11 +34,10 @@ public class FromTheShadows : BaseAction
             int nx = x + dx[i];
             int ny = y + dy[i];
 
-            if (GameTileMap.Tilemap.CheckBounds(ny, nx) && chunks[ny, nx]?.GetCurrentCharacter() != null)
+            if (GameTileMap.Tilemap.CheckBounds(ny, nx) && chunks[ny, nx]?.GetCurrentCharacter() != null && !IsAllegianceSame(chunks[ny,nx]))
             {
                 DealRandomDamageToTarget(chunks[nx, ny], minAttackDamage, maxAttackDamage);
             }
         }
     }
-
 }

@@ -4,6 +4,13 @@ using UnityEngine;
 public class FreezeAbility : BaseAction
 {
     private List<ChunkData> _chunkListCopy;
+
+    private void Start()
+    {
+        AttackHighlight = new Color32(123,156, 178,255);
+        AttackHighlightHover = AttackHoverCharacter;
+        CharacterOnGrid = new Color32(146, 212, 255, 255);
+    }
     public override void CreateGrid(ChunkData centerChunk, int radius)
     {
         _chunkList.Clear();
@@ -28,7 +35,6 @@ public class FreezeAbility : BaseAction
                     ChunkData chunk = chunksArray[targetX, targetY];
                     if (chunk != null && !chunk.TileIsLocked())
                     {
-                        _chunkList.Add(chunk);
                         HighlightGridTile(chunk);
                     }
                 }
@@ -46,14 +52,14 @@ public class FreezeAbility : BaseAction
         {
             foreach (var chunk in _chunkList)
             {
-                chunk.GetTileHighlight().SetHighlightColor(Color.green);
+                SetNonHoveredAttackColor(chunk);
             }
         }
         else if ((hoveredChunkHighlight!=null && previousChunkHighlight!=null && hoveredChunkHighlight.isHighlighted && !previousChunkHighlight.isHighlighted) || (hoveredChunkHighlight!=null && previousChunkHighlight==null && hoveredChunkHighlight.isHighlighted))
         {
             foreach (var chunk in _chunkList)
             {
-                chunk.GetTileHighlight().SetHighlightColor(Color.magenta);
+                SetHoveredAttackColor(chunk);
             }
         }
     }
@@ -62,7 +68,7 @@ public class FreezeAbility : BaseAction
     {
         foreach (var chunk in _chunkListCopy)
         {
-            chunk.GetTileHighlight().SetHighlightColor(Color.green);
+            SetNonHoveredAttackColor(chunk);
             if (chunk.GetCurrentCharacter() != null && chunk!=GameTileMap.Tilemap.GetChunk(transform.position))
             {
                 DealRandomDamageToTarget(chunk, minAttackDamage, maxAttackDamage);
@@ -77,7 +83,6 @@ public class FreezeAbility : BaseAction
     public override void ResolveAbility(Vector3 position)
     {
         base.ResolveAbility(position);
-        ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
         DealDamageToList();
         FinishAbility();
     }

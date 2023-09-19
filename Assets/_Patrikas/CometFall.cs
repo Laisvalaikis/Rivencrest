@@ -3,11 +3,9 @@ using UnityEngine;
 
 public class CometFall : BaseAction
 {
-    //public int spellDamage = 50;
-    //public int minAttackDamage = 8;
-    //public int maxAttackDamage = 10;
-    //private List<List<GameObject>> AvailableTiles = new List<List<GameObject>>();
-    private List<ChunkData> _damageTiles;
+    private const int MinAttackDamage = 8;
+    private const int MaxAttackDamage = 10;
+    private List<ChunkData> _damageTiles = new List<ChunkData>();
     public override void OnTurnStart()
     {
         if (_damageTiles.Count > 0)
@@ -19,12 +17,12 @@ public class CometFall : BaseAction
                 //Enemy
                 if (CheckIfSpecificTag(chunkPosition, 0, 0, blockingLayer, "Player") && !IsAllegianceSame(chunkPosition))
                 {
-                    DealRandomDamageToTarget(chunk, minAttackDamage, maxAttackDamage);
+                    DealRandomDamageToTarget(chunk, MinAttackDamage, MaxAttackDamage);
                 }
                 //Ally
                 else if (CheckIfSpecificTag(chunkPosition, 0, 0, blockingLayer, "Player") && IsAllegianceSame(chunkPosition))
                 {
-                    DealRandomDamageToTarget(chunk, minAttackDamage/3, maxAttackDamage/3);
+                    DealRandomDamageToTarget(chunk, MinAttackDamage/3, MaxAttackDamage/3);
                 }
                 //tile.transform.Find("mapTile").Find("CometZone").gameObject.SetActive(false);
             }
@@ -41,7 +39,6 @@ public class CometFall : BaseAction
             _damageTiles.Add(GameTileMap.Tilemap.GetChunk(position));
             //GetSpecificGroundTile(clickedTile, 0, 0, groundLayer).transform.Find("mapTile").Find("CometZone").gameObject.SetActive(true);
         }
-
         FinishAbility();
     }
     protected override bool CanTileBeClicked(Vector3 position)

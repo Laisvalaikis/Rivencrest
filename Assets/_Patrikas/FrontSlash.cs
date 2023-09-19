@@ -58,7 +58,7 @@ public class FrontSlash : BaseAction
             for (int i = 0; i < _chunkArray.GetLength(1); i++)
             {
                 ChunkData chunkToHighLight = _chunkArray[_globalIndex, i];
-                chunkToHighLight?.GetTileHighlight().SetHighlightColor(Color.green);
+                SetNonHoveredAttackColor(chunkToHighLight);
             }
         }
         if (hoveredChunk != null && hoveredChunk.GetTileHighlight().isHighlighted)
@@ -69,7 +69,7 @@ public class FrontSlash : BaseAction
                 for (int i = 0; i < _chunkArray.GetLength(1); i++)
                 {
                     ChunkData chunkToHighLight = _chunkArray[_globalIndex, i];
-                    chunkToHighLight?.GetTileHighlight().SetHighlightColor(Color.magenta);
+                    SetHoveredAttackColor(chunkToHighLight);
                 }
             }
         }
@@ -77,10 +77,9 @@ public class FrontSlash : BaseAction
     
     public override void CreateGrid(ChunkData centerChunk, int radius)
     {
-        //Merging into one list
         (int centerX, int centerY) = centerChunk.GetIndexes();
         _chunkList.Clear();
-        int count = AttackRange; // -2
+        int count = AttackRange;
         _chunkArray = new ChunkData[4,count];
 
         int start = 1;
@@ -116,26 +115,17 @@ public class FrontSlash : BaseAction
             }
         }
     }
-    
     public override void CreateGrid()
     {
         ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         CreateGrid(startChunk, AttackRange);
     }
-    
-    public override void OnTurnEnd()
-    {
-        base.OnTurnEnd();
-    }
-
     public override void OnTileHover(GameObject tile)
     {
         EnableDamagePreview(tile, minAttackDamage, maxAttackDamage);
     }
-    
     public override void OffTileHover(GameObject tile)
     {
         DisablePreview(tile, MergedTileList);
     }
-    
 }

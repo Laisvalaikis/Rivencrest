@@ -2,49 +2,51 @@ using UnityEngine;
 
 public class IceQuake : BaseAction
 {
-    public int rootDamage = 5;
+    private const int RootDamage = 5;
     void Start()
     {
-        actionStateName = "IceQuake";
+        AttackHighlight = new Color32(123,156, 178,255);
+        AttackHighlightHover = new Color32(103, 136, 158, 255);
+        CharacterOnGrid = new Color32(146, 212, 255, 255);
     }
     public override void ResolveAbility(Vector3 position)
     {
-        base.ResolveAbility(position);
-
-        ChunkData targetChunk = GameTileMap.Tilemap.GetChunk(position);
-        GameObject character = targetChunk.GetCurrentCharacter();
-        PlayerInformation playerInformationLocal = character?.GetComponent<PlayerInformation>();
-
-        int bonusDamage = 0;
-
-        //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell3");
-
-        if (playerInformationLocal != null)
+        if (CanTileBeClicked(position))
         {
-            if (playerInformationLocal.Slow1 || playerInformationLocal.Slow2 || playerInformationLocal.Slow3)
-            {
-                //transform.Find("VFX").Find("VFXIceFreeze").GetComponent<Animator>().SetBool("iceFreeze", false);
-                //transform.Find("VFX").Find("VFXOilSlow").GetComponent<Animator>().SetBool("oilSlow", false);
+            base.ResolveAbility(position);
+            ChunkData targetChunk = GameTileMap.Tilemap.GetChunk(position);
+            GameObject character = targetChunk.GetCurrentCharacter();
+            PlayerInformation playerInformationLocal = character?.GetComponent<PlayerInformation>();
+            int bonusDamage = 0;
 
-                playerInformationLocal.Slow1 = false;
-                playerInformationLocal.Slow2 = false;
-                playerInformationLocal.Slow3 = false;
-                playerInformationLocal.ApplyDebuff("CantMove");
-                bonusDamage += rootDamage;
-            }
-            else
+            //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell3");
+
+            if (playerInformationLocal != null)
             {
-                playerInformationLocal.ApplyDebuff("IceSlow");
+                if (playerInformationLocal.Slow1 || playerInformationLocal.Slow2 || playerInformationLocal.Slow3)
+                {
+                    //transform.Find("VFX").Find("VFXIceFreeze").GetComponent<Animator>().SetBool("iceFreeze", false);
+                    //transform.Find("VFX").Find("VFXOilSlow").GetComponent<Animator>().SetBool("oilSlow", false);
+
+                    playerInformationLocal.Slow1 = false;
+                    playerInformationLocal.Slow2 = false;
+                    playerInformationLocal.Slow3 = false;
+                    playerInformationLocal.ApplyDebuff("CantMove");
+                    bonusDamage += RootDamage;
+                }
+                else
+                {
+                    playerInformationLocal.ApplyDebuff("IceSlow");
+                }
             }
+
+            // character.transform.Find("mapTile").Find("VFX9x9Below").gameObject.GetComponent<Animator>()
+            //     .SetTrigger("iceQuake");
+
+            DealRandomDamageToTarget(targetChunk, minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
+            FinishAbility();
         }
-
-        // character.transform.Find("mapTile").Find("VFX9x9Below").gameObject.GetComponent<Animator>()
-        //     .SetTrigger("iceQuake");
-
-        DealRandomDamageToTarget(targetChunk, minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
-        FinishAbility();
     }
-
 }
     
 

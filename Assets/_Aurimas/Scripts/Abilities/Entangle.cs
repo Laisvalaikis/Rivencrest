@@ -2,11 +2,6 @@ using UnityEngine;
 
 public class Entangle : BaseAction
 {
-    void Start()
-    {
-        actionStateName = "Entangle";
-    }
-
     public override void ResolveAbility(Vector3 position)
     {
         base.ResolveAbility(position);

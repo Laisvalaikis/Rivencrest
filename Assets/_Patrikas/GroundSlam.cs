@@ -3,21 +3,28 @@ using UnityEngine;
 
 public class GroundSlam : BaseAction
 {
-
-    private bool isAbilityActive = false;
     private List<ChunkData> _chunkListCopy;
 
     void Start()
     {
         isAbilitySlow = false;
+        AttackHighlight = new Color32(123,156, 178,255);
+        AttackHighlightHover = AttackHoverCharacter;
+        CharacterOnGrid = AttackHighlight;
     }
-    
     public override void CreateGrid()
     {
         base.CreateGrid();
         _chunkListCopy = new List<ChunkData>(_chunkList);
     }
-
+    
+    protected override void HighlightGridTile(ChunkData chunkData)
+    {
+        SetNonHoveredAttackColor(chunkData);
+        chunkData.GetTileHighlight().ActivateColorGridTile(true);
+        _chunkList.Add(chunkData);
+    }
+    
     public override void ResolveAbility(Vector3 position)
     {
         base.ResolveAbility(position);
@@ -29,14 +36,13 @@ public class GroundSlam : BaseAction
     {
         foreach (var chunk in _chunkListCopy)
         {
-            chunk.GetTileHighlight().SetHighlightColor(Color.green);
+            SetNonHoveredAttackColor(chunk);
             if (chunk.GetCurrentCharacter() != null && chunk!=GameTileMap.Tilemap.GetChunk(transform.position))
             {
                 DealRandomDamageToTarget(chunk, minAttackDamage, maxAttackDamage);
             }
         }
     }
-    
     public override void OnMoveHover(ChunkData hoveredChunk, ChunkData previousChunk)
     {
         if (hoveredChunk == previousChunk) return;
@@ -46,18 +52,17 @@ public class GroundSlam : BaseAction
         {
             foreach (var chunk in _chunkList)
             {
-                chunk.GetTileHighlight().SetHighlightColor(Color.green);
+                SetNonHoveredAttackColor(chunk);
             }
         }
         else if ((hoveredChunkHighlight!=null && previousChunkHighlight!=null && hoveredChunkHighlight.isHighlighted && !previousChunkHighlight.isHighlighted) || (hoveredChunkHighlight!=null && previousChunkHighlight==null && hoveredChunkHighlight.isHighlighted))
         {
             foreach (var chunk in _chunkList)
             {
-                chunk.GetTileHighlight().SetHighlightColor(Color.magenta);
+                SetHoveredAttackColor(chunk);
             }
         }
     }
-    
     public override void OnTileHover(GameObject tile)
     {
         EnableDamagePreview(tile, MergedTileList, minAttackDamage, maxAttackDamage);
@@ -80,5 +85,4 @@ public class GroundSlam : BaseAction
     {
         DisablePreview(tile, MergedTileList);
     }
-
 }

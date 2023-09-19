@@ -13,7 +13,6 @@ public class IsolatedStrike : BaseAction
 
     void Start()
     {
-        actionStateName = "IsolatedStrike";
         // AttackAbility = true;
     }
 

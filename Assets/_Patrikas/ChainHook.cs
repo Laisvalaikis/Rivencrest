@@ -21,7 +21,6 @@ public class ChainHook : BaseAction
     {
         (int centerX, int centerY) = centerChunk.GetIndexes();
         ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray();
-
         bool[] canExtend = { true, true, true, true };
 
         for (int i = 1; i <= length; i++)
@@ -139,17 +138,14 @@ public class ChainHook : BaseAction
         previousChunkHighlight.SetHighlightColor(AttackHighlight);
         ResetCharacterSpriteRendererAndTilePreview();
     }
-
     if (hoveredChunkHighlight == null || hoveredChunk == previousChunk)
     {
         return;
     }
-
     if (hoveredChunkHighlight.isHighlighted)
     {
         SetHoveredChunkHighlight(hoveredChunk, currentPlayerInfo);
     }
-
     if (previousChunkHighlight != null)
     {
         if (_tileToPullTo != null && currentCharacter == null)

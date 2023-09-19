@@ -50,6 +50,11 @@ public class BlockAbility : BaseAction
             _chunkList.Add(chunkData);
         }
     }
+
+    protected override bool CanTileBeClicked(Vector3 position)
+    {
+        return IsAllegianceSame(position);
+    }
     public override void OnTurnStart()
     {
         if (_characterBeingBlocked != null)
@@ -68,16 +73,19 @@ public class BlockAbility : BaseAction
 
     public override void ResolveAbility(Vector3 position)
     {
-        base.ResolveAbility(position);
-        //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spellToBool");
-        //transform.Find("CharacterModel").GetComponent<Animator>().SetBool("block", true);
-        ChunkData chunk = GameTileMap.Tilemap.GetChunk(position);
-        PlayerInformation playerInformationLocal = chunk.GetCurrentPlayerInformation();
-        if(playerInformationLocal!=null)
-            playerInformationLocal.BlockingAlly = GameTileMap.Tilemap.GetCurrentCharacter();
-        _characterBeingBlocked = chunk.GetCurrentCharacter();
-        GetComponent<PlayerInformation>().Blocker = true;
-        FinishAbility();
+        if (CanTileBeClicked(position))
+        {
+            base.ResolveAbility(position);
+            //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spellToBool");
+            //transform.Find("CharacterModel").GetComponent<Animator>().SetBool("block", true);
+            ChunkData chunk = GameTileMap.Tilemap.GetChunk(position);
+            PlayerInformation playerInformationLocal = chunk.GetCurrentPlayerInformation();
+            if (playerInformationLocal != null)
+                playerInformationLocal.BlockingAlly = GameTileMap.Tilemap.GetCurrentCharacter();
+            _characterBeingBlocked = chunk.GetCurrentCharacter();
+            GetComponent<PlayerInformation>().Blocker = true;
+            FinishAbility();
+        }
     }
 
     public override void OnTileHover(GameObject tile)
