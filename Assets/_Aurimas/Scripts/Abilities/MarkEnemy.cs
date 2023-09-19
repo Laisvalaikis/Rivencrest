@@ -1,24 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MarkEnemy : BaseAction
 {
-    private ChunkData target;
+    private ChunkData _target;
     public override void OnTurnEnd()
     {
         base.OnTurnEnd();
-        if (target != null && target.GetCurrentPlayerInformation().Marker != null)
+        if (_target != null && _target.GetCurrentPlayerInformation().Marker != null)
         {
-            target.GetCurrentPlayerInformation().Marker = null;
-            target = null;
+            _target.GetCurrentPlayerInformation().Marker = null;
+            _target = null;
         }
     }
     public override void ResolveAbility(Vector3 position)
     {
         base.ResolveAbility(position);
-        target = GetSpecificGroundTile(position);
-        target.GetCurrentPlayerInformation().Marker = gameObject;
+        _target = GetSpecificGroundTile(position);
+        _target.GetCurrentPlayerInformation().Marker = gameObject;
         FinishAbility();
         
     }

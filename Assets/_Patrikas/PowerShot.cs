@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class PowerShot : BaseAction
@@ -12,13 +9,12 @@ public class PowerShot : BaseAction
     void Start()
     {
         laserGrid = true;
-        actionStateName = "PowerShot";
     }
     public override void ResolveAbility(Vector3 position)
     {
             base.ResolveAbility(position);
             ChunkData chunk = GameTileMap.Tilemap.GetChunk(position);
-            PlayerInformation playerInformation = chunk.GetCurrentPlayerInformation();
+            PlayerInformation playerInformationLocal = chunk.GetCurrentPlayerInformation();
             int bonusDamage = 0;
             if (DoesCharacterHaveBlessing("Release toxins") /*&& playerInformation.Poisons.Count > 0*/)
             {
@@ -26,10 +22,10 @@ public class PowerShot : BaseAction
             }
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
            
-            playerInformation.ApplyDebuff("IceSlow");
+            playerInformationLocal.ApplyDebuff("IceSlow");
             if (DoesCharacterHaveBlessing("Chilling shot"))
             {
-                playerInformation.ApplyDebuff("IceSlow");
+                playerInformationLocal.ApplyDebuff("IceSlow");
             }
                 //clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger("green1");
             

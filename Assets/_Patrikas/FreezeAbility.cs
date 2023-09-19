@@ -1,12 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FreezeAbility : BaseAction
 {
-    
     private List<ChunkData> _chunkListCopy;
-
     public override void CreateGrid(ChunkData centerChunk, int radius)
     {
         _chunkList.Clear();

@@ -5,7 +5,6 @@ public class PlayerAttack : BaseAction
 
     private void Start()
     {
-        actionStateName = "Attack";
         AttackAbility = true;
     }
 

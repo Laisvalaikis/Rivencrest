@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ThrowSpear : BaseAction
@@ -10,7 +8,7 @@ public class ThrowSpear : BaseAction
 
     public override void CreateGrid(ChunkData centerChunk, int radius)
     {
-        (int centerX, int centerY) = centerChunk.GetIndexes();
+        (_, int centerY) = centerChunk.GetIndexes();
         _chunkList.Clear();
         ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray();
         for (int y = -radius; y <= radius; y++)
@@ -23,9 +21,7 @@ public class ThrowSpear : BaseAction
                     ChunkData chunk = chunksArray[0, targetY];
                     if (chunk != null && !chunk.TileIsLocked())
                     {
-                        _chunkList.Add(chunk);
                         HighlightGridTile(chunk);
-                        
                     }
                 }
             }

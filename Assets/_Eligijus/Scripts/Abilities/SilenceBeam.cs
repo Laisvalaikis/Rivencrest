@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SilenceBeam : BaseAction
@@ -28,80 +26,58 @@ public class SilenceBeam : BaseAction
         int index = -1;
         for (int i = 0; i < _chunkArray.GetLength(1); i++)
         {
-            if (_chunkArray[0,i] != null)
+            if (_chunkArray[0,i] != null && _chunkArray[0,i] == chunkData)
             {
-                if (_chunkArray[0,i] == chunkData)
-                {
-                    index = 0;
-                    
-                }
+                index = 0;
             }
-            
-            if(_chunkArray[1,i] != null)
+            if(_chunkArray[1,i] != null && _chunkArray[1,i] == chunkData)
             {
-                if (_chunkArray[1,i] == chunkData)
-                {
-                    index = 1;
-                    
-                }
+                index = 1;
             }
-            
-            if (_chunkArray[2,i] != null)
+            if (_chunkArray[2,i] != null && _chunkArray[2,i] == chunkData)
             {
-                if (_chunkArray[2,i] == chunkData)
-                {
-                    index = 2;
-                    
-                }
+                index = 2;
             }
-
-            if (_chunkArray[3,i] != null)
+            if (_chunkArray[3,i] != null && _chunkArray[3,i] == chunkData)
             {
-                if (_chunkArray[3,i] == chunkData)
-                {
-                    index = 3;
-                    
-                }
+                index = 3;
             }
-
         }
         return index;
     }
 
-    private int globalIndex = -1;
+    private int _globalIndex = -1;
     public override void OnMoveHover(ChunkData hoveredChunk, ChunkData previousChunk)
     {
         if (hoveredChunk == previousChunk) return;
-        if (globalIndex != -1)
+        if (_globalIndex != -1)
         {
             for (int i = 0; i < _chunkArray.GetLength(1); i++)
             {
-                ChunkData chunkToHighLight = _chunkArray[globalIndex, i];
+                ChunkData chunkToHighLight = _chunkArray[_globalIndex, i];
                 chunkToHighLight?.GetTileHighlight().SetHighlightColor(Color.green);
             }
         }
         if (hoveredChunk != null && hoveredChunk.GetTileHighlight().isHighlighted)
         {
             
-            globalIndex = FindChunkIndex(hoveredChunk);
-            if (globalIndex != -1)
+            _globalIndex = FindChunkIndex(hoveredChunk);
+            if (_globalIndex != -1)
             {
                 for (int i = 0; i < _chunkArray.GetLength(1); i++)
                 {
-                    ChunkData chunkToHighLight = _chunkArray[globalIndex, i];
+                    ChunkData chunkToHighLight = _chunkArray[_globalIndex, i];
                     chunkToHighLight?.GetTileHighlight().SetHighlightColor(Color.magenta);
                 }
             }
         }
     }
-    
     public override void CreateGrid(ChunkData centerChunk, int radius)
     {
         //Merging into one list
         (int centerX, int centerY) = centerChunk.GetIndexes();
         _chunkList.Clear();
-        int count = AttackRange; // -2
-        
+        int count = AttackRange;
         _chunkArray = new ChunkData[4,count];
 
         int start = 1;
@@ -136,18 +112,11 @@ public class SilenceBeam : BaseAction
                 _chunkArray[3, i] = chunkData;
             }
         }
-
     }
-    
     public override void CreateGrid()
     {
         ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         CreateGrid(startChunk, AttackRange);
-    }
-    
-    public override void OnTurnEnd()
-    {
-        base.OnTurnEnd();
     }
 
     public override void OnTileHover(GameObject tile)
@@ -159,5 +128,4 @@ public class SilenceBeam : BaseAction
     {
         DisablePreview(tile, MergedTileList);
     }
-    
 }

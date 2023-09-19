@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PinkBarrier : BaseAction
@@ -10,8 +8,6 @@ public class PinkBarrier : BaseAction
         GetSpecificGroundTile(position).GetCurrentPlayerInformation().BarrierProvider = gameObject;
        // GetSpecificGroundTile(position, 0, 0, blockingLayer).GetComponent<GridMovement>().AvailableMovementPoints++;
         FinishAbility();
-
-        
     }
     public override void OnTileHover(GameObject tile)
     {

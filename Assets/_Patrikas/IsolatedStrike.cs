@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class IsolatedStrike : BaseAction
@@ -9,7 +6,7 @@ public class IsolatedStrike : BaseAction
     //public int attackDamage = 60;
     //public int minAttackDamage = 4;
     //public int maxAttackDamage = 8;
-    public int isolationDamage = 7;
+    private int isolationDamage = 7;
 
 
     //private List<List<GameObject>> AvailableTiles = new List<List<GameObject>>();
@@ -26,7 +23,7 @@ public class IsolatedStrike : BaseAction
         ChunkData target = GameTileMap.Tilemap.GetChunk(position);
         int bonusDamage = 0;
         //Isolation
-        if (isTargetIsolated(target))
+        if (IsTargetIsolated(target))
         {
             bonusDamage += isolationDamage;
         }
@@ -36,20 +33,20 @@ public class IsolatedStrike : BaseAction
         FinishAbility();
     }
 
-    public override void OnTileHover(GameObject tile)
+    public void OnTileHover(Vector3 position)
     {
+        ChunkData chunk = GameTileMap.Tilemap.GetChunk(position);
         int showMinDamage = minAttackDamage;
         int shownMaxDamage = maxAttackDamage;
-        /*if (isTargetIsolated())
+        if (IsTargetIsolated(chunk))
         {
             showMinDamage += isolationDamage;
             shownMaxDamage += isolationDamage;
-        }*/
+        }
 
-        EnableDamagePreview(tile, showMinDamage, shownMaxDamage);
+        //EnableDamagePreview(position, showMinDamage, shownMaxDamage);
     }
-
-    bool isTargetIsolated(ChunkData target)
+    private bool IsTargetIsolated(ChunkData target)
     {
         ChunkData[,] chunks = GameTileMap.Tilemap.GetChunksArray();
         (int y, int x) indexes = target.GetIndexes();
@@ -64,7 +61,7 @@ public class IsolatedStrike : BaseAction
             int nx = x + dx[i];
             int ny = y + dy[i];
 
-            if (GameTileMap.Tilemap.CheckBounds(ny, nx) && chunks[ny, nx]?.GetCurrentCharacter() != null /*patikrinti ar skirtingos komandos*/)
+            if (GameTileMap.Tilemap.CheckBounds(ny, nx) && chunks[ny, nx]?.GetCurrentCharacter() != null && IsAllegianceSame(chunks[ny, nx]))
             {
                 return false;
             }

@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class PoisonDart : BaseAction
@@ -15,7 +13,6 @@ public class PoisonDart : BaseAction
 
     void Start()
     {
-        actionStateName = "PoisonDart";
         isAbilitySlow = false;
     }
 
@@ -30,7 +27,6 @@ public class PoisonDart : BaseAction
         //clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger(ImpactName);
         if (DoesCharacterHaveBlessing("Explosive dart"))
         {
-        
             PoisonAdjacent(chunk);
         }
         FinishAbility();

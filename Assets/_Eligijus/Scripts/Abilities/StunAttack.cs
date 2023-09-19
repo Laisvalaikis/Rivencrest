@@ -1,16 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class StunAttack : BaseAction
 {
     private List<Poison> _poisons;
-    // Start is called before the first frame update
-    void Start()
-    {
-        actionStateName = "StunAttack";
-    }
-
     public override void ResolveAbility(Vector3 position)
     {
         if (CanTileBeClicked(position))
@@ -20,7 +13,6 @@ public class StunAttack : BaseAction
             DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
             FinishAbility();
         }
-        
     }
 
     public override void OnTurnStart()

@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class LeapAndSlam : BaseAction
@@ -10,7 +7,6 @@ public class LeapAndSlam : BaseAction
 
     void Start()
     {
-        actionStateName = "LeapAndSlam";
         isAbilitySlow = false;
     }
     

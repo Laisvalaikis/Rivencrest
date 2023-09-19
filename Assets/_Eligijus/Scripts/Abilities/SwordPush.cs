@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 
 public class SwordPush : BaseAction
@@ -38,11 +36,8 @@ public class SwordPush : BaseAction
                 DealDamage(_attackTiles[i], damage, crit);
             }
         }
-        
-        
         FinishAbility();
         // }
-        
     }
 
     private void CreateAttackGrid(ChunkData selected)

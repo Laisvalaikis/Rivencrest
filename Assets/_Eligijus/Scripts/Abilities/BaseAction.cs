@@ -508,6 +508,11 @@ using Random = UnityEngine.Random;
             // return playerTeams.FindTeamAllegiance(GameTileMap.Tilemap.GetChunk(position).GetCurrentCharacter().GetComponent<PlayerInformation>().CharactersTeam)
             //     == playerTeams.FindTeamAllegiance(GetComponent<PlayerInformation>().CharactersTeam);
         }
+
+        protected bool IsAllegianceSame(ChunkData chunk)
+        {
+            return chunk == null || chunk.GetCurrentPlayerInformation().GetPlayerTeam() == playerInformation.GetPlayerTeam() || !friendlyFire;
+        }
         
         protected bool IsItCriticalStrike(ref int damage)
         {

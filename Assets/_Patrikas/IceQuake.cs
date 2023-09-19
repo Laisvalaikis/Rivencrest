@@ -13,28 +13,28 @@ public class IceQuake : BaseAction
 
         ChunkData targetChunk = GameTileMap.Tilemap.GetChunk(position);
         GameObject character = targetChunk.GetCurrentCharacter();
-        PlayerInformation playerInformation = character?.GetComponent<PlayerInformation>();
+        PlayerInformation playerInformationLocal = character?.GetComponent<PlayerInformation>();
 
         int bonusDamage = 0;
 
         //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell3");
 
-        if (playerInformation != null)
+        if (playerInformationLocal != null)
         {
-            if (playerInformation.Slow1 || playerInformation.Slow2 || playerInformation.Slow3)
+            if (playerInformationLocal.Slow1 || playerInformationLocal.Slow2 || playerInformationLocal.Slow3)
             {
                 //transform.Find("VFX").Find("VFXIceFreeze").GetComponent<Animator>().SetBool("iceFreeze", false);
                 //transform.Find("VFX").Find("VFXOilSlow").GetComponent<Animator>().SetBool("oilSlow", false);
 
-                playerInformation.Slow1 = false;
-                playerInformation.Slow2 = false;
-                playerInformation.Slow3 = false;
-                playerInformation.ApplyDebuff("CantMove");
+                playerInformationLocal.Slow1 = false;
+                playerInformationLocal.Slow2 = false;
+                playerInformationLocal.Slow3 = false;
+                playerInformationLocal.ApplyDebuff("CantMove");
                 bonusDamage += rootDamage;
             }
             else
             {
-                playerInformation.ApplyDebuff("IceSlow");
+                playerInformationLocal.ApplyDebuff("IceSlow");
             }
         }
 

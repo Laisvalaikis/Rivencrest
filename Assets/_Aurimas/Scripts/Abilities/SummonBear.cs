@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SummonBear : BaseAction
@@ -14,7 +12,6 @@ public class SummonBear : BaseAction
     }
     public override void CreateGrid(ChunkData centerChunk, int radius)
     {
-        
         (int y, int x) coordinates = GameTileMap.Tilemap.GetChunk(transform.position).GetIndexes();
         ChunkData[,] chunkDataArray = GameTileMap.Tilemap.GetChunksArray();
         _chunkList.Clear();
@@ -22,8 +19,6 @@ public class SummonBear : BaseAction
         ChunkData chunkData = chunkDataArray[coordinates.y, rightX];
         HighlightGridTile(chunkData);
         _chunkList.Add(chunkData);
-        
-        
     }
     
     public override void CreateGrid()

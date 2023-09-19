@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,7 +9,6 @@ public class GroundSlam : BaseAction
 
     void Start()
     {
-        actionStateName = "GroundSlam";
         isAbilitySlow = false;
     }
     

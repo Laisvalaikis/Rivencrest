@@ -1,11 +1,10 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CyroFreeze : BaseAction
 {
    private PlayerInformation _playerInformation;
-   private bool isAbilityActive = false;
+   private bool _isAbilityActive = false;
 
    public override void CreateGrid(ChunkData centerChunk, int radius)
    {
@@ -21,7 +20,7 @@ public class CyroFreeze : BaseAction
 
    public override void OnTurnStart()
    {
-      if (isAbilityActive && (GetComponent<PlayerInformation>().health > 0))
+      if (_isAbilityActive && (GetComponent<PlayerInformation>().health > 0))
       {
          StartCoroutine(ExecuteAfterTime(0.4f, () =>
          {
@@ -49,12 +48,12 @@ public class CyroFreeze : BaseAction
             }
          }));
       }
-      isAbilityActive = false;
+      _isAbilityActive = false;
    }
    public override void ResolveAbility(Vector3 position)
    {
       base.ResolveAbility(position);
-      isAbilityActive = true;
+      _isAbilityActive = true;
       _playerInformation.Stasis = true;
       FinishAbility();
    }

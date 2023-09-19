@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Xml;
 using UnityEngine;
 
 public class CrowAttack : BaseAction
@@ -9,17 +7,17 @@ public class CrowAttack : BaseAction
     private int poisonBonusDamage=2;
     public override void ResolveAbility(Vector3 position)
     {
-        for (int i = 0; i < _chunkList.Count; i++)
+        foreach (var t in _chunkList)
         {
             //ChunkData target = GetSpecificGroundTile(_chunkList[i].GetPosition());
-            if (_chunkList[i].CharacterIsOnTile())
+            if (t.CharacterIsOnTile())
             {
                 int bonusDamage = 0;
                 if (_poisons.Count > 0)
                 {
                     bonusDamage += poisonBonusDamage;
                 }
-                DealRandomDamageToTarget(_chunkList[i],minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
+                DealRandomDamageToTarget(t,minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
             }
         }
         base.ResolveAbility(position);

@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 
 public class WallSmash : BaseAction
@@ -26,8 +24,8 @@ public class WallSmash : BaseAction
     {
         base.OnTurnEnd();
     }
-    
-    public void DestroyObject(ChunkData chunkData)
+
+    private void DestroyObject(ChunkData chunkData)
     {
         (int x, int y) = chunkData.GetIndexes();
         var pushDirectionVectors = new List<(int, int)>

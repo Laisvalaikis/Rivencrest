@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DisarmingSlam : BaseAction
 {
-    private ChunkData[,] _chunkArray;
     
     public override void ResolveAbility(Vector3 position)
     {
@@ -19,7 +16,7 @@ public class DisarmingSlam : BaseAction
         _chunkList.Clear();
         int count = AttackRange; 
         
-        _chunkArray = new ChunkData[4,count];
+        ChunkData[,] chunkArray = new ChunkData[4,count];
 
         int start = 1;
         for (int i = 0; i < count; i++) 
@@ -29,28 +26,28 @@ public class DisarmingSlam : BaseAction
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(centerX + i + start, centerY);
                 _chunkList.Add(chunkData);
                 HighlightGridTile(chunkData);
-                _chunkArray[0, i] = chunkData;
+                chunkArray[0, i] = chunkData;
             }
             if (GameTileMap.Tilemap.CheckBounds(centerX - i - start, centerY))
             {
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(centerX-i - start, centerY);
                 _chunkList.Add(chunkData);
                 HighlightGridTile(chunkData);
-                _chunkArray[1, i] = chunkData;
+                chunkArray[1, i] = chunkData;
             }
             if (GameTileMap.Tilemap.CheckBounds(centerX, centerY + i + start))
             {
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(centerX, centerY + i + start);
                 _chunkList.Add(chunkData);
                 HighlightGridTile(chunkData);
-                _chunkArray[2, i] = chunkData;
+                chunkArray[2, i] = chunkData;
             }
             if (GameTileMap.Tilemap.CheckBounds(centerX, centerY - i - start))
             {
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(centerX, centerY - i - start);
                 _chunkList.Add(chunkData);
                 HighlightGridTile(chunkData);
-                _chunkArray[3, i] = chunkData;
+                chunkArray[3, i] = chunkData;
             }
         }
 

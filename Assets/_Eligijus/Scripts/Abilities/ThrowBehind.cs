@@ -1,7 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 
 public class ThrowBehind : BaseAction
@@ -33,7 +30,6 @@ public class ThrowBehind : BaseAction
             {
                 ChunkData positionChunk =
                     GameTileMap.Tilemap.GetChunkDataByIndex(playerChunkIndex.x + range, targetChunkIndex.y);
-                Debug.Log(target.GetCurrentPlayerInformation());
                 GameTileMap.Tilemap.MoveSelectedCharacter(positionChunk.GetPosition(), new Vector3(0, 0.5f, 1), target.GetCurrentPlayerInformation().gameObject);
             }
         }
@@ -44,7 +40,6 @@ public class ThrowBehind : BaseAction
             {
                 ChunkData positionChunk =
                     GameTileMap.Tilemap.GetChunkDataByIndex(playerChunkIndex.x - range, targetChunkIndex.y);
-                Debug.Log(target.GetCurrentPlayerInformation());
                 GameTileMap.Tilemap.MoveSelectedCharacter(positionChunk.GetPosition(), new Vector3(0, 0.5f, 1), target.GetCurrentPlayerInformation().gameObject);
             }
         }
@@ -55,7 +50,6 @@ public class ThrowBehind : BaseAction
             {
                 ChunkData positionChunk =
                     GameTileMap.Tilemap.GetChunkDataByIndex(targetChunkIndex.x, playerChunkIndex.y  - range);
-                Debug.Log(positionChunk.GetPosition());
                 GameTileMap.Tilemap.MoveSelectedCharacter(positionChunk.GetPosition(), new Vector3(0, 0.5f, 1), target.GetCurrentPlayerInformation().gameObject);
             }
         }
@@ -66,7 +60,6 @@ public class ThrowBehind : BaseAction
             {
                 ChunkData positionChunk =
                     GameTileMap.Tilemap.GetChunkDataByIndex(targetChunkIndex.x, playerChunkIndex.y  + range);
-                Debug.Log(target.GetCurrentPlayerInformation());
                 GameTileMap.Tilemap.MoveSelectedCharacter(positionChunk.GetPosition(), new Vector3(0, 0.5f, 1), target.GetCurrentPlayerInformation().gameObject);
             }
         }

@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class LongShot : BaseAction
@@ -8,9 +5,8 @@ public class LongShot : BaseAction
     //public int minAttackDamage = 5;
     //public int maxAttackDamage = 7;
 
-    void Start()
+    private void Start()
     {
-        actionStateName = "LongShot";
         isAbilitySlow = false;
     }
 
@@ -56,29 +52,18 @@ public class LongShot : BaseAction
                         ChunkData chunk = chunksArray[targetX, targetY];
                         if (chunk != null && !chunk.TileIsLocked())
                         {
-                            _chunkList.Add(chunk);
                             HighlightGridTile(chunk);
-                            //chunk.EnableTileRenderingGameObject();
-                            //chunk.EnableTileRendering();
                         }
                     }
                 }
             }
         }
     }
-
     public override void CreateGrid()
     {
         ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         CreateGrid(startChunk, AttackRange);
     }
-
-    public override void OnTurnStart()
-    {
-        base.OnTurnStart();
-        
-    }
-    
     public override void OnTileHover(GameObject tile)
     {
         EnableDamagePreview(tile, MergedTileList, minAttackDamage, maxAttackDamage);

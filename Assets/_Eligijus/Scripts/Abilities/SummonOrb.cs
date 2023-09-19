@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +6,7 @@ public class SummonOrb : BaseAction
     [SerializeField] private GameObject orbPrefab;
     private PlayerInformation _orbInformation;
     private ChunkData _orbChunkData;
-    private List<ChunkData> attackList;
+    private List<ChunkData> _attackList;
     public override void ResolveAbility(Vector3 position)
     {
         base.ResolveAbility(position);
@@ -37,20 +35,20 @@ public class SummonOrb : BaseAction
             _orbChunkData.SetCurrentCharacter(null, null);
             _orbChunkData = null;
             Destroy(_orbInformation.gameObject);
-            for (int i = 0; i < attackList.Count; i++)
+            foreach (var t in _attackList)
             {
                 int randomDamage = UnityEngine.Random.Range(minAttackDamage, maxAttackDamage);
                 bool crit = IsItCriticalStrike(ref randomDamage);
-                DealDamage(attackList[i], randomDamage, crit);
+                DealDamage(t, randomDamage, crit);
             }
-            attackList.Clear();
+            _attackList.Clear();
         }
     }
 
     public void GenerateAttackGrid(ChunkData centerChunk)
     {
         (int centerX, int centerY) = centerChunk.GetIndexes();
-        attackList = new List<ChunkData>();
+        _attackList = new List<ChunkData>();
         int startRadius = 1;
         for (int range = 0; range < AttackRange; range++)
         {
@@ -69,7 +67,7 @@ public class SummonOrb : BaseAction
                     ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(topLeftCornerX + i, topLeftCornerY);
                     _chunkList.Add(chunkData);
                     HighlightGridTile(chunkData);
-                    attackList.Add(chunkData);
+                    _attackList.Add(chunkData);
                 }
 
                 if (GameTileMap.Tilemap.CheckBounds(bottomRightCornerX - i, bottomRightCornerY))
@@ -78,7 +76,7 @@ public class SummonOrb : BaseAction
                         GameTileMap.Tilemap.GetChunkDataByIndex(bottomRightCornerX - i, bottomRightCornerY);
                     _chunkList.Add(chunkData);
                     HighlightGridTile(chunkData);
-                    attackList.Add(chunkData);
+                    _attackList.Add(chunkData);
                 }
 
                 if (GameTileMap.Tilemap.CheckBounds(topLeftCornerX, topLeftCornerY + i))
@@ -86,7 +84,7 @@ public class SummonOrb : BaseAction
                     ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(topLeftCornerX, topLeftCornerY + i);
                     _chunkList.Add(chunkData);
                     HighlightGridTile(chunkData);
-                    attackList.Add(chunkData);
+                    _attackList.Add(chunkData);
                 }
 
                 if (GameTileMap.Tilemap.CheckBounds(bottomRightCornerX, bottomRightCornerY - i))
@@ -95,7 +93,7 @@ public class SummonOrb : BaseAction
                         GameTileMap.Tilemap.GetChunkDataByIndex(bottomRightCornerX, bottomRightCornerY - i);
                     _chunkList.Add(chunkData);
                     HighlightGridTile(chunkData);
-                    attackList.Add(chunkData);
+                    _attackList.Add(chunkData);
                 }
             }
         }

@@ -1,9 +1,8 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BlockAbility : BaseAction
 {
-    private GameObject characterBeingBlocked;
+    private GameObject _characterBeingBlocked;
     
     void Start()
     {
@@ -53,15 +52,15 @@ public class BlockAbility : BaseAction
     }
     public override void OnTurnStart()
     {
-        if (characterBeingBlocked != null)
+        if (_characterBeingBlocked != null)
         {
             if (DoesCharacterHaveBlessing("Sense of safety"))
             {
                 int randomHeal = Random.Range(3, 5);
                 bool crit = IsItCriticalStrike(ref randomHeal);
-                characterBeingBlocked.GetComponent<PlayerInformation>().Heal(randomHeal, crit);
+                _characterBeingBlocked.GetComponent<PlayerInformation>().Heal(randomHeal, crit);
             }
-            characterBeingBlocked.GetComponent<PlayerInformation>().BlockingAlly = null;
+            _characterBeingBlocked.GetComponent<PlayerInformation>().BlockingAlly = null;
             //transform.Find("CharacterModel").GetComponent<Animator>().SetBool("block", false);
             GetComponent<PlayerInformation>().Blocker = false;
         }
@@ -76,7 +75,7 @@ public class BlockAbility : BaseAction
         PlayerInformation playerInformationLocal = chunk.GetCurrentPlayerInformation();
         if(playerInformationLocal!=null)
             playerInformationLocal.BlockingAlly = GameTileMap.Tilemap.GetCurrentCharacter();
-        characterBeingBlocked = chunk.GetCurrentCharacter();
+        _characterBeingBlocked = chunk.GetCurrentCharacter();
         GetComponent<PlayerInformation>().Blocker = true;
         FinishAbility();
     }
