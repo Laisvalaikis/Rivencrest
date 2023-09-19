@@ -1,12 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerAttack : BaseAction
 {
 
-    void Start()
+    private void Start()
     {
         actionStateName = "Attack";
         AttackAbility = true;
@@ -14,21 +11,24 @@ public class PlayerAttack : BaseAction
 
     public override void ResolveAbility(Vector3 position)
     {
-        base.ResolveAbility(position);
-        ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
-        DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
-        Debug.LogError("FIX FINISH ABILITY");
-        FinishAbility();
+        if (CanTileBeClicked(position))
+        {
+            base.ResolveAbility(position);
+            ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
+            DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
+            Debug.LogError("FIX FINISH ABILITY");
+            FinishAbility();
+        }
     }
 
-    public bool canTileBeClicked(GameObject tile)
+    protected override bool CanTileBeClicked(Vector3 position)
     {
-        if ((CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(tile, 0, 0, blockingLayer, "Wall"))
-            && !IsAllegianceSame(tile.transform.position) && !GetComponent<PlayerInformation>().CantAttackCondition)
+        if ((CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(position, 0, 0, blockingLayer, "Wall"))
+            && IsAllegianceSame(position) && !GetComponent<PlayerInformation>().CantAttackCondition)
         {
             return true;
         }
-        else return false;
+        return false;
     }
     public override void OnTileHover(GameObject tile)
     {

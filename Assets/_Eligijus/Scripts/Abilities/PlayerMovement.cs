@@ -25,10 +25,10 @@ public class PlayerMovement : BaseAction
         AttackAbility = true;
         _gameTileMap = GameTileMap.Tilemap;
         _chunkArray = _gameTileMap.GetChunksArray();
-        blockingLayer = LayerMask.GetMask("BlockingLayer");
-        groundLayer = LayerMask.GetMask("Ground");
-        fogLayer = LayerMask.GetMask("Fog");
-        whiteFieldLayer = LayerMask.GetMask("WhiteField");
+        // blockingLayer = LayerMask.GetMask("BlockingLayer");
+        // groundLayer = LayerMask.GetMask("Ground");
+        // fogLayer = LayerMask.GetMask("Fog");
+        // whiteFieldLayer = LayerMask.GetMask("WhiteField");
         //boardManager = GameObject.Find("GameManager(Clone)").GetComponent<BoardManager>();
         transform.position = new Vector3(transform.position.x, transform.position.y, -1f);
     }

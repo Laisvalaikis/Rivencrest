@@ -15,7 +15,6 @@ public class ChillingGust : BaseAction
 
     void Start()
     {
-        actionStateName = "ChillingGust";
         isAbilitySlow = false;
     }
 

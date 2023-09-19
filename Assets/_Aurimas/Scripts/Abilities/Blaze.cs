@@ -5,10 +5,6 @@ using UnityEngine;
 public class Blaze : BaseAction
 {
     public int bonusDamage = 4;
-    void Start()
-    {
-        actionStateName = "Blaze";
-    }
 
     public override void ResolveAbility(Vector3 position)
     {
@@ -28,16 +24,6 @@ public class Blaze : BaseAction
             //grizti prie aflame veliau
         }
     }
-
-    public override void OnTileHover(GameObject tile)
-    {
-        
-    }
-    public override void OffTileHover(GameObject tile)
-    {
-        DisablePreview(tile);
-    }
-
     public void TriggerAflame(ChunkData centerChunk, int radius)//pakeisti ji i public override void veliau jei kels problemu
     {
         if (centerChunk != null && centerChunk.GetCurrentPlayerInformation().Aflame != null &&

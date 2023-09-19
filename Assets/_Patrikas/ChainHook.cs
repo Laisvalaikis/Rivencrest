@@ -9,15 +9,13 @@ public class ChainHook : BaseAction
     //private string actionStateName = "ChainHook";
     //public int minAttackDamage = 0;
     //public int maxAttackDamage = 1;
-    private bool grapplingHook = false;
-    private bool canTileBeHovered = true;
     
     void Start()
     {
-        AttackHighlight = new Color32(0x7B,0x9C,0xB2,0xFF);
-        AttackHoverCharacter = new Color32(0x67, 0x88, 0x9E, 0xFF);
+        AttackHighlight = new Color32(123,156, 178,255);
+        AttackHighlightHover = new Color32(103, 136, 158, 255);
+        CharacterOnGrid = new Color32(146, 212, 255, 255);
         laserGrid = true;
-        actionStateName = "ChainHook";
         isAbilitySlow = false;
     }
 
@@ -37,14 +35,12 @@ public class ChainHook : BaseAction
                 (centerX + i, centerY, 2),  // Right
                 (centerX - i, centerY, 3)   // Left
             };
-
             foreach (var (x, y, direction) in positions)
             {
                 if (!canExtend[direction])
                 {
                     continue;
                 }
-
                 if (x >= 0 && x < chunksArray.GetLength(0) && y >= 0 && y < chunksArray.GetLength(1))
                 {
                     ChunkData chunk = chunksArray[x, y];
@@ -55,9 +51,7 @@ public class ChainHook : BaseAction
                             canExtend[direction] = false;
                             continue;
                         }
-
                         HighlightGridTile(chunk);
-
                         if (chunk.GetCurrentCharacter() != null)
                         {
                             canExtend[direction] = false;
@@ -107,7 +101,7 @@ public class ChainHook : BaseAction
     private int GetMultiplier(Vector3 position)
     {
         Vector3 vector3 = position - transform.position;
-        int multiplier = Mathf.Abs((int)vector3.x + (int)vector3.y) - 1;//gal dar prireiks, o gal ziurek kitiem spellam taip padarysi ¯\_(ツ)_/¯
+        int multiplier = Mathf.Abs((int)vector3.x + (int)vector3.y) - 1;
         return multiplier;
     }
     private ChunkData TileToPullTo(ChunkData chunk)
@@ -131,9 +125,8 @@ public class ChainHook : BaseAction
         return targetChunk;
     }
 
-    private ChunkData tileToPullTo;
-    private Sprite characterSprite;
-    private SpriteRenderer characterSpriteRenderer; 
+    private ChunkData _tileToPullTo;
+    private SpriteRenderer _characterSpriteRenderer; 
     
     public override void OnMoveHover(ChunkData hoveredChunk, ChunkData previousChunk)
 {
@@ -156,17 +149,17 @@ public class ChainHook : BaseAction
 
     if (hoveredChunkHighlight.isHighlighted)
     {
-        SetHoveredChunkHighlight(hoveredChunk, hoveredChunkHighlight, currentCharacter, currentPlayerInfo);
+        SetHoveredChunkHighlight(hoveredChunk, currentPlayerInfo);
     }
 
     if (previousChunkHighlight != null)
     {
-        if (tileToPullTo != null && currentCharacter == null)
+        if (_tileToPullTo != null && currentCharacter == null)
         {
-            tileToPullTo.GetTileHighlight().TogglePreviewSprite(false);
-            if(characterSpriteRenderer != null)
+            _tileToPullTo.GetTileHighlight().TogglePreviewSprite(false);
+            if(_characterSpriteRenderer != null)
             {
-                characterSpriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+                _characterSpriteRenderer.color = new Color(1f, 1f, 1f, 1f);
             }
         }
         previousChunkHighlight.SetHighlightColor(AttackHighlight);
@@ -175,38 +168,31 @@ public class ChainHook : BaseAction
 
 private void ResetCharacterSpriteRendererAndTilePreview()
 {
-    if (tileToPullTo != null)
+    if (_tileToPullTo != null)
     {
-        if (characterSpriteRenderer != null)
+        if (_characterSpriteRenderer != null)
         {
-            characterSpriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+            _characterSpriteRenderer.color = new Color(1f, 1f, 1f, 1f);
         }
-        tileToPullTo.GetTileHighlight().TogglePreviewSprite(false);
+        _tileToPullTo.GetTileHighlight().TogglePreviewSprite(false);
     }
 }
 
-private void SetHoveredChunkHighlight(ChunkData hoveredChunk, HighlightTile hoveredChunkHighlight, GameObject currentCharacter, PlayerInformation currentPlayerInfo)
+private void SetHoveredChunkHighlight(ChunkData hoveredChunk, PlayerInformation currentPlayerInfo)
 {
-    if (currentCharacter == null)
+    SetHoveredAttackColor(hoveredChunk);
+    if (currentPlayerInfo != null)
     {
-        hoveredChunkHighlight.SetHighlightColor(AttackHoverCharacter);
-    }
-    else
-    {
-        hoveredChunkHighlight.SetHighlightColor(AttackHighlightHover);
-
-        if (currentPlayerInfo != null)
-        {
-            characterSprite = currentPlayerInfo.playerInformationData.characterSprite;
-            tileToPullTo = TileToPullTo(hoveredChunk);
-            HighlightTile tileToPullToHighlight = tileToPullTo.GetTileHighlight();
-            tileToPullToHighlight.TogglePreviewSprite(true);
-            tileToPullToHighlight.SetPreviewSprite(characterSprite);
-            characterSpriteRenderer = currentPlayerInfo.spriteRenderer;
-            characterSpriteRenderer.color = new Color(1f, 1f, 1f, 0.5f);
-        }
+        Sprite characterSprite = currentPlayerInfo.playerInformationData.characterSprite;
+        _tileToPullTo = TileToPullTo(hoveredChunk);
+        HighlightTile tileToPullToHighlight = _tileToPullTo.GetTileHighlight();
+        tileToPullToHighlight.TogglePreviewSprite(true);
+        tileToPullToHighlight.SetPreviewSprite(characterSprite);
+        _characterSpriteRenderer = currentPlayerInfo.spriteRenderer;
+        _characterSpriteRenderer.color = new Color(1f, 1f, 1f, 0.5f);
     }
 }
+
 
 
 

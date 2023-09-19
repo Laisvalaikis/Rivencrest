@@ -7,11 +7,10 @@ public class Avalanche : BaseAction
     private PlayerInformation _playerInformation;
     void Start()
     {
-        actionStateName = "Avalanche";
-        AttackHighlight = new Color32();
-
+        AttackHighlight = new Color32(123,156, 178,255);
+        AttackHighlightHover = new Color32(103, 136, 158, 255);
+        CharacterOnGrid = new Color32(146, 212, 255, 255);
     }
-
     public override void ResolveAbility(Vector3 position)
     {
         if (CanTileBeClicked(position))
@@ -24,13 +23,11 @@ public class Avalanche : BaseAction
                     ChunkData target = GetSpecificGroundTile(chunk.GetPosition());
                     DealRandomDamageToTarget(target,minAttackDamage,maxAttackDamage);
                     // _playerInformation.ApplyDebuff("IceSlow");
-                    
                 }
             }
             FinishAbility();
         }
     }
-
     protected override bool CanTileBeClicked(Vector3 position)
     {
         ChunkData chunkData = GetSpecificGroundTile(position);
@@ -40,20 +37,8 @@ public class Avalanche : BaseAction
         {
             return true;
         }
-
         return false;
     }
-
-    public override void OnTileHover(GameObject tile)
-    {
-        EnableDamagePreview(tile,minAttackDamage,maxAttackDamage);
-    }
-
-    public override void OffTileHover(GameObject tile)
-    {
-        DisablePreview(tile,MergedTileList);
-    }
-
     private bool IsCharacterAffectedByCrowdControl(Vector3 position)
     {
         if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player"))

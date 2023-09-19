@@ -7,8 +7,39 @@ public class BlockAbility : BaseAction
     
     void Start()
     {
-        actionStateName = "Block";
+        AttackHighlight = new Color32(123,156, 178,255);
+        AttackHighlightHover = new Color32(103, 136, 158, 255);
+        CharacterOnGrid = new Color32(146, 212, 255, 255);
         isAbilitySlow = false;
+    }
+    
+    protected override void SetNonHoveredAttackColor(ChunkData chunkData)
+    {
+        GameObject character = chunkData.GetCurrentCharacter();
+        HighlightTile tileHighlight = chunkData.GetTileHighlight();
+        if (character != null && IsAllegianceSame(chunkData.GetPosition()))
+        {
+            tileHighlight.SetHighlightColor(CharacterOnGrid);
+        }
+        else
+        {
+            tileHighlight.SetHighlightColor(AttackHighlight);
+        }
+    }
+    
+    protected override void SetHoveredAttackColor(ChunkData chunkData)
+    {
+        GameObject character = chunkData.GetCurrentCharacter();
+        HighlightTile tileHighlight = chunkData.GetTileHighlight();
+
+        if (character != null && IsAllegianceSame(chunkData.GetPosition()))
+        {
+            tileHighlight.SetHighlightColor(AttackHoverCharacter);
+        }
+        else
+        {
+            tileHighlight.SetHighlightColor(AttackHighlightHover);
+        }
     }
     
     protected override void HighlightGridTile(ChunkData chunkData)
@@ -16,6 +47,7 @@ public class BlockAbility : BaseAction
         if(chunkData.GetCurrentCharacter()!=GameTileMap.Tilemap.GetCurrentCharacter())
         {
             chunkData.GetTileHighlight().ActivateColorGridTile(true);
+            SetNonHoveredAttackColor(chunkData);
             _chunkList.Add(chunkData);
         }
     }
@@ -41,9 +73,9 @@ public class BlockAbility : BaseAction
         //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spellToBool");
         //transform.Find("CharacterModel").GetComponent<Animator>().SetBool("block", true);
         ChunkData chunk = GameTileMap.Tilemap.GetChunk(position);
-        PlayerInformation playerInformation = chunk.GetCurrentPlayerInformation();
-        if(playerInformation!=null)
-            playerInformation.BlockingAlly = GameTileMap.Tilemap.GetCurrentCharacter();
+        PlayerInformation playerInformationLocal = chunk.GetCurrentPlayerInformation();
+        if(playerInformationLocal!=null)
+            playerInformationLocal.BlockingAlly = GameTileMap.Tilemap.GetCurrentCharacter();
         characterBeingBlocked = chunk.GetCurrentCharacter();
         GetComponent<PlayerInformation>().Blocker = true;
         FinishAbility();

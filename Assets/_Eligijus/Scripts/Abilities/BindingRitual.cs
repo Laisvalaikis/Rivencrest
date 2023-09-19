@@ -6,20 +6,15 @@ public class BindingRitual : BaseAction
 {
     public override void ResolveAbility(Vector3 position)
     {
-        // if (CanTileBeClicked(position))
-        // {
-        foreach (ChunkData tile in ReturnGeneratedChunks())
-        {
-            DealRandomDamageToTarget(tile, minAttackDamage, maxAttackDamage);
-        }
-        
-        base.ResolveAbility(position);
-            
-            
-            
-            FinishAbility();
-        // }
-        
+         if (CanTileBeClicked(position))
+         {
+             foreach (ChunkData tile in ReturnGeneratedChunks())
+             {
+                 DealRandomDamageToTarget(tile, minAttackDamage, maxAttackDamage);
+             }
+             base.ResolveAbility(position);
+             FinishAbility();
+         }
     }
 
     public override void OnMoveHover(ChunkData hoveredChunk, ChunkData previousChunk)
@@ -32,7 +27,7 @@ public class BindingRitual : BaseAction
                 HighlightTile highlightTile = chunk.GetTileHighlight();
                 if (highlightTile != null)
                 {
-                    highlightTile.SetHighlightColor(Color.magenta);
+                    SetHoveredAttackColor(chunk);
                 }
             }
         }
@@ -43,7 +38,7 @@ public class BindingRitual : BaseAction
                 HighlightTile highlightTile = chunk.GetTileHighlight();
                 if (highlightTile != null)
                 {
-                    highlightTile.SetHighlightColor(Color.green);
+                    SetNonHoveredAttackColor(chunk);
                 }
             }
         }
@@ -69,10 +64,7 @@ public class BindingRitual : BaseAction
                         ChunkData chunk = chunksArray[targetX, targetY];
                         if (chunk != null && !chunk.TileIsLocked())
                         {
-                            _chunkList.Add(chunk);
                             HighlightGridTile(chunk);
-                            //chunk.EnableTileRenderingGameObject();
-                            //chunk.EnableTileRendering();
                         }
                     }
                 }
@@ -83,14 +75,5 @@ public class BindingRitual : BaseAction
     {
         ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         CreateGrid(startChunk, AttackRange);
-    }
-    
-    public override void OnTileHover(GameObject tile)
-    {
-        EnableDamagePreview(tile, MergedTileList, minAttackDamage, maxAttackDamage);
-    }
-    public override void OffTileHover(GameObject tile)
-    {
-        DisablePreview(tile, MergedTileList);
-    }
+    } 
 }

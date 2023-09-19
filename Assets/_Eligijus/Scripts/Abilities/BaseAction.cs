@@ -83,13 +83,13 @@ using Random = UnityEngine.Random;
             }
         }
 
-        private void SetNonHoveredAttackColor(ChunkData chunkData)
+        protected virtual void SetNonHoveredAttackColor(ChunkData chunkData)
         {
             chunkData.GetTileHighlight()
                 .SetHighlightColor(chunkData.GetCurrentCharacter() == null ? AttackHighlight : CharacterOnGrid);
         }
 
-        private void SetHoveredAttackColor(ChunkData chunkData)
+        protected virtual void SetHoveredAttackColor(ChunkData chunkData)
         {
             chunkData.GetTileHighlight().SetHighlightColor(chunkData.GetCurrentCharacter() == null
                 ? AttackHighlightHover
@@ -368,17 +368,16 @@ using Random = UnityEngine.Random;
                 DisablePreview(tileInList);
             }
         }
-        protected virtual bool CanTileBeClicked(Vector3 position)//ar veiks ability
+        protected virtual bool CanTileBeClicked(Vector3 position)
         {
             if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") && !IsAllegianceSame(position))
             {
                 return true;
             }
-
             return false;
         }
 
-        protected bool CanPreviewBeShown(Vector3 position)//ar rodys preview
+        protected bool CanPreviewBeShown(Vector3 position)
         {
             return CanTileBeClicked(position) && (!(CheckIfSpecificLayer(position, 0, 0, blockingLayer) && IsAllegianceSame(position)) || friendlyFire);
         }
@@ -497,15 +496,14 @@ using Random = UnityEngine.Random;
         protected bool IsAllegianceSame(Vector3 position)
         {
             ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
-            if (chunkData != null && chunkData.GetCurrentPlayerInformation().GetPlayerTeam() != playerInformation.GetPlayerTeam() || friendlyFire)
-            {
-                return true;
-            }
-            else
+            if (chunkData != null && chunkData.GetCurrentPlayerInformation().GetPlayerTeam() != playerInformation.GetPlayerTeam() && friendlyFire)
             {
                 return false;
             }
-
+            else
+            {
+                return true;
+            }
             // var playerTeams = gameInformation.GetComponent<PlayerTeams>();
             // return playerTeams.FindTeamAllegiance(GameTileMap.Tilemap.GetChunk(position).GetCurrentCharacter().GetComponent<PlayerInformation>().CharactersTeam)
             //     == playerTeams.FindTeamAllegiance(GetComponent<PlayerInformation>().CharactersTeam);

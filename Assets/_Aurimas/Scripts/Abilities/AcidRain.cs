@@ -5,11 +5,6 @@ using UnityEngine;
 public class AcidRain : BaseAction
 {
     private List<Poison> _poisons;
-    void Start()
-    {
-        actionStateName = "AcidRain";
-    }
-
     public override void ResolveAbility(Vector3 position)
     {
         if (CanTileBeClicked(position))
@@ -26,34 +21,20 @@ public class AcidRain : BaseAction
             FinishAbility();
         }
     }
-
     public override void OnTurnStart()
     {
         base.OnTurnStart();
         PoisonPlayer();
     }
-
     private void PoisonPlayer()
     {
-        foreach (Poison x in _poisons)
+        foreach (Poison poison in _poisons)
         {
-            if (x.poisonValue > 0 && x.chunk.GetCurrentPlayerInformation().GetHealth() > 0)
+            if (poison.poisonValue > 0 && poison.chunk.GetCurrentPlayerInformation().GetHealth() > 0)
             {
-                DealDamage(x.chunk, x.poisonValue, false);
+                DealDamage(poison.chunk, poison.poisonValue, false);
             }
-            x.turnsLeft--;
+            poison.turnsLeft--;
         }
-        
     }
-
-    public override void OnTileHover(GameObject tile)
-    {
-        EnableDamagePreview(tile,minAttackDamage,maxAttackDamage);
-    }
-
-    public override void OffTileHover(GameObject tile)
-    {
-        DisablePreview(tile,MergedTileList);
-    }
-    
 }
