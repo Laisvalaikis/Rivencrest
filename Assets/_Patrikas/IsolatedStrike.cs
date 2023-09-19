@@ -7,15 +7,7 @@ public class IsolatedStrike : BaseAction
     //public int minAttackDamage = 4;
     //public int maxAttackDamage = 8;
     private int isolationDamage = 7;
-
-
-    //private List<List<GameObject>> AvailableTiles = new List<List<GameObject>>();
-
-    void Start()
-    {
-        // AttackAbility = true;
-    }
-
+    
     public override void ResolveAbility(Vector3 position)
     {
         base.ResolveAbility(position);

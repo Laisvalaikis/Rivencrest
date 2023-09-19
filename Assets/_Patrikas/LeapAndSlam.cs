@@ -21,7 +21,6 @@ public class LeapAndSlam : BaseAction
         }
         DamageAdjacent(chunk);
         FinishAbility();
-        
     }
     private void DamageAdjacent(ChunkData centerChunk)
     {

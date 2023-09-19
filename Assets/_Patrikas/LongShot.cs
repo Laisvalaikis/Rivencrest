@@ -8,6 +8,9 @@ public class LongShot : BaseAction
     private void Start()
     {
         isAbilitySlow = false;
+        AttackHighlight = new Color32(123,156, 178,255);
+        AttackHighlightHover = new Color32(103, 136, 158, 255);
+        CharacterOnGrid = new Color32(146, 212, 255, 255);
     }
 
     public override void ResolveAbility(Vector3 position)
