@@ -26427,7 +26427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9135b103de81e7847a2f9fc8e99f70e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTeams: {fileID: 0}
+  playerTeams: {fileID: 1649360792}
 --- !u!114 &1649439766 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7951617091095849851, guid: 775b520c392047849bf430022cd49424, type: 3}
