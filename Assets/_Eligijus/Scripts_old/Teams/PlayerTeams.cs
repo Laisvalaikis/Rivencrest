@@ -3,7 +3,17 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
+public class UsedAbility
+{
+    public BaseAction Ability { get; set; }
+    public ChunkData Chunk { get; set; }
 
+    public UsedAbility(BaseAction ability, ChunkData chunk)
+    {
+        Ability = ability;
+        Chunk = chunk;
+    }
+}
 public class PlayerTeams : MonoBehaviour
 {
     private GameInformation gameInformation;
@@ -26,10 +36,10 @@ public class PlayerTeams : MonoBehaviour
         _data = Data.Instance;
         // mapSetup.SetupAMap();
         currentCharacters = new TeamsList();
-        currentCharacters.teams = new List<CharacterList>();
+        currentCharacters.teams = new List<Team>();
         for (int i = 0; i < allCharacterList.teams.Count; i++)
         {
-            currentCharacters.teams.Add(new CharacterList());
+            currentCharacters.teams.Add(new Team());
             currentCharacters.teams[i].characters = new List<GameObject>();
             currentCharacters.teams[i].aliveCharacters = new List<GameObject>();
             currentCharacters.teams[i].aliveCharactersPlayerInformation = new List<PlayerInformation>();
@@ -59,7 +69,7 @@ public class PlayerTeams : MonoBehaviour
         //     allCharacterList.teams[teamIndex].teamFlagPoint.transform.Find("FlagPoint").GetComponent<FlagPoint>().team = allCharacterList.teams[teamIndex].teamName;
         // }
         // allCharacterList.teams[teamIndex].teamPortraitBoxGameObject = portraitTeamBox.gameObject;
-        //
+        
         int i = 0;
         foreach (var x in spawnCoordinates)
         {
@@ -71,8 +81,8 @@ public class PlayerTeams : MonoBehaviour
                 GameTileMap.Tilemap.SetCharacter(spawnedCharacter.transform.position + new Vector3(0, 0.5f, 0), spawnedCharacter, playerInformation);
                 currentCharacters.teams[teamIndex].characters.Add(spawnedCharacter);
                 currentCharacters.teams[teamIndex].aliveCharacters.Add(spawnedCharacter);
-                currentCharacters.teams[teamIndex].aliveCharactersPlayerInformation.Add(playerInformation);
-                //         if(allCharacterList.teams[teamIndex].isTeamAI)
+                currentCharacters.teams[teamIndex].aliveCharactersPlayerInformation.Add(playerInformation); 
+                // if(allCharacterList.teams[teamIndex].isTeamAI)
         //         {
         //             int points = 2 * (_data.townData.selectedEncounter.encounterLevel - 1);
         //             spawnedCharacter.GetComponent<PlayerInformation>().MaxHealth += points;
@@ -98,7 +108,6 @@ public class PlayerTeams : MonoBehaviour
         //             spawnedCharacter.GetComponent<PlayerInformation>().Respawn = true;
         //         }
                 
-                Debug.Log("Cia kazkas daroma su ui corner");
             }
             i++;
         }
@@ -272,12 +281,13 @@ public class PlayerTeams : MonoBehaviour
     }
 }
 [System.Serializable]
-public class CharacterList
+public class Team
 {
     public List<GameObject> characters;
     public List<GameObject> aliveCharacters;
     public List<PlayerInformation> aliveCharactersPlayerInformation;
     public List<Vector3> coordinates;
+    public List<UsedAbility> usedAbilities = new List<UsedAbility>();
     public string teamName;
     public string teamAllegiance;
     public GameObject teamFlag;
@@ -293,5 +303,5 @@ public class CharacterList
 [System.Serializable]
 public class TeamsList
 {
-    public List<CharacterList> teams;
+    public List<Team> teams;
 }

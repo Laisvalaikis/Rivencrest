@@ -30,7 +30,7 @@ public class ChainHook : BaseAction
                 (centerX, centerY + i, 0),  // Up
                 (centerX, centerY - i, 1),  // Down
                 (centerX + i, centerY, 2),  // Right
-                (centerX - i, centerY, 3)   // Left
+                 (centerX - i, centerY, 3)   // Left
             };
             foreach (var (x, y, direction) in positions)
             {

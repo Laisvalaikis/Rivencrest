@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class PlayerMovement : BaseAction
 {
-    private LayerMask blockingLayer;
+    /*private LayerMask blockingLayer;
     private LayerMask groundLayer;
     private LayerMask fogLayer;
-    private LayerMask whiteFieldLayer;
+    private LayerMask whiteFieldLayer;*/
     private bool isFacingRight = true;
     private GameTileMap _gameTileMap;
 
@@ -89,7 +89,6 @@ public class PlayerMovement : BaseAction
         FinishAbility();
         CreateGrid();
     }
-    
     
     public override void OnTileClick(Vector3 mousePosition)
     {

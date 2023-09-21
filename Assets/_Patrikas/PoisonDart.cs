@@ -9,8 +9,6 @@ public class PoisonDart : BaseAction
     //public int minAttackDamage = 5;
     //public int maxAttackDamage = 7;
 
-
-
     void Start()
     {
         isAbilitySlow = false;

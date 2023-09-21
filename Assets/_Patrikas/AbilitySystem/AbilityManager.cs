@@ -14,6 +14,7 @@ public class AbilityManager : MonoBehaviour
     private ChunkData _previousChunk;
     private List<ChunkData> _path;
     private List<ChunkData> _lastPath;
+    [SerializeField] private TurnManager _turnManager;
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -67,6 +68,7 @@ public class AbilityManager : MonoBehaviour
             {
                 _currentAbility.ResolveAbility(chunk.GetPosition());
                 _currentAbility.OnTileClick(worldPos);
+                _turnManager.AddUsedAbility(new UsedAbility(_currentAbility, chunk));
             }
         }
     }

@@ -14,6 +14,10 @@ using Random = UnityEngine.Random;
         public int selectedEffectIndex;
         public int selectedSongIndex;
 
+        //Turn managing, ability lifetime
+        public int turnsSinceCast = 0;
+        public int turnLifetime = 1;
+        
         [Header("Base Action")] 
         [SerializeField] protected PlayerInformation playerInformation;
         protected LayerMask groundLayer;
@@ -391,7 +395,7 @@ using Random = UnityEngine.Random;
         public virtual void OnTurnEnd()
         {
             RefillActionPoints();
-            
+            turnsSinceCast++;
         }
         public virtual void RemoveActionPoints()//panaudojus action
         {
