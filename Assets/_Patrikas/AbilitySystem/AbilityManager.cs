@@ -44,7 +44,10 @@ public class AbilityManager : MonoBehaviour
         }
 
         _currentAbility = ability;
-        _currentAbility.CreateGrid();
+        if (_currentAbility != null)
+        {
+            _currentAbility.CreateGrid();
+        }
     }
     
     public bool IsAbilitySelected()
@@ -52,11 +55,15 @@ public class AbilityManager : MonoBehaviour
         return _currentAbility != null;
     }
 
-    public void DeselectAbility()
+    public bool CanAbilityBeUsedOnTile(Vector3 position)
     {
-        _currentAbility = null;
+        return _currentAbility.IsPositionInGrid(position);
     }
 
+    public bool IsMovementSelected()
+    {
+        return _currentAbility.GetType() == typeof(PlayerMovement);
+    }
     private void ExecuteCurrentAbility()
     {
         if (_currentAbility != null)
@@ -67,7 +74,7 @@ public class AbilityManager : MonoBehaviour
             if (chunk != null)
             {
                 _currentAbility.ResolveAbility(chunk.GetPosition());
-                _currentAbility.OnTileClick(worldPos);
+                //_currentAbility.OnTileClick(worldPos);
                 _turnManager.AddUsedAbility(new UsedAbility(_currentAbility, chunk));
             }
         }

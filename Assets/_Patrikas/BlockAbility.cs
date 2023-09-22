@@ -51,7 +51,7 @@ public class BlockAbility : BaseAction
         }
     }
 
-    protected override bool CanTileBeClicked(Vector3 position)
+    public override bool CanTileBeClicked(Vector3 position)
     {
         return IsAllegianceSame(position);
     }

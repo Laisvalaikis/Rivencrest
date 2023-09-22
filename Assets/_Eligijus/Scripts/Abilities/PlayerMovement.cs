@@ -89,6 +89,11 @@ public class PlayerMovement : BaseAction
         FinishAbility();
         CreateGrid();
     }
+
+    protected override void FinishAbility()
+    {
+        
+    }
     
     public override void OnTileClick(Vector3 mousePosition)
     {

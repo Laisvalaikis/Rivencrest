@@ -28,7 +28,8 @@ public class Avalanche : BaseAction
             FinishAbility();
         }
     }
-    protected override bool CanTileBeClicked(Vector3 position)
+
+    public override bool CanTileBeClicked(Vector3 position)
     {
         ChunkData chunkData = GetSpecificGroundTile(position);
         if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") &&

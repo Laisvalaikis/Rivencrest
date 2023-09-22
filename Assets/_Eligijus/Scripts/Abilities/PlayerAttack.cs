@@ -20,10 +20,10 @@ public class PlayerAttack : BaseAction
         }
     }
 
-    protected override bool CanTileBeClicked(Vector3 position)
+    public override bool CanTileBeClicked(Vector3 position)
     {
-        if ((CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(position, 0, 0, blockingLayer, "Wall"))
-            && IsAllegianceSame(position) && !GetComponent<PlayerInformation>().CantAttackCondition)
+        if (((CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(position, 0, 0, blockingLayer, "Wall"))
+            && IsAllegianceSame(position) && !GetComponent<PlayerInformation>().CantAttackCondition) || friendlyFire)
         {
             return true;
         }

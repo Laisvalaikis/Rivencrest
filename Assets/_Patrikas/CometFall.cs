@@ -41,7 +41,8 @@ public class CometFall : BaseAction
         }
         FinishAbility();
     }
-    protected override bool CanTileBeClicked(Vector3 position)
+
+    public override bool CanTileBeClicked(Vector3 position)
     {
         return CheckIfSpecificLayer(position, 0, 0, groundLayer);
     }

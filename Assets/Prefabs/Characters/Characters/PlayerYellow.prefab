@@ -13,17 +13,12 @@ GameObject:
   - component: {fileID: 659955980883675729}
   - component: {fileID: 2605390308202641148}
   - component: {fileID: 1310519675225487401}
-  - component: {fileID: 7282709673297147284}
-  - component: {fileID: 3087791199313970238}
   - component: {fileID: 6890059959884175614}
   - component: {fileID: 711100996200367084}
   - component: {fileID: 4438398929298113651}
   - component: {fileID: 2884985102919791894}
-  - component: {fileID: 2334094635143570867}
-  - component: {fileID: 2414806895057592137}
-  - component: {fileID: 7045168203618151218}
-  - component: {fileID: 6478114668365422160}
   - component: {fileID: -3447649680494458082}
+  - component: {fileID: 2174163203634438675}
   m_Layer: 8
   m_Name: PlayerYellow
   m_TagString: Player
@@ -136,7 +131,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763e3691d60f39f48a88a9e4187954f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCenter: {x: 0, y: 0.5, z: 0}
+  selectedEffectIndex: 0
+  selectedSongIndex: 0
+  turnsSinceCast: 0
+  turnLifetime: 1
+  playerInformation: {fileID: 0}
+  laserGrid: 0
+  spawnedCharacter: {fileID: 0}
+  AttackRange: 1
+  AbilityCooldown: 1
+  minAttackDamage: 0
+  maxAttackDamage: 0
+  isAbilitySlow: 1
+  friendlyFire: 0
+  AttackAbility: 0
+  AvailableAttacks: 1
+  AbilityPoints: 0
+  isDisabled: 0
 --- !u!114 &1310519675225487401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1abe98737ff8546bdcc88828c38a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   playerInformationData: {fileID: 11400000, guid: 1ea2d92d43ab44875a1a05ec42599bd5, type: 2}
   savedCharacter:
     level: 0
@@ -164,25 +176,18 @@ MonoBehaviour:
     characterIndex: 0
     playerInformation: {fileID: 0}
     prefab: {fileID: 0}
-  gameInformation: {fileID: 0}
   spriteRenderer: {fileID: 0}
   animator: {fileID: 0}
   health: 100
   CharactersTeam: Default
   TeamManager: {fileID: 0}
   FlagInHand: {fileID: 0}
-  currentState: Movement
-  AnimationState: Movement
-  isCurrentStateAvailable: 0
-  StateAnimations: 0
   role: TANK
-  _data: {fileID: 0}
   Blocker: 0
   BlockingAlly: {fileID: 0}
   BarrierProvider: {fileID: 0}
   Marker: {fileID: 0}
   PinkWeakSpot: {fileID: 0}
-  Stun: 0
   Slow1: 0
   Slow2: 0
   Slow3: 0
@@ -192,93 +197,13 @@ MonoBehaviour:
   Aflame: {fileID: 0}
   Danger: 0
   IsCreatingWhiteField: 0
-  MindControlTarget: {fileID: 0}
   VisionGameObject: {fileID: 0}
   CantAttackCondition: 0
-  Disarmed: 0
-  cornerPortraitBoxInGame: {fileID: 0}
-  Caged: 0
   Protected: 0
-  MistShield: 0
   Stasis: 0
-  wasThisCharacterSpawned: 0
   enabledAbilitiesEnemy: []
-  Respawn: 0
   XPToGain: 0
   isThisObject: 0
-  PoisonSpecialColor: 0
-  PinkWeakSpotSpecialColor: 1
-  ProtectedSpecialColor: 2
---- !u!114 &7282709673297147284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5e8ea6dfe66da4fb5b6999ba9f19bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityBackground: {fileID: 137914692109764441, guid: f12fdd45e276893438b8ce4098f754cb, type: 3}
-  ActionScripts:
-  - action: {fileID: 6890059959884175614}
-    actionName: Attack
-    AbilityIcon: {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    AbilityIndex: -1
-  - action: {fileID: 2334094635143570867}
-    actionName: Block
-    AbilityIcon: {fileID: -5985996694945948397, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    AbilityIndex: 0
-  - action: {fileID: 2414806895057592137}
-    actionName: SwordPush
-    AbilityIcon: {fileID: -5980061746933909041, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    AbilityIndex: 1
-  - action: {fileID: 7045168203618151218}
-    actionName: HealingSight
-    AbilityIcon: {fileID: 4905056183124483771, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    AbilityIndex: 2
-  - action: {fileID: 6478114668365422160}
-    actionName: DisarmingSlam
-    AbilityIcon: {fileID: 4693665290838367390, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    AbilityIndex: 3
-  hasSlowAbilityBeenCast: 0
---- !u!114 &3087791199313970238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d94be52245746e9438ecf5c3b0c05488, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedEffectIndex: 0
-  selectedSongIndex: 0
-  actionStateName: 
-  AttackRange: 1
-  AbilityCooldown: 1
-  minAttackDamage: 0
-  maxAttackDamage: 0
-  isAbilitySlow: 1
-  friendlyFire: 0
-  AttackAbility: 0
-  AvailableAttacks: 1
-  AbilityPoints: 0
-  isDisabled: 0
-  spawnedCharacter: {fileID: 0}
-  MovementPoints: 3
-  AvailableMovementPoints: 0
-  IceSlow: 0
-  OilSlow: 0
-  Stun: 0
-  currentlyRemovedMovementPoints: 0
-  officiallyRemovedMovementPoints: 0
-  WayTilesList: []
-  PreferredWayTile: {fileID: 0}
 --- !u!114 &6890059959884175614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,7 +218,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedEffectIndex: 0
   selectedSongIndex: 0
-  actionStateName: Attack
+  turnsSinceCast: 0
+  turnLifetime: 1
+  playerInformation: {fileID: 0}
+  laserGrid: 0
+  spawnedCharacter: {fileID: 0}
   AttackRange: 1
   AbilityCooldown: 1
   minAttackDamage: 4
@@ -304,8 +233,6 @@ MonoBehaviour:
   AvailableAttacks: 1
   AbilityPoints: 0
   isDisabled: 0
-  spawnedCharacter: {fileID: 0}
-  impactVFXName: 
 --- !u!114 &711100996200367084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,120 +305,9 @@ MonoBehaviour:
   fogLayer:
     serializedVersion: 2
     m_Bits: 2048
-  gridMovement: {fileID: 0}
   playerInformation: {fileID: 0}
   playerMovement: {fileID: 0}
-  actionManager: {fileID: 0}
-  DestinationObject: {x: 0, y: 0, z: 0}
   _data: {fileID: 0}
---- !u!114 &2334094635143570867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21ffc451ebd3c4f4eaeca98bba86fb94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedEffectIndex: 0
-  selectedSongIndex: 0
-  actionStateName: Block
-  AttackRange: 1
-  AbilityCooldown: 2
-  minAttackDamage: 0
-  maxAttackDamage: 0
-  isAbilitySlow: 0
-  friendlyFire: 0
-  AttackAbility: 0
-  AvailableAttacks: 1
-  AbilityPoints: 0
-  isDisabled: 0
-  spawnedCharacter: {fileID: 0}
---- !u!114 &2414806895057592137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b398d0c2dab81034ab2cc5f9f4394da4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedEffectIndex: 0
-  selectedSongIndex: 0
-  actionStateName: SwordPush
-  AttackRange: 3
-  AbilityCooldown: 3
-  minAttackDamage: 0
-  maxAttackDamage: 0
-  isAbilitySlow: 1
-  friendlyFire: 0
-  AttackAbility: 0
-  AvailableAttacks: 1
-  AbilityPoints: 0
-  isDisabled: 0
-  spawnedCharacter: {fileID: 0}
-  pushDamage: 3
-  centerDamage: 5
---- !u!114 &7045168203618151218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cc90363ec6375a4589779bec90865fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedEffectIndex: 0
-  selectedSongIndex: 0
-  actionStateName: HealingSight
-  AttackRange: 1
-  AbilityCooldown: 3
-  minAttackDamage: 0
-  maxAttackDamage: 0
-  isAbilitySlow: 0
-  friendlyFire: 0
-  AttackAbility: 0
-  AvailableAttacks: 1
-  AbilityPoints: 0
-  isDisabled: 0
-  spawnedCharacter: {fileID: 0}
-  minHealAmount: 3
-  maxHealAmount: 7
---- !u!114 &6478114668365422160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3e418db61d9a3649b18db1da0f47d92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedEffectIndex: 0
-  selectedSongIndex: 0
-  actionStateName: DisarmingSlam
-  AttackRange: 2
-  AbilityCooldown: 3
-  minAttackDamage: 2
-  maxAttackDamage: 5
-  isAbilitySlow: 1
-  friendlyFire: 0
-  AttackAbility: 0
-  AvailableAttacks: 1
-  AbilityPoints: 0
-  isDisabled: 0
-  spawnedCharacter: {fileID: 0}
 --- !u!114 &-3447649680494458082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,19 +332,38 @@ MonoBehaviour:
   - abilityText: {fileID: 11400000, guid: 3b8b5c77a2b51c444916b96f3ad170a2, type: 2}
     enabled: 1
     AbilityImage: {fileID: -5985996694945948397, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 2334094635143570867}
-  - abilityText: {fileID: 11400000, guid: 5aac8ec6563e8214e9d7f8f5322df44b, type: 2}
-    enabled: 1
-    AbilityImage: {fileID: -5980061746933909041, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 2414806895057592137}
-  - abilityText: {fileID: 11400000, guid: 0c9fda63736a55541bb4344dd910c603, type: 2}
-    enabled: 1
-    AbilityImage: {fileID: 4905056183124483771, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 7045168203618151218}
-  - abilityText: {fileID: 11400000, guid: 468e548c073c1824a813f0b08b55b423, type: 2}
-    enabled: 1
-    AbilityImage: {fileID: 4693665290838367390, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 6478114668365422160}
+    Action: {fileID: 2174163203634438675}
+  availableAttackPoints: 0
+  availableMovementPoints: 0
+--- !u!114 &2174163203634438675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659955980883675694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f719db42f204bac4d8757974d7438ef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedEffectIndex: 0
+  selectedSongIndex: 0
+  turnsSinceCast: 0
+  turnLifetime: 1
+  playerInformation: {fileID: 0}
+  laserGrid: 0
+  spawnedCharacter: {fileID: 0}
+  AttackRange: 1
+  AbilityCooldown: 1
+  minAttackDamage: 0
+  maxAttackDamage: 0
+  isAbilitySlow: 1
+  friendlyFire: 0
+  AttackAbility: 0
+  AvailableAttacks: 1
+  AbilityPoints: 0
+  isDisabled: 0
 --- !u!1 &659955981309584225
 GameObject:
   m_ObjectHideFlags: 0

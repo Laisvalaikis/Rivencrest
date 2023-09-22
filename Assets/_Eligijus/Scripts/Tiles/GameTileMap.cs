@@ -380,7 +380,6 @@ public class GameTileMap : MonoBehaviour
             ChunkData chunkData = GetChunk(mousePosition);
             return chunkData.GetCurrentCharacter() != null;
         }
-
         return false;
     }
     
@@ -486,8 +485,8 @@ public class GameTileMap : MonoBehaviour
         {
             _currentSelectedCharacter = null;
             _currentPlayerInformation = null;
-            // abilityManager.DeselectAbility();
             _selectAction.gameObject.SetActive(false);
+            abilityManager.SetCurrentAbility(null);
         }
     }
 
@@ -574,15 +573,20 @@ public class GameTileMap : MonoBehaviour
         _mousePosition = Input.mousePosition;
         Vector3 mousePos = new Vector3(_mousePosition.x, _mousePosition.y, mainCamera.nearClipPlane);
         Vector3 worldPos = mainCamera.ScreenToWorldPoint(mousePos);
-        if (!CharacterIsSelected())
+        ChunkData chunk = GetChunk(worldPos);
+        if (!CharacterIsSelected()) // no character selected
         {
             SelectTile(worldPos);
         }
-        else if (CharacterIsSelected() && OtherCharacterIsOnTile(worldPos) && !abilityManager.IsAbilitySelected()) //fix in future so that you can attack enemies instead of selecting them
+        else if (CharacterIsSelected() && OtherCharacterIsOnTile(worldPos) && abilityManager.IsMovementSelected()) //Clicling on a different character when you have movement ability selected
         {
             SelectTile(worldPos);
         }
-        else if(CharacterIsSelected() && CharacterIsOnTile(worldPos))
+        else if(CharacterIsSelected() && OtherCharacterIsOnTile(worldPos) && !abilityManager.CanAbilityBeUsedOnTile(worldPos)) //Clicked on character that is outside of ability grid to select it
+        {
+            SelectTile(worldPos);
+        }
+        else if(CharacterIsSelected() && chunk!=null && GetCurrentCharacter()==chunk.GetCurrentCharacter()) // Clicking on currently selected character to deselect it
         {
             DeselectCurrentCharacter();
         }

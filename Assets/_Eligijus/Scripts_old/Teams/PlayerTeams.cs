@@ -34,6 +34,11 @@ public class PlayerTeams : MonoBehaviour
     void Start()
     {
         _data = Data.Instance;
+        allCharacterList.teams[0].characters.Clear();
+        for (int i = 0; i < _data.Characters.Count; i++)
+        {
+            allCharacterList.teams[0].characters.Add(_data.Characters[i].prefab);
+        }
         // mapSetup.SetupAMap();
         currentCharacters = new TeamsList();
         currentCharacters.teams = new List<Team>();
@@ -62,14 +67,6 @@ public class PlayerTeams : MonoBehaviour
         colorManager.SetPortraitBoxSprites(portraitTeamBox.gameObject, allCharacterList.teams[teamIndex].teamName);// priskiria spalvas mygtukams ir paciam portraitboxui
         //Portrait box color
         //portraitBox.GetComponent<Image>().sprite = allCharacterList.teams[teamIndex].teamPortraitBoxSprite;
-        // if (allCharacterList.teams[teamIndex].teamFlag != null)
-        // {
-        //     allCharacterList.teams[teamIndex].teamFlag.GetComponent<SpriteRenderer>().sprite = allCharacterList.teams[teamIndex].teamFlagSprite;
-        //     allCharacterList.teams[teamIndex].teamFlag.transform.Find("FlagCollider").GetComponent<Flag>().FlagsTeam = allCharacterList.teams[teamIndex].teamName;
-        //     allCharacterList.teams[teamIndex].teamFlagPoint.transform.Find("FlagPoint").GetComponent<FlagPoint>().team = allCharacterList.teams[teamIndex].teamName;
-        // }
-        // allCharacterList.teams[teamIndex].teamPortraitBoxGameObject = portraitTeamBox.gameObject;
-        
         int i = 0;
         foreach (var x in spawnCoordinates)
         {

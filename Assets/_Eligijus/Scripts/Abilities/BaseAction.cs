@@ -79,6 +79,11 @@ using Random = UnityEngine.Random;
             }
         }
 
+        public bool IsPositionInGrid(Vector3 position)
+        {
+            return _chunkList.Contains(GameTileMap.Tilemap.GetChunk(position));
+        }
+        
         protected virtual void SetNonHoveredAttackColor(ChunkData chunkData)
         {
             chunkData.GetTileHighlight()
@@ -364,7 +369,7 @@ using Random = UnityEngine.Random;
                 DisablePreview(tileInList);
             }
         }
-        protected virtual bool CanTileBeClicked(Vector3 position)
+        public virtual bool CanTileBeClicked(Vector3 position)
         {
             if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") && !IsAllegianceSame(position))
             {
@@ -412,6 +417,7 @@ using Random = UnityEngine.Random;
             base.ResolveAbility(position);
             _assignSound.PlaySound(selectedEffectIndex, selectedSongIndex);
             Debug.LogWarning("PlaySound");
+            //GameTileMap.Tilemap.DeselectCurrentCharacter();
             ClearGrid();
         }
         protected virtual void FinishAbility()
@@ -429,6 +435,7 @@ using Random = UnityEngine.Random;
             {
                 //DisableGrid();
             }
+            GameTileMap.Tilemap.DeselectCurrentCharacter();
         }
         
         public GameObject GetSpecificGroundTile(GameObject tile, int x, int y, LayerMask chosenLayer)
