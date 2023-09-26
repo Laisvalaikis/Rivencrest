@@ -60,7 +60,6 @@ public class ChunkData
             _tileSpriteRenderer.gameObject.SetActive(false);
         }
     }
-
     public void EnableTileRendering()
     {
         if (!_tileIsLocked)
@@ -68,7 +67,6 @@ public class ChunkData
             _tileSpriteRenderer.enabled = true;
         }
     }
-    
     public void DisableTileRendering()
     {
         if (!_tileIsLocked)
@@ -76,7 +74,6 @@ public class ChunkData
             _tileSpriteRenderer.enabled = true;
         }
     }
-    
     public void EnableTileRenderingGameObject()
     {
         if (!_tileIsLocked)
@@ -84,7 +81,6 @@ public class ChunkData
             _tileSpriteRenderer.gameObject.SetActive(true);
         }
     }
-    
     public void DisableTileRenderingGameObject()
     {
         if (!_tileIsLocked)
@@ -92,22 +88,18 @@ public class ChunkData
             _tileSpriteRenderer.gameObject.SetActive(false);
         }
     }
-
     public Vector3 GetPosition()
     {
         return new(_positionWidth, _positionHeight, 0);
     }
-    
     public Vector3 GetChunkCenterPosition()
     {
         return new(_positionWidth, _positionHeight - _height/2, -0.1f);
     }
-
     public Vector3 GetDimensions()
     {
         return new(_width,_height, 1f);
     }
-
     public SpriteRenderer GetTileSpriteRenderer()
     {
         return _tileSpriteRenderer;
@@ -130,96 +122,75 @@ public class ChunkData
         {
             _type = InformationType.None;
         }
-
-        
     }
-
-    public InformationType GetInformationType()
-    {
-        return _type;
-    }
-
     public void SetCurrentCharacter(GameObject gameObject)
     {
         _currentCharacter = gameObject;
     }
-
+    public InformationType GetInformationType()
+    {
+        return _type;
+    }
     public GameObject GetCurrentCharacter()
     {
         return _currentCharacter;
     }
-
     public bool CharacterIsOnTile()
     {
         return _currentCharacter != null;
     }
-
     public PlayerInformation GetCurrentPlayerInformation()
     {
         return _currentPlayerInformation;
     }
-
     public void StandingOnChunk(bool standingOnChunk)
     {
         _standingOnChunk = standingOnChunk;
     }
-    
-
     public bool TileIsLocked()
     {
         return _tileIsLocked;
     }
-
     public void SetTileIsLocked(bool tileIsLocked)
     {
         _tileIsLocked = tileIsLocked;
     }
-
     public bool CanUseTile()
     {
         return _canUseTile;
     }
-
     public bool IsStandingOnChunk()
     {
         return _standingOnChunk;
     }
-
     public bool WeightWasUpdated()
     {
         return _weightUpdated;
     }
-
     public void InsertData()
     {
         _dataWasInserted = true;
     }
-
     public bool DataWasInserted()
     {
         return _dataWasInserted;
     }
-
     public float GetWeight()
     {
         return _weight;
     }
-    
     public int GetGeneratedIndex()
     {
         return _indexWidth+(_indexHeight * 19);
     }
-
     public (int,int) GetIndexes()
     {
         return (_indexHeight, _indexWidth);
     }
-
     public void SetHeapIndex(int index)
     {
         _heapIndex = index;
     }
-
     public int GetHeapIndex()
     {
         return _heapIndex;

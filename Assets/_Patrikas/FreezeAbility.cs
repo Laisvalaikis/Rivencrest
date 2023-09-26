@@ -11,7 +11,8 @@ public class FreezeAbility : BaseAction
         AttackHighlightHover = AttackHoverCharacter;
         CharacterOnGrid = new Color32(146, 212, 255, 255);
     }
-    protected override void CreateAvailableChunkList(int attackRange)
+
+    public override void CreateAvailableChunkList(int attackRange)
     {
         ChunkData centerChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         _chunkList.Clear();

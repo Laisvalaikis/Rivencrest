@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Serialization;
@@ -32,6 +33,10 @@ public class HighlightTile : MonoBehaviour
     [SerializeField] private Sprite bottomLeftCornerArrow;
     [SerializeField] private Sprite topRightCornerArrow;
     [SerializeField] private Sprite bottomRightCornerArrow;
+
+    [SerializeField] private SpriteRenderer skullSprite;
+    [SerializeField] private MeshRenderer damageTextRenderer;
+    [SerializeField] private TextMeshPro damageTextMeshPro;
     
     //public Sprite HoverSprite;
     //private Sprite OriginalSprite;
@@ -53,6 +58,20 @@ public class HighlightTile : MonoBehaviour
     private RaycastHit2D raycast;
     private LayerMask blockingLayer;
     private ColorManager colorManager;
+
+    public void ActivateDeathSkull(bool value)
+    {
+        skullSprite.enabled = value;
+    }
+    public void SetDamageText(string text)
+    {
+        damageTextRenderer.enabled = true;
+        damageTextMeshPro.text = text;
+    }
+    public void DisableDamageText()
+    {
+        damageTextRenderer.enabled = false;
+    }
     
     public void ActivateColorGridTile(bool value)
     {

@@ -9,8 +9,4 @@ public class PinkBarrier : BaseAction
        // GetSpecificGroundTile(position, 0, 0, blockingLayer).GetComponent<GridMovement>().AvailableMovementPoints++;
         FinishAbility();
     }
-    public override void OnTileHover(GameObject tile)
-    {
-        EnableDamagePreview(tile, minAttackDamage, maxAttackDamage);
-    }
 }

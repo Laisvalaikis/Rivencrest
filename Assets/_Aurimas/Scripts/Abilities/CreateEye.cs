@@ -19,7 +19,8 @@ public class CreateEye : BaseAction
        //isEyeActive = true;
        FinishAbility();
     }
-    protected override void CreateAvailableChunkList(int attackRange)
+
+    public override void CreateAvailableChunkList(int attackRange)
     {
         (int y, int x) coordinates = GameTileMap.Tilemap.GetChunk(transform.position).GetIndexes();
         ChunkData[,] chunkDataArray = GameTileMap.Tilemap.GetChunksArray();

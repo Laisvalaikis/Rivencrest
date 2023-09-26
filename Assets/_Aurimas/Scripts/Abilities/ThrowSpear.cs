@@ -6,7 +6,7 @@ public class ThrowSpear : BaseAction
     [SerializeField] private GameObject spearPrefab;
     private bool laserGrid = true;
 
-    protected override void CreateAvailableChunkList(int attackRange)
+    public override void CreateAvailableChunkList(int attackRange)
     {
         ChunkData centerChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         (_, int centerY) = centerChunk.GetIndexes();

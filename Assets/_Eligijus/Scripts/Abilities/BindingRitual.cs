@@ -6,7 +6,7 @@ public class BindingRitual : BaseAction
     {
          if (CanTileBeClicked(position))
          {
-             foreach (ChunkData tile in ReturnGeneratedChunks())
+             foreach (ChunkData tile in GetChunkList())
              {
                  DealRandomDamageToTarget(tile, minAttackDamage, maxAttackDamage);
              }
@@ -41,8 +41,8 @@ public class BindingRitual : BaseAction
             }
         }
     }
-    
-    protected override void CreateAvailableChunkList(int attackRange)
+
+    public override void CreateAvailableChunkList(int attackRange)
     {
         ChunkData centerChunk =  GameTileMap.Tilemap.GetChunk(transform.position);
         (int centerX, int centerY) = centerChunk.GetIndexes();

@@ -10,9 +10,4 @@ public class Entangle : BaseAction
         chunkData.GetCurrentPlayerInformation().ApplyDebuff("CantMove");
         FinishAbility();
     }
-    public override void OnTileHover(GameObject tile)
-    {
-        EnableDamagePreview(tile, minAttackDamage, maxAttackDamage);
-    }
-    
 }

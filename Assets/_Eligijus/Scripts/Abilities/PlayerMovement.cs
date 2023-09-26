@@ -30,6 +30,10 @@ public class PlayerMovement : BaseAction
         transform.position = new Vector3(transform.position.x, transform.position.y, -1f);
     }
 
+    protected override void EnableDamagePreview(ChunkData chunk, string customText=null)
+    {
+        
+    }
     public override void OnMoveArrows(ChunkData hoveredChunk, ChunkData previousChunk)
     {
         if (hoveredChunk==null || !hoveredChunk.GetTileHighlight().isHighlighted)

@@ -9,8 +9,4 @@ public class DisarmingBlast : BaseAction   //jei cia tik A.I ability gal ir nere
         DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
         FinishAbility();
     }
-    public override void OnTileHover(GameObject tile)
-    {
-        EnableDamagePreview(tile, minAttackDamage, maxAttackDamage);
-    }
 }

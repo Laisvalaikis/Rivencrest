@@ -77,7 +77,7 @@ public class Volley : BaseAction
         }
     }
 
-    protected override void CreateAvailableChunkList(int radius)
+    public override void CreateAvailableChunkList(int radius)
     {
         ChunkData centerChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         (int centerX, int centerY) = centerChunk.GetIndexes();

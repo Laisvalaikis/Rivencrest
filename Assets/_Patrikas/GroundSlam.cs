@@ -62,18 +62,18 @@ public class GroundSlam : BaseAction
             }
         }
     }
-    public override void EnableDamagePreview(GameObject tile, List<GameObject> tileList, int minAttackDamage, int maxAttackDamage = -1)
-    {
-        foreach(GameObject tileInList in tileList)
-        {
-            if(tileInList != GetSpecificGroundTile(gameObject, 0, 0, groundLayer))
-            {
-                EnableDamagePreview(tileInList, minAttackDamage, maxAttackDamage);
-            }
-            else
-            {
-                EnableTextPreview(tileInList, "");
-            }
-        }
-    }
+    // public override void EnableDamagePreview(GameObject tile, List<GameObject> tileList, int minAttackDamage, int maxAttackDamage = -1)
+    // {
+    //     foreach(GameObject tileInList in tileList)
+    //     {
+    //         if(tileInList != GetSpecificGroundTile(gameObject, 0, 0, groundLayer))
+    //         {
+    //             EnableDamagePreview(tileInList, minAttackDamage, maxAttackDamage);
+    //         }
+    //         else
+    //         {
+    //             EnableTextPreview(tileInList, "");
+    //         }
+    //     }
+    // }
 }

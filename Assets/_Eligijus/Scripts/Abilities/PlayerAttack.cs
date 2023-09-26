@@ -29,10 +29,6 @@ public class PlayerAttack : BaseAction
         }
         return false;
     }
-    public override void OnTileHover(GameObject tile)
-    {
-        EnableDamagePreview(tile, minAttackDamage, maxAttackDamage);
-    }
     
     public override void BuffAbility()
     {

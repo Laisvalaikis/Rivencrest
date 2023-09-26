@@ -74,8 +74,8 @@ public class FrontSlash : BaseAction
             }
         }
     }
-    
-    protected override void CreateAvailableChunkList(int attackRange)
+
+    public override void CreateAvailableChunkList(int attackRange)
     {
         ChunkData centerChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         (int centerX, int centerY) = centerChunk.GetIndexes();

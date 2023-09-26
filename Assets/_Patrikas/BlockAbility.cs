@@ -12,6 +12,7 @@ public class BlockAbility : BaseAction
         isAbilitySlow = false;
     }
     
+    //might be bullshit now
     protected override void SetNonHoveredAttackColor(ChunkData chunkData)
     {
         GameObject character = chunkData.GetCurrentCharacter();
@@ -87,10 +88,10 @@ public class BlockAbility : BaseAction
         }
     }
 
-    public override void OnTileHover(GameObject tile)
-    {
-        EnableTextPreview(tile, "BLOCK");
-    }
+    // public override void OnTileHover(GameObject tile)
+    // {
+    //     EnableTextPreview(tile, "BLOCK");
+    // }
     
     public override void BuffAbility()
     {

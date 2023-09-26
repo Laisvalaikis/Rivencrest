@@ -17,7 +17,8 @@ public class Execute : BaseAction
         }
         FinishAbility();
     }
-    protected override void CreateAvailableChunkList(int radius)
+
+    public override void CreateAvailableChunkList(int radius)
     {
         ChunkData centerChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         (int centerX, int centerY) = centerChunk.GetIndexes();

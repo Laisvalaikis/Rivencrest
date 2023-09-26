@@ -6,7 +6,7 @@ public class CyroFreeze : BaseAction
    private PlayerInformation _playerInformation;
    private bool _isAbilityActive = false;
 
-   protected override void CreateAvailableChunkList(int attackRange)
+   public override void CreateAvailableChunkList(int attackRange)
    {
       base.CreateAvailableChunkList(attackRange);
       _chunkList.Add(GameTileMap.Tilemap.GetChunk(transform.position));
@@ -26,7 +26,7 @@ public class CyroFreeze : BaseAction
             };
             foreach (var x in pushDirectionVectors)
             {
-               if (CheckIfSpecificTag(gameObject, x.Item1, x.Item2, blockingLayer, "Player"))
+               if (CheckIfSpecificTag(transform.position, x.Item1, x.Item2, blockingLayer, "Player"))
                {
                   ChunkData chunkData = GameTileMap.Tilemap.GetChunk(transform.position);
                   if (IsAllegianceSame(chunkData.GetPosition()))
