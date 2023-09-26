@@ -19,10 +19,10 @@ public class SpearPulse : BaseAction
     
     public override void CreateGrid()
     {
-        ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         if (_currentChunk != null && _currentChunk.CharacterIsOnTile())
         {
-            CreateGrid(startChunk, AttackRange);
+            CreateAvailableChunkList(AttackRange);
+            HighlightAllGridTiles();
         }
     }
     

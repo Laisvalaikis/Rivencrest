@@ -43,7 +43,7 @@ public class PowerShot : BaseAction
                             canExtend[direction] = false;
                             continue;
                         }
-                        HighlightGridTile(chunk);
+                        _chunkList.Add(chunk);
                         if (chunk.GetCurrentCharacter() != null)
                         {
                             canExtend[direction] = false;

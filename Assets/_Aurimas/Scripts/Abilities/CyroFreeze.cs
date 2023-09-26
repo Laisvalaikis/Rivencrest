@@ -6,18 +6,11 @@ public class CyroFreeze : BaseAction
    private PlayerInformation _playerInformation;
    private bool _isAbilityActive = false;
 
-   public override void CreateGrid(ChunkData centerChunk, int radius)
+   protected override void CreateAvailableChunkList(int attackRange)
    {
-      _chunkList.Clear();
-      _chunkList.Add(centerChunk);
-      HighlightGridTile(centerChunk);
+      base.CreateAvailableChunkList(attackRange);
+      _chunkList.Add(GameTileMap.Tilemap.GetChunk(transform.position));
    }
-   public override void CreateGrid()
-   {
-      ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
-      CreateGrid(startChunk, AttackRange);
-   }
-
    public override void OnTurnStart()
    {
       if (_isAbilityActive && (GetComponent<PlayerInformation>().health > 0))

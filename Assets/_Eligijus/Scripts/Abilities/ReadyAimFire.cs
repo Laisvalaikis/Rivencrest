@@ -42,8 +42,9 @@ public class ReadyAimFire : BaseAction
         }
         return index;
     }
-    public override void CreateGrid(ChunkData centerChunk, int radius)
+    public override void CreateGrid()
     {
+        ChunkData centerChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         (int centerX, int centerY) = centerChunk.GetIndexes();
         _chunkList.Clear();
         int count = AttackRange; // -2
@@ -56,28 +57,24 @@ public class ReadyAimFire : BaseAction
             {
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(centerX + i + start, centerY);
                 _chunkList.Add(chunkData);
-                HighlightGridTile(chunkData);
                 _chunkArray[0, i] = chunkData;
             }
             if (GameTileMap.Tilemap.CheckBounds(centerX - i - start, centerY))
             {
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(centerX-i - start, centerY);
                 _chunkList.Add(chunkData);
-                HighlightGridTile(chunkData);
                 _chunkArray[1, i] = chunkData;
             }
             if (GameTileMap.Tilemap.CheckBounds(centerX, centerY + i + start))
             {
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(centerX, centerY + i + start);
                 _chunkList.Add(chunkData);
-                HighlightGridTile(chunkData);
                 _chunkArray[2, i] = chunkData;
             }
             if (GameTileMap.Tilemap.CheckBounds(centerX, centerY - i - start))
             {
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(centerX, centerY - i - start);
                 _chunkList.Add(chunkData);
-                HighlightGridTile(chunkData);
                 _chunkArray[3, i] = chunkData;
             }
         }

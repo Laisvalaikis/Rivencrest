@@ -17,6 +17,11 @@ public class TurnManager : MonoBehaviour
         }
     }
 
+    bool IsGameOver()
+    {
+        return false;
+    }
+
     private void ExecuteAllAbilitiesOnTurnEnd(Team team)
     {
         List<UsedAbility> usedAbilities = team.usedAbilities;
@@ -34,6 +39,11 @@ public class TurnManager : MonoBehaviour
     public void AddUsedAbility(UsedAbility usedAbility)
     {
         _currentTeam.usedAbilities.Add(usedAbility);
+    }
+    
+    public Team GetCurrentTeam()
+    {
+        return _currentTeam;
     }
     
     private void ExecuteAllAbilitiesOnTurnStart(Team team)

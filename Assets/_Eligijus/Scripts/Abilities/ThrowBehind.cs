@@ -70,11 +70,6 @@ public class ThrowBehind : BaseAction
         _side = Side.none;
         base.FinishAbility();
     }
-
-    public override void OnTurnEnd()
-    {
-        base.OnTurnEnd();
-    }
     
     public override void OnTileHover(GameObject tile)
     {

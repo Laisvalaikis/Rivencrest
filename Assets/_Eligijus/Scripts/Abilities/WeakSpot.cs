@@ -9,12 +9,6 @@ public class WeakSpot : BaseAction
         DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
         FinishAbility();
     }
-    
-    public override void OnTurnEnd()
-    {
-        base.OnTurnEnd();
-    }
-    
     public override void OnTileHover(GameObject tile)
     {
         EnableDamagePreview(tile, minAttackDamage, maxAttackDamage);

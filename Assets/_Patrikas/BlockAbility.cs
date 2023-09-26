@@ -47,7 +47,6 @@ public class BlockAbility : BaseAction
         {
             chunkData.GetTileHighlight().ActivateColorGridTile(true);
             SetNonHoveredAttackColor(chunkData);
-            _chunkList.Add(chunkData);
         }
     }
 

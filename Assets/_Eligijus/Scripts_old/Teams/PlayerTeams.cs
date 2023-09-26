@@ -16,6 +16,7 @@ public class UsedAbility
 }
 public class PlayerTeams : MonoBehaviour
 {
+    [SerializeField] private TurnManager TurnManager;
     private GameInformation gameInformation;
     private GameProgress gameProgress;
     public TeamInformation portraitTeamBox;
@@ -25,23 +26,36 @@ public class PlayerTeams : MonoBehaviour
     public int undoCount = 2;
     public List<GameObject> otherCharacters = new List<GameObject>();
     public bool isGameOver;
-    public HelpTable helpTable;
     public ButtonManager characterUiButtonManager;
-    public MapSetup mapSetup;
     private TeamsList currentCharacters;
     [SerializeField] private ColorManager colorManager;
     private Data _data;
+    
     void Start()
+    {
+        InitializeCharacterLists();
+        SpawnAllCharacters();
+        if(gameInformation!=null)
+        {
+            gameProgress.SetSavedCharactersOnPrefabs();
+        }
+        isGameOver = false;
+    }
+    
+    
+    private void InitializeCharacterLists()
     {
         _data = Data.Instance;
         allCharacterList.teams[0].characters.Clear();
-        for (int i = 0; i < _data.Characters.Count; i++)
+        foreach (var t in _data.Characters)
         {
-            allCharacterList.teams[0].characters.Add(_data.Characters[i].prefab);
+            allCharacterList.teams[0].characters.Add(t.prefab);
         }
-        // mapSetup.SetupAMap();
-        currentCharacters = new TeamsList();
-        currentCharacters.teams = new List<Team>();
+        currentCharacters = new TeamsList { teams = new List<Team>() };
+    }
+    
+    private void SpawnAllCharacters()
+    {
         for (int i = 0; i < allCharacterList.teams.Count; i++)
         {
             currentCharacters.teams.Add(new Team());
@@ -50,23 +64,11 @@ public class PlayerTeams : MonoBehaviour
             currentCharacters.teams[i].aliveCharactersPlayerInformation = new List<PlayerInformation>();
             SpawnCharacters(i, allCharacterList.teams[i].coordinates);
         }
-        
-        //if (GameObject.Find("GameProgress") != null)
-        if(gameInformation!=null)
-        {
-            //GameObject.Find("GameProgress").GetComponent<GameProgress>().SetSavedCharactersOnPrefabs();
-            gameProgress.SetSavedCharactersOnPrefabs();
-        }
-        
-        isGameOver = false;
     }
     private void SpawnCharacters(int teamIndex, List<Vector3> coordinates)
     {
         var spawnCoordinates = coordinates;
-        // portraitTeamBox.teamIndex = teamIndex;
         colorManager.SetPortraitBoxSprites(portraitTeamBox.gameObject, allCharacterList.teams[teamIndex].teamName);// priskiria spalvas mygtukams ir paciam portraitboxui
-        //Portrait box color
-        //portraitBox.GetComponent<Image>().sprite = allCharacterList.teams[teamIndex].teamPortraitBoxSprite;
         int i = 0;
         foreach (var x in spawnCoordinates)
         {
@@ -78,33 +80,7 @@ public class PlayerTeams : MonoBehaviour
                 GameTileMap.Tilemap.SetCharacter(spawnedCharacter.transform.position + new Vector3(0, 0.5f, 0), spawnedCharacter, playerInformation);
                 currentCharacters.teams[teamIndex].characters.Add(spawnedCharacter);
                 currentCharacters.teams[teamIndex].aliveCharacters.Add(spawnedCharacter);
-                currentCharacters.teams[teamIndex].aliveCharactersPlayerInformation.Add(playerInformation); 
-                // if(allCharacterList.teams[teamIndex].isTeamAI)
-        //         {
-        //             int points = 2 * (_data.townData.selectedEncounter.encounterLevel - 1);
-        //             spawnedCharacter.GetComponent<PlayerInformation>().MaxHealth += points;
-        //             Debug.Log("Player " + spawnedCharacter.name + " received additional " + points + " points.");
-        //         }
-        //         
-        //         spawnedCharacter.GetComponent<PlayerInformation>()._data = _data;
-        //         spawnedCharacter.GetComponent<AIBehaviour>()._data = _data;
-        //         spawnedCharacter.GetComponent<PlayerInformation>().CharactersTeam = allCharacterList.teams[teamIndex].teamName; //Assigning the characters their team.
-        //         allCharacterList.teams[teamIndex].characters[i] = spawnedCharacter; //Turning prefabs into gameObjects on board.
-        //         if (!characterUiButtonManager.gameObject.activeInHierarchy)
-        //         {
-        //             characterUiButtonManager.gameObject.SetActive(true);
-        //         }
-        //         characterUiButtonManager.AddDataToActionButtons(helpTable);
-        //         characterUiButtonManager.CharacterOnBoard = allCharacterList.teams[teamIndex].characters[i];//Assigning character to its UI button manager
-        //         // characterUiButtonManager.GetComponent<BottomCornerUI>().characterUiData = spawnedCharacter.GetComponent<PlayerInformation>().characterUiData;
-        //         
-        //         characterUiButtonManager.GetComponent<BottomCornerUI>().EnableAbilities(spawnedCharacter.GetComponent<PlayerInformation>().savedCharacter);
-        //         spawnedCharacter.GetComponent<PlayerInformation>().cornerPortraitBoxInGame = characterUiButtonManager.gameObject;//Assigning UI button manager character to its character
-        //         if (allCharacterList.teams[teamIndex].isTeamAI)
-        //         {
-        //             spawnedCharacter.GetComponent<PlayerInformation>().Respawn = true;
-        //         }
-                
+                currentCharacters.teams[teamIndex].aliveCharactersPlayerInformation.Add(playerInformation);
             }
             i++;
         }
@@ -112,8 +88,6 @@ public class PlayerTeams : MonoBehaviour
         portraitTeamBox.ModifyList();
 
         allCharacterList.teams[teamIndex].lastSelectedPlayer = allCharacterList.teams[teamIndex].characters[0];//LastSelectedPlayer
-        //portraitBox.SetActive(false);
-        //dar veliavas reiketu paspawnint, bet pirma jas sutvarkyt.
     }
     public void  SpawnDefaultCharacter(GameObject character) //spawns cornerUI for character not in teams list
     {
@@ -121,40 +95,24 @@ public class PlayerTeams : MonoBehaviour
         {
             otherCharacters.Add(character);
         }
-        // GameObject cornerUIManager = Instantiate(character.GetComponent<PlayerInformation>().CornerUIManager, CornerUIManagerContainer); //Spawning cornerUI of each player.
-        // character.GetComponent<PlayerInformation>().CornerUIManager = cornerUIManager; //Turning prefabs into gameObjects in canvas.
-        characterUiButtonManager.CharacterOnBoard = character;//Assigning character to its UI button manager
-        Debug.Log("Cia kazkas daroma su Ui corner manager");
         AddCharacterToCurrentTeam(character);
     }
     public void AddCharacterToCurrentTeam(GameObject character)
     {
-        //int teamIndex = GetComponent<GameInformation>().activeTeamIndex;
+        Team currentTeam = TurnManager.GetCurrentTeam();
         int teamIndex = gameInformation.activeTeamIndex;
-        /*//Object
-        if (character.GetComponent<PlayerInformation>().isThisObject)
+        if (currentTeam.characters.Count < 8) 
         {
+            if (otherCharacters.Contains(character))
+            {
+                otherCharacters.Remove(character);
+            }
+            currentTeam.characters.Add(character);
             character.GetComponent<PlayerInformation>().CharactersTeam = allCharacterList.teams[teamIndex].teamName;
+            GameObject portraitBox = allCharacterList.teams[teamIndex].teamPortraitBoxGameObject;
+            portraitBox.GetComponent<TeamInformation>().ModifyList();
             character.GetComponent<PlayerInformation>().PlayerSetup();
             GetComponent<GameInformation>().ChangeVisionTiles();
-        }
-        //Character
-        else */
-        {
-            if (allCharacterList.teams[teamIndex].characters.Count < 8)
-            {
-                if (otherCharacters.Contains(character))
-                {
-                    otherCharacters.Remove(character);
-                }
-                int i = allCharacterList.teams[teamIndex].characters.Count;
-                allCharacterList.teams[teamIndex].characters.Add(character);
-                character.GetComponent<PlayerInformation>().CharactersTeam = allCharacterList.teams[teamIndex].teamName;
-                GameObject portraitBox = allCharacterList.teams[teamIndex].teamPortraitBoxGameObject;
-                portraitBox.GetComponent<TeamInformation>().ModifyList();
-                character.GetComponent<PlayerInformation>().PlayerSetup();
-                GetComponent<GameInformation>().ChangeVisionTiles();
-            }
         }
     }
     public bool IsGameOver()
@@ -201,20 +159,6 @@ public class PlayerTeams : MonoBehaviour
         }
         else return false;
     }
-    // public List<GameObject> AliveCharacterList(int teamIndex)
-    // {
-    //     List<GameObject> aliveCharacterList = new List<GameObject>();
-    //     for (int j = 0; j < allCharacterList.teams[teamIndex].characters.Count; j++)
-    //     {
-    //         if (allCharacterList.teams[teamIndex].characters[j].GetComponent<PlayerInformation>().health > 0)
-    //         {
-    //             aliveCharacterList.Add(allCharacterList.teams[teamIndex].characters[j]);
-    //         }
-    //     }
-    //     return currentCharacters.teams[teamIndex].characters;
-    // }
-    
-    
     public List<GameObject> AliveCharacterList(int teamIndex)
     {
         return currentCharacters.teams[teamIndex].aliveCharacters;
@@ -287,9 +231,6 @@ public class Team
     public List<UsedAbility> usedAbilities = new List<UsedAbility>();
     public string teamName;
     public string teamAllegiance;
-    public GameObject teamFlag;
-    public Sprite teamFlagSprite;
-    public GameObject teamFlagPoint;
     public bool isTeamAI;
     [HideInInspector] public int undoCount;
     [HideInInspector] public GameObject teamPortraitBoxGameObject;

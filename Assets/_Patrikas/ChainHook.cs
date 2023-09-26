@@ -48,7 +48,7 @@ public class ChainHook : BaseAction
                             canExtend[direction] = false;
                             continue;
                         }
-                        HighlightGridTile(chunk);
+                        _chunkList.Add(chunk);
                         if (chunk.GetCurrentCharacter() != null)
                         {
                             canExtend[direction] = false;
@@ -186,10 +186,6 @@ private void SetHoveredChunkHighlight(ChunkData hoveredChunk, PlayerInformation 
         _characterSpriteRenderer.color = new Color(1f, 1f, 1f, 0.5f);
     }
 }
-
-
-
-
     
     /*
     public override BaseAction GetBuffedAbility(List<Blessing> blessings)

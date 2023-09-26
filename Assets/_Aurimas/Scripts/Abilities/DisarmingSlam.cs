@@ -10,8 +10,9 @@ public class DisarmingSlam : BaseAction
         DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
         FinishAbility();
     }
-    public override void CreateGrid(ChunkData centerChunk, int radius)
+    protected override void CreateAvailableChunkList(int radius)
     {
+        ChunkData centerChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         (int centerX, int centerY) = centerChunk.GetIndexes();
         _chunkList.Clear();
         int count = AttackRange; 
@@ -25,38 +26,28 @@ public class DisarmingSlam : BaseAction
             {
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(centerX + i + start, centerY);
                 _chunkList.Add(chunkData);
-                HighlightGridTile(chunkData);
                 chunkArray[0, i] = chunkData;
             }
             if (GameTileMap.Tilemap.CheckBounds(centerX - i - start, centerY))
             {
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(centerX-i - start, centerY);
                 _chunkList.Add(chunkData);
-                HighlightGridTile(chunkData);
                 chunkArray[1, i] = chunkData;
             }
             if (GameTileMap.Tilemap.CheckBounds(centerX, centerY + i + start))
             {
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(centerX, centerY + i + start);
                 _chunkList.Add(chunkData);
-                HighlightGridTile(chunkData);
                 chunkArray[2, i] = chunkData;
             }
             if (GameTileMap.Tilemap.CheckBounds(centerX, centerY - i - start))
             {
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(centerX, centerY - i - start);
                 _chunkList.Add(chunkData);
-                HighlightGridTile(chunkData);
                 chunkArray[3, i] = chunkData;
             }
         }
 
-    }
-    
-    public override void CreateGrid()
-    {
-        ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
-        CreateGrid(startChunk, AttackRange);
     }
 
     public override void OnTileHover(GameObject tile)

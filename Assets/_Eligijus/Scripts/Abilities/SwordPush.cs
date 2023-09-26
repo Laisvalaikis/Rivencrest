@@ -25,7 +25,6 @@ public class SwordPush : BaseAction
                 DealDamage(_attackTiles[i], damage, crit);
                 _side = ChunkSideByCharacter(current, _attackTiles[i]);
                 int2 sideVector = GetSideVector(_side);
-                Debug.Log(sideVector);
                 MovePlayerToSide(_attackTiles[i], sideVector);
                 
             }
@@ -66,19 +65,11 @@ public class SwordPush : BaseAction
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(indexes.Item1, indexes.Item2);
                 if (chunkData.CharacterIsOnTile())
                 {
-                    Debug.Log("SMTH");
                     _attackTiles.Add(chunkData);
                 }
             }
         }
     }
-
-    public override void OnTurnStart()
-    {
-        base.OnTurnStart();
-        
-    }
-    
     public override void OnTileHover(GameObject tile)
     {
         EnableDamagePreview(tile, MergedTileList, minAttackDamage, maxAttackDamage);

@@ -7,7 +7,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(AssignSound))]
-    public abstract class BaseAction : CharacterAction
+    public abstract class BaseAction : MonoBehaviour
     {
         // audio effect indexes
         [Header("Sound Effect")]
@@ -68,28 +68,30 @@ using Random = UnityEngine.Random;
             whiteFieldLayer = LayerMask.GetMask("WhiteField");
             _assignSound = GetComponent<AssignSound>();
         }
-        
         protected virtual void HighlightGridTile(ChunkData chunkData)
         {
             if (chunkData.GetCurrentCharacter() != GameTileMap.Tilemap.GetCurrentCharacter())
             {
                 SetNonHoveredAttackColor(chunkData);
                 chunkData.GetTileHighlight().ActivateColorGridTile(true);
-                _chunkList.Add(chunkData);
             }
         }
-
+        protected void HighlightAllGridTiles()
+        {
+            foreach (var chunk in _chunkList)
+            {
+                HighlightGridTile(chunk);
+            }
+        }
         public bool IsPositionInGrid(Vector3 position)
         {
             return _chunkList.Contains(GameTileMap.Tilemap.GetChunk(position));
         }
-        
         protected virtual void SetNonHoveredAttackColor(ChunkData chunkData)
         {
             chunkData.GetTileHighlight()
                 .SetHighlightColor(chunkData.GetCurrentCharacter() == null ? AttackHighlight : CharacterOnGrid);
         }
-
         protected virtual void SetHoveredAttackColor(ChunkData chunkData)
         {
             chunkData.GetTileHighlight().SetHighlightColor(chunkData.GetCurrentCharacter() == null
@@ -125,16 +127,13 @@ using Random = UnityEngine.Random;
             }
         }
         
-        public override void CreateGrid(ChunkData chunkData, int radius)
+        public virtual void CreateGrid()
         {
-            CreateAvailableChunkList();
+            CreateAvailableChunkList(AttackRange);
+            HighlightAllGridTiles();
         }
         
-        public override void CreateGrid()
-        {
-            CreateAvailableChunkList();
-        }
-        public override void ClearGrid()
+        public void ClearGrid()
         {
             foreach (var chunk in _chunkList)
             {
@@ -171,16 +170,16 @@ using Random = UnityEngine.Random;
         }
 
         //Creates a list of available chunks for attack
-        private void CreateAvailableChunkList()
+        protected virtual void CreateAvailableChunkList(int attackRange)
         {
             ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
             if(laserGrid)
             {
-                GeneratePlusPattern(startChunk, AttackRange);
+                GeneratePlusPattern(startChunk, attackRange);
             }
             else
             {
-                GenerateDiamondPattern(startChunk, AttackRange);
+                GenerateDiamondPattern(startChunk, attackRange);
             }
         }
 
@@ -208,7 +207,7 @@ using Random = UnityEngine.Random;
                             ChunkData chunk = chunksArray[targetX, targetY];
                             if (chunk != null && !chunk.TileIsLocked())
                             {
-                                HighlightGridTile(chunk);
+                                _chunkList.Add(chunk);
                             }
                         }
                     }
@@ -283,7 +282,7 @@ using Random = UnityEngine.Random;
                         ChunkData chunk = chunksArray[x, y];
                         if (chunk != null && !chunk.TileIsLocked())
                         {
-                            HighlightGridTile(chunk);
+                            _chunkList.Add(chunk);
                         }
                     }
                 }
@@ -412,9 +411,8 @@ using Random = UnityEngine.Random;
             AbilityPoints++;
         }
         
-        public override void ResolveAbility(Vector3 position)
+        public virtual void ResolveAbility(Vector3 position)
         {
-            base.ResolveAbility(position);
             _assignSound.PlaySound(selectedEffectIndex, selectedSongIndex);
             Debug.LogWarning("PlaySound");
             //GameTileMap.Tilemap.DeselectCurrentCharacter();
@@ -528,7 +526,7 @@ using Random = UnityEngine.Random;
             }
         }
 
-        protected override void DealRandomDamageToTarget(ChunkData chunkData, int minDamage, int maxDamage)
+        protected void DealRandomDamageToTarget(ChunkData chunkData, int minDamage, int maxDamage)
         {
             if (chunkData != null && chunkData.GetCurrentCharacter() != null && IsAllegianceSame(chunkData.GetPosition()))
             {
@@ -552,8 +550,7 @@ using Random = UnityEngine.Random;
         {
             if (CanGridBeEnabled())
             {
-                ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
-                CreateGrid(startChunk, AttackRange);
+                CreateGrid();
             }
         }
         public virtual GameObject PossibleAIActionTile()

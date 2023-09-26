@@ -19,7 +19,7 @@ public class SelectAction : MonoBehaviour
     [SerializeField] private List<SelectActionButton> abilityButtons;
     private void GetAbilities()
     {
-        _playerAbilities = _currentPlayer.GetComponent<ActionManagerNew>().ReturnAbilities();
+        _playerAbilities = _currentPlayer.GetComponent<ActionManagerNew>().GetAbilities();
         _playerInformationData = _currentPlayer.GetComponent<PlayerInformation>().playerInformationData;
     }
 

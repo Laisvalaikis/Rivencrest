@@ -5,7 +5,6 @@ public class Enrage : BaseAction
     public override void ResolveAbility(Vector3 position)
     {
         base.ResolveAbility(position);
-        ChunkData chunkData = GetSpecificGroundTile(position);
         FinishAbility();
     }
     public override void OnTileHover(GameObject tile)

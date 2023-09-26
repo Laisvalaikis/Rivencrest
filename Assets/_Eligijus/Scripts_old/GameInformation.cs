@@ -634,9 +634,9 @@ public class GameInformation : MonoBehaviour
                         StartCoroutine(ExecuteAfterTime(0.5f + TimeSpent, () =>
                         {
                             //FocusSelectedCharacter(characterInList);
-                            characterInList.GetComponent<AIBehaviour>().DoTurnActions();
+                            //characterInList.GetComponent<AIBehaviour>().DoTurnActions();
                         }));
-                        TimeSpent += characterInList.GetComponent<AIBehaviour>().TimeRequiredForTurn();
+                        //TimeSpent += characterInList.GetComponent<AIBehaviour>().TimeRequiredForTurn();
                     }
                 }
                 //Debug.Log(TimeSpent);

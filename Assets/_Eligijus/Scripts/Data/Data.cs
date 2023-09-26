@@ -37,7 +37,6 @@ public class Data : MonoBehaviour
         {
             Instance = this;
         }
-      
     }
 
     public void InsertCharacter(SavedCharacter character)

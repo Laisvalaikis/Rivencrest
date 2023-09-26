@@ -8,7 +8,6 @@ public class WallEntrap : BaseAction
     public override void ResolveAbility(Vector3 position)
     {
         base.ResolveAbility(position);
-        ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
         SpawnAdjacentWalls();
         FinishAbility();
     }
@@ -48,11 +47,6 @@ public class WallEntrap : BaseAction
                 _playerInformations.Add(tempPlayerInformation);
             }
         }
-    }
-
-    public override void OnTurnEnd()
-    {
-        base.OnTurnEnd();
     }
     
     public override void OnTileHover(GameObject tile)

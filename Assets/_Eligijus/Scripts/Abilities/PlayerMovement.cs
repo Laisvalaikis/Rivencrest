@@ -73,7 +73,6 @@ public class PlayerMovement : BaseAction
         {
             chunkData.GetTileHighlight().ActivateColorGridTile(true);
             chunkData.GetTileHighlight().SetHighlightColor(AttackHighlight);
-            _chunkList.Add(chunkData);
         }
     }
     
@@ -93,17 +92,6 @@ public class PlayerMovement : BaseAction
     protected override void FinishAbility()
     {
         
-    }
-    
-    public override void OnTileClick(Vector3 mousePosition)
-    {
-        // if (!GameTileMap.Tilemap.CharacterIsOnTile(mousePosition))
-        // {
-        //     GameTileMap.Tilemap.MoveSelectedCharacter(mousePosition, new Vector3(0, 0.5f, 1));
-        // }
-        //
-        // Debug.Log("We are in Character");
-        // base.OnTileClick(mousePosition);
     }
    
     public void Flip(bool shouldCharacterFaceRight)

@@ -25,7 +25,6 @@ public class SwitchPlaces : BaseAction
           
         }
     }
-
     private void SwitchCharacters(ChunkData characterOne, ChunkData characterTwo)
     {
         GameObject character = characterOne.GetCurrentCharacter();
@@ -35,17 +34,6 @@ public class SwitchPlaces : BaseAction
             characterTwo.GetCurrentCharacter());
         GameTileMap.Tilemap.SetCharacter(characterOne.GetPosition(), characterTwo.GetCurrentCharacter(), characterTwo.GetCurrentPlayerInformation());
         GameTileMap.Tilemap.SetCharacter(characterTwo.GetPosition(), character, playerInformationLocal);
-    }
-
-    public override void OnTurnStart()
-    {
-        base.OnTurnStart();
-    }
-    
-
-    public override void OnTurnEnd()
-    {
-        base.OnTurnEnd();
     }
     
     public override void OnTileHover(GameObject tile)

@@ -19,12 +19,6 @@ public class WallSmash : BaseAction
         }
         FinishAbility();
     }
-    
-    public override void OnTurnEnd()
-    {
-        base.OnTurnEnd();
-    }
-
     private void DestroyObject(ChunkData chunkData)
     {
         (int x, int y) = chunkData.GetIndexes();

@@ -22,7 +22,6 @@ public class GroundSlam : BaseAction
     {
         SetNonHoveredAttackColor(chunkData);
         chunkData.GetTileHighlight().ActivateColorGridTile(true);
-        _chunkList.Add(chunkData);
     }
     
     public override void ResolveAbility(Vector3 position)

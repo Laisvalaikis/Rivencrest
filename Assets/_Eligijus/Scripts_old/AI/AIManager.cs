@@ -118,7 +118,7 @@ public class AIManager : MonoBehaviour
             _gameInformation.EndAITurn(true);
         }));
         RespawnCount--;
-    }
+    } 
     }
 
 private void InitializeEnemy(GameObject spawnedEnemy)

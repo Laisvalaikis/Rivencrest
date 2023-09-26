@@ -34,17 +34,17 @@ public class LongShot : BaseAction
             FinishAbility();
         
     }
-
-    public override void CreateGrid(ChunkData centerChunk, int radius)
+    protected override void CreateAvailableChunkList(int attackRange)
     {
+        ChunkData centerChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         (int centerX, int centerY) = centerChunk.GetIndexes();
         _chunkList.Clear();
         ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray(); 
-        for (int y = -radius; y <= radius; y++)
+        for (int y = -attackRange; y <= attackRange; y++)
         {
-            for (int x = -radius; x <= radius; x++)
+            for (int x = -attackRange; x <= attackRange; x++)
             {
-                if (Mathf.Abs(x) + Mathf.Abs(y) == radius)
+                if (Mathf.Abs(x) + Mathf.Abs(y) == attackRange)
                 {
                     int targetX = centerX + x;
                     int targetY = centerY + y;
@@ -55,17 +55,12 @@ public class LongShot : BaseAction
                         ChunkData chunk = chunksArray[targetX, targetY];
                         if (chunk != null && !chunk.TileIsLocked())
                         {
-                            HighlightGridTile(chunk);
+                            _chunkList.Add(chunk);
                         }
                     }
                 }
             }
         }
-    }
-    public override void CreateGrid()
-    {
-        ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
-        CreateGrid(startChunk, AttackRange);
     }
     public override void OnTileHover(GameObject tile)
     {

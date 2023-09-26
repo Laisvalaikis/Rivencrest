@@ -15,7 +15,7 @@ public class ActionManagerNew : MonoBehaviour
 
     private bool hasSlowAbilityBeenCast = false;
 
-    public List<Ability> ReturnAbilities()
+    public List<Ability> GetAbilities()
     {
         return _abilities;
     }

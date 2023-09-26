@@ -19,7 +19,7 @@ public class CreateEye : BaseAction
        //isEyeActive = true;
        FinishAbility();
     }
-    public override void CreateGrid(ChunkData centerChunk, int radius)
+    protected override void CreateAvailableChunkList(int attackRange)
     {
         (int y, int x) coordinates = GameTileMap.Tilemap.GetChunk(transform.position).GetIndexes();
         ChunkData[,] chunkDataArray = GameTileMap.Tilemap.GetChunksArray();
@@ -27,14 +27,9 @@ public class CreateEye : BaseAction
         
         int topY = coordinates.y - AttackRange;
         ChunkData chunkData = chunkDataArray[topY, coordinates.x];
-        HighlightGridTile(chunkData);
         _chunkList.Add(chunkData);
     }
-    public override void CreateGrid()
-    {
-        ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
-        CreateGrid(startChunk, AttackRange);
-    }
+ 
     public override void OnTileHover(GameObject tile)
     {
         EnableDamagePreview(tile, minAttackDamage, maxAttackDamage);

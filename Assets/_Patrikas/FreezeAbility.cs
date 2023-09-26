@@ -11,14 +11,15 @@ public class FreezeAbility : BaseAction
         AttackHighlightHover = AttackHoverCharacter;
         CharacterOnGrid = new Color32(146, 212, 255, 255);
     }
-    public override void CreateGrid(ChunkData centerChunk, int radius)
+    protected override void CreateAvailableChunkList(int attackRange)
     {
+        ChunkData centerChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         _chunkList.Clear();
         (int centerX, int centerY) = centerChunk.GetIndexes();
         ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray(); 
-        for (int y = -radius; y <= radius; y++)
+        for (int y = -attackRange; y <= attackRange; y++)
         {
-            for (int x = -radius; x <= radius; x++)
+            for (int x = -attackRange; x <= attackRange; x++)
             {
                 // Skip the center chunk
                 if (x == 0 && y == 0)
@@ -35,14 +36,13 @@ public class FreezeAbility : BaseAction
                     ChunkData chunk = chunksArray[targetX, targetY];
                     if (chunk != null && !chunk.TileIsLocked())
                     {
-                        HighlightGridTile(chunk);
+                        _chunkList.Add(chunk);
                     }
                 }
             }
         }
         _chunkListCopy = new List<ChunkData>(_chunkList);
     }
-    
     public override void OnMoveHover(ChunkData hoveredChunk, ChunkData previousChunk)
     {
         if (hoveredChunk == previousChunk) return;
@@ -63,7 +63,6 @@ public class FreezeAbility : BaseAction
             }
         }
     }
-    
     private void DealDamageToList()
     {
         foreach (var chunk in _chunkListCopy)
@@ -74,11 +73,6 @@ public class FreezeAbility : BaseAction
                 DealRandomDamageToTarget(chunk, minAttackDamage, maxAttackDamage);
             }
         }
-    }
-    public override void CreateGrid()
-    {
-        ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
-        CreateGrid(startChunk, AttackRange);
     }
     public override void ResolveAbility(Vector3 position)
     {

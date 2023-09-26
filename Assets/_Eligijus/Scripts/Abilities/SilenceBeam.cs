@@ -72,9 +72,9 @@ public class SilenceBeam : BaseAction
             }
         }
     }
-    public override void CreateGrid(ChunkData centerChunk, int radius)
+    protected override void CreateAvailableChunkList(int attackRange)
     {
-        //Merging into one list
+        ChunkData centerChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         (int centerX, int centerY) = centerChunk.GetIndexes();
         _chunkList.Clear();
         int count = AttackRange;
@@ -87,36 +87,27 @@ public class SilenceBeam : BaseAction
             {
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(centerX + i + start, centerY);
                 _chunkList.Add(chunkData);
-                HighlightGridTile(chunkData);
                 _chunkArray[0, i] = chunkData;
             }
             if (GameTileMap.Tilemap.CheckBounds(centerX - i - start, centerY))
             {
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(centerX-i - start, centerY);
                 _chunkList.Add(chunkData);
-                HighlightGridTile(chunkData);
                 _chunkArray[1, i] = chunkData;
             }
             if (GameTileMap.Tilemap.CheckBounds(centerX, centerY + i + start))
             {
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(centerX, centerY + i + start);
                 _chunkList.Add(chunkData);
-                HighlightGridTile(chunkData);
                 _chunkArray[2, i] = chunkData;
             }
             if (GameTileMap.Tilemap.CheckBounds(centerX, centerY - i - start))
             {
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(centerX, centerY - i - start);
                 _chunkList.Add(chunkData);
-                HighlightGridTile(chunkData);
                 _chunkArray[3, i] = chunkData;
             }
         }
-    }
-    public override void CreateGrid()
-    {
-        ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
-        CreateGrid(startChunk, AttackRange);
     }
 
     public override void OnTileHover(GameObject tile)

@@ -377,22 +377,22 @@ public class GameProgress : MonoBehaviour
             {
                 List<string> abilitiesToEnable = new List<string>();
                 //Abilities
-                foreach (var ability in character.GetComponent<AIBehaviour>().specialAbilities)
-                {
-                    if (ability.difficultyLevel <= _data.townData.selectedEncounter.encounterLevel)
-                    {
-                        abilitiesToEnable.Add(ability.abilityName);
-                    }
-                }
+                // foreach (var ability in character.GetComponent<AIBehaviour>().specialAbilities)
+                // {
+                //     if (ability.difficultyLevel <= _data.townData.selectedEncounter.encounterLevel)
+                //     {
+                //         abilitiesToEnable.Add(ability.abilityName);
+                //     }
+                // }
                 character.GetComponent<PlayerInformation>().enabledAbilitiesEnemy = abilitiesToEnable;
                 //Blessings
-                foreach (var blessing in character.GetComponent<AIBehaviour>().specialBlessings)
-                {
-                    if (blessing.difficultyLevel <= _data.townData.selectedEncounter.encounterLevel)
-                    {
-                       // character.GetComponent<PlayerInformation>().BlessingsAndCurses.Add(new Blessing(blessing.blessingName, 0, "", "", "", ""));
-                    }
-                }
+                // foreach (var blessing in character.GetComponent<AIBehaviour>().specialBlessings)
+                // {
+                //     if (blessing.difficultyLevel <= _data.townData.selectedEncounter.encounterLevel)
+                //     {
+                //        // character.GetComponent<PlayerInformation>().BlessingsAndCurses.Add(new Blessing(blessing.blessingName, 0, "", "", "", ""));
+                //     }
+                // }
             }
         }
     }

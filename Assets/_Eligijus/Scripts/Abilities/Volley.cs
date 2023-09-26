@@ -77,13 +77,14 @@ public class Volley : BaseAction
         }
     }
 
-    public override void CreateGrid(ChunkData centerChunk, int radius)
+    protected override void CreateAvailableChunkList(int radius)
     {
+        ChunkData centerChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         (int centerX, int centerY) = centerChunk.GetIndexes();
         _chunkList.Clear();
 
         int startRadius = 1;
-        int count = startRadius + (AttackRange * 2)-2; // -2
+        int count = startRadius + (AttackRange * 2)-2;
         int topLeftCornerX = centerX - AttackRange;
         int topLeftCornerY = centerY - AttackRange;
         int bottomRightCornerX = centerX + AttackRange;
@@ -98,40 +99,28 @@ public class Volley : BaseAction
             {
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(topLeftCornerX + i + rowStart, topLeftCornerY);
                 _chunkList.Add(chunkData);
-                HighlightGridTile(chunkData);
                 _chunkArray[0, i] = chunkData;
             }
             if (GameTileMap.Tilemap.CheckBounds(bottomRightCornerX - i - rowStart, bottomRightCornerY))
             {
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(bottomRightCornerX-i - rowStart, bottomRightCornerY);
                 _chunkList.Add(chunkData);
-                HighlightGridTile(chunkData);
                 _chunkArray[1, i] = chunkData;
             }
             if (GameTileMap.Tilemap.CheckBounds(topLeftCornerX, topLeftCornerY + i + rowStart))
             {
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(topLeftCornerX, topLeftCornerY + i + rowStart);
                 _chunkList.Add(chunkData);
-                HighlightGridTile(chunkData);
                 _chunkArray[2, i] = chunkData;
             }
             if (GameTileMap.Tilemap.CheckBounds(bottomRightCornerX, bottomRightCornerY - i - rowStart))
             {
                 ChunkData chunkData = GameTileMap.Tilemap.GetChunkDataByIndex(bottomRightCornerX, bottomRightCornerY - i - rowStart);
                 _chunkList.Add(chunkData);
-                HighlightGridTile(chunkData);
                 _chunkArray[3, i] = chunkData;
             }
         }
     }
-    
-
-    public override void CreateGrid()
-    {
-        ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
-        CreateGrid(startChunk, AttackRange);
-    }
-    
     public override void OnTurnStart()
     {
         base.OnTurnStart();

@@ -17,8 +17,9 @@ public class Execute : BaseAction
         }
         FinishAbility();
     }
-    public override void CreateGrid(ChunkData centerChunk, int radius)
+    protected override void CreateAvailableChunkList(int radius)
     {
+        ChunkData centerChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         (int centerX, int centerY) = centerChunk.GetIndexes();
         _chunkList.Clear();
         ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray(); 
@@ -37,18 +38,11 @@ public class Execute : BaseAction
                         if (chunk != null && !chunk.TileIsLocked())
                         {
                             _chunkList.Add(chunk);
-                            HighlightGridTile(chunk);
                         }
                     }
                 }
             }
         }
-    }
-
-    public override void CreateGrid()
-    {
-        ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
-        CreateGrid(startChunk, AttackRange);
     }
     private int ExecuteDamage(Vector3 target) 
     {

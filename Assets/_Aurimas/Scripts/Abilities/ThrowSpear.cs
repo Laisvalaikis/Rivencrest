@@ -6,14 +6,15 @@ public class ThrowSpear : BaseAction
     [SerializeField] private GameObject spearPrefab;
     private bool laserGrid = true;
 
-    public override void CreateGrid(ChunkData centerChunk, int radius)
+    protected override void CreateAvailableChunkList(int attackRange)
     {
+        ChunkData centerChunk = GameTileMap.Tilemap.GetChunk(transform.position);
         (_, int centerY) = centerChunk.GetIndexes();
         _chunkList.Clear();
         ChunkData[,] chunksArray = GameTileMap.Tilemap.GetChunksArray();
-        for (int y = -radius; y <= radius; y++)
+        for (int y = -attackRange; y <= attackRange; y++)
         {
-            if (Mathf.Abs(y) == radius)
+            if (Mathf.Abs(y) == attackRange)
             {
                 int targetY = centerY + y;
                 if (targetY >= 0 && targetY < chunksArray.GetLength(1))
@@ -21,16 +22,11 @@ public class ThrowSpear : BaseAction
                     ChunkData chunk = chunksArray[0, targetY];
                     if (chunk != null && !chunk.TileIsLocked())
                     {
-                        HighlightGridTile(chunk);
+                        _chunkList.Add(chunk);
                     }
                 }
             }
         }
-    }
-    public override void CreateGrid()
-    {
-        ChunkData startChunk = GameTileMap.Tilemap.GetChunk(transform.position);
-        CreateGrid(startChunk, AttackRange);
     }
     public override void ResolveAbility(Vector3 position)
     {
