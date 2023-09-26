@@ -14,18 +14,18 @@ public class CreateWhiteField : BaseAction
         base.ResolveAbility(position);
         FinishAbility();
     }
-    public override void OnTileHover(GameObject tile)
-    {
-        foreach (List<GameObject> MovementTileList in this.AvailableTiles)
-        {
-            EnableTextPreview(tile, MovementTileList, "");
-        }
-    }
-    public override void OffTileHover(GameObject tile)
-    {
-        foreach (List<GameObject> MovementTileList in this.AvailableTiles)
-        {
-            DisablePreview(tile, MovementTileList);
-        }
-    }
+    // public override void OnTileHover(GameObject tile)
+    // {
+    //     foreach (List<GameObject> MovementTileList in this.AvailableTiles)
+    //     {
+    //         EnableTextPreview(tile, MovementTileList, "");
+    //     }
+    // }
+    // public override void OffTileHover(GameObject tile)
+    // {
+    //     foreach (List<GameObject> MovementTileList in this.AvailableTiles)
+    //     {
+    //         DisablePreview(tile, MovementTileList);
+    //     }
+    // }
 }

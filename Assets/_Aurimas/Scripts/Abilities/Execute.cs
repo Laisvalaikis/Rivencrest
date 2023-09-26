@@ -52,13 +52,4 @@ public class Execute : BaseAction
     
         return damage;
     }
-    public override void OnTileHover(GameObject tile)
-    {
-        EnableDamagePreview(tile, minAttackDamage, maxAttackDamage);
-    }
-    
-    public override void OffTileHover(GameObject tile)
-    {
-        DisablePreview(tile, MergedTileList);
-    }
 }

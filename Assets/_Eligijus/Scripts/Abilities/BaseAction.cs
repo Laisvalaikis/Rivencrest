@@ -26,11 +26,8 @@ using Random = UnityEngine.Random;
         protected LayerMask fogLayer;
         protected LayerMask portalLayer;
         protected LayerMask whiteFieldLayer;
-        protected GameInformation gameInformation;
         [SerializeField] protected bool laserGrid = false;
         [HideInInspector] public GameObject spawnedCharacter;
-        protected List<List<GameObject>> AvailableTiles = new List<List<GameObject>>();
-        protected List<GameObject> MergedTileList = new List<GameObject>();
         //private RaycastHit2D raycast;
         public int AttackRange = 1;
         public int AbilityCooldown = 1;
@@ -290,7 +287,7 @@ using Random = UnityEngine.Random;
         }
         public virtual void OnTileHover(GameObject tile)//parodo kas bus
         {
-            
+            EnableDamagePreview(tile, minAttackDamage, maxAttackDamage);
         }
         public virtual void EnableDamagePreview(GameObject tile, int minAttackDamage, int maxAttackDamage = -1)//damage texto ijungimui
         {

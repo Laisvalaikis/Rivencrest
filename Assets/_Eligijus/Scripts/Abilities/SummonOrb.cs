@@ -98,21 +98,4 @@ public class SummonOrb : BaseAction
             }
         }
     }
-
-
-    public override void OnTurnEnd()
-    {
-        base.OnTurnEnd();
-    }
-    
-    public override void OnTileHover(GameObject tile)
-    {
-        EnableDamagePreview(tile, minAttackDamage, maxAttackDamage);
-    }
-    
-    public override void OffTileHover(GameObject tile)
-    {
-        DisablePreview(tile, MergedTileList);
-    }
-    
 }

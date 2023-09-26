@@ -62,10 +62,6 @@ public class GroundSlam : BaseAction
             }
         }
     }
-    public override void OnTileHover(GameObject tile)
-    {
-        EnableDamagePreview(tile, MergedTileList, minAttackDamage, maxAttackDamage);
-    }
     public override void EnableDamagePreview(GameObject tile, List<GameObject> tileList, int minAttackDamage, int maxAttackDamage = -1)
     {
         foreach(GameObject tileInList in tileList)
@@ -79,9 +75,5 @@ public class GroundSlam : BaseAction
                 EnableTextPreview(tileInList, "");
             }
         }
-    }
-    public override void OffTileHover(GameObject tile)
-    {
-        DisablePreview(tile, MergedTileList);
     }
 }

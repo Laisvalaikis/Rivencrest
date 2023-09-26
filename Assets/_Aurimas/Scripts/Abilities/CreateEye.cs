@@ -29,14 +29,4 @@ public class CreateEye : BaseAction
         ChunkData chunkData = chunkDataArray[topY, coordinates.x];
         _chunkList.Add(chunkData);
     }
- 
-    public override void OnTileHover(GameObject tile)
-    {
-        EnableDamagePreview(tile, minAttackDamage, maxAttackDamage);
-    }
-    
-    public override void OffTileHover(GameObject tile)
-    {
-        DisablePreview(tile, MergedTileList);
-    }
 }

@@ -35,14 +35,4 @@ public class SwitchPlaces : BaseAction
         GameTileMap.Tilemap.SetCharacter(characterOne.GetPosition(), characterTwo.GetCurrentCharacter(), characterTwo.GetCurrentPlayerInformation());
         GameTileMap.Tilemap.SetCharacter(characterTwo.GetPosition(), character, playerInformationLocal);
     }
-    
-    public override void OnTileHover(GameObject tile)
-    {
-        EnableDamagePreview(tile, minAttackDamage, maxAttackDamage);
-    }
-    
-    public override void OffTileHover(GameObject tile)
-    {
-        DisablePreview(tile, MergedTileList);
-    }
 }

@@ -11,13 +11,4 @@ public class MindControl : BaseAction
         chunkData.GetCurrentPlayerInformation().ApplyDebuff("MindControl", gameObject);
         FinishAbility();
     }
-    public override void OnTileHover(GameObject tile)
-    {
-        EnableDamagePreview(tile, minAttackDamage, maxAttackDamage);
-    }
-    
-    public override void OffTileHover(GameObject tile)
-    {
-        DisablePreview(tile, MergedTileList);
-    }
 }

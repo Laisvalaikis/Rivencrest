@@ -40,12 +40,4 @@ public class CrowAttack : BaseAction
         }
         
     }
-    public override void OnTileHover(GameObject tile)
-    {
-        EnableDamagePreview(tile, MergedTileList, minAttackDamage, maxAttackDamage);
-    }
-    public override void OffTileHover(GameObject tile)
-    {
-        DisablePreview(tile, MergedTileList);
-    }
 }

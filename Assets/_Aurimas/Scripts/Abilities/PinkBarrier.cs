@@ -13,9 +13,4 @@ public class PinkBarrier : BaseAction
     {
         EnableDamagePreview(tile, minAttackDamage, maxAttackDamage);
     }
-    
-    public override void OffTileHover(GameObject tile)
-    {
-        DisablePreview(tile, MergedTileList);
-    }
 }

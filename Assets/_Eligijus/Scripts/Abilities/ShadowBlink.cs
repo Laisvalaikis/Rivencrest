@@ -15,23 +15,4 @@ public class ShadowBlink : BaseAction
         FinishAbility();
     }
     
-    public override void OnTurnStart()
-    {
-        base.OnTurnStart();
-    }
-    
-    public override void OnTurnEnd()
-    {
-        base.OnTurnEnd();
-    }
-
-    public override void OnTileHover(GameObject tile)
-    {
-        EnableDamagePreview(tile, minAttackDamage, maxAttackDamage);
-    }
-    
-    public override void OffTileHover(GameObject tile)
-    {
-        DisablePreview(tile, MergedTileList);
-    }
 }

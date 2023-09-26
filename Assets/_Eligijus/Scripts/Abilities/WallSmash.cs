@@ -46,14 +46,4 @@ public class WallSmash : BaseAction
         }
         chunkData.GetCurrentPlayerInformation().DealDamage(damageToWall, false, gameObject);
     }
-    
-    public override void OnTileHover(GameObject tile)
-    {
-        EnableDamagePreview(tile, minAttackDamage, maxAttackDamage);
-    }
-    
-    public override void OffTileHover(GameObject tile)
-    {
-        DisablePreview(tile, MergedTileList);
-    }
 }

@@ -62,13 +62,4 @@ public class LongShot : BaseAction
             }
         }
     }
-    public override void OnTileHover(GameObject tile)
-    {
-        EnableDamagePreview(tile, MergedTileList, minAttackDamage, maxAttackDamage);
-    }
-    public override void OffTileHover(GameObject tile)
-    {
-        DisablePreview(tile, MergedTileList);
-    }
-
 }

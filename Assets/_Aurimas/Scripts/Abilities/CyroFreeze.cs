@@ -50,13 +50,4 @@ public class CyroFreeze : BaseAction
       _playerInformation.Stasis = true;
       FinishAbility();
    }
-   public override void OnTileHover(GameObject tile)
-   {
-      EnableDamagePreview(tile, minAttackDamage, maxAttackDamage);
-   }
-    
-   public override void OffTileHover(GameObject tile)
-   {
-      DisablePreview(tile, MergedTileList);
-   }
 }
