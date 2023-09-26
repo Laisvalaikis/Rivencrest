@@ -32,7 +32,7 @@ public class Avalanche : BaseAction
     public override bool CanTileBeClicked(Vector3 position)
     {
         ChunkData chunkData = GetSpecificGroundTile(position);
-        if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") &&
+        if (CheckIfSpecificInformationType(position, InformationType.Player) &&
             !IsAllegianceSame(chunkData.GetPosition()) &&
             IsCharacterAffectedByCrowdControl(position))
         {
@@ -42,7 +42,7 @@ public class Avalanche : BaseAction
     }
     private bool IsCharacterAffectedByCrowdControl(Vector3 position)
     {
-        if (CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player"))
+        if (CheckIfSpecificInformationType(position, InformationType.Player))
         {
             ChunkData target = GetSpecificGroundTile(position);
             PlayerInformation playerInformationLocal = target.GetCurrentPlayerInformation();

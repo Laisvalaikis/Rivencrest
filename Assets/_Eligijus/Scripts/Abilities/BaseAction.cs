@@ -334,11 +334,7 @@ using Random = UnityEngine.Random;
         }
         public virtual bool CanTileBeClicked(Vector3 position)
         {
-            return CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") && !IsAllegianceSame(position);
-        }
-        protected bool CanPreviewBeShown(Vector3 position)
-        {
-            return CanTileBeClicked(position) && (!(CheckIfSpecificLayer(position, 0, 0, blockingLayer) && IsAllegianceSame(position)) || friendlyFire);
+            return CheckIfSpecificInformationType(position, InformationType.Player) && !IsAllegianceSame(position);
         }
         public virtual void OnTurnStart()
         {
@@ -382,60 +378,15 @@ using Random = UnityEngine.Random;
             }
             GameTileMap.Tilemap.DeselectCurrentCharacter();
         }
-        public GameObject GetSpecificGroundTile(GameObject tile, int x, int y, LayerMask chosenLayer)
-        {
-            Vector3 firstPosition = tile.transform.position + new Vector3(0f, 0.5f, 0f) + new Vector3(x, y, 0f);
-            Vector3 secondPosition = firstPosition + new Vector3(0.1f, 0f, 0f);
-            RaycastHit2D raycast = Physics2D.Linecast(firstPosition, secondPosition, chosenLayer);
-            return raycast.transform.gameObject;
-        }
-
         protected ChunkData GetSpecificGroundTile(Vector3 position)
         {
             return GameTileMap.Tilemap.GetChunk(position);
         }
 
-        protected static bool CheckIfSpecificLayer(Vector3 position, int x, int y, LayerMask chosenLayer)
+        protected static bool CheckIfSpecificInformationType(Vector3 position, InformationType informationType)
         {
-            Vector3 firstPosition = position + new Vector3(0f, 0.5f, 0f) + new Vector3(x, y, 0f);
-            Vector3 secondPosition = firstPosition + new Vector3(0.1f, 0f, 0f);
-            RaycastHit2D raycast = Physics2D.Linecast(firstPosition, secondPosition, chosenLayer);
-            if (raycast.transform == null)
-            {
-                return false;
-            }
-            return true;
-        }
-
-        protected static bool CheckIfSpecificTag(Vector3 position, int x, int y, LayerMask chosenLayer, string tagName)
-        {
-            Vector3 firstPosition = position + new Vector3(0f, 0.5f, 0f) + new Vector3(x, y, 0f);
-            Vector3 secondPosition = firstPosition + new Vector3(0.1f, 0f, 0f);
-            RaycastHit2D raycast = Physics2D.Linecast(firstPosition, secondPosition, chosenLayer);
-            if (raycast.transform == null)
-            {
-                return false;
-            }
-            else if (raycast.transform.CompareTag(tagName))
-            {
-                return true;
-            }
-            return false;
-        }
-        public static bool CheckIfSpecificTag(GameObject tile, int x, int y, LayerMask chosenLayer, string tagName)
-        {
-            Vector3 firstPosition = tile.transform.position + new Vector3(0f, 0.5f, 0f) + new Vector3(x, y, 0f);
-            Vector3 secondPosition = firstPosition + new Vector3(0.1f, 0f, 0f);
-            RaycastHit2D raycast = Physics2D.Linecast(firstPosition, secondPosition, chosenLayer);
-            if (raycast.transform == null)
-            {
-                return false;
-            }
-            else if (raycast.transform.CompareTag(tagName))
-            {
-                return true;
-            }
-            return false;
+            ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
+            return chunkData.GetInformationType()==informationType;
         }
         protected bool IsAllegianceSame(Vector3 position)
         {

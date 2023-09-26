@@ -95,7 +95,7 @@ public class ChillingGust : BaseAction
         };
         foreach (var x in spellDirectionVectors)
         {
-            if (CheckIfSpecificLayer(chunk.GetPosition(), x.Item1, x.Item2, groundLayer) && (!CheckIfSpecificLayer(chunk.GetPosition(), x.Item1, x.Item2, blockingLayer) || CheckIfSpecificTag(chunk.GetPosition(), x.Item1, x.Item2, blockingLayer, "Player")))
+            if (CheckIfSpecificInformationType(chunk.GetPosition(), InformationType.Player))
             {
                 _additionalDamageTiles.Add(chunk);
             }

@@ -14,7 +14,7 @@ public class
 
     public void ActivateAction(bool onTurnEnd)
     {
-        if(BaseAction.CheckIfSpecificTag(gameObject, 0, 0, LayerMask.GetMask("BlockingLayer"), "Player"))
+        if(/*BaseAction.CheckIfSpecificTag(gameObject, 0, 0, LayerMask.GetMask("BlockingLayer"), "Player")*/true)
         {
             ChunkData target = GameTileMap.Tilemap.GetChunk(new Vector3(0, 0,0));
             if(GameObject.Find("GameInformation").GetComponent<GameInformation>().ActiveTeam == target.GetCurrentPlayerInformation().CharactersTeam)

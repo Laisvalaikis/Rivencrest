@@ -22,7 +22,7 @@ public class PlayerAttack : BaseAction
 
     public override bool CanTileBeClicked(Vector3 position)
     {
-        if (((CheckIfSpecificTag(position, 0, 0, blockingLayer, "Player") || CheckIfSpecificTag(position, 0, 0, blockingLayer, "Wall"))
+        if (((CheckIfSpecificInformationType(position, InformationType.Player) || CheckIfSpecificInformationType(position, InformationType.Object))
             && IsAllegianceSame(position) && !GetComponent<PlayerInformation>().CantAttackCondition) || friendlyFire)
         {
             return true;

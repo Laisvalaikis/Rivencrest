@@ -26,7 +26,7 @@ public class CyroFreeze : BaseAction
             };
             foreach (var x in pushDirectionVectors)
             {
-               if (CheckIfSpecificTag(transform.position, x.Item1, x.Item2, blockingLayer, "Player"))
+               if (CheckIfSpecificInformationType(transform.position, InformationType.Player))
                {
                   ChunkData chunkData = GameTileMap.Tilemap.GetChunk(transform.position);
                   if (IsAllegianceSame(chunkData.GetPosition()))
