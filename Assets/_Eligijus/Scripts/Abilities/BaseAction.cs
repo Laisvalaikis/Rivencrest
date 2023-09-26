@@ -20,15 +20,8 @@ using Random = UnityEngine.Random;
         
         [Header("Base Action")] 
         [SerializeField] protected PlayerInformation playerInformation;
-        protected LayerMask groundLayer;
-        protected LayerMask blockingLayer;
-        protected LayerMask consumablesLayer;
-        protected LayerMask fogLayer;
-        protected LayerMask portalLayer;
-        protected LayerMask whiteFieldLayer;
         [SerializeField] protected bool laserGrid = false;
         [HideInInspector] public GameObject spawnedCharacter;
-        //private RaycastHit2D raycast;
         public int AttackRange = 1;
         public int AbilityCooldown = 1;
         public int minAttackDamage = 0;
@@ -58,12 +51,6 @@ using Random = UnityEngine.Random;
             _playerInformationData.CopyData(playerInformation.playerInformationData);
             _chunkList = new List<ChunkData>();
             AbilityPoints = AbilityCooldown;
-            groundLayer = LayerMask.GetMask("Ground");
-            blockingLayer = LayerMask.GetMask("BlockingLayer");
-            consumablesLayer = LayerMask.GetMask("Consumables");
-            fogLayer = LayerMask.GetMask("Fog");
-            portalLayer = LayerMask.GetMask("Portal");
-            whiteFieldLayer = LayerMask.GetMask("WhiteField");
             _assignSound = GetComponent<AssignSound>();
         }
         protected virtual void HighlightGridTile(ChunkData chunkData)
@@ -194,8 +181,6 @@ using Random = UnityEngine.Random;
                 EnableDamagePreview(chunkData);
             }
         }
-
-
         public virtual void OnMoveArrows(ChunkData hoveredChunk, ChunkData previousChunk)
         {
             
@@ -428,7 +413,6 @@ using Random = UnityEngine.Random;
                 bool crit = IsItCriticalStrike(ref randomDamage);
                 DodgeActivation(ref randomDamage, chunkData.GetCurrentPlayerInformation());
                 chunkData.GetCurrentPlayerInformation().DealDamage(randomDamage, crit, gameObject);
-                
             }
         }
         protected void DealDamage(ChunkData chunkData, int damage, bool crit)
