@@ -38,7 +38,7 @@ public class WallSmash : BaseAction
                 ChunkData targetChunkDataPlayer =
                     GameTileMap.Tilemap.GetChunkDataByIndex(position.Item1 * 2 + x, position.Item2 * 2 + y);
                 if (targetChunkDataPlayer != null && targetChunkDataPlayer.GetCurrentPlayerInformation() != null 
-                                                  && targetChunkDataPlayer.GetInformationType() == InformationType.Player && !IsAllegianceSame(targetChunkDataPlayer.GetPosition()))
+                                                  && targetChunkDataPlayer.GetInformationType() == InformationType.Player && !IsAllegianceSame(targetChunkDataPlayer))
                 {
                     DealRandomDamageToTarget(targetChunkDataPlayer, minAttackDamage, maxAttackDamage);
                 }

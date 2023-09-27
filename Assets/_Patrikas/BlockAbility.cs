@@ -17,7 +17,7 @@ public class BlockAbility : BaseAction
     {
         GameObject character = chunkData.GetCurrentCharacter();
         HighlightTile tileHighlight = chunkData.GetTileHighlight();
-        if (character != null && IsAllegianceSame(chunkData.GetPosition()))
+        if (character != null && IsAllegianceSame(chunkData))
         {
             tileHighlight.SetHighlightColor(CharacterOnGrid);
         }
@@ -32,7 +32,7 @@ public class BlockAbility : BaseAction
         GameObject character = chunkData.GetCurrentCharacter();
         HighlightTile tileHighlight = chunkData.GetTileHighlight();
 
-        if (character != null && IsAllegianceSame(chunkData.GetPosition()))
+        if (character != null && IsAllegianceSame(chunkData))
         {
             tileHighlight.SetHighlightColor(AttackHoverCharacter);
         }
@@ -53,7 +53,8 @@ public class BlockAbility : BaseAction
 
     public override bool CanTileBeClicked(Vector3 position)
     {
-        return IsAllegianceSame(position);
+        ChunkData chunk = GetSpecificGroundTile(position);
+        return IsAllegianceSame(chunk);
     }
     public override void OnTurnStart()
     {

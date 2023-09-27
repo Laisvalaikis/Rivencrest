@@ -17897,7 +17897,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4320647118807370085, guid: 6b7a2da188bc210429f17660c77dc49f, type: 3}
       propertyPath: isDragAvailable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5651964935951015705, guid: 6b7a2da188bc210429f17660c77dc49f, type: 3}
       propertyPath: m_RootOrder
@@ -26244,6 +26244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c2ad3dea7ee1e843975c5e5affe718a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TurnManager: {fileID: 0}
   portraitTeamBox: {fileID: 1428143988}
   allCharacterList:
     teams:
@@ -26259,9 +26260,6 @@ MonoBehaviour:
       - {x: 5.149e-41, y: 0, z: 0}
       teamName: Yellow
       teamAllegiance: 1
-      teamFlag: {fileID: 0}
-      teamFlagSprite: {fileID: -359754816081809771, guid: 630bb4f4005d4a34b8a8ae386b90a3fa, type: 3}
-      teamFlagPoint: {fileID: 0}
       isTeamAI: 0
       undoCount: 0
       teamPortraitBoxGameObject: {fileID: 0}
@@ -26278,9 +26276,6 @@ MonoBehaviour:
       - {x: 5.149e-41, y: 0, z: 0}
       teamName: Red
       teamAllegiance: 2
-      teamFlag: {fileID: 0}
-      teamFlagSprite: {fileID: -3657524750541581921, guid: 630bb4f4005d4a34b8a8ae386b90a3fa, type: 3}
-      teamFlagPoint: {fileID: 0}
       isTeamAI: 0
       undoCount: 0
       teamPortraitBoxGameObject: {fileID: 0}
@@ -26291,9 +26286,6 @@ MonoBehaviour:
       coordinates: []
       teamName: White
       teamAllegiance: 1
-      teamFlag: {fileID: 0}
-      teamFlagSprite: {fileID: -3657524750541581921, guid: 630bb4f4005d4a34b8a8ae386b90a3fa, type: 3}
-      teamFlagPoint: {fileID: 0}
       isTeamAI: 1
       undoCount: 0
       teamPortraitBoxGameObject: {fileID: 0}
@@ -26303,9 +26295,7 @@ MonoBehaviour:
   undoCount: 2
   otherCharacters: []
   isGameOver: 0
-  helpTable: {fileID: 0}
   characterUiButtonManager: {fileID: 0}
-  mapSetup: {fileID: 1764186256}
   colorManager: {fileID: 1649360795}
 --- !u!4 &1649360793
 Transform:
@@ -29210,17 +29200,6 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 6406070446431113017, guid: 775b520c392047849bf430022cd49424, type: 3}
   m_PrefabInstance: {fileID: 1761055682}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1764186256 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8207484023722888744, guid: c2157b05b7f5a03488315819039a771c, type: 3}
-  m_PrefabInstance: {fileID: 651189754}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b680d9c47f69ba4695a463a706c4745, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1764597030 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7951617091095849851, guid: 775b520c392047849bf430022cd49424, type: 3}
@@ -36306,7 +36285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cinemachineVirtualCamera: {fileID: 2142535630}
   mainCamera: {fileID: 26522310}
-  CameraDragging: 0
+  CameraDragging: 1
   panSpeed: 5
   panLimitX: {x: 0.5, y: 10.5}
   panLimitY: {x: 0, y: 10}

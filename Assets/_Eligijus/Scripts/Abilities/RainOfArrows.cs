@@ -21,12 +21,12 @@ public class RainOfArrows : BaseAction
     {
         base.ResolveAbility(position);
         _cometTiles.Clear();
-        List<ChunkData> damageTiles = CreateDamageTileList(position);
-        foreach (ChunkData tile in damageTiles)
+        List<ChunkData> damageChunks = CreateDamageTileList(position);
+        foreach (ChunkData chunk in damageChunks)
         {
-            if (tile.IsStandingOnChunk() && !IsAllegianceSame(tile.GetPosition()))
+            if (chunk.IsStandingOnChunk() && !IsAllegianceSame(chunk))
             {
-                _cometTiles.Add(tile);
+                _cometTiles.Add(chunk);
             }
         }
         FinishAbility();

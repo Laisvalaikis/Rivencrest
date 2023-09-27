@@ -34,7 +34,7 @@ public class ChillingGust : BaseAction
             GameObject target = chunk.GetCurrentCharacter();
             PlayerInformation clickedPlayerInformation = target.GetComponent<PlayerInformation>();
             
-            if (IsAllegianceSame(position))
+            if (IsAllegianceSame(chunk))
             {
                 clickedPlayerInformation.Protected = true;
                 //target.transform.Find("VFX").Find("Protected").gameObject.SetActive(true);
@@ -71,7 +71,7 @@ public class ChillingGust : BaseAction
                     CreateDamageTileList(chunk);
                     foreach (ChunkData c in _additionalDamageTiles)
                     {
-                        if (CanTileBeClicked(c.GetPosition()))
+                        if (CanTileBeClicked(c))
                         {
                             DealRandomDamageToTarget(c, minAttackDamage, maxAttackDamage);
                             c.GetCurrentCharacter().GetComponent<PlayerInformation>().ApplyDebuff("IceSlow");
@@ -95,7 +95,7 @@ public class ChillingGust : BaseAction
         };
         foreach (var x in spellDirectionVectors)
         {
-            if (CheckIfSpecificInformationType(chunk.GetPosition(), InformationType.Player))
+            if (CheckIfSpecificInformationType(chunk, InformationType.Player))
             {
                 _additionalDamageTiles.Add(chunk);
             }
@@ -103,19 +103,19 @@ public class ChillingGust : BaseAction
     }
     public void OnTileHover(Vector3 position)
     {
-        if (IsAllegianceSame(position))
-        {
-            //EnableTextPreview(position, "PROTECT");
-        }
-        else
-        {
-            int bonusDamage = 0;
-            if (DoesCharacterHaveBlessing("Harsh winds"))
-            {
-                bonusDamage = BonusBlessingDamage;
-            }
-            //EnableDamagePreview(tile, minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
-        }
+        // if (IsAllegianceSame(position))
+        // {
+        //     //EnableTextPreview(position, "PROTECT");
+        // }
+        // else
+        // {
+        //     int bonusDamage = 0;
+        //     if (DoesCharacterHaveBlessing("Harsh winds"))
+        //     {
+        //         bonusDamage = BonusBlessingDamage;
+        //     }
+        //     //EnableDamagePreview(tile, minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
+        // }
     }
     
 }

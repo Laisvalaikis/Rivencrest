@@ -66,7 +66,7 @@ public class ChainHook : BaseAction
         if (character!=null)
         {
             //target.transform.Find("VFX").Find("VFXImpact").gameObject.GetComponent<Animator>().SetTrigger("burgundy2");
-            if (!IsAllegianceSame(position))
+            if (!IsAllegianceSame(chunk))
             { 
                 int multiplier = GetMultiplier(position);
                 if (multiplier != 0)

@@ -11,10 +11,9 @@ public class AcidRain : BaseAction
             base.ResolveAbility(position);
             foreach (ChunkData tile in _chunkList)
             {
-                if (CanTileBeClicked(position))
+                if (CanTileBeClicked(tile))
                 {
-                    ChunkData target = GetSpecificGroundTile(tile.GetPosition());
-                    _poisons.Add(new Poison(target, 2, 2));
+                    _poisons.Add(new Poison(tile, 2, 2));
                 }
             }
             FinishAbility();

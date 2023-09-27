@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -83,6 +82,7 @@ using Random = UnityEngine.Random;
             {
                 HighlightTile highlightTile = chunk.GetTileHighlight();
                 highlightTile.ActivateColorGridTile(false);
+                DisableDamagePreview(chunk);
             }
             _chunkList.Clear();
         }        
@@ -160,7 +160,7 @@ using Random = UnityEngine.Random;
         }        
         protected virtual void SetNonHoveredAttackColor(ChunkData chunkData)
         {
-            if (chunkData.GetCurrentCharacter() == null || (chunkData.GetCurrentCharacter() != null && !CanTileBeClicked(chunkData.GetPosition())))
+            if (chunkData.GetCurrentCharacter() == null || (chunkData.GetCurrentCharacter() != null && !CanTileBeClicked(chunkData)))
             {
                 chunkData.GetTileHighlight().SetHighlightColor(AttackHighlight);
             }
@@ -171,7 +171,7 @@ using Random = UnityEngine.Random;
         }
         protected virtual void SetHoveredAttackColor(ChunkData chunkData)
         {
-            if (chunkData.GetCurrentCharacter() == null || (chunkData.GetCurrentCharacter() != null && !CanTileBeClicked(chunkData.GetPosition())))
+            if (chunkData.GetCurrentCharacter() == null || (chunkData.GetCurrentCharacter() != null && !CanTileBeClicked(chunkData)))
             {
                 chunkData.GetTileHighlight().SetHighlightColor(AttackHighlightHover);
             }
@@ -290,7 +290,7 @@ using Random = UnityEngine.Random;
                     highlightTile.SetDamageText($"{minAttackDamage}-{maxAttackDamage}");
                 }
 
-                if (chunk.GetCurrentPlayerInformation().health <= minAttackDamage)
+                if (chunk.GetCurrentPlayerInformation().GetHealth() <= minAttackDamage)
                 {
                     highlightTile.ActivateDeathSkull(true);
                 }
@@ -319,7 +319,13 @@ using Random = UnityEngine.Random;
         }
         public virtual bool CanTileBeClicked(Vector3 position)
         {
-            return CheckIfSpecificInformationType(position, InformationType.Player) && !IsAllegianceSame(position);
+            ChunkData chunk = GetSpecificGroundTile(position);
+            return CheckIfSpecificInformationType(chunk, InformationType.Player) && !IsAllegianceSame(chunk);
+        }
+        
+        public virtual bool CanTileBeClicked(ChunkData chunk)
+        {
+            return CheckIfSpecificInformationType(chunk, InformationType.Player) && !IsAllegianceSame(chunk);
         }
         public virtual void OnTurnStart()
         {
@@ -367,16 +373,9 @@ using Random = UnityEngine.Random;
         {
             return GameTileMap.Tilemap.GetChunk(position);
         }
-
-        protected static bool CheckIfSpecificInformationType(Vector3 position, InformationType informationType)
+        protected static bool CheckIfSpecificInformationType(ChunkData chunk, InformationType informationType)
         {
-            ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
-            return chunkData.GetInformationType()==informationType;
-        }
-        protected bool IsAllegianceSame(Vector3 position)
-        {
-            ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
-            return chunkData == null || chunkData.GetCurrentPlayerInformation().GetPlayerTeam() == playerInformation.GetPlayerTeam() || !friendlyFire;
+            return chunk.GetInformationType()==informationType;
         }
         protected bool IsAllegianceSame(ChunkData chunk)
         {
@@ -407,7 +406,7 @@ using Random = UnityEngine.Random;
         }
         protected void DealRandomDamageToTarget(ChunkData chunkData, int minDamage, int maxDamage)
         {
-            if (chunkData != null && chunkData.GetCurrentCharacter() != null && IsAllegianceSame(chunkData.GetPosition()))
+            if (chunkData != null && chunkData.GetCurrentCharacter() != null && IsAllegianceSame(chunkData))
             {
                 int randomDamage = Random.Range(minDamage, maxDamage);
                 bool crit = IsItCriticalStrike(ref randomDamage);
@@ -417,7 +416,7 @@ using Random = UnityEngine.Random;
         }
         protected void DealDamage(ChunkData chunkData, int damage, bool crit)
         {
-            if (chunkData != null && chunkData.GetCurrentCharacter() != null && IsAllegianceSame(chunkData.GetPosition()))
+            if (chunkData != null && chunkData.GetCurrentCharacter() != null && IsAllegianceSame(chunkData))
             {
                 chunkData.GetCurrentPlayerInformation().DealDamage(damage, crit, gameObject);
             }

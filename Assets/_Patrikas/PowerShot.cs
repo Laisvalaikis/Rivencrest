@@ -78,10 +78,10 @@ public class PowerShot : BaseAction
     }
     public void OnTileHover(Vector3 position)
     {
-        if (IsAllegianceSame(position)) //jei priesas, tada jam ikirs
-        {
-            var bonusDamage = (DoesCharacterHaveBlessing("Release toxins")/* && GetSpecificGroundTile(tile, 0, 0, blockingLayer).GetComponent<PlayerInformation>().Poisons.Count > 0*/) ? 3 : 0;
-            //EnableDamagePreview(position, minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
-        }
+        // if (IsAllegianceSame(position)) //jei priesas, tada jam ikirs
+        // {
+        //     var bonusDamage = (DoesCharacterHaveBlessing("Release toxins")/* && GetSpecificGroundTile(tile, 0, 0, blockingLayer).GetComponent<PlayerInformation>().Poisons.Count > 0*/) ? 3 : 0;
+        //     //EnableDamagePreview(position, minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
+        // }
     }
 }

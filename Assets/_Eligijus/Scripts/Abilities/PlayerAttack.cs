@@ -22,8 +22,9 @@ public class PlayerAttack : BaseAction
 
     public override bool CanTileBeClicked(Vector3 position)
     {
-        if (((CheckIfSpecificInformationType(position, InformationType.Player) || CheckIfSpecificInformationType(position, InformationType.Object))
-            && IsAllegianceSame(position) && !GetComponent<PlayerInformation>().CantAttackCondition) || friendlyFire)
+        ChunkData chunk = GetSpecificGroundTile(position);
+        if (((CheckIfSpecificInformationType(chunk, InformationType.Player) || CheckIfSpecificInformationType(chunk, InformationType.Object))
+            && IsAllegianceSame(chunk) && !GetComponent<PlayerInformation>().CantAttackCondition) || friendlyFire)
         {
             return true;
         }

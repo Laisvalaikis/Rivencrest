@@ -12,15 +12,14 @@ public class CometFall : BaseAction
         {
             foreach (ChunkData chunk in _damageTiles)
             {
-                Vector3 chunkPosition = chunk.GetPosition();
                 //tile.transform.Find("mapTile").Find("VFX9x9Upper").gameObject.GetComponent<Animator>().SetTrigger("cometFall");
                 //Enemy
-                if (CheckIfSpecificInformationType(chunkPosition, InformationType.Player) && !IsAllegianceSame(chunkPosition))
+                if (CheckIfSpecificInformationType(chunk, InformationType.Player) && !IsAllegianceSame(chunk))
                 {
                     DealRandomDamageToTarget(chunk, MinAttackDamage, MaxAttackDamage);
                 }
                 //Ally
-                else if (CheckIfSpecificInformationType(chunkPosition, InformationType.Player) && IsAllegianceSame(chunkPosition))
+                else if (CheckIfSpecificInformationType(chunk, InformationType.Player) && IsAllegianceSame(chunk))
                 {
                     DealRandomDamageToTarget(chunk, MinAttackDamage/3, MaxAttackDamage/3);
                 }

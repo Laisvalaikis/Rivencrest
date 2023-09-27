@@ -18,10 +18,9 @@ public class Avalanche : BaseAction
             base.ResolveAbility(position);
             foreach (ChunkData chunk in _chunkList)
             {
-                if (CanTileBeClicked(chunk.GetPosition()))
+                if (CanTileBeClicked(chunk))
                 {
-                    ChunkData target = GetSpecificGroundTile(chunk.GetPosition());
-                    DealRandomDamageToTarget(target,minAttackDamage,maxAttackDamage);
+                    DealRandomDamageToTarget(chunk,minAttackDamage,maxAttackDamage);
                     // _playerInformation.ApplyDebuff("IceSlow");
                 }
             }
@@ -32,20 +31,19 @@ public class Avalanche : BaseAction
     public override bool CanTileBeClicked(Vector3 position)
     {
         ChunkData chunkData = GetSpecificGroundTile(position);
-        if (CheckIfSpecificInformationType(position, InformationType.Player) &&
-            !IsAllegianceSame(chunkData.GetPosition()) &&
-            IsCharacterAffectedByCrowdControl(position))
+        if (CheckIfSpecificInformationType(chunkData, InformationType.Player) &&
+            !IsAllegianceSame(chunkData) &&
+            IsCharacterAffectedByCrowdControl(chunkData))
         {
             return true;
         }
         return false;
     }
-    private bool IsCharacterAffectedByCrowdControl(Vector3 position)
+    private bool IsCharacterAffectedByCrowdControl(ChunkData chunk)
     {
-        if (CheckIfSpecificInformationType(position, InformationType.Player))
+        if (CheckIfSpecificInformationType(chunk, InformationType.Player))
         {
-            ChunkData target = GetSpecificGroundTile(position);
-            PlayerInformation playerInformationLocal = target.GetCurrentPlayerInformation();
+            PlayerInformation playerInformationLocal = chunk.GetCurrentPlayerInformation();
             if (playerInformationLocal.Slow1 
                 || playerInformationLocal.Slow2
                 || playerInformationLocal.Slow3 

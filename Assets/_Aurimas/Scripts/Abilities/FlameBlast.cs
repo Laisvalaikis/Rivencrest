@@ -5,10 +5,10 @@ public class FlameBlast : BaseAction
     public override void ResolveAbility(Vector3 position)
     {
         base.ResolveAbility(position);
-        if (CheckIfSpecificInformationType(position, InformationType.Player) && (IsAllegianceSame(position) || friendlyFire))
+        ChunkData chunk = GetSpecificGroundTile(position);
+        if (CheckIfSpecificInformationType(chunk, InformationType.Player) && (IsAllegianceSame(chunk) || friendlyFire))
         {
-            ChunkData chunkData = GetSpecificGroundTile(position);
-            DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
+            DealRandomDamageToTarget(chunk, minAttackDamage, maxAttackDamage);
         }
         FinishAbility();
     }

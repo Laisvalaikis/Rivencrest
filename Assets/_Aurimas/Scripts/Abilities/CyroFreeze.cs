@@ -26,10 +26,10 @@ public class CyroFreeze : BaseAction
             };
             foreach (var x in pushDirectionVectors)
             {
-               if (CheckIfSpecificInformationType(transform.position, InformationType.Player))
+               if (CheckIfSpecificInformationType(GetSpecificGroundTile(transform.position), InformationType.Player)) //wrong
                {
                   ChunkData chunkData = GameTileMap.Tilemap.GetChunk(transform.position);
-                  if (IsAllegianceSame(chunkData.GetPosition()))
+                  if (IsAllegianceSame(chunkData))
                   {
                      DealRandomDamageToTarget(chunkData, minAttackDamage / 2, maxAttackDamage / 2);
                   }

@@ -37,7 +37,7 @@ public class AIBehaviour : MonoBehaviour
         chunksForAttack = action.GetChunkList();
         foreach (var chunk in chunksForAttack)
         {
-            if (chunk.GetCurrentCharacter() != null && action.CanTileBeClicked(chunk.GetPosition()))
+            if (chunk.GetCurrentCharacter() != null && action.CanTileBeClicked(chunk))
                 return true;
         }
             
