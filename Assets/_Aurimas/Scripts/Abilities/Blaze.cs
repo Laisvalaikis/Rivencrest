@@ -26,7 +26,7 @@ public class Blaze : BaseAction
     public void TriggerAflame(ChunkData centerChunk, int radius)//pakeisti ji i public override void veliau jei kels problemu
     {
         if (centerChunk != null && centerChunk.GetCurrentPlayerInformation().Aflame != null &&
-            centerChunk.GetCurrentPlayerInformation().health > 0)
+            centerChunk.GetCurrentPlayerInformation().GetHealth() > 0)
         {
             (int centerX, int centerY) = centerChunk.GetIndexes();
             // GameTileMap.Tilemap.EnableAllTiles();

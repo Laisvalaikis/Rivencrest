@@ -37,24 +37,24 @@ public class GameProgress : MonoBehaviour
             }
             if (SceneManager.GetActiveScene().name == "Campfire" && _data.townData.difficultyLevel == 0)
             {
-                GameObject.Find("GameInformation").GetComponent<PlayerTeams>().allCharacterList.teams[1].characters.RemoveRange(3, 2);
+                GameObject.Find("GameInformation").GetComponent<PlayerTeams>().allCharacterList.Teams[1].characters.RemoveRange(3, 2);
             }
             if (SceneManager.GetActiveScene().name == "Campfire" && _data.townData.difficultyLevel == 1)
             {
-                GameObject.Find("GameInformation").GetComponent<PlayerTeams>().allCharacterList.teams[1].characters.RemoveRange(4, 1);
+                GameObject.Find("GameInformation").GetComponent<PlayerTeams>().allCharacterList.Teams[1].characters.RemoveRange(4, 1);
             }
             if (GameObject.Find("GameInformation") != null && _data.townData.singlePlayer)
             {
                 if (_data.Characters.Count > 0)
                 {
                     var gameInformation = GameObject.Find("GameInformation").GetComponent<PlayerTeams>();
-                    gameInformation.allCharacterList.teams[0].teamName = SaveSystem.LoadTownData().teamColor;
+                    gameInformation.allCharacterList.Teams[0].teamName = SaveSystem.LoadTownData().teamColor;
                     _data.CharactersOnLastMission.Clear();
-                    gameInformation.allCharacterList.teams[0].characters.Clear();
+                    gameInformation.allCharacterList.Teams[0].characters.Clear();
                     for (int i = 0; i < 3; i++)
                     {
                         _data.CharactersOnLastMission.Add(i);
-                        gameInformation.allCharacterList.teams[0].characters.Add(_data.Characters[i].prefab);
+                        gameInformation.allCharacterList.Teams[0].characters.Add(_data.Characters[i].prefab);
                        // _data.statistics.charactersSelectedCountByClass[Statistics.GetClassIndex(_data.Characters[i].prefab.GetComponent<PlayerInformation>().ClassName)]++;
                         //_data.globalStatistics.charactersSelectedCountByClass[Statistics.GetClassIndex(_data.Characters[i].prefab.GetComponent<PlayerInformation>().ClassName)]++;
                     }
@@ -65,8 +65,8 @@ public class GameProgress : MonoBehaviour
         if (_data.isCurrentScenePlayableMap && _data.townData.singlePlayer)
         {
             var playerTeams = GameObject.Find("GameInformation").GetComponent<PlayerTeams>();
-            playerTeams.allCharacterList.teams[1].characters.Clear();
-            playerTeams.allCharacterList.teams[1].isTeamAI = true;
+            playerTeams.allCharacterList.Teams[1].characters.Clear();
+            playerTeams.allCharacterList.Teams[1].isTeamAI = true;
             List<GameObject> possibleEnemyPrefabs = _data.AllEnemyCharacterPrefabs;
             if (allowEnemySelection)
             {
@@ -91,7 +91,7 @@ public class GameProgress : MonoBehaviour
                 }
                 else
                 {
-                    playerTeams.allCharacterList.teams[1].characters.Add(possibleEnemyPrefabs[index]);
+                    playerTeams.allCharacterList.Teams[1].characters.Add(possibleEnemyPrefabs[index]);
                     UsedIndexes.Add(index);
                 }
             }
@@ -367,13 +367,13 @@ public class GameProgress : MonoBehaviour
             {
                 for (int i = 0; i < _data.CharactersOnLastMission.Count; i++)
                 {
-                    var characterInfo = GameObject.Find("GameInformation").GetComponent<PlayerTeams>().allCharacterList.teams[0].characters[i].GetComponent<PlayerInformation>();
+                    var characterInfo = GameObject.Find("GameInformation").GetComponent<PlayerTeams>().allCharacterList.Teams[0].characters[i].GetComponent<PlayerInformation>();
                     characterInfo.savedCharacter = _data.Characters[i];
                     cornerButtonManager.GenerateAbilities();//SavedCharacter implementation
                 }
             }
             //Enemies
-            foreach (var character in GameObject.Find("GameInformation").GetComponent<PlayerTeams>().allCharacterList.teams[1].characters)
+            foreach (var character in GameObject.Find("GameInformation").GetComponent<PlayerTeams>().allCharacterList.Teams[1].characters)
             {
                 List<string> abilitiesToEnable = new List<string>();
                 //Abilities

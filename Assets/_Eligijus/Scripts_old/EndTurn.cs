@@ -32,7 +32,7 @@ public class EndTurn : MonoBehaviour
                 GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().SelectACharacter(character);
             }
             int activeTeamIndex = GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().activeTeamIndex;
-            if (activeTeamIndex + 1 == GameObject.Find("GameInformation").gameObject.GetComponent<PlayerTeams>().allCharacterList.teams.Count)
+            if (activeTeamIndex + 1 == GameObject.Find("GameInformation").gameObject.GetComponent<PlayerTeams>().allCharacterList.Teams.Count)
             {
                 activeTeamIndex = 0;
             }
@@ -40,7 +40,7 @@ public class EndTurn : MonoBehaviour
             {
                 activeTeamIndex++;
             }
-            string teamName = GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].teamName;
+            string teamName = GameObject.Find("GameInformation").gameObject.GetComponent<GameInformation>().GetComponent<PlayerTeams>().allCharacterList.Teams[activeTeamIndex].teamName;
             GameObject.Find("Canvas").transform.Find("PortraitBoxesContainer").gameObject.SetActive(false);
             GameObject.Find("Canvas").transform.Find("EndTurn").gameObject.SetActive(false);
             GameObject.Find("Canvas").transform.Find("TopRightCornerUI").transform.Find("HelpButton").gameObject.SetActive(false);

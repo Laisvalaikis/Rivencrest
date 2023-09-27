@@ -11,7 +11,7 @@ public class Execute : BaseAction
         ChunkData chunkData = GetSpecificGroundTile(position);
         int damage = ExecuteDamage(position);
         chunkData.GetCurrentPlayerInformation().DealDamage(damage, false, gameObject);
-        if(chunkData.GetCurrentPlayerInformation().health <= 0)
+        if(chunkData.GetCurrentPlayerInformation().GetHealth() <= 0)
         {
             GetComponent<PlayerInformation>().Heal(5, false);
         }

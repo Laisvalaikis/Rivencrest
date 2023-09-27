@@ -70,7 +70,7 @@ public class GameInformation : MonoBehaviour
        // {
             instance = this;
         //}
-        ActiveTeam = GetComponent<PlayerTeams>().allCharacterList.teams[0].teamName; //The team who goes first.
+        ActiveTeam = GetComponent<PlayerTeams>().allCharacterList.Teams[0].teamName; //The team who goes first.
         AddButton = GameObject.Find("Canvas").transform.Find("AddButton")?.gameObject;
         //ChangeVisionTiles();
         activateAfter2Frames = 1;
@@ -204,9 +204,9 @@ public class GameInformation : MonoBehaviour
     public void FakeUpdate()
     {
         var playerTeamsList = GetComponent<PlayerTeams>().allCharacterList;
-        for (int i = 0; i < playerTeamsList.teams.Count; i++)
+        for (int i = 0; i < playerTeamsList.Teams.Count; i++)
         {
-            for (int j = 0; j < playerTeamsList.teams[i].characters.Count; j++)
+            for (int j = 0; j < playerTeamsList.Teams[i].characters.Count; j++)
             {
                 // playerTeamsList.teams[i].characters[j].GetComponent<PlayerMovement>().FakeUpdate();
             }
@@ -216,13 +216,13 @@ public class GameInformation : MonoBehaviour
             // x.GetComponent<PlayerMovement>().FakeUpdate();
         }
         //
-        if (undoAction.available && GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].undoCount > 0)
+        if (undoAction.available && GetComponent<PlayerTeams>().allCharacterList.Teams[activeTeamIndex].undoCount > 0)
         {
             GameObject.Find("Canvas").transform.Find("UndoTurn").GetComponent<Button>().interactable = true;
         }
         else GameObject.Find("Canvas").transform.Find("UndoTurn").GetComponent<Button>().interactable = false;
         GameObject.Find("Canvas").transform.Find("UndoTurn").Find("Frame").Find("UndoCount").GetComponent<TextMeshProUGUI>().text = "["
-            + GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].undoCount + "]";
+            + GetComponent<PlayerTeams>().allCharacterList.Teams[activeTeamIndex].undoCount + "]";
         CheckWhetherToHighlightEndTurn();
         if (GameObject.Find("Canvas").transform.Find("EndTurn").GetComponent<EndTurn>().confirmState
             && !GameObject.Find("Canvas").transform.Find("EndTurn").GetComponent<ButtonMechanics>().hovered)
@@ -237,7 +237,7 @@ public class GameInformation : MonoBehaviour
         if (undoAction.available)
         {
             undoAction.MoveBack();
-            GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].undoCount--;
+            GetComponent<PlayerTeams>().allCharacterList.Teams[activeTeamIndex].undoCount--;
         }
     }
 
@@ -342,9 +342,9 @@ public class GameInformation : MonoBehaviour
 
     private void DisableAllCharacters()
     {
-        for (int i = 0; i < GetComponent<PlayerTeams>().allCharacterList.teams.Count; i++)
+        for (int i = 0; i < GetComponent<PlayerTeams>().allCharacterList.Teams.Count; i++)
         {
-            foreach(GameObject characterInList in GetComponent<PlayerTeams>().allCharacterList.teams[i].characters)
+            foreach(GameObject characterInList in GetComponent<PlayerTeams>().allCharacterList.Teams[i].characters)
             {
                 DisableCharacter(characterInList);
             }
@@ -374,9 +374,9 @@ public class GameInformation : MonoBehaviour
 
     public void DisableGrids()
     {
-        for (int i = 0; i < GetComponent<PlayerTeams>().allCharacterList.teams.Count; i++)
+        for (int i = 0; i < GetComponent<PlayerTeams>().allCharacterList.Teams.Count; i++)
         {
-            for (int j = 0; j < GetComponent<PlayerTeams>().allCharacterList.teams[i].characters.Count; j++)
+            for (int j = 0; j < GetComponent<PlayerTeams>().allCharacterList.Teams[i].characters.Count; j++)
             {
                 // GameObject characterInList = GetComponent<PlayerTeams>().allCharacterList.teams[i].characters[j];
                 // characterInList.GetComponent<GridMovement>().DisableGrid();
@@ -437,14 +437,14 @@ public class GameInformation : MonoBehaviour
         OnAnyMove(); //VienkartinisUpdate
         var playerTeamsList = GetComponent<PlayerTeams>().allCharacterList;
         var playerTeams = GetComponent<PlayerTeams>();
-        for (int i = 0; i < playerTeamsList.teams.Count; i++) //isjungia visu
+        for (int i = 0; i < playerTeamsList.Teams.Count; i++) //isjungia visu
         {
-            for (int j = 0; j < playerTeamsList.teams[i].characters.Count; j++)
+            for (int j = 0; j < playerTeamsList.Teams[i].characters.Count; j++)
             {
-                playerTeamsList.teams[i].characters[j].GetComponent<CharacterVision>().DisableGrid();
-                if (playerTeamsList.teams[i].characters[j].GetComponent<PlayerInformation>().VisionGameObject != null)
+                playerTeamsList.Teams[i].characters[j].GetComponent<CharacterVision>().DisableGrid();
+                if (playerTeamsList.Teams[i].characters[j].GetComponent<PlayerInformation>().VisionGameObject != null)
                 {
-                    playerTeamsList.teams[i].characters[j].GetComponent<PlayerInformation>().VisionGameObject.GetComponent<CharacterVision>().DisableGrid();
+                    playerTeamsList.Teams[i].characters[j].GetComponent<PlayerInformation>().VisionGameObject.GetComponent<CharacterVision>().DisableGrid();
                 }
             }
         }
@@ -454,43 +454,43 @@ public class GameInformation : MonoBehaviour
         OnAnyMove(); //VienkartinisUpdate
         var playerTeamsList = GetComponent<PlayerTeams>().allCharacterList;
         var playerTeams = GetComponent<PlayerTeams>();
-        for (int i = 0; i < playerTeamsList.teams.Count; i++) //isjungia visu
+        for (int i = 0; i < playerTeamsList.Teams.Count; i++) //isjungia visu
         {
-            for (int j = 0; j < playerTeamsList.teams[i].characters.Count; j++)
+            for (int j = 0; j < playerTeamsList.Teams[i].characters.Count; j++)
             {
-                playerTeamsList.teams[i].characters[j].GetComponent<CharacterVision>().DisableGrid();
-                if (playerTeamsList.teams[i].characters[j].GetComponent<PlayerInformation>().VisionGameObject != null)
+                playerTeamsList.Teams[i].characters[j].GetComponent<CharacterVision>().DisableGrid();
+                if (playerTeamsList.Teams[i].characters[j].GetComponent<PlayerInformation>().VisionGameObject != null)
                 {
-                    playerTeamsList.teams[i].characters[j].GetComponent<PlayerInformation>().VisionGameObject.GetComponent<CharacterVision>().DisableGrid();
+                    playerTeamsList.Teams[i].characters[j].GetComponent<PlayerInformation>().VisionGameObject.GetComponent<CharacterVision>().DisableGrid();
                 }
             }
         }
         //
-        bool isTeamAI = GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].isTeamAI;
-        for (int i = 0; i < playerTeamsList.teams.Count; i++) //ijungia aktyvios komandos allegiance komandu
+        bool isTeamAI = GetComponent<PlayerTeams>().allCharacterList.Teams[activeTeamIndex].isTeamAI;
+        for (int i = 0; i < playerTeamsList.Teams.Count; i++) //ijungia aktyvios komandos allegiance komandu
         {
             if (isTeamAI) //skiriasi if'ai tik su kuo lygina team allegiance
             {
-                if (playerTeams.FindTeamAllegiance(playerTeamsList.teams[i].teamName) == PlayerAllegiance)
+                if (playerTeams.FindTeamAllegiance(playerTeamsList.Teams[i].teamName) == PlayerAllegiance)
                 {
-                    for (int j = 0; j < playerTeamsList.teams[i].characters.Count; j++)//ir ijungia dabartines komandos
+                    for (int j = 0; j < playerTeamsList.Teams[i].characters.Count; j++)//ir ijungia dabartines komandos
                     {
-                        playerTeamsList.teams[i].characters[j].GetComponent<CharacterVision>().EnableGrid();
-                        if (playerTeamsList.teams[i].characters[j].GetComponent<PlayerInformation>().VisionGameObject != null)
+                        playerTeamsList.Teams[i].characters[j].GetComponent<CharacterVision>().EnableGrid();
+                        if (playerTeamsList.Teams[i].characters[j].GetComponent<PlayerInformation>().VisionGameObject != null)
                         {
-                            playerTeamsList.teams[i].characters[j].GetComponent<PlayerInformation>().VisionGameObject.GetComponent<CharacterVision>().EnableGrid();
+                            playerTeamsList.Teams[i].characters[j].GetComponent<PlayerInformation>().VisionGameObject.GetComponent<CharacterVision>().EnableGrid();
                         }
                     }
                 }
             }
-            else if (playerTeams.FindTeamAllegiance(playerTeamsList.teams[i].teamName) == playerTeams.FindTeamAllegiance(playerTeamsList.teams[activeTeamIndex].teamName))
+            else if (playerTeams.FindTeamAllegiance(playerTeamsList.Teams[i].teamName) == playerTeams.FindTeamAllegiance(playerTeamsList.Teams[activeTeamIndex].teamName))
             {
-                for (int j = 0; j < playerTeamsList.teams[i].characters.Count; j++)//ir ijungia dabartines komandos
+                for (int j = 0; j < playerTeamsList.Teams[i].characters.Count; j++)//ir ijungia dabartines komandos
                 {
-                    playerTeamsList.teams[i].characters[j].GetComponent<CharacterVision>().EnableGrid();
-                    if (playerTeamsList.teams[i].characters[j].GetComponent<PlayerInformation>().VisionGameObject != null)
+                    playerTeamsList.Teams[i].characters[j].GetComponent<CharacterVision>().EnableGrid();
+                    if (playerTeamsList.Teams[i].characters[j].GetComponent<PlayerInformation>().VisionGameObject != null)
                     {
-                        playerTeamsList.teams[i].characters[j].GetComponent<PlayerInformation>().VisionGameObject.GetComponent<CharacterVision>().EnableGrid();
+                        playerTeamsList.Teams[i].characters[j].GetComponent<PlayerInformation>().VisionGameObject.GetComponent<CharacterVision>().EnableGrid();
                     }
                 }
             }
@@ -510,9 +510,9 @@ public class GameInformation : MonoBehaviour
     public void OnAnyMove()
     {
         var playerTeamsList = GetComponent<PlayerTeams>().allCharacterList;
-        for (int i = 0; i < playerTeamsList.teams.Count; i++)
+        for (int i = 0; i < playerTeamsList.Teams.Count; i++)
         {
-            for (int j = 0; j < playerTeamsList.teams[i].characters.Count; j++)
+            for (int j = 0; j < playerTeamsList.Teams[i].characters.Count; j++)
             {
                 // playerTeamsList.teams[i].characters[j].GetComponent<PlayerMovement>().OnAnyMove();
             }
@@ -525,15 +525,15 @@ public class GameInformation : MonoBehaviour
     public void ChangeActiveTeam(string newActiveTeamsName)
     {
         GameObject newActiveTeamsPortraitBox = null;
-        for (int i = 0; i < GetComponent<PlayerTeams>().allCharacterList.teams.Count; i++)
+        for (int i = 0; i < GetComponent<PlayerTeams>().allCharacterList.Teams.Count; i++)
         {
-            if (GetComponent<PlayerTeams>().allCharacterList.teams[i].teamName == newActiveTeamsName)
+            if (GetComponent<PlayerTeams>().allCharacterList.Teams[i].teamName == newActiveTeamsName)
             {
-                newActiveTeamsPortraitBox = GetComponent<PlayerTeams>().allCharacterList.teams[i].teamPortraitBoxGameObject;
+                newActiveTeamsPortraitBox = GetComponent<PlayerTeams>().allCharacterList.Teams[i].teamPortraitBoxGameObject;
             }
             else
             {
-                GetComponent<PlayerTeams>().allCharacterList.teams[i].teamPortraitBoxGameObject.SetActive(false);
+                GetComponent<PlayerTeams>().allCharacterList.Teams[i].teamPortraitBoxGameObject.SetActive(false);
             }
         }
         if (newActiveTeamsPortraitBox != null)
@@ -547,7 +547,7 @@ public class GameInformation : MonoBehaviour
         OnAnyMove();
         DisableAllCharacters();
         InspectedCharacter = null;
-        for (int j = 0; j < GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].characters.Count; j++) //dabartine komanda
+        for (int j = 0; j < GetComponent<PlayerTeams>().allCharacterList.Teams[activeTeamIndex].characters.Count; j++) //dabartine komanda
         {
             // GameObject characterInList = GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].characters[j];
             // characterInList.GetComponent<GridMovement>().OnTurnEnd();
@@ -563,7 +563,7 @@ public class GameInformation : MonoBehaviour
             hazard.ActivateAction(true);
         }
         //--------------------------------
-        if (activeTeamIndex + 1 == GetComponent<PlayerTeams>().allCharacterList.teams.Count)
+        if (activeTeamIndex + 1 == GetComponent<PlayerTeams>().allCharacterList.Teams.Count)
         {
             activeTeamIndex = 0;
         }
@@ -571,12 +571,12 @@ public class GameInformation : MonoBehaviour
         {
             activeTeamIndex++;
         }
-        ChangeActiveTeam(GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].teamName);
+        ChangeActiveTeam(GetComponent<PlayerTeams>().allCharacterList.Teams[activeTeamIndex].teamName);
 
         //va sita padelayinti jei yra komandos kortele
-        for (int j = 0; j < GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].characters.Count; j++)//komanda kurios dabar eile bus
+        for (int j = 0; j < GetComponent<PlayerTeams>().allCharacterList.Teams[activeTeamIndex].characters.Count; j++)//komanda kurios dabar eile bus
         {
-            GameObject characterInList = GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].characters[j];
+            GameObject characterInList = GetComponent<PlayerTeams>().allCharacterList.Teams[activeTeamIndex].characters[j];
             // characterInList.GetComponent<GridMovement>().OnTurnStart();
             //  for (int k = 0; k < characterInList.GetComponent<ActionManager>().ActionScripts.Count; k++)
             // {
@@ -592,12 +592,12 @@ public class GameInformation : MonoBehaviour
         }
         //--------------------------------
 
-        bool isTeamAI = GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].isTeamAI;
+        bool isTeamAI = GetComponent<PlayerTeams>().allCharacterList.Teams[activeTeamIndex].isTeamAI;
         if (!isTeamAI) //Camera focus at the start of the turn
         {
-            if (GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].lastSelectedPlayer.GetComponent<PlayerInformation>().health > 0)
+            if (GetComponent<PlayerTeams>().allCharacterList.Teams[activeTeamIndex].lastSelectedPlayer.GetComponent<PlayerInformation>().GetHealth() > 0)
             {
-                FocusSelectedCharacter(GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].lastSelectedPlayer);
+                FocusSelectedCharacter(GetComponent<PlayerTeams>().allCharacterList.Teams[activeTeamIndex].lastSelectedPlayer);
             }
             else if (GetComponent<PlayerTeams>().FirstAliveCharacter(activeTeamIndex) != null)
             {
@@ -629,7 +629,7 @@ public class GameInformation : MonoBehaviour
                 for (int j = 0; j < PlayersInTeamCount; j++)//komanda kurios dabar eile bus
                 {
                     GameObject characterInList = AliveAIList[j];
-                    if (characterInList.GetComponent<PlayerInformation>().health > 0)
+                    if (characterInList.GetComponent<PlayerInformation>().GetHealth() > 0)
                     {
                         StartCoroutine(ExecuteAfterTime(0.5f + TimeSpent, () =>
                         {
@@ -681,7 +681,7 @@ public class GameInformation : MonoBehaviour
         if (teamsInformation.ChampionTeam != null)
         {
             string team = GetComponent<PlayerTeams>().ChampionTeam;
-            if (teamsInformation.allCharacterList.teams[0].teamName == team) {
+            if (teamsInformation.allCharacterList.Teams[0].teamName == team) {
                 GameObject.Find("Canvas").transform.Find("VictoryScreen").transform.Find("VictoryText").GetComponent<TextMeshProUGUI>().text = "VICTORY";
             }
             else 
@@ -700,12 +700,12 @@ public class GameInformation : MonoBehaviour
             if (teamsInformation.ChampionAllegiance == "1") 
             {
                 GameObject.Find("Canvas").transform.Find("VictoryScreen").transform.Find("VictoryText").GetComponent<TextMeshProUGUI>().text = "VICTORY";
-                victoryColor = ColorStorage.TeamColor(teamsInformation.allCharacterList.teams[0].teamName);
+                victoryColor = ColorStorage.TeamColor(teamsInformation.allCharacterList.Teams[0].teamName);
             }
             else
             {
                 GameObject.Find("Canvas").transform.Find("VictoryScreen").transform.Find("VictoryText").GetComponent<TextMeshProUGUI>().text = "DEFEAT";
-                victoryColor = ColorStorage.TeamColor(teamsInformation.allCharacterList.teams[1].teamName);
+                victoryColor = ColorStorage.TeamColor(teamsInformation.allCharacterList.Teams[1].teamName);
             }
             
             GameObject.Find("Canvas").transform.Find("VictoryScreen").transform.Find("VictoryText").GetComponent<TextMeshProUGUI>().color = victoryColor;
@@ -729,13 +729,13 @@ public class GameInformation : MonoBehaviour
         {
 
             //VICTORY
-            if (teamsInformation.ChampionTeam == teamsInformation.allCharacterList.teams[0].teamName || teamsInformation.ChampionAllegiance == "1")
+            if (teamsInformation.ChampionTeam == teamsInformation.allCharacterList.Teams[0].teamName || teamsInformation.ChampionAllegiance == "1")
             {
                 for (int i = 0; i < _data.CharactersOnLastMission.Count; i++)
                 {
-                    teamsInformation.allCharacterList.teams[0].characters[i].GetComponent<PlayerInformation>().AddKillXP();
-                    _data.Characters[_data.CharactersOnLastMission[i]].xPToGain = 750 + teamsInformation.allCharacterList.teams[0].characters[i].GetComponent<PlayerInformation>().XPToGain;
-                    _data.Characters[_data.CharactersOnLastMission[i]].dead = teamsInformation.allCharacterList.teams[0].characters[i].GetComponent<PlayerInformation>().health <= 0;
+                    teamsInformation.allCharacterList.Teams[0].characters[i].GetComponent<PlayerInformation>().AddKillXP();
+                    _data.Characters[_data.CharactersOnLastMission[i]].xPToGain = 750 + teamsInformation.allCharacterList.Teams[0].characters[i].GetComponent<PlayerInformation>().XPToGain;
+                    _data.Characters[_data.CharactersOnLastMission[i]].dead = teamsInformation.allCharacterList.Teams[0].characters[i].GetComponent<PlayerInformation>().GetHealth() <= 0;
                     if (_data.Characters[_data.CharactersOnLastMission[i]].dead)
                     {
                         _data.Characters[_data.CharactersOnLastMission[i]].xPToGain = 0;
@@ -757,7 +757,7 @@ public class GameInformation : MonoBehaviour
             {
                 for (int i = 0; i < _data.CharactersOnLastMission.Count; i++)
                 {
-                    _data.Characters[_data.CharactersOnLastMission[i]].dead = teamsInformation.allCharacterList.teams[0].characters[i].GetComponent<PlayerInformation>().health <= 0;
+                    _data.Characters[_data.CharactersOnLastMission[i]].dead = teamsInformation.allCharacterList.Teams[0].characters[i].GetComponent<PlayerInformation>().GetHealth() <= 0;
                     _data.Characters[_data.CharactersOnLastMission[i]].xPToGain = 0;
                     //_data.statistics.characterDeathsCountByClass[Statistics.GetClassIndex(_data.Characters[_data.CharactersOnLastMission[i]].prefab.GetComponent<PlayerInformation>().ClassName)]++;
                     //_data.globalStatistics.characterDeathsCountByClass[Statistics.GetClassIndex(_data.Characters[_data.CharactersOnLastMission[i]].prefab.GetComponent<PlayerInformation>().ClassName)]++;
@@ -818,7 +818,7 @@ public class GameInformation : MonoBehaviour
     private void CheckWhetherToHighlightEndTurn()
     {
         bool highlightEndTurn = true;
-        foreach (GameObject character in GetComponent<PlayerTeams>().allCharacterList.teams[activeTeamIndex].characters)
+        foreach (GameObject character in GetComponent<PlayerTeams>().allCharacterList.Teams[activeTeamIndex].characters)
         {
             // if (character.GetComponent<GridMovement>().AvailableMovementPoints > 2 && character.GetComponent<PlayerInformation>().health > 0 && !character.GetComponent<PlayerInformation>().Debuffs.Contains("Stun"))
                 highlightEndTurn = false;

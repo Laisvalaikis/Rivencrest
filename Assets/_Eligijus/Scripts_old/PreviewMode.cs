@@ -10,7 +10,7 @@ public class PreviewMode
         Overlay?.SetActive(true);
         foreach (GameObject x in characters) 
         {
-            int health = x.GetComponent<PlayerInformation>().health;
+            int health = x.GetComponent<PlayerInformation>().GetHealth();
             if (health > 0) 
             {
                 x.transform.Find("VFX").Find("PreviewCharacter").gameObject.SetActive(true);

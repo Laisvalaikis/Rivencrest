@@ -28,9 +28,6 @@ public class PlayerInformation : MonoBehaviour
     [SerializeField] public SpriteRenderer spriteRenderer;
 
     [SerializeField] private Animator animator;
-    
-    [HideInInspector] public int health = 100;
-
     private int _health = 100;
     
     public string CharactersTeam = "Default";
@@ -75,14 +72,13 @@ public class PlayerInformation : MonoBehaviour
     {
         LoadPlayerProgression();
         PlayerSetup();
-        health = _playerInformationData.MaxHealth;
         _health = _playerInformationData.MaxHealth;
     }
 
     public float GetHealthPercentage()
     {
         float maxHealthDouble = _playerInformationData.MaxHealth;
-        float healthDouble = health;
+        float healthDouble = _health;
         return healthDouble / maxHealthDouble * 100;
     }
 
@@ -178,15 +174,14 @@ public class PlayerInformation : MonoBehaviour
     }
     public void Heal(int healAmount, bool crit)
     {
-        if (health + healAmount >= _playerInformationData.MaxHealth)
+        if (_health + healAmount >= _playerInformationData.MaxHealth)
         {
-            health = _playerInformationData.MaxHealth;
+            _health = _playerInformationData.MaxHealth;
         }
         else
         {
-            health += healAmount;
+            _health += healAmount;
         }
-       
     }
     public void ApplyDebuff(string debuff, GameObject DebuffApplier = null)
     {

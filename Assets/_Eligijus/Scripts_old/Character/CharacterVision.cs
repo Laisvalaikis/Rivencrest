@@ -73,7 +73,7 @@ public class CharacterVision : MonoBehaviour
 
     public  void EnableGrid()
     {
-        if (GetComponent<PlayerInformation>().health > 0)
+        if (GetComponent<PlayerInformation>().GetHealth() > 0)
         {
             CreateGrid();
             HighlightAll();

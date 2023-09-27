@@ -200,7 +200,7 @@ public class BottomCornerUI : MonoBehaviour
         // staminaPoints.text = currentCharacter.GetComponent<GridMovement>().AvailableMovementPoints.ToString(); //Sets movement text playerInformationCurrentCharacter
         //healthPoints.text = currentCharacter.GetComponent<PlayerInformation>().health.ToString(); //Sets health text
        // healthAnimator.SetFloat("healthPercent", currentCharacter.GetComponent<PlayerInformation>().GetHealthPercentage());
-        healthPoints.text = playerInformationCurrentCharacter.health.ToString(); //Sets health text
+        healthPoints.text = playerInformationCurrentCharacter.GetHealth().ToString(); //Sets health text
         healthAnimator.SetFloat("healthPercent", playerInformationCurrentCharacter.GetHealthPercentage());
         SelectMovementButton();
     }

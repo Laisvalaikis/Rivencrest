@@ -66,7 +66,7 @@ public class PvPCharacterSelect : MonoBehaviour
             isButtonAvailable = true;
             Debug.Log("Deselected");
         }
-        if (characterOnBoard.GetComponent<PlayerInformation>().health > 0)
+        if (characterOnBoard.GetComponent<PlayerInformation>().GetHealth() > 0)
             {
                 // if (characterPortraitFrame.GetComponent<Animator>().GetBool("select"))
                 // {

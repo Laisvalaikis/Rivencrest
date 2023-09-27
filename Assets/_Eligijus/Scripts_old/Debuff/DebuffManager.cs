@@ -44,7 +44,7 @@ public class DebuffManager : MonoBehaviour
             debuffs.Add("Blocker");
             k++;
         }
-        if (character.BlockingAlly != null && character.BlockingAlly.GetComponent<PlayerInformation>().health > 0)
+        if (character.BlockingAlly != null && character.BlockingAlly.GetComponent<PlayerInformation>().GetHealth() > 0)
         {
             debuffs.Add("Block");
             k++;

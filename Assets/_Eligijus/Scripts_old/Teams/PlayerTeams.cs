@@ -46,48 +46,48 @@ public class PlayerTeams : MonoBehaviour
     private void InitializeCharacterLists()
     {
         _data = Data.Instance;
-        allCharacterList.teams[0].characters.Clear();
+        allCharacterList.Teams[0].characters.Clear();
         foreach (var t in _data.Characters)
         {
-            allCharacterList.teams[0].characters.Add(t.prefab);
+            allCharacterList.Teams[0].characters.Add(t.prefab);
         }
-        currentCharacters = new TeamsList { teams = new List<Team>() };
+        currentCharacters = new TeamsList { Teams = new List<Team>() };
     }
     
     private void SpawnAllCharacters()
     {
-        for (int i = 0; i < allCharacterList.teams.Count; i++)
+        for (int i = 0; i < allCharacterList.Teams.Count; i++)
         {
-            currentCharacters.teams.Add(new Team());
-            currentCharacters.teams[i].characters = new List<GameObject>();
-            currentCharacters.teams[i].aliveCharacters = new List<GameObject>();
-            currentCharacters.teams[i].aliveCharactersPlayerInformation = new List<PlayerInformation>();
-            SpawnCharacters(i, allCharacterList.teams[i].coordinates);
+            currentCharacters.Teams.Add(new Team());
+            currentCharacters.Teams[i].characters = new List<GameObject>();
+            currentCharacters.Teams[i].aliveCharacters = new List<GameObject>();
+            currentCharacters.Teams[i].aliveCharactersPlayerInformation = new List<PlayerInformation>();
+            SpawnCharacters(i, allCharacterList.Teams[i].coordinates);
         }
     }
     private void SpawnCharacters(int teamIndex, List<Vector3> coordinates)
     {
         var spawnCoordinates = coordinates;
-        colorManager.SetPortraitBoxSprites(portraitTeamBox.gameObject, allCharacterList.teams[teamIndex].teamName);// priskiria spalvas mygtukams ir paciam portraitboxui
+        colorManager.SetPortraitBoxSprites(portraitTeamBox.gameObject, allCharacterList.Teams[teamIndex].teamName);// priskiria spalvas mygtukams ir paciam portraitboxui
         int i = 0;
         foreach (var x in spawnCoordinates)
         {
-            if (i < allCharacterList.teams[teamIndex].characters.Count)
+            if (i < allCharacterList.Teams[teamIndex].characters.Count)
             {
-                GameObject spawnedCharacter = Instantiate(allCharacterList.teams[teamIndex].characters[i], new Vector3(x.x, x.y, 0f), Quaternion.identity); //Spawning the prefab into the scene.
+                GameObject spawnedCharacter = Instantiate(allCharacterList.Teams[teamIndex].characters[i], new Vector3(x.x, x.y, 0f), Quaternion.identity); //Spawning the prefab into the scene.
                 PlayerInformation playerInformation = spawnedCharacter.GetComponent<PlayerInformation>();
                 playerInformation.SetPlayerTeam(teamIndex);
                 GameTileMap.Tilemap.SetCharacter(spawnedCharacter.transform.position + new Vector3(0, 0.5f, 0), spawnedCharacter, playerInformation);
-                currentCharacters.teams[teamIndex].characters.Add(spawnedCharacter);
-                currentCharacters.teams[teamIndex].aliveCharacters.Add(spawnedCharacter);
-                currentCharacters.teams[teamIndex].aliveCharactersPlayerInformation.Add(playerInformation);
+                currentCharacters.Teams[teamIndex].characters.Add(spawnedCharacter);
+                currentCharacters.Teams[teamIndex].aliveCharacters.Add(spawnedCharacter);
+                currentCharacters.Teams[teamIndex].aliveCharactersPlayerInformation.Add(playerInformation);
             }
             i++;
         }
-        allCharacterList.teams[teamIndex].undoCount = undoCount;
+        allCharacterList.Teams[teamIndex].undoCount = undoCount;
         portraitTeamBox.ModifyList();
 
-        allCharacterList.teams[teamIndex].lastSelectedPlayer = allCharacterList.teams[teamIndex].characters[0];//LastSelectedPlayer
+        allCharacterList.Teams[teamIndex].lastSelectedPlayer = allCharacterList.Teams[teamIndex].characters[0];//LastSelectedPlayer
     }
     public void  SpawnDefaultCharacter(GameObject character) //spawns cornerUI for character not in teams list
     {
@@ -108,98 +108,53 @@ public class PlayerTeams : MonoBehaviour
                 otherCharacters.Remove(character);
             }
             currentTeam.characters.Add(character);
-            character.GetComponent<PlayerInformation>().CharactersTeam = allCharacterList.teams[teamIndex].teamName;
-            GameObject portraitBox = allCharacterList.teams[teamIndex].teamPortraitBoxGameObject;
+            PlayerInformation playerInformation = character.GetComponent<PlayerInformation>();
+            playerInformation.CharactersTeam = allCharacterList.Teams[teamIndex].teamName;
+            GameObject portraitBox = allCharacterList.Teams[teamIndex].teamPortraitBoxGameObject;
             portraitBox.GetComponent<TeamInformation>().ModifyList();
-            character.GetComponent<PlayerInformation>().PlayerSetup();
-            GetComponent<GameInformation>().ChangeVisionTiles();
+            playerInformation.PlayerSetup();
+            //todo: maybe update fog of war
         }
-    }
-    public bool IsGameOver()
-    {
-        if(allCharacterList.teams.Count == 1) {
-            return false;
-        }
-        int activeTeams = 0;
-        List<string> activeAllegiances = new List<string>();
-        for (int i = 0; i < allCharacterList.teams.Count; i++)
-        {
-            int activeCharacters = 0;
-            for (int j = 0; j < allCharacterList.teams[i].characters.Count; j++)
-            {
-                if (allCharacterList.teams[i].characters[j].GetComponent<PlayerInformation>().health > 0)
-                    activeCharacters++;
-            }
-            if (activeCharacters > 0)
-            {
-                bool alreadyAdded = false;
-                for(int j = 0; j < activeAllegiances.Count; j++)
-                {
-                    if (activeAllegiances[j] == allCharacterList.teams[i].teamAllegiance)
-                        alreadyAdded = true;
-                }
-                if (alreadyAdded == false)
-                {
-                    activeAllegiances.Add(allCharacterList.teams[i].teamAllegiance);
-                    ChampionAllegiance = allCharacterList.teams[i].teamAllegiance;
-                }
-                activeTeams++;
-                ChampionTeam = allCharacterList.teams[i].teamName;
-            }
-        }
-        if (activeTeams == 0 || activeTeams > 1)
-            ChampionTeam = null;
-        if (activeAllegiances.Count == 0 || activeAllegiances.Count > 1)
-            ChampionAllegiance = null;
-        if (activeTeams <= 1 || activeAllegiances.Count <= 1)
-        {
-            GameObject.Find("Canvas").transform.Find("EnemyTurnText").gameObject.SetActive(false);
-            isGameOver = true;
-            return true;
-        }
-        else return false;
     }
     public List<GameObject> AliveCharacterList(int teamIndex)
     {
-        return currentCharacters.teams[teamIndex].aliveCharacters;
+        return currentCharacters.Teams[teamIndex].aliveCharacters;
     }
-    
     public List<PlayerInformation> AliveCharacterPlayerInformationList(int teamIndex)
     {
-        return currentCharacters.teams[teamIndex].aliveCharactersPlayerInformation;
+        return currentCharacters.Teams[teamIndex].aliveCharactersPlayerInformation;
     }
-    
     public GameObject FirstAliveCharacter(int teamIndex)
     {
-        if (allCharacterList.teams[teamIndex].lastSelectedPlayer.GetComponent<PlayerInformation>().health > 0)
+        if (allCharacterList.Teams[teamIndex].lastSelectedPlayer.GetComponent<PlayerInformation>().GetHealth() > 0)
         {
-            return allCharacterList.teams[teamIndex].lastSelectedPlayer;
+            return allCharacterList.Teams[teamIndex].lastSelectedPlayer;
         }
-        for (int j = 0; j < allCharacterList.teams[teamIndex].characters.Count; j++)
+        for (int j = 0; j < allCharacterList.Teams[teamIndex].characters.Count; j++)
         {
-            if (allCharacterList.teams[teamIndex].characters[j].GetComponent<PlayerInformation>().health > 0)
+            if (allCharacterList.Teams[teamIndex].characters[j].GetComponent<PlayerInformation>().GetHealth() > 0)
             {
-                return allCharacterList.teams[teamIndex].characters[j];
+                return allCharacterList.Teams[teamIndex].characters[j];
             }
         }
         return null;
     }
     public string FindTeamAllegiance(string teamName)
     {
-        for(int i = 0;i< allCharacterList.teams.Count; i++)
+        for(int i = 0;i< allCharacterList.Teams.Count; i++)
         {
-            if(allCharacterList.teams[i].teamName == teamName)
+            if(allCharacterList.Teams[i].teamName == teamName)
             {
-                return allCharacterList.teams[i].teamAllegiance;
+                return allCharacterList.Teams[i].teamAllegiance;
             }
         }
         return "";
     }
     public void RemoveCharacterFromTeam(GameObject character, string teamName)
     {
-        if(allCharacterList.teams.Find(x => x.teamName == teamName) != null)
+        if(allCharacterList.Teams.Find(x => x.teamName == teamName) != null)
         {
-            allCharacterList.teams.Find(x => x.teamName == teamName).characters.Remove(character);
+            allCharacterList.Teams.Find(x => x.teamName == teamName).characters.Remove(character);
         }
     }
 
@@ -207,11 +162,11 @@ public class PlayerTeams : MonoBehaviour
     {
         List<GameObject> characters = new List<GameObject>();
 
-        for (int i = 0; i < allCharacterList.teams.Count; i++)
+        for (int i = 0; i < allCharacterList.Teams.Count; i++)
         {
-            for (int j = 0; j < allCharacterList.teams[i].characters.Count; j++)
+            for (int j = 0; j < allCharacterList.Teams[i].characters.Count; j++)
             {
-                characters.Add(allCharacterList.teams[i].characters[j]);
+                characters.Add(allCharacterList.Teams[i].characters[j]);
             }
         }
         foreach (GameObject x in otherCharacters)
@@ -241,5 +196,5 @@ public class Team
 [System.Serializable]
 public class TeamsList
 {
-    public List<Team> teams;
+    public List<Team> Teams { get; set; }
 }

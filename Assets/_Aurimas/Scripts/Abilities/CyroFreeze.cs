@@ -13,7 +13,7 @@ public class CyroFreeze : BaseAction
    }
    public override void OnTurnStart()
    {
-      if (_isAbilityActive && (GetComponent<PlayerInformation>().health > 0))
+      if (_isAbilityActive && (GetComponent<PlayerInformation>().GetHealth() > 0))
       {
          StartCoroutine(ExecuteAfterTime(0.4f, () =>
          {

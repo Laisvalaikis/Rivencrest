@@ -43,18 +43,18 @@ public class MapSetup : MonoBehaviour
             mapInfo.CopyData(mapDatas[MapName]);
             currentMapData = mapInfo;
             //coordinates
-            for (int i = 0; i < playerTeams.allCharacterList.teams.Count && !playerTeams.allCharacterList.teams[i].isTeamAI; i++)
+            for (int i = 0; i < playerTeams.allCharacterList.Teams.Count && !playerTeams.allCharacterList.Teams[i].isTeamAI; i++)
             {
-                playerTeams.allCharacterList.teams[i].coordinates.Clear();
+                playerTeams.allCharacterList.Teams[i].coordinates.Clear();
                 for (int j = 0; j < mapInfo.mapCoordinates[i].coordinates.Count; j++)
                 {
-                    playerTeams.allCharacterList.teams[i].coordinates.Add(mapInfo.mapCoordinates[i].coordinates[j]);
+                    playerTeams.allCharacterList.Teams[i].coordinates.Add(mapInfo.mapCoordinates[i].coordinates[j]);
                 }
             }
             //NPC team spawning
             if (mapInfo.npcTeam.Count == 0)
             {
-                playerTeams.allCharacterList.teams.RemoveAt(2);
+                playerTeams.allCharacterList.Teams.RemoveAt(2);
             }
 
             //AI destinations

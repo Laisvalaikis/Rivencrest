@@ -172,15 +172,15 @@ private void InitializeEnemy(GameObject spawnedEnemy)
     //teamIndex is hardcoded as 1. Index of 1 is merchant team used for merchant mission (??)
     private void HealTeamsExceptOne(int teamIndex)
     {
-        for (int i = 0; i < _playerTeams.allCharacterList.teams.Count; i++)
+        for (int i = 0; i < _playerTeams.allCharacterList.Teams.Count; i++)
         {
             if (i != teamIndex)
             {
-                for(int j = 0; j < _playerTeams.allCharacterList.teams[i].characters.Count; j++) //dabartine komanda
+                for(int j = 0; j < _playerTeams.allCharacterList.Teams[i].characters.Count; j++) //dabartine komanda
                 {
-                    GameObject characterInList = _playerTeams.allCharacterList.teams[i].characters[j];
+                    GameObject characterInList = _playerTeams.allCharacterList.Teams[i].characters[j];
                     PlayerInformation playerInformation = characterInList.GetComponent<PlayerInformation>();
-                    if (playerInformation.health > 0)
+                    if (playerInformation.GetHealth() > 0)
                     {
                         playerInformation.Heal(10, false);
                     }

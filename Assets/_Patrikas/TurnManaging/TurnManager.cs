@@ -11,9 +11,9 @@ public class TurnManager : MonoBehaviour
     private void Start()
     {
         _teams = playerTeams.allCharacterList;
-        if (_teams.teams.Count > 0)
+        if (_teams.Teams.Count > 0)
         {
-            _currentTeam = _teams.teams[0];
+            _currentTeam = _teams.Teams[0];
         }
     }
 
@@ -66,9 +66,9 @@ public class TurnManager : MonoBehaviour
         //if all teams did their thing
         //then execute on start
         ExecuteAllAbilitiesOnTurnEnd(_currentTeam);
-        int currentTeamIndex = _teams.teams.IndexOf(_currentTeam);
-        currentTeamIndex = (currentTeamIndex + 1) % _teams.teams.Count;
-        _currentTeam = _teams.teams[currentTeamIndex];
+        int currentTeamIndex = _teams.Teams.IndexOf(_currentTeam);
+        currentTeamIndex = (currentTeamIndex + 1) % _teams.Teams.Count;
+        _currentTeam = _teams.Teams[currentTeamIndex];
         ExecuteAllAbilitiesOnTurnStart(_currentTeam);
     }
 }

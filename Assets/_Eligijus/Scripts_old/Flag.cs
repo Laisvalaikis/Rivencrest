@@ -34,7 +34,7 @@ public class Flag : Consumable
         if (WhoStepped.gameObject.tag == "Player" && WhoStepped.gameObject.GetComponent<PlayerInformation>().CharactersTeam != FlagsTeam
             && WhoStepped.gameObject.GetComponent<PlayerInformation>().FlagInHand == null)
         {
-            if (WhoStepped.gameObject.GetComponent<PlayerInformation>().health > 0)
+            if (WhoStepped.gameObject.GetComponent<PlayerInformation>().GetHealth() > 0)
             {
 
                 followThePlayer = true;
