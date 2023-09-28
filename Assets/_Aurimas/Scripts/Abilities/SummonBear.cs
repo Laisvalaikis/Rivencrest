@@ -4,10 +4,10 @@ public class SummonBear : BaseAction
 {
     [SerializeField] private GameObject bearPrefab;
 
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
-        spawnedCharacter = Instantiate(bearPrefab, position + new Vector3(0f,-0.5f), Quaternion.identity);
+        base.ResolveAbility(chunk);
+        spawnedCharacter = Instantiate(bearPrefab, chunk.GetPosition() + new Vector3(0f,-0.5f), Quaternion.identity);
         FinishAbility();
     }
 

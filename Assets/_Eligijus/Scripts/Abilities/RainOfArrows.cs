@@ -17,24 +17,23 @@ public class RainOfArrows : BaseAction
         }
     }
       
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
+        base.ResolveAbility(chunk);
         _cometTiles.Clear();
-        List<ChunkData> damageChunks = CreateDamageTileList(position);
-        foreach (ChunkData chunk in damageChunks)
+        List<ChunkData> damageChunks = CreateDamageTileList(chunk);
+        foreach (ChunkData chunkData in damageChunks)
         {
-            if (chunk.IsStandingOnChunk() && !IsAllegianceSame(chunk))
+            if (chunkData.IsStandingOnChunk() && !IsAllegianceSame(chunkData))
             {
-                _cometTiles.Add(chunk);
+                _cometTiles.Add(chunkData);
             }
         }
         FinishAbility();
     }
     
-    public List<ChunkData> CreateDamageTileList(Vector3 position)
+    public List<ChunkData> CreateDamageTileList(ChunkData chunk)
     {
-        ChunkData chunk = GameTileMap.Tilemap.GetChunk(position);
         (int x, int y) = chunk.GetIndexes();
         List<ChunkData> damageTiles = new List<ChunkData>();
         var spellDirectionVectors = new List<(int, int)>

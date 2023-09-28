@@ -58,17 +58,16 @@ public class ChainHook : BaseAction
             }
         }
     }
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
-        ChunkData chunk = GameTileMap.Tilemap.GetChunk(position);
+        base.ResolveAbility(chunk);
         GameObject character = chunk.GetCurrentCharacter();
         if (character!=null)
         {
             //target.transform.Find("VFX").Find("VFXImpact").gameObject.GetComponent<Animator>().SetTrigger("burgundy2");
             if (!IsAllegianceSame(chunk))
             { 
-                int multiplier = GetMultiplier(position);
+                int multiplier = GetMultiplier(chunk.GetPosition());
                 if (multiplier != 0)
                 { 
                     DealRandomDamageToTarget(chunk, minAttackDamage + multiplier * 2, maxAttackDamage + multiplier * 2);

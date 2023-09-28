@@ -373,27 +373,14 @@ public class GameTileMap : MonoBehaviour
         }
     }
 
-    public bool CharacterIsOnTile(Vector3 mousePosition)
+    public bool CharacterIsOnTile(ChunkData chunk)
     {
-        if (GetChunk(mousePosition) != null)
+        if (chunk != null)
         {
-            ChunkData chunkData = GetChunk(mousePosition);
-            return chunkData.GetCurrentCharacter() != null;
+            return chunk.GetCurrentCharacter() != null;
         }
         return false;
     }
-    
-    public bool SelectedCharacterIsOnTile(Vector3 mousePosition)
-    {
-        if (GetChunk(mousePosition) != null)
-        {
-            ChunkData chunkData = GetChunk(mousePosition);
-            return chunkData.GetCurrentCharacter() != null && chunkData.GetCurrentCharacter() == _currentSelectedCharacter;
-        }
-
-        return false;
-    }
-
     public bool OtherCharacterIsOnTile(Vector3 mousePosition)
     {
         if (GetChunk(mousePosition) != null)
@@ -412,10 +399,9 @@ public class GameTileMap : MonoBehaviour
             moveCharacter = character;
         }
 
-        if (GetChunk(mousePosition) != null && moveCharacter != null) // !CharacterIsOnTile(mousePosition)
+        if (GetChunk(mousePosition) != null && moveCharacter != null)
         {
-            ChunkData previousCharacterChunk =
-                GameTileMap.Tilemap.GetChunk(moveCharacter.transform.position);
+            ChunkData previousCharacterChunk = Tilemap.GetChunk(moveCharacter.transform.position);
             Vector3 characterPosition = GetChunk(mousePosition).GetPosition() - offset;
             moveCharacter.transform.position = characterPosition;
             SetCharacter(mousePosition, moveCharacter, previousCharacterChunk.GetCurrentPlayerInformation());
@@ -438,7 +424,7 @@ public class GameTileMap : MonoBehaviour
         if (chunk != null && moveCharacter != null) // !CharacterIsOnTile(mousePosition)
         {
             ChunkData previousCharacterChunk = Tilemap.GetChunk(moveCharacter.transform.position);
-            Vector3 characterPosition = chunk.GetPosition();
+            Vector3 characterPosition = chunk.GetPosition()-new Vector3(0, 0.5f, 1);
             moveCharacter.transform.position = characterPosition;
             SetCharacter(chunk, moveCharacter, previousCharacterChunk.GetCurrentPlayerInformation());
             ResetChunkCharacter(previousCharacterChunk.GetPosition());
@@ -466,7 +452,6 @@ public class GameTileMap : MonoBehaviour
 
     public void SelectTile(Vector3 mousePosition)
     {
-        
         if (GetChunk(mousePosition) != null)
         {
             ChunkData chunkData = GetChunk(mousePosition);

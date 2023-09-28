@@ -196,5 +196,5 @@ public class Team
 [System.Serializable]
 public class TeamsList
 {
-    public List<Team> Teams { get; set; }
+    public List<Team> Teams;
 }

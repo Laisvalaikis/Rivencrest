@@ -4,13 +4,12 @@ using UnityEngine;
 public class StunAttack : BaseAction
 {
     private List<Poison> _poisons;
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        if (CanTileBeClicked(position))
+        if (CanTileBeClicked(chunk))
         {
-            base.ResolveAbility(position);
-            ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
-            DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
+            base.ResolveAbility(chunk);
+            DealRandomDamageToTarget(chunk, minAttackDamage, maxAttackDamage);
             FinishAbility();
         }
     }

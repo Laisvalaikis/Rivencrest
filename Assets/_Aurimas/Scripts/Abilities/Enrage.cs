@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Enrage : BaseAction
 {
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
+        base.ResolveAbility(chunk);
         FinishAbility();
     }
     // public override void OnTileHover(GameObject tile)

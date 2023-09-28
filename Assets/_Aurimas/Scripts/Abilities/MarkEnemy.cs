@@ -12,11 +12,10 @@ public class MarkEnemy : BaseAction
             _target = null;
         }
     }
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
-        _target = GetSpecificGroundTile(position);
-        _target.GetCurrentPlayerInformation().Marker = gameObject;
+        base.ResolveAbility(chunk);
+        chunk.GetCurrentPlayerInformation().Marker = gameObject;
         FinishAbility();
         
     }

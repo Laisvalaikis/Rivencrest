@@ -5,9 +5,9 @@ public class WallEntrap : BaseAction
 {
     [SerializeField] private GameObject wallPrefab;
     private List<PlayerInformation> _playerInformations;
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
+        base.ResolveAbility(chunk);
         SpawnAdjacentWalls();
         FinishAbility();
     }
@@ -43,7 +43,7 @@ public class WallEntrap : BaseAction
                 GameObject spawnedWall = Instantiate(wallPrefab, chunkData.GetPosition() - new Vector3(0f, 0.5f, 0f),
                     Quaternion.identity);
                 PlayerInformation tempPlayerInformation = spawnedWall.GetComponent<PlayerInformation>();
-                GameTileMap.Tilemap.SetCharacter(chunkData.GetPosition(), spawnedWall, tempPlayerInformation);
+                GameTileMap.Tilemap.SetCharacter(chunkData, spawnedWall, tempPlayerInformation);
                 _playerInformations.Add(tempPlayerInformation);
             }
         }

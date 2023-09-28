@@ -5,13 +5,13 @@ public class CreateWhiteField : BaseAction
 {
     [SerializeField] private GameObject whiteFieldPrefab;
     
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
         for (int i = 0; i < _chunkList.Count; i++)
         {
             spawnedCharacter = Instantiate(whiteFieldPrefab, _chunkList[i].GetPosition() + new Vector3(0.015f, -0.5f, 0), Quaternion.identity);
         }
-        base.ResolveAbility(position);
+        base.ResolveAbility(chunk);
         FinishAbility();
     }
     // public override void OnTileHover(GameObject tile)

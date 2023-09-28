@@ -7,11 +7,11 @@ public class CreateBearTrap : BaseAction
     private BearTrap _bearTrap;
     private int i = 0;
 
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
+        base.ResolveAbility(chunk);
         
-        spawnedCharacter = Instantiate(bearTrapPrefab, position, Quaternion.identity);
+        spawnedCharacter = Instantiate(bearTrapPrefab, chunk.GetPosition(), Quaternion.identity);
         //_bearTrap.creator = gameObject;
         i = 0;
         FinishAbility();

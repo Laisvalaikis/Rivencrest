@@ -4,15 +4,14 @@ using UnityEngine;
 public class ThrowBehind : BaseAction
 {
     private Side _side;
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        if (GameTileMap.Tilemap.CharacterIsOnTile(position))
+        if (GameTileMap.Tilemap.CharacterIsOnTile(chunk))
         {
-            base.ResolveAbility(position);
-            ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
+            base.ResolveAbility(chunk);
             ChunkData playerChunk = GameTileMap.Tilemap.GetChunk(transform.position + new Vector3(0, 0.5f, 0));
-            ChunkSideByCharacter(playerChunk, chunkData);
-            MoveCharacter(playerChunk, chunkData);
+            ChunkSideByCharacter(playerChunk, chunk);
+            MoveCharacter(playerChunk, chunk);
             // DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
             FinishAbility();
         }

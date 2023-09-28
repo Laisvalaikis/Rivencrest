@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class BindingRitual : BaseAction
 {
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-         if (CanTileBeClicked(position))
+         if (CanTileBeClicked(chunk))
          {
              foreach (ChunkData tile in GetChunkList())
              {
                  DealRandomDamageToTarget(tile, minAttackDamage, maxAttackDamage);
              }
-             base.ResolveAbility(position);
+             base.ResolveAbility(chunk);
              FinishAbility();
          }
     }

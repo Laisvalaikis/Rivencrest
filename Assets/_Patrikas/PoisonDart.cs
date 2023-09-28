@@ -14,11 +14,10 @@ public class PoisonDart : BaseAction
         isAbilitySlow = false;
     }
 
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
+        base.ResolveAbility(chunk);
         //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
-        ChunkData chunk = GameTileMap.Tilemap.GetChunk(position);
         DealRandomDamageToTarget(chunk, minAttackDamage, maxAttackDamage);
         //target.GetComponent<PlayerInformation>().Poisons.Add(new PlayerInformation.Poison(gameObject, 2, 2));
         //clickedTile.transform.Find("mapTile").Find("VFX9x9Upper").gameObject.GetComponent<Animator>().SetTrigger("crowAttack");

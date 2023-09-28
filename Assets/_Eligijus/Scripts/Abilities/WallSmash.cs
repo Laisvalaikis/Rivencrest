@@ -5,17 +5,16 @@ public class WallSmash : BaseAction
 {
     [SerializeField] private int damageToWall = 1;
     
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
-        ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
-        if (chunkData.GetCurrentCharacter() != null && chunkData.GetInformationType() == InformationType.Player)
+        base.ResolveAbility(chunk);
+        if (chunk.GetCurrentCharacter() != null && chunk.GetInformationType() == InformationType.Player)
         {
-            DealRandomDamageToTarget(chunkData, minAttackDamage-2, maxAttackDamage-2);
+            DealRandomDamageToTarget(chunk, minAttackDamage-2, maxAttackDamage-2);
         }
-        else if(chunkData.GetCurrentCharacter() != null)
+        else if(chunk.GetCurrentCharacter() != null)
         {
-            DestroyObject(chunkData);
+            DestroyObject(chunk);
         }
         FinishAbility();
     }

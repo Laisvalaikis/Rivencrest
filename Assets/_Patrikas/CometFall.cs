@@ -28,17 +28,17 @@ public class CometFall : BaseAction
             _damageTiles.Clear();
         }
     }
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
+        base.ResolveAbility(chunk);
         //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell1"); //CometFallStart animation
         _damageTiles.Clear();
-        _damageTiles.Add(GameTileMap.Tilemap.GetChunk(position));
+        _damageTiles.Add(chunk);
         //GetSpecificGroundTile(clickedTile, 0, 0, groundLayer).transform.Find("mapTile").Find("CometZone").gameObject.SetActive(true);
         FinishAbility();
     }
 
-    public override bool CanTileBeClicked(Vector3 position)
+    public override bool CanTileBeClicked(ChunkData chunk)
     {
         return true; //might be bullshit
     }

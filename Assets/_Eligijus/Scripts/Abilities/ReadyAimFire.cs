@@ -4,11 +4,10 @@ public class ReadyAimFire : BaseAction
 {
     private ChunkData[,] _chunkArray;
     private int _index;
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
-        ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
-        _index = FindChunkIndex(chunkData);
+        base.ResolveAbility(chunk);
+        _index = FindChunkIndex(chunk);
         FinishAbility();
     }
      private int FindChunkIndex(ChunkData chunkData)

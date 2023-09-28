@@ -11,12 +11,11 @@ public class OilSlow : BaseAction
             SlowedTarget = null;
         }
     }
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
-        ChunkData chunkData = GetSpecificGroundTile(position);
-        GetSpecificGroundTile(position).GetCurrentPlayerInformation().ApplyDebuff("OilSlow");
-        DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
+        base.ResolveAbility(chunk);
+        chunk.GetCurrentPlayerInformation().ApplyDebuff("OilSlow");
+        DealRandomDamageToTarget(chunk, minAttackDamage, maxAttackDamage);
         FinishAbility();
 
         

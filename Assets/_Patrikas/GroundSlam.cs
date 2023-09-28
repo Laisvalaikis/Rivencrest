@@ -24,9 +24,9 @@ public class GroundSlam : BaseAction
         chunkData.GetTileHighlight().ActivateColorGridTile(true);
     }
     
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
+        base.ResolveAbility(chunk);
         //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell3");
         DealDamageToAdjacent();
         FinishAbility();

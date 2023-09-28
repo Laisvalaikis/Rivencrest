@@ -7,13 +7,13 @@ public class CreateEye : BaseAction
     private bool isEyeActive = true;
     private CharacterVision _characterVision;
     private PlayerInformation _playerInformation;
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
        foreach (var t in _chunkList)
        {
            spawnedCharacter = Instantiate(eyePrefab, t.GetPosition() + new Vector3(0.015f, -0.8f, 0), Quaternion.identity);
        }
-       base.ResolveAbility(position);
+       base.ResolveAbility(chunk);
        //_characterVision.EnableGrid();
        //_playerInformation.VisionGameObject = eyePrefab;
        //isEyeActive = true;

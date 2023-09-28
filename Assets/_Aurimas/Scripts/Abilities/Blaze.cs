@@ -5,11 +5,11 @@ public class Blaze : BaseAction
 {
     public int bonusDamage = 4;
 
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        if (CanTileBeClicked(position))
+        if (CanTileBeClicked(chunk))
         {
-            base.ResolveAbility(position);
+            base.ResolveAbility(chunk);
             // ChunkData chunkData = GetSpecificGroundTile(position);
             // bool aflame = chunkData.GetCurrentPlayerInformation().Aflame != null;
             // if (!aflame)

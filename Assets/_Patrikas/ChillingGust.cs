@@ -27,10 +27,9 @@ public class ChillingGust : BaseAction
             _protectedAlly = null;
         }
     }
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-            base.ResolveAbility(position);
-            ChunkData chunk = GameTileMap.Tilemap.GetChunk(position);
+            base.ResolveAbility(chunk);
             GameObject target = chunk.GetCurrentCharacter();
             PlayerInformation clickedPlayerInformation = target.GetComponent<PlayerInformation>();
             

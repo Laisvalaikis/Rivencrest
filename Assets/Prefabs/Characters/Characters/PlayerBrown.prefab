@@ -13,18 +13,10 @@ GameObject:
   - component: {fileID: 659955980883675729}
   - component: {fileID: 2605390308202641148}
   - component: {fileID: 1310519675225487401}
-  - component: {fileID: 7282709673297147284}
-  - component: {fileID: 3087791199313970238}
   - component: {fileID: 6890059959884175614}
   - component: {fileID: 711100996200367084}
   - component: {fileID: 4438398929298113651}
   - component: {fileID: 2884985102919791894}
-  - component: {fileID: 4651066817339321613}
-  - component: {fileID: 5450807669269674868}
-  - component: {fileID: 3529071659470723383}
-  - component: {fileID: 5519255558249706828}
-  - component: {fileID: 5482007512251186893}
-  - component: {fileID: 8787925346843778955}
   - component: {fileID: -5542427948637898674}
   m_Layer: 6
   m_Name: PlayerBrown
@@ -138,7 +130,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763e3691d60f39f48a88a9e4187954f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCenter: {x: 0, y: 0.5, z: 0}
+  selectedEffectIndex: 0
+  selectedSongIndex: 0
+  turnsSinceCast: 0
+  turnLifetime: 1
+  playerInformation: {fileID: 1310519675225487401}
+  laserGrid: 0
+  spawnedCharacter: {fileID: 0}
+  AttackRange: 1
+  AbilityCooldown: 1
+  minAttackDamage: 0
+  maxAttackDamage: 0
+  isAbilitySlow: 1
+  friendlyFire: 0
+  AttackAbility: 0
+  AvailableAttacks: 1
+  AbilityPoints: 0
+  isDisabled: 0
+  efficiencyCoefficient: 0.5
 --- !u!114 &1310519675225487401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1abe98737ff8546bdcc88828c38a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   playerInformationData: {fileID: 11400000, guid: 57971419408277446978c60312590ec8, type: 2}
   savedCharacter:
     level: 0
@@ -166,25 +176,17 @@ MonoBehaviour:
     characterIndex: 0
     playerInformation: {fileID: 11400000, guid: 57971419408277446978c60312590ec8, type: 2}
     prefab: {fileID: 0}
-  gameInformation: {fileID: 0}
   spriteRenderer: {fileID: 0}
   animator: {fileID: 0}
-  health: 100
   CharactersTeam: Default
   TeamManager: {fileID: 0}
   FlagInHand: {fileID: 0}
-  currentState: Movement
-  AnimationState: Movement
-  isCurrentStateAvailable: 0
-  StateAnimations: 0
   role: TANK
-  _data: {fileID: 0}
   Blocker: 0
   BlockingAlly: {fileID: 0}
   BarrierProvider: {fileID: 0}
   Marker: {fileID: 0}
   PinkWeakSpot: {fileID: 0}
-  Stun: 0
   Slow1: 0
   Slow2: 0
   Slow3: 0
@@ -194,93 +196,13 @@ MonoBehaviour:
   Aflame: {fileID: 0}
   Danger: 0
   IsCreatingWhiteField: 0
-  MindControlTarget: {fileID: 0}
   VisionGameObject: {fileID: 0}
   CantAttackCondition: 0
-  Disarmed: 0
-  cornerPortraitBoxInGame: {fileID: 0}
-  Caged: 0
   Protected: 0
-  MistShield: 0
   Stasis: 0
-  wasThisCharacterSpawned: 0
   enabledAbilitiesEnemy: []
-  Respawn: 0
   XPToGain: 0
   isThisObject: 0
-  PoisonSpecialColor: 0
-  PinkWeakSpotSpecialColor: 1
-  ProtectedSpecialColor: 2
---- !u!114 &7282709673297147284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5e8ea6dfe66da4fb5b6999ba9f19bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityBackground: {fileID: -5530371819613864454, guid: f12fdd45e276893438b8ce4098f754cb, type: 3}
-  ActionScripts:
-  - action: {fileID: 6890059959884175614}
-    actionName: Attack
-    AbilityIcon: {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    AbilityIndex: -1
-  - action: {fileID: 5519255558249706828}
-    actionName: RaiseRock
-    AbilityIcon: {fileID: -1071641158705808608, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    AbilityIndex: 0
-  - action: {fileID: 3529071659470723383}
-    actionName: WallSmash
-    AbilityIcon: {fileID: 4693665290838367390, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    AbilityIndex: 1
-  - action: {fileID: 5482007512251186893}
-    actionName: LeapAndSlam
-    AbilityIcon: {fileID: -4900127969809747176, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    AbilityIndex: 2
-  - action: {fileID: 8787925346843778955}
-    actionName: WallEntrap
-    AbilityIcon: {fileID: -3297504094695843550, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    AbilityIndex: 3
-  hasSlowAbilityBeenCast: 0
---- !u!114 &3087791199313970238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d94be52245746e9438ecf5c3b0c05488, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedEffectIndex: 0
-  selectedSongIndex: 0
-  actionStateName: 
-  AttackRange: 1
-  AbilityCooldown: 1
-  minAttackDamage: 0
-  maxAttackDamage: 0
-  isAbilitySlow: 1
-  friendlyFire: 0
-  AttackAbility: 0
-  AvailableAttacks: 1
-  AbilityPoints: 0
-  isDisabled: 0
-  spawnedCharacter: {fileID: 0}
-  MovementPoints: 3
-  AvailableMovementPoints: 0
-  IceSlow: 0
-  OilSlow: 0
-  Stun: 0
-  currentlyRemovedMovementPoints: 0
-  officiallyRemovedMovementPoints: 0
-  WayTilesList: []
-  PreferredWayTile: {fileID: 0}
 --- !u!114 &6890059959884175614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,7 +217,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedEffectIndex: 0
   selectedSongIndex: 0
-  actionStateName: Attack
+  turnsSinceCast: 0
+  turnLifetime: 1
+  playerInformation: {fileID: 1310519675225487401}
+  laserGrid: 0
+  spawnedCharacter: {fileID: 0}
   AttackRange: 1
   AbilityCooldown: 1
   minAttackDamage: 6
@@ -306,8 +232,7 @@ MonoBehaviour:
   AvailableAttacks: 1
   AbilityPoints: 0
   isDisabled: 0
-  spawnedCharacter: {fileID: 0}
-  impactVFXName: 
+  efficiencyCoefficient: 0.5
 --- !u!114 &711100996200367084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,186 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a7e0597635b554b83cedf5d8a926fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  specialAbilities:
-  - abilityName: WallEntrap
-    castOrder: 3
-    difficultyLevel: 3
-  specialBlessings: []
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  blockingLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  fogLayer:
-    serializedVersion: 2
-    m_Bits: 2048
-  gridMovement: {fileID: 0}
-  playerInformation: {fileID: 0}
-  playerMovement: {fileID: 0}
-  actionManager: {fileID: 0}
-  DestinationObject: {x: 0, y: 0, z: 0}
-  _data: {fileID: 0}
---- !u!114 &4651066817339321613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f39ccc5c8c8c150459e14d682e74c9cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedEffectIndex: 0
-  selectedSongIndex: 0
-  actionStateName: RaiseWall
-  AttackRange: 2
-  AbilityCooldown: 3
-  minAttackDamage: 0
-  maxAttackDamage: 0
-  isAbilitySlow: 1
-  friendlyFire: 0
-  AttackAbility: 0
-  AvailableAttacks: 1
-  AbilityPoints: 0
-  isDisabled: 0
-  spawnedCharacter: {fileID: 0}
-  WallPrefab: {fileID: 6134282409789233711, guid: 5d4722c599aac6e48b399dc0c9a08bdf, type: 3}
---- !u!114 &5450807669269674868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e453b7f054f8d3545b0dbdcc5b8187e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedEffectIndex: 0
-  selectedSongIndex: 0
-  actionStateName: ChainHook
-  AttackRange: 3
-  AbilityCooldown: 2
-  minAttackDamage: 0
-  maxAttackDamage: 1
-  isAbilitySlow: 0
-  friendlyFire: 0
-  AttackAbility: 0
-  AvailableAttacks: 1
-  AbilityPoints: 0
-  isDisabled: 0
-  spawnedCharacter: {fileID: 0}
---- !u!114 &3529071659470723383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44895b73d5a60904b97244426845fd4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedEffectIndex: 0
-  selectedSongIndex: 0
-  actionStateName: WallSmash
-  AttackRange: 1
-  AbilityCooldown: 2
-  minAttackDamage: 5
-  maxAttackDamage: 6
-  isAbilitySlow: 0
-  friendlyFire: 0
-  AttackAbility: 0
-  AvailableAttacks: 1
-  AbilityPoints: 0
-  isDisabled: 0
-  spawnedCharacter: {fileID: 0}
-  damageToWall: 1
---- !u!114 &5519255558249706828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70667a19f9dda9c44b556abfa7d84ba0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedEffectIndex: 0
-  selectedSongIndex: 0
-  actionStateName: RaiseRock
-  AttackRange: 2
-  AbilityCooldown: 2
-  minAttackDamage: 0
-  maxAttackDamage: 0
-  isAbilitySlow: 1
-  friendlyFire: 0
-  AttackAbility: 0
-  AvailableAttacks: 1
-  AbilityPoints: 0
-  isDisabled: 0
-  spawnedCharacter: {fileID: 0}
-  WallPrefab: {fileID: 3191233289316502079, guid: 9323982f213d037418b18827ed8732c7, type: 3}
---- !u!114 &5482007512251186893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 708ae63dd11cf4b4f89eed8e39044209, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedEffectIndex: 0
-  selectedSongIndex: 0
-  actionStateName: LeapAndSlam
-  AttackRange: 2
-  AbilityCooldown: 2
-  minAttackDamage: 4
-  maxAttackDamage: 5
-  isAbilitySlow: 0
-  friendlyFire: 0
-  AttackAbility: 0
-  AvailableAttacks: 1
-  AbilityPoints: 0
-  isDisabled: 0
-  spawnedCharacter: {fileID: 0}
---- !u!114 &8787925346843778955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659955980883675694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33cd3b3c120ab364e8d744edda73e097, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedEffectIndex: 0
-  selectedSongIndex: 0
-  actionStateName: WallEntrap
-  AttackRange: 3
-  AbilityCooldown: 3
-  minAttackDamage: 0
-  maxAttackDamage: 0
-  isAbilitySlow: 0
-  friendlyFire: 0
-  AttackAbility: 0
-  AvailableAttacks: 1
-  AbilityPoints: 0
-  isDisabled: 0
-  spawnedCharacter: {fileID: 0}
-  WallPrefab: {fileID: 3191233289316502079, guid: 9323982f213d037418b18827ed8732c7, type: 3}
+  actionManager: {fileID: -5542427948637898674}
 --- !u!114 &-5542427948637898674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,22 +304,8 @@ MonoBehaviour:
     enabled: 1
     AbilityImage: {fileID: -7484152466862747830, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
     Action: {fileID: 6890059959884175614}
-  - abilityText: {fileID: 11400000, guid: 7bb5a2309e4102d41aebe89191809cbe, type: 2}
-    enabled: 1
-    AbilityImage: {fileID: -1071641158705808608, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 5519255558249706828}
-  - abilityText: {fileID: 11400000, guid: 81188ee79b03a6840872cac168e53f16, type: 2}
-    enabled: 1
-    AbilityImage: {fileID: 4693665290838367390, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 3529071659470723383}
-  - abilityText: {fileID: 11400000, guid: 14fe02b640533074ca6ca18c73743119, type: 2}
-    enabled: 1
-    AbilityImage: {fileID: -4900127969809747176, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 5482007512251186893}
-  - abilityText: {fileID: 11400000, guid: daa05c12b3d6880449982cc390af8af6, type: 2}
-    enabled: 1
-    AbilityImage: {fileID: -3297504094695843550, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 8787925346843778955}
+  availableAttackPoints: 0
+  availableMovementPoints: 0
 --- !u!1 &659955981309584225
 GameObject:
   m_ObjectHideFlags: 0

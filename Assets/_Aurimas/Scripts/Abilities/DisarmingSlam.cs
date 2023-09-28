@@ -3,11 +3,10 @@ using UnityEngine;
 public class DisarmingSlam : BaseAction
 {
     
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
-        ChunkData chunkData = GetSpecificGroundTile(position);
-        DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
+        base.ResolveAbility(chunk);
+        DealRandomDamageToTarget(chunk, minAttackDamage, maxAttackDamage);
         FinishAbility();
     }
 

@@ -4,11 +4,10 @@ public class SilenceBeam : BaseAction
 {
     private ChunkData[,] _chunkArray;
     
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
-        ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
-        int index = FindChunkIndex(chunkData);
+        base.ResolveAbility(chunk);
+        int index = FindChunkIndex(chunk);
         if (index != -1)
         {
             for (int i = 0; i < _chunkArray.GetLength(1); i++)

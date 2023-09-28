@@ -5,13 +5,12 @@ public class Execute : BaseAction
     public int minimumDamage = 4;
     private PlayerInformationData _playerInformationData;
     
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
-        ChunkData chunkData = GetSpecificGroundTile(position);
-        int damage = ExecuteDamage(position);
-        chunkData.GetCurrentPlayerInformation().DealDamage(damage, false, gameObject);
-        if(chunkData.GetCurrentPlayerInformation().GetHealth() <= 0)
+        base.ResolveAbility(chunk);
+        int damage = ExecuteDamage();
+        chunk.GetCurrentPlayerInformation().DealDamage(damage, false, gameObject);
+        if(chunk.GetCurrentPlayerInformation().GetHealth() <= 0)
         {
             GetComponent<PlayerInformation>().Heal(5, false);
         }
@@ -45,7 +44,7 @@ public class Execute : BaseAction
             }
         }
     }
-    private int ExecuteDamage(Vector3 target) 
+    private int ExecuteDamage() 
     {
         int damage = minimumDamage + Mathf.FloorToInt(float.Parse((
             (_playerInformationData.MaxHealth) * 0.15

@@ -317,12 +317,6 @@ using Random = UnityEngine.Random;
                 DisableDamagePreview(chunk);
             }
         }
-        public virtual bool CanTileBeClicked(Vector3 position)
-        {
-            ChunkData chunk = GetSpecificGroundTile(position);
-            return CheckIfSpecificInformationType(chunk, InformationType.Player) && !IsAllegianceSame(chunk);
-        }
-        
         public virtual bool CanTileBeClicked(ChunkData chunk)
         {
             return CheckIfSpecificInformationType(chunk, InformationType.Player) && !IsAllegianceSame(chunk);
@@ -346,7 +340,7 @@ using Random = UnityEngine.Random;
             AvailableAttacks = 1;
             AbilityPoints++;
         }
-        public virtual void ResolveAbility(Vector3 position)
+        public virtual void ResolveAbility(ChunkData chunk)
         {
             _assignSound.PlaySound(selectedEffectIndex, selectedSongIndex);
             Debug.LogWarning("PlaySound");

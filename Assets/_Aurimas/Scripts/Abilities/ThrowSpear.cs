@@ -28,12 +28,11 @@ public class ThrowSpear : BaseAction
             }
         }
     }
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
-        ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
-        DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
-        spawnedCharacter = Instantiate(spearPrefab, position, Quaternion.identity);
+        base.ResolveAbility(chunk);
+        DealRandomDamageToTarget(chunk, minAttackDamage, maxAttackDamage);
+        spawnedCharacter = Instantiate(spearPrefab, chunk.GetPosition(), Quaternion.identity);
         FinishAbility();
     }
 

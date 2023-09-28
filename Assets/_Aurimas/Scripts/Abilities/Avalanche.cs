@@ -11,16 +11,16 @@ public class Avalanche : BaseAction
         AttackHighlightHover = new Color32(103, 136, 158, 255);
         CharacterOnGrid = new Color32(146, 212, 255, 255);
     }
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        if (CanTileBeClicked(position))
+        if (CanTileBeClicked(chunk))
         {
-            base.ResolveAbility(position);
-            foreach (ChunkData chunk in _chunkList)
+            base.ResolveAbility(chunk);
+            foreach (ChunkData chunkData in _chunkList)
             {
-                if (CanTileBeClicked(chunk))
+                if (CanTileBeClicked(chunkData))
                 {
-                    DealRandomDamageToTarget(chunk,minAttackDamage,maxAttackDamage);
+                    DealRandomDamageToTarget(chunkData,minAttackDamage,maxAttackDamage);
                     // _playerInformation.ApplyDebuff("IceSlow");
                 }
             }
@@ -28,12 +28,11 @@ public class Avalanche : BaseAction
         }
     }
 
-    public override bool CanTileBeClicked(Vector3 position)
+    public override bool CanTileBeClicked(ChunkData chunk)
     {
-        ChunkData chunkData = GetSpecificGroundTile(position);
-        if (CheckIfSpecificInformationType(chunkData, InformationType.Player) &&
-            !IsAllegianceSame(chunkData) &&
-            IsCharacterAffectedByCrowdControl(chunkData))
+        if (CheckIfSpecificInformationType(chunk, InformationType.Player) &&
+            !IsAllegianceSame(chunk) &&
+            IsCharacterAffectedByCrowdControl(chunk))
         {
             return true;
         }

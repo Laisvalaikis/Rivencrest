@@ -4,11 +4,11 @@ using UnityEngine;
 public class AcidRain : BaseAction
 {
     private List<Poison> _poisons;
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        if (CanTileBeClicked(position))
+        if (CanTileBeClicked(chunk))
         {
-            base.ResolveAbility(position);
+            base.ResolveAbility(chunk);
             foreach (ChunkData tile in _chunkList)
             {
                 if (CanTileBeClicked(tile))

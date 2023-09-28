@@ -80,14 +80,14 @@ public class PlayerMovement : BaseAction
         }
     }
     
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
         ClearArrowPath();
         _path = null;
-        base.ResolveAbility(position);
-        if (!GameTileMap.Tilemap.CharacterIsOnTile(position))
+        base.ResolveAbility(chunk);
+        if (!GameTileMap.Tilemap.CharacterIsOnTile(chunk))
         {
-            GameTileMap.Tilemap.MoveSelectedCharacter(position, new Vector3(0, 0.5f, 1));
+            GameTileMap.Tilemap.MoveSelectedCharacter(chunk);
         }
         FinishAbility();
         CreateGrid();

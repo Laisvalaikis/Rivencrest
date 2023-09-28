@@ -18771,6 +18771,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4223636459016666544, guid: 92d2ce958def0894c88edfdb36669c74, type: 3}
+      propertyPath: playerTeams
+      value: 
+      objectReference: {fileID: 1649360792}
+    - target: {fileID: 4223636459016666544, guid: 92d2ce958def0894c88edfdb36669c74, type: 3}
       propertyPath: _playerTeams
       value: 
       objectReference: {fileID: 1649360792}
@@ -26244,49 +26248,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c2ad3dea7ee1e843975c5e5affe718a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurnManager: {fileID: 0}
+  TurnManager: {fileID: 1649360797}
   portraitTeamBox: {fileID: 1428143988}
   allCharacterList:
-    teams:
-    - characters:
-      - {fileID: 659955980883675694, guid: 511d92ea4c1a41345bbb4895f1df4e0b, type: 3}
-      - {fileID: 659955980883675694, guid: 2fed0c255a6c85a43bb650b3dc9c0bac, type: 3}
-      - {fileID: 659955980883675694, guid: 2d5128fc605f5d94f98e6d8bcfb13a68, type: 3}
-      aliveCharacters: []
-      aliveCharactersPlayerInformation: []
-      coordinates:
-      - {x: 5.1487e-41, y: 5.82e-43, z: 0}
-      - {x: 0, y: 0, z: 0}
-      - {x: 5.149e-41, y: 0, z: 0}
-      teamName: Yellow
-      teamAllegiance: 1
-      isTeamAI: 0
-      undoCount: 0
-      teamPortraitBoxGameObject: {fileID: 0}
-      lastSelectedPlayer: {fileID: 0}
-    - characters:
-      - {fileID: 659955980883675694, guid: 511d92ea4c1a41345bbb4895f1df4e0b, type: 3}
-      - {fileID: 659955980883675694, guid: 2fed0c255a6c85a43bb650b3dc9c0bac, type: 3}
-      - {fileID: 659955980883675694, guid: 9a59304bf2eb94b4abd6bb0302237d1b, type: 3}
-      aliveCharacters: []
-      aliveCharactersPlayerInformation: []
-      coordinates:
-      - {x: 5.1487e-41, y: 5.82e-43, z: 0}
-      - {x: 0, y: 0, z: 0}
-      - {x: 5.149e-41, y: 0, z: 0}
-      teamName: Red
-      teamAllegiance: 2
-      isTeamAI: 0
-      undoCount: 0
-      teamPortraitBoxGameObject: {fileID: 0}
-      lastSelectedPlayer: {fileID: 0}
+    Teams:
     - characters: []
       aliveCharacters: []
       aliveCharactersPlayerInformation: []
       coordinates: []
-      teamName: White
-      teamAllegiance: 1
-      isTeamAI: 1
+      teamName: 
+      teamAllegiance: 
+      isTeamAI: 0
+      undoCount: 0
+      teamPortraitBoxGameObject: {fileID: 0}
+      lastSelectedPlayer: {fileID: 0}
+    - characters:
+      - {fileID: 659955980883675694, guid: 9d55e04bf50a04b4882a6ce2a5b4bdf7, type: 3}
+      - {fileID: 659955980883675694, guid: 648a6141880e31b469d60f07a450e3d8, type: 3}
+      - {fileID: 659955980883675694, guid: b237decf83b75c3428205f3677e3e41f, type: 3}
+      aliveCharacters: []
+      aliveCharactersPlayerInformation: []
+      coordinates: []
+      teamName: 
+      teamAllegiance: 
+      isTeamAI: 0
       undoCount: 0
       teamPortraitBoxGameObject: {fileID: 0}
       lastSelectedPlayer: {fileID: 0}
@@ -26345,7 +26330,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   cornerUIManager: {fileID: 421919350}
-  _data: {fileID: 0}
+  _data: {fileID: 2113666981}
 --- !u!114 &1649360795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26404,7 +26389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 26522310}
   gameTileMap: {fileID: 363828190}
-  _turnManager: {fileID: 1649360797}
+  turnManager: {fileID: 1649360797}
 --- !u!114 &1649360797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35090,6 +35075,17 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 6406070446431113017, guid: 775b520c392047849bf430022cd49424, type: 3}
   m_PrefabInstance: {fileID: 1292779088}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2113666981 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3778607277644703412, guid: 6b7a2da188bc210429f17660c77dc49f, type: 3}
+  m_PrefabInstance: {fileID: 1140691146}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb0ec2231e3fcf41ae550d0971a0573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2115091415
 PrefabInstance:
   m_ObjectHideFlags: 0

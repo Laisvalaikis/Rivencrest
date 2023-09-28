@@ -4,15 +4,15 @@ public class SpearPulse : BaseAction
 {
     private ChunkData _currentChunk;
 
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        if (CanTileBeClicked(position))
+        if (CanTileBeClicked(chunk))
         {
             for (int i = 0; i < _chunkList.Count; i++)
             {
                 DealRandomDamageToTarget(_chunkList[i], minAttackDamage, maxAttackDamage);
             }
-            base.ResolveAbility(position);
+            base.ResolveAbility(chunk);
             FinishAbility();
         }
     }

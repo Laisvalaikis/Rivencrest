@@ -5,9 +5,9 @@ public class MistShield : BaseAction
     private PlayerInformation _playerInformation;
     private bool isAbilityActive = false;
     
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
+        base.ResolveAbility(chunk);
         isAbilityActive = true;
         //_playerInformation.MistShield = true;
         _playerInformation.Protected = true;

@@ -73,7 +73,7 @@ public class AbilityManager : MonoBehaviour
             ChunkData chunk = gameTileMap.GetChunk(worldPos);
             if (chunk != null)
             {
-                _currentAbility.ResolveAbility(chunk.GetPosition());
+                _currentAbility.ResolveAbility(chunk);
                 turnManager.AddUsedAbility(new UsedAbility(_currentAbility, chunk));
             }
         }

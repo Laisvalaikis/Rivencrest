@@ -8,19 +8,18 @@ public class IsolatedStrike : BaseAction
     //public int maxAttackDamage = 8;
     private int isolationDamage = 7;
     
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
-        ChunkData target = GameTileMap.Tilemap.GetChunk(position);
+        base.ResolveAbility(chunk);
         int bonusDamage = 0;
         //Isolation
-        if (IsTargetIsolated(target))
+        if (IsTargetIsolated(chunk))
         {
             bonusDamage += isolationDamage;
         }
 
         //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
-        DealRandomDamageToTarget(target, minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
+        DealRandomDamageToTarget(chunk, minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
         FinishAbility();
     }
 

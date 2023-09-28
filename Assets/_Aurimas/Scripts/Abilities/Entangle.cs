@@ -2,12 +2,11 @@ using UnityEngine;
 
 public class Entangle : BaseAction
 {
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
-        ChunkData chunkData = GetSpecificGroundTile(position);
-        DealRandomDamageToTarget(chunkData,minAttackDamage,maxAttackDamage);
-        chunkData.GetCurrentPlayerInformation().ApplyDebuff("CantMove");
+        base.ResolveAbility(chunk);
+        DealRandomDamageToTarget(chunk,minAttackDamage,maxAttackDamage);
+        chunk.GetCurrentPlayerInformation().ApplyDebuff("CantMove");
         FinishAbility();
     }
 }

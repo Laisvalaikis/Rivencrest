@@ -5,15 +5,14 @@ public class FromTheShadows : BaseAction
     public string ImpactName = "red1";
     //public int minAttackDamage = 3;
     //public int maxAttackDamage = 4;
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-            base.ResolveAbility(position);
-            ChunkData chunk = GameTileMap.Tilemap.GetChunk(position);
+            base.ResolveAbility(chunk);
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
-            if (!GameTileMap.Tilemap.CharacterIsOnTile(position))
+            if (!GameTileMap.Tilemap.CharacterIsOnTile(chunk))
             {
-                GameTileMap.Tilemap.MoveSelectedCharacter(position, new Vector3(0, 0.5f, 1));
+                GameTileMap.Tilemap.MoveSelectedCharacter(chunk);
             }
             DamageAdjacent(chunk);
             //clickedTile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger(ImpactName);        

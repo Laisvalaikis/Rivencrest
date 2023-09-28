@@ -5,7 +5,7 @@ public class CrowAttack : BaseAction
 {
     private List<Poison> _poisons;
     private int poisonBonusDamage=2;
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
         foreach (var t in _chunkList)
         {
@@ -20,7 +20,7 @@ public class CrowAttack : BaseAction
                 DealRandomDamageToTarget(t,minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
             }
         }
-        base.ResolveAbility(position);
+        base.ResolveAbility(chunk);
         FinishAbility();
     }
     public override void OnTurnStart()

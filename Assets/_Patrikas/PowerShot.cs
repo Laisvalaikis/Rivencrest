@@ -54,10 +54,9 @@ public class PowerShot : BaseAction
         }
     }
     
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-            base.ResolveAbility(position);
-            ChunkData chunk = GameTileMap.Tilemap.GetChunk(position);
+            base.ResolveAbility(chunk);
             PlayerInformation playerInformationLocal = chunk.GetCurrentPlayerInformation();
             int bonusDamage = 0;
             if (DoesCharacterHaveBlessing("Release toxins") /*&& playerInformation.Poisons.Count > 0*/)

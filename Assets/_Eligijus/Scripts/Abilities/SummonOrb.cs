@@ -7,12 +7,11 @@ public class SummonOrb : BaseAction
     private PlayerInformation _orbInformation;
     private ChunkData _orbChunkData;
     private List<ChunkData> _attackList;
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
-        ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
-        SpawnOrb(chunkData);
-        GenerateAttackGrid(chunkData);
+        base.ResolveAbility(chunk);
+        SpawnOrb(chunk);
+        GenerateAttackGrid(chunk);
         FinishAbility();
     }
 

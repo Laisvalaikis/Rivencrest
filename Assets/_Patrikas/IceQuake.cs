@@ -9,13 +9,12 @@ public class IceQuake : BaseAction
         AttackHighlightHover = new Color32(103, 136, 158, 255);
         CharacterOnGrid = new Color32(146, 212, 255, 255);
     }
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        if (CanTileBeClicked(position))
+        if (CanTileBeClicked(chunk))
         {
-            base.ResolveAbility(position);
-            ChunkData targetChunk = GameTileMap.Tilemap.GetChunk(position);
-            GameObject character = targetChunk.GetCurrentCharacter();
+            base.ResolveAbility(chunk);
+            GameObject character = chunk.GetCurrentCharacter();
             PlayerInformation playerInformationLocal = character?.GetComponent<PlayerInformation>();
             int bonusDamage = 0;
 
@@ -43,7 +42,7 @@ public class IceQuake : BaseAction
             // character.transform.Find("mapTile").Find("VFX9x9Below").gameObject.GetComponent<Animator>()
             //     .SetTrigger("iceQuake");
 
-            DealRandomDamageToTarget(targetChunk, minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
+            DealRandomDamageToTarget(chunk, minAttackDamage + bonusDamage, maxAttackDamage + bonusDamage);
             FinishAbility();
         }
     }

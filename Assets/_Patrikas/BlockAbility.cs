@@ -51,9 +51,8 @@ public class BlockAbility : BaseAction
         }
     }
 
-    public override bool CanTileBeClicked(Vector3 position)
+    public override bool CanTileBeClicked(ChunkData chunk)
     {
-        ChunkData chunk = GetSpecificGroundTile(position);
         return IsAllegianceSame(chunk);
     }
     public override void OnTurnStart()
@@ -72,14 +71,13 @@ public class BlockAbility : BaseAction
         }
     }
 
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        if (CanTileBeClicked(position))
+        if (CanTileBeClicked(chunk))
         {
-            base.ResolveAbility(position);
+            base.ResolveAbility(chunk);
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spellToBool");
             //transform.Find("CharacterModel").GetComponent<Animator>().SetBool("block", true);
-            ChunkData chunk = GameTileMap.Tilemap.GetChunk(position);
             PlayerInformation playerInformationLocal = chunk.GetCurrentPlayerInformation();
             if (playerInformationLocal != null)
                 playerInformationLocal.BlockingAlly = GameTileMap.Tilemap.GetCurrentCharacter();

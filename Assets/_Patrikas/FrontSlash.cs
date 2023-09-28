@@ -4,13 +4,12 @@ public class FrontSlash : BaseAction
 {
     private ChunkData[,] _chunkArray;
     
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
+        base.ResolveAbility(chunk);
         //tile.transform.Find("mapTile").Find("VFXImpactUpper").gameObject.GetComponent<Animator>().SetTrigger("undead4");
         //tile.transform.Find("mapTile").Find("VFXImpactBelow").gameObject.GetComponent<Animator>().SetTrigger("undead6");
-        ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
-        int index = FindChunkIndex(chunkData);
+        int index = FindChunkIndex(chunk);
         if (index != -1)
         {
             for (int i = 0; i < _chunkArray.GetLength(1); i++)

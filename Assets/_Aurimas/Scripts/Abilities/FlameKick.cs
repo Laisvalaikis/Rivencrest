@@ -2,12 +2,11 @@ using UnityEngine;
 
 public class FlameKick : BaseAction
 {
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
-        ChunkData chunkData = GetSpecificGroundTile(position);
-        Vector3 pushDirection = chunkData.GetPosition() - gameObject.transform.position;
-        DealRandomDamageToTarget(chunkData,minAttackDamage,maxAttackDamage);
+        base.ResolveAbility(chunk);
+        Vector3 pushDirection = chunk.GetPosition() - gameObject.transform.position;
+        DealRandomDamageToTarget(chunk,minAttackDamage,maxAttackDamage);
         //chunkData.GetPosition() += pushDirection;
         FinishAbility();
     }

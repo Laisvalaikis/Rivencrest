@@ -53,8 +53,8 @@ public class MapSetup : MonoBehaviour
             }
             //NPC team spawning
             if (mapInfo.npcTeam.Count == 0)
-            {
-                playerTeams.allCharacterList.Teams.RemoveAt(2);
+            { 
+                //playerTeams.allCharacterList.Teams.RemoveAt(2);
             }
 
             //AI destinations

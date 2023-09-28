@@ -8,21 +8,19 @@ public class PlayerAttack : BaseAction
         AttackAbility = true;
     }
 
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        if (CanTileBeClicked(position))
+        if (CanTileBeClicked(chunk))
         {
-            base.ResolveAbility(position);
-            ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
-            DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
+            base.ResolveAbility(chunk);
+            DealRandomDamageToTarget(chunk, minAttackDamage, maxAttackDamage);
             Debug.LogError("FIX FINISH ABILITY");
             FinishAbility();
         }
     }
 
-    public override bool CanTileBeClicked(Vector3 position)
+    public override bool CanTileBeClicked(ChunkData chunk)
     {
-        ChunkData chunk = GetSpecificGroundTile(position);
         if (((CheckIfSpecificInformationType(chunk, InformationType.Player) || CheckIfSpecificInformationType(chunk, InformationType.Object))
             && IsAllegianceSame(chunk) && !GetComponent<PlayerInformation>().CantAttackCondition) || friendlyFire)
         {

@@ -3,15 +3,14 @@ using UnityEngine;
 
 public class ShadowBlink : BaseAction
 {
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-        base.ResolveAbility(position);
-        ChunkData chunkData = GameTileMap.Tilemap.GetChunk(position);
+        base.ResolveAbility(chunk);
         ChunkData current = GameTileMap.Tilemap.GetChunk(transform.position + new Vector3(0, 0.5f, 0));
-        Side _side = ChunkSideByCharacter(current, chunkData);
+        Side _side = ChunkSideByCharacter(current, chunk);
         int2 sideVector = GetSideVector(_side);
-        DealRandomDamageToTarget(chunkData, minAttackDamage, maxAttackDamage);
-        MovePlayerToSide(current, sideVector, chunkData);
+        DealRandomDamageToTarget(chunk, minAttackDamage, maxAttackDamage);
+        MovePlayerToSide(current, sideVector, chunk);
         FinishAbility();
     }
     

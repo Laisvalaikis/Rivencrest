@@ -13,12 +13,11 @@ public class LongShot : BaseAction
         CharacterOnGrid = new Color32(146, 212, 255, 255);
     }
 
-    public override void ResolveAbility(Vector3 position)
+    public override void ResolveAbility(ChunkData chunk)
     {
-            base.ResolveAbility(position);
+            base.ResolveAbility(chunk);
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("spell2");
-            ChunkData target = GameTileMap.Tilemap.GetChunk(position);
-            DealRandomDamageToTarget(target, minAttackDamage, maxAttackDamage);
+            DealRandomDamageToTarget(chunk, minAttackDamage, maxAttackDamage);
             //if (DoesCharacterHaveBlessing("Poisonous shot"))
             //{
            //     target.GetComponent<PlayerInformation>().Poisons.Add(new PlayerInformation.Poison(gameObject, 2, 1));

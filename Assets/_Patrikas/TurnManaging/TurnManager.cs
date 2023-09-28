@@ -5,7 +5,7 @@ using UnityEngine;
 public class TurnManager : MonoBehaviour
 {
     [SerializeField] private PlayerTeams playerTeams;
-    private TeamsList _teams;
+    private TeamsList _teams = new TeamsList();
     private Team _currentTeam;
 
     private void Start()

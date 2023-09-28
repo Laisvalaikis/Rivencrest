@@ -43,9 +43,9 @@ public class CyroFreeze : BaseAction
       }
       _isAbilityActive = false;
    }
-   public override void ResolveAbility(Vector3 position)
+   public override void ResolveAbility(ChunkData chunk)
    {
-      base.ResolveAbility(position);
+      base.ResolveAbility(chunk);
       _isAbilityActive = true;
       _playerInformation.Stasis = true;
       FinishAbility();
