@@ -15,9 +15,8 @@ public class BlockAbility : BaseAction
     //might be bullshit now
     protected override void SetNonHoveredAttackColor(ChunkData chunkData)
     {
-        GameObject character = chunkData.GetCurrentCharacter();
         HighlightTile tileHighlight = chunkData.GetTileHighlight();
-        if (character != null && IsAllegianceSame(chunkData))
+        if (chunkData.CharacterIsOnTile() && IsAllegianceSame(chunkData))
         {
             tileHighlight.SetHighlightColor(CharacterOnGrid);
         }

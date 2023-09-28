@@ -343,17 +343,14 @@ public class GameTileMap : MonoBehaviour
         }
 
     }
-
-    public void ResetChunkCharacter(Vector3 mousePosition)
+    private void ResetChunkCharacter(ChunkData chunk)
     {
-        if (GetChunk(mousePosition) != null)
+        if (chunk != null)
         {
-            ChunkData chunk = GetChunk(mousePosition);
             chunk.SetCurrentCharacter(null, null);
             chunk.GetTileHighlight().ActivatePlayerTile(false);
         }
     }
-    
     public void SetCharacter(Vector3 mousePosition, GameObject character, PlayerInformation playerInformation)
     {
         if (GetChunk(mousePosition) != null)
@@ -406,8 +403,7 @@ public class GameTileMap : MonoBehaviour
             moveCharacter.transform.position = characterPosition;
             SetCharacter(mousePosition, moveCharacter, previousCharacterChunk.GetCurrentPlayerInformation());
             if(previousCharacterChunk!=GetChunk(mousePosition))
-                ResetChunkCharacter(previousCharacterChunk.GetPosition());
-            
+                ResetChunkCharacter(previousCharacterChunk);
         }
         // SelectedCharacter.GetComponent<GridMovement>().RemoveAvailableMovementPoints(newPosition);
         // bottomCornerUI.EnableAbilities(SelectedCharacter.GetComponent<PlayerInformation>().savedCharacter);
@@ -427,7 +423,7 @@ public class GameTileMap : MonoBehaviour
             Vector3 characterPosition = chunk.GetPosition()-new Vector3(0, 0.5f, 1);
             moveCharacter.transform.position = characterPosition;
             SetCharacter(chunk, moveCharacter, previousCharacterChunk.GetCurrentPlayerInformation());
-            ResetChunkCharacter(previousCharacterChunk.GetPosition());
+            ResetChunkCharacter(previousCharacterChunk);
         }
         // SelectedCharacter.GetComponent<GridMovement>().RemoveAvailableMovementPoints(newPosition);
         // bottomCornerUI.EnableAbilities(SelectedCharacter.GetComponent<PlayerInformation>().savedCharacter);

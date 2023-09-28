@@ -171,7 +171,7 @@ using Random = UnityEngine.Random;
         }
         protected virtual void SetHoveredAttackColor(ChunkData chunkData)
         {
-            if (chunkData.GetCurrentCharacter() == null || (chunkData.GetCurrentCharacter() != null && !CanTileBeClicked(chunkData)))
+            if (!chunkData.CharacterIsOnTile() || (chunkData.CharacterIsOnTile() && !CanTileBeClicked(chunkData)))
             {
                 chunkData.GetTileHighlight().SetHighlightColor(AttackHighlightHover);
             }
@@ -303,7 +303,6 @@ using Random = UnityEngine.Random;
                 EnableDamagePreview(chunk, customText);
             }
         }
-        
         protected virtual void DisableDamagePreview(ChunkData chunk)
         {
             HighlightTile highlightTile = chunk.GetTileHighlight();
@@ -334,7 +333,6 @@ using Random = UnityEngine.Random;
         {
             AvailableAttacks--;
         }
-
         protected virtual void RefillActionPoints()//pradzioj ejimo
         {
             AvailableAttacks = 1;
@@ -400,7 +398,7 @@ using Random = UnityEngine.Random;
         }
         protected void DealRandomDamageToTarget(ChunkData chunkData, int minDamage, int maxDamage)
         {
-            if (chunkData != null && chunkData.GetCurrentCharacter() != null && IsAllegianceSame(chunkData))
+            if (chunkData != null && chunkData.CharacterIsOnTile() && IsAllegianceSame(chunkData))
             {
                 int randomDamage = Random.Range(minDamage, maxDamage);
                 bool crit = IsItCriticalStrike(ref randomDamage);
