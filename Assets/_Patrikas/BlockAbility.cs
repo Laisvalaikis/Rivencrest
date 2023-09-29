@@ -34,6 +34,7 @@ public class BlockAbility : BaseAction
         if (character != null && IsAllegianceSame(chunkData))
         {
             tileHighlight.SetHighlightColor(AttackHoverCharacter);
+            EnableDamagePreview(chunkData,"BLOCK");
         }
         else
         {
@@ -85,6 +86,7 @@ public class BlockAbility : BaseAction
             FinishAbility();
         }
     }
+    
 
     // public override void OnTileHover(GameObject tile)
     // {

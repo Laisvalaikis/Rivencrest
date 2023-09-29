@@ -25,7 +25,6 @@ public class GameTileMap : MonoBehaviour
         }
     }
 
-    public CharacterAction selectedCharacterAction;
     public TileMapData currentMap; 
     [SerializeField] private SpriteRenderer[] tileSpriteRenderers;
     [SerializeField] private HighlightTile[] tileHighlights;
@@ -91,7 +90,6 @@ public class GameTileMap : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!_threadDistance.IsAlive && !chuncksIsSetUp)
@@ -188,7 +186,6 @@ public class GameTileMap : MonoBehaviour
         
         lock (_chunksArray)
         {
-            
             if (_chunksArray.GetLength(0) > heightChunk && heightChunk >= 0
                 && _chunksArray.GetLength(1) > widthChunk && widthChunk >= 0
                 && _chunksArray[heightChunk, widthChunk] != null && !_chunksArray[heightChunk, widthChunk].TileIsLocked())
@@ -200,7 +197,6 @@ public class GameTileMap : MonoBehaviour
                 return null;
             }
         }
-
     }
 
     public ChunkData GetChunkDataByIndex(int x, int y)
