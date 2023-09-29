@@ -159,35 +159,35 @@ public class ChainHook : BaseAction
         }
     }
 
-private void ResetCharacterSpriteRendererAndTilePreview()
-{
-    if (_tileToPullTo != null)
+    private void ResetCharacterSpriteRendererAndTilePreview()
     {
-        if (_characterSpriteRenderer != null)
+        if (_tileToPullTo != null)
         {
-            _characterSpriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+            if (_characterSpriteRenderer != null)
+            {
+                _characterSpriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+            }
+            _tileToPullTo.GetTileHighlight().TogglePreviewSprite(false);
         }
-        _tileToPullTo.GetTileHighlight().TogglePreviewSprite(false);
     }
-}
 
-private void SetHoveredChunkHighlight(ChunkData hoveredChunk, PlayerInformation currentPlayerInfo)
-{
-    SetHoveredAttackColor(hoveredChunk);
-    if (currentPlayerInfo != null)
+    private void SetHoveredChunkHighlight(ChunkData hoveredChunk, PlayerInformation currentPlayerInfo)
     {
-        Sprite characterSprite = currentPlayerInfo.playerInformationData.characterSprite;
-        _tileToPullTo = TileToPullTo(hoveredChunk);
-        HighlightTile tileToPullToHighlight = _tileToPullTo.GetTileHighlight();
-        tileToPullToHighlight.TogglePreviewSprite(true);
-        tileToPullToHighlight.SetPreviewSprite(characterSprite);
-        _characterSpriteRenderer = currentPlayerInfo.spriteRenderer;
-        _characterSpriteRenderer.color = new Color(1f, 1f, 1f, 0.5f);
+        SetHoveredAttackColor(hoveredChunk);
+        if (currentPlayerInfo != null)
+        {
+            Sprite characterSprite = currentPlayerInfo.playerInformationData.characterSprite;
+            _tileToPullTo = TileToPullTo(hoveredChunk);
+            HighlightTile tileToPullToHighlight = _tileToPullTo.GetTileHighlight();
+            tileToPullToHighlight.TogglePreviewSprite(true);
+            tileToPullToHighlight.SetPreviewSprite(characterSprite);
+            _characterSpriteRenderer = currentPlayerInfo.spriteRenderer;
+            _characterSpriteRenderer.color = new Color(1f, 1f, 1f, 0.5f);
+        }
     }
-}
     
-    /*
-    public override BaseAction GetBuffedAbility(List<Blessing> blessings)
+    
+    /*public override BaseAction GetBuffedAbility(List<Blessing> blessings)
     {
         //Sukuriu kopija
         ChainHook ability = new ChainHook();

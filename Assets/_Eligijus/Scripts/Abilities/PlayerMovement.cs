@@ -5,10 +5,6 @@ using UnityEngine;
 
 public class PlayerMovement : BaseAction
 {
-    /*private LayerMask blockingLayer;
-    private LayerMask groundLayer;
-    private LayerMask fogLayer;
-    private LayerMask whiteFieldLayer;*/
     private bool isFacingRight = true;
     private GameTileMap _gameTileMap;
 
@@ -22,17 +18,12 @@ public class PlayerMovement : BaseAction
         AttackAbility = true;
         _gameTileMap = GameTileMap.Tilemap;
         _chunkArray = _gameTileMap.GetChunksArray();
-        // blockingLayer = LayerMask.GetMask("BlockingLayer");
-        // groundLayer = LayerMask.GetMask("Ground");
-        // fogLayer = LayerMask.GetMask("Fog");
-        // whiteFieldLayer = LayerMask.GetMask("WhiteField");
-        //boardManager = GameObject.Find("GameManager(Clone)").GetComponent<BoardManager>();
         transform.position = new Vector3(transform.position.x, transform.position.y, -1f);
     }
 
     protected override void EnableDamagePreview(ChunkData chunk, string customText=null)
     {
-        
+        //No damage for movement
     }
     public override void OnMoveArrows(ChunkData hoveredChunk, ChunkData previousChunk)
     {
@@ -95,7 +86,7 @@ public class PlayerMovement : BaseAction
 
     protected override void FinishAbility()
     {
-        
+        //Remove movement points?
     }
    
     public void Flip(bool shouldCharacterFaceRight)

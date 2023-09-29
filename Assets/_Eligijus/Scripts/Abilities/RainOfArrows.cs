@@ -34,7 +34,6 @@ public class RainOfArrows : BaseAction
     
     public List<ChunkData> CreateDamageTileList(ChunkData chunk)
     {
-        (int x, int y) = chunk.GetIndexes();
         List<ChunkData> damageTiles = new List<ChunkData>();
         var spellDirectionVectors = new List<(int, int)>
         {

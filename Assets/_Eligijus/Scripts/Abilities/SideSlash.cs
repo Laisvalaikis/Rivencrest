@@ -19,6 +19,13 @@ public class SideSlash : BaseAction
             FinishAbility();
         }
     }
+
+    void Start()
+    {
+        AttackHighlight = new Color32(123,156, 178,255);
+        AttackHighlightHover = AttackHoverCharacter;
+        CharacterOnGrid = AttackHighlight;
+    }
     
     private int _globalIndex = -1;
     public override void OnMoveHover(ChunkData hoveredChunk, ChunkData previousChunk)
@@ -29,7 +36,8 @@ public class SideSlash : BaseAction
             for (int i = 0; i < _chunkArray.GetLength(1); i++)
             {
                 ChunkData chunkToHighLight = _chunkArray[_globalIndex, i];
-                chunkToHighLight?.GetTileHighlight().SetHighlightColor(Color.green);
+                if (chunkToHighLight != null)
+                    SetNonHoveredAttackColor(chunkToHighLight);
             }
         }
         if (hoveredChunk != null && hoveredChunk.GetTileHighlight().isHighlighted)
@@ -41,7 +49,8 @@ public class SideSlash : BaseAction
                 for (int i = 0; i < _chunkArray.GetLength(1); i++)
                 {
                     ChunkData chunkToHighLight = _chunkArray[_globalIndex, i];
-                    chunkToHighLight?.GetTileHighlight().SetHighlightColor(Color.magenta);
+                    if (chunkToHighLight != null)
+                        SetHoveredAttackColor(chunkToHighLight);
                 }
             }
         }

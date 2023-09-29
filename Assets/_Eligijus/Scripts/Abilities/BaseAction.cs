@@ -162,22 +162,22 @@ using Random = UnityEngine.Random;
         {
             if (chunkData.GetCurrentCharacter() == null || (chunkData.GetCurrentCharacter() != null && !CanTileBeClicked(chunkData)))
             {
-                chunkData.GetTileHighlight().SetHighlightColor(AttackHighlight);
+                chunkData.GetTileHighlight()?.SetHighlightColor(AttackHighlight);
             }
             else
             {
-                chunkData.GetTileHighlight().SetHighlightColor(CharacterOnGrid);
+                chunkData.GetTileHighlight()?.SetHighlightColor(CharacterOnGrid);
             }
         }
         protected virtual void SetHoveredAttackColor(ChunkData chunkData)
         {
             if (!chunkData.CharacterIsOnTile() || (chunkData.CharacterIsOnTile() && !CanTileBeClicked(chunkData)))
             {
-                chunkData.GetTileHighlight().SetHighlightColor(AttackHighlightHover);
+                chunkData.GetTileHighlight()?.SetHighlightColor(AttackHighlightHover);
             }
             else
             {
-                chunkData.GetTileHighlight().SetHighlightColor(AttackHoverCharacter);
+                chunkData.GetTileHighlight()?.SetHighlightColor(AttackHoverCharacter);
                 EnableDamagePreview(chunkData);
             }
         }
