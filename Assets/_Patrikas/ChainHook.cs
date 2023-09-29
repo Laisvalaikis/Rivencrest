@@ -125,39 +125,39 @@ public class ChainHook : BaseAction
     private SpriteRenderer _characterSpriteRenderer; 
     
     public override void OnMoveHover(ChunkData hoveredChunk, ChunkData previousChunk)
-{
-    HighlightTile previousChunkHighlight = previousChunk?.GetTileHighlight();
-    HighlightTile hoveredChunkHighlight = hoveredChunk?.GetTileHighlight();
+    {
+        HighlightTile previousChunkHighlight = previousChunk?.GetTileHighlight();
+        HighlightTile hoveredChunkHighlight = hoveredChunk?.GetTileHighlight();
 
-    GameObject currentCharacter = hoveredChunk?.GetCurrentCharacter();
-    PlayerInformation currentPlayerInfo = currentCharacter?.GetComponent<PlayerInformation>();
+        GameObject currentCharacter = hoveredChunk?.GetCurrentCharacter();
+        PlayerInformation currentPlayerInfo = currentCharacter?.GetComponent<PlayerInformation>();
 
-    if (previousChunkHighlight != null && (hoveredChunk == null || !hoveredChunkHighlight.isHighlighted))
-    {
-        previousChunkHighlight.SetHighlightColor(AttackHighlight);
-        ResetCharacterSpriteRendererAndTilePreview();
-    }
-    if (hoveredChunkHighlight == null || hoveredChunk == previousChunk)
-    {
-        return;
-    }
-    if (hoveredChunkHighlight.isHighlighted)
-    {
-        SetHoveredChunkHighlight(hoveredChunk, currentPlayerInfo);
-    }
-    if (previousChunkHighlight != null)
-    {
-        if (_tileToPullTo != null && currentCharacter == null)
+        if (previousChunkHighlight != null && (hoveredChunk == null || !hoveredChunkHighlight.isHighlighted))
         {
-            _tileToPullTo.GetTileHighlight().TogglePreviewSprite(false);
-            if(_characterSpriteRenderer != null)
-            {
-                _characterSpriteRenderer.color = new Color(1f, 1f, 1f, 1f);
-            }
+            previousChunkHighlight.SetHighlightColor(AttackHighlight);
+            ResetCharacterSpriteRendererAndTilePreview();
         }
-        previousChunkHighlight.SetHighlightColor(AttackHighlight);
+        if (hoveredChunkHighlight == null || hoveredChunk == previousChunk)
+        {
+            return;
+        }
+        if (hoveredChunkHighlight.isHighlighted)
+        {
+            SetHoveredChunkHighlight(hoveredChunk, currentPlayerInfo);
+        }
+        if (previousChunkHighlight != null)
+        {
+            if (_tileToPullTo != null && currentCharacter == null)
+            {
+                _tileToPullTo.GetTileHighlight().TogglePreviewSprite(false);
+                if(_characterSpriteRenderer != null)
+                {
+                    _characterSpriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+                }
+            }
+            previousChunkHighlight.SetHighlightColor(AttackHighlight);
+        }
     }
-}
 
 private void ResetCharacterSpriteRendererAndTilePreview()
 {

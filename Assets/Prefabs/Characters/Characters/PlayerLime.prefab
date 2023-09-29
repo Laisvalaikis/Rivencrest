@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 2884985102919791894}
   - component: {fileID: -8766718827012148516}
   - component: {fileID: 3162964304238637616}
+  - component: {fileID: 7583059140460064766}
   m_Layer: 8
   m_Name: PlayerLime
   m_TagString: Player
@@ -312,7 +313,7 @@ MonoBehaviour:
   - abilityText: {fileID: 11400000, guid: cad85f32c3afc5640b4efc58ce74e410, type: 2}
     enabled: 1
     AbilityImage: {fileID: 1064230382522644472, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
-    Action: {fileID: 0}
+    Action: {fileID: 7583059140460064766}
   - abilityText: {fileID: 11400000, guid: 432c9baa15528424c88ccb4d8ae76393, type: 2}
     enabled: 1
     AbilityImage: {fileID: -6869721492570181015, guid: 38f03c585e84a1640a863ffc47a7d49b, type: 3}
@@ -348,6 +349,36 @@ MonoBehaviour:
   maxAttackDamage: 0
   isAbilitySlow: 1
   friendlyFire: 0
+  AttackAbility: 0
+  AvailableAttacks: 1
+  AbilityPoints: 0
+  isDisabled: 0
+  efficiencyCoefficient: 0.5
+--- !u!114 &7583059140460064766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659955980883675694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 793f0178b59dac74c9398687f856c7e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedEffectIndex: 0
+  selectedSongIndex: 0
+  turnsSinceCast: 0
+  turnLifetime: 1
+  playerInformation: {fileID: 1310519675225487401}
+  laserGrid: 0
+  spawnedCharacter: {fileID: 0}
+  AttackRange: 1
+  AbilityCooldown: 1
+  minAttackDamage: 0
+  maxAttackDamage: 0
+  isAbilitySlow: 1
+  friendlyFire: 1
   AttackAbility: 0
   AvailableAttacks: 1
   AbilityPoints: 0

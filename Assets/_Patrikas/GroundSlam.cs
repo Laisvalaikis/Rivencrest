@@ -7,6 +7,8 @@ public class GroundSlam : BaseAction
 
     void Start()
     {
+        minAttackDamage = 1;
+        maxAttackDamage = 3;
         isAbilitySlow = false;
         AttackHighlight = new Color32(123,156, 178,255);
         AttackHighlightHover = AttackHoverCharacter;
@@ -17,13 +19,11 @@ public class GroundSlam : BaseAction
         base.CreateGrid();
         _chunkListCopy = new List<ChunkData>(_chunkList);
     }
-    
     protected override void HighlightGridTile(ChunkData chunkData)
     {
         SetNonHoveredAttackColor(chunkData);
         chunkData.GetTileHighlight().ActivateColorGridTile(true);
     }
-    
     public override void ResolveAbility(ChunkData chunk)
     {
         base.ResolveAbility(chunk);
@@ -42,6 +42,10 @@ public class GroundSlam : BaseAction
             }
         }
     }
+    public override bool CanTileBeClicked(ChunkData chunk)
+    {
+        return chunk.GetCurrentCharacter() != GameTileMap.Tilemap.GetCurrentCharacter(); //Prety sure ground slamas temamateus hittina?
+    }
     public override void OnMoveHover(ChunkData hoveredChunk, ChunkData previousChunk)
     {
         if (hoveredChunk == previousChunk) return;
@@ -52,6 +56,7 @@ public class GroundSlam : BaseAction
             foreach (var chunk in _chunkList)
             {
                 SetNonHoveredAttackColor(chunk);
+                DisableDamagePreview(chunk);
             }
         }
         else if ((hoveredChunkHighlight!=null && previousChunkHighlight!=null && hoveredChunkHighlight.isHighlighted && !previousChunkHighlight.isHighlighted) || (hoveredChunkHighlight!=null && previousChunkHighlight==null && hoveredChunkHighlight.isHighlighted))
@@ -62,18 +67,4 @@ public class GroundSlam : BaseAction
             }
         }
     }
-    // public override void EnableDamagePreview(GameObject tile, List<GameObject> tileList, int minAttackDamage, int maxAttackDamage = -1)
-    // {
-    //     foreach(GameObject tileInList in tileList)
-    //     {
-    //         if(tileInList != GetSpecificGroundTile(gameObject, 0, 0, groundLayer))
-    //         {
-    //             EnableDamagePreview(tileInList, minAttackDamage, maxAttackDamage);
-    //         }
-    //         else
-    //         {
-    //             EnableTextPreview(tileInList, "");
-    //         }
-    //     }
-    // }
 }
