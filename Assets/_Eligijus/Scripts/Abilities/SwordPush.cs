@@ -25,7 +25,6 @@ public class SwordPush : BaseAction
                 _side = ChunkSideByCharacter(chunk, _attackTiles[i]);
                 int2 sideVector = GetSideVector(_side);
                 MovePlayerToSide(_attackTiles[i], sideVector);
-                
             }
             else
             {

@@ -25,7 +25,6 @@ public class BlockAbility : BaseAction
             tileHighlight.SetHighlightColor(AttackHighlight);
         }
     }
-    
     protected override void SetHoveredAttackColor(ChunkData chunkData)
     {
         GameObject character = chunkData.GetCurrentCharacter();
@@ -41,7 +40,6 @@ public class BlockAbility : BaseAction
             tileHighlight.SetHighlightColor(AttackHighlightHover);
         }
     }
-    
     protected override void HighlightGridTile(ChunkData chunkData)
     {
         if(chunkData.GetCurrentCharacter()!=GameTileMap.Tilemap.GetCurrentCharacter())
@@ -50,7 +48,6 @@ public class BlockAbility : BaseAction
             SetNonHoveredAttackColor(chunkData);
         }
     }
-
     public override bool CanTileBeClicked(ChunkData chunk)
     {
         return IsAllegianceSame(chunk);
@@ -70,7 +67,6 @@ public class BlockAbility : BaseAction
             GetComponent<PlayerInformation>().Blocker = false;
         }
     }
-
     public override void ResolveAbility(ChunkData chunk)
     {
         if (CanTileBeClicked(chunk))
@@ -86,13 +82,6 @@ public class BlockAbility : BaseAction
             FinishAbility();
         }
     }
-    
-
-    // public override void OnTileHover(GameObject tile)
-    // {
-    //     EnableTextPreview(tile, "BLOCK");
-    // }
-    
     public override void BuffAbility()
     {
         if (DoesCharacterHaveBlessing("Block from afar"))

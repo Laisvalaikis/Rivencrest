@@ -1,7 +1,8 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Volley : BaseAction
+public class Volley : BaseAction //STILL FUCKED FOR THE TIEM BEING
 {
     [SerializeField] private int spellDamage = 6;
     private ChunkData[,] _chunkArray;
@@ -49,33 +50,89 @@ public class Volley : BaseAction
         return index;
     }
     
+    
+    private ChunkData _tileToPullTo;
+    private SpriteRenderer _characterSpriteRenderer; 
+    
     private int _globalIndex = -1;
     public override void OnMoveHover(ChunkData hoveredChunk, ChunkData previousChunk)
     {
         if (hoveredChunk == previousChunk) return;
+
+        GameObject currentCharacter = GameTileMap.Tilemap.GetCurrentCharacter();
+        PlayerInformation currentPlayerInfo = currentCharacter?.GetComponent<PlayerInformation>();
+        
         if (_globalIndex != -1)
         {
             for (int i = 0; i < _chunkArray.GetLength(1); i++)
             {
                 ChunkData chunkToHighLight = _chunkArray[_globalIndex, i];
-                chunkToHighLight?.GetTileHighlight().SetHighlightColor(Color.green);
+                if (chunkToHighLight != null)
+                {
+                    SetNonHoveredAttackColor(chunkToHighLight);
+                    ResetCharacterSpriteRendererAndTilePreview();
+                }
             }
         }
         if (hoveredChunk != null && hoveredChunk.GetTileHighlight().isHighlighted)
         {
-            
             _globalIndex = FindChunkIndex(hoveredChunk);
             if (_globalIndex != -1)
             {
                 for (int i = 0; i < _chunkArray.GetLength(1); i++)
                 {
                     ChunkData chunkToHighLight = _chunkArray[_globalIndex, i];
-                    chunkToHighLight?.GetTileHighlight().SetHighlightColor(Color.magenta);
+                    if (chunkToHighLight != null)
+                    {
+                        SetHoveredAttackColor(chunkToHighLight); //todo: make it so that character move preview is shown (see chainhook)
+                        if (currentPlayerInfo != null)
+                        {
+                            Sprite characterSprite = currentPlayerInfo.playerInformationData.characterSprite;
+                            _tileToPullTo = TileToPullTo(hoveredChunk);
+                            HighlightTile tileToPullToHighlight = _tileToPullTo.GetTileHighlight();
+                            tileToPullToHighlight.TogglePreviewSprite(true);
+                            tileToPullToHighlight.SetPreviewSprite(characterSprite);
+                            _characterSpriteRenderer = currentPlayerInfo.spriteRenderer;
+                            _characterSpriteRenderer.color = new Color(1f, 1f, 1f, 0.5f);
+                        }
+                    }                
                 }
             }
         }
     }
+    
+    private ChunkData TileToPullTo(ChunkData chunk)
+    {
+        Vector3 position = transform.position;
+        ChunkData currentPlayerChunk = GameTileMap.Tilemap.GetChunk(position);
+        (int chunkY, int chunkX) = chunk.GetIndexes();
+        (int playerY, int playerX) = currentPlayerChunk.GetIndexes();
 
+        int deltaX = chunkX - playerX;
+        int deltaY = chunkY - playerY;
+
+        // Determine the direction from the player to the chunk
+        int directionX = deltaX != 0 ? deltaX / Math.Abs(deltaX) : 0;
+        int directionY = deltaY != 0 ? deltaY / Math.Abs(deltaY) : 0;
+
+        // Get the chunk next to the player in the determined direction
+        Vector3 targetPosition = new Vector3(position.x + directionX, position.y - directionY, position.z);
+        ChunkData targetChunk = GameTileMap.Tilemap.GetChunk(targetPosition);
+
+        return targetChunk;
+    }
+    
+    private void ResetCharacterSpriteRendererAndTilePreview()
+    {
+        if (_tileToPullTo != null)
+        {
+            if (_characterSpriteRenderer != null)
+            {
+                _characterSpriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+            }
+            _tileToPullTo.GetTileHighlight().TogglePreviewSprite(false);
+        }
+    }
     public override void CreateAvailableChunkList(int radius)
     {
         ChunkData centerChunk = GameTileMap.Tilemap.GetChunk(transform.position);
@@ -125,7 +182,6 @@ public class Volley : BaseAction
         base.OnTurnStart();
         PoisonPlayer();
     }
-
     private void PoisonPlayer()
     {
         foreach (Poison x in _poisons)
@@ -136,6 +192,5 @@ public class Volley : BaseAction
             }
             x.turnsLeft--;
         }
-        
     }
 }

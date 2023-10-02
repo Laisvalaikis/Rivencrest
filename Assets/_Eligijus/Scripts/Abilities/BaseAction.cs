@@ -168,12 +168,14 @@ using Random = UnityEngine.Random;
             {
                 chunkData.GetTileHighlight()?.SetHighlightColor(CharacterOnGrid);
             }
+            DisableDamagePreview(chunkData);
         }
         protected virtual void SetHoveredAttackColor(ChunkData chunkData)
         {
             if (!chunkData.CharacterIsOnTile() || (chunkData.CharacterIsOnTile() && !CanTileBeClicked(chunkData)))
             {
                 chunkData.GetTileHighlight()?.SetHighlightColor(AttackHighlightHover);
+                //Might be an edge case that requires a DisableDamagePreview here //todo: test
             }
             else
             {
@@ -303,7 +305,7 @@ using Random = UnityEngine.Random;
                 EnableDamagePreview(chunk, customText);
             }
         }
-        protected virtual void DisableDamagePreview(ChunkData chunk)
+        protected void DisableDamagePreview(ChunkData chunk)
         {
             HighlightTile highlightTile = chunk.GetTileHighlight();
             highlightTile.ActivateDeathSkull(false);

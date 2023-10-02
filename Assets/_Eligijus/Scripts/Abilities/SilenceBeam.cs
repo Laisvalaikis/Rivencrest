@@ -4,6 +4,12 @@ public class SilenceBeam : BaseAction
 {
     private ChunkData[,] _chunkArray;
     
+    void Start()
+    {
+        AttackHighlight = new Color32(123,156, 178,255);
+        AttackHighlightHover = AttackHoverCharacter;
+        CharacterOnGrid = AttackHighlight;
+    }
     public override void ResolveAbility(ChunkData chunk)
     {
         base.ResolveAbility(chunk);
@@ -45,6 +51,11 @@ public class SilenceBeam : BaseAction
         return index;
     }
 
+    public override bool CanTileBeClicked(ChunkData chunkData)
+    {
+        return true;
+    }
+
     private int _globalIndex = -1;
     public override void OnMoveHover(ChunkData hoveredChunk, ChunkData previousChunk)
     {
@@ -54,19 +65,24 @@ public class SilenceBeam : BaseAction
             for (int i = 0; i < _chunkArray.GetLength(1); i++)
             {
                 ChunkData chunkToHighLight = _chunkArray[_globalIndex, i];
-                chunkToHighLight?.GetTileHighlight().SetHighlightColor(Color.green);
+                if (chunkToHighLight != null)
+                {
+                    SetNonHoveredAttackColor(chunkToHighLight);
+                }
             }
         }
         if (hoveredChunk != null && hoveredChunk.GetTileHighlight().isHighlighted)
         {
-            
             _globalIndex = FindChunkIndex(hoveredChunk);
             if (_globalIndex != -1)
             {
                 for (int i = 0; i < _chunkArray.GetLength(1); i++)
                 {
                     ChunkData chunkToHighLight = _chunkArray[_globalIndex, i];
-                    chunkToHighLight?.GetTileHighlight().SetHighlightColor(Color.magenta);
+                    if (chunkToHighLight != null)
+                    {
+                        SetHoveredAttackColor(chunkToHighLight);
+                    }
                 }
             }
         }

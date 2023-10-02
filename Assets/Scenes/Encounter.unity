@@ -5234,7 +5234,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 26522310}
   _selectAction: {fileID: 2072924556}
-  selectedCharacterAction: {fileID: 0}
   currentMap: {fileID: 11400000, guid: ae4fe66ff0493684e856885fe6bbe2f5, type: 2}
   tileSpriteRenderers:
   - {fileID: 1227960980}

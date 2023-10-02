@@ -57,7 +57,7 @@ public class PlayerTeams : MonoBehaviour
     private void SpawnAllCharacters()
     {
         for (int i = 0; i < allCharacterList.Teams.Count; i++)
-        {
+        {  //This spawns all characters. Should be 3
             currentCharacters.Teams.Add(new Team());
             currentCharacters.Teams[i].characters = new List<GameObject>();
             currentCharacters.Teams[i].aliveCharacters = new List<GameObject>();
