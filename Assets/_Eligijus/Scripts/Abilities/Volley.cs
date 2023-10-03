@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Volley : BaseAction //STILL FUCKED FOR THE TIEM BEING
 {
@@ -16,11 +18,12 @@ public class Volley : BaseAction //STILL FUCKED FOR THE TIEM BEING
             for (int i = 0; i < _chunkArray.GetLength(1); i++)
             {
                 ChunkData damageChunk = _chunkArray[index, i];
-                _poisons.Add(new Poison(damageChunk, 2, 1));
+//                _poisons.Add(new Poison(damageChunk, 2, 1));
                 DealRandomDamageToTarget(damageChunk, minAttackDamage, maxAttackDamage);
             }
-
+            GameTileMap.Tilemap.MoveSelectedCharacter(TileToDashTo(index));
             FinishAbility();
+            ResetCharacterSpriteRendererAndTilePreview();
         }
     }
 
@@ -45,7 +48,6 @@ public class Volley : BaseAction //STILL FUCKED FOR THE TIEM BEING
             {
                 index = 3;
             }
-
         }
         return index;
     }
@@ -79,47 +81,60 @@ public class Volley : BaseAction //STILL FUCKED FOR THE TIEM BEING
             _globalIndex = FindChunkIndex(hoveredChunk);
             if (_globalIndex != -1)
             {
+                if (currentPlayerInfo != null)
+                {
+                    Sprite characterSprite = currentPlayerInfo.playerInformationData.characterSprite;
+                    _tileToPullTo = TileToDashTo(_globalIndex);
+                    HighlightTile tileToPullToHighlight = _tileToPullTo.GetTileHighlight();
+                    tileToPullToHighlight.TogglePreviewSprite(true);
+                    tileToPullToHighlight.SetPreviewSprite(characterSprite);
+                    _characterSpriteRenderer = currentPlayerInfo.spriteRenderer;
+                    _characterSpriteRenderer.color = new Color(1f, 1f, 1f, 0.5f);
+                }
+                
                 for (int i = 0; i < _chunkArray.GetLength(1); i++)
                 {
                     ChunkData chunkToHighLight = _chunkArray[_globalIndex, i];
                     if (chunkToHighLight != null)
                     {
-                        SetHoveredAttackColor(chunkToHighLight); //todo: make it so that character move preview is shown (see chainhook)
-                        if (currentPlayerInfo != null)
-                        {
-                            Sprite characterSprite = currentPlayerInfo.playerInformationData.characterSprite;
-                            _tileToPullTo = TileToPullTo(hoveredChunk);
-                            HighlightTile tileToPullToHighlight = _tileToPullTo.GetTileHighlight();
-                            tileToPullToHighlight.TogglePreviewSprite(true);
-                            tileToPullToHighlight.SetPreviewSprite(characterSprite);
-                            _characterSpriteRenderer = currentPlayerInfo.spriteRenderer;
-                            _characterSpriteRenderer.color = new Color(1f, 1f, 1f, 0.5f);
-                        }
+                        SetHoveredAttackColor(chunkToHighLight);
                     }                
                 }
             }
         }
     }
     
-    private ChunkData TileToPullTo(ChunkData chunk)
+    private ChunkData TileToDashTo(int index)
     {
-        Vector3 position = transform.position;
-        ChunkData currentPlayerChunk = GameTileMap.Tilemap.GetChunk(position);
-        (int chunkY, int chunkX) = chunk.GetIndexes();
-        (int playerY, int playerX) = currentPlayerChunk.GetIndexes();
+        Vector3 playerPosition = transform.position;
+        ChunkData playerChunk = GameTileMap.Tilemap.GetChunk(playerPosition);
+        ChunkData tileToDashTo;
+        (int x, int y) = playerChunk.GetIndexes();
+        switch (index)
+        {
+            case 0:
+                y++;
+                break;
+            case 1:
+                y--;
+                break;
+            case 2:
+                x++;
+                break;
+            case 3:
+                x--;
+                break;
+        }
 
-        int deltaX = chunkX - playerX;
-        int deltaY = chunkY - playerY;
-
-        // Determine the direction from the player to the chunk
-        int directionX = deltaX != 0 ? deltaX / Math.Abs(deltaX) : 0;
-        int directionY = deltaY != 0 ? deltaY / Math.Abs(deltaY) : 0;
-
-        // Get the chunk next to the player in the determined direction
-        Vector3 targetPosition = new Vector3(position.x + directionX, position.y - directionY, position.z);
-        ChunkData targetChunk = GameTileMap.Tilemap.GetChunk(targetPosition);
-
-        return targetChunk;
+        if (GameTileMap.Tilemap.CheckBounds(x, y))
+        {
+            tileToDashTo = GameTileMap.Tilemap.GetChunkDataByIndex(x, y);
+            if (tileToDashTo.GetInformationType() == InformationType.None)
+            {
+                return tileToDashTo;
+            }
+        }
+        return playerChunk;
     }
     
     private void ResetCharacterSpriteRendererAndTilePreview()

@@ -77,6 +77,7 @@ public class ChainHook : BaseAction
             //character.transform.position = TileToPullTo(target).transform.position;
             ChunkData chunkToPullTo = TileToPullTo(chunk);
             GameTileMap.Tilemap.MoveSelectedCharacter(chunkToPullTo.GetPosition(),new Vector3(0, 0.5f, 1),character);
+            ResetCharacterSpriteRendererAndTilePreview();
             //transform.Find("CharacterModel").GetComponent<Animator>().SetTrigger("playerChop");
             FinishAbility();
         }
